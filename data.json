@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-21T19:34:41+00:00",
- "heartbeat": "2026-09-21T19:34:41+00:00",
+ "updated": "2026-09-21T19:45:54+00:00",
+ "heartbeat": "2026-09-21T19:45:54+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9892.54,
+  "equity": 9888.98,
   "last_equity": 9892.75,
-  "day_change": -0.21,
-  "total_change": -107.46
+  "day_change": -3.77,
+  "total_change": -111.02
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 7,
    "entry": 259.33,
-   "current": 259.27,
-   "pl": -0.4
+   "current": 258.69,
+   "pl": -4.46
   },
   {
    "symbol": "DHR",
    "side": "long",
    "qty": 9,
    "entry": 215.12,
-   "current": 214.97,
-   "pl": -1.3
+   "current": 215.11,
+   "pl": -0.09
   },
   {
    "symbol": "TMO",
    "side": "long",
    "qty": 3,
    "entry": 659.44,
-   "current": 658.47,
-   "pl": -2.91
+   "current": 658.25,
+   "pl": -3.56
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>214.35",
-   "max_r": null,
+   "max_r": 0.01,
    "key": "t9",
    "detail": false,
    "ai_verdict": null

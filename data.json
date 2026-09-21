@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-21T19:24:04+00:00",
- "heartbeat": "2026-09-21T19:24:04+00:00",
+ "updated": "2026-09-21T19:34:41+00:00",
+ "heartbeat": "2026-09-21T19:34:41+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9897.77,
+  "equity": 9892.54,
   "last_equity": 9892.75,
-  "day_change": 5.02,
-  "total_change": -102.23
+  "day_change": -0.21,
+  "total_change": -107.46
  },
  "positions": [
   {
@@ -16,11 +16,69 @@
    "side": "long",
    "qty": 7,
    "entry": 259.33,
-   "current": 259.43,
-   "pl": 0.74
+   "current": 259.27,
+   "pl": -0.4
+  },
+  {
+   "symbol": "DHR",
+   "side": "long",
+   "qty": 9,
+   "entry": 215.12,
+   "current": 214.97,
+   "pl": -1.3
+  },
+  {
+   "symbol": "TMO",
+   "side": "long",
+   "qty": 3,
+   "entry": 659.44,
+   "current": 658.47,
+   "pl": -2.91
   }
  ],
  "trades": [
+  {
+   "symbol": "DHR",
+   "pattern": "InverseHeadShoulders",
+   "side": "long",
+   "day": "2026-09-21",
+   "opened": "2026-09-21T19:28:04.438677+00:00",
+   "closed": null,
+   "entry": 215.12,
+   "stop": 212.76,
+   "target": 218.53,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "inverse_H&S neckline_break>214.35",
+   "max_r": null,
+   "key": "t9",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "TMO",
+   "pattern": "DoubleBottom",
+   "side": "long",
+   "day": "2026-09-21",
+   "opened": "2026-09-21T19:28:03.190446+00:00",
+   "closed": null,
+   "entry": 659.44,
+   "stop": 648.93,
+   "target": 667.42,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "double_bottom neckline_break>658.50",
+   "max_r": null,
+   "key": "t8",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "AMZN",
    "pattern": "Rectangle",
@@ -263,10 +321,10 @@
  "funnel": {
   "day": "2026-09-21",
   "setups": 104,
-  "traded": 3,
+  "traded": 5,
   "rejected": {
    "skip-rs": 5,
-   "skip-chase": 10,
+   "skip-chase": 8,
    "skip-vol": 81,
    "skip-market": 5
   }

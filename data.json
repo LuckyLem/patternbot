@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-09-21T19:12:17+00:00",
- "heartbeat": "2026-09-21T19:12:17+00:00",
+ "updated": "2026-09-21T19:24:04+00:00",
+ "heartbeat": "2026-09-21T19:24:04+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9897.15,
+  "equity": 9897.77,
   "last_equity": 9892.75,
-  "day_change": 4.4,
-  "total_change": -102.85
+  "day_change": 5.02,
+  "total_change": -102.23
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "AMZN",
+   "side": "long",
+   "qty": 7,
+   "entry": 259.33,
+   "current": 259.43,
+   "pl": 0.74
+  }
+ ],
  "trades": [
+  {
+   "symbol": "AMZN",
+   "pattern": "Rectangle",
+   "side": "long",
+   "day": "2026-09-21",
+   "opened": "2026-09-21T19:19:59.803338+00:00",
+   "closed": null,
+   "entry": 259.33,
+   "stop": 255.46,
+   "target": 266.17,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break>259.03",
+   "max_r": null,
+   "key": "t7",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "NVDA",
    "pattern": "AscendingTriangle",
@@ -232,13 +262,13 @@
  ],
  "funnel": {
   "day": "2026-09-21",
-  "setups": 93,
-  "traded": 2,
+  "setups": 104,
+  "traded": 3,
   "rejected": {
    "skip-rs": 5,
-   "skip-chase": 6,
-   "skip-vol": 76,
-   "skip-market": 4
+   "skip-chase": 10,
+   "skip-vol": 81,
+   "skip-market": 5
   }
  },
  "config": {

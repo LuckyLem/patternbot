@@ -1,0 +1,238 @@
+{
+ "version": 1,
+ "updated": "2026-09-21T14:25:19+00:00",
+ "heartbeat": "2026-09-21T14:25:19+00:00",
+ "market_open": true,
+ "account": {
+  "start": 10000.0,
+  "equity": 9885.22,
+  "last_equity": 9892.75,
+  "day_change": -7.53,
+  "total_change": -114.78
+ },
+ "positions": [
+  {
+   "symbol": "HD",
+   "side": "short",
+   "qty": 6,
+   "entry": 296.41,
+   "current": 297.67,
+   "pl": -7.53
+  }
+ ],
+ "trades": [
+  {
+   "symbol": "HD",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-21",
+   "opened": "2026-09-21T13:57:50.590704+00:00",
+   "closed": null,
+   "entry": 296.41,
+   "stop": 301.62,
+   "target": 292.63,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<298.62",
+   "max_r": 0.16,
+   "key": "t5",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "ELV",
+   "pattern": "HeadShouldersTop",
+   "side": "short",
+   "day": "2026-09-11",
+   "opened": "2026-09-11T19:06:19.188340+00:00",
+   "closed": "2026-09-11T19:51:14.399412+00:00",
+   "entry": 413.73,
+   "stop": 418.86,
+   "target": 404.89,
+   "exit": 416.89,
+   "pnl": -12.64,
+   "r": -0.616,
+   "status": "closed",
+   "exit_source": "eod",
+   "reason": "H&S neckline_break<415.64",
+   "max_r": null,
+   "key": "t3",
+   "detail": true,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "ROP",
+   "pattern": "DoubleBottom",
+   "side": "long",
+   "day": "2026-09-11",
+   "opened": "2026-09-11T19:01:51.411137+00:00",
+   "closed": "2026-09-11T19:51:10.385731+00:00",
+   "entry": 388.22,
+   "stop": 383.75,
+   "target": 391.79,
+   "exit": 388.52,
+   "pnl": 1.5,
+   "r": 0.067,
+   "status": "closed",
+   "exit_source": "eod",
+   "reason": "double_bottom neckline_break>387.96",
+   "max_r": 0.16,
+   "key": "t2",
+   "detail": true,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "UAL",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-10",
+   "opened": "2026-09-10T13:53:26.319707+00:00",
+   "closed": "2026-09-11T16:27:29.894987+00:00",
+   "entry": 105.31,
+   "stop": 107.92,
+   "target": 101.71,
+   "exit": 109.03,
+   "pnl": -66.91,
+   "r": -1.426,
+   "status": "closed",
+   "exit_source": "fill",
+   "reason": "rectangle break<105.85 (uebernommen)",
+   "max_r": null,
+   "key": "t1",
+   "detail": true,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "XOM",
+   "pattern": "AscendingTriangle",
+   "side": "long",
+   "day": "2026-09-10",
+   "opened": "2026-09-10T13:53:23.128109+00:00",
+   "closed": "2026-09-10T14:18:00.371326+00:00",
+   "entry": 164.81,
+   "stop": 164.1,
+   "target": 166.18,
+   "exit": 164.06,
+   "pnl": -8.94,
+   "r": -1.051,
+   "status": "closed",
+   "exit_source": "fill",
+   "reason": "asc_triangle break>164.47 (von der Windows-Instanz uebernommen)",
+   "max_r": 0.37,
+   "key": "t4",
+   "detail": true,
+   "ai_verdict": null
+  }
+ ],
+ "stats": {
+  "n": 4,
+  "pnl": -86.99,
+  "winrate": 0.25,
+  "expectancy": -0.756,
+  "pf": 0.02,
+  "avg_win": 1.5,
+  "avg_loss": -29.5
+ },
+ "equity_curve": [
+  {
+   "date": "2026-08-21",
+   "equity": 10000.0
+  },
+  {
+   "date": "2026-08-24",
+   "equity": 9960.6
+  },
+  {
+   "date": "2026-08-25",
+   "equity": 10000.74
+  },
+  {
+   "date": "2026-08-26",
+   "equity": 10022.21
+  },
+  {
+   "date": "2026-08-27",
+   "equity": 9988.41
+  },
+  {
+   "date": "2026-08-28",
+   "equity": 9945.31
+  },
+  {
+   "date": "2026-08-31",
+   "equity": 9978.28
+  },
+  {
+   "date": "2026-09-01",
+   "equity": 9979.94
+  },
+  {
+   "date": "2026-09-02",
+   "equity": 9979.94
+  },
+  {
+   "date": "2026-09-03",
+   "equity": 9979.94
+  },
+  {
+   "date": "2026-09-04",
+   "equity": 9979.94
+  },
+  {
+   "date": "2026-09-08",
+   "equity": 9979.94
+  },
+  {
+   "date": "2026-09-09",
+   "equity": 9979.94
+  },
+  {
+   "date": "2026-09-10",
+   "equity": 9949.72
+  },
+  {
+   "date": "2026-09-11",
+   "equity": 9892.75
+  },
+  {
+   "date": "2026-09-14",
+   "equity": 9892.75
+  },
+  {
+   "date": "2026-09-15",
+   "equity": 9892.75
+  },
+  {
+   "date": "2026-09-16",
+   "equity": 9892.75
+  },
+  {
+   "date": "2026-09-17",
+   "equity": 9892.75
+  },
+  {
+   "date": "2026-09-18",
+   "equity": 9892.75
+  }
+ ],
+ "funnel": {
+  "day": "2026-09-21",
+  "setups": 24,
+  "traded": 1,
+  "rejected": {
+   "skip-rs": 5,
+   "skip-chase": 4,
+   "skip-vol": 14
+  }
+ },
+ "config": {
+  "risk_pct": 0.005,
+  "max_positions": 5,
+  "break_even_r": 0.6,
+  "time_stop_min": 120,
+  "universe": 150
+ }
+}

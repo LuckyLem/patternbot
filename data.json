@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-09-21T20:07:51+00:00",
- "heartbeat": "2026-09-21T20:07:51+00:00",
+ "updated": "2026-09-21T20:08:29+00:00",
+ "heartbeat": "2026-09-21T20:08:29+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -31,7 +31,7 @@
    "max_r": 0.01,
    "key": "t9",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "TMO",
@@ -52,7 +52,7 @@
    "max_r": null,
    "key": "t8",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "schlecht"
   },
   {
    "symbol": "AMZN",
@@ -73,7 +73,7 @@
    "max_r": null,
    "key": "t7",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "schlecht"
   },
   {
    "symbol": "NVDA",
@@ -94,7 +94,7 @@
    "max_r": 0.44,
    "key": "t6",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "gut"
   },
   {
    "symbol": "HD",
@@ -115,7 +115,7 @@
    "max_r": 0.16,
    "key": "t5",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "ELV",
@@ -310,5 +310,13 @@
   "break_even_r": 0.6,
   "time_stop_min": 120,
   "universe": 150
+ },
+ "review": {
+  "title": "Tagesreview 2026-09-21",
+  "kind": "daily",
+  "day": "2026-09-21",
+  "markdown": "## Ergebnis\n\nEquity **9.882,38 $** (Vortag 9.892,75 $), Tagesveränderung **−10,37 $**. Seit Start −117,62 $. Fünf abgeschlossene Trades, ein Gewinner (Winrate 20 %), Expectancy −0,076R, Profitfaktor 0,52. Summe über alle Trades: **−0,379R**.\n\n| Trade | R | Ziel in R | Ausstieg |\n|---|---|---|---|\n| HD short | −0,219 | 0,73 | Zeit-Stop 122 Min |\n| NVDA long | +0,356 | 1,15 | Zeit-Stop 138 Min |\n| AMZN long | −0,310 | 1,77 | Tagesende |\n| TMO long | −0,193 | 0,76 | Tagesende |\n| DHR long | −0,013 | 1,45 | Tagesende |\n\n## Was den Tag entschieden hat\n\nDie zwei Vormittags-Trades zusammen: **+4,40 $**. Die drei Einstiege um 15:19, 15:28 und 15:28 NY zusammen: **−14,77 $**. Ohne diesen Spätblock wäre der Tag leicht positiv gewesen.\n\nBei allen drei späten Trades war das Ziel in der Restzeit rechnerisch kaum erreichbar: AMZN 1,77R Zielabstand bei 40 Minuten Restzeit, DHR 1,45R bei 32 Minuten, TMO 0,76R bei 32 Minuten. Entsprechend kamen sie auch nicht in Fahrt (beste Punkte +0,03R, +0,01R, +0,03R). Es gibt derzeit offenbar keine Regel, die die Restzeit bis Handelsschluss gegen den Zielabstand prüft — im Filter-Trichter taucht kein einziger Zeit-Reject auf.\n\n## Ausführung vs. Strategie\n\n**Strategie:** Vier von fünf Ausbrüchen haben nicht getragen. HD fiel unter 298,62, lief bis 295,40 (max. +0,19R) und kam dann zurück — um 12:00 stand die Aktie wieder bei 299,13, also klar über der Ausbruchskante. Das Muster war widerlegt, der Zeit-Stop hat korrekt und früh reagiert. Zwei Ziele lagen unter dem Stopabstand (HD 0,73R, TMO 0,76R); solche Trades brauchen strukturell eine Trefferquote über ~58 %, um sich zu tragen. Das ist eine Beobachtung, keine belegte Schwäche.\n\n**Ausführung:** Die Slippage summiert sich auf **0,402R** (HD 0,111 · NVDA 0,091 · DHR 0,119 · TMO 0,044 · AMZN 0,037) und ist damit betragsmäßig größer als das Tagesergebnis von −0,379R. Der Grund ist sichtbar: zwischen dem Schluss der Signalkerze und dem Fill liegen 4 bis 13 Minuten. HD-Signal aus der Kerze mit Schluss 296,99, Fill um 09:57 zu 296,41; NVDA-Signal 224,95, Fill 11:07 zu 225,31; TMO und DHR Signal 15:00-Kerze, Fill erst 15:28. Das ist kein Strategieproblem, sondern Latenz.\n\n**Zwei Regelabweichungen:** Der Zeit-Stop soll nach 120 Minuten greifen, HD wurde nach 122 Minuten geschlossen, NVDA erst nach **138 Minuten**. Sieht nach Prüfung nur auf dem 15-Minuten-Raster aus. Bei NVDA war das zufällig günstig (Ausstieg 226,72 statt bei ~225,4 um 13:07), aber die Regel hat nicht gegriffen, wie sie soll.\n\nBei der Tagesende-Glattstellung lagen alle drei Fills unter dem Schlussstand des letzten 15-Minuten-Fensters: DHR raus zu 215,09, die Kerze schloss bei 215,82 (Differenz ~0,31R), TMO raus zu 657,41 gegen Schlusskurs 659,04 (~0,16R), AMZN 258,13 gegen 258,41. Bei drei Fällen ist das kein Befund, aber es lohnt, den Zeitpunkt der Glattstellung mitzuloggen.\n\n**NVDA im Detail:** der einzige Trade, der lief. MAE nur −0,15R, bester Punkt +0,46R, Ausstieg per Zeit-Stop bei +0,356R. Danach stieg der Kurs weiter bis 228,49 um 14:45 — das entspräche etwa +0,80R, das Ziel 229,84 wurde in den vorliegenden Daten nicht erreicht. Der Zeit-Stop hat also rund die Hälfte der verfügbaren Bewegung liegen lassen. Ein Datenpunkt, mehr nicht.\n\n**Positionsgrößen:** Alle fünf Trades liefen mit 21–32 $ Risiko statt der geplanten ~49 $, bei DHR ausdrücklich durch die Wertgrenze gedeckelt. Das dämpft Gewinne wie Verluste gleichermaßen und ist beim Vergleich der Dollarbeträge mitzudenken — an der Grenze wird nichts geändert.\n\n## Filter-Trichter\n\n104 Setups, 5 gehandelt (4,8 %). Abgelehnt: **skip-vol 81**, skip-chase 8, skip-rs 5, skip-market 5. Der Trichter wird praktisch von einem einzigen Kriterium bestimmt — 78 % aller Setups scheitern am Volumenfilter. Ob dieser Filter tatsächlich schlechte Trades aussortiert, lässt sich aus den Daten nicht sagen, weil die abgelehnten Setups nicht weiterverfolgt werden. Auffällig ist auch, was **nicht** gefiltert wird: Uhrzeit und Chance-Risiko-Verhältnis.\n\n## Einordnung\n\nMit 5 Trades heute und 9 in den drei dokumentierten Tagen ist alles oben eine Beobachtung, kein Beleg. Unter ~60 abgeschlossenen Trades sagen Winrate, Profitfaktor und Expectancy nichts Verlässliches. Die drei Tage (−75,85 $, −11,14 $, −10,37 $) zeigen eine Richtung, aber keine Ursache. Keine Änderung an der Musterlogik auf dieser Basis.\n\n## Worauf als Nächstes achten\n\n1. Latenz Signal → Fill pro Trade protokollieren; die 0,40R Slippage heute sind der größte einzelne Posten.\n2. Zählen, wie viele Einstiege nach 15:00 NY entstehen und wie sie ausgehen.\n3. Verhältnis Zielabstand zu Stopabstand je Trade mitschreiben (heute 2 von 5 unter 1,0R).\n4. Prüfen, ob der Zeit-Stop nach dem Fix exakt bei 120 Minuten greift.\n\n## Was wir daraus machen\n\n- **Latenz zwischen Signalkerze und Order-Fill messen und senken** · _Technik_ — Zwischen dem Schluss der Signalkerze und dem Fill lagen heute 4 bis 13 Minuten (HD: Signalschluss 296,99, Fill 09:57 zu 296,41; TMO und DHR: Signal aus der 15:00-Kerze, Fill erst 15:28). Ergebnis: 0,402R Slippage über fünf Trades — mehr als das Tagesergebnis von −0,379R. Drei Zeitstempel pro Trade loggen (Signal, Orderabsendung, Fill), damit sichtbar wird, ob die Verzögerung im Scan-Intervall, in der Orderlogik oder beim Broker-Simulator entsteht.\n- **Zeit-Stop nicht nur auf dem 15-Minuten-Raster prüfen** · _Technik_ — Der Zeit-Stop soll nach 120 Minuten greifen. HD wurde nach 122 Minuten geschlossen, NVDA erst nach 138 Minuten — 18 Minuten über der Regel. Die Prüfung läuft offenbar nur beim Kerzenabschluss. Auf Minutenbasis prüfen, damit das Fenster tatsächlich 120 Minuten ist (bei NVDA war die Abweichung zufällig günstig, das ändert nichts am Fehler).\n- **Abgelehnte Setups im Schattenprotokoll mitführen** · _beobachten_ — Von 104 Setups wurden 99 verworfen, davon 81 allein durch skip-vol. Der Trichter hängt damit fast vollständig an einem Kriterium, ohne dass geprüft werden kann, ob es trägt. Die abgelehnten Setups hypothetisch mitrechnen (Einstieg, Stop, Ziel, Ausgang) — nur protokollieren, nichts am Filter ändern. Erst mit mehreren hundert Datensätzen lässt sich sagen, ob skip-vol Qualität liefert oder nur Volumen wegschneidet.\n- **Restzeit gegen Zielabstand prüfen, bevor eingestiegen wird** · _Strategie-Kandidat_ — Drei Einstiege heute (15:19, 15:28, 15:28) hatten 32 bis 40 Minuten bis zur Glattstellung, bei Zielabständen von 0,76R bis 1,77R. Zusammen −14,77 $, während die zwei Vormittagstrades +4,40 $ brachten. Eine zusätzliche Bedingung — etwa Mindest-Restzeit oder Restzeit im Verhältnis zur Zieldistanz — wäre eine Verschärfung, kein Lockern. Erst prüfen, wenn genug Trades mit später Uhrzeit vorliegen; aus drei Fällen lässt sich kein Schwellenwert ableiten.\n- **Mindestverhältnis Ziel zu Stop als Kandidat vormerken** · _Strategie-Kandidat_ — HD hatte ein Ziel von 0,73R, TMO von 0,76R — das Ziel lag näher als der Stop. Solche Trades brauchen dauerhaft über ~58 % Trefferquote, nur um die Null zu halten. Die Verteilung von target_r über alle Trades mitschreiben und erst ab etwa 60 abgeschlossenen Trades auswerten, ob Setups unter 1,0R systematisch schlechter abschneiden. Bis dahin keine Änderung an der Zielberechnung.\n\n_Analyse von claude-opus-5 · ca. 0.32 $_",
+  "headline": "Fünf Trades, ein Gewinner, −10,37 $ (−0,38R): Der Tagesverlust stammt komplett aus drei Einstiegen in den letzten 41 Minuten, und die Summe der Einstiegs-Slippage (0,40R) ist größer als das Minus des Tages.",
+  "ai": true
  }
 }

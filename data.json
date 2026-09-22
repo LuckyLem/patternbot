@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-22T19:13:51+00:00",
- "heartbeat": "2026-09-22T19:13:51+00:00",
+ "updated": "2026-09-22T19:25:50+00:00",
+ "heartbeat": "2026-09-22T19:25:50+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9940.55,
+  "equity": 9942.63,
   "last_equity": 9882.38,
-  "day_change": 58.17,
-  "total_change": -59.45
+  "day_change": 60.25,
+  "total_change": -57.37
  },
  "positions": [
   {
@@ -16,11 +16,40 @@
    "side": "long",
    "qty": 2,
    "entry": 698.79,
-   "current": 699.02,
-   "pl": 0.46
+   "current": 698.94,
+   "pl": 0.3
+  },
+  {
+   "symbol": "PH",
+   "side": "long",
+   "qty": 2,
+   "entry": 964.23,
+   "current": 965.35,
+   "pl": 2.24
   }
  ],
  "trades": [
+  {
+   "symbol": "PH",
+   "pattern": "DoubleBottom",
+   "side": "long",
+   "day": "2026-09-22",
+   "opened": "2026-09-22T19:17:46.127883+00:00",
+   "closed": null,
+   "entry": 964.23,
+   "stop": 953.87,
+   "target": 972.32,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "double_bottom neckline_break>963.57",
+   "max_r": 0.08,
+   "key": "t16",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "DE",
    "pattern": "InverseHeadShoulders",
@@ -434,8 +463,8 @@
  ],
  "funnel": {
   "day": "2026-09-22",
-  "setups": 93,
-  "traded": 6,
+  "setups": 94,
+  "traded": 7,
   "rejected": {
    "skip-chase": 5,
    "skip-vol": 81,

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-22T16:13:38+00:00",
- "heartbeat": "2026-09-22T16:13:38+00:00",
+ "updated": "2026-09-22T16:26:28+00:00",
+ "heartbeat": "2026-09-22T16:26:28+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9957.81,
+  "equity": 9953.49,
   "last_equity": 9882.38,
-  "day_change": 75.43,
-  "total_change": -42.19
+  "day_change": 71.11,
+  "total_change": -46.51
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "short",
    "qty": 11,
    "entry": 165.22,
-   "current": 161.83,
-   "pl": 37.3
+   "current": 161.63,
+   "pl": 39.44
   },
   {
    "symbol": "GS",
    "side": "short",
    "qty": 2,
    "entry": 938.79,
-   "current": 948.6,
-   "pl": -19.62
+   "current": 948.7,
+   "pl": -19.82
   },
   {
    "symbol": "VRTX",
    "side": "long",
    "qty": 3,
    "entry": 514.82,
-   "current": 525.31,
-   "pl": 31.47
+   "current": 523.19,
+   "pl": 25.11
   }
  ],
  "trades": [
@@ -408,11 +408,11 @@
  ],
  "funnel": {
   "day": "2026-09-22",
-  "setups": 30,
+  "setups": 36,
   "traded": 4,
   "rejected": {
    "skip-chase": 6,
-   "skip-vol": 20
+   "skip-vol": 26
   }
  },
  "config": {

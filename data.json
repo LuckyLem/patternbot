@@ -1,33 +1,16 @@
 {
  "version": 1,
- "updated": "2026-09-22T19:47:23+00:00",
- "heartbeat": "2026-09-22T19:47:23+00:00",
+ "updated": "2026-09-22T19:58:25+00:00",
+ "heartbeat": "2026-09-22T19:58:25+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9946.54,
+  "equity": 9948.77,
   "last_equity": 9882.38,
-  "day_change": 64.16,
-  "total_change": -53.46
+  "day_change": 66.39,
+  "total_change": -51.23
  },
- "positions": [
-  {
-   "symbol": "DE",
-   "side": "long",
-   "qty": 2,
-   "entry": 698.79,
-   "current": 701.38,
-   "pl": 5.18
-  },
-  {
-   "symbol": "PH",
-   "side": "long",
-   "qty": 2,
-   "entry": 964.23,
-   "current": 964.81,
-   "pl": 1.17
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "PH",
@@ -35,19 +18,19 @@
    "side": "long",
    "day": "2026-09-22",
    "opened": "2026-09-22T19:17:46.127883+00:00",
-   "closed": null,
+   "closed": "2026-09-22T19:51:59.427479+00:00",
    "entry": 964.23,
    "stop": 953.87,
    "target": 972.32,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 965.21,
+   "pnl": 1.96,
+   "r": 0.095,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "double_bottom neckline_break>963.57",
    "max_r": 0.18,
    "key": "t16",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -56,19 +39,19 @@
    "side": "long",
    "day": "2026-09-22",
    "opened": "2026-09-22T18:04:03.779607+00:00",
-   "closed": null,
+   "closed": "2026-09-22T19:51:55.812319+00:00",
    "entry": 698.79,
    "stop": 692.4,
    "target": 709.47,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 702.15,
+   "pnl": 6.72,
+   "r": 0.526,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "inverse_H&S neckline_break>696.88",
-   "max_r": 0.4,
+   "max_r": 0.55,
    "key": "t15",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -367,12 +350,12 @@
   }
  ],
  "stats": {
-  "n": 14,
-  "pnl": -39.65,
-  "winrate": 0.357,
-  "expectancy": -0.121,
-  "pf": 0.71,
-  "avg_win": 19.59,
+  "n": 16,
+  "pnl": -30.97,
+  "winrate": 0.438,
+  "expectancy": -0.067,
+  "pf": 0.77,
+  "avg_win": 15.23,
   "avg_loss": -15.29
  },
  "equity_curve": [

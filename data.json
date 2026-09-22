@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-22T14:45:21+00:00",
- "heartbeat": "2026-09-22T14:45:21+00:00",
+ "updated": "2026-09-22T14:57:07+00:00",
+ "heartbeat": "2026-09-22T14:57:07+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9916.29,
+  "equity": 9919.04,
   "last_equity": 9882.38,
-  "day_change": 33.91,
-  "total_change": -83.71
+  "day_change": 36.66,
+  "total_change": -80.96
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 11,
    "entry": 165.22,
-   "current": 163.76,
-   "pl": 16.01
+   "current": 164.03,
+   "pl": 13.1
   },
   {
    "symbol": "GS",
    "side": "short",
    "qty": 2,
    "entry": 938.79,
-   "current": 938.21,
-   "pl": 1.16
+   "current": 941.56,
+   "pl": -5.54
   },
   {
    "symbol": "MRK",
    "side": "long",
    "qty": 13,
    "entry": 150.78,
-   "current": 151.37,
-   "pl": 7.67
+   "current": 151.73,
+   "pl": 12.35
   },
   {
    "symbol": "VRTX",
    "side": "long",
    "qty": 3,
    "entry": 514.82,
-   "current": 517.73,
-   "pl": 8.73
+   "current": 520.53,
+   "pl": 17.13
   }
  ],
  "trades": [
@@ -82,7 +82,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<166.13",
-   "max_r": 0.19,
+   "max_r": 0.35,
    "key": "t12",
    "detail": false,
    "ai_verdict": null
@@ -103,7 +103,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "double_bottom neckline_break>150.47",
-   "max_r": 0.21,
+   "max_r": 0.37,
    "key": "t11",
    "detail": false,
    "ai_verdict": null
@@ -124,7 +124,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>513.93",
-   "max_r": 0.21,
+   "max_r": 0.9,
    "key": "t10",
    "detail": false,
    "ai_verdict": null
@@ -416,11 +416,11 @@
  ],
  "funnel": {
   "day": "2026-09-22",
-  "setups": 18,
+  "setups": 20,
   "traded": 4,
   "rejected": {
-   "skip-chase": 6,
-   "skip-vol": 8
+   "skip-chase": 7,
+   "skip-vol": 9
   }
  },
  "config": {

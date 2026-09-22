@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-22T16:26:28+00:00",
- "heartbeat": "2026-09-22T16:26:28+00:00",
+ "updated": "2026-09-22T16:38:24+00:00",
+ "heartbeat": "2026-09-22T16:38:24+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9953.49,
+  "equity": 9946.84,
   "last_equity": 9882.38,
-  "day_change": 71.11,
-  "total_change": -46.51
+  "day_change": 64.46,
+  "total_change": -53.16
  },
  "positions": [
   {
@@ -16,24 +16,8 @@
    "side": "short",
    "qty": 11,
    "entry": 165.22,
-   "current": 161.63,
-   "pl": 39.44
-  },
-  {
-   "symbol": "GS",
-   "side": "short",
-   "qty": 2,
-   "entry": 938.79,
-   "current": 948.7,
-   "pl": -19.82
-  },
-  {
-   "symbol": "VRTX",
-   "side": "long",
-   "qty": 3,
-   "entry": 514.82,
-   "current": 523.19,
-   "pl": 25.11
+   "current": 161.87,
+   "pl": 36.86
   }
  ],
  "trades": [
@@ -43,19 +27,19 @@
    "side": "short",
    "day": "2026-09-22",
    "opened": "2026-09-22T14:34:11.201898+00:00",
-   "closed": null,
+   "closed": "2026-09-22T16:36:50.358732+00:00",
    "entry": 938.79,
    "stop": 953.59,
    "target": 912.92,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 950.17,
+   "pnl": -22.76,
+   "r": -0.769,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<940.03",
    "max_r": 0.11,
    "key": "t13",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -106,19 +90,19 @@
    "side": "long",
    "day": "2026-09-22",
    "opened": "2026-09-22T14:30:35.398493+00:00",
-   "closed": null,
+   "closed": "2026-09-22T16:36:45.781920+00:00",
    "entry": 514.82,
    "stop": 508.07,
    "target": 525.67,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 522.81,
+   "pnl": 23.97,
+   "r": 1.183,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>513.93",
    "max_r": 1.59,
    "key": "t10",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -312,13 +296,13 @@
   }
  ],
  "stats": {
-  "n": 10,
-  "pnl": -70.97,
-  "winrate": 0.3,
-  "expectancy": -0.268,
-  "pf": 0.36,
-  "avg_win": 13.04,
-  "avg_loss": -15.73
+  "n": 12,
+  "pnl": -69.76,
+  "winrate": 0.333,
+  "expectancy": -0.189,
+  "pf": 0.47,
+  "avg_win": 15.78,
+  "avg_loss": -16.61
  },
  "equity_curve": [
   {
@@ -408,11 +392,11 @@
  ],
  "funnel": {
   "day": "2026-09-22",
-  "setups": 36,
+  "setups": 38,
   "traded": 4,
   "rejected": {
    "skip-chase": 6,
-   "skip-vol": 26
+   "skip-vol": 28
   }
  },
  "config": {

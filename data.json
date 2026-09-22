@@ -1,17 +1,134 @@
 {
  "version": 1,
- "updated": "2026-09-22T14:23:45+00:00",
- "heartbeat": "2026-09-22T14:23:45+00:00",
+ "updated": "2026-09-22T14:34:12+00:00",
+ "heartbeat": "2026-09-22T14:34:12+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9882.38,
+  "equity": 9879.62,
   "last_equity": 9882.38,
-  "day_change": 0.0,
-  "total_change": -117.62
+  "day_change": -2.76,
+  "total_change": -120.38
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "BKNG",
+   "side": "short",
+   "qty": 11,
+   "entry": 165.22,
+   "current": 165.26,
+   "pl": -0.43
+  },
+  {
+   "symbol": "GS",
+   "side": "short",
+   "qty": 2,
+   "entry": 938.79,
+   "current": 938.99,
+   "pl": -0.4
+  },
+  {
+   "symbol": "MRK",
+   "side": "long",
+   "qty": 13,
+   "entry": 150.78,
+   "current": 150.75,
+   "pl": -0.39
+  },
+  {
+   "symbol": "VRTX",
+   "side": "long",
+   "qty": 3,
+   "entry": 514.82,
+   "current": 514.08,
+   "pl": -2.22
+  }
+ ],
  "trades": [
+  {
+   "symbol": "GS",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-22",
+   "opened": "2026-09-22T14:34:11.201898+00:00",
+   "closed": null,
+   "entry": 939.58,
+   "stop": 953.59,
+   "target": 912.92,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "rectangle break<940.03",
+   "max_r": null,
+   "key": "t13",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "BKNG",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-22",
+   "opened": "2026-09-22T14:34:10.194217+00:00",
+   "closed": null,
+   "entry": 165.38,
+   "stop": 169.61,
+   "target": 159.18,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "rectangle break<166.13",
+   "max_r": null,
+   "key": "t12",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "MRK",
+   "pattern": "DoubleBottom",
+   "side": "long",
+   "day": "2026-09-22",
+   "opened": "2026-09-22T14:34:07.891570+00:00",
+   "closed": null,
+   "entry": 150.57,
+   "stop": 147.97,
+   "target": 152.81,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "double_bottom neckline_break>150.47",
+   "max_r": null,
+   "key": "t11",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "VRTX",
+   "pattern": "Rectangle",
+   "side": "long",
+   "day": "2026-09-22",
+   "opened": "2026-09-22T14:30:35.398493+00:00",
+   "closed": null,
+   "entry": 514.82,
+   "stop": 508.07,
+   "target": 525.67,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break>513.93",
+   "max_r": null,
+   "key": "t10",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "DHR",
    "pattern": "InverseHeadShoulders",
@@ -298,14 +415,12 @@
   }
  ],
  "funnel": {
-  "day": "2026-09-21",
-  "setups": 104,
-  "traded": 5,
+  "day": "2026-09-22",
+  "setups": 18,
+  "traded": 4,
   "rejected": {
-   "skip-rs": 5,
-   "skip-chase": 8,
-   "skip-vol": 81,
-   "skip-market": 5
+   "skip-chase": 6,
+   "skip-vol": 8
   }
  },
  "config": {

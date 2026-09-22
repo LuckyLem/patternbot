@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-22T18:37:02+00:00",
- "heartbeat": "2026-09-22T18:37:02+00:00",
+ "updated": "2026-09-22T18:48:53+00:00",
+ "heartbeat": "2026-09-22T18:48:53+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9941.32,
+  "equity": 9940.97,
   "last_equity": 9882.38,
-  "day_change": 58.94,
-  "total_change": -58.68
+  "day_change": 58.59,
+  "total_change": -59.03
  },
  "positions": [
   {
@@ -16,16 +16,8 @@
    "side": "long",
    "qty": 2,
    "entry": 698.79,
-   "current": 699.0,
-   "pl": 0.42
-  },
-  {
-   "symbol": "REGN",
-   "side": "long",
-   "qty": 2,
-   "entry": 811.17,
-   "current": 809.06,
-   "pl": -4.22
+   "current": 699.13,
+   "pl": 0.68
   }
  ],
  "trades": [
@@ -56,19 +48,19 @@
    "side": "long",
    "day": "2026-09-22",
    "opened": "2026-09-22T16:46:31.411179+00:00",
-   "closed": null,
+   "closed": "2026-09-22T18:47:16.586600+00:00",
    "entry": 811.17,
    "stop": 794.85,
    "target": 836.47,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 808.8,
+   "pnl": -4.73,
+   "r": -0.145,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>808.73",
    "max_r": null,
    "key": "t14",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -346,13 +338,13 @@
   }
  ],
  "stats": {
-  "n": 13,
-  "pnl": -34.92,
-  "winrate": 0.385,
-  "expectancy": -0.119,
-  "pf": 0.74,
+  "n": 14,
+  "pnl": -39.65,
+  "winrate": 0.357,
+  "expectancy": -0.121,
+  "pf": 0.71,
   "avg_win": 19.59,
-  "avg_loss": -16.61
+  "avg_loss": -15.29
  },
  "equity_curve": [
   {
@@ -442,11 +434,11 @@
  ],
  "funnel": {
   "day": "2026-09-22",
-  "setups": 84,
+  "setups": 87,
   "traded": 6,
   "rejected": {
    "skip-chase": 5,
-   "skip-vol": 73
+   "skip-vol": 76
   }
  },
  "config": {

@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-09-22T20:28:27+00:00",
- "heartbeat": "2026-09-22T20:28:27+00:00",
+ "updated": "2026-09-22T20:30:01+00:00",
+ "heartbeat": "2026-09-22T20:30:01+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -444,7 +444,16 @@
    "equity": 9882.38
   }
  ],
- "funnel": null,
+ "funnel": {
+  "day": "2026-09-22",
+  "setups": 94,
+  "traded": 7,
+  "rejected": {
+   "skip-chase": 5,
+   "skip-vol": 81,
+   "skip-rs": 1
+  }
+ },
  "config": {
   "risk_pct": 0.005,
   "max_positions": 5,

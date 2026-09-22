@@ -1,26 +1,47 @@
 {
  "version": 1,
- "updated": "2026-09-22T16:38:24+00:00",
- "heartbeat": "2026-09-22T16:38:24+00:00",
+ "updated": "2026-09-22T16:50:44+00:00",
+ "heartbeat": "2026-09-22T16:50:44+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9946.84,
+  "equity": 9944.82,
   "last_equity": 9882.38,
-  "day_change": 64.46,
-  "total_change": -53.16
+  "day_change": 62.44,
+  "total_change": -55.18
  },
  "positions": [
   {
-   "symbol": "BKNG",
-   "side": "short",
-   "qty": 11,
-   "entry": 165.22,
-   "current": 161.87,
-   "pl": 36.86
+   "symbol": "REGN",
+   "side": "long",
+   "qty": 2,
+   "entry": 811.17,
+   "current": 811.17,
+   "pl": 0.0
   }
  ],
  "trades": [
+  {
+   "symbol": "REGN",
+   "pattern": "Rectangle",
+   "side": "long",
+   "day": "2026-09-22",
+   "opened": "2026-09-22T16:46:31.411179+00:00",
+   "closed": null,
+   "entry": 811.17,
+   "stop": 794.85,
+   "target": 836.47,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break>808.73",
+   "max_r": null,
+   "key": "t14",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "GS",
    "pattern": "Rectangle",
@@ -48,19 +69,19 @@
    "side": "short",
    "day": "2026-09-22",
    "opened": "2026-09-22T14:34:10.194217+00:00",
-   "closed": null,
+   "closed": "2026-09-22T16:48:42.090507+00:00",
    "entry": 165.22,
    "stop": 169.61,
    "target": 159.18,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 162.05,
+   "pnl": 34.84,
+   "r": 0.722,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<166.13",
    "max_r": 0.94,
    "key": "t12",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -296,12 +317,12 @@
   }
  ],
  "stats": {
-  "n": 12,
-  "pnl": -69.76,
-  "winrate": 0.333,
-  "expectancy": -0.189,
-  "pf": 0.47,
-  "avg_win": 15.78,
+  "n": 13,
+  "pnl": -34.92,
+  "winrate": 0.385,
+  "expectancy": -0.119,
+  "pf": 0.74,
+  "avg_win": 19.59,
   "avg_loss": -16.61
  },
  "equity_curve": [
@@ -392,11 +413,11 @@
  ],
  "funnel": {
   "day": "2026-09-22",
-  "setups": 38,
-  "traded": 4,
+  "setups": 43,
+  "traded": 5,
   "rejected": {
    "skip-chase": 6,
-   "skip-vol": 28
+   "skip-vol": 32
   }
  },
  "config": {

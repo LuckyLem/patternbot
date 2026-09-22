@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-22T15:35:29+00:00",
- "heartbeat": "2026-09-22T15:35:29+00:00",
+ "updated": "2026-09-22T15:47:21+00:00",
+ "heartbeat": "2026-09-22T15:47:21+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9959.69,
+  "equity": 9962.8,
   "last_equity": 9882.38,
-  "day_change": 77.31,
-  "total_change": -40.31
+  "day_change": 80.42,
+  "total_change": -37.2
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "short",
    "qty": 11,
    "entry": 165.22,
-   "current": 162.32,
-   "pl": 31.91
+   "current": 161.71,
+   "pl": 38.67
   },
   {
    "symbol": "GS",
    "side": "short",
    "qty": 2,
    "entry": 938.79,
-   "current": 942.75,
-   "pl": -7.92
+   "current": 946.16,
+   "pl": -14.74
   },
   {
    "symbol": "VRTX",
    "side": "long",
    "qty": 3,
    "entry": 514.82,
-   "current": 523.79,
-   "pl": 26.91
+   "current": 524.87,
+   "pl": 30.15
   }
  ],
  "trades": [

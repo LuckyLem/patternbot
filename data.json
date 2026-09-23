@@ -1,34 +1,92 @@
 {
  "version": 1,
- "updated": "2026-09-23T13:54:53+00:00",
- "heartbeat": "2026-09-23T13:54:53+00:00",
+ "updated": "2026-09-23T14:06:19+00:00",
+ "heartbeat": "2026-09-23T14:06:19+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9946.42,
+  "equity": 9956.44,
   "last_equity": 9948.77,
-  "day_change": -2.35,
-  "total_change": -53.58
+  "day_change": 7.67,
+  "total_change": -43.56
  },
  "positions": [
+  {
+   "symbol": "BKNG",
+   "side": "short",
+   "qty": 5,
+   "entry": 157.25,
+   "current": 157.32,
+   "pl": -0.35
+  },
   {
    "symbol": "COF",
    "side": "short",
    "qty": 10,
    "entry": 198.12,
-   "current": 198.31,
-   "pl": -1.9
+   "current": 197.44,
+   "pl": 6.82
+  },
+  {
+   "symbol": "INTU",
+   "side": "short",
+   "qty": 6,
+   "entry": 287.37,
+   "current": 286.7,
+   "pl": 4.0
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 4,
    "entry": 377.84,
-   "current": 377.68,
-   "pl": -0.64
+   "current": 377.16,
+   "pl": -2.72
   }
  ],
  "trades": [
+  {
+   "symbol": "BKNG",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-23",
+   "opened": "2026-09-23T13:58:35.783944+00:00",
+   "closed": null,
+   "entry": 157.25,
+   "stop": 166.96,
+   "target": 148.6,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<160.84",
+   "max_r": 0.02,
+   "key": "t20",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "INTU",
+   "pattern": "HeadShouldersTop",
+   "side": "short",
+   "day": "2026-09-23",
+   "opened": "2026-09-23T13:58:33.454698+00:00",
+   "closed": null,
+   "entry": 287.37,
+   "stop": 293.59,
+   "target": 265.94,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "H&S neckline_break<288.34",
+   "max_r": 0.14,
+   "key": "t19",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "COF",
    "pattern": "Rectangle",
@@ -36,16 +94,16 @@
    "day": "2026-09-23",
    "opened": "2026-09-23T13:54:52.719376+00:00",
    "closed": null,
-   "entry": 198.24,
+   "entry": 198.12,
    "stop": 203.09,
    "target": 192.87,
    "exit": null,
    "pnl": null,
    "r": null,
-   "status": "submitted",
+   "status": "open",
    "exit_source": null,
    "reason": "rectangle break<199.69",
-   "max_r": null,
+   "max_r": 0.02,
    "key": "t18",
    "detail": false,
    "ai_verdict": null
@@ -57,16 +115,16 @@
    "day": "2026-09-23",
    "opened": "2026-09-23T13:54:50.760679+00:00",
    "closed": null,
-   "entry": 377.06,
+   "entry": 377.84,
    "stop": 365.6,
    "target": 388.94,
    "exit": null,
    "pnl": null,
    "r": null,
-   "status": "submitted",
+   "status": "open",
    "exit_source": null,
    "reason": "asc_triangle break>376.35",
-   "max_r": null,
+   "max_r": 0.05,
    "key": "t17",
    "detail": false,
    "ai_verdict": null
@@ -509,11 +567,11 @@
  ],
  "funnel": {
   "day": "2026-09-23",
-  "setups": 26,
-  "traded": 2,
+  "setups": 41,
+  "traded": 4,
   "rejected": {
-   "skip-chase": 10,
-   "skip-vol": 14
+   "skip-chase": 12,
+   "skip-vol": 25
   }
  },
  "config": {

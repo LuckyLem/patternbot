@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-23T15:46:28+00:00",
- "heartbeat": "2026-09-23T15:46:28+00:00",
+ "updated": "2026-09-23T15:57:42+00:00",
+ "heartbeat": "2026-09-23T15:57:42+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9995.93,
+  "equity": 9992.08,
   "last_equity": 9948.77,
-  "day_change": 47.16,
-  "total_change": -4.07
+  "day_change": 43.31,
+  "total_change": -7.92
  },
  "positions": [
   {
@@ -16,40 +16,32 @@
    "side": "short",
    "qty": 5,
    "entry": 357.22,
-   "current": 356.08,
-   "pl": 5.7
+   "current": 355.96,
+   "pl": 6.3
   },
   {
    "symbol": "BKNG",
    "side": "short",
    "qty": 5,
    "entry": 157.25,
-   "current": 156.15,
-   "pl": 5.5
-  },
-  {
-   "symbol": "COF",
-   "side": "short",
-   "qty": 10,
-   "entry": 198.12,
-   "current": 198.24,
-   "pl": -1.2
+   "current": 156.89,
+   "pl": 1.8
   },
   {
    "symbol": "INTU",
    "side": "short",
    "qty": 6,
    "entry": 287.37,
-   "current": 288.0,
-   "pl": -3.8
+   "current": 287.96,
+   "pl": -3.56
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 4,
    "entry": 377.84,
-   "current": 388.08,
-   "pl": 40.96
+   "current": 388.22,
+   "pl": 41.52
   }
  ],
  "trades": [
@@ -122,19 +114,19 @@
    "side": "short",
    "day": "2026-09-23",
    "opened": "2026-09-23T13:54:52.719376+00:00",
-   "closed": null,
+   "closed": "2026-09-23T15:56:06.084059+00:00",
    "entry": 198.12,
    "stop": 203.09,
    "target": 192.87,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 198.44,
+   "pnl": -3.22,
+   "r": -0.065,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<199.69",
    "max_r": 0.17,
    "key": "t18",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -496,13 +488,13 @@
   }
  ],
  "stats": {
-  "n": 16,
-  "pnl": -30.97,
-  "winrate": 0.438,
+  "n": 17,
+  "pnl": -34.19,
+  "winrate": 0.412,
   "expectancy": -0.067,
-  "pf": 0.77,
+  "pf": 0.76,
   "avg_win": 15.23,
-  "avg_loss": -15.29
+  "avg_loss": -14.08
  },
  "equity_curve": [
   {
@@ -596,11 +588,11 @@
  ],
  "funnel": {
   "day": "2026-09-23",
-  "setups": 41,
+  "setups": 45,
   "traded": 5,
   "rejected": {
    "skip-chase": 11,
-   "skip-vol": 25
+   "skip-vol": 29
   }
  },
  "config": {

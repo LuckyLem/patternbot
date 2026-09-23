@@ -1,34 +1,92 @@
 {
  "version": 1,
- "updated": "2026-09-23T19:07:22+00:00",
- "heartbeat": "2026-09-23T19:07:22+00:00",
+ "updated": "2026-09-23T19:18:32+00:00",
+ "heartbeat": "2026-09-23T19:18:32+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9979.99,
+  "equity": 9980.59,
   "last_equity": 9948.77,
-  "day_change": 31.22,
-  "total_change": -20.01
+  "day_change": 31.82,
+  "total_change": -19.41
  },
  "positions": [
+  {
+   "symbol": "DAL",
+   "side": "short",
+   "qty": 24,
+   "entry": 81.74,
+   "current": 81.79,
+   "pl": -1.2
+  },
   {
    "symbol": "HD",
    "side": "short",
    "qty": 6,
    "entry": 298.61,
-   "current": 298.55,
-   "pl": 0.36
+   "current": 298.36,
+   "pl": 1.5
   },
   {
    "symbol": "ISRG",
    "side": "short",
    "qty": 5,
    "entry": 396.88,
-   "current": 397.24,
-   "pl": -1.77
+   "current": 397.18,
+   "pl": -1.48
+  },
+  {
+   "symbol": "PLD",
+   "side": "short",
+   "qty": 14,
+   "entry": 134.28,
+   "current": 134.34,
+   "pl": -0.84
   }
  ],
  "trades": [
+  {
+   "symbol": "DAL",
+   "pattern": "DescendingTriangle",
+   "side": "short",
+   "day": "2026-09-23",
+   "opened": "2026-09-23T19:18:32.487464+00:00",
+   "closed": null,
+   "entry": 81.91,
+   "stop": 83.15,
+   "target": 79.78,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "desc_triangle break<82.05",
+   "max_r": null,
+   "key": "t25",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "PLD",
+   "pattern": "DescendingTriangle",
+   "side": "short",
+   "day": "2026-09-23",
+   "opened": "2026-09-23T19:18:29.614970+00:00",
+   "closed": null,
+   "entry": 134.43,
+   "stop": 135.24,
+   "target": 133.25,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "desc_triangle break<134.43",
+   "max_r": null,
+   "key": "t24",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "ISRG",
    "pattern": "DoubleTop",
@@ -614,11 +672,11 @@
  ],
  "funnel": {
   "day": "2026-09-23",
-  "setups": 106,
-  "traded": 7,
+  "setups": 111,
+  "traded": 9,
   "rejected": {
    "skip-chase": 10,
-   "skip-vol": 88,
+   "skip-vol": 91,
    "skip-rs": 1
   }
  },

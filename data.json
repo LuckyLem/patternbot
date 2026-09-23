@@ -1,33 +1,16 @@
 {
  "version": 1,
- "updated": "2026-09-23T16:09:08+00:00",
- "heartbeat": "2026-09-23T16:09:08+00:00",
+ "updated": "2026-09-23T16:20:16+00:00",
+ "heartbeat": "2026-09-23T16:20:16+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9989.9,
+  "equity": 9981.4,
   "last_equity": 9948.77,
-  "day_change": 41.13,
-  "total_change": -10.1
+  "day_change": 32.63,
+  "total_change": -18.6
  },
- "positions": [
-  {
-   "symbol": "AVGO",
-   "side": "short",
-   "qty": 5,
-   "entry": 357.22,
-   "current": 355.72,
-   "pl": 7.5
-  },
-  {
-   "symbol": "PANW",
-   "side": "long",
-   "qty": 4,
-   "entry": 377.84,
-   "current": 387.44,
-   "pl": 38.4
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "AVGO",
@@ -35,19 +18,19 @@
    "side": "short",
    "day": "2026-09-23",
    "opened": "2026-09-23T14:10:01.465205+00:00",
-   "closed": null,
+   "closed": "2026-09-23T16:14:58.675456+00:00",
    "entry": 357.22,
    "stop": 362.51,
    "target": 350.54,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 355.81,
+   "pnl": 7.07,
+   "r": 0.267,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<358.52",
    "max_r": 0.37,
    "key": "t21",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -119,19 +102,19 @@
    "side": "long",
    "day": "2026-09-23",
    "opened": "2026-09-23T13:54:50.760679+00:00",
-   "closed": null,
+   "closed": "2026-09-23T16:14:56.402539+00:00",
    "entry": 377.84,
    "stop": 365.6,
    "target": 388.94,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 385.4,
+   "pnl": 30.24,
+   "r": 0.618,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "asc_triangle break>376.35",
    "max_r": 0.89,
    "key": "t17",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -472,12 +455,12 @@
   }
  ],
  "stats": {
-  "n": 19,
-  "pnl": -35.65,
-  "winrate": 0.421,
-  "expectancy": -0.063,
-  "pf": 0.75,
-  "avg_win": 13.7,
+  "n": 21,
+  "pnl": 1.66,
+  "winrate": 0.476,
+  "expectancy": -0.015,
+  "pf": 1.01,
+  "avg_win": 14.69,
   "avg_loss": -13.21
  },
  "equity_curve": [
@@ -572,11 +555,11 @@
  ],
  "funnel": {
   "day": "2026-09-23",
-  "setups": 54,
+  "setups": 57,
   "traded": 5,
   "rejected": {
    "skip-chase": 11,
-   "skip-vol": 38
+   "skip-vol": 41
   }
  },
  "config": {

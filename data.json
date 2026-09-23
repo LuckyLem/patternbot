@@ -1,17 +1,76 @@
 {
  "version": 1,
- "updated": "2026-09-23T13:43:40+00:00",
- "heartbeat": "2026-09-23T13:43:40+00:00",
+ "updated": "2026-09-23T13:54:53+00:00",
+ "heartbeat": "2026-09-23T13:54:53+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9948.77,
+  "equity": 9946.42,
   "last_equity": 9948.77,
-  "day_change": 0.0,
-  "total_change": -51.23
+  "day_change": -2.35,
+  "total_change": -53.58
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "COF",
+   "side": "short",
+   "qty": 10,
+   "entry": 198.12,
+   "current": 198.31,
+   "pl": -1.9
+  },
+  {
+   "symbol": "PANW",
+   "side": "long",
+   "qty": 4,
+   "entry": 377.84,
+   "current": 377.68,
+   "pl": -0.64
+  }
+ ],
  "trades": [
+  {
+   "symbol": "COF",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-23",
+   "opened": "2026-09-23T13:54:52.719376+00:00",
+   "closed": null,
+   "entry": 198.24,
+   "stop": 203.09,
+   "target": 192.87,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "rectangle break<199.69",
+   "max_r": null,
+   "key": "t18",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "PANW",
+   "pattern": "AscendingTriangle",
+   "side": "long",
+   "day": "2026-09-23",
+   "opened": "2026-09-23T13:54:50.760679+00:00",
+   "closed": null,
+   "entry": 377.06,
+   "stop": 365.6,
+   "target": 388.94,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "asc_triangle break>376.35",
+   "max_r": null,
+   "key": "t17",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "PH",
    "pattern": "DoubleBottom",
@@ -448,7 +507,15 @@
    "equity": 9948.77
   }
  ],
- "funnel": null,
+ "funnel": {
+  "day": "2026-09-23",
+  "setups": 26,
+  "traded": 2,
+  "rejected": {
+   "skip-chase": 10,
+   "skip-vol": 14
+  }
+ },
  "config": {
   "risk_pct": 0.005,
   "max_positions": 5,

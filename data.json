@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-23T15:12:52+00:00",
- "heartbeat": "2026-09-23T15:12:52+00:00",
+ "updated": "2026-09-23T15:23:56+00:00",
+ "heartbeat": "2026-09-23T15:23:56+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9982.73,
+  "equity": 9990.55,
   "last_equity": 9948.77,
-  "day_change": 33.96,
-  "total_change": -17.27
+  "day_change": 41.78,
+  "total_change": -9.45
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "short",
    "qty": 5,
    "entry": 357.22,
-   "current": 356.83,
-   "pl": 1.93
+   "current": 356.85,
+   "pl": 1.85
   },
   {
    "symbol": "BKNG",
    "side": "short",
    "qty": 5,
    "entry": 157.25,
-   "current": 156.87,
-   "pl": 1.9
+   "current": 156.18,
+   "pl": 5.35
   },
   {
    "symbol": "COF",
    "side": "short",
    "qty": 10,
    "entry": 198.12,
-   "current": 197.62,
-   "pl": 5.05
+   "current": 197.48,
+   "pl": 6.4
   },
   {
    "symbol": "INTU",
    "side": "short",
    "qty": 6,
    "entry": 287.37,
-   "current": 289.06,
-   "pl": -10.13
+   "current": 289.3,
+   "pl": -11.6
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 4,
    "entry": 377.84,
-   "current": 386.63,
-   "pl": 35.16
+   "current": 387.79,
+   "pl": 39.8
   }
  ],
  "trades": [
@@ -90,7 +90,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<160.84",
-   "max_r": 0.02,
+   "max_r": 0.11,
    "key": "t20",
    "detail": false,
    "ai_verdict": null
@@ -132,7 +132,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<199.69",
-   "max_r": 0.08,
+   "max_r": 0.16,
    "key": "t18",
    "detail": false,
    "ai_verdict": null

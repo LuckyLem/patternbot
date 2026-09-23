@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-23T19:29:52+00:00",
- "heartbeat": "2026-09-23T19:29:52+00:00",
+ "updated": "2026-09-23T19:40:43+00:00",
+ "heartbeat": "2026-09-23T19:40:43+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9987.85,
+  "equity": 9980.05,
   "last_equity": 9948.77,
-  "day_change": 39.08,
-  "total_change": -12.15
+  "day_change": 31.28,
+  "total_change": -19.95
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 24,
    "entry": 81.74,
-   "current": 81.73,
-   "pl": 0.24
+   "current": 81.74,
+   "pl": 0.0
   },
   {
    "symbol": "HD",
    "side": "short",
    "qty": 6,
    "entry": 298.61,
-   "current": 297.87,
-   "pl": 4.44
+   "current": 297.83,
+   "pl": 4.68
   },
   {
    "symbol": "ISRG",
    "side": "short",
    "qty": 5,
    "entry": 396.88,
-   "current": 397.16,
-   "pl": -1.4
+   "current": 398.15,
+   "pl": -6.38
   },
   {
    "symbol": "PLD",
    "side": "short",
    "qty": 14,
    "entry": 134.28,
-   "current": 134.06,
-   "pl": 3.08
+   "current": 134.25,
+   "pl": 0.42
   }
  ],
  "trades": [
@@ -61,7 +61,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<82.05",
-   "max_r": 0.01,
+   "max_r": 0.03,
    "key": "t25",
    "detail": false,
    "ai_verdict": null

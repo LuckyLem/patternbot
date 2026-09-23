@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-09-23T18:44:32+00:00",
- "heartbeat": "2026-09-23T18:44:32+00:00",
+ "updated": "2026-09-23T18:55:56+00:00",
+ "heartbeat": "2026-09-23T18:55:56+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9981.4,
+  "equity": 9983.07,
   "last_equity": 9948.77,
-  "day_change": 32.63,
-  "total_change": -18.6
+  "day_change": 34.3,
+  "total_change": -16.93
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "HD",
+   "side": "short",
+   "qty": 6,
+   "entry": 298.61,
+   "current": 298.36,
+   "pl": 1.53
+  }
+ ],
  "trades": [
+  {
+   "symbol": "HD",
+   "pattern": "DoubleTop",
+   "side": "short",
+   "day": "2026-09-23",
+   "opened": "2026-09-23T18:48:21.651742+00:00",
+   "closed": null,
+   "entry": 298.61,
+   "stop": 306.48,
+   "target": 292.19,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "double_top neckline_break<299.18",
+   "max_r": 0.05,
+   "key": "t22",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "AVGO",
    "pattern": "Rectangle",
@@ -555,11 +585,11 @@
  ],
  "funnel": {
   "day": "2026-09-23",
-  "setups": 100,
-  "traded": 5,
+  "setups": 104,
+  "traded": 6,
   "rejected": {
    "skip-chase": 10,
-   "skip-vol": 84,
+   "skip-vol": 87,
    "skip-rs": 1
   }
  },

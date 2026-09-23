@@ -1,50 +1,79 @@
 {
  "version": 1,
- "updated": "2026-09-23T14:06:19+00:00",
- "heartbeat": "2026-09-23T14:06:19+00:00",
+ "updated": "2026-09-23T14:17:20+00:00",
+ "heartbeat": "2026-09-23T14:17:20+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9956.44,
+  "equity": 9931.55,
   "last_equity": 9948.77,
-  "day_change": 7.67,
-  "total_change": -43.56
+  "day_change": -17.22,
+  "total_change": -68.45
  },
  "positions": [
+  {
+   "symbol": "AVGO",
+   "side": "short",
+   "qty": 5,
+   "entry": 357.22,
+   "current": 356.12,
+   "pl": 5.53
+  },
   {
    "symbol": "BKNG",
    "side": "short",
    "qty": 5,
    "entry": 157.25,
-   "current": 157.32,
-   "pl": -0.35
+   "current": 158.03,
+   "pl": -3.92
   },
   {
    "symbol": "COF",
    "side": "short",
    "qty": 10,
    "entry": 198.12,
-   "current": 197.44,
-   "pl": 6.82
+   "current": 198.66,
+   "pl": -5.4
   },
   {
    "symbol": "INTU",
    "side": "short",
    "qty": 6,
    "entry": 287.37,
-   "current": 286.7,
-   "pl": 4.0
+   "current": 289.6,
+   "pl": -13.4
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 4,
    "entry": 377.84,
-   "current": 377.16,
-   "pl": -2.72
+   "current": 377.69,
+   "pl": -0.58
   }
  ],
  "trades": [
+  {
+   "symbol": "AVGO",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-23",
+   "opened": "2026-09-23T14:10:01.465205+00:00",
+   "closed": null,
+   "entry": 357.22,
+   "stop": 362.51,
+   "target": 350.54,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<358.52",
+   "max_r": 0.17,
+   "key": "t21",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "BKNG",
    "pattern": "Rectangle",
@@ -568,9 +597,9 @@
  "funnel": {
   "day": "2026-09-23",
   "setups": 41,
-  "traded": 4,
+  "traded": 5,
   "rejected": {
-   "skip-chase": 12,
+   "skip-chase": 11,
    "skip-vol": 25
   }
  },

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-24T16:19:35+00:00",
- "heartbeat": "2026-09-24T16:19:35+00:00",
+ "updated": "2026-09-24T16:30:49+00:00",
+ "heartbeat": "2026-09-24T16:30:49+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9959.93,
+  "equity": 9956.96,
   "last_equity": 9986.3,
-  "day_change": -26.37,
-  "total_change": -40.07
+  "day_change": -29.34,
+  "total_change": -43.04
  },
  "positions": [
   {
@@ -16,11 +16,40 @@
    "side": "short",
    "qty": 7,
    "entry": 277.74,
-   "current": 277.23,
-   "pl": 3.6
+   "current": 277.7,
+   "pl": 0.24
+  },
+  {
+   "symbol": "LUV",
+   "side": "long",
+   "qty": 48,
+   "entry": 41.36,
+   "current": 41.34,
+   "pl": -0.96
   }
  ],
  "trades": [
+  {
+   "symbol": "LUV",
+   "pattern": "DoubleBottom",
+   "side": "long",
+   "day": "2026-09-24",
+   "opened": "2026-09-24T16:30:49.157840+00:00",
+   "closed": null,
+   "entry": 41.26,
+   "stop": 40.58,
+   "target": 41.86,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "double_bottom neckline_break>41.24",
+   "max_r": null,
+   "key": "t32",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "AON",
    "pattern": "Rectangle",
@@ -778,12 +807,12 @@
  ],
  "funnel": {
   "day": "2026-09-24",
-  "setups": 44,
-  "traded": 6,
+  "setups": 48,
+  "traded": 7,
   "rejected": {
    "skip-rs": 2,
    "skip-chase": 8,
-   "skip-vol": 28
+   "skip-vol": 31
   }
  },
  "config": {

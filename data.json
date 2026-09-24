@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-24T14:15:45+00:00",
- "heartbeat": "2026-09-24T14:15:45+00:00",
+ "updated": "2026-09-24T14:26:48+00:00",
+ "heartbeat": "2026-09-24T14:26:48+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10005.09,
+  "equity": 9997.76,
   "last_equity": 9986.3,
-  "day_change": 18.79,
-  "total_change": 5.09
+  "day_change": 11.46,
+  "total_change": -2.24
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "long",
    "qty": 8,
    "entry": 224.91,
-   "current": 225.89,
-   "pl": 7.84
+   "current": 225.18,
+   "pl": 2.12
   },
   {
    "symbol": "IBM",
    "side": "short",
    "qty": 7,
    "entry": 227.0,
-   "current": 226.47,
-   "pl": 3.71
+   "current": 226.57,
+   "pl": 3.03
   },
   {
    "symbol": "KO",
    "side": "long",
    "qty": 22,
    "entry": 89.27,
-   "current": 89.04,
-   "pl": -5.06
+   "current": 88.98,
+   "pl": -6.38
   },
   {
    "symbol": "VZ",
    "side": "long",
    "qty": 42,
    "entry": 47.32,
-   "current": 47.38,
-   "pl": 2.31
+   "current": 47.34,
+   "pl": 1.05
   },
   {
    "symbol": "WMT",
    "side": "short",
    "qty": 18,
    "entry": 109.67,
-   "current": 109.11,
-   "pl": 10.08
+   "current": 109.0,
+   "pl": 11.97
   }
  ],
  "trades": [
@@ -69,7 +69,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>47.10",
-   "max_r": 0.03,
+   "max_r": 0.22,
    "key": "t30",
    "detail": false,
    "ai_verdict": null
@@ -90,7 +90,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<230.11",
-   "max_r": 0.07,
+   "max_r": 0.09,
    "key": "t29",
    "detail": false,
    "ai_verdict": null

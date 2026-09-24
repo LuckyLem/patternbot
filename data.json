@@ -1,50 +1,79 @@
 {
  "version": 1,
- "updated": "2026-09-24T15:34:04+00:00",
- "heartbeat": "2026-09-24T15:34:04+00:00",
+ "updated": "2026-09-24T15:45:28+00:00",
+ "heartbeat": "2026-09-24T15:45:28+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9963.36,
+  "equity": 9963.69,
   "last_equity": 9986.3,
-  "day_change": -22.94,
-  "total_change": -36.64
+  "day_change": -22.61,
+  "total_change": -36.31
  },
  "positions": [
+  {
+   "symbol": "AON",
+   "side": "short",
+   "qty": 7,
+   "entry": 277.74,
+   "current": 277.53,
+   "pl": 1.47
+  },
   {
    "symbol": "IBM",
    "side": "short",
    "qty": 7,
    "entry": 227.0,
-   "current": 227.01,
-   "pl": -0.07
+   "current": 227.24,
+   "pl": -1.65
   },
   {
    "symbol": "KO",
    "side": "long",
    "qty": 22,
    "entry": 89.27,
-   "current": 88.73,
-   "pl": -11.88
+   "current": 88.61,
+   "pl": -14.63
   },
   {
    "symbol": "VZ",
    "side": "long",
    "qty": 42,
    "entry": 47.32,
-   "current": 47.41,
-   "pl": 3.99
+   "current": 47.42,
+   "pl": 4.2
   },
   {
    "symbol": "WMT",
    "side": "short",
    "qty": 18,
    "entry": 109.67,
-   "current": 109.0,
-   "pl": 12.06
+   "current": 108.83,
+   "pl": 15.03
   }
  ],
  "trades": [
+  {
+   "symbol": "AON",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-24",
+   "opened": "2026-09-24T15:37:57.854657+00:00",
+   "closed": null,
+   "entry": 277.74,
+   "stop": 282.54,
+   "target": 268.93,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<278.00",
+   "max_r": null,
+   "key": "t31",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "VZ",
    "pattern": "InverseHeadShoulders",
@@ -782,10 +811,10 @@
  "funnel": {
   "day": "2026-09-24",
   "setups": 28,
-  "traded": 5,
+  "traded": 6,
   "rejected": {
    "skip-rs": 2,
-   "skip-chase": 9,
+   "skip-chase": 8,
    "skip-vol": 12
   }
  },

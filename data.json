@@ -1,34 +1,63 @@
 {
  "version": 1,
- "updated": "2026-09-24T18:45:02+00:00",
- "heartbeat": "2026-09-24T18:45:02+00:00",
+ "updated": "2026-09-24T18:56:18+00:00",
+ "heartbeat": "2026-09-24T18:56:18+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9967.52,
+  "equity": 9970.42,
   "last_equity": 9986.3,
-  "day_change": -18.78,
-  "total_change": -32.48
+  "day_change": -15.88,
+  "total_change": -29.58
  },
  "positions": [
+  {
+   "symbol": "EMR",
+   "side": "long",
+   "qty": 12,
+   "entry": 155.58,
+   "current": 155.61,
+   "pl": 0.36
+  },
   {
    "symbol": "MDT",
    "side": "short",
    "qty": 22,
    "entry": 88.94,
-   "current": 88.96,
-   "pl": -0.44
+   "current": 88.86,
+   "pl": 1.76
   },
   {
    "symbol": "NSC",
    "side": "short",
    "qty": 6,
    "entry": 313.58,
-   "current": 313.55,
-   "pl": 0.18
+   "current": 313.53,
+   "pl": 0.3
   }
  ],
  "trades": [
+  {
+   "symbol": "EMR",
+   "pattern": "DoubleBottom",
+   "side": "long",
+   "day": "2026-09-24",
+   "opened": "2026-09-24T18:48:51.139289+00:00",
+   "closed": null,
+   "entry": 155.58,
+   "stop": 152.85,
+   "target": 157.85,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "double_bottom neckline_break>155.43",
+   "max_r": 0.03,
+   "key": "t35",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "MDT",
    "pattern": "DoubleTop",
@@ -45,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "double_top neckline_break<89.09",
-   "max_r": 0.08,
+   "max_r": 0.1,
    "key": "t34",
    "detail": false,
    "ai_verdict": null
@@ -849,12 +878,13 @@
  ],
  "funnel": {
   "day": "2026-09-24",
-  "setups": 107,
-  "traded": 9,
+  "setups": 109,
+  "traded": 10,
   "rejected": {
    "skip-rs": 2,
    "skip-chase": 10,
-   "skip-vol": 86
+   "skip-vol": 86,
+   "skip-market": 1
   }
  },
  "config": {

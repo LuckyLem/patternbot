@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-24T18:33:48+00:00",
- "heartbeat": "2026-09-24T18:33:48+00:00",
+ "updated": "2026-09-24T18:45:02+00:00",
+ "heartbeat": "2026-09-24T18:45:02+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9968.53,
+  "equity": 9967.52,
   "last_equity": 9986.3,
-  "day_change": -17.77,
-  "total_change": -31.47
+  "day_change": -18.78,
+  "total_change": -32.48
  },
  "positions": [
   {
@@ -24,8 +24,8 @@
    "side": "short",
    "qty": 6,
    "entry": 313.58,
-   "current": 313.38,
-   "pl": 1.19
+   "current": 313.55,
+   "pl": 0.18
   }
  ],
  "trades": [
@@ -36,16 +36,16 @@
    "day": "2026-09-24",
    "opened": "2026-09-24T18:33:43.487947+00:00",
    "closed": null,
-   "entry": 89.05,
+   "entry": 88.94,
    "stop": 90.07,
    "target": 88.2,
    "exit": null,
    "pnl": null,
    "r": null,
-   "status": "submitted",
+   "status": "open",
    "exit_source": null,
    "reason": "double_top neckline_break<89.09",
-   "max_r": null,
+   "max_r": 0.08,
    "key": "t34",
    "detail": false,
    "ai_verdict": null
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<314.05",
-   "max_r": 0.09,
+   "max_r": 0.17,
    "key": "t33",
    "detail": false,
    "ai_verdict": null

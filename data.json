@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-24T19:19:06+00:00",
- "heartbeat": "2026-09-24T19:19:06+00:00",
+ "updated": "2026-09-24T19:30:17+00:00",
+ "heartbeat": "2026-09-24T19:30:17+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9968.73,
+  "equity": 9961.44,
   "last_equity": 9986.3,
-  "day_change": -17.57,
-  "total_change": -31.27
+  "day_change": -24.86,
+  "total_change": -38.56
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "long",
    "qty": 12,
    "entry": 155.58,
-   "current": 155.2,
-   "pl": -4.56
+   "current": 155.39,
+   "pl": -2.28
   },
   {
    "symbol": "MDT",
    "side": "short",
    "qty": 22,
    "entry": 88.94,
-   "current": 88.68,
-   "pl": 5.72
+   "current": 88.64,
+   "pl": 6.49
   },
   {
    "symbol": "NSC",
    "side": "short",
    "qty": 6,
    "entry": 313.58,
-   "current": 313.55,
-   "pl": 0.21
+   "current": 313.97,
+   "pl": -2.34
   },
   {
    "symbol": "SHW",
    "side": "short",
    "qty": 5,
    "entry": 318.4,
-   "current": 318.42,
-   "pl": -0.1
+   "current": 319.89,
+   "pl": -7.47
   },
   {
    "symbol": "SYK",
    "side": "short",
    "qty": 7,
    "entry": 270.57,
-   "current": 270.62,
-   "pl": -0.35
+   "current": 270.68,
+   "pl": -0.77
   }
  ],
  "trades": [
@@ -132,7 +132,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "double_top neckline_break<89.09",
-   "max_r": 0.23,
+   "max_r": 0.25,
    "key": "t34",
    "detail": false,
    "ai_verdict": null

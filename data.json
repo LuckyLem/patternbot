@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-09-24T20:03:17+00:00",
- "heartbeat": "2026-09-24T20:03:17+00:00",
+ "updated": "2026-09-24T20:08:20+00:00",
+ "heartbeat": "2026-09-24T20:08:20+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -40,7 +40,7 @@
    "max_r": null,
    "key": "t37",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "schlecht"
   },
   {
    "symbol": "SYK",
@@ -61,7 +61,7 @@
    "max_r": 0.07,
    "key": "t36",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "EMR",
@@ -82,7 +82,7 @@
    "max_r": 0.14,
    "key": "t35",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "MDT",
@@ -103,7 +103,7 @@
    "max_r": 0.33,
    "key": "t34",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "gut"
   },
   {
    "symbol": "NSC",
@@ -124,7 +124,7 @@
    "max_r": 0.17,
    "key": "t33",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "LUV",
@@ -145,7 +145,7 @@
    "max_r": 0.53,
    "key": "t32",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "AON",
@@ -166,7 +166,7 @@
    "max_r": 0.27,
    "key": "t31",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "VZ",
@@ -187,7 +187,7 @@
    "max_r": 0.29,
    "key": "t30",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "IBM",
@@ -208,7 +208,7 @@
    "max_r": 0.09,
    "key": "t29",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "neutral"
   },
   {
    "symbol": "DHR",
@@ -229,7 +229,7 @@
    "max_r": 0.48,
    "key": "t28",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "schlecht"
   },
   {
    "symbol": "KO",
@@ -250,7 +250,7 @@
    "max_r": 0.09,
    "key": "t27",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "schlecht"
   },
   {
    "symbol": "WMT",
@@ -271,7 +271,7 @@
    "max_r": 0.94,
    "key": "t26",
    "detail": true,
-   "ai_verdict": null
+   "ai_verdict": "gut"
   },
   {
    "symbol": "DAL",
@@ -921,11 +921,11 @@
   "universe": 150
  },
  "review": {
-  "title": "Tagesreview 2026-09-23",
+  "title": "Tagesreview 2026-09-24",
   "kind": "daily",
-  "day": "2026-09-23",
-  "markdown": "## Das Wichtigste\n\nKonto 9.986,30 $ (+37,53 $ zum Vortag, seit Start −13,70 $). 9 abgeschlossene Trades, Trefferquote 6/9, Erwartungswert 0,12R je Trade, Summe +1,07R, Profitfaktor 3,40.\n\nDas auffälligste Merkmal des Tages: **kein Trade wurde am Ziel oder am Stop beendet.** Fünf endeten am Zeit-Stop (t17–t21), vier an der Tagesende-Glattstellung (t22–t25). Der schlechteste Punkt über alle Trades war −0,49R (INTU), der beste +0,89R (PANW). Die Bewegungen waren also klein – sowohl nach oben als auch nach unten.\n\n## Ergebnisstruktur\n\n| Trade | R | Exit |\n|---|---|---|\n| PANW t17 | +0,62 | Zeit-Stop |\n| AVGO t21 | +0,27 | Zeit-Stop |\n| PLD t24 | +0,31 | Tagesende |\n| HD t22 / DAL t25 / BKNG t20 | +0,14 / +0,06 / +0,06 | Tagesende / Zeit-Stop |\n| ISRG t23 / INTU t19 / COF t18 | −0,20 / −0,12 / −0,07 | Tagesende / Zeit-Stop |\n\nPANW allein steuert 30,24 $ von 37,53 $ bei. Ohne diesen Trade wäre der Tag praktisch flach. Bei einer Stichprobe von 9 Trades (insgesamt 25 seit Start) ist das eine Beobachtung, keine Aussage über die Strategie.\n\n## Ausführung\n\nDie Ausführung war sauber und regelkonform. Kein Ausfall, keine verpasste Prüfung, alle Stops und Ziele wurden korrekt gesetzt.\n\n- **Slippage** im Mittel 0,06R, Spitzen bei PLD (0,152R), AVGO (0,121R) und DAL (0,120R). Das ist die gewollte Wirkung der Anti-Chase-Zone: Der Bot darf bis 0,4 ATR jenseits der Kante einsteigen, und wenn er den Kurs erst beim nächsten Suchlauf wieder in der Zone antrifft, liegt der Fill entsprechend entfernt. AVGO wurde um 10:10 gefüllt, obwohl die Signalkerze um 09:45 schloss (357,86 → 357,22) – ebenfalls Regelwirkung, kein Fehler.\n- **Alle fünf Zeit-Stops waren regelgerecht.** PANW wurde bewusst über 120 Minuten hinaus gehalten (140 Min) und erst geschlossen, als der Gewinn von +0,89R auf +0,62R zurückfiel – das sind 69 % des Besten, unter der 80 %-Schwelle, also \"Gewinn verblasst\". COF und INTU wurden bei R ≤ 0 nach 121 Min geschlossen, BKNG und AVGO als verblasster Gewinn (0,06 von 0,19R bzw. 0,27 von 0,45R). Genau so ist die Regel gebaut.\n- **Positionsgröße gedeckelt:** PLD riskierte nur 13,37 $ statt geplant ~50 $ (Wertgrenze), AVGO 26,45 $, DAL 33,91 $, INTU 37,33 $. Deshalb brachte der beste Nachmittagstrade nach R (PLD, +0,31R) in Dollar nur 4,20 $. Das ist die eingebaute Schutzwirkung, ich beschreibe es nur.\n\n## Strategie\n\nZwei Punkte sind inhaltlich interessant:\n\n1. **Zwei Zeitcluster.** Fünf Einstiege zwischen 09:54 und 10:10, vier zwischen 14:48 und 15:18. Die vier Nachmittagstrades hatten 42–72 Minuten bis zur Glattstellung – bei Zieldistanzen von 0,82R bis 1,39R. Alle vier endeten vor Erreichen des Ziels (zusammen +4,90 $). Die Regeln enthalten ausdrücklich **keine** Prüfung von Restzeit gegen Zielabstand; hier wird sichtbar, was das bedeutet.\n2. **Sehr ungleiche Zielgeometrie.** Die Ziele lagen zwischen 0,82R (HD, ISRG) und 3,44R (INTU). Ein Ziel von 3,44R in einem 120-Minuten-Fenster ist praktisch nie erreichbar; der Trade endete folgerichtig am Zeit-Stop bei −0,12R. Am anderen Ende steht HD mit einem Ziel unter 1R – das erlaubt die Mindest-CRV-Regel von 0,8, es begrenzt den Gewinn aber hart.\n\nDie Ausbrüche selbst trugen an diesem Tag mehrheitlich nicht: Bei COF (+0,19R), INTU (+0,17R), BKNG (+0,19R), HD (+0,14R), DAL (+0,11R) und ISRG (0,00R) kam kaum Folgebewegung. Nur PANW und AVGO liefen in Richtung Muster.\n\n## Filter-Trichter\n\n111 erkannte Setups, 9 gehandelt. Abgelehnt: 91× skip-vol, 10× skip-chase, 1× skip-rs. **Das Volumenkriterium (1,5× Durchschnitt) entscheidet an diesem Tag praktisch allein** – 82 % aller Setups scheitern daran. Markt- und Trendfilter erscheinen mit null Ablehnungen; das kann heißen, dass sie nie greifen mussten, oder dass der Trichter nur den ersten zutreffenden Grund protokolliert. Das lässt sich aus den Daten nicht unterscheiden und sollte geklärt werden, bevor man Aussagen über die Filterwirkung macht.\n\n## Worauf als Nächstes achten\n\n- Verteilung der Exit-Arten über die kommenden Tage: Wenn Ziel und Stop weiter gar nicht erreicht werden, ist der Zeit-Stop faktisch die Ausstiegsregel des Systems – das wäre wichtig zu wissen, aber erst mit deutlich mehr Trades belastbar.\n- Ob der Nachmittagscluster systematisch ist oder ein Zufall dieses Tages.\n- Ob MFE regelmäßig weit unter der Zieldistanz bleibt (heute: 8 von 9 Trades unter der Hälfte des Zielwegs).\n\nMit 25 Trades seit Start ist keine dieser Beobachtungen ein Beleg. Kein Umbau der Strategie auf dieser Grundlage.\n\n## Was wir daraus machen\n\n- **Trichter-Logging: alle zutreffenden Ablehnungsgründe erfassen** · _Technik_ — skip-market und der Tagestrendfilter erscheinen heute mit null Ablehnungen, während skip-vol 91 von 102 Verwerfungen stellt. Wenn die Filter sequenziell geprüft werden und nur der erste Treffer protokolliert wird, lässt sich die Wirkung der übrigen Filter gar nicht messen. Prüfe je Setup alle Filter und logge alle Gründe (oder zumindest die Prüfreihenfolge), damit der Trichter interpretierbar wird.\n- **Fill-Position innerhalb der Anti-Chase-Zone mitschreiben** · _Technik_ — Die Slippage lag bei PLD, AVGO und DAL bei 0,12–0,15R, bei HD und ISRG nahe null. Logge je Trade, wie weit der Fill (in ATR-Anteilen) von der Ausbruchskante entfernt lag und wie viele Suchläufe zwischen Signalkerze und Fill lagen. Damit lässt sich später trennen, ob hohe Slippage vom 3–4-Minuten-Prüftakt oder von der Zonenbreite kommt.\n- **Restzeit gegen Zielabstand prüfen** · _Strategie-Kandidat_ — Vier von neun Trades (HD 14:48, ISRG 15:03, PLD und DAL 15:18) hatten 42–72 Minuten bis zur Zwangsglattstellung bei Zielen von 0,82R bis 1,39R; keiner erreichte sein Ziel, alle wurden per Market-Order beendet. Eine Regel, die Einstiege ablehnt, wenn die verbleibende Zeit typischerweise nicht für den Zielweg reicht, ist naheliegend – aber erst prüfbar, wenn genug Spätnachmittags-Trades vorliegen. Bis dahin nur Daten sammeln.\n- **Zielgeometrie beobachten: 0,82R bis 3,44R ist eine sehr breite Spanne** · _beobachten_ — INTU hatte ein Ziel bei 3,44R, das im 120-Minuten-Fenster faktisch unerreichbar war; HD und ISRG hatten Ziele unter 1R. Erfasse je Trade das Verhältnis MFE/Zieldistanz, um später zu sehen, ob sehr weite Ziele systematisch nur Zeit-Stops produzieren. Keine Änderung der Mindest-CRV-Regel, nur Messung.\n- **Exit-Verteilung weiterverfolgen** · _beobachten_ — Heute endeten 9 von 9 Trades per Zeit-Stop oder Tagesende, keiner am Ziel und keiner am Stop; der größte Rücklauf war −0,49R (INTU). Führe eine laufende Zählung der Exit-Arten. Erst wenn über etwa 60 Trades weiter kaum Ziele erreicht werden, lohnt eine Diskussion über Zielsetzung oder Haltefenster.\n\n_Analyse von claude-opus-5 · ca. 0.25 $_",
-  "headline": "Neun Trades, kein einziger erreichte Ziel oder Stop – der Tag endete mit +37,53 $ (+1,07R), getragen fast allein von PANW.",
+  "day": "2026-09-24",
+  "markdown": "## Das Bild des Tages\n\nDer Bot hat 12 Trades abgeschlossen: 6 Gewinner, 6 Verlierer, Ergebnis **−18,29 $** (Equity 9.972,27 $, −14,03 $ gegenüber dem Vortag). Erwartungswert −0,067R je Trade, Profit-Faktor 0,69. Das ist ein flacher, unspektakulärer Tag ohne Ausreißer nach oben oder unten – die Tagesverlustgrenze war nie in Sichtweite.\n\nDie Verteilung ist klar:\n\n| Block | Trades | Ergebnis |\n|---|---|---|\n| Morgen 09:53 (5 Stück, Positionslimit voll) | t26–t30 | −29,59 $ |\n| Mittag (AON, LUV) | t31, t32 | +11,07 $ |\n| Nachmittag ab 14:15 | t33–t37 | +0,23 $ |\n\nFast der gesamte Verlust steckt in **DHR (−27,04 $)** und **KO (−18,26 $)**; WMT (+14,94 $) hat gegengehalten. Die fünf Nachmittags-Trades heben sich gegenseitig auf (+0,02R zusammen).\n\n## Was strukturell auffällt: die Zielabstände\n\nDas ist der wichtigste Befund des Tages und er hat nichts mit Ausführung zu tun. Bei 7 von 12 Trades lag das Muster-Ziel **unter 1R**: DHR 0,60R, LUV 0,64R, IBM 0,65R, MDT 0,66R, EMR 0,83R, SHW 0,85R, NSC 1,00R. Bei einer Trefferquote um 50 % kann eine solche Geometrie nicht positiv sein – der Bot verwirft laut Regel erst unter 0,8 Chance-Risiko, und selbst ein perfekt erreichtes 0,6R-Ziel bezahlt keinen −1R-Stop. DHR zeigt das exemplarisch: Ziel +0,60R, realisiert wurde der Stop mit −1,06R.\n\nEin direkt behebbares Detail dabei: Bei DHR lag das Ziel (0,60R) **genau auf der Break-Even-Schwelle (+0,6R)**. Der Trade lief bis +0,52R und drehte – die Stop-Nachziehung konnte konstruktionsgemäß nie greifen, weil sie erst dort einsetzt, wo der Trade schon zu Ende wäre. Das ist eine Lücke in der Geometrieprüfung, kein Pech.\n\nAm anderen Ende stehen Ziele, die für die Restzeit zu weit waren: AON 1,83R und SYK 2,47R. Bei SYK (Einstieg 15:03, 56 Minuten vor Schluss) war das Ziel praktisch unerreichbar; die Regeln sehen bewusst keine Prüfung von Restzeit gegen Zielabstand vor, also ist das gewollte Regelwirkung – aber eine teure.\n\n## Ausführung\n\nDie Fills waren durchweg leicht bis deutlich schlechter als der Planpreis, im Schnitt etwa 0,09R: DHR 0,21R (224,25 → 224,91), VZ 0,15R, LUV 0,14R, MDT 0,10R, IBM 0,09R, SYK 0,09R. Das ist die dokumentierte Wirkung der Anti-Chase-Zone (Einstieg bis 0,4 ATR jenseits der Kante) plus Suchlauf-Takt von 3–4 Minuten – kein Fehler. Bei Zielen von 0,6–0,8R frisst eine Slippage von 0,15–0,20R aber ein Viertel der geplanten Chance. Diese zwei Dinge zusammen – knappe Ziele und Fills am Rand der Zone – erklären den Tag besser als jede Musterdiskussion.\n\nDie Positionsgrößen waren bei 6 Trades durch die Wertgrenze gedeckelt (NSC nur 11,07 $ statt ~50 $ Risiko, SYK 12,33 $, WMT 20,17 $). Folge: Der beste Trade des Tages (WMT, +0,74R) lief mit 40 % des vorgesehenen Risikos, während DHR und SHW nahe am vollen Risiko liefen. Reine Beobachtung – die Grenze bleibt, wo sie ist.\n\n## Zeit-Stop\n\nSechs Ausstiege liefen über den Zeit-Stop, alle regelkonform:\n\n- **KO** (R ≤ 0 nach 122 Min → schließen) sparte gegenüber dem regulären Stop rund 0,14R.\n- **WMT** hielt zunächst im Gewinn und wurde bei 0,74R von zuvor 0,94R geschlossen, also knapp unter der 80-%-Marke („Gewinn verblasst\"). Kurz danach fiel WMT bis 108,215 – das Ziel 108,385 wurde um 13:15 erreicht. Gleiches Bild bei **VZ**: Ausstieg 47,35, danach 47,75.\n- **AON** wurde 137 Minuten gehalten, weil der Gewinn nahe am Hoch lag – genau die gewollte Ausnahme.\n\nDas ist kein Ausführungsfehler, aber es lohnt, diese Fälle zu zählen: Der Zeit-Stop hat heute einen sauberen Verlust verkleinert und zwei Trades vor dem Ziel beendet.\n\n## Filter-Trichter\n\n115 Setups, 12 gehandelt. **91 Ablehnungen kamen vom Volumenfilter** (skip-vol), 9 von Anti-Chase, 2 von relativer Stärke, 1 vom Marktumfeld. Der Volumenfilter ist damit praktisch der einzige wirksame Trichter; die anderen Filter greifen so selten, dass man über ihre Qualität aus einem Tag nichts sagen kann. Dass trotz dieses harten Filters 12 Trades zustande kamen, heißt: Am Ausbruchsvolumen lag es heute nicht – die Ausbrüche kamen mit Volumen und trugen trotzdem kaum (vier Trades mit einem besten Punkt unter +0,15R).\n\n## Einordnung und was als Nächstes zu beobachten ist\n\nKumuliert liegen jetzt 37 abgeschlossene Trades vor, seit Start −27,73 $. Das ist deutlich zu wenig für Schlüsse über Muster, Tageszeiten oder Filter. Konkret weiter mitschreiben würde ich: die Verteilung der Ziel-R (heute 7 von 12 unter 1R), die Einstiegs-Slippage in R relativ zum Zielabstand, und die Trefferquote der Nachmittags-Einstiege, die per Tagesende glattgestellt werden (heute 5 Stück, netto +0,02R). Umgebaut wird auf dieser Basis nichts.\n\n## Was wir daraus machen\n\n- **Ziel darf nicht unter der Break-Even-Schwelle liegen** · _Technik_ — Bei DHR (t28) lag das Ziel bei 0,60R und die Break-Even-Nachziehung setzt bei +0,60R ein – der Trade lief bis +0,52R und wurde dann mit −1,06R gestoppt, ohne dass der Schutzmechanismus je hätte greifen können. Die Geometrieprüfung sollte solche Fälle erkennen: entweder Setup verwerfen, wenn Ziel-R ≤ Break-Even-Schwelle, oder die Schwelle bei knappen Zielen anteilig (z. B. bei 50 % des Zielabstands) setzen. Das ist eine Lücke in der Logik, keine Strategiefrage.\n- **Einstiegs-Slippage in R je Trade protokollieren und auswerten** · _beobachten_ — Heute war jeder Fill bis auf zwei schlechter als der Plan, im Schnitt 0,09R, im Extremfall 0,21R (DHR 224,25 → 224,91). Das ist die dokumentierte Anti-Chase-Wirkung und kein Fehler, aber bei Zielen von 0,6–0,8R entspricht es einem Viertel der geplanten Chance. Slippage in R sollte zusammen mit dem Ziel-R geloggt und über die nächsten Wochen als Verteilung angesehen werden, nicht nur als Einzelfakt pro Trade.\n- **Verteilung der Ziel-R sammeln – Verdacht auf strukturell zu knappe Ziele** · _Strategie-Kandidat_ — 7 von 12 Trades hatten ein Ziel unter 1R (DHR 0,60R, LUV 0,64R, IBM 0,65R, MDT 0,66R, EMR 0,83R, SHW 0,85R, NSC 1,00R), gleichzeitig laufen Verluste bis −1,06R. Bei 50 % Treffern kann das rechnerisch nicht aufgehen, und der Profit-Faktor von 0,69 passt dazu. Mit 37 Trades insgesamt ist das aber noch kein Beleg: erst weiter Ziel-R, erreichtes R und Ausgang gemeinsam erfassen, dann prüfen, ob eine höhere Mindestanforderung an das Chance-Risiko (also eine Verschärfung, nicht Lockerung) die Erwartung verbessert hätte.\n- **Restzeit gegen Zielabstand – Idee für später prüfen** · _Strategie-Kandidat_ — Die Regeln sehen diese Prüfung bewusst nicht vor, und der Tag liefert ein Beispiel für die Kosten: SYK (t36) wurde 15:03 mit einem Ziel 2,47R entfernt eröffnet, SHW (t37) 15:03 mit 0,85R und lief sofort gegen die Position. Alle fünf Trades ab 14:15 endeten per Tagesende-Glattstellung, netto +0,02R. Bevor daran etwas geändert wird, braucht es deutlich mehr Nachmittags-Trades – interessant ist die Frage, ob Einstiege in der letzten Stunde mit weiten Zielen systematisch schlechter abschneiden.\n- **Zeit-Stop-Fälle mit Nachverlauf zählen** · _beobachten_ — Sechs der zwölf Ausstiege liefen über den Zeit-Stop, alle regelkonform. Bei KO (t27) sparte er etwa 0,14R gegenüber dem regulären Stop, bei WMT (t26) und VZ (t30) wurde dagegen bei 0,74R bzw. 0,05R geschlossen, während der Kurs danach in Zielrichtung weiterlief (WMT erreichte 108,215 um 13:15, Ziel war 108,385). Für jeden Zeit-Stop sollte mitgeloggt werden, was der Kurs bis Handelsschluss noch getan hätte – erst diese Bilanz über viele Trades zeigt, ob die 80-%-Regel im Schnitt schützt oder Gewinne abschneidet.\n\n_Analyse von claude-opus-5 · ca. 0.38 $_",
+  "headline": "Zwölf Trades, 50 % Treffer, aber −18,29 $: Die Ziele lagen bei mehreren Setups näher als 1R, und zwei Morgen-Trades (DHR, KO) tragen fast den gesamten Verlust.",
   "ai": true
  }
 }

@@ -1,34 +1,55 @@
 {
  "version": 1,
- "updated": "2026-09-24T18:22:39+00:00",
- "heartbeat": "2026-09-24T18:22:39+00:00",
+ "updated": "2026-09-24T18:33:48+00:00",
+ "heartbeat": "2026-09-24T18:33:48+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9973.18,
+  "equity": 9968.53,
   "last_equity": 9986.3,
-  "day_change": -13.12,
-  "total_change": -26.82
+  "day_change": -17.77,
+  "total_change": -31.47
  },
  "positions": [
   {
-   "symbol": "LUV",
-   "side": "long",
-   "qty": 48,
-   "entry": 41.36,
-   "current": 41.58,
-   "pl": 10.56
+   "symbol": "MDT",
+   "side": "short",
+   "qty": 22,
+   "entry": 88.94,
+   "current": 88.96,
+   "pl": -0.44
   },
   {
    "symbol": "NSC",
    "side": "short",
    "qty": 6,
    "entry": 313.58,
-   "current": 313.32,
-   "pl": 1.56
+   "current": 313.38,
+   "pl": 1.19
   }
  ],
  "trades": [
+  {
+   "symbol": "MDT",
+   "pattern": "DoubleTop",
+   "side": "short",
+   "day": "2026-09-24",
+   "opened": "2026-09-24T18:33:43.487947+00:00",
+   "closed": null,
+   "entry": 89.05,
+   "stop": 90.07,
+   "target": 88.2,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "double_top neckline_break<89.09",
+   "max_r": null,
+   "key": "t34",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "NSC",
    "pattern": "DescendingTriangle",
@@ -45,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<314.05",
-   "max_r": null,
+   "max_r": 0.09,
    "key": "t33",
    "detail": false,
    "ai_verdict": null
@@ -56,19 +77,19 @@
    "side": "long",
    "day": "2026-09-24",
    "opened": "2026-09-24T16:30:49.157840+00:00",
-   "closed": null,
+   "closed": "2026-09-24T18:32:07.499091+00:00",
    "entry": 41.36,
    "stop": 40.58,
    "target": 41.86,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 41.49,
+   "pnl": 6.24,
+   "r": 0.167,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "double_bottom neckline_break>41.24",
    "max_r": 0.53,
    "key": "t32",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -724,12 +745,12 @@
   }
  ],
  "stats": {
-  "n": 31,
-  "pnl": -18.2,
-  "winrate": 0.516,
-  "expectancy": -0.032,
-  "pf": 0.91,
-  "avg_win": 11.3,
+  "n": 32,
+  "pnl": -11.96,
+  "winrate": 0.531,
+  "expectancy": -0.025,
+  "pf": 0.94,
+  "avg_win": 11.0,
   "avg_loss": -13.27
  },
  "equity_curve": [
@@ -828,12 +849,12 @@
  ],
  "funnel": {
   "day": "2026-09-24",
-  "setups": 100,
-  "traded": 8,
+  "setups": 107,
+  "traded": 9,
   "rejected": {
    "skip-rs": 2,
    "skip-chase": 10,
-   "skip-vol": 80
+   "skip-vol": 86
   }
  },
  "config": {

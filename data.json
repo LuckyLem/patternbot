@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-09-25T17:25:33+00:00",
- "heartbeat": "2026-09-25T17:25:33+00:00",
+ "updated": "2026-09-25T17:36:50+00:00",
+ "heartbeat": "2026-09-25T17:36:50+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
@@ -983,10 +983,10 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 50,
+  "setups": 54,
   "traded": 4,
   "rejected": {
-   "skip-vol": 40,
+   "skip-vol": 44,
    "skip-chase": 6
   }
  },

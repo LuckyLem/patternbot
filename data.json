@@ -1,47 +1,39 @@
 {
  "version": 1,
- "updated": "2026-09-25T15:32:29+00:00",
- "heartbeat": "2026-09-25T15:32:29+00:00",
+ "updated": "2026-09-25T15:43:55+00:00",
+ "heartbeat": "2026-09-25T15:43:55+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9974.24,
+  "equity": 9983.19,
   "last_equity": 9972.27,
-  "day_change": 1.97,
-  "total_change": -25.76
+  "day_change": 10.92,
+  "total_change": -16.81
  },
  "positions": [
-  {
-   "symbol": "CRM",
-   "side": "short",
-   "qty": 8,
-   "entry": 237.16,
-   "current": 235.56,
-   "pl": 12.8
-  },
   {
    "symbol": "ITW",
    "side": "long",
    "qty": 7,
    "entry": 273.91,
-   "current": 273.95,
-   "pl": 0.32
+   "current": 273.65,
+   "pl": -1.82
   },
   {
    "symbol": "NSC",
    "side": "short",
    "qty": 12,
    "entry": 313.17,
-   "current": 312.85,
-   "pl": 3.78
+   "current": 312.42,
+   "pl": 8.94
   },
   {
    "symbol": "WM",
    "side": "short",
    "qty": 9,
    "entry": 206.19,
-   "current": 207.62,
-   "pl": -12.87
+   "current": 207.5,
+   "pl": -11.79
   }
  ],
  "trades": [
@@ -52,16 +44,16 @@
    "day": "2026-09-25",
    "opened": "2026-09-25T15:32:29.326324+00:00",
    "closed": null,
-   "entry": 312.58,
+   "entry": 313.17,
    "stop": 314.41,
    "target": 310.07,
    "exit": null,
    "pnl": null,
    "r": null,
-   "status": "submitted",
+   "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<312.59",
-   "max_r": null,
+   "max_r": 0.69,
    "key": "t41",
    "detail": false,
    "ai_verdict": null
@@ -114,19 +106,19 @@
    "side": "short",
    "day": "2026-09-25",
    "opened": "2026-09-25T13:54:24.077083+00:00",
-   "closed": null,
+   "closed": "2026-09-25T15:42:06.566908+00:00",
    "entry": 237.16,
    "stop": 242.05,
    "target": 234.91,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 234.9,
+   "pnl": 18.05,
+   "r": 0.461,
+   "status": "closed",
+   "exit_source": "fill",
    "reason": "double_top neckline_break<238.36",
-   "max_r": 0.33,
+   "max_r": 0.42,
    "key": "t38",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -908,12 +900,12 @@
   }
  ],
  "stats": {
-  "n": 37,
-  "pnl": -11.73,
-  "winrate": 0.514,
-  "expectancy": -0.021,
-  "pf": 0.94,
-  "avg_win": 10.54,
+  "n": 38,
+  "pnl": 6.32,
+  "winrate": 0.526,
+  "expectancy": -0.009,
+  "pf": 1.03,
+  "avg_win": 10.92,
   "avg_loss": -11.78
  },
  "equity_curve": [

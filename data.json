@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-09-25T18:56:14+00:00",
- "heartbeat": "2026-09-25T18:56:14+00:00",
+ "updated": "2026-09-25T19:07:53+00:00",
+ "heartbeat": "2026-09-25T19:07:53+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
@@ -10,8 +10,38 @@
   "day_change": 10.19,
   "total_change": -17.54
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "GWW",
+   "side": "short",
+   "qty": 1,
+   "entry": 1243.33,
+   "current": 1244.27,
+   "pl": -0.94
+  }
+ ],
  "trades": [
+  {
+   "symbol": "GWW",
+   "pattern": "DescendingTriangle",
+   "side": "short",
+   "day": "2026-09-25",
+   "opened": "2026-09-25T19:07:52.922788+00:00",
+   "closed": null,
+   "entry": 1245.34,
+   "stop": 1253.02,
+   "target": 1232.73,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "desc_triangle break<1245.52",
+   "max_r": null,
+   "key": "t42",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "NSC",
    "pattern": "DescendingTriangle",
@@ -983,10 +1013,10 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 66,
-  "traded": 4,
+  "setups": 73,
+  "traded": 5,
   "rejected": {
-   "skip-vol": 56,
+   "skip-vol": 62,
    "skip-chase": 6
   }
  },

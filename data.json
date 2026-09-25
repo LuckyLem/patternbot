@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-25T19:30:55+00:00",
- "heartbeat": "2026-09-25T19:30:55+00:00",
+ "updated": "2026-09-25T19:41:54+00:00",
+ "heartbeat": "2026-09-25T19:41:54+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9980.97,
+  "equity": 9977.16,
   "last_equity": 9972.27,
-  "day_change": 8.7,
-  "total_change": -19.03
+  "day_change": 4.89,
+  "total_change": -22.84
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "short",
    "qty": 12,
    "entry": 158.38,
-   "current": 158.39,
-   "pl": -0.12
+   "current": 158.41,
+   "pl": -0.36
   },
   {
    "symbol": "GWW",
    "side": "short",
    "qty": 1,
    "entry": 1243.33,
-   "current": 1242.22,
-   "pl": 1.1
+   "current": 1243.37,
+   "pl": -0.04
   },
   {
    "symbol": "HIG",
    "side": "short",
    "qty": 16,
    "entry": 124.4,
-   "current": 124.43,
-   "pl": -0.48
+   "current": 124.49,
+   "pl": -1.44
   },
   {
    "symbol": "PRU",
    "side": "long",
    "qty": 16,
    "entry": 119.44,
-   "current": 119.14,
-   "pl": -4.72
+   "current": 119.28,
+   "pl": -2.56
   },
   {
    "symbol": "ROP",
    "side": "short",
    "qty": 5,
    "entry": 358.54,
-   "current": 358.0,
-   "pl": 2.73
+   "current": 358.78,
+   "pl": -1.2
   }
  ],
  "trades": [
@@ -60,16 +60,16 @@
    "day": "2026-09-25",
    "opened": "2026-09-25T19:30:55.906221+00:00",
    "closed": null,
-   "entry": 124.37,
+   "entry": 124.4,
    "stop": 124.98,
    "target": 122.55,
    "exit": null,
    "pnl": null,
    "r": null,
-   "status": "submitted",
+   "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<124.38",
-   "max_r": null,
+   "max_r": 0.17,
    "key": "t46",
    "detail": false,
    "ai_verdict": null
@@ -81,13 +81,13 @@
    "day": "2026-09-25",
    "opened": "2026-09-25T19:30:54.491609+00:00",
    "closed": null,
-   "entry": 158.41,
+   "entry": 158.38,
    "stop": 159.96,
    "target": 157.04,
    "exit": null,
    "pnl": null,
    "r": null,
-   "status": "submitted",
+   "status": "open",
    "exit_source": null,
    "reason": "double_top neckline_break<158.42",
    "max_r": null,

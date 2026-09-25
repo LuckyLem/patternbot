@@ -1,26 +1,55 @@
 {
  "version": 1,
- "updated": "2026-09-25T13:49:29+00:00",
- "heartbeat": "2026-09-25T13:49:29+00:00",
+ "updated": "2026-09-25T14:02:01+00:00",
+ "heartbeat": "2026-09-25T14:02:01+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9972.27,
+  "equity": 9973.56,
   "last_equity": 9972.27,
-  "day_change": 0.0,
-  "total_change": -27.73
+  "day_change": 1.29,
+  "total_change": -26.44
  },
  "positions": [
+  {
+   "symbol": "CRM",
+   "side": "short",
+   "qty": 8,
+   "entry": 237.16,
+   "current": 236.77,
+   "pl": 3.12
+  },
   {
    "symbol": "NSC",
    "side": "short",
    "qty": 6,
    "entry": 313.58,
-   "current": 313.2,
-   "pl": 2.28
+   "current": 313.45,
+   "pl": 0.75
   }
  ],
  "trades": [
+  {
+   "symbol": "CRM",
+   "pattern": "DoubleTop",
+   "side": "short",
+   "day": "2026-09-25",
+   "opened": "2026-09-25T13:54:24.077083+00:00",
+   "closed": null,
+   "entry": 237.16,
+   "stop": 242.05,
+   "target": 234.91,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "double_top neckline_break<238.36",
+   "max_r": null,
+   "key": "t38",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "SHW",
    "pattern": "DoubleTop",
@@ -907,14 +936,13 @@
   }
  ],
  "funnel": {
-  "day": "2026-09-24",
-  "setups": 115,
-  "traded": 12,
+  "day": "2026-09-25",
+  "setups": 12,
+  "traded": 1,
   "rejected": {
-   "skip-rs": 2,
-   "skip-chase": 9,
-   "skip-vol": 91,
-   "skip-market": 1
+   "skip-vol": 7,
+   "skip-chase": 3,
+   "skip-rs": 1
   }
  },
  "config": {

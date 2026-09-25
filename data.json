@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-25T15:55:22+00:00",
- "heartbeat": "2026-09-25T15:55:22+00:00",
+ "updated": "2026-09-25T16:06:56+00:00",
+ "heartbeat": "2026-09-25T16:06:56+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9979.83,
+  "equity": 9988.95,
   "last_equity": 9972.27,
-  "day_change": 7.56,
-  "total_change": -20.17
+  "day_change": 16.68,
+  "total_change": -11.05
  },
  "positions": [
   {
@@ -16,24 +16,16 @@
    "side": "long",
    "qty": 7,
    "entry": 273.91,
-   "current": 274.27,
-   "pl": 2.56
-  },
-  {
-   "symbol": "NSC",
-   "side": "short",
-   "qty": 6,
-   "entry": 313.17,
-   "current": 313.09,
-   "pl": 0.45
+   "current": 275.7,
+   "pl": 12.53
   },
   {
    "symbol": "WM",
    "side": "short",
    "qty": 9,
    "entry": 206.19,
-   "current": 207.36,
-   "pl": -10.53
+   "current": 207.4,
+   "pl": -10.89
   }
  ],
  "trades": [
@@ -43,19 +35,19 @@
    "side": "short",
    "day": "2026-09-25",
    "opened": "2026-09-25T15:32:29.326324+00:00",
-   "closed": null,
+   "closed": "2026-09-25T15:52:41.505976+00:00",
    "entry": 313.17,
    "stop": 314.41,
    "target": 310.07,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 313.25,
+   "pnl": -0.51,
+   "r": -0.068,
+   "status": "closed",
+   "exit_source": "enforced",
    "reason": "desc_triangle break<312.59",
    "max_r": 0.69,
    "key": "t41",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -74,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>273.52",
-   "max_r": 0.2,
+   "max_r": 0.51,
    "key": "t40",
    "detail": false,
    "ai_verdict": null
@@ -900,13 +892,13 @@
   }
  ],
  "stats": {
-  "n": 38,
-  "pnl": 6.32,
-  "winrate": 0.526,
-  "expectancy": -0.009,
+  "n": 39,
+  "pnl": 5.81,
+  "winrate": 0.513,
+  "expectancy": -0.01,
   "pf": 1.03,
   "avg_win": 10.92,
-  "avg_loss": -11.78
+  "avg_loss": -11.19
  },
  "equity_curve": [
   {
@@ -1008,11 +1000,11 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 32,
+  "setups": 37,
   "traded": 4,
   "rejected": {
-   "skip-vol": 24,
-   "skip-chase": 4
+   "skip-vol": 28,
+   "skip-chase": 5
   }
  },
  "config": {

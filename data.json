@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-25T16:06:56+00:00",
- "heartbeat": "2026-09-25T16:06:56+00:00",
+ "updated": "2026-09-25T16:18:15+00:00",
+ "heartbeat": "2026-09-25T16:18:15+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9988.95,
+  "equity": 9988.83,
   "last_equity": 9972.27,
-  "day_change": 16.68,
-  "total_change": -11.05
+  "day_change": 16.56,
+  "total_change": -11.17
  },
  "positions": [
   {
@@ -16,16 +16,8 @@
    "side": "long",
    "qty": 7,
    "entry": 273.91,
-   "current": 275.7,
-   "pl": 12.53
-  },
-  {
-   "symbol": "WM",
-   "side": "short",
-   "qty": 9,
-   "entry": 206.19,
-   "current": 207.4,
-   "pl": -10.89
+   "current": 275.85,
+   "pl": 13.58
   }
  ],
  "trades": [
@@ -66,7 +58,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>273.52",
-   "max_r": 0.51,
+   "max_r": 0.75,
    "key": "t40",
    "detail": false,
    "ai_verdict": null
@@ -77,19 +69,19 @@
    "side": "short",
    "day": "2026-09-25",
    "opened": "2026-09-25T14:05:43.958275+00:00",
-   "closed": null,
+   "closed": "2026-09-25T16:09:07.598318+00:00",
    "entry": 206.19,
    "stop": 208.35,
    "target": 202.79,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 207.53,
+   "pnl": -12.06,
+   "r": -0.62,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<206.50",
    "max_r": null,
    "key": "t39",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -892,13 +884,13 @@
   }
  ],
  "stats": {
-  "n": 39,
-  "pnl": 5.81,
-  "winrate": 0.513,
-  "expectancy": -0.01,
-  "pf": 1.03,
+  "n": 40,
+  "pnl": -6.25,
+  "winrate": 0.5,
+  "expectancy": -0.026,
+  "pf": 0.97,
   "avg_win": 10.92,
-  "avg_loss": -11.19
+  "avg_loss": -11.23
  },
  "equity_curve": [
   {
@@ -1000,11 +992,11 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 37,
+  "setups": 42,
   "traded": 4,
   "rejected": {
-   "skip-vol": 28,
-   "skip-chase": 5
+   "skip-vol": 32,
+   "skip-chase": 6
   }
  },
  "config": {

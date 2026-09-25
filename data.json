@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-25T14:02:01+00:00",
- "heartbeat": "2026-09-25T14:02:01+00:00",
+ "updated": "2026-09-25T14:12:58+00:00",
+ "heartbeat": "2026-09-25T14:12:58+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9973.56,
+  "equity": 9975.85,
   "last_equity": 9972.27,
-  "day_change": 1.29,
-  "total_change": -26.44
+  "day_change": 3.58,
+  "total_change": -24.15
  },
  "positions": [
   {
@@ -16,19 +16,48 @@
    "side": "short",
    "qty": 8,
    "entry": 237.16,
-   "current": 236.77,
-   "pl": 3.12
+   "current": 236.19,
+   "pl": 7.72
   },
   {
    "symbol": "NSC",
    "side": "short",
    "qty": 6,
    "entry": 313.58,
-   "current": 313.45,
-   "pl": 0.75
+   "current": 313.0,
+   "pl": 3.45
+  },
+  {
+   "symbol": "WM",
+   "side": "short",
+   "qty": 9,
+   "entry": 206.19,
+   "current": 207.0,
+   "pl": -7.29
   }
  ],
  "trades": [
+  {
+   "symbol": "WM",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-25",
+   "opened": "2026-09-25T14:05:43.958275+00:00",
+   "closed": null,
+   "entry": 206.19,
+   "stop": 208.35,
+   "target": 202.79,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<206.50",
+   "max_r": null,
+   "key": "t39",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "CRM",
    "pattern": "DoubleTop",
@@ -45,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "double_top neckline_break<238.36",
-   "max_r": null,
+   "max_r": 0.32,
    "key": "t38",
    "detail": false,
    "ai_verdict": null
@@ -938,10 +967,10 @@
  "funnel": {
   "day": "2026-09-25",
   "setups": 12,
-  "traded": 1,
+  "traded": 2,
   "rejected": {
    "skip-vol": 7,
-   "skip-chase": 3,
+   "skip-chase": 2,
    "skip-rs": 1
   }
  },

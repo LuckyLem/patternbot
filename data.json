@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-09-25T16:29:29+00:00",
- "heartbeat": "2026-09-25T16:29:29+00:00",
+ "updated": "2026-09-25T16:40:59+00:00",
+ "heartbeat": "2026-09-25T16:40:59+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9985.3,
+  "equity": 9982.46,
   "last_equity": 9972.27,
-  "day_change": 13.03,
-  "total_change": -14.7
+  "day_change": 10.19,
+  "total_change": -17.54
  },
- "positions": [
-  {
-   "symbol": "ITW",
-   "side": "long",
-   "qty": 7,
-   "entry": 273.91,
-   "current": 275.35,
-   "pl": 10.04
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "NSC",
@@ -48,19 +39,19 @@
    "side": "long",
    "day": "2026-09-25",
    "opened": "2026-09-25T14:31:56.484018+00:00",
-   "closed": null,
+   "closed": "2026-09-25T16:35:27.716063+00:00",
    "entry": 273.91,
    "stop": 270.58,
    "target": 276.66,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 274.94,
+   "pnl": 7.21,
+   "r": 0.31,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "inverse_H&S neckline_break>273.52",
    "max_r": 0.75,
    "key": "t40",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -884,12 +875,12 @@
   }
  ],
  "stats": {
-  "n": 40,
-  "pnl": -6.25,
-  "winrate": 0.5,
-  "expectancy": -0.026,
-  "pf": 0.97,
-  "avg_win": 10.92,
+  "n": 41,
+  "pnl": 0.96,
+  "winrate": 0.512,
+  "expectancy": -0.017,
+  "pf": 1.0,
+  "avg_win": 10.74,
   "avg_loss": -11.23
  },
  "equity_curve": [
@@ -992,10 +983,10 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 42,
+  "setups": 44,
   "traded": 4,
   "rejected": {
-   "skip-vol": 32,
+   "skip-vol": 34,
    "skip-chase": 6
   }
  },

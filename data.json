@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-25T15:21:06+00:00",
- "heartbeat": "2026-09-25T15:21:06+00:00",
+ "updated": "2026-09-25T15:32:29+00:00",
+ "heartbeat": "2026-09-25T15:32:29+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9973.98,
+  "equity": 9974.24,
   "last_equity": 9972.27,
-  "day_change": 1.71,
-  "total_change": -26.02
+  "day_change": 1.97,
+  "total_change": -25.76
  },
  "positions": [
   {
@@ -16,35 +16,56 @@
    "side": "short",
    "qty": 8,
    "entry": 237.16,
-   "current": 235.96,
-   "pl": 9.6
+   "current": 235.56,
+   "pl": 12.8
   },
   {
    "symbol": "ITW",
    "side": "long",
    "qty": 7,
    "entry": 273.91,
-   "current": 274.08,
-   "pl": 1.19
+   "current": 273.95,
+   "pl": 0.32
   },
   {
    "symbol": "NSC",
    "side": "short",
-   "qty": 6,
-   "entry": 313.58,
-   "current": 312.72,
-   "pl": 5.16
+   "qty": 12,
+   "entry": 313.17,
+   "current": 312.85,
+   "pl": 3.78
   },
   {
    "symbol": "WM",
    "side": "short",
    "qty": 9,
    "entry": 206.19,
-   "current": 207.48,
-   "pl": -11.62
+   "current": 207.62,
+   "pl": -12.87
   }
  ],
  "trades": [
+  {
+   "symbol": "NSC",
+   "pattern": "DescendingTriangle",
+   "side": "short",
+   "day": "2026-09-25",
+   "opened": "2026-09-25T15:32:29.326324+00:00",
+   "closed": null,
+   "entry": 312.58,
+   "stop": 314.41,
+   "target": 310.07,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "desc_triangle break<312.59",
+   "max_r": null,
+   "key": "t41",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "ITW",
    "pattern": "InverseHeadShoulders",
@@ -995,10 +1016,10 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 26,
-  "traded": 3,
+  "setups": 29,
+  "traded": 4,
   "rejected": {
-   "skip-vol": 19,
+   "skip-vol": 21,
    "skip-chase": 4
   }
  },

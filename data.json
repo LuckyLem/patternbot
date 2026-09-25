@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-25T19:07:53+00:00",
- "heartbeat": "2026-09-25T19:07:53+00:00",
+ "updated": "2026-09-25T19:19:23+00:00",
+ "heartbeat": "2026-09-25T19:19:23+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9982.46,
+  "equity": 9979.69,
   "last_equity": 9972.27,
-  "day_change": 10.19,
-  "total_change": -17.54
+  "day_change": 7.42,
+  "total_change": -20.31
  },
  "positions": [
   {
@@ -16,11 +16,69 @@
    "side": "short",
    "qty": 1,
    "entry": 1243.33,
-   "current": 1244.27,
-   "pl": -0.94
+   "current": 1244.45,
+   "pl": -1.12
+  },
+  {
+   "symbol": "PRU",
+   "side": "long",
+   "qty": 16,
+   "entry": 119.44,
+   "current": 119.39,
+   "pl": -0.8
+  },
+  {
+   "symbol": "ROP",
+   "side": "short",
+   "qty": 5,
+   "entry": 358.54,
+   "current": 358.71,
+   "pl": -0.85
   }
  ],
  "trades": [
+  {
+   "symbol": "ROP",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-25",
+   "opened": "2026-09-25T19:15:33.737864+00:00",
+   "closed": null,
+   "entry": 358.54,
+   "stop": 364.08,
+   "target": 348.4,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<358.86",
+   "max_r": null,
+   "key": "t44",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "PRU",
+   "pattern": "DoubleBottom",
+   "side": "long",
+   "day": "2026-09-25",
+   "opened": "2026-09-25T19:15:32.422274+00:00",
+   "closed": null,
+   "entry": 119.44,
+   "stop": 117.6,
+   "target": 120.79,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "double_bottom neckline_break>119.25",
+   "max_r": null,
+   "key": "t43",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "GWW",
    "pattern": "DescendingTriangle",
@@ -28,13 +86,13 @@
    "day": "2026-09-25",
    "opened": "2026-09-25T19:07:52.922788+00:00",
    "closed": null,
-   "entry": 1245.34,
+   "entry": 1243.33,
    "stop": 1253.02,
    "target": 1232.73,
    "exit": null,
    "pnl": null,
    "r": null,
-   "status": "submitted",
+   "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<1245.52",
    "max_r": null,
@@ -1013,10 +1071,10 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 73,
-  "traded": 5,
+  "setups": 76,
+  "traded": 7,
   "rejected": {
-   "skip-vol": 62,
+   "skip-vol": 63,
    "skip-chase": 6
   }
  },

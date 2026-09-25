@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-25T14:35:47+00:00",
- "heartbeat": "2026-09-25T14:35:47+00:00",
+ "updated": "2026-09-25T14:47:08+00:00",
+ "heartbeat": "2026-09-25T14:47:08+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9967.11,
+  "equity": 9973.81,
   "last_equity": 9972.27,
-  "day_change": -5.16,
-  "total_change": -32.89
+  "day_change": 1.54,
+  "total_change": -26.19
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 8,
    "entry": 237.16,
-   "current": 236.93,
-   "pl": 1.84
+   "current": 235.84,
+   "pl": 10.56
   },
   {
    "symbol": "ITW",
    "side": "long",
    "qty": 7,
    "entry": 273.91,
-   "current": 273.93,
-   "pl": 0.14
+   "current": 274.04,
+   "pl": 0.91
   },
   {
    "symbol": "NSC",
    "side": "short",
    "qty": 6,
    "entry": 313.58,
-   "current": 313.43,
-   "pl": 0.9
+   "current": 312.98,
+   "pl": 3.6
   },
   {
    "symbol": "WM",
    "side": "short",
    "qty": 9,
    "entry": 206.19,
-   "current": 206.81,
-   "pl": -5.58
+   "current": 207.42,
+   "pl": -11.07
   }
  ],
  "trades": [
@@ -61,7 +61,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>273.52",
-   "max_r": null,
+   "max_r": 0.05,
    "key": "t40",
    "detail": false,
    "ai_verdict": null
@@ -103,7 +103,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "double_top neckline_break<238.36",
-   "max_r": 0.32,
+   "max_r": 0.33,
    "key": "t38",
    "detail": false,
    "ai_verdict": null
@@ -995,10 +995,10 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 20,
+  "setups": 21,
   "traded": 3,
   "rejected": {
-   "skip-vol": 13,
+   "skip-vol": 14,
    "skip-chase": 4
   }
  },

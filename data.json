@@ -1,42 +1,100 @@
 {
  "version": 1,
- "updated": "2026-09-25T19:19:23+00:00",
- "heartbeat": "2026-09-25T19:19:23+00:00",
+ "updated": "2026-09-25T19:30:55+00:00",
+ "heartbeat": "2026-09-25T19:30:55+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9979.69,
+  "equity": 9980.97,
   "last_equity": 9972.27,
-  "day_change": 7.42,
-  "total_change": -20.31
+  "day_change": 8.7,
+  "total_change": -19.03
  },
  "positions": [
+  {
+   "symbol": "EMR",
+   "side": "short",
+   "qty": 12,
+   "entry": 158.38,
+   "current": 158.39,
+   "pl": -0.12
+  },
   {
    "symbol": "GWW",
    "side": "short",
    "qty": 1,
    "entry": 1243.33,
-   "current": 1244.45,
-   "pl": -1.12
+   "current": 1242.22,
+   "pl": 1.1
+  },
+  {
+   "symbol": "HIG",
+   "side": "short",
+   "qty": 16,
+   "entry": 124.4,
+   "current": 124.43,
+   "pl": -0.48
   },
   {
    "symbol": "PRU",
    "side": "long",
    "qty": 16,
    "entry": 119.44,
-   "current": 119.39,
-   "pl": -0.8
+   "current": 119.14,
+   "pl": -4.72
   },
   {
    "symbol": "ROP",
    "side": "short",
    "qty": 5,
    "entry": 358.54,
-   "current": 358.71,
-   "pl": -0.85
+   "current": 358.0,
+   "pl": 2.73
   }
  ],
  "trades": [
+  {
+   "symbol": "HIG",
+   "pattern": "DescendingTriangle",
+   "side": "short",
+   "day": "2026-09-25",
+   "opened": "2026-09-25T19:30:55.906221+00:00",
+   "closed": null,
+   "entry": 124.37,
+   "stop": 124.98,
+   "target": 122.55,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "desc_triangle break<124.38",
+   "max_r": null,
+   "key": "t46",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "EMR",
+   "pattern": "DoubleTop",
+   "side": "short",
+   "day": "2026-09-25",
+   "opened": "2026-09-25T19:30:54.491609+00:00",
+   "closed": null,
+   "entry": 158.41,
+   "stop": 159.96,
+   "target": 157.04,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "double_top neckline_break<158.42",
+   "max_r": null,
+   "key": "t45",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "ROP",
    "pattern": "Rectangle",
@@ -53,7 +111,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<358.86",
-   "max_r": null,
+   "max_r": 0.12,
    "key": "t44",
    "detail": false,
    "ai_verdict": null
@@ -95,7 +153,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<1245.52",
-   "max_r": null,
+   "max_r": 0.16,
    "key": "t42",
    "detail": false,
    "ai_verdict": null
@@ -1071,8 +1129,8 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 76,
-  "traded": 7,
+  "setups": 78,
+  "traded": 9,
   "rejected": {
    "skip-vol": 63,
    "skip-chase": 6

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-25T15:43:55+00:00",
- "heartbeat": "2026-09-25T15:43:55+00:00",
+ "updated": "2026-09-25T15:55:22+00:00",
+ "heartbeat": "2026-09-25T15:55:22+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9983.19,
+  "equity": 9979.83,
   "last_equity": 9972.27,
-  "day_change": 10.92,
-  "total_change": -16.81
+  "day_change": 7.56,
+  "total_change": -20.17
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 7,
    "entry": 273.91,
-   "current": 273.65,
-   "pl": -1.82
+   "current": 274.27,
+   "pl": 2.56
   },
   {
    "symbol": "NSC",
    "side": "short",
-   "qty": 12,
+   "qty": 6,
    "entry": 313.17,
-   "current": 312.42,
-   "pl": 8.94
+   "current": 313.09,
+   "pl": 0.45
   },
   {
    "symbol": "WM",
    "side": "short",
    "qty": 9,
    "entry": 206.19,
-   "current": 207.5,
-   "pl": -11.79
+   "current": 207.36,
+   "pl": -10.53
   }
  ],
  "trades": [
@@ -1008,10 +1008,10 @@
  ],
  "funnel": {
   "day": "2026-09-25",
-  "setups": 29,
+  "setups": 32,
   "traded": 4,
   "rejected": {
-   "skip-vol": 21,
+   "skip-vol": 24,
    "skip-chase": 4
   }
  },

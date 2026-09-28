@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-28T15:43:16+00:00",
- "heartbeat": "2026-09-28T15:43:16+00:00",
+ "updated": "2026-09-28T15:53:53+00:00",
+ "heartbeat": "2026-09-28T15:53:53+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9979.1,
+  "equity": 9989.29,
   "last_equity": 9974.56,
-  "day_change": 4.54,
-  "total_change": -20.9
+  "day_change": 14.73,
+  "total_change": -10.71
  },
  "positions": [
   {
@@ -16,32 +16,24 @@
    "side": "short",
    "qty": 8,
    "entry": 245.43,
-   "current": 246.49,
-   "pl": -8.51
+   "current": 246.31,
+   "pl": -7.11
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 10,
    "entry": 193.28,
-   "current": 193.9,
-   "pl": -6.2
-  },
-  {
-   "symbol": "PANW",
-   "side": "long",
-   "qty": 5,
-   "entry": 382.52,
-   "current": 386.37,
-   "pl": 19.26
+   "current": 193.65,
+   "pl": -3.65
   },
   {
    "symbol": "UAL",
    "side": "short",
    "qty": 11,
    "entry": 109.83,
-   "current": 109.88,
-   "pl": -0.55
+   "current": 109.9,
+   "pl": -0.77
   }
  ],
  "trades": [
@@ -93,19 +85,19 @@
    "side": "long",
    "day": "2026-09-28",
    "opened": "2026-09-28T14:01:55.562710+00:00",
-   "closed": null,
+   "closed": "2026-09-28T15:50:00.534957+00:00",
    "entry": 382.52,
    "stop": 375.5,
    "target": 387.77,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 387.78,
+   "pnl": 26.3,
+   "r": 0.749,
+   "status": "closed",
+   "exit_source": "fill",
    "reason": "asc_triangle break>381.01",
-   "max_r": 0.59,
+   "max_r": 0.75,
    "key": "t48",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1097,12 +1089,12 @@
   }
  ],
  "stats": {
-  "n": 46,
-  "pnl": -5.18,
-  "winrate": 0.5,
-  "expectancy": -0.026,
-  "pf": 0.98,
-  "avg_win": 9.95,
+  "n": 47,
+  "pnl": 21.12,
+  "winrate": 0.511,
+  "expectancy": -0.01,
+  "pf": 1.09,
+  "avg_win": 10.64,
   "avg_loss": -10.18
  },
  "equity_curve": [
@@ -1209,15 +1201,22 @@
  ],
  "funnel": {
   "day": "2026-09-28",
-  "setups": 39,
-  "traded": 4,
+  "setups": 1,
+  "traded": 0,
   "rejected": {
-   "skip-chase": 6,
-   "skip-vol": 28,
-   "skip-rs": 1
+   "skip-vol": 1
   }
  },
- "funnel_days": [],
+ "funnel_days": [
+  {
+   "day": "2026-09-28",
+   "setups": 1,
+   "traded": 0,
+   "rejected": {
+    "skip-vol": 1
+   }
+  }
+ ],
  "config": {
   "risk_pct": 0.005,
   "max_positions": 5,

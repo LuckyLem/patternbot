@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-28T14:32:10+00:00",
- "heartbeat": "2026-09-28T14:32:10+00:00",
+ "updated": "2026-09-28T14:43:14+00:00",
+ "heartbeat": "2026-09-28T14:43:14+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9931.04,
+  "equity": 9936.58,
   "last_equity": 9974.56,
-  "day_change": -43.52,
-  "total_change": -68.96
+  "day_change": -37.98,
+  "total_change": -63.42
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "short",
    "qty": 8,
    "entry": 245.43,
-   "current": 246.86,
-   "pl": -11.47
+   "current": 246.46,
+   "pl": -8.27
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 5,
    "entry": 382.52,
-   "current": 377.94,
-   "pl": -22.9
+   "current": 378.47,
+   "pl": -20.25
   },
   {
    "symbol": "UAL",
    "side": "short",
    "qty": 11,
    "entry": 109.83,
-   "current": 110.64,
-   "pl": -8.91
+   "current": 110.69,
+   "pl": -9.46
   }
  ],
  "trades": [

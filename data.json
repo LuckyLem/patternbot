@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-09-28T19:44:45+00:00",
- "heartbeat": "2026-09-28T19:44:45+00:00",
+ "updated": "2026-09-28T19:55:37+00:00",
+ "heartbeat": "2026-09-28T19:55:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9996.93,
+  "equity": 9999.48,
   "last_equity": 9974.56,
-  "day_change": 22.37,
-  "total_change": -3.07
+  "day_change": 24.92,
+  "total_change": -0.52
  },
- "positions": [
-  {
-   "symbol": "C",
-   "side": "short",
-   "qty": 15,
-   "entry": 132.3,
-   "current": 131.58,
-   "pl": 10.8
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "C",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-09-28",
    "opened": "2026-09-28T18:45:31.864088+00:00",
-   "closed": null,
+   "closed": "2026-09-28T19:50:31.726482707+00:00",
    "entry": 132.3,
    "stop": 133.13,
    "target": 130.0,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 131.41,
+   "pnl": 13.35,
+   "r": 1.068,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "H&S neckline_break<132.35",
-   "max_r": 0.86,
+   "max_r": 1.13,
    "key": "t51",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1094,12 +1085,12 @@
   }
  ],
  "stats": {
-  "n": 50,
-  "pnl": 6.39,
-  "winrate": 0.48,
-  "expectancy": -0.02,
-  "pf": 1.03,
-  "avg_win": 10.64,
+  "n": 51,
+  "pnl": 19.74,
+  "winrate": 0.49,
+  "expectancy": 0.001,
+  "pf": 1.08,
+  "avg_win": 10.74,
   "avg_loss": -9.57
  },
  "equity_curve": [

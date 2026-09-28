@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-28T15:32:58+00:00",
- "heartbeat": "2026-09-28T15:32:58+00:00",
+ "updated": "2026-09-28T15:34:12+00:00",
+ "heartbeat": "2026-09-28T15:34:12+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9980.89,
+  "equity": 9983.26,
   "last_equity": 9974.56,
-  "day_change": 6.33,
-  "total_change": -19.11
+  "day_change": 8.7,
+  "total_change": -16.74
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 8,
    "entry": 245.43,
-   "current": 246.53,
-   "pl": -8.83
+   "current": 246.48,
+   "pl": -8.47
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 10,
    "entry": 193.28,
-   "current": 193.58,
-   "pl": -3.0
+   "current": 193.38,
+   "pl": -1.0
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 5,
    "entry": 382.52,
-   "current": 386.24,
-   "pl": 18.6
+   "current": 386.04,
+   "pl": 17.6
   },
   {
    "symbol": "UAL",
    "side": "short",
    "qty": 11,
    "entry": 109.83,
-   "current": 109.87,
-   "pl": -0.44
+   "current": 109.8,
+   "pl": 0.33
   }
  ],
  "trades": [
@@ -241,18 +241,18 @@
    "day": "2026-09-25",
    "opened": "2026-09-25T15:32:29.326324+00:00",
    "closed": "2026-09-25T15:52:41.505976+00:00",
-   "entry": 313.17,
+   "entry": 312.75,
    "stop": 314.41,
    "target": 310.07,
    "exit": 313.25,
-   "pnl": -0.51,
-   "r": -0.068,
+   "pnl": -3.0,
+   "r": -0.3,
    "status": "closed",
-   "exit_source": "enforced",
+   "exit_source": "sl",
    "reason": "desc_triangle break<312.59",
-   "max_r": 0.69,
+   "max_r": 0.27,
    "key": "t41",
-   "detail": true,
+   "detail": false,
    "ai_verdict": "neutral"
   },
   {
@@ -408,20 +408,20 @@
    "side": "short",
    "day": "2026-09-24",
    "opened": "2026-09-24T18:15:16.897599+00:00",
-   "closed": "2026-09-25T15:52:41.505976+00:00",
+   "closed": "2026-09-25T15:57:37.235237+00:00",
    "entry": 313.58,
    "stop": 315.43,
    "target": 311.74,
-   "exit": 313.25,
-   "pnl": 1.98,
-   "r": 0.179,
+   "exit": 313.17,
+   "pnl": 2.45,
+   "r": 0.221,
    "status": "closed",
-   "exit_source": "eod",
+   "exit_source": "orphan_cover",
    "reason": "desc_triangle break<314.05",
    "max_r": 0.17,
    "key": "t33",
-   "detail": true,
-   "ai_verdict": "neutral"
+   "detail": false,
+   "ai_verdict": "schlecht"
   },
   {
    "symbol": "LUV",
@@ -1098,12 +1098,12 @@
  ],
  "stats": {
   "n": 46,
-  "pnl": -3.16,
+  "pnl": -5.18,
   "winrate": 0.5,
-  "expectancy": -0.022,
-  "pf": 0.99,
-  "avg_win": 9.93,
-  "avg_loss": -10.07
+  "expectancy": -0.026,
+  "pf": 0.98,
+  "avg_win": 9.95,
+  "avg_loss": -10.18
  },
  "equity_curve": [
   {

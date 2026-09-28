@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-28T19:34:29+00:00",
- "heartbeat": "2026-09-28T19:34:29+00:00",
+ "updated": "2026-09-28T19:44:45+00:00",
+ "heartbeat": "2026-09-28T19:44:45+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9994.08,
+  "equity": 9996.93,
   "last_equity": 9974.56,
-  "day_change": 19.52,
-  "total_change": -5.92
+  "day_change": 22.37,
+  "total_change": -3.07
  },
  "positions": [
   {
@@ -16,8 +16,8 @@
    "side": "short",
    "qty": 15,
    "entry": 132.3,
-   "current": 131.77,
-   "pl": 7.95
+   "current": 131.58,
+   "pl": 10.8
   }
  ],
  "trades": [
@@ -37,7 +37,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<132.35",
-   "max_r": 0.67,
+   "max_r": 0.86,
    "key": "t51",
    "detail": false,
    "ai_verdict": null

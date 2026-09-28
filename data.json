@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-28T15:34:12+00:00",
- "heartbeat": "2026-09-28T15:34:12+00:00",
+ "updated": "2026-09-28T15:43:16+00:00",
+ "heartbeat": "2026-09-28T15:43:16+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9983.26,
+  "equity": 9979.1,
   "last_equity": 9974.56,
-  "day_change": 8.7,
-  "total_change": -16.74
+  "day_change": 4.54,
+  "total_change": -20.9
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 8,
    "entry": 245.43,
-   "current": 246.48,
-   "pl": -8.47
+   "current": 246.49,
+   "pl": -8.51
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 10,
    "entry": 193.28,
-   "current": 193.38,
-   "pl": -1.0
+   "current": 193.9,
+   "pl": -6.2
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 5,
    "entry": 382.52,
-   "current": 386.04,
-   "pl": 17.6
+   "current": 386.37,
+   "pl": 19.26
   },
   {
    "symbol": "UAL",
    "side": "short",
    "qty": 11,
    "entry": 109.83,
-   "current": 109.8,
-   "pl": 0.33
+   "current": 109.88,
+   "pl": -0.55
   }
  ],
  "trades": [
@@ -252,7 +252,7 @@
    "reason": "desc_triangle break<312.59",
    "max_r": 0.27,
    "key": "t41",
-   "detail": false,
+   "detail": true,
    "ai_verdict": "neutral"
   },
   {
@@ -420,7 +420,7 @@
    "reason": "desc_triangle break<314.05",
    "max_r": 0.17,
    "key": "t33",
-   "detail": false,
+   "detail": true,
    "ai_verdict": "schlecht"
   },
   {

@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-09-28T20:16:02+00:00",
- "heartbeat": "2026-09-28T20:16:02+00:00",
+ "updated": "2026-09-28T20:16:58+00:00",
+ "heartbeat": "2026-09-28T20:16:58+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1234,6 +1234,7 @@
  },
  "settings": {
   "ai_review_daily": false,
-  "ai_review_weekly": true
+  "ai_review_weekly": true,
+  "telegram_bot": "LenukiTradingBot"
  }
 }

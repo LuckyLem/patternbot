@@ -159,6 +159,10 @@ section{margin-top:64px}
 .hleft{display:flex;align-items:baseline;gap:12px}
 h2{font-size:12.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.09em}
 .aside{font-size:12.5px;color:var(--ink-3);font-family:var(--mono)}
+.kirow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px;font-size:12.5px;color:var(--ink-3);font-family:var(--mono)}
+.kibtn{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;font-size:12.5px;font-weight:500;
+  text-decoration:none;color:var(--accent);background:rgba(var(--accent-rgb),.10);transition:background .15s}
+.kibtn:hover{background:rgba(var(--accent-rgb),.18)}
 .card{border-radius:20px;background:var(--raised);box-shadow:var(--lift)}
 .duo{display:grid;grid-template-columns:1.15fr 1fr;gap:18px;margin-top:64px}
 .duo>section{margin-top:0;min-width:0}
@@ -450,8 +454,14 @@ footer{margin-top:80px;padding-top:26px;border-top:1px solid var(--hair);display
     </section>
 
     <section class="enter s7" id="analysisWrap" hidden>
-      <div class="head"><h2>Analyse</h2><span class="aside" id="analysisDay"></span></div>
+      <div class="head"><h2 id="analysisTitle">Analyse</h2><span class="aside" id="analysisDay"></span></div>
+      <div class="kirow" id="kiRow" hidden><span id="kiState"></span><a class="kibtn" id="kiBtn" target="_blank" rel="noopener"></a></div>
       <div class="card paper"><div class="prose" id="prose"></div></div>
+    </section>
+
+    <section class="enter s7" id="weekWrap" hidden>
+      <div class="head"><h2 id="weekTitle">Wochenanalyse</h2><span class="aside" id="weekDay"></span></div>
+      <div class="card paper"><div class="prose" id="weekProse"></div></div>
     </section>
 
     <footer>
@@ -800,11 +810,33 @@ function trades(d){
 }
 
 /* ------------------------------------------------------------ analysis */
+const KIND={daily:"Tagesreport",weekly:"Wochenanalyse",cycle:"4-Wochen-Auswertung"};
 function analysis(d){
-  const w=$("analysisWrap");
-  if(!d.review||!d.review.markdown){w.hidden=true;return;}
-  w.hidden=false; $("analysisDay").textContent=d.review.day?de(d.review.day):"";
-  $("prose").innerHTML=marked.parse(d.review.markdown);
+  const w=$("analysisWrap"), r=d.review, s=d.settings||{};
+  if(!r||!r.markdown){w.hidden=true;}
+  else{
+    w.hidden=false;
+    $("analysisTitle").textContent=KIND[r.kind]||"Analyse";
+    let aside=r.day?de(r.day):"";
+    if(r.kind==="daily") aside+=r.ai?" · mit KI":" · ohne KI";
+    $("analysisDay").textContent=aside;
+    const row=$("kiRow"), on=!!s.ai_review_daily;
+    if(s.ai_review_weekly&&s.telegram_bot){
+      row.hidden=false;
+      $("kiState").textContent="KI im Tagesreport: "+(on?"an":"aus")+" · Wochenanalyse: immer mit KI";
+      const b=$("kiBtn");
+      b.href="https://t.me/"+encodeURIComponent(s.telegram_bot)+"?start="+(on?"ki_aus":"ki_an");
+      b.textContent=on?"KI täglich ausschalten":"KI täglich einschalten";
+      b.title="Öffnet Telegram – der Bot bestätigt dort, die Seite zeigt es beim nächsten Update";
+    } else row.hidden=true;
+    $("prose").innerHTML=marked.parse(r.markdown);
+  }
+  const ww=$("weekWrap"), k=d.review_week;
+  if(!k||!k.markdown){ww.hidden=true;return;}
+  ww.hidden=false;
+  $("weekTitle").textContent=KIND[k.kind]||"Wochenanalyse";
+  $("weekDay").textContent=(k.day?de(k.day):"")+(k.ai?" · mit KI":"");
+  $("weekProse").innerHTML=marked.parse(k.markdown);
 }
 
 /* ------------------------------------------------------------ trade detail */

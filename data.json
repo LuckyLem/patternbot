@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-28T15:53:53+00:00",
- "heartbeat": "2026-09-28T15:53:53+00:00",
+ "updated": "2026-09-28T16:04:48+00:00",
+ "heartbeat": "2026-09-28T16:04:48+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9989.29,
+  "equity": 9985.45,
   "last_equity": 9974.56,
-  "day_change": 14.73,
-  "total_change": -10.71
+  "day_change": 10.89,
+  "total_change": -14.55
  },
  "positions": [
   {
@@ -16,24 +16,16 @@
    "side": "short",
    "qty": 8,
    "entry": 245.43,
-   "current": 246.31,
-   "pl": -7.11
+   "current": 246.25,
+   "pl": -6.59
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 10,
    "entry": 193.28,
-   "current": 193.65,
-   "pl": -3.65
-  },
-  {
-   "symbol": "UAL",
-   "side": "short",
-   "qty": 11,
-   "entry": 109.83,
-   "current": 109.9,
-   "pl": -0.77
+   "current": 193.88,
+   "pl": -5.95
   }
  ],
  "trades": [
@@ -106,19 +98,19 @@
    "side": "short",
    "day": "2026-09-28",
    "opened": "2026-09-28T13:58:02.121163+00:00",
-   "closed": null,
+   "closed": "2026-09-28T15:58:56.539672253+00:00",
    "entry": 109.83,
    "stop": 114.69,
    "target": 105.95,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 110.09,
+   "pnl": -2.86,
+   "r": -0.054,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "H&S neckline_break<110.78",
    "max_r": 0.06,
    "key": "t47",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1089,13 +1081,13 @@
   }
  ],
  "stats": {
-  "n": 47,
-  "pnl": 21.12,
-  "winrate": 0.511,
-  "expectancy": -0.01,
-  "pf": 1.09,
+  "n": 48,
+  "pnl": 18.26,
+  "winrate": 0.5,
+  "expectancy": -0.011,
+  "pf": 1.08,
   "avg_win": 10.64,
-  "avg_loss": -10.18
+  "avg_loss": -9.88
  },
  "equity_curve": [
   {
@@ -1201,19 +1193,19 @@
  ],
  "funnel": {
   "day": "2026-09-28",
-  "setups": 1,
+  "setups": 7,
   "traded": 0,
   "rejected": {
-   "skip-vol": 1
+   "skip-vol": 7
   }
  },
  "funnel_days": [
   {
    "day": "2026-09-28",
-   "setups": 1,
+   "setups": 7,
    "traded": 0,
    "rejected": {
-    "skip-vol": 1
+    "skip-vol": 7
    }
   }
  ],

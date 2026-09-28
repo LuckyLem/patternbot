@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-28T14:54:20+00:00",
- "heartbeat": "2026-09-28T14:54:20+00:00",
+ "updated": "2026-09-28T15:05:50+00:00",
+ "heartbeat": "2026-09-28T15:05:50+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9944.24,
+  "equity": 9954.97,
   "last_equity": 9974.56,
-  "day_change": -30.32,
-  "total_change": -55.76
+  "day_change": -19.59,
+  "total_change": -45.03
  },
  "positions": [
   {
@@ -16,27 +16,56 @@
    "side": "short",
    "qty": 8,
    "entry": 245.43,
-   "current": 246.19,
-   "pl": -6.07
+   "current": 246.91,
+   "pl": -11.83
+  },
+  {
+   "symbol": "MS",
+   "side": "short",
+   "qty": 10,
+   "entry": 193.28,
+   "current": 193.33,
+   "pl": -0.54
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 5,
    "entry": 382.52,
-   "current": 378.33,
-   "pl": -20.95
+   "current": 381.92,
+   "pl": -3.02
   },
   {
    "symbol": "UAL",
    "side": "short",
    "qty": 11,
    "entry": 109.83,
-   "current": 110.19,
-   "pl": -3.96
+   "current": 110.22,
+   "pl": -4.29
   }
  ],
  "trades": [
+  {
+   "symbol": "MS",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-28",
+   "opened": "2026-09-28T15:05:49.399574+00:00",
+   "closed": null,
+   "entry": 193.33,
+   "stop": 195.66,
+   "target": 190.28,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "submitted",
+   "exit_source": null,
+   "reason": "rectangle break<193.87",
+   "max_r": null,
+   "key": "t50",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "AMZN",
    "pattern": "Rectangle",
@@ -1180,11 +1209,11 @@
  ],
  "funnel": {
   "day": "2026-09-28",
-  "setups": 25,
-  "traded": 3,
+  "setups": 30,
+  "traded": 4,
   "rejected": {
    "skip-chase": 5,
-   "skip-vol": 16,
+   "skip-vol": 20,
    "skip-rs": 1
   }
  },

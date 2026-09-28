@@ -1,26 +1,84 @@
 {
  "version": 1,
- "updated": "2026-09-28T13:58:02+00:00",
- "heartbeat": "2026-09-28T13:58:02+00:00",
+ "updated": "2026-09-28T14:09:20+00:00",
+ "heartbeat": "2026-09-28T14:09:20+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9973.75,
+  "equity": 9941.62,
   "last_equity": 9974.56,
-  "day_change": -0.81,
-  "total_change": -26.25
+  "day_change": -32.94,
+  "total_change": -58.38
  },
  "positions": [
+  {
+   "symbol": "AMZN",
+   "side": "short",
+   "qty": 8,
+   "entry": 245.43,
+   "current": 245.97,
+   "pl": -4.31
+  },
+  {
+   "symbol": "PANW",
+   "side": "long",
+   "qty": 5,
+   "entry": 382.52,
+   "current": 379.81,
+   "pl": -13.55
+  },
   {
    "symbol": "UAL",
    "side": "short",
    "qty": 11,
    "entry": 109.83,
-   "current": 109.92,
-   "pl": -0.99
+   "current": 111.2,
+   "pl": -15.12
   }
  ],
  "trades": [
+  {
+   "symbol": "AMZN",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-28",
+   "opened": "2026-09-28T14:05:34.032926+00:00",
+   "closed": null,
+   "entry": 245.43,
+   "stop": 248.37,
+   "target": 240.97,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<245.91",
+   "max_r": null,
+   "key": "t49",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "PANW",
+   "pattern": "AscendingTriangle",
+   "side": "long",
+   "day": "2026-09-28",
+   "opened": "2026-09-28T14:01:55.562710+00:00",
+   "closed": null,
+   "entry": 382.52,
+   "stop": 375.5,
+   "target": 387.77,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "asc_triangle break>381.01",
+   "max_r": null,
+   "key": "t48",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "UAL",
    "pattern": "HeadShouldersTop",
@@ -28,13 +86,13 @@
    "day": "2026-09-28",
    "opened": "2026-09-28T13:58:02.121163+00:00",
    "closed": null,
-   "entry": 110.17,
+   "entry": 109.83,
    "stop": 114.69,
    "target": 105.95,
    "exit": null,
    "pnl": null,
    "r": null,
-   "status": "submitted",
+   "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<110.78",
    "max_r": null,
@@ -1122,11 +1180,12 @@
  ],
  "funnel": {
   "day": "2026-09-28",
-  "setups": 10,
-  "traded": 1,
+  "setups": 18,
+  "traded": 3,
   "rejected": {
    "skip-chase": 4,
-   "skip-vol": 5
+   "skip-vol": 10,
+   "skip-rs": 1
   }
  },
  "config": {

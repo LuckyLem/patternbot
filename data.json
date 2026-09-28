@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-09-28T18:40:42+00:00",
- "heartbeat": "2026-09-28T18:40:42+00:00",
+ "updated": "2026-09-28T18:51:33+00:00",
+ "heartbeat": "2026-09-28T18:51:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9986.13,
+  "equity": 9987.03,
   "last_equity": 9974.56,
-  "day_change": 11.57,
-  "total_change": -13.87
+  "day_change": 12.47,
+  "total_change": -12.97
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "C",
+   "side": "short",
+   "qty": 15,
+   "entry": 132.3,
+   "current": 132.24,
+   "pl": 0.9
+  }
+ ],
  "trades": [
+  {
+   "symbol": "C",
+   "pattern": "HeadShouldersTop",
+   "side": "short",
+   "day": "2026-09-28",
+   "opened": "2026-09-28T18:45:31.864088+00:00",
+   "closed": null,
+   "entry": 132.3,
+   "stop": 133.13,
+   "target": 130.0,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "H&S neckline_break<132.35",
+   "max_r": 0.12,
+   "key": "t51",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "MS",
    "pattern": "Rectangle",
@@ -1176,21 +1206,23 @@
  ],
  "funnel": {
   "day": "2026-09-28",
-  "setups": 70,
-  "traded": 0,
+  "setups": 81,
+  "traded": 1,
   "rejected": {
    "skip-chase": 2,
-   "skip-vol": 68
+   "skip-dup": 1,
+   "skip-vol": 77
   }
  },
  "funnel_days": [
   {
    "day": "2026-09-28",
-   "setups": 70,
-   "traded": 0,
+   "setups": 81,
+   "traded": 1,
    "rejected": {
     "skip-chase": 2,
-    "skip-vol": 68
+    "skip-dup": 1,
+    "skip-vol": 77
    }
   }
  ],

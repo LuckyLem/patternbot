@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-28T15:17:02+00:00",
- "heartbeat": "2026-09-28T15:17:02+00:00",
+ "updated": "2026-09-28T15:28:10+00:00",
+ "heartbeat": "2026-09-28T15:28:10+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9968.36,
+  "equity": 9985.11,
   "last_equity": 9974.56,
-  "day_change": -6.2,
-  "total_change": -31.64
+  "day_change": 10.55,
+  "total_change": -14.89
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 8,
    "entry": 245.43,
-   "current": 247.08,
-   "pl": -13.23
+   "current": 246.78,
+   "pl": -10.83
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 10,
    "entry": 193.28,
-   "current": 193.27,
-   "pl": 0.1
+   "current": 193.47,
+   "pl": -1.9
   },
   {
    "symbol": "PANW",
    "side": "long",
    "qty": 5,
    "entry": 382.52,
-   "current": 384.28,
-   "pl": 8.8
+   "current": 386.93,
+   "pl": 22.05
   },
   {
    "symbol": "UAL",
    "side": "short",
    "qty": 11,
    "entry": 109.83,
-   "current": 109.95,
-   "pl": -1.32
+   "current": 109.83,
+   "pl": 0.0
   }
  ],
  "trades": [
@@ -103,7 +103,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "asc_triangle break>381.01",
-   "max_r": 0.28,
+   "max_r": 0.52,
    "key": "t48",
    "detail": false,
    "ai_verdict": null
@@ -124,7 +124,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<110.78",
-   "max_r": null,
+   "max_r": 0.06,
    "key": "t47",
    "detail": false,
    "ai_verdict": null

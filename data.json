@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-09-28T17:04:32+00:00",
- "heartbeat": "2026-09-28T17:04:32+00:00",
+ "updated": "2026-09-28T17:14:48+00:00",
+ "heartbeat": "2026-09-28T17:14:48+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9986.33,
+  "equity": 9986.13,
   "last_equity": 9974.56,
-  "day_change": 11.77,
-  "total_change": -13.67
+  "day_change": 11.57,
+  "total_change": -13.87
  },
- "positions": [
-  {
-   "symbol": "MS",
-   "side": "short",
-   "qty": 10,
-   "entry": 193.28,
-   "current": 193.88,
-   "pl": -6.0
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "MS",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-09-28",
    "opened": "2026-09-28T15:05:49.399574+00:00",
-   "closed": null,
+   "closed": "2026-09-28T17:06:37.375587198+00:00",
    "entry": 193.28,
    "stop": 195.66,
    "target": 190.28,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 193.9,
+   "pnl": -6.2,
+   "r": -0.261,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<193.87",
    "max_r": 0.05,
    "key": "t50",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1073,13 +1064,13 @@
   }
  ],
  "stats": {
-  "n": 49,
-  "pnl": 12.59,
-  "winrate": 0.49,
-  "expectancy": -0.015,
-  "pf": 1.05,
+  "n": 50,
+  "pnl": 6.39,
+  "winrate": 0.48,
+  "expectancy": -0.02,
+  "pf": 1.03,
   "avg_win": 10.64,
-  "avg_loss": -9.71
+  "avg_loss": -9.57
  },
  "equity_curve": [
   {

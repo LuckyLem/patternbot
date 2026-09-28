@@ -692,7 +692,7 @@ function funnel(d){
 }
 
 /* ------------------------------------------------------------ rows */
-const WHY={time_stop:"Zeit-Stop",enforced:"Stop-Loss",eod:"Tagesende",unresolved:"unklar"};
+const WHY={time_stop:"Zeit-Stop",enforced:"Stop-Loss",eod:"Tagesende",unresolved:"unklar",tp:"Ziel erreicht",sl:"Stop-Loss",orphan_cover:"über Nacht gedeckt"};
 // a plain broker fill is one of the two bracket legs - tell which from the exit price
 const why=t=>t.exit_source==="fill"&&t.exit!=null&&t.stop&&t.target
   ?(Math.abs(t.exit-t.target)<Math.abs(t.exit-t.stop)?"Ziel erreicht":"Stop-Loss"):(WHY[t.exit_source]||"—");

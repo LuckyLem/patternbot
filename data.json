@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-09-29T19:44:32+00:00",
- "heartbeat": "2026-09-29T19:44:32+00:00",
+ "updated": "2026-09-29T19:54:38+00:00",
+ "heartbeat": "2026-09-29T19:54:38+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9991.06,
+  "equity": 9989.78,
   "last_equity": 9999.48,
-  "day_change": -8.42,
-  "total_change": -8.94
+  "day_change": -9.7,
+  "total_change": -10.22
  },
- "positions": [
-  {
-   "symbol": "TJX",
-   "side": "long",
-   "qty": 15,
-   "entry": 132.61,
-   "current": 133.72,
-   "pl": 16.57
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "TJX",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-09-29",
    "opened": "2026-09-29T17:45:30.698882+00:00",
-   "closed": null,
+   "closed": "2026-09-29T19:46:30.267548647+00:00",
    "entry": 132.61,
    "stop": 129.76,
    "target": 135.07,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 133.63,
+   "pnl": 15.3,
+   "r": 0.357,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "double_bottom neckline_break>132.48",
    "max_r": 0.59,
    "key": "t53",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1136,12 +1127,12 @@
   }
  ],
  "stats": {
-  "n": 52,
-  "pnl": -5.26,
-  "winrate": 0.481,
-  "expectancy": -0.018,
-  "pf": 0.98,
-  "avg_win": 10.74,
+  "n": 53,
+  "pnl": 10.04,
+  "winrate": 0.491,
+  "expectancy": -0.011,
+  "pf": 1.04,
+  "avg_win": 10.92,
   "avg_loss": -10.14
  },
  "equity_curve": [

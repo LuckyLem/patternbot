@@ -1,31 +1,23 @@
 {
  "version": 1,
- "updated": "2026-09-29T18:19:31+00:00",
- "heartbeat": "2026-09-29T18:19:31+00:00",
+ "updated": "2026-09-29T18:29:42+00:00",
+ "heartbeat": "2026-09-29T18:29:42+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9999.91,
+  "equity": 9996.46,
   "last_equity": 9999.48,
-  "day_change": 0.43,
-  "total_change": -0.09
+  "day_change": -3.02,
+  "total_change": -3.54
  },
  "positions": [
-  {
-   "symbol": "SCHW",
-   "side": "short",
-   "qty": 20,
-   "entry": 97.5,
-   "current": 98.63,
-   "pl": -22.6
-  },
   {
    "symbol": "TJX",
    "side": "long",
    "qty": 15,
    "entry": 132.61,
-   "current": 134.15,
-   "pl": 23.02
+   "current": 134.07,
+   "pl": 21.98
   }
  ],
  "trades": [
@@ -45,7 +37,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "double_bottom neckline_break>132.48",
-   "max_r": 0.53,
+   "max_r": 0.59,
    "key": "t53",
    "detail": false,
    "ai_verdict": null
@@ -56,19 +48,19 @@
    "side": "short",
    "day": "2026-09-29",
    "opened": "2026-09-29T16:30:32.570969+00:00",
-   "closed": null,
+   "closed": "2026-09-29T18:25:01.618880576+00:00",
    "entry": 97.5,
    "stop": 98.75,
    "target": 95.28,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 98.75,
+   "pnl": -25.0,
+   "r": -0.998,
+   "status": "closed",
+   "exit_source": "sl",
    "reason": "rectangle break<97.59",
    "max_r": null,
    "key": "t52",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1144,13 +1136,13 @@
   }
  ],
  "stats": {
-  "n": 51,
-  "pnl": 19.74,
-  "winrate": 0.49,
-  "expectancy": 0.001,
-  "pf": 1.08,
+  "n": 52,
+  "pnl": -5.26,
+  "winrate": 0.481,
+  "expectancy": -0.018,
+  "pf": 0.98,
   "avg_win": 10.74,
-  "avg_loss": -9.57
+  "avg_loss": -10.14
  },
  "equity_curve": [
   {

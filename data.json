@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-29T17:37:32+00:00",
- "heartbeat": "2026-09-29T17:37:32+00:00",
+ "updated": "2026-09-29T17:48:28+00:00",
+ "heartbeat": "2026-09-29T17:48:28+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9986.28,
+  "equity": 9987.66,
   "last_equity": 9999.48,
-  "day_change": -13.2,
-  "total_change": -13.72
+  "day_change": -11.82,
+  "total_change": -12.34
  },
  "positions": [
   {
@@ -16,11 +16,40 @@
    "side": "short",
    "qty": 20,
    "entry": 97.5,
-   "current": 98.16,
-   "pl": -13.2
+   "current": 98.32,
+   "pl": -16.4
+  },
+  {
+   "symbol": "TJX",
+   "side": "long",
+   "qty": 15,
+   "entry": 132.61,
+   "current": 132.91,
+   "pl": 4.58
   }
  ],
  "trades": [
+  {
+   "symbol": "TJX",
+   "pattern": "DoubleBottom",
+   "side": "long",
+   "day": "2026-09-29",
+   "opened": "2026-09-29T17:45:30.698882+00:00",
+   "closed": null,
+   "entry": 132.61,
+   "stop": 129.76,
+   "target": 135.07,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "double_bottom neckline_break>132.48",
+   "max_r": 0.11,
+   "key": "t53",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "SCHW",
    "pattern": "Rectangle",
@@ -1231,13 +1260,13 @@
  ],
  "funnel": {
   "day": "2026-09-29",
-  "setups": 89,
-  "traded": 1,
+  "setups": 96,
+  "traded": 2,
   "rejected": {
    "skip-chase": 6,
    "skip-rr": 1,
    "skip-stale": 3,
-   "skip-vol": 78
+   "skip-vol": 84
   }
  },
  "funnel_days": [
@@ -1253,13 +1282,13 @@
   },
   {
    "day": "2026-09-29",
-   "setups": 89,
-   "traded": 1,
+   "setups": 96,
+   "traded": 2,
    "rejected": {
     "skip-chase": 6,
     "skip-rr": 1,
     "skip-stale": 3,
-    "skip-vol": 78
+    "skip-vol": 84
    }
   }
  ],

@@ -1,8 +1,8 @@
 {
  "version": 1,
- "updated": "2026-09-30T19:50:42+00:00",
- "heartbeat": "2026-09-30T19:50:42+00:00",
- "market_open": true,
+ "updated": "2026-09-30T20:01:22+00:00",
+ "heartbeat": "2026-09-30T20:01:22+00:00",
+ "market_open": false,
  "account": {
   "start": 10000.0,
   "equity": 10011.11,

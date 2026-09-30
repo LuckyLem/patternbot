@@ -1,26 +1,55 @@
 {
  "version": 1,
- "updated": "2026-09-30T19:08:37+00:00",
- "heartbeat": "2026-09-30T19:08:37+00:00",
+ "updated": "2026-09-30T19:19:33+00:00",
+ "heartbeat": "2026-09-30T19:19:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10006.29,
+  "equity": 9997.33,
   "last_equity": 9989.67,
-  "day_change": 16.62,
-  "total_change": 6.29
+  "day_change": 7.66,
+  "total_change": -2.67
  },
  "positions": [
+  {
+   "symbol": "PH",
+   "side": "short",
+   "qty": 2,
+   "entry": 961.39,
+   "current": 962.16,
+   "pl": -1.54
+  },
   {
    "symbol": "ZTS",
    "side": "short",
    "qty": 28,
    "entry": 69.94,
-   "current": 69.75,
-   "pl": 5.32
+   "current": 70.02,
+   "pl": -2.1
   }
  ],
  "trades": [
+  {
+   "symbol": "PH",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-30",
+   "opened": "2026-09-30T19:15:34.852897+00:00",
+   "closed": null,
+   "entry": 961.39,
+   "stop": 970.36,
+   "target": 945.86,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<962.20",
+   "max_r": null,
+   "key": "t57",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "ZTS",
    "pattern": "HeadShouldersTop",
@@ -37,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<70.00",
-   "max_r": 0.35,
+   "max_r": 0.41,
    "key": "t56",
    "detail": false,
    "ai_verdict": null
@@ -1298,20 +1327,20 @@
  ],
  "funnel": {
   "day": "2026-09-30",
-  "setups": 179,
-  "orders": 3,
-  "filled": 2,
+  "setups": 187,
+  "orders": 4,
+  "filled": 3,
   "unfilled": 1,
-  "traded": 2,
+  "traded": 3,
   "coverage_from": "2026-09-30T13:50:25.938540+00:00",
   "rejected": {
    "skip-chase": 12,
-   "skip-dup": 1,
-   "skip-rr": 2,
+   "skip-dup": 2,
+   "skip-rr": 3,
    "skip-rs": 2,
    "skip-spread": 4,
    "skip-stale": 1,
-   "skip-vol": 154
+   "skip-vol": 159
   }
  },
  "funnel_days": [
@@ -1347,20 +1376,20 @@
   },
   {
    "day": "2026-09-30",
-   "setups": 179,
-   "orders": 3,
-   "filled": 2,
+   "setups": 187,
+   "orders": 4,
+   "filled": 3,
    "unfilled": 1,
-   "traded": 2,
+   "traded": 3,
    "coverage_from": "2026-09-30T13:50:25.938540+00:00",
    "rejected": {
     "skip-chase": 12,
-    "skip-dup": 1,
-    "skip-rr": 2,
+    "skip-dup": 2,
+    "skip-rr": 3,
     "skip-rs": 2,
     "skip-spread": 4,
     "skip-stale": 1,
-    "skip-vol": 154
+    "skip-vol": 159
    }
   }
  ],

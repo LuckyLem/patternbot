@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-09-30T15:41:49+00:00",
- "heartbeat": "2026-09-30T15:41:49+00:00",
+ "updated": "2026-09-30T15:51:58+00:00",
+ "heartbeat": "2026-09-30T15:51:58+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9989.67,
+  "equity": 9990.07,
   "last_equity": 9989.67,
-  "day_change": 0.0,
-  "total_change": -10.33
+  "day_change": 0.4,
+  "total_change": -9.93
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "MS",
+   "side": "short",
+   "qty": 10,
+   "entry": 190.51,
+   "current": 190.47,
+   "pl": 0.4
+  }
+ ],
  "trades": [
+  {
+   "symbol": "MS",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-09-30",
+   "opened": "2026-09-30T15:45:35.423262+00:00",
+   "closed": null,
+   "entry": 190.51,
+   "stop": 192.78,
+   "target": 186.33,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<190.63",
+   "max_r": 0.02,
+   "key": "t55",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "TJX",
    "pattern": "DoubleBottom",
@@ -1247,19 +1277,19 @@
  ],
  "funnel": {
   "day": "2026-09-30",
-  "setups": 52,
-  "orders": 1,
-  "filled": 0,
+  "setups": 65,
+  "orders": 2,
+  "filled": 1,
   "unfilled": 1,
-  "traded": 0,
+  "traded": 1,
   "coverage_from": "2026-09-30T13:50:25.938540+00:00",
   "rejected": {
-   "skip-chase": 7,
+   "skip-chase": 8,
    "skip-rr": 1,
    "skip-rs": 2,
    "skip-spread": 3,
    "skip-stale": 1,
-   "skip-vol": 37
+   "skip-vol": 48
   }
  },
  "funnel_days": [
@@ -1295,19 +1325,19 @@
   },
   {
    "day": "2026-09-30",
-   "setups": 52,
-   "orders": 1,
-   "filled": 0,
+   "setups": 65,
+   "orders": 2,
+   "filled": 1,
    "unfilled": 1,
-   "traded": 0,
+   "traded": 1,
    "coverage_from": "2026-09-30T13:50:25.938540+00:00",
    "rejected": {
-    "skip-chase": 7,
+    "skip-chase": 8,
     "skip-rr": 1,
     "skip-rs": 2,
     "skip-spread": 3,
     "skip-stale": 1,
-    "skip-vol": 37
+    "skip-vol": 48
    }
   }
  ],

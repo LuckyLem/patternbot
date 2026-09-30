@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-09-30T19:29:40+00:00",
- "heartbeat": "2026-09-30T19:29:40+00:00",
+ "updated": "2026-09-30T19:40:31+00:00",
+ "heartbeat": "2026-09-30T19:40:31+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9997.36,
+  "equity": 10006.63,
   "last_equity": 9989.67,
-  "day_change": 7.69,
-  "total_change": -2.64
+  "day_change": 16.96,
+  "total_change": 6.63
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 2,
    "entry": 961.39,
-   "current": 961.24,
-   "pl": 0.31
+   "current": 960.8,
+   "pl": 1.18
   },
   {
    "symbol": "ZTS",
    "side": "short",
    "qty": 28,
    "entry": 69.94,
-   "current": 70.08,
-   "pl": -3.92
+   "current": 69.78,
+   "pl": 4.48
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<962.20",
-   "max_r": 0.03,
+   "max_r": 0.13,
    "key": "t57",
    "detail": false,
    "ai_verdict": null

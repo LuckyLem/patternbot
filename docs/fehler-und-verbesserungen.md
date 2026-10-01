@@ -58,6 +58,9 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
 | Zeit-Stop nach 60 statt 120 Minuten | −1,2R statt +2,4R in 49 Trades | ❌ |
 | Ohne Zeit-Stop, ohne Break-even, Ziel halb so weit | +2,3R, +2,4R und +2,1R statt +2,4R, also kein Gewinn | ❌ |
 | Long und Short vertauscht | −1,6R statt +2,4R. Alle 53 geprüften Trades waren in der richtigen Richtung. | ❌ |
+| Break-even früher: ab +0,5R / +0,4R / +0,3R statt +0,6R | +0,26R / −0,48R / −1,34R in 56 Trades. Rettet DHR, schneidet aber ein bis sechs Gewinner ab. | ❌ |
+| Fehlausbruch-Ausstieg: raus, sobald eine 15-Min-Kerze wieder hinter der Kante schließt | −0,71R in 52 Trades. Alte Version +1,01R, neue Version −1,73R, weil Einstiege jetzt direkt an der Kante liegen und kurze Rücksetzer normal sind. | ❌ |
+| Teilgewinn: Hälfte bei +0,4R bis +0,8R schließen, Rest mit Stop auf Einstieg | −0,20R bis −1,06R in 52 Trades. Der Zeit-Stop mit 80-%-Regel sichert die Gewinne schon ähnlich ab. | ❌ |
 
 ## Details
 
@@ -157,6 +160,8 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
 
 | Thema | Wirkung | Status |
 |---|---|---|
+| Break-even vermeintlich defekt (geprüft 01.10.): In allen 9 Fällen ab +0,6R wurde der Stop korrekt nachgezogen. DHR (t28) scheiterte, weil das Ziel nach dem späten Fill nur 0,6R entfernt lag, genau auf Höhe der Break-even-Schwelle. | Kein Fehler im Break-even. Seit 28.09. verhindern der schnelle Einstieg und die Prüfung „Chance zu Risiko mindestens 0,8 am Fill“ solche Fälle. | ✅ |
+| Webseite zeigt den nachgezogenen Stop nicht: In der Trade-Detailansicht stehen nur der ursprüngliche Stop und die ursprüngliche Stop-Linie. `final_stop` aus `trades/tNN.json` wird nirgends angezeigt, zum Beispiel WMT 110,79 → 109,62, MS 192,78 → 190,42. | Kein Geld, aber man hält den Break-even für defekt. Lösung: zweite Stop-Linie „Stop nachgezogen“ und eine Zeile „Break-even gesetzt, +x R gesichert“. Der Bot sollte dafür auch den Zeitpunkt des Nachziehens speichern. | ⬜ |
 | Phantom-Gewinne durch Buchungsfehler (26.08.): DB +595 $, Broker etwa ±0 | Falsche Messung | ✅ |
 | Bot lief 9 Handelstage nicht (11.–21.09., BIOS „Last State“) | Zwei Wochen Daten verloren | ✅ |
 | Trichter zählte gesendete statt gefüllte Orders | Falsche Messung | ✅ 30.09. |

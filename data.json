@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-01T19:47:26+00:00",
- "heartbeat": "2026-10-01T19:47:26+00:00",
+ "updated": "2026-10-01T19:57:34+00:00",
+ "heartbeat": "2026-10-01T19:57:34+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10012.21,
+  "equity": 10011.31,
   "last_equity": 10010.98,
-  "day_change": 1.23,
-  "total_change": 12.21
+  "day_change": 0.33,
+  "total_change": 11.31
  },
- "positions": [
-  {
-   "symbol": "ROP",
-   "side": "long",
-   "qty": 3,
-   "entry": 362.71,
-   "current": 363.12,
-   "pl": 1.23
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "ROP",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-10-01",
    "opened": "2026-10-01T18:45:33.584941+00:00",
-   "closed": null,
+   "closed": "2026-10-01T19:50:33.045191429+00:00",
    "entry": 362.71,
    "stop": 348.61,
    "target": 375.37,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 362.82,
+   "pnl": 0.33,
+   "r": 0.008,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "double_bottom neckline_break>362.17",
    "max_r": 0.07,
    "key": "t58",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1220,12 +1211,12 @@
   }
  ],
  "stats": {
-  "n": 56,
-  "pnl": 31.48,
-  "winrate": 0.518,
+  "n": 57,
+  "pnl": 31.81,
+  "winrate": 0.526,
   "expectancy": 0.009,
-  "pf": 1.11,
-  "avg_win": 10.53,
+  "pf": 1.12,
+  "avg_win": 10.19,
   "avg_loss": -10.14
  },
  "equity_curve": [

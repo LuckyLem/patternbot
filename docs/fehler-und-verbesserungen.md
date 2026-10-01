@@ -58,6 +58,7 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
 | Zeit-Stop nach 60 statt 120 Minuten | −1,2R statt +2,4R in 49 Trades | ❌ |
 | Ohne Zeit-Stop, ohne Break-even, Ziel halb so weit | +2,3R, +2,4R und +2,1R statt +2,4R, also kein Gewinn | ❌ |
 | Long und Short vertauscht | −1,6R statt +2,4R. Alle 53 geprüften Trades waren in der richtigen Richtung. | ❌ |
+| Alle Break-even-Strategien (46 Varianten in 11 Familien, Details in [break-even-vergleich.md](break-even-vergleich.md)) | Keine ist verlässlich besser als „ab +0,6R auf Einstieg“. Jedes Plus hängt an DHR, früher Break-even kostet bis −89 $. | ❌ |
 | Break-even früher: ab +0,5R / +0,4R / +0,3R statt +0,6R | +0,26R / −0,48R / −1,34R in 56 Trades. Rettet DHR, schneidet aber ein bis sechs Gewinner ab. | ❌ |
 | Break-even bei 40 % / 50 % / 60 % / 75 % des Wegs zum Ziel statt fest bei +0,6R | −0,80R / +0,47R / +0,60R / +0,60R in 56 Trades (−18,86 $ / +4,63 $ / +9,50 $ / +9,50 $). Der Gewinn kommt allein von DHR, dafür werden CRM und LUV abgeschnitten. Seit 28.09. deckt die Prüfung „Chance zu Risiko mindestens 0,8 am Fill“ den DHR-Fall ab. | 🔬 im Backtest erneut prüfen |
 | Fehlausbruch-Ausstieg: raus, sobald eine 15-Min-Kerze wieder hinter der Kante schließt | −0,71R in 52 Trades. Alte Version +1,01R, neue Version −1,73R, weil Einstiege jetzt direkt an der Kante liegen und kurze Rücksetzer normal sind. | ❌ |

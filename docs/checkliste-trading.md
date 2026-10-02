@@ -55,17 +55,18 @@ Die Fehler und Verbesserungen im Einzelnen, sortiert nach Geld-Wirkung, stehen i
 
 - [ ] Backtest als Replay: Eine Kopie des Bots mit demselben Code spielt vergangene Tage im Zeitraffer nach. Nur Datenquelle, Uhr und Broker werden ersetzt. Erkannt wird auf denselben IEX-15-Minuten-Kerzen wie live, gefüllt gegen SIP-1-Minuten-Kerzen. Zeitraum: das letzte Jahr, damit verschiedene Marktphasen drin sind. Der Live-Bot läuft derweil unverändert weiter.
 - [ ] Erst kalibrieren: Das Replay muss die echten Tage ab 21.09. auf höchstens 0,1R pro Trade genau treffen und die Setup-Exporte ab 28.09. Entscheidung für Entscheidung nachbilden.
-- [ ] Die Kopie ist abgeschottet: kein Zugriff auf die Trading-API, eigene Datenbank, kein Push auf GitHub, kein Telegram, läuft auf dem PC statt auf dem Pi.
+- [ ] Die Kopie ist abgeschottet: kein Zugriff auf die Trading-API, eigene Datenbank, kein Telegram, läuft auf dem PC statt auf dem Pi. Auf GitHub landen nur Ergebnisse, auf einem eigenen Branch `backtest`, nie auf main und nie Bot-Code.
 - [ ] Erfolgskriterien vorher festlegen, bevor die Ergebnisse da sind:
   - mindestens 200 Trades
   - Erwartungswert nach Kosten mindestens +0,10R pro Trade
   - Profitfaktor mindestens 1,3
   - maximaler Drawdown höchstens 15R
 - [ ] Vergleich mit zufälligen Einstiegen bei gleichen Regeln
-- [ ] Prüfung auf Daten, die nicht zum Entwerfen benutzt wurden: Mit Jahr 1 entwerfen. Ein zweites, älteres Jahr bleibt verschlossen und wird erst am Ende einmal gerechnet, als Abschlussprüfung.
+- [ ] In Runden arbeiten, jede Runde mit einem frischen, älteren Jahr. Erst unverändert rechnen: Dieses Ergebnis zählt und kommt ins Protokoll. Danach höchstens 3 begründete Korrekturen, die erst im nächsten frischen Jahr geprüft werden. Kein Jahr dient zweimal als Prüfung.
+- [ ] Ziel erreicht, wenn ein frisches Jahr die Kriterien ohne Änderung schafft. Abbruch, wenn drei Runden hintereinander kein frisches Jahr besser wird oder die Daten ausgehen.
 - [ ] Auswertung nach Muster, Richtung, Tageszeit und Marktlage
-- [ ] Varianten nur einzeln und vorher benannt, höchstens 5 bis 6 aus der Fehlerliste. Keine automatische Optimierung, denn wer genug Varianten probiert, findet immer eine, die zufällig glänzt.
-- [ ] Eigene Mustersuche erst nach dem Jahres-Replay, nur als vorher benannte Ideen mit Begründung und nur mit dem verschlossenen Jahr als Prüfung. Keine blinde Suche über Tausende Regeln.
+- [ ] Varianten einzeln bewerten und vorher benennen, aus der Fehlerliste. Keine automatische Optimierung, denn wer genug Varianten probiert, findet immer eine, die zufällig glänzt.
+- [ ] Eigene Mustersuche erst nach dem Jahres-Replay, nur als vorher benannte Ideen mit Begründung und nur mit einem frischen Jahr als Prüfung. Keine blinde Suche über Tausende Regeln.
 
 ### 4. Strategie schärfen (nur mit Backtest, eine Änderung pro Zyklus)
 

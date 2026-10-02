@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-02T15:33:00+00:00",
- "heartbeat": "2026-10-02T15:33:00+00:00",
+ "updated": "2026-10-02T15:43:11+00:00",
+ "heartbeat": "2026-10-02T15:43:11+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10008.38,
+  "equity": 10010.94,
   "last_equity": 10011.27,
-  "day_change": -2.89,
-  "total_change": 8.38
+  "day_change": -0.33,
+  "total_change": 10.94
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 12,
    "entry": 158.88,
-   "current": 158.93,
-   "pl": -0.57
+   "current": 158.74,
+   "pl": 1.71
   },
   {
    "symbol": "CMCSA",
    "side": "short",
    "qty": 93,
    "entry": 21.52,
-   "current": 21.55,
-   "pl": -2.33
+   "current": 21.54,
+   "pl": -1.74
   }
  ],
  "trades": [
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<158.94",
-   "max_r": 0.02,
+   "max_r": 0.12,
    "key": "t59",
    "detail": false,
    "ai_verdict": null

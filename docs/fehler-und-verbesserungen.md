@@ -1,6 +1,6 @@
 # Fehler und Verbesserungen – sortiert nach Geld-Wirkung
 
-Stand: 01.10.2026 · Datenbasis: 56 echte Paper-Trades vom 10.09. bis 30.09.2026, die Setup-Exporte vom 28. bis 30.09. und die Nachsimulationen vom 26.09. bis 01.10.
+Stand: 02.10.2026 · Datenbasis: 57 echte Paper-Trades vom 10.09. bis 01.10.2026, die Setup-Exporte vom 28.09. bis 01.10. und die Nachsimulationen vom 26.09. bis 02.10.
 
 **So ist die Liste aufgebaut**
 
@@ -18,10 +18,10 @@ Stand: 01.10.2026 · Datenbasis: 56 echte Paper-Trades vom 10.09. bis 30.09.2026
 | # | Thema | Geld-Wirkung | Status |
 |---|---|---|---|
 | 1 | Einstieg erst Minuten nach Kerzenschluss | +5,4R in 49 Trades, ≈ +155 $ (Simulation) | ✅ seit 28.09. |
-| 2 | Anti-Chase-Zone an der Kante statt am Schlusskurs (V1) | +3,0R in 3 Tagen, 13 Trades, ≈ +70 $ (Simulation) | ⏳ |
-| 3 | Blinde Fenster bei 5 offenen Positionen | mindestens 1 verpasster Trade: INTU, später +2R, ≈ +58 $ | ⬜ |
-| 4 | Orders vor Börsenöffnung (01.09.) | −50 $ | ✅ |
-| 5 | Zonengrenzen nicht auf den Cent gerundet (V2) | +1,77R in 3 Tagen, ≈ +40 $ (Simulation) | ⬜ |
+| 2 | Blinde Fenster bei 5 offenen Positionen | mindestens 1 verpasster Trade: INTU, später +2R, ≈ +58 $ | ⬜ |
+| 3 | Orders vor Börsenöffnung (01.09.) | −50 $ | ✅ |
+| 4 | Zonengrenzen nicht auf den Cent gerundet (V2) | +1,77R in 3 Tagen, ≈ +40 $ (Simulation) | ⬜ |
+| 5 | Anti-Chase-Zone an der Kante statt am Schlusskurs (V1) | +1,44R in 4 Tagen, 16 Trades, ≈ +33 $ (Simulation). Mit den echten Positionsgrößen nur +2,69 $, siehe 15. | ⏳ |
 | 6 | Rechteck-Muster schwach | −31,55 $ (15 Trades, −1,73R) | 🔬 |
 | 7 | Ziele ab 1,5R werden nicht erreicht | −22,29 $ (12 Trades, −0,57R) | 🔬 |
 | 8 | Übernacht- und Vorbörsen-Fehler (UAL, NSC) | ≈ −22 $ direkt, die Gefahr war viel größer | ✅ |
@@ -42,7 +42,7 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
 |---|---|---|
 | Ausbrüche laufen kaum weiter | Bester Zwischenstand im Median nur +0,19R, 2 von 42 Zielen erreicht. In der Woche 21.–25.09. lagen theoretisch rund 12R „auf dem Tisch“, realisiert wurden 2R. | 🔬 |
 | Teilgewinn plus Trailing-Stop statt festem Ziel | Lässt einzelne große Gewinner zu. Heute endet fast jeder Trade per Zeit-Stop oder Tagesende. | 🔬 |
-| Marktfilter (Richtung des Gesamtmarkts, SPY) | Am 28.09. verloren drei Shorts, während der Markt ab Mittag stieg. | 🔬 |
+| Marktfilter (Richtung des Gesamtmarkts, SPY) | Eine einfache Fassung ist aktiv: Kein Trade gegen den Markt, sobald SPY am Tag mehr als 0,5 % dagegen steht. Am 01.10. griff sie zum ersten Mal und verwarf TSLA und COST long. Laut Simulation hat das 0,69R erspart. Ob „nur mit dem Markt handeln“ mehr bringt, zeigt erst der Backtest. Am 28.09. verloren drei Shorts, während der Markt ab Mittag stieg. | 🔬 |
 | Enge Seitwärtsphase vor dem Ausbruch | Klassischer Qualitätsfilter für Ausbrüche, bisher nicht im Regelwerk. | 🔬 |
 | Vergleich mit zufälligen Einstiegen | Zeigt, ob die Muster überhaupt besser sind als Zufall. Wichtigster Test überhaupt. | 🔬 |
 | Kosten realistisch abziehen | Paper-Ausführungen sind zu freundlich. Pauschal 0,03R bis 0,05R pro Trade abziehen. | ⬜ |
@@ -72,29 +72,34 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
 - **Beleg:** Nachsimulation der 49 Trades vom 21. bis 29.09.: so wie gehandelt +2,4R, mit Order direkt bei Kerzenschluss +7,7R. 37 von 42 Trades der ersten Woche wären besser gelaufen. Die Bot-Session kam auf 1-Minuten-Daten unabhängig auf +6,16R gegenüber +2,00R.
 - **Lösung:** Seit 28.09. geht die Order 32 bis 38 Sekunden nach Kerzenschluss raus, der Fill liegt 0,05R bis 0,11R hinter der Kante.
 
-### 2. Anti-Chase-Zone an der Kante statt am Schlusskurs (V1) ⏳
-
-- **Problem:** Die neue Version verankert die Zone an der Ausbruchskante. Lag der Schlusskurs schon weiter weg, war der Trade per Konstruktion verloren. Das betraf 17 der 47 Trades vom 21. bis 28.09.
-- **Beleg:** Unabhängige Nachrechnung auf den Setup-Exporten: 13 zusätzliche Trades vom 28. bis 30.09., zusammen +3,00R, 10 davon Gewinner. Die Bot-Session rechnete +9 Orders und +2,34R. Der Simulator trifft die echten Trades auf 0,05R genau.
-- **Lösung:** Schalter `PATTERNBOT_CHASE_ANCHOR=close` ist gebaut, war am 30.09. aber noch aus. Einschalten nach Handelsschluss bei flachem Broker.
-
-### 3. Blinde Fenster bei 5 offenen Positionen ⬜
+### 2. Blinde Fenster bei 5 offenen Positionen ⬜
 
 - **Problem:** Sind 5 Positionen offen, bewertet und protokolliert der Bot keine Setups mehr. Die Reihenfolge der Kandidaten folgt der Sortierung nach Börsenwert, nicht der Qualität.
 - **Beleg:** Am 24.09. von 09:53 bis 11:52 New York blind. Das INTU-Rechteck lief später +2R und wurde nie angesehen (Analyse vom 27.09.).
 - **Lösung:** Auch bei voller Kapazität alles bewerten und als `skip-maxopen` protokollieren. Später Kandidaten nach Qualität ordnen, nur per Backtest.
 
-### 4. Orders vor Börsenöffnung (01.09.) ✅
+### 3. Orders vor Börsenöffnung (01.09.) ✅
 
 - **Problem:** Um 04:00 New York wurden auf dünnen Vorbörsen-Daten 5 Orders angelegt, die alle zur Eröffnung ausgeführt wurden.
 - **Wirkung:** −50 $ direkt zur Eröffnung.
 - **Lösung:** Harte Sperre, solange die Börse geschlossen ist. Eine leere Börsenuhr blockiert ebenfalls.
 
-### 5. Zonengrenzen nicht auf den Cent gerundet (V2) ⬜
+### 4. Zonengrenzen nicht auf den Cent gerundet (V2) ⬜
 
 - **Problem:** Setups scheiterten um einen halben bis zwei Cent an der Zone, zum Beispiel NOW (½ Cent unter der Kante), HIG (1 Cent), SYK.
 - **Beleg:** Simulation der Bot-Session: +2 Orders, +1,77R in 3 Tagen. Das überlappt teilweise mit V1, alle Vorschläge V1 bis V4 zusammen ergaben +3,18R.
 - **Lösung:** Zonengrenzen auf den Cent runden. Das ist ein Rundungsfehler, keine Strategiefrage.
+
+### 5. Anti-Chase-Zone an der Kante statt am Schlusskurs (V1) ⏳
+
+- **Problem:** Die neue Version verankert die Zone an der Ausbruchskante. Lag der Schlusskurs schon weiter weg, war der Trade per Konstruktion verloren. Das betraf 17 der 47 Trades vom 21. bis 28.09.
+- **Beleg:**
+  - Unabhängige Nachrechnung auf den Setup-Exporten vom 28.09. bis 01.10.: 16 zusätzliche Trades, zusammen +1,44R, 11 davon Gewinner. Der Simulator trifft die echten Trades auf 0,05R genau. Mehr als 5 Positionen wären nie gleichzeitig offen gewesen.
+  - Bis 30.09. waren es +3,00R aus 13 Trades. Am 01.10. hätten ADBE (−0,81R), UAL (+0,03R) und DUK (−0,77R) zusammen −1,55R gekostet, rund −50 $.
+  - Mit den echten Positionsgrößen bleiben nur +2,69 $, weil die Verlierer größer positioniert waren als die Gewinner (siehe 15).
+  - Die Bot-Session rechnete für den 28. bis 30.09. +9 Orders und +2,34R.
+- **Einordnung:** V1 bringt vor allem Menge. Vom 29.09. bis 01.10. wären es 21 statt 6 Trades gewesen, ein statistisches Urteil wäre damit nach Wochen statt nach Monaten möglich. Ein Geldhebel ist V1 nach vier Tagen nicht.
+- **Lösung:** Schalter `PATTERNBOT_CHASE_ANCHOR=close` ist gebaut, war bis einschließlich 01.10. aber noch aus. Einschalten nach Handelsschluss bei flachem Broker, danach mindestens eine Woche unverändert laufen lassen.
 
 ### 6. Rechteck-Muster schwach 🔬
 
@@ -130,6 +135,7 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
   - 30.09.: In der Nachholrunde war der Kurs bei drei Setups schon wieder hinter der Kante.
   - CRM blieb ohne Fill, weil das Limit aus einem 27 Sekunden alten IEX-Kurs stammte. Laut Simulation hätte CRM +0,45R gebracht.
   - Die universumweite Analyse vom 27.09. fand Füllungen zwischen 09:30 und 09:50 klar negativ.
+  - 01.10.: AMD und COF lagen um 09:50 schon wieder hinter der Kante und wurden verworfen. AMD wäre danach −1,08R gelaufen, COF +0,84R. Kein klares Bild.
 - **Nächster Schritt:** Im Backtest getrennt auswerten. Limit aus der Zone setzen, nicht aus dem letzten IEX-Kurs.
 
 ### 11. Paper füllt Ziel-Limits erst am Geldkurs (VRTX) ⬜
@@ -154,7 +160,7 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
 
 ### 15. Ungleiches Risiko pro Trade durch die Wertgrenze ⬜
 
-- **Beleg:** Geplant sind 49,87 $ Risiko pro Trade. Tatsächlich waren es im Schnitt 28,94 $ (alte Version) bzw. 22,83 $ (neue), einzelne Trades lagen bei 7 $ bis 16 $. Der beste Trade vom 28.09. (C, +1,07R) brachte deshalb nur 13,35 $.
+- **Beleg:** Geplant sind 49,87 $ Risiko pro Trade. Tatsächlich waren es im Schnitt 28,94 $ (alte Version) bzw. 22,83 $ (neue), einzelne Trades lagen bei 7 $ bis 16 $. Der beste Trade vom 28.09. (C, +1,07R) brachte deshalb nur 13,35 $. In der V1-Simulation vom 28.09. bis 01.10. wurden aus +1,44R nur +2,69 $: Die Verlierer ADBE, JCI und DUK riskierten 41 $, 33 $ und 22 $, die besten Gewinner HIG und AFL nur 12 $ und 13 $.
 - **Wirkung:** Ergebnisse in R und in Dollar laufen auseinander. Bei einem Vorteil halbiert das den Gewinn, ohne Vorteil den Verlust.
 - **Lösung:** Gleiches tatsächliches Risiko für jeden Trade, zum Beispiel ein niedrigeres Risiko, das die Wertgrenze nie erreicht.
 
@@ -163,7 +169,7 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
 | Thema | Wirkung | Status |
 |---|---|---|
 | Break-even vermeintlich defekt (geprüft 01.10.): In allen 9 Fällen ab +0,6R wurde der Stop korrekt nachgezogen. DHR (t28) scheiterte, weil das Ziel nach dem späten Fill nur 0,6R entfernt lag, genau auf Höhe der Break-even-Schwelle. | Kein Fehler im Break-even. Seit 28.09. verhindern der schnelle Einstieg und die Prüfung „Chance zu Risiko mindestens 0,8 am Fill“ solche Fälle. | ✅ |
-| Webseite zeigt den nachgezogenen Stop nicht: In der Trade-Detailansicht stehen nur der ursprüngliche Stop und die ursprüngliche Stop-Linie. `final_stop` aus `trades/tNN.json` wird nirgends angezeigt, zum Beispiel WMT 110,79 → 109,62, MS 192,78 → 190,42. | Kein Geld, aber man hält den Break-even für defekt. Lösung: zweite Stop-Linie „Stop nachgezogen“ und eine Zeile „Break-even gesetzt, +x R gesichert“. Der Bot sollte dafür auch den Zeitpunkt des Nachziehens speichern. | ⬜ |
+| Webseite zeigt den nachgezogenen Stop nicht: In der Trade-Detailansicht stehen nur der ursprüngliche Stop und die ursprüngliche Stop-Linie. `final_stop` aus `trades/tNN.json` wird nirgends angezeigt, zum Beispiel WMT 110,79 → 109,62, MS 192,78 → 190,42. | Kein Geld, aber man hält den Break-even für defekt. Lösung: zweite Stop-Linie „Stop nachgezogen“ und eine Zeile „Break-even gesetzt, +x R gesichert“. Gebaut am 01.10. auf dem Branch `claude/epic-gates-iz9swg` (Liste, Detailansicht, Kerzenchart), live erst nach `dashboard_sync --install`. Der Bot sollte zusätzlich den Zeitpunkt des Nachziehens speichern. | ⏳ |
 | Phantom-Gewinne durch Buchungsfehler (26.08.): DB +595 $, Broker etwa ±0 | Falsche Messung | ✅ |
 | Bot lief 9 Handelstage nicht (11.–21.09., BIOS „Last State“) | Zwei Wochen Daten verloren | ✅ |
 | Trichter zählte gesendete statt gefüllte Orders | Falsche Messung | ✅ 30.09. |
@@ -176,6 +182,6 @@ Diese Punkte haben vermutlich die größte Hebelwirkung auf Dauer, lassen sich a
 | Tagestrend aus einer halben Tageskerze | Nicht reproduzierbare Signale | ✅ |
 | Protokolle gingen verloren, keine Rotation | Fehlende Daten | ✅ |
 | IEX liefert für BK, MMC und FI keine Kerzen | Tote Symbole im Universum | ⬜ |
-| Kein Echtzeit-SIP (veraltete Kurse, dünnes Orderbuch) | Für Paper verkraftbar, für Echtgeld nötig | ⬜ |
+| Kein Echtzeit-SIP (veraltete Kurse, dünnes Orderbuch) | Für Paper verkraftbar, für Echtgeld nötig. Beispiel 01.10.: MPC verworfen, weil der IEX-Kurs 222 Sekunden alt war. | ⬜ |
 | Bot-Version wird nicht bei jedem Trade gespeichert | Änderungen lassen sich nicht sauber vergleichen | ⬜ |
 | Kein schriftlicher Notfallplan (Strom, Internet, API) | Gefahr bei Ausfall mit offener Position | ⬜ |

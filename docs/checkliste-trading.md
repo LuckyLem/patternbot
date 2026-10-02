@@ -1,15 +1,16 @@
 # Checkliste: Der Weg zum erfolgreichen Trading
 
-Bewertung aus der Sicht eines erfahrenen, unabhängigen Traders, der vom Trading lebt. Stand: 01.10.2026.
+Bewertung aus der Sicht eines erfahrenen, unabhängigen Traders, der vom Trading lebt. Stand: 02.10.2026.
 
 Die Fehler und Verbesserungen im Einzelnen, sortiert nach Geld-Wirkung, stehen in [fehler-und-verbesserungen.md](fehler-und-verbesserungen.md).
 
 ## Lage in Kürze
 
-- **Konto:** 10.011,11 $, zum ersten Mal über dem Start (+11,11 $).
-- **Alle 56 Trades seit 10.09.:** +31,48 $, Profitfaktor 1,11. Das ist gute Technik bei einem Ergebnis um null. Ein Vorteil ist noch nicht nachgewiesen, in diesem Stadium ist das normal.
-- **Neue Version seit 28.09.:** 6 Trades, +1,55R bzw. +25,09 $, 5 davon im Plus.
+- **Konto:** 10.011,27 $, knapp über dem Start (+11,27 $).
+- **Alle 57 Trades seit 10.09.:** +31,81 $, Profitfaktor 1,12. Das ist gute Technik bei einem Ergebnis um null. Ein Vorteil ist noch nicht nachgewiesen, in diesem Stadium ist das normal.
+- **Neue Version seit 28.09.:** 7 Trades, +1,56R bzw. +25,42 $, 6 davon im Plus.
 - **30.09.:** 3 von 3 Trades im Plus, +1,12R. Keiner erreichte sein Ziel. Das Geld kam vom Zeit-Stop und vom Tagesende. Mit V1 wären es laut Simulation 6 Trades mehr gewesen, zusammen +1,59R.
+- **01.10.:** 1 Trade (ROP), +0,33 $. Mit V1 wären es laut Simulation 3 Trades mehr gewesen, zusammen −1,55R. Über alle vier Tage bringt V1 laut Simulation 16 Trades mehr und +1,44R, in Dollar wegen der ungleichen Positionsgrößen aber nur +2,69 $.
 
 ## Was schon richtig gut läuft
 

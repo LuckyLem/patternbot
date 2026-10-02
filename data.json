@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-02T17:18:33+00:00",
- "heartbeat": "2026-10-02T17:18:33+00:00",
+ "updated": "2026-10-02T17:28:45+00:00",
+ "heartbeat": "2026-10-02T17:28:45+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9996.36,
+  "equity": 9997.11,
   "last_equity": 10011.27,
-  "day_change": -14.91,
-  "total_change": -3.64
+  "day_change": -14.16,
+  "total_change": -2.89
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 12,
    "entry": 158.88,
-   "current": 159.97,
-   "pl": -13.05
+   "current": 159.83,
+   "pl": -11.37
   },
   {
    "symbol": "CMCSA",
    "side": "short",
    "qty": 93,
    "entry": 21.52,
-   "current": 21.54,
-   "pl": -1.86
+   "current": 21.55,
+   "pl": -2.79
   }
  ],
  "trades": [

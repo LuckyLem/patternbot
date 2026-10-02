@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-02T15:43:11+00:00",
- "heartbeat": "2026-10-02T15:43:11+00:00",
+ "updated": "2026-10-02T15:53:20+00:00",
+ "heartbeat": "2026-10-02T15:53:20+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10010.94,
+  "equity": 10014.72,
   "last_equity": 10011.27,
-  "day_change": -0.33,
-  "total_change": 10.94
+  "day_change": 3.45,
+  "total_change": 14.72
  },
  "positions": [
   {
@@ -16,8 +16,8 @@
    "side": "short",
    "qty": 12,
    "entry": 158.88,
-   "current": 158.74,
-   "pl": 1.71
+   "current": 158.44,
+   "pl": 5.31
   },
   {
    "symbol": "CMCSA",
@@ -25,7 +25,7 @@
    "qty": 93,
    "entry": 21.52,
    "current": 21.54,
-   "pl": -1.74
+   "pl": -1.86
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<21.55",
-   "max_r": null,
+   "max_r": 0.02,
    "key": "t60",
    "detail": false,
    "ai_verdict": null
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<158.94",
-   "max_r": 0.12,
+   "max_r": 0.13,
    "key": "t59",
    "detail": false,
    "ai_verdict": null
@@ -1398,7 +1398,7 @@
  ],
  "funnel": {
   "day": "2026-10-02",
-  "setups": 52,
+  "setups": 55,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
@@ -1408,7 +1408,7 @@
    "skip-chase": 5,
    "skip-dup": 2,
    "skip-rs": 1,
-   "skip-vol": 42
+   "skip-vol": 45
   }
  },
  "funnel_days": [
@@ -1478,7 +1478,7 @@
   },
   {
    "day": "2026-10-02",
-   "setups": 52,
+   "setups": 55,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
@@ -1488,7 +1488,7 @@
     "skip-chase": 5,
     "skip-dup": 2,
     "skip-rs": 1,
-    "skip-vol": 42
+    "skip-vol": 45
    }
   }
  ],

@@ -689,8 +689,9 @@ function calendar(d){
 }
 
 /* ------------------------------------------------------------ filter funnel */
-const REASON={"skip-vol":"zu wenig Volumen","skip-chase":"Preis schon weggelaufen","skip-rs":"schwächer als der Markt",
-  "skip-ctx":"Marktrichtung dagegen","skip-stale":"Signal zu alt"};
+const REASON={"skip-vol":"zu wenig Volumen","skip-chase":"Preis schon weggelaufen","skip-rs":"relative Stärke dagegen",
+  "skip-ctx":"Marktrichtung dagegen","skip-market":"Marktrichtung dagegen","skip-stale":"Kurs zu alt",
+  "skip-spread":"Spread zu groß","skip-rr":"Chance zu klein","skip-dup":"schon offen oder doppelt","skip-maxopen":"alle 5 Plätze belegt"};
 function funnel(d){
   const f=d.funnel, box=$("fun");
   if(!f||!f.setups){box.innerHTML='<div class="void" style="padding:24px 0">noch keine Filterdaten</div>';return;}

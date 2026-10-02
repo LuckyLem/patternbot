@@ -53,7 +53,9 @@ Die Fehler und Verbesserungen im Einzelnen, sortiert nach Geld-Wirkung, stehen i
 
 ### 3. Vorteil nachweisen (Backtest)
 
-- [ ] Backtest auf 1-Minuten-Kerzen über 8 bis 12 Wochen. Die heutige Variante muss die echte Woche auf höchstens 0,1R pro Trade genau treffen.
+- [ ] Backtest als Replay: Eine Kopie des Bots mit demselben Code spielt vergangene Tage im Zeitraffer nach. Nur Datenquelle, Uhr und Broker werden ersetzt. Erkannt wird auf denselben IEX-15-Minuten-Kerzen wie live, gefüllt gegen SIP-1-Minuten-Kerzen. Zeitraum 8 bis 12 Wochen, später 6 bis 12 Monate für verschiedene Marktphasen.
+- [ ] Erst kalibrieren: Das Replay muss die echten Tage ab 21.09. auf höchstens 0,1R pro Trade genau treffen und die Setup-Exporte ab 28.09. Entscheidung für Entscheidung nachbilden.
+- [ ] Die Kopie ist abgeschottet: kein Zugriff auf die Trading-API, eigene Datenbank, kein Push auf GitHub, kein Telegram, läuft auf dem PC statt auf dem Pi.
 - [ ] Erfolgskriterien vorher festlegen, bevor die Ergebnisse da sind:
   - mindestens 200 Trades
   - Erwartungswert nach Kosten mindestens +0,10R pro Trade
@@ -62,6 +64,7 @@ Die Fehler und Verbesserungen im Einzelnen, sortiert nach Geld-Wirkung, stehen i
 - [ ] Vergleich mit zufälligen Einstiegen bei gleichen Regeln
 - [ ] Prüfung auf Daten, die nicht zum Entwerfen benutzt wurden: erste Hälfte entwerfen, zweite Hälfte prüfen
 - [ ] Auswertung nach Muster, Richtung, Tageszeit und Marktlage
+- [ ] Varianten nur einzeln und vorher benannt, höchstens 5 bis 6 aus der Fehlerliste. Keine automatische Optimierung, denn wer genug Varianten probiert, findet immer eine, die zufällig glänzt.
 
 ### 4. Strategie schärfen (nur mit Backtest, eine Änderung pro Zyklus)
 

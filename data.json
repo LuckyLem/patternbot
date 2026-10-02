@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-10-02T18:31:31+00:00",
- "heartbeat": "2026-10-02T18:31:31+00:00",
+ "updated": "2026-10-02T18:41:47+00:00",
+ "heartbeat": "2026-10-02T18:41:47+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
@@ -12,27 +12,6 @@
  },
  "positions": [],
  "trades": [
-  {
-   "symbol": "AJG",
-   "pattern": "Rectangle",
-   "side": "short",
-   "day": "2026-10-02",
-   "opened": "2026-10-02T18:30:35.476878+00:00",
-   "closed": null,
-   "entry": 225.98,
-   "stop": 229.94,
-   "target": 219.11,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "submitted",
-   "exit_source": null,
-   "reason": "rectangle break<226.33",
-   "max_r": null,
-   "key": "t61",
-   "detail": false,
-   "ai_verdict": null
-  },
   {
    "symbol": "CMCSA",
    "pattern": "Rectangle",
@@ -1405,7 +1384,7 @@
   "setups": 122,
   "orders": 3,
   "filled": 2,
-  "unfilled": 0,
+  "unfilled": 1,
   "traded": 2,
   "coverage_from": "2026-10-02T13:50:25.683154+00:00",
   "rejected": {
@@ -1486,7 +1465,7 @@
    "setups": 122,
    "orders": 3,
    "filled": 2,
-   "unfilled": 0,
+   "unfilled": 1,
    "traded": 2,
    "coverage_from": "2026-10-02T13:50:25.683154+00:00",
    "rejected": {

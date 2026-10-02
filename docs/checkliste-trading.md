@@ -22,7 +22,7 @@ Die Fehler und Verbesserungen im Einzelnen, sortiert nach Geld-Wirkung, stehen i
 
 ## Was ich verbessern würde, nach Wichtigkeit
 
-1. **Erst den Vorteil beweisen, dann optimieren.** Der Backtest über 8 bis 12 Wochen ist der wichtigste offene Punkt. Dazu gehört der Vergleich mit zufälligen Einstiegen in derselben Aktie zur selben Tageszeit, mit denselben Stops und derselben Haltedauer. Schlagen die Muster den Zufall nicht, steckt der Vorteil nicht in den Mustern.
+1. **Erst den Vorteil beweisen, dann optimieren.** Der Backtest über ein Jahr ist der wichtigste offene Punkt. Dazu gehört der Vergleich mit zufälligen Einstiegen in derselben Aktie zur selben Tageszeit, mit denselben Stops und derselben Haltedauer. Schlagen die Muster den Zufall nicht, steckt der Vorteil nicht in den Mustern.
 2. **Das Problem „Ausbrüche laufen nicht weiter“ angehen.** Im Median kamen die Trades nur auf +0,19R, von 42 Zielen wurden 2 erreicht. Ausbrüche funktionieren vor allem in Trendmärkten, nach einer engen Seitwärtsphase und in Richtung des Gesamtmarkts. Das als Filter testen, statt an bestehenden Schwellen zu drehen.
 3. **Ziele an die tatsächliche Bewegung anpassen.** Endet die typische Bewegung bei 0,5 bis 0,7R, sind Ziele bei 1,5R Wunschdenken. Im Backtest testen: Teilgewinn bei etwa 0,7 bis 1R, den Rest mit Trailing-Stop laufen lassen. Profis verdienen meist an wenigen großen Gewinnern. Das System lässt heute keinen zu.
 4. **Gleiches echtes Risiko pro Trade.** Durch die Wertgrenze riskiert ein Trade mal 16 $, mal 50 $. Dann laufen R und Dollar auseinander.
@@ -53,7 +53,7 @@ Die Fehler und Verbesserungen im Einzelnen, sortiert nach Geld-Wirkung, stehen i
 
 ### 3. Vorteil nachweisen (Backtest)
 
-- [ ] Backtest als Replay: Eine Kopie des Bots mit demselben Code spielt vergangene Tage im Zeitraffer nach. Nur Datenquelle, Uhr und Broker werden ersetzt. Erkannt wird auf denselben IEX-15-Minuten-Kerzen wie live, gefüllt gegen SIP-1-Minuten-Kerzen. Zeitraum 8 bis 12 Wochen, später 6 bis 12 Monate für verschiedene Marktphasen.
+- [ ] Backtest als Replay: Eine Kopie des Bots mit demselben Code spielt vergangene Tage im Zeitraffer nach. Nur Datenquelle, Uhr und Broker werden ersetzt. Erkannt wird auf denselben IEX-15-Minuten-Kerzen wie live, gefüllt gegen SIP-1-Minuten-Kerzen. Zeitraum: das letzte Jahr, damit verschiedene Marktphasen drin sind. Der Live-Bot läuft derweil unverändert weiter.
 - [ ] Erst kalibrieren: Das Replay muss die echten Tage ab 21.09. auf höchstens 0,1R pro Trade genau treffen und die Setup-Exporte ab 28.09. Entscheidung für Entscheidung nachbilden.
 - [ ] Die Kopie ist abgeschottet: kein Zugriff auf die Trading-API, eigene Datenbank, kein Push auf GitHub, kein Telegram, läuft auf dem PC statt auf dem Pi.
 - [ ] Erfolgskriterien vorher festlegen, bevor die Ergebnisse da sind:
@@ -62,9 +62,10 @@ Die Fehler und Verbesserungen im Einzelnen, sortiert nach Geld-Wirkung, stehen i
   - Profitfaktor mindestens 1,3
   - maximaler Drawdown höchstens 15R
 - [ ] Vergleich mit zufälligen Einstiegen bei gleichen Regeln
-- [ ] Prüfung auf Daten, die nicht zum Entwerfen benutzt wurden: erste Hälfte entwerfen, zweite Hälfte prüfen
+- [ ] Prüfung auf Daten, die nicht zum Entwerfen benutzt wurden: Mit Jahr 1 entwerfen. Ein zweites, älteres Jahr bleibt verschlossen und wird erst am Ende einmal gerechnet, als Abschlussprüfung.
 - [ ] Auswertung nach Muster, Richtung, Tageszeit und Marktlage
 - [ ] Varianten nur einzeln und vorher benannt, höchstens 5 bis 6 aus der Fehlerliste. Keine automatische Optimierung, denn wer genug Varianten probiert, findet immer eine, die zufällig glänzt.
+- [ ] Eigene Mustersuche erst nach dem Jahres-Replay, nur als vorher benannte Ideen mit Begründung und nur mit dem verschlossenen Jahr als Prüfung. Keine blinde Suche über Tausende Regeln.
 
 ### 4. Strategie schärfen (nur mit Backtest, eine Änderung pro Zyklus)
 

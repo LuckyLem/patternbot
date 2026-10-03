@@ -1,14 +1,10 @@
 {
  "version": 1,
- "updated": "2026-10-03T01:58:42+00:00",
- "heartbeat": "2026-10-03T01:58:42+00:00",
+ "updated": "2026-10-03T02:10:27+00:00",
+ "heartbeat": "2026-10-03T02:10:27+00:00",
  "market_open": false,
  "account": {
-  "start": 10000.0,
-  "equity": 9998.04,
-  "last_equity": 10011.27,
-  "day_change": -13.23,
-  "total_change": -1.96
+  "start": 10000.0
  },
  "positions": [],
  "trades": [

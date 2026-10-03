@@ -20,6 +20,7 @@
   --up:#08a742; --down:#e02f24; --accent:#0a6bff;
   --up-rgb:8,167,66; --down-rgb:224,47,36; --accent-rgb:10,107,255;
   --up-wash:rgba(8,167,66,.10); --down-wash:rgba(224,47,36,.09);
+  --be:#a35f00; --be-wash:rgba(163,95,0,.12);
   --seg1:#9a9aa6; --seg2:#b9b9c3; --seg3:#d3d3db; --seg4:#e6e6ec;
   --glow:.55;
   --lift:0 0 0 1px var(--hair-soft), 0 1px 2px rgba(9,9,20,.04), 0 14px 34px -14px rgba(9,9,20,.12);
@@ -36,7 +37,7 @@
     --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
     --up:#32d74b; --down:#ff453a; --accent:#3d9bff;
     --up-rgb:50,215,75; --down-rgb:255,69,58; --accent-rgb:61,155,255;
-    --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12);
+    --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --be:#ffb340; --be-wash:rgba(255,179,64,.14);
     --seg1:#6c6c78; --seg2:#4e4e58; --seg3:#393941; --seg4:#2a2a31;
     --glow:.9;
     --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
@@ -48,7 +49,7 @@
   --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
   --up:#32d74b; --down:#ff453a; --accent:#3d9bff;
   --up-rgb:50,215,75; --down-rgb:255,69,58; --accent-rgb:61,155,255;
-  --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12);
+  --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --be:#ffb340; --be-wash:rgba(255,179,64,.14);
   --seg1:#6c6c78; --seg2:#4e4e58; --seg3:#393941; --seg4:#2a2a31;
   --glow:.9;
   --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
@@ -306,6 +307,10 @@ h2{font-size:12.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;
   border-radius:5px;margin-left:8px;vertical-align:2px}
 .verdict.gut{background:var(--up-wash);color:var(--up)} .verdict.schlecht{background:var(--down-wash);color:var(--down)}
 .verdict.neutral{background:var(--sunken);color:var(--ink-2)}
+.verdict.be{background:var(--be-wash);color:var(--be)}
+/* inside the trade rows '.who .sym span' would otherwise grey out the chip text */
+.who .sym .verdict.gut{color:var(--up)} .who .sym .verdict.schlecht{color:var(--down)}
+.who .sym .verdict.neutral{color:var(--ink-2)} .who .sym .verdict.be{color:var(--be)}
 
 /* ================================================================ detail sheet */
 .backdrop{position:fixed;inset:0;z-index:40;background:rgba(6,6,12,.45);backdrop-filter:blur(8px);
@@ -358,7 +363,7 @@ h2{font-size:12.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;
 .dfact{background:var(--raised);padding:13px 16px 14px}
 .dfact .k{font-size:10.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.07em}
 .dfact .v{font-size:14.5px;margin-top:5px;color:var(--ink);line-height:1.45}
-.dfact.bad .v{color:var(--down)} .dfact.good .v{color:var(--up)}
+.dfact.bad .v{color:var(--down)} .dfact.good .v{color:var(--up)} .dfact.be .v{color:var(--be)}
 @media(max-width:640px){.dgrid{grid-template-columns:1fr}}
 .dsec{margin-top:28px}
 .dsec h3{font-size:12px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.09em;margin-bottom:12px}
@@ -684,8 +689,9 @@ function calendar(d){
 }
 
 /* ------------------------------------------------------------ filter funnel */
-const REASON={"skip-vol":"zu wenig Volumen","skip-chase":"Preis schon weggelaufen","skip-rs":"schwächer als der Markt",
-  "skip-ctx":"Marktrichtung dagegen","skip-stale":"Signal zu alt"};
+const REASON={"skip-vol":"zu wenig Volumen","skip-chase":"Preis schon weggelaufen","skip-rs":"relative Stärke dagegen",
+  "skip-ctx":"Marktrichtung dagegen","skip-market":"Marktrichtung dagegen","skip-stale":"Kurs zu alt",
+  "skip-spread":"Spread zu groß","skip-rr":"Chance zu klein","skip-dup":"schon offen oder doppelt","skip-maxopen":"alle 5 Plätze belegt"};
 function funnel(d){
   const f=d.funnel, box=$("fun");
   if(!f||!f.setups){box.innerHTML='<div class="void" style="padding:24px 0">noch keine Filterdaten</div>';return;}
@@ -693,7 +699,7 @@ function funnel(d){
   const rej=Object.entries(f.rejected||{}).sort((a,b)=>b[1]-a[1]);
   const segs=[["gehandelt",f.traded,"var(--up)"],...rej.map(([k,v],i)=>[REASON[k]||k,v,`var(--seg${Math.min(4,i+1)})`])];
   box.innerHTML=`<div class="funtop"><span class="funbig num" id="funN">0</span>
-      <span class="funsub">Setups erkannt · <b class="num" style="color:var(--ink)">${f.traded}</b> gehandelt</span></div>
+      <span class="funsub">Setups erkannt · <b class="num" style="color:var(--ink)">${f.traded}</b> gehandelt${f.unfilled?` · ${f.unfilled} Order${f.unfilled>1?"s":""} ohne Fill`:""}</span></div>
     <div class="bar">${segs.filter(s=>s[1]).map(s=>`<div class="seg" data-w="${s[1]}" style="background:${s[2]}"></div>`).join("")}</div>
     <div class="keys">${segs.map(s=>`<div class="key"><i style="background:${s[2]}"></i>${s[0]}<span class="num">${s[1]}</span></div>`).join("")}</div>`;
   tally($("funN"),f.setups,{dec:0,dur:900,delay:500});
@@ -772,6 +778,7 @@ addEventListener("resize",()=>moveInd());
 function tradeRow(t,i){
   const it=row(t,i,{subtitle:[pname(t.pattern),why(t)].filter(Boolean).join(" · ")});
   if(t.ai_verdict) it.querySelector(".sym").insertAdjacentHTML("beforeend",`<span class="verdict ${esc(t.ai_verdict)}">${esc(t.ai_verdict)}</span>`);
+  if(t.max_r!=null&&t.max_r>=beR()) it.querySelector(".sym").insertAdjacentHTML("beforeend",'<span class="verdict be" title="Break-even: Stop auf Einstieg nachgezogen">BE</span>');
   it.classList.add("link"); it.tabIndex=0; it.setAttribute("role","button");
   it.setAttribute("aria-label",t.symbol+" "+pname(t.pattern)+": Details öffnen");
   it.querySelector(".amt").insertAdjacentHTML("beforeend",'<span class="chev" aria-hidden="true">›</span>');
@@ -844,13 +851,48 @@ const esc=v=>String(v??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 const nyTime=ts=>new Date(ts*1000).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit",timeZone:"America/New_York"});
 const nyDay=ts=>new Date(ts*1000).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit",timeZone:"America/New_York"});
 
+/* break-even: the bot pulls the stop to entry once the trade is +break_even_r in profit.
+   The trade file carries the stop it ended with (final_stop); list rows only know the peak the bot saw (max_r). */
+const beR=()=>(lastData&&lastData.config&&lastData.config.break_even_r)||0.6;
+function beInfo(d){
+  if(d.entry==null||d.stop==null) return null;
+  const dir=d.side==="short"?-1:1, risk=Math.abs(d.entry-d.stop), th=d.be_r||beR();
+  if(!risk) return null;
+  const R=v=>(v-d.entry)*dir/risk;
+  if(d.final_stop!=null&&(d.final_stop-d.stop)*dir>risk*1e-3)
+    return {state:"set",from:d.stop,to:d.final_stop,locked:R(d.final_stop),th,dir,risk};
+  if(d.exit==null) return null;                                   // still open: nothing to say yet
+  const tr=d.target!=null?R(d.target):null;
+  if(tr!=null&&tr<th+0.05) return {state:"impossible",tr,th};     // target (practically) no further than the trigger
+  return {state:"missed",seen:d.mfe_seen??d.mfe??null,peak:d.mfe??null,th};
+}
+function beFact(d){
+  const b=beInfo(d); if(!b) return null;
+  if(b.state==="set") return b.locked>=-0.005
+    ?{k:"Break-even",v:`gesetzt · Stop ${fmt(b.from)} → ${fmt(b.to)}, ${signed(b.locked,2)}R gesichert`,tone:"be"}
+    :{k:"Stop nachgezogen",v:`${fmt(b.from)} → ${fmt(b.to)}, Risiko auf ${signed(b.locked,2)}R verringert`,tone:"neutral"};
+  if(b.state==="impossible")
+    return {k:"Break-even",v:`nicht möglich · Ziel lag nur ${fmt(b.tr,2)}R entfernt, praktisch auf der Schwelle von ${fmt(b.th,1)}R`,tone:"bad"};
+  if(b.peak!=null&&b.seen!=null&&b.peak>=b.th&&b.seen<b.th)
+    return {k:"Break-even",v:`nicht ausgelöst · Spitze ${signed(b.peak,2)}R lag zwischen zwei Prüfungen, der Bot sah ${signed(b.seen,2)}R`,tone:"neutral"};
+  return {k:"Break-even",v:`nicht erreicht · bester Punkt ${b.seen!=null?signed(b.seen,2)+"R":"—"}, nötig +${fmt(b.th,1)}R`,tone:"neutral"};
+}
+function withBE(d){
+  const facts=(d.facts||[]).slice(), bf=beFact(d);
+  if(bf){ const k=facts.findIndex(f=>/^Stop/.test(f.k||"")); facts.splice(k>=0?k+1:0,0,bf); }
+  return facts;
+}
+
 function drawTradeChart(svg,d,still=false){
   svg.innerHTML="";
   const B=d.bars||[], n=B.length;
   const W=Math.max(300,Math.round(svg.clientWidth||svg.getBoundingClientRect().width)||760), H=W<520?240:300;
-  const L=6,R=W<520?92:112,T=16,BM=28;
+  // right margin wide enough for the longest level label, so prices are never cut off on phones
+  const lblLen=Math.max(...[["Ziel",d.target],["Stop",d.stop],["Einstieg",d.entry],["geplant",d.planned_entry],["BE",d.final_stop]]
+    .filter(([,v])=>v!=null).map(([k,v])=>(k+" "+fmt(v)).length));
+  const L=6,R=Math.max(W<520?92:112,Math.ceil(lblLen*6.4)+16),T=16,BM=28;
   svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
-  const lv=[d.stop,d.target,d.entry,d.planned_entry,d.exit].filter(v=>v!=null);
+  const lv=[d.stop,d.target,d.entry,d.planned_entry,d.exit,d.final_stop].filter(v=>v!=null);
   let lo=Math.min(...B.map(b=>b[3]),...lv), hi=Math.max(...B.map(b=>b[2]),...lv);
   const pad=(hi-lo)*.07||1; lo-=pad; hi+=pad;
   const cw=(W-L-R)/n, X=i=>L+cw*(i+.5), Y=v=>T+(H-T-BM)*(1-(v-lo)/(hi-lo));
@@ -893,6 +935,17 @@ function drawTradeChart(svg,d,still=false){
     if(!calm&&!still) ln.style.animation="fade .6s .5s var(--ease) backwards";
     labs.push({y:Y(v),c,t:name+" "+fmt(v)});
   });
+  // break-even: the moved stop, drawn from the first candle that reached the threshold
+  const be=beInfo(d);
+  if(be&&be.state==="set"&&iIn!=null){
+    const goal=d.entry+be.dir*be.th*be.risk, last=iOut!=null?iOut:n-1;
+    let k=iIn; for(let i=iIn;i<=last;i++) if(be.dir>0?B[i][2]>=goal:B[i][3]<=goal){k=i;break;}
+    const c=tok("--be"), x0=X(k);
+    const ln=el("line",{x1:x0,x2:W-R+6,y1:Y(be.to),y2:Y(be.to),stroke:c,"stroke-width":1.6,"stroke-dasharray":"4 3"},svg);
+    const dot=el("circle",{cx:x0,cy:Y(be.to),r:3.5,fill:c},svg);
+    if(!calm&&!still){ ln.style.animation=dot.style.animation="fade .6s .7s var(--ease) backwards"; }
+    labs.push({y:Y(be.to),c,t:"BE "+fmt(be.to)});
+  }
   labs.sort((a,b)=>a.y-b.y);
   for(let i=1;i<labs.length;i++) if(labs[i].y-labs[i-1].y<13) labs[i].y=labs[i-1].y+13;
   labs.forEach(l=>{const t=el("text",{x:W-R+12,y:l.y+3.5,class:"lvl",fill:l.c},svg); t.textContent=l.t;});
@@ -925,7 +978,7 @@ function fallbackDetail(t){
 
 function renderDetail(d){
   const res=d.pnl, r=d.r, body=$("sheetBody");
-  const hasChart=d.bars&&d.bars.length>1;
+  const hasChart=d.bars&&d.bars.length>1, be=beInfo(d), facts=withBE(d);
   body.innerHTML=`
   <div class="stagger">
     <div class="dhead">
@@ -943,11 +996,12 @@ function renderDetail(d){
       <svg id="dplot" viewBox="0 0 1000 300" role="img" aria-label="Kursverlauf rund um den Trade"></svg>
       <div class="dlegend">
         <span><i style="border-color:var(--up)"></i>Ziel</span><span><i style="border-color:var(--down)"></i>Stop</span>
+        ${be&&be.state==="set"?'<span><i style="border-color:var(--be)"></i>BE: Stop nachgezogen</span>':""}
         <span><i class="solid" style="border-color:var(--ink)"></i>Einstieg</span>
         ${d.planned_entry!=null&&Math.abs(d.planned_entry-d.entry)>1e-9?'<span><i class="dot" style="border-color:var(--ink-3)"></i>geplant</span>':""}
         <span><i class="band"></i>Zeitfenster ${Math.round((d.window_min||120)/60)} Std.</span>
       </div></div>`:""}
-    <div class="dgrid">${(d.facts||[]).map(f=>`<div class="dfact ${esc(f.tone)}"><div class="k">${esc(f.k)}</div><div class="v">${esc(f.v)}</div></div>`).join("")}</div>
+    <div class="dgrid">${facts.map(f=>`<div class="dfact ${esc(f.tone)}"><div class="k">${esc(f.k)}</div><div class="v">${esc(f.v)}</div></div>`).join("")}</div>
     ${(d.good||[]).length+(d.bad||[]).length?`<div class="dsec"><h3>Was lief gut · was lief schief</h3><div class="pts">
       ${(d.good||[]).map(x=>`<div class="pt good"><b>✓</b><span>${esc(x)}</span></div>`).join("")}
       ${(d.bad||[]).map(x=>`<div class="pt bad"><b>✕</b><span>${esc(x)}</span></div>`).join("")}

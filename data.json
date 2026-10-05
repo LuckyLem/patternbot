@@ -1,41 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-05T19:47:28+00:00",
- "heartbeat": "2026-10-05T19:47:28+00:00",
+ "updated": "2026-10-05T19:57:42+00:00",
+ "heartbeat": "2026-10-05T19:57:42+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10009.11,
+  "equity": 10003.88,
   "last_equity": 9997.94,
-  "day_change": 11.17,
-  "total_change": 9.11
+  "day_change": 5.94,
+  "total_change": 3.88
  },
- "positions": [
-  {
-   "symbol": "PFE",
-   "side": "long",
-   "qty": 72,
-   "entry": 27.49,
-   "current": 27.46,
-   "pl": -1.8
-  },
-  {
-   "symbol": "TT",
-   "side": "long",
-   "qty": 4,
-   "entry": 471.69,
-   "current": 471.83,
-   "pl": 0.56
-  },
-  {
-   "symbol": "WMT",
-   "side": "long",
-   "qty": 19,
-   "entry": 104.96,
-   "current": 104.89,
-   "pl": -1.24
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "PFE",
@@ -43,19 +18,19 @@
    "side": "long",
    "day": "2026-10-05",
    "opened": "2026-10-05T19:00:38.415876+00:00",
-   "closed": null,
+   "closed": "2026-10-05T19:50:40.663609782+00:00",
    "entry": 27.49,
    "stop": 27.32,
    "target": 27.75,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 27.43,
+   "pnl": -4.32,
+   "r": -0.359,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "asc_triangle break>27.44",
    "max_r": 0.33,
    "key": "t69",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -64,19 +39,19 @@
    "side": "long",
    "day": "2026-10-05",
    "opened": "2026-10-05T18:30:35.064894+00:00",
-   "closed": null,
+   "closed": "2026-10-05T19:50:43.764845823+00:00",
    "entry": 471.69,
    "stop": 468.88,
    "target": 482.19,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 471.42,
+   "pnl": -1.08,
+   "r": -0.096,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "inverse_H&S neckline_break>471.07",
    "max_r": 0.29,
    "key": "t68",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -85,19 +60,19 @@
    "side": "long",
    "day": "2026-10-05",
    "opened": "2026-10-05T18:30:31.832535+00:00",
-   "closed": null,
+   "closed": "2026-10-05T19:50:48.741648659+00:00",
    "entry": 104.96,
    "stop": 104.4,
    "target": 106.17,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 104.82,
+   "pnl": -2.66,
+   "r": -0.248,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "inverse_H&S neckline_break>104.78",
    "max_r": 0.18,
    "key": "t67",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1299,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 64,
-  "pnl": 32.58,
-  "winrate": 0.516,
-  "expectancy": 0.008,
-  "pf": 1.11,
+  "n": 67,
+  "pnl": 24.52,
+  "winrate": 0.493,
+  "expectancy": -0.003,
+  "pf": 1.08,
   "avg_win": 9.77,
-  "avg_loss": -9.35
+  "avg_loss": -8.77
  },
  "equity_curve": [
   {

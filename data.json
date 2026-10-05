@@ -1,34 +1,63 @@
 {
  "version": 1,
- "updated": "2026-10-05T18:53:38+00:00",
- "heartbeat": "2026-10-05T18:53:38+00:00",
+ "updated": "2026-10-05T19:04:38+00:00",
+ "heartbeat": "2026-10-05T19:04:38+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10009.76,
+  "equity": 10012.53,
   "last_equity": 9997.94,
-  "day_change": 11.82,
-  "total_change": 9.76
+  "day_change": 14.59,
+  "total_change": 12.53
  },
  "positions": [
+  {
+   "symbol": "PFE",
+   "side": "long",
+   "qty": 72,
+   "entry": 27.49,
+   "current": 27.5,
+   "pl": 1.08
+  },
   {
    "symbol": "TT",
    "side": "long",
    "qty": 4,
    "entry": 471.69,
-   "current": 471.69,
-   "pl": 0.0
+   "current": 472.25,
+   "pl": 2.26
   },
   {
    "symbol": "WMT",
    "side": "long",
    "qty": 19,
    "entry": 104.96,
-   "current": 104.85,
-   "pl": -2.18
+   "current": 104.81,
+   "pl": -2.75
   }
  ],
  "trades": [
+  {
+   "symbol": "PFE",
+   "pattern": "AscendingTriangle",
+   "side": "long",
+   "day": "2026-10-05",
+   "opened": "2026-10-05T19:00:38.415876+00:00",
+   "closed": null,
+   "entry": 27.49,
+   "stop": 27.32,
+   "target": 27.75,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "asc_triangle break>27.44",
+   "max_r": 0.13,
+   "key": "t69",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "TT",
    "pattern": "InverseHeadShoulders",
@@ -45,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>471.07",
-   "max_r": 0.07,
+   "max_r": 0.22,
    "key": "t68",
    "detail": false,
    "ai_verdict": null
@@ -1267,27 +1296,6 @@
    "key": "t8",
    "detail": true,
    "ai_verdict": "schlecht"
-  },
-  {
-   "symbol": "AMZN",
-   "pattern": "Rectangle",
-   "side": "long",
-   "day": "2026-09-21",
-   "opened": "2026-09-21T19:19:59.803338+00:00",
-   "closed": "2026-09-21T19:50:36.261760+00:00",
-   "entry": 259.33,
-   "stop": 255.46,
-   "target": 266.17,
-   "exit": 258.13,
-   "pnl": -8.41,
-   "r": -0.31,
-   "status": "closed",
-   "exit_source": "eod",
-   "reason": "rectangle break>259.03",
-   "max_r": null,
-   "key": "t7",
-   "detail": true,
-   "ai_verdict": "schlecht"
   }
  ],
  "stats": {
@@ -1423,21 +1431,21 @@
  ],
  "funnel": {
   "day": "2026-10-05",
-  "setups": 137,
-  "orders": 7,
-  "filled": 7,
+  "setups": 146,
+  "orders": 8,
+  "filled": 8,
   "unfilled": 0,
-  "traded": 7,
+  "traded": 8,
   "coverage_from": "2026-10-05T13:50:36.960165+00:00",
   "rejected": {
    "skip-chase": 5,
    "skip-dup": 1,
    "skip-maxopen": 11,
-   "skip-rr": 1,
-   "skip-rs": 1,
-   "skip-spread": 4,
+   "skip-rr": 2,
+   "skip-rs": 2,
+   "skip-spread": 6,
    "skip-stale": 6,
-   "skip-vol": 101
+   "skip-vol": 105
   }
  },
  "funnel_days": [
@@ -1523,21 +1531,21 @@
   },
   {
    "day": "2026-10-05",
-   "setups": 137,
-   "orders": 7,
-   "filled": 7,
+   "setups": 146,
+   "orders": 8,
+   "filled": 8,
    "unfilled": 0,
-   "traded": 7,
+   "traded": 8,
    "coverage_from": "2026-10-05T13:50:36.960165+00:00",
    "rejected": {
     "skip-chase": 5,
     "skip-dup": 1,
     "skip-maxopen": 11,
-    "skip-rr": 1,
-    "skip-rs": 1,
-    "skip-spread": 4,
+    "skip-rr": 2,
+    "skip-rs": 2,
+    "skip-spread": 6,
     "skip-stale": 6,
-    "skip-vol": 101
+    "skip-vol": 105
    }
   }
  ],

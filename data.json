@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-10-05T13:48:27+00:00",
- "heartbeat": "2026-10-05T13:48:27+00:00",
+ "updated": "2026-10-05T13:59:11+00:00",
+ "heartbeat": "2026-10-05T13:59:11+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9997.94,
+  "equity": 10004.06,
   "last_equity": 9997.94,
-  "day_change": 0.0,
-  "total_change": -2.06
+  "day_change": 6.12,
+  "total_change": 4.06
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "PEP",
+   "side": "short",
+   "qty": 16,
+   "entry": 124.64,
+   "current": 124.26,
+   "pl": 6.12
+  }
+ ],
  "trades": [
+  {
+   "symbol": "PEP",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-10-05",
+   "opened": "2026-10-05T13:50:37.875312+00:00",
+   "closed": null,
+   "entry": 124.64,
+   "stop": 126.23,
+   "target": 123.01,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<125.16",
+   "max_r": 0.22,
+   "key": "t62",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "CMCSA",
    "pattern": "Rectangle",
@@ -1384,19 +1414,18 @@
   }
  ],
  "funnel": {
-  "day": "2026-10-02",
-  "setups": 130,
-  "orders": 3,
-  "filled": 2,
-  "unfilled": 1,
-  "traded": 2,
-  "coverage_from": "2026-10-02T13:50:25.683154+00:00",
+  "day": "2026-10-05",
+  "setups": 13,
+  "orders": 1,
+  "filled": 1,
+  "unfilled": 0,
+  "traded": 1,
+  "coverage_from": "2026-10-05T13:50:36.960165+00:00",
   "rejected": {
-   "skip-chase": 6,
-   "skip-dup": 2,
-   "skip-rs": 2,
-   "skip-stale": 3,
-   "skip-vol": 114
+   "skip-chase": 3,
+   "skip-spread": 2,
+   "skip-stale": 1,
+   "skip-vol": 6
   }
  },
  "funnel_days": [
@@ -1478,6 +1507,21 @@
     "skip-rs": 2,
     "skip-stale": 3,
     "skip-vol": 114
+   }
+  },
+  {
+   "day": "2026-10-05",
+   "setups": 13,
+   "orders": 1,
+   "filled": 1,
+   "unfilled": 0,
+   "traded": 1,
+   "coverage_from": "2026-10-05T13:50:36.960165+00:00",
+   "rejected": {
+    "skip-chase": 3,
+    "skip-spread": 2,
+    "skip-stale": 1,
+    "skip-vol": 6
    }
   }
  ],

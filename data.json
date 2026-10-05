@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-05T19:04:38+00:00",
- "heartbeat": "2026-10-05T19:04:38+00:00",
+ "updated": "2026-10-05T19:14:52+00:00",
+ "heartbeat": "2026-10-05T19:14:52+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10012.53,
+  "equity": 10012.69,
   "last_equity": 9997.94,
-  "day_change": 14.59,
-  "total_change": 12.53
+  "day_change": 14.75,
+  "total_change": 12.69
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 72,
    "entry": 27.49,
-   "current": 27.5,
-   "pl": 1.08
+   "current": 27.51,
+   "pl": 1.44
   },
   {
    "symbol": "TT",
    "side": "long",
    "qty": 4,
    "entry": 471.69,
-   "current": 472.25,
-   "pl": 2.26
+   "current": 472.39,
+   "pl": 2.8
   },
   {
    "symbol": "WMT",
    "side": "long",
    "qty": 19,
    "entry": 104.96,
-   "current": 104.81,
-   "pl": -2.75
+   "current": 104.8,
+   "pl": -3.13
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "asc_triangle break>27.44",
-   "max_r": 0.13,
+   "max_r": 0.15,
    "key": "t69",
    "detail": false,
    "ai_verdict": null
@@ -74,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>471.07",
-   "max_r": 0.22,
+   "max_r": 0.29,
    "key": "t68",
    "detail": false,
    "ai_verdict": null

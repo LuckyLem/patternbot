@@ -1,50 +1,79 @@
 {
  "version": 1,
- "updated": "2026-10-05T15:11:44+00:00",
- "heartbeat": "2026-10-05T15:11:44+00:00",
+ "updated": "2026-10-05T15:22:34+00:00",
+ "heartbeat": "2026-10-05T15:22:34+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10015.68,
+  "equity": 10018.78,
   "last_equity": 9997.94,
-  "day_change": 17.74,
-  "total_change": 15.68
+  "day_change": 20.84,
+  "total_change": 18.78
  },
  "positions": [
+  {
+   "symbol": "FIS",
+   "side": "long",
+   "qty": 60,
+   "entry": 32.97,
+   "current": 33.0,
+   "pl": 1.8
+  },
   {
    "symbol": "META",
    "side": "long",
    "qty": 2,
    "entry": 744.65,
-   "current": 745.69,
-   "pl": 2.07
+   "current": 745.74,
+   "pl": 2.16
   },
   {
    "symbol": "MPC",
    "side": "long",
    "qty": 4,
    "entry": 429.83,
-   "current": 431.58,
-   "pl": 6.99
+   "current": 432.0,
+   "pl": 8.69
   },
   {
    "symbol": "PEP",
    "side": "short",
    "qty": 16,
    "entry": 124.64,
-   "current": 124.61,
-   "pl": 0.52
+   "current": 124.54,
+   "pl": 1.64
   },
   {
    "symbol": "TSLA",
    "side": "long",
    "qty": 3,
    "entry": 376.03,
-   "current": 378.7,
-   "pl": 8.01
+   "current": 377.94,
+   "pl": 5.71
   }
  ],
  "trades": [
+  {
+   "symbol": "FIS",
+   "pattern": "InverseHeadShoulders",
+   "side": "long",
+   "day": "2026-10-05",
+   "opened": "2026-10-05T15:15:34.892880+00:00",
+   "closed": null,
+   "entry": 32.97,
+   "stop": 32.31,
+   "target": 33.55,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "inverse_H&S neckline_break>32.83",
+   "max_r": 0.08,
+   "key": "t66",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "META",
    "pattern": "Rectangle",
@@ -82,7 +111,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>424.19",
-   "max_r": 0.19,
+   "max_r": 0.26,
    "key": "t64",
    "detail": false,
    "ai_verdict": null
@@ -1283,27 +1312,6 @@
    "key": "t5",
    "detail": true,
    "ai_verdict": "neutral"
-  },
-  {
-   "symbol": "ELV",
-   "pattern": "HeadShouldersTop",
-   "side": "short",
-   "day": "2026-09-11",
-   "opened": "2026-09-11T19:06:19.188340+00:00",
-   "closed": "2026-09-11T19:51:14.399412+00:00",
-   "entry": 413.73,
-   "stop": 418.86,
-   "target": 404.89,
-   "exit": 416.89,
-   "pnl": -12.64,
-   "r": -0.616,
-   "status": "closed",
-   "exit_source": "eod",
-   "reason": "H&S neckline_break<415.64",
-   "max_r": null,
-   "key": "t3",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1439,18 +1447,19 @@
  ],
  "funnel": {
   "day": "2026-10-05",
-  "setups": 51,
-  "orders": 4,
-  "filled": 4,
+  "setups": 60,
+  "orders": 5,
+  "filled": 5,
   "unfilled": 0,
-  "traded": 4,
+  "traded": 5,
   "coverage_from": "2026-10-05T13:50:36.960165+00:00",
   "rejected": {
    "skip-chase": 5,
    "skip-dup": 1,
+   "skip-maxopen": 2,
    "skip-spread": 4,
-   "skip-stale": 3,
-   "skip-vol": 34
+   "skip-stale": 6,
+   "skip-vol": 37
   }
  },
  "funnel_days": [
@@ -1536,18 +1545,19 @@
   },
   {
    "day": "2026-10-05",
-   "setups": 51,
-   "orders": 4,
-   "filled": 4,
+   "setups": 60,
+   "orders": 5,
+   "filled": 5,
    "unfilled": 0,
-   "traded": 4,
+   "traded": 5,
    "coverage_from": "2026-10-05T13:50:36.960165+00:00",
    "rejected": {
     "skip-chase": 5,
     "skip-dup": 1,
+    "skip-maxopen": 2,
     "skip-spread": 4,
-    "skip-stale": 3,
-    "skip-vol": 34
+    "skip-stale": 6,
+    "skip-vol": 37
    }
   }
  ],

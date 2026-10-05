@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-05T15:22:34+00:00",
- "heartbeat": "2026-10-05T15:22:34+00:00",
+ "updated": "2026-10-05T15:33:33+00:00",
+ "heartbeat": "2026-10-05T15:33:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10018.78,
+  "equity": 10022.72,
   "last_equity": 9997.94,
-  "day_change": 20.84,
-  "total_change": 18.78
+  "day_change": 24.78,
+  "total_change": 22.72
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "long",
    "qty": 60,
    "entry": 32.97,
-   "current": 33.0,
-   "pl": 1.8
+   "current": 33.14,
+   "pl": 10.2
   },
   {
    "symbol": "META",
    "side": "long",
    "qty": 2,
    "entry": 744.65,
-   "current": 745.74,
-   "pl": 2.16
+   "current": 745.73,
+   "pl": 2.14
   },
   {
    "symbol": "MPC",
    "side": "long",
    "qty": 4,
    "entry": 429.83,
-   "current": 432.0,
-   "pl": 8.69
+   "current": 432.14,
+   "pl": 9.25
   },
   {
    "symbol": "PEP",
    "side": "short",
    "qty": 16,
    "entry": 124.64,
-   "current": 124.54,
-   "pl": 1.64
+   "current": 124.79,
+   "pl": -2.36
   },
   {
    "symbol": "TSLA",
    "side": "long",
    "qty": 3,
    "entry": 376.03,
-   "current": 377.94,
-   "pl": 5.71
+   "current": 377.88,
+   "pl": 5.55
   }
  ],
  "trades": [
@@ -69,7 +69,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>32.83",
-   "max_r": 0.08,
+   "max_r": 0.26,
    "key": "t66",
    "detail": false,
    "ai_verdict": null
@@ -111,7 +111,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>424.19",
-   "max_r": 0.26,
+   "max_r": 0.36,
    "key": "t64",
    "detail": false,
    "ai_verdict": null
@@ -1447,7 +1447,7 @@
  ],
  "funnel": {
   "day": "2026-10-05",
-  "setups": 60,
+  "setups": 62,
   "orders": 5,
   "filled": 5,
   "unfilled": 0,
@@ -1456,7 +1456,7 @@
   "rejected": {
    "skip-chase": 5,
    "skip-dup": 1,
-   "skip-maxopen": 2,
+   "skip-maxopen": 4,
    "skip-spread": 4,
    "skip-stale": 6,
    "skip-vol": 37
@@ -1545,7 +1545,7 @@
   },
   {
    "day": "2026-10-05",
-   "setups": 60,
+   "setups": 62,
    "orders": 5,
    "filled": 5,
    "unfilled": 0,
@@ -1554,7 +1554,7 @@
    "rejected": {
     "skip-chase": 5,
     "skip-dup": 1,
-    "skip-maxopen": 2,
+    "skip-maxopen": 4,
     "skip-spread": 4,
     "skip-stale": 6,
     "skip-vol": 37

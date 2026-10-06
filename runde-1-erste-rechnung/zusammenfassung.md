@@ -8,89 +8,89 @@ Regel-Version: chase_anchor=close, universe_exclude=BK,MMC,FI (alle übrigen Ein
 
 | Kriterium | Ziel | ganzes Jahr (zählt) | erfüllt | 01.10.2025 bis 23.08.2026 (ohne die Wochen, in denen die Regeln entstanden) | erfüllt |
 |---|---|---|---|---|---|
-| Trades | ≥ 200 | 1009 | ja | 910 | ja |
-| Erwartungswert | ≥ +0,10R | -0.056R | nein | -0.065R | nein |
-| Profitfaktor | ≥ 1,3 | 0.76 | nein | 0.73 | nein |
-| max. Drawdown | ≤ 15R | 65.23R | nein | 65.23R | nein |
-| Zufallsvergleich | ≥ 95 von 100 | 25 von 100 | nein | 12 von 100 | nein |
+| Trades | ≥ 200 | 1007 | ja | 908 | ja |
+| Erwartungswert | ≥ +0,10R | -0.089R | nein | -0.099R | nein |
+| Profitfaktor | ≥ 1,3 | 0.67 | nein | 0.63 | nein |
+| max. Drawdown | ≤ 15R | 96.33R | nein | 96.33R | nein |
+| Zufallsvergleich | ≥ 95 von 100 | 25 von 100 | nein | 11 von 100 | nein |
 
-**Ziel nicht erreicht** (ganzes Jahr). Summe -56.00R, -1591.32 $ nach Kosten (-456.78 $ vor Kosten), Trefferquote 42 %. 01.10.2025 bis 23.08.2026: Summe -59.17R, Ziel nicht erreicht.
+**Ziel nicht erreicht** (ganzes Jahr). Summe -89.47R, -2086.76 $ nach Kosten (-1009.13 $ vor Kosten), Trefferquote 42 %. 01.10.2025 bis 23.08.2026: Summe -90.27R, Ziel nicht erreicht.
 
 ### Nach Muster
 
 | Gruppe | Trades | Ø R n.K. | Summe R n.K. | $ n.K. | PF |
 |---|---|---|---|---|---|
-| AscendingTriangle | 106 | -0.113 | -11.97 | -162.70 | 0.63 |
-| DescendingTriangle | 61 | -0.126 | -7.68 | -110.60 | 0.58 |
-| DoubleBottom | 13 | -0.049 | -0.64 | -26.68 | 0.48 |
-| DoubleTop | 13 | -0.155 | -2.01 | -85.53 | 0.10 |
-| HeadShouldersTop | 120 | +0.062 | +7.46 | +156.83 | 1.35 |
-| InverseHeadShoulders | 129 | +0.061 | +7.89 | +226.74 | 1.42 |
-| Rectangle | 567 | -0.087 | -49.05 | -1589.39 | 0.65 |
+| AscendingTriangle | 106 | -0.156 | -16.58 | -211.76 | 0.55 |
+| DescendingTriangle | 61 | -0.126 | -7.68 | -102.13 | 0.58 |
+| DoubleBottom | 13 | -0.049 | -0.64 | -22.30 | 0.48 |
+| DoubleTop | 13 | -0.155 | -2.01 | -82.58 | 0.10 |
+| HeadShouldersTop | 120 | +0.062 | +7.46 | +152.71 | 1.35 |
+| InverseHeadShoulders | 129 | +0.018 | +2.26 | +86.16 | 1.09 |
+| Rectangle | 565 | -0.128 | -72.28 | -1906.86 | 0.56 |
 
 ### Nach Uhrzeit (Einstieg, New York)
 
 | Gruppe | Trades | Ø R n.K. | Summe R n.K. | $ n.K. | PF |
 |---|---|---|---|---|---|
-| 09:00 | 229 | -0.015 | -3.52 | -77.62 | 0.94 |
-| 10:00 | 320 | -0.120 | -38.39 | -1146.30 | 0.59 |
-| 11:00 | 106 | -0.030 | -3.16 | -180.88 | 0.84 |
-| 12:00 | 50 | -0.064 | -3.20 | -33.04 | 0.71 |
-| 13:00 | 50 | +0.030 | +1.49 | +39.09 | 1.18 |
-| 14:00 | 119 | -0.072 | -8.62 | -180.20 | 0.67 |
-| 15:00 | 135 | -0.004 | -0.60 | -12.37 | 0.97 |
+| 09:00 | 229 | -0.021 | -4.87 | -105.53 | 0.92 |
+| 10:00 | 320 | -0.199 | -63.70 | -1555.50 | 0.46 |
+| 11:00 | 106 | -0.030 | -3.16 | -152.69 | 0.84 |
+| 12:00 | 48 | -0.103 | -4.92 | -58.53 | 0.60 |
+| 13:00 | 50 | -0.062 | -3.12 | -7.35 | 0.76 |
+| 14:00 | 119 | -0.064 | -7.63 | -147.20 | 0.70 |
+| 15:00 | 135 | -0.015 | -2.08 | -59.96 | 0.89 |
 
 ### Long / Short
 
 | Gruppe | Trades | Ø R n.K. | Summe R n.K. | $ n.K. | PF |
 |---|---|---|---|---|---|
-| long | 560 | -0.054 | -30.15 | -715.57 | 0.76 |
-| short | 449 | -0.058 | -25.85 | -875.76 | 0.76 |
+| long | 559 | -0.113 | -63.00 | -1262.40 | 0.61 |
+| short | 448 | -0.059 | -26.47 | -824.37 | 0.76 |
 
 ### Marktphase (SPY gegen 50-Tage-Schnitt, Vortag)
 
 | Gruppe | Trades | Ø R n.K. | Summe R n.K. | $ n.K. | PF |
 |---|---|---|---|---|---|
-| SPY unter SMA50 | 215 | -0.122 | -26.17 | -857.31 | 0.50 |
-| SPY über SMA50 | 794 | -0.038 | -29.83 | -734.01 | 0.84 |
+| SPY unter SMA50 | 215 | -0.132 | -28.28 | -869.74 | 0.48 |
+| SPY über SMA50 | 792 | -0.077 | -61.19 | -1217.02 | 0.71 |
 
 ### Nach Quartal
 
 | Gruppe | Trades | Ø R n.K. | Summe R n.K. | $ n.K. | PF |
 |---|---|---|---|---|---|
-| 2025-Q4 | 279 | -0.048 | -13.48 | -310.52 | 0.79 |
-| 2026-Q1 | 252 | -0.068 | -17.18 | -652.89 | 0.71 |
-| 2026-Q2 | 240 | -0.082 | -19.71 | -471.99 | 0.69 |
-| 2026-Q3 | 238 | -0.024 | -5.63 | -155.92 | 0.89 |
+| 2025-Q4 | 276 | -0.134 | -37.06 | -729.09 | 0.57 |
+| 2026-Q1 | 252 | -0.074 | -18.53 | -646.16 | 0.69 |
+| 2026-Q2 | 241 | -0.107 | -25.88 | -534.36 | 0.63 |
+| 2026-Q3 | 238 | -0.034 | -8.00 | -177.16 | 0.84 |
 
 ### Getrennt: ab 2026-08-24
 
 | Gruppe | Trades | Ø R n.K. | Summe R n.K. | $ n.K. | PF |
 |---|---|---|---|---|---|
-| ab 2026-08-24 | 99 | +0.032 | +3.17 | -1.01 | 1.17 |
-| davor | 910 | -0.065 | -59.17 | -1590.31 | 0.73 |
+| ab 2026-08-24 | 99 | +0.008 | +0.81 | -41.97 | 1.04 |
+| davor | 908 | -0.099 | -90.27 | -2044.80 | 0.63 |
 
 ### Filter (Setups und Entscheidungen)
 
 | Entscheidung | Setups |
 |---|---|
-| skip-vol | 26714 |
+| skip-vol | 26673 |
 | skip-spread | 1214 |
 | skip-chase | 1092 |
-| order | 1010 |
-| skip-maxopen | 716 |
-| skip-stale | 637 |
+| order | 1007 |
+| skip-maxopen | 699 |
+| skip-stale | 633 |
 | skip-rs | 606 |
-| skip-dup | 428 |
-| skip-rr | 425 |
-| skip-market | 348 |
+| skip-dup | 427 |
+| skip-rr | 424 |
+| skip-market | 345 |
 
 ### Vergleichslauf V1 aus (Zone an der Kante) – nur Information
 
 | Lauf | Trades | Erwartungswert | PF | max. DD | Summe R | $ n.K. | Zufall |
 |---|---|---|---|---|---|---|---|
-| V1 an (zählt) | 1009 | -0.056 | 0.76 | 65.23 | -56.00 | -1591.32 | 25 von 100 |
-| V1 aus | 543 | -0.082 | 0.66 | 50.70 | -44.62 | -1448.59 | 8 von 100 |
+| V1 an (zählt) | 1007 | -0.089 | 0.67 | 96.33 | -89.47 | -2086.76 | 25 von 100 |
+| V1 aus | 547 | -0.089 | 0.64 | 54.75 | -48.68 | -1511.00 | 5 von 100 |
 
 ### Ziel-Limits wie Paper
 
@@ -98,8 +98,8 @@ Ein Ziel füllt erst, wenn der Geldkurs (Verkauf) bzw. der Briefkurs (Rückkauf)
 
 | Lauf | Trades | Ziele am Bid/Ask gefüllt | nur nach „durchgehandelt“ | Unterschied gesamt | je betroffenem Trade | später doch am Ziel |
 |---|---|---|---|---|---|---|
-| regeln | 1009 | 38 | 0 | +0.00R | – | 7 |
-| v1-aus | 543 | 16 | 0 | +0.00R | – | 2 |
+| regeln | 1007 | 38 | 2 | +4.33R | +2.17R | 7 |
+| v1-aus | 547 | 16 | 1 | +2.80R | +2.80R | 2 |
 
 ### Stops mit Kurslücke
 
@@ -107,12 +107,12 @@ Stop-Ausstiege, die schlechter als zum Stop gefüllt wurden (die Minute öffnete
 
 | Lauf | Stop-Ausstiege | davon mit Lücke | Kosten der Lücken | schlimmster Fall |
 |---|---|---|---|---|
-| regeln | 105 | 2 | -0.06R | CDNS 2026-06-17 -0.05R |
-| v1-aus | 53 | 1 | -0.05R | CDNS 2026-06-17 -0.05R |
+| regeln | 112 | 10 | -28.28R | ELV 2025-10-20 -10.83R |
+| v1-aus | 56 | 3 | -1.92R | AMZN 2025-10-28 -1.84R |
 
 ### Zufallsvergleich
 
-Strategie mit dem schnellen Simulator: -0.046R je Trade (volles Replay: -0.056R). Zufall: Median -0.033R, bester Lauf +0.023R. Die Strategie schlägt 25 von 100 Zufallsläufen. 01.10.2025 bis 23.08.2026: 12 von 100.
+Strategie mit dem schnellen Simulator: -0.043R je Trade (volles Replay: -0.089R). Zufall: Median -0.033R, bester Lauf -0.000R. Die Strategie schlägt 25 von 100 Zufallsläufen. 01.10.2025 bis 23.08.2026: 11 von 100.
 
 ### Dateien
 
@@ -129,5 +129,5 @@ Strategie mit dem schnellen Simulator: -0.046R je Trade (volles Replay: -0.056R)
 - Fills wie Paper (Kalibrierung 03.10.): sofort ausführbar zum SIP-Geld-/Briefkurs bei Ankunft, sonst nur wenn durchgehandelt; Glattstellungen zum Geld-/Briefkurs; Ziel erst, wenn Bid/Ask es erreicht. Takt der Verwaltung bis 60 s versetzt.
 - Zufallsvergleich: Zufallseinstiege zum Minuten-Open ohne Spread – leicht zugunsten des Zufalls (streng).
 - Alarme im Replay: 0.
-- Code: Simulator und Auswertung `bt/` sha256 `61750fbbc22e` (kalibriert), Bot-Code `cbfe06cff`.
+- Code: Simulator und Auswertung `bt/` sha256 `ea1111c0fedf` (kalibriert), Bot-Code `cbfe06cff`.
 

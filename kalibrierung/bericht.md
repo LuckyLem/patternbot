@@ -1,6 +1,6 @@
 # Kalibrierung 2026-09-21 bis 2026-10-02
 
-_Erstellt 03.10.2026 17:09 MESZ · Datenabrufe 98 · Simulator und Auswertung `bt/` sha256 `ea1111c0fedf` · Bot-Code `cbfe06cff`_
+_Erstellt 06.10.2026 17:10 MESZ · Datenabrufe 104 · Simulator und Auswertung `bt/` sha256 `61750fbbc22e` · Bot-Code `cbfe06cff`_
 
 **Ergebnis: bestanden** (die verbleibenden Abweichungen der alten Version gelten nach Entscheidung des Nutzers vom 03.10. als erklärt)
 
@@ -123,6 +123,7 @@ R bezogen auf den echten Einstieg und den ersten Stop; Einstieg vorgegeben = Tra
 7. Testaufbau: jede Rechnung mit frischer Replay-DB; Uhr in ganzen Mikrosekunden (ein Nanosekunden-Rest ließ jeden Scan still scheitern); abgefangene Ausnahmen der Live-Schleife machen ein Replay ungültig.
 8. Symbolschreibweise wie Alpaca (gefunden im ersten Versuch von Runde 1): BRK-B aus dem Universum heißt beim Broker BRK.B. Vorher fand der Live-Code die Position nicht, buchte den Trade als 'unresolved' (0 $) und schloss die Position als Waise (24.06.2026).
 9. Testaufbau und Auswertung (03.10., ändert keine Rechnung): Abrufpause nur an NYSE-Handelstagen 15:30-22:00 (Vorgabe des Nutzers); Zufallsläufe je Trade, Tagesverlauf, Stops mit Kurslücke.
+10. Fehlkurse im Tick-Pfad (gefunden nach Runde 1, 03.10.): In den ersten 3 Minuten nach dem Fill zählten auch Abschlüsse, die den Kurs nicht setzen - z. B. 1 Aktie außerbörslich zu 310,00 bei ELV (Markt 352). Jetzt zählen nur Abschlüsse innerhalb der offiziellen SIP-Minutenkerze. Vorher: 8 Trades in Runde 1 fälschlich ausgestoppt.
 
 ## Hinweise
 

@@ -288,6 +288,18 @@
 "ausstieg": "eod"
 },
 {
+"id": 25,
+"tag": "2025-10-14",
+"kerze_ny": "09:30",
+"symbol": "PANW",
+"muster": "HeadShouldersTop",
+"richtung": "short",
+"spy_sma50": "über",
+"r": -0.0984,
+"r_nach_kosten": -0.1484,
+"ausstieg": "time_stop"
+},
+{
 "id": 26,
 "tag": "2025-10-14",
 "kerze_ny": "09:45",
@@ -559,9 +571,9 @@
 "muster": "InverseHeadShoulders",
 "richtung": "long",
 "spy_sma50": "über",
-"r": 0.4295,
-"r_nach_kosten": 0.3995,
-"ausstieg": "time_stop"
+"r": -2.8346,
+"r_nach_kosten": -2.8646,
+"ausstieg": "sl"
 },
 {
 "id": 49,
@@ -1488,6 +1500,18 @@
 "ausstieg": "eod"
 },
 {
+"id": 128,
+"tag": "2025-12-10",
+"kerze_ny": "14:15",
+"symbol": "STT",
+"muster": "AscendingTriangle",
+"richtung": "long",
+"spy_sma50": "über",
+"r": 0.4858,
+"r_nach_kosten": 0.4558,
+"ausstieg": "eod"
+},
+{
 "id": 129,
 "tag": "2025-12-10",
 "kerze_ny": "14:30",
@@ -1513,18 +1537,6 @@
 },
 {
 "id": 131,
-"tag": "2025-12-10",
-"kerze_ny": "15:00",
-"symbol": "TGT",
-"muster": "DoubleBottom",
-"richtung": "long",
-"spy_sma50": "über",
-"r": -0.2372,
-"r_nach_kosten": -0.2672,
-"ausstieg": "eod"
-},
-{
-"id": 132,
 "tag": "2025-12-11",
 "kerze_ny": "12:00",
 "symbol": "PNC",
@@ -1536,7 +1548,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 133,
+"id": 132,
 "tag": "2025-12-11",
 "kerze_ny": "13:30",
 "symbol": "BSX",
@@ -1548,7 +1560,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 134,
+"id": 133,
 "tag": "2025-12-12",
 "kerze_ny": "09:30",
 "symbol": "C",
@@ -1560,7 +1572,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 135,
+"id": 134,
 "tag": "2025-12-12",
 "kerze_ny": "14:15",
 "symbol": "MPC",
@@ -1572,7 +1584,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 136,
+"id": 135,
 "tag": "2025-12-15",
 "kerze_ny": "09:30",
 "symbol": "AMZN",
@@ -1584,7 +1596,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 137,
+"id": 136,
 "tag": "2025-12-16",
 "kerze_ny": "09:30",
 "symbol": "NFLX",
@@ -1596,7 +1608,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 138,
+"id": 137,
 "tag": "2025-12-16",
 "kerze_ny": "09:30",
 "symbol": "DAL",
@@ -1608,7 +1620,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 139,
+"id": 138,
 "tag": "2025-12-16",
 "kerze_ny": "11:45",
 "symbol": "NSC",
@@ -1620,7 +1632,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 140,
+"id": 139,
 "tag": "2025-12-17",
 "kerze_ny": "15:00",
 "symbol": "PYPL",
@@ -1632,7 +1644,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 141,
+"id": 140,
 "tag": "2025-12-18",
 "kerze_ny": "10:15",
 "symbol": "NVDA",
@@ -1644,7 +1656,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 142,
+"id": 141,
 "tag": "2025-12-18",
 "kerze_ny": "10:45",
 "symbol": "GWW",
@@ -1656,7 +1668,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 143,
+"id": 142,
 "tag": "2025-12-18",
 "kerze_ny": "15:00",
 "symbol": "APD",
@@ -1668,7 +1680,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 144,
+"id": 143,
 "tag": "2025-12-19",
 "kerze_ny": "10:00",
 "symbol": "PLD",
@@ -1680,7 +1692,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 145,
+"id": 144,
 "tag": "2025-12-19",
 "kerze_ny": "10:00",
 "symbol": "HCA",
@@ -1692,7 +1704,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 146,
+"id": 145,
 "tag": "2025-12-22",
 "kerze_ny": "09:30",
 "symbol": "NFLX",
@@ -1704,7 +1716,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 147,
+"id": 146,
 "tag": "2025-12-22",
 "kerze_ny": "15:00",
 "symbol": "DHR",
@@ -1716,7 +1728,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 148,
+"id": 147,
 "tag": "2025-12-23",
 "kerze_ny": "09:45",
 "symbol": "TSLA",
@@ -1728,7 +1740,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 149,
+"id": 148,
 "tag": "2025-12-23",
 "kerze_ny": "10:00",
 "symbol": "MA",
@@ -1740,7 +1752,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 150,
+"id": 149,
 "tag": "2025-12-23",
 "kerze_ny": "10:15",
 "symbol": "ADP",
@@ -1752,7 +1764,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 151,
+"id": 150,
 "tag": "2025-12-23",
 "kerze_ny": "10:30",
 "symbol": "IBM",
@@ -1764,7 +1776,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 152,
+"id": 151,
 "tag": "2025-12-30",
 "kerze_ny": "09:45",
 "symbol": "LUV",
@@ -1776,7 +1788,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 153,
+"id": 152,
 "tag": "2025-12-30",
 "kerze_ny": "10:30",
 "symbol": "LRCX",
@@ -1788,7 +1800,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 154,
+"id": 153,
 "tag": "2025-12-30",
 "kerze_ny": "11:15",
 "symbol": "SLB",
@@ -1800,7 +1812,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 155,
+"id": 154,
 "tag": "2025-12-31",
 "kerze_ny": "13:15",
 "symbol": "SNPS",
@@ -1812,7 +1824,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 156,
+"id": 155,
 "tag": "2026-01-05",
 "kerze_ny": "09:30",
 "symbol": "BKNG",
@@ -1824,7 +1836,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 157,
+"id": 156,
 "tag": "2026-01-05",
 "kerze_ny": "10:00",
 "symbol": "ITW",
@@ -1836,7 +1848,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 158,
+"id": 157,
 "tag": "2026-01-05",
 "kerze_ny": "12:00",
 "symbol": "ORCL",
@@ -1848,7 +1860,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 159,
+"id": 158,
 "tag": "2026-01-05",
 "kerze_ny": "12:15",
 "symbol": "TJX",
@@ -1860,7 +1872,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 160,
+"id": 159,
 "tag": "2026-01-06",
 "kerze_ny": "09:30",
 "symbol": "REGN",
@@ -1872,7 +1884,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 161,
+"id": 160,
 "tag": "2026-01-06",
 "kerze_ny": "10:15",
 "symbol": "AAL",
@@ -1884,7 +1896,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 162,
+"id": 161,
 "tag": "2026-01-06",
 "kerze_ny": "12:45",
 "symbol": "WMT",
@@ -1896,7 +1908,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 163,
+"id": 162,
 "tag": "2026-01-07",
 "kerze_ny": "09:30",
 "symbol": "GOOGL",
@@ -1908,7 +1920,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 164,
+"id": 163,
 "tag": "2026-01-07",
 "kerze_ny": "09:45",
 "symbol": "AMZN",
@@ -1920,7 +1932,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 165,
+"id": 164,
 "tag": "2026-01-07",
 "kerze_ny": "09:45",
 "symbol": "PFE",
@@ -1932,7 +1944,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 166,
+"id": 165,
 "tag": "2026-01-07",
 "kerze_ny": "10:00",
 "symbol": "PNC",
@@ -1944,7 +1956,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 167,
+"id": 166,
 "tag": "2026-01-07",
 "kerze_ny": "10:15",
 "symbol": "LUV",
@@ -1956,7 +1968,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 168,
+"id": 167,
 "tag": "2026-01-07",
 "kerze_ny": "14:45",
 "symbol": "OTIS",
@@ -1968,7 +1980,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 169,
+"id": 168,
 "tag": "2026-01-07",
 "kerze_ny": "15:00",
 "symbol": "MRK",
@@ -1980,7 +1992,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 170,
+"id": 169,
 "tag": "2026-01-08",
 "kerze_ny": "10:00",
 "symbol": "PYPL",
@@ -1992,7 +2004,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 171,
+"id": 170,
 "tag": "2026-01-09",
 "kerze_ny": "09:45",
 "symbol": "CVX",
@@ -2004,7 +2016,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 172,
+"id": 171,
 "tag": "2026-01-09",
 "kerze_ny": "11:30",
 "symbol": "HCA",
@@ -2016,7 +2028,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 173,
+"id": 172,
 "tag": "2026-01-09",
 "kerze_ny": "14:00",
 "symbol": "NVDA",
@@ -2028,7 +2040,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 174,
+"id": 173,
 "tag": "2026-01-12",
 "kerze_ny": "09:30",
 "symbol": "AMZN",
@@ -2040,7 +2052,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 175,
+"id": 174,
 "tag": "2026-01-12",
 "kerze_ny": "10:00",
 "symbol": "TSLA",
@@ -2052,7 +2064,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 176,
+"id": 175,
 "tag": "2026-01-13",
 "kerze_ny": "09:30",
 "symbol": "PFE",
@@ -2064,7 +2076,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 177,
+"id": 176,
 "tag": "2026-01-13",
 "kerze_ny": "13:30",
 "symbol": "ALL",
@@ -2076,7 +2088,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 178,
+"id": 177,
 "tag": "2026-01-13",
 "kerze_ny": "15:00",
 "symbol": "C",
@@ -2088,7 +2100,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 179,
+"id": 178,
 "tag": "2026-01-14",
 "kerze_ny": "13:45",
 "symbol": "VRTX",
@@ -2100,7 +2112,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 180,
+"id": 179,
 "tag": "2026-01-14",
 "kerze_ny": "14:45",
 "symbol": "TFC",
@@ -2112,7 +2124,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 181,
+"id": 180,
 "tag": "2026-01-15",
 "kerze_ny": "09:30",
 "symbol": "MU",
@@ -2124,7 +2136,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 182,
+"id": 181,
 "tag": "2026-01-15",
 "kerze_ny": "10:00",
 "symbol": "TMO",
@@ -2136,7 +2148,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 183,
+"id": 182,
 "tag": "2026-01-15",
 "kerze_ny": "14:00",
 "symbol": "DAL",
@@ -2148,7 +2160,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 184,
+"id": 183,
 "tag": "2026-01-16",
 "kerze_ny": "09:30",
 "symbol": "CAT",
@@ -2160,7 +2172,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 185,
+"id": 184,
 "tag": "2026-01-16",
 "kerze_ny": "11:00",
 "symbol": "PLD",
@@ -2172,7 +2184,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 186,
+"id": 185,
 "tag": "2026-01-16",
 "kerze_ny": "12:30",
 "symbol": "VZ",
@@ -2184,7 +2196,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 187,
+"id": 186,
 "tag": "2026-01-21",
 "kerze_ny": "09:30",
 "symbol": "META",
@@ -2196,7 +2208,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 188,
+"id": 187,
 "tag": "2026-01-21",
 "kerze_ny": "10:00",
 "symbol": "MSFT",
@@ -2208,7 +2220,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 189,
+"id": 188,
 "tag": "2026-01-21",
 "kerze_ny": "14:15",
 "symbol": "C",
@@ -2220,7 +2232,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 190,
+"id": 189,
 "tag": "2026-01-21",
 "kerze_ny": "14:30",
 "symbol": "AAL",
@@ -2232,7 +2244,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 191,
+"id": 190,
 "tag": "2026-01-26",
 "kerze_ny": "10:00",
 "symbol": "CSX",
@@ -2244,7 +2256,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 192,
+"id": 191,
 "tag": "2026-01-27",
 "kerze_ny": "10:00",
 "symbol": "USB",
@@ -2256,7 +2268,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 193,
+"id": 192,
 "tag": "2026-01-27",
 "kerze_ny": "10:45",
 "symbol": "INTC",
@@ -2268,7 +2280,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 194,
+"id": 193,
 "tag": "2026-01-27",
 "kerze_ny": "11:45",
 "symbol": "PNC",
@@ -2280,7 +2292,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 195,
+"id": 194,
 "tag": "2026-01-27",
 "kerze_ny": "12:30",
 "symbol": "USB",
@@ -2292,7 +2304,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 196,
+"id": 195,
 "tag": "2026-01-27",
 "kerze_ny": "13:00",
 "symbol": "ADP",
@@ -2304,7 +2316,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 197,
+"id": 196,
 "tag": "2026-01-28",
 "kerze_ny": "09:45",
 "symbol": "CARR",
@@ -2316,7 +2328,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 198,
+"id": 197,
 "tag": "2026-01-28",
 "kerze_ny": "10:45",
 "symbol": "TT",
@@ -2328,7 +2340,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 199,
+"id": 198,
 "tag": "2026-01-28",
 "kerze_ny": "11:15",
 "symbol": "WM",
@@ -2340,7 +2352,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 200,
+"id": 199,
 "tag": "2026-01-28",
 "kerze_ny": "14:30",
 "symbol": "INTC",
@@ -2352,7 +2364,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 201,
+"id": 200,
 "tag": "2026-01-30",
 "kerze_ny": "09:45",
 "symbol": "LIN",
@@ -2364,7 +2376,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 202,
+"id": 201,
 "tag": "2026-01-30",
 "kerze_ny": "10:00",
 "symbol": "INTC",
@@ -2376,7 +2388,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 203,
+"id": 202,
 "tag": "2026-02-02",
 "kerze_ny": "09:45",
 "symbol": "STT",
@@ -2388,7 +2400,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 204,
+"id": 203,
 "tag": "2026-02-02",
 "kerze_ny": "10:15",
 "symbol": "HD",
@@ -2400,7 +2412,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 205,
+"id": 204,
 "tag": "2026-02-03",
 "kerze_ny": "09:30",
 "symbol": "NVDA",
@@ -2412,7 +2424,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 206,
+"id": 205,
 "tag": "2026-02-03",
 "kerze_ny": "09:30",
 "symbol": "ADP",
@@ -2424,7 +2436,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 207,
+"id": 206,
 "tag": "2026-02-03",
 "kerze_ny": "11:00",
 "symbol": "PYPL",
@@ -2436,7 +2448,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 208,
+"id": 207,
 "tag": "2026-02-03",
 "kerze_ny": "12:30",
 "symbol": "PANW",
@@ -2448,7 +2460,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 209,
+"id": 208,
 "tag": "2026-02-05",
 "kerze_ny": "09:30",
 "symbol": "MRK",
@@ -2460,7 +2472,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 210,
+"id": 209,
 "tag": "2026-02-05",
 "kerze_ny": "12:15",
 "symbol": "CB",
@@ -2472,7 +2484,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 211,
+"id": 210,
 "tag": "2026-02-05",
 "kerze_ny": "15:00",
 "symbol": "PH",
@@ -2484,7 +2496,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 212,
+"id": 211,
 "tag": "2026-02-09",
 "kerze_ny": "11:45",
 "symbol": "AMZN",
@@ -2496,7 +2508,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 213,
+"id": 212,
 "tag": "2026-02-10",
 "kerze_ny": "09:30",
 "symbol": "KLAC",
@@ -2508,7 +2520,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 214,
+"id": 213,
 "tag": "2026-02-10",
 "kerze_ny": "09:45",
 "symbol": "PFE",
@@ -2520,7 +2532,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 215,
+"id": 214,
 "tag": "2026-02-10",
 "kerze_ny": "14:30",
 "symbol": "CVX",
@@ -2532,7 +2544,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 216,
+"id": 215,
 "tag": "2026-02-11",
 "kerze_ny": "09:30",
 "symbol": "NVDA",
@@ -2544,7 +2556,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 217,
+"id": 216,
 "tag": "2026-02-11",
 "kerze_ny": "09:30",
 "symbol": "PYPL",
@@ -2556,7 +2568,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 218,
+"id": 217,
 "tag": "2026-02-11",
 "kerze_ny": "10:30",
 "symbol": "AON",
@@ -2568,7 +2580,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 219,
+"id": 218,
 "tag": "2026-02-11",
 "kerze_ny": "10:45",
 "symbol": "CVS",
@@ -2580,7 +2592,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 220,
+"id": 219,
 "tag": "2026-02-12",
 "kerze_ny": "10:00",
 "symbol": "TRV",
@@ -2592,7 +2604,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 221,
+"id": 220,
 "tag": "2026-02-12",
 "kerze_ny": "11:15",
 "symbol": "TSLA",
@@ -2604,7 +2616,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 222,
+"id": 221,
 "tag": "2026-02-12",
 "kerze_ny": "14:45",
 "symbol": "IR",
@@ -2616,7 +2628,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 223,
+"id": 222,
 "tag": "2026-02-13",
 "kerze_ny": "10:00",
 "symbol": "PYPL",
@@ -2628,7 +2640,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 224,
+"id": 223,
 "tag": "2026-02-13",
 "kerze_ny": "10:30",
 "symbol": "LRCX",
@@ -2640,7 +2652,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 225,
+"id": 224,
 "tag": "2026-02-13",
 "kerze_ny": "12:00",
 "symbol": "BSX",
@@ -2652,7 +2664,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 226,
+"id": 225,
 "tag": "2026-02-13",
 "kerze_ny": "14:30",
 "symbol": "PAYX",
@@ -2664,7 +2676,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 227,
+"id": 226,
 "tag": "2026-02-17",
 "kerze_ny": "09:45",
 "symbol": "NFLX",
@@ -2676,7 +2688,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 228,
+"id": 227,
 "tag": "2026-02-17",
 "kerze_ny": "10:45",
 "symbol": "CDNS",
@@ -2688,7 +2700,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 229,
+"id": 228,
 "tag": "2026-02-17",
 "kerze_ny": "13:45",
 "symbol": "ALL",
@@ -2700,7 +2712,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 230,
+"id": 229,
 "tag": "2026-02-17",
 "kerze_ny": "14:45",
 "symbol": "AJG",
@@ -2712,7 +2724,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 231,
+"id": 230,
 "tag": "2026-02-18",
 "kerze_ny": "09:45",
 "symbol": "DIS",
@@ -2724,7 +2736,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 232,
+"id": 231,
 "tag": "2026-02-18",
 "kerze_ny": "10:15",
 "symbol": "DAL",
@@ -2736,7 +2748,19 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 234,
+"id": 232,
+"tag": "2026-02-19",
+"kerze_ny": "15:00",
+"symbol": "T",
+"muster": "HeadShouldersTop",
+"richtung": "short",
+"spy_sma50": "unter",
+"r": -0.0914,
+"r_nach_kosten": -0.1414,
+"ausstieg": "eod"
+},
+{
+"id": 233,
 "tag": "2026-02-20",
 "kerze_ny": "10:45",
 "symbol": "NVDA",
@@ -2748,7 +2772,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 235,
+"id": 234,
 "tag": "2026-02-23",
 "kerze_ny": "14:15",
 "symbol": "AJG",
@@ -2760,7 +2784,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 236,
+"id": 235,
 "tag": "2026-02-24",
 "kerze_ny": "15:00",
 "symbol": "BSX",
@@ -2772,7 +2796,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 237,
+"id": 236,
 "tag": "2026-02-25",
 "kerze_ny": "09:45",
 "symbol": "PRU",
@@ -2784,7 +2808,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 238,
+"id": 237,
 "tag": "2026-02-26",
 "kerze_ny": "09:45",
 "symbol": "OTIS",
@@ -2796,7 +2820,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 239,
+"id": 238,
 "tag": "2026-02-27",
 "kerze_ny": "12:15",
 "symbol": "TSLA",
@@ -2808,7 +2832,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 240,
+"id": 239,
 "tag": "2026-02-27",
 "kerze_ny": "14:45",
 "symbol": "CSCO",
@@ -2820,7 +2844,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 241,
+"id": 240,
 "tag": "2026-02-27",
 "kerze_ny": "15:00",
 "symbol": "ZTS",
@@ -2832,7 +2856,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 242,
+"id": 241,
 "tag": "2026-03-02",
 "kerze_ny": "09:45",
 "symbol": "AJG",
@@ -2844,7 +2868,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 243,
+"id": 242,
 "tag": "2026-03-02",
 "kerze_ny": "09:45",
 "symbol": "OTIS",
@@ -2856,7 +2880,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 244,
+"id": 243,
 "tag": "2026-03-03",
 "kerze_ny": "10:15",
 "symbol": "TSLA",
@@ -2868,7 +2892,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 245,
+"id": 244,
 "tag": "2026-03-03",
 "kerze_ny": "14:30",
 "symbol": "WMT",
@@ -2880,7 +2904,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 246,
+"id": 245,
 "tag": "2026-03-05",
 "kerze_ny": "10:00",
 "symbol": "INTC",
@@ -2892,7 +2916,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 247,
+"id": 246,
 "tag": "2026-03-05",
 "kerze_ny": "12:45",
 "symbol": "NVDA",
@@ -2904,7 +2928,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 248,
+"id": 247,
 "tag": "2026-03-05",
 "kerze_ny": "15:00",
 "symbol": "AIG",
@@ -2916,7 +2940,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 249,
+"id": 248,
 "tag": "2026-03-06",
 "kerze_ny": "14:30",
 "symbol": "AMZN",
@@ -2928,7 +2952,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 250,
+"id": 249,
 "tag": "2026-03-09",
 "kerze_ny": "11:00",
 "symbol": "AMGN",
@@ -2940,7 +2964,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 251,
+"id": 250,
 "tag": "2026-03-10",
 "kerze_ny": "14:15",
 "symbol": "APD",
@@ -2952,7 +2976,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 252,
+"id": 251,
 "tag": "2026-03-10",
 "kerze_ny": "14:15",
 "symbol": "T",
@@ -2964,7 +2988,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 253,
+"id": 252,
 "tag": "2026-03-12",
 "kerze_ny": "10:30",
 "symbol": "TSLA",
@@ -2976,7 +3000,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 254,
+"id": 253,
 "tag": "2026-03-12",
 "kerze_ny": "11:30",
 "symbol": "ACN",
@@ -2988,7 +3012,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 255,
+"id": 254,
 "tag": "2026-03-12",
 "kerze_ny": "14:15",
 "symbol": "SCHW",
@@ -3000,7 +3024,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 256,
+"id": 255,
 "tag": "2026-03-12",
 "kerze_ny": "14:30",
 "symbol": "IBM",
@@ -3012,7 +3036,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 257,
+"id": 256,
 "tag": "2026-03-13",
 "kerze_ny": "14:45",
 "symbol": "TFC",
@@ -3024,7 +3048,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 258,
+"id": 257,
 "tag": "2026-03-16",
 "kerze_ny": "14:45",
 "symbol": "CME",
@@ -3036,7 +3060,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 259,
+"id": 258,
 "tag": "2026-03-18",
 "kerze_ny": "10:00",
 "symbol": "CDNS",
@@ -3048,7 +3072,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 260,
+"id": 259,
 "tag": "2026-03-18",
 "kerze_ny": "14:15",
 "symbol": "MDT",
@@ -3060,7 +3084,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 261,
+"id": 260,
 "tag": "2026-03-18",
 "kerze_ny": "14:30",
 "symbol": "PAYX",
@@ -3072,7 +3096,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 262,
+"id": 261,
 "tag": "2026-03-18",
 "kerze_ny": "14:30",
 "symbol": "OTIS",
@@ -3084,7 +3108,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 263,
+"id": 262,
 "tag": "2026-03-19",
 "kerze_ny": "09:30",
 "symbol": "AMD",
@@ -3096,7 +3120,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 264,
+"id": 263,
 "tag": "2026-03-19",
 "kerze_ny": "09:30",
 "symbol": "GS",
@@ -3108,7 +3132,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 265,
+"id": 264,
 "tag": "2026-03-19",
 "kerze_ny": "13:30",
 "symbol": "AFL",
@@ -3120,7 +3144,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 266,
+"id": 265,
 "tag": "2026-03-19",
 "kerze_ny": "14:15",
 "symbol": "AJG",
@@ -3132,7 +3156,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 267,
+"id": 266,
 "tag": "2026-03-20",
 "kerze_ny": "10:00",
 "symbol": "NVDA",
@@ -3144,7 +3168,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 268,
+"id": 267,
 "tag": "2026-03-20",
 "kerze_ny": "10:45",
 "symbol": "AAL",
@@ -3156,7 +3180,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 269,
+"id": 268,
 "tag": "2026-03-20",
 "kerze_ny": "13:00",
 "symbol": "APD",
@@ -3168,7 +3192,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 270,
+"id": 269,
 "tag": "2026-03-20",
 "kerze_ny": "13:15",
 "symbol": "GOOGL",
@@ -3180,7 +3204,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 271,
+"id": 270,
 "tag": "2026-03-23",
 "kerze_ny": "09:45",
 "symbol": "TGT",
@@ -3192,7 +3216,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 272,
+"id": 271,
 "tag": "2026-03-23",
 "kerze_ny": "12:00",
 "symbol": "CVS",
@@ -3204,7 +3228,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 273,
+"id": 272,
 "tag": "2026-03-24",
 "kerze_ny": "10:00",
 "symbol": "MRK",
@@ -3216,7 +3240,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 274,
+"id": 273,
 "tag": "2026-03-24",
 "kerze_ny": "13:00",
 "symbol": "GOOGL",
@@ -3228,7 +3252,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 275,
+"id": 274,
 "tag": "2026-03-24",
 "kerze_ny": "13:00",
 "symbol": "AAL",
@@ -3240,7 +3264,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 276,
+"id": 275,
 "tag": "2026-03-24",
 "kerze_ny": "14:30",
 "symbol": "WFC",
@@ -3252,7 +3276,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 277,
+"id": 276,
 "tag": "2026-03-25",
 "kerze_ny": "10:15",
 "symbol": "ADBE",
@@ -3264,7 +3288,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 278,
+"id": 277,
 "tag": "2026-03-25",
 "kerze_ny": "11:15",
 "symbol": "PFE",
@@ -3276,7 +3300,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 279,
+"id": 278,
 "tag": "2026-03-25",
 "kerze_ny": "12:30",
 "symbol": "MCD",
@@ -3288,7 +3312,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 280,
+"id": 279,
 "tag": "2026-03-26",
 "kerze_ny": "10:45",
 "symbol": "SCHW",
@@ -3300,7 +3324,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 281,
+"id": 280,
 "tag": "2026-03-26",
 "kerze_ny": "12:00",
 "symbol": "DIS",
@@ -3312,7 +3336,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 282,
+"id": 281,
 "tag": "2026-03-26",
 "kerze_ny": "13:45",
 "symbol": "ORCL",
@@ -3324,7 +3348,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 283,
+"id": 282,
 "tag": "2026-03-26",
 "kerze_ny": "15:00",
 "symbol": "AJG",
@@ -3336,7 +3360,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 284,
+"id": 283,
 "tag": "2026-03-27",
 "kerze_ny": "11:15",
 "symbol": "MRK",
@@ -3348,7 +3372,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 285,
+"id": 284,
 "tag": "2026-03-27",
 "kerze_ny": "14:00",
 "symbol": "PNC",
@@ -3360,7 +3384,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 286,
+"id": 285,
 "tag": "2026-03-30",
 "kerze_ny": "09:45",
 "symbol": "GOOGL",
@@ -3372,7 +3396,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 287,
+"id": 286,
 "tag": "2026-03-30",
 "kerze_ny": "15:00",
 "symbol": "DAL",
@@ -3384,7 +3408,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 288,
+"id": 287,
 "tag": "2026-03-31",
 "kerze_ny": "12:30",
 "symbol": "BAC",
@@ -3396,7 +3420,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 289,
+"id": 288,
 "tag": "2026-04-01",
 "kerze_ny": "09:30",
 "symbol": "AMD",
@@ -3408,7 +3432,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 290,
+"id": 289,
 "tag": "2026-04-01",
 "kerze_ny": "09:30",
 "symbol": "PFE",
@@ -3420,7 +3444,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 291,
+"id": 290,
 "tag": "2026-04-01",
 "kerze_ny": "09:45",
 "symbol": "GPN",
@@ -3432,7 +3456,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 292,
+"id": 291,
 "tag": "2026-04-02",
 "kerze_ny": "09:30",
 "symbol": "NFLX",
@@ -3444,7 +3468,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 293,
+"id": 292,
 "tag": "2026-04-02",
 "kerze_ny": "09:30",
 "symbol": "BAC",
@@ -3456,7 +3480,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 294,
+"id": 293,
 "tag": "2026-04-02",
 "kerze_ny": "09:30",
 "symbol": "BLK",
@@ -3468,7 +3492,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 295,
+"id": 294,
 "tag": "2026-04-02",
 "kerze_ny": "09:30",
 "symbol": "LUV",
@@ -3480,19 +3504,19 @@
 "ausstieg": "sl"
 },
 {
-"id": 296,
+"id": 295,
 "tag": "2026-04-02",
 "kerze_ny": "10:30",
 "symbol": "KO",
 "muster": "Rectangle",
 "richtung": "long",
 "spy_sma50": "unter",
-"r": -0.2791,
-"r_nach_kosten": -0.3091,
-"ausstieg": "time_stop"
+"r": -1.0323,
+"r_nach_kosten": -1.0623,
+"ausstieg": "sl"
 },
 {
-"id": 297,
+"id": 296,
 "tag": "2026-04-06",
 "kerze_ny": "09:30",
 "symbol": "CSCO",
@@ -3504,7 +3528,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 298,
+"id": 297,
 "tag": "2026-04-06",
 "kerze_ny": "14:45",
 "symbol": "HCA",
@@ -3516,7 +3540,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 299,
+"id": 298,
 "tag": "2026-04-06",
 "kerze_ny": "15:00",
 "symbol": "AFL",
@@ -3528,7 +3552,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 300,
+"id": 299,
 "tag": "2026-04-07",
 "kerze_ny": "09:30",
 "symbol": "PYPL",
@@ -3540,7 +3564,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 301,
+"id": 300,
 "tag": "2026-04-07",
 "kerze_ny": "10:00",
 "symbol": "NVDA",
@@ -3552,7 +3576,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 302,
+"id": 301,
 "tag": "2026-04-07",
 "kerze_ny": "10:15",
 "symbol": "CSX",
@@ -3564,7 +3588,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 303,
+"id": 302,
 "tag": "2026-04-07",
 "kerze_ny": "11:00",
 "symbol": "AAL",
@@ -3576,7 +3600,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 304,
+"id": 303,
 "tag": "2026-04-07",
 "kerze_ny": "14:30",
 "symbol": "AON",
@@ -3588,7 +3612,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 305,
+"id": 304,
 "tag": "2026-04-08",
 "kerze_ny": "12:45",
 "symbol": "PRU",
@@ -3600,7 +3624,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 306,
+"id": 305,
 "tag": "2026-04-09",
 "kerze_ny": "15:00",
 "symbol": "C",
@@ -3612,7 +3636,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 307,
+"id": 306,
 "tag": "2026-04-10",
 "kerze_ny": "09:30",
 "symbol": "GOOGL",
@@ -3624,7 +3648,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 308,
+"id": 307,
 "tag": "2026-04-13",
 "kerze_ny": "15:00",
 "symbol": "C",
@@ -3636,7 +3660,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 309,
+"id": 308,
 "tag": "2026-04-15",
 "kerze_ny": "10:30",
 "symbol": "INTC",
@@ -3648,7 +3672,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 310,
+"id": 309,
 "tag": "2026-04-15",
 "kerze_ny": "11:30",
 "symbol": "MDT",
@@ -3660,7 +3684,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 311,
+"id": 310,
 "tag": "2026-04-15",
 "kerze_ny": "14:45",
 "symbol": "PANW",
@@ -3672,7 +3696,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 312,
+"id": 311,
 "tag": "2026-04-16",
 "kerze_ny": "10:00",
 "symbol": "CSX",
@@ -3684,7 +3708,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 313,
+"id": 312,
 "tag": "2026-04-16",
 "kerze_ny": "10:45",
 "symbol": "INTC",
@@ -3696,7 +3720,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 314,
+"id": 313,
 "tag": "2026-04-17",
 "kerze_ny": "10:00",
 "symbol": "SLB",
@@ -3708,7 +3732,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 315,
+"id": 314,
 "tag": "2026-04-17",
 "kerze_ny": "10:30",
 "symbol": "MSFT",
@@ -3720,7 +3744,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 316,
+"id": 315,
 "tag": "2026-04-21",
 "kerze_ny": "09:45",
 "symbol": "MS",
@@ -3732,7 +3756,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 317,
+"id": 316,
 "tag": "2026-04-21",
 "kerze_ny": "15:00",
 "symbol": "AMD",
@@ -3744,7 +3768,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 318,
+"id": 317,
 "tag": "2026-04-22",
 "kerze_ny": "10:30",
 "symbol": "AAL",
@@ -3756,7 +3780,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 319,
+"id": 318,
 "tag": "2026-04-22",
 "kerze_ny": "14:45",
 "symbol": "TT",
@@ -3768,7 +3792,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 320,
+"id": 319,
 "tag": "2026-04-22",
 "kerze_ny": "15:00",
 "symbol": "ZTS",
@@ -3780,7 +3804,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 321,
+"id": 320,
 "tag": "2026-04-23",
 "kerze_ny": "09:30",
 "symbol": "HD",
@@ -3792,7 +3816,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 322,
+"id": 321,
 "tag": "2026-04-23",
 "kerze_ny": "10:45",
 "symbol": "ICE",
@@ -3804,7 +3828,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 323,
+"id": 322,
 "tag": "2026-04-24",
 "kerze_ny": "09:45",
 "symbol": "NVDA",
@@ -3816,7 +3840,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 324,
+"id": 323,
 "tag": "2026-04-27",
 "kerze_ny": "09:45",
 "symbol": "TFC",
@@ -3828,7 +3852,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 325,
+"id": 324,
 "tag": "2026-04-27",
 "kerze_ny": "13:45",
 "symbol": "CSCO",
@@ -3840,7 +3864,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 326,
+"id": 325,
 "tag": "2026-04-27",
 "kerze_ny": "15:00",
 "symbol": "FIS",
@@ -3852,7 +3876,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 327,
+"id": 326,
 "tag": "2026-04-27",
 "kerze_ny": "15:00",
 "symbol": "OTIS",
@@ -3864,7 +3888,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 328,
+"id": 327,
 "tag": "2026-04-28",
 "kerze_ny": "09:30",
 "symbol": "MO",
@@ -3876,7 +3900,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 329,
+"id": 328,
 "tag": "2026-04-28",
 "kerze_ny": "10:15",
 "symbol": "AIG",
@@ -3888,7 +3912,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 330,
+"id": 329,
 "tag": "2026-04-28",
 "kerze_ny": "14:15",
 "symbol": "PRU",
@@ -3900,7 +3924,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 331,
+"id": 330,
 "tag": "2026-04-29",
 "kerze_ny": "09:30",
 "symbol": "AAL",
@@ -3912,7 +3936,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 332,
+"id": 331,
 "tag": "2026-04-29",
 "kerze_ny": "10:00",
 "symbol": "AMZN",
@@ -3924,7 +3948,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 333,
+"id": 332,
 "tag": "2026-04-29",
 "kerze_ny": "11:45",
 "symbol": "TSLA",
@@ -3936,7 +3960,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 334,
+"id": 333,
 "tag": "2026-04-29",
 "kerze_ny": "14:00",
 "symbol": "NVDA",
@@ -3948,7 +3972,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 335,
+"id": 334,
 "tag": "2026-04-30",
 "kerze_ny": "09:30",
 "symbol": "BKNG",
@@ -3960,7 +3984,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 336,
+"id": 335,
 "tag": "2026-04-30",
 "kerze_ny": "11:15",
 "symbol": "MPC",
@@ -3972,7 +3996,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 337,
+"id": 336,
 "tag": "2026-05-01",
 "kerze_ny": "14:30",
 "symbol": "ITW",
@@ -3984,7 +4008,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 338,
+"id": 337,
 "tag": "2026-05-01",
 "kerze_ny": "15:00",
 "symbol": "MO",
@@ -3996,7 +4020,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 339,
+"id": 338,
 "tag": "2026-05-04",
 "kerze_ny": "09:45",
 "symbol": "CSCO",
@@ -4008,7 +4032,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 340,
+"id": 339,
 "tag": "2026-05-05",
 "kerze_ny": "09:30",
 "symbol": "CRM",
@@ -4020,7 +4044,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 341,
+"id": 340,
 "tag": "2026-05-05",
 "kerze_ny": "11:00",
 "symbol": "AVGO",
@@ -4032,7 +4056,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 342,
+"id": 341,
 "tag": "2026-05-05",
 "kerze_ny": "11:30",
 "symbol": "AXP",
@@ -4044,7 +4068,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 343,
+"id": 342,
 "tag": "2026-05-05",
 "kerze_ny": "12:00",
 "symbol": "EOG",
@@ -4056,7 +4080,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 344,
+"id": 343,
 "tag": "2026-05-05",
 "kerze_ny": "13:45",
 "symbol": "AAPL",
@@ -4068,7 +4092,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 345,
+"id": 344,
 "tag": "2026-05-06",
 "kerze_ny": "10:30",
 "symbol": "CARR",
@@ -4080,7 +4104,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 346,
+"id": 345,
 "tag": "2026-05-06",
 "kerze_ny": "13:00",
 "symbol": "GOOG",
@@ -4092,7 +4116,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 347,
+"id": 346,
 "tag": "2026-05-06",
 "kerze_ny": "15:00",
 "symbol": "CSX",
@@ -4104,7 +4128,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 348,
+"id": 347,
 "tag": "2026-05-07",
 "kerze_ny": "10:15",
 "symbol": "INTC",
@@ -4116,7 +4140,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 349,
+"id": 348,
 "tag": "2026-05-07",
 "kerze_ny": "11:30",
 "symbol": "PAYX",
@@ -4128,7 +4152,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 350,
+"id": 349,
 "tag": "2026-05-08",
 "kerze_ny": "09:30",
 "symbol": "INTC",
@@ -4140,7 +4164,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 351,
+"id": 350,
 "tag": "2026-05-08",
 "kerze_ny": "14:45",
 "symbol": "ITW",
@@ -4152,7 +4176,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 352,
+"id": 351,
 "tag": "2026-05-08",
 "kerze_ny": "14:45",
 "symbol": "AJG",
@@ -4164,7 +4188,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 353,
+"id": 352,
 "tag": "2026-05-08",
 "kerze_ny": "14:45",
 "symbol": "FIS",
@@ -4176,7 +4200,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 354,
+"id": 353,
 "tag": "2026-05-08",
 "kerze_ny": "15:00",
 "symbol": "CVS",
@@ -4188,7 +4212,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 355,
+"id": 354,
 "tag": "2026-05-08",
 "kerze_ny": "15:00",
 "symbol": "SNPS",
@@ -4200,7 +4224,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 356,
+"id": 355,
 "tag": "2026-05-11",
 "kerze_ny": "10:45",
 "symbol": "NVDA",
@@ -4212,7 +4236,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 357,
+"id": 356,
 "tag": "2026-05-11",
 "kerze_ny": "14:45",
 "symbol": "GPN",
@@ -4224,7 +4248,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 358,
+"id": 357,
 "tag": "2026-05-12",
 "kerze_ny": "09:30",
 "symbol": "NVDA",
@@ -4236,7 +4260,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 359,
+"id": 358,
 "tag": "2026-05-12",
 "kerze_ny": "14:15",
 "symbol": "ABT",
@@ -4248,7 +4272,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 360,
+"id": 359,
 "tag": "2026-05-13",
 "kerze_ny": "10:15",
 "symbol": "ROK",
@@ -4260,7 +4284,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 361,
+"id": 360,
 "tag": "2026-05-13",
 "kerze_ny": "12:30",
 "symbol": "FIS",
@@ -4272,7 +4296,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 362,
+"id": 361,
 "tag": "2026-05-13",
 "kerze_ny": "14:45",
 "symbol": "GWW",
@@ -4284,7 +4308,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 363,
+"id": 362,
 "tag": "2026-05-13",
 "kerze_ny": "15:00",
 "symbol": "LRCX",
@@ -4296,7 +4320,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 364,
+"id": 363,
 "tag": "2026-05-14",
 "kerze_ny": "09:30",
 "symbol": "NOW",
@@ -4308,7 +4332,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 365,
+"id": 364,
 "tag": "2026-05-14",
 "kerze_ny": "11:00",
 "symbol": "CSX",
@@ -4320,7 +4344,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 366,
+"id": 365,
 "tag": "2026-05-15",
 "kerze_ny": "11:30",
 "symbol": "PCAR",
@@ -4332,7 +4356,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 367,
+"id": 366,
 "tag": "2026-05-15",
 "kerze_ny": "14:00",
 "symbol": "HCA",
@@ -4344,7 +4368,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 368,
+"id": 367,
 "tag": "2026-05-15",
 "kerze_ny": "14:45",
 "symbol": "PYPL",
@@ -4356,7 +4380,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 369,
+"id": 368,
 "tag": "2026-05-18",
 "kerze_ny": "14:45",
 "symbol": "PYPL",
@@ -4368,7 +4392,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 370,
+"id": 369,
 "tag": "2026-05-20",
 "kerze_ny": "10:00",
 "symbol": "PG",
@@ -4380,7 +4404,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 371,
+"id": 370,
 "tag": "2026-05-20",
 "kerze_ny": "14:30",
 "symbol": "AMGN",
@@ -4392,7 +4416,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 372,
+"id": 371,
 "tag": "2026-05-20",
 "kerze_ny": "14:30",
 "symbol": "AIG",
@@ -4404,7 +4428,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 373,
+"id": 372,
 "tag": "2026-05-22",
 "kerze_ny": "10:30",
 "symbol": "TSLA",
@@ -4416,7 +4440,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 374,
+"id": 373,
 "tag": "2026-05-22",
 "kerze_ny": "11:00",
 "symbol": "UNP",
@@ -4428,7 +4452,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 375,
+"id": 374,
 "tag": "2026-05-26",
 "kerze_ny": "10:00",
 "symbol": "AAPL",
@@ -4440,7 +4464,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 376,
+"id": 375,
 "tag": "2026-05-27",
 "kerze_ny": "09:30",
 "symbol": "CME",
@@ -4452,7 +4476,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 377,
+"id": 376,
 "tag": "2026-05-27",
 "kerze_ny": "09:30",
 "symbol": "VZ",
@@ -4464,7 +4488,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 378,
+"id": 377,
 "tag": "2026-05-27",
 "kerze_ny": "09:45",
 "symbol": "NFLX",
@@ -4476,7 +4500,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 379,
+"id": 378,
 "tag": "2026-05-27",
 "kerze_ny": "10:15",
 "symbol": "JCI",
@@ -4488,7 +4512,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 380,
+"id": 379,
 "tag": "2026-05-27",
 "kerze_ny": "15:00",
 "symbol": "CSX",
@@ -4500,7 +4524,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 381,
+"id": 380,
 "tag": "2026-05-28",
 "kerze_ny": "09:30",
 "symbol": "NFLX",
@@ -4512,7 +4536,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 382,
+"id": 381,
 "tag": "2026-05-29",
 "kerze_ny": "14:45",
 "symbol": "TFC",
@@ -4524,7 +4548,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 383,
+"id": 382,
 "tag": "2026-06-02",
 "kerze_ny": "14:45",
 "symbol": "MS",
@@ -4536,7 +4560,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 384,
+"id": 383,
 "tag": "2026-06-02",
 "kerze_ny": "15:00",
 "symbol": "KLAC",
@@ -4548,7 +4572,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 385,
+"id": 384,
 "tag": "2026-06-02",
 "kerze_ny": "15:00",
 "symbol": "NEM",
@@ -4560,7 +4584,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 386,
+"id": 385,
 "tag": "2026-06-03",
 "kerze_ny": "10:00",
 "symbol": "AAPL",
@@ -4572,7 +4596,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 387,
+"id": 386,
 "tag": "2026-06-03",
 "kerze_ny": "10:00",
 "symbol": "SCHW",
@@ -4584,7 +4608,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 388,
+"id": 387,
 "tag": "2026-06-03",
 "kerze_ny": "13:30",
 "symbol": "MRK",
@@ -4596,7 +4620,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 389,
+"id": 388,
 "tag": "2026-06-04",
 "kerze_ny": "11:00",
 "symbol": "NVDA",
@@ -4608,7 +4632,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 390,
+"id": 389,
 "tag": "2026-06-04",
 "kerze_ny": "11:15",
 "symbol": "SCHW",
@@ -4620,7 +4644,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 391,
+"id": 390,
 "tag": "2026-06-08",
 "kerze_ny": "12:00",
 "symbol": "DE",
@@ -4632,7 +4656,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 392,
+"id": 391,
 "tag": "2026-06-08",
 "kerze_ny": "14:45",
 "symbol": "UNH",
@@ -4644,7 +4668,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 393,
+"id": 392,
 "tag": "2026-06-09",
 "kerze_ny": "09:30",
 "symbol": "GOOGL",
@@ -4656,7 +4680,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 394,
+"id": 393,
 "tag": "2026-06-10",
 "kerze_ny": "09:30",
 "symbol": "TJX",
@@ -4668,7 +4692,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 395,
+"id": 394,
 "tag": "2026-06-10",
 "kerze_ny": "14:00",
 "symbol": "CI",
@@ -4680,7 +4704,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 396,
+"id": 395,
 "tag": "2026-06-10",
 "kerze_ny": "14:45",
 "symbol": "ZTS",
@@ -4692,7 +4716,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 397,
+"id": 396,
 "tag": "2026-06-11",
 "kerze_ny": "10:00",
 "symbol": "NFLX",
@@ -4704,7 +4728,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 398,
+"id": 397,
 "tag": "2026-06-11",
 "kerze_ny": "10:30",
 "symbol": "KO",
@@ -4716,7 +4740,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 399,
+"id": 398,
 "tag": "2026-06-11",
 "kerze_ny": "12:00",
 "symbol": "CSCO",
@@ -4728,7 +4752,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 400,
+"id": 399,
 "tag": "2026-06-15",
 "kerze_ny": "10:00",
 "symbol": "TFC",
@@ -4740,7 +4764,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 401,
+"id": 400,
 "tag": "2026-06-16",
 "kerze_ny": "09:45",
 "symbol": "NFLX",
@@ -4752,7 +4776,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 402,
+"id": 401,
 "tag": "2026-06-16",
 "kerze_ny": "13:30",
 "symbol": "NSC",
@@ -4764,7 +4788,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 403,
+"id": 402,
 "tag": "2026-06-17",
 "kerze_ny": "14:30",
 "symbol": "CDNS",
@@ -4776,7 +4800,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 404,
+"id": 403,
 "tag": "2026-06-17",
 "kerze_ny": "14:45",
 "symbol": "ROK",
@@ -4788,7 +4812,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 405,
+"id": 404,
 "tag": "2026-06-17",
 "kerze_ny": "15:00",
 "symbol": "REGN",
@@ -4800,7 +4824,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 406,
+"id": 405,
 "tag": "2026-06-18",
 "kerze_ny": "12:45",
 "symbol": "DHR",
@@ -4812,7 +4836,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 407,
+"id": 406,
 "tag": "2026-06-22",
 "kerze_ny": "10:45",
 "symbol": "MSFT",
@@ -4824,7 +4848,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 408,
+"id": 407,
 "tag": "2026-06-22",
 "kerze_ny": "13:00",
 "symbol": "ROP",
@@ -4836,7 +4860,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 409,
+"id": 408,
 "tag": "2026-06-22",
 "kerze_ny": "13:15",
 "symbol": "FISV",
@@ -4848,7 +4872,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 410,
+"id": 409,
 "tag": "2026-06-22",
 "kerze_ny": "14:45",
 "symbol": "MCD",
@@ -4860,7 +4884,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 411,
+"id": 410,
 "tag": "2026-06-23",
 "kerze_ny": "09:45",
 "symbol": "CSX",
@@ -4872,7 +4896,19 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 413,
+"id": 411,
+"tag": "2026-06-23",
+"kerze_ny": "14:30",
+"symbol": "OTIS",
+"muster": "Rectangle",
+"richtung": "short",
+"spy_sma50": "über",
+"r": -0.4106,
+"r_nach_kosten": -0.4606,
+"ausstieg": "eod"
+},
+{
+"id": 412,
 "tag": "2026-06-24",
 "kerze_ny": "09:30",
 "symbol": "BRK-B",
@@ -4884,7 +4920,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 414,
+"id": 413,
 "tag": "2026-06-24",
 "kerze_ny": "10:00",
 "symbol": "META",
@@ -4896,7 +4932,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 415,
+"id": 414,
 "tag": "2026-06-25",
 "kerze_ny": "13:30",
 "symbol": "FISV",
@@ -4908,7 +4944,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 416,
+"id": 415,
 "tag": "2026-06-25",
 "kerze_ny": "15:00",
 "symbol": "CME",
@@ -4920,7 +4956,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 417,
+"id": 416,
 "tag": "2026-06-29",
 "kerze_ny": "15:00",
 "symbol": "TRV",
@@ -4932,7 +4968,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 418,
+"id": 417,
 "tag": "2026-06-30",
 "kerze_ny": "09:45",
 "symbol": "PFE",
@@ -4944,7 +4980,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 419,
+"id": 418,
 "tag": "2026-07-01",
 "kerze_ny": "10:15",
 "symbol": "PYPL",
@@ -4956,7 +4992,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 420,
+"id": 419,
 "tag": "2026-07-01",
 "kerze_ny": "12:30",
 "symbol": "CVS",
@@ -4968,7 +5004,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 421,
+"id": 420,
 "tag": "2026-07-01",
 "kerze_ny": "14:15",
 "symbol": "VZ",
@@ -4980,7 +5016,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 422,
+"id": 421,
 "tag": "2026-07-06",
 "kerze_ny": "10:00",
 "symbol": "PFE",
@@ -4992,7 +5028,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 423,
+"id": 422,
 "tag": "2026-07-06",
 "kerze_ny": "14:00",
 "symbol": "TRV",
@@ -5004,7 +5040,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 424,
+"id": 423,
 "tag": "2026-07-06",
 "kerze_ny": "14:45",
 "symbol": "IR",
@@ -5016,7 +5052,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 425,
+"id": 424,
 "tag": "2026-07-07",
 "kerze_ny": "09:30",
 "symbol": "CMCSA",
@@ -5028,7 +5064,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 426,
+"id": 425,
 "tag": "2026-07-09",
 "kerze_ny": "10:00",
 "symbol": "TJX",
@@ -5040,7 +5076,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 427,
+"id": 426,
 "tag": "2026-07-09",
 "kerze_ny": "15:00",
 "symbol": "CARR",
@@ -5052,7 +5088,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 428,
+"id": 427,
 "tag": "2026-07-10",
 "kerze_ny": "10:30",
 "symbol": "USB",
@@ -5064,7 +5100,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 429,
+"id": 428,
 "tag": "2026-07-10",
 "kerze_ny": "10:45",
 "symbol": "TMO",
@@ -5076,7 +5112,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 430,
+"id": 429,
 "tag": "2026-07-10",
 "kerze_ny": "14:00",
 "symbol": "FIS",
@@ -5088,7 +5124,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 431,
+"id": 430,
 "tag": "2026-07-13",
 "kerze_ny": "09:30",
 "symbol": "FAST",
@@ -5100,7 +5136,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 432,
+"id": 431,
 "tag": "2026-07-13",
 "kerze_ny": "09:45",
 "symbol": "UNP",
@@ -5112,7 +5148,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 433,
+"id": 432,
 "tag": "2026-07-13",
 "kerze_ny": "10:45",
 "symbol": "NOW",
@@ -5124,7 +5160,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 434,
+"id": 433,
 "tag": "2026-07-13",
 "kerze_ny": "12:45",
 "symbol": "OTIS",
@@ -5136,7 +5172,19 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 436,
+"id": 434,
+"tag": "2026-07-13",
+"kerze_ny": "13:30",
+"symbol": "AAL",
+"muster": "HeadShouldersTop",
+"richtung": "short",
+"spy_sma50": "über",
+"r": 0.0406,
+"r_nach_kosten": -0.0094,
+"ausstieg": "sl"
+},
+{
+"id": 435,
 "tag": "2026-07-13",
 "kerze_ny": "14:15",
 "symbol": "CVS",
@@ -5148,7 +5196,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 437,
+"id": 436,
 "tag": "2026-07-15",
 "kerze_ny": "10:30",
 "symbol": "TFC",
@@ -5160,7 +5208,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 438,
+"id": 437,
 "tag": "2026-07-16",
 "kerze_ny": "10:45",
 "symbol": "WFC",
@@ -5172,7 +5220,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 439,
+"id": 438,
 "tag": "2026-07-16",
 "kerze_ny": "14:45",
 "symbol": "AAPL",
@@ -5184,7 +5232,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 440,
+"id": 439,
 "tag": "2026-07-16",
 "kerze_ny": "14:45",
 "symbol": "NEM",
@@ -5196,7 +5244,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 441,
+"id": 440,
 "tag": "2026-07-17",
 "kerze_ny": "09:30",
 "symbol": "AAL",
@@ -5208,7 +5256,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 442,
+"id": 441,
 "tag": "2026-07-17",
 "kerze_ny": "09:45",
 "symbol": "MDT",
@@ -5220,7 +5268,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 443,
+"id": 442,
 "tag": "2026-07-17",
 "kerze_ny": "09:45",
 "symbol": "TFC",
@@ -5232,7 +5280,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 444,
+"id": 443,
 "tag": "2026-07-20",
 "kerze_ny": "09:30",
 "symbol": "WMT",
@@ -5244,7 +5292,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 445,
+"id": 444,
 "tag": "2026-07-20",
 "kerze_ny": "09:30",
 "symbol": "PYPL",
@@ -5256,7 +5304,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 446,
+"id": 445,
 "tag": "2026-07-20",
 "kerze_ny": "14:15",
 "symbol": "COST",
@@ -5268,7 +5316,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 447,
+"id": 446,
 "tag": "2026-07-21",
 "kerze_ny": "09:45",
 "symbol": "KO",
@@ -5280,7 +5328,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 448,
+"id": 447,
 "tag": "2026-07-22",
 "kerze_ny": "09:45",
 "symbol": "BAC",
@@ -5292,7 +5340,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 449,
+"id": 448,
 "tag": "2026-07-22",
 "kerze_ny": "09:45",
 "symbol": "TJX",
@@ -5304,7 +5352,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 450,
+"id": 449,
 "tag": "2026-07-22",
 "kerze_ny": "13:30",
 "symbol": "SO",
@@ -5316,7 +5364,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 451,
+"id": 450,
 "tag": "2026-07-22",
 "kerze_ny": "14:15",
 "symbol": "IR",
@@ -5328,7 +5376,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 452,
+"id": 451,
 "tag": "2026-07-22",
 "kerze_ny": "14:45",
 "symbol": "FISV",
@@ -5340,7 +5388,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 453,
+"id": 452,
 "tag": "2026-07-22",
 "kerze_ny": "14:45",
 "symbol": "LUV",
@@ -5352,7 +5400,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 454,
+"id": 453,
 "tag": "2026-07-23",
 "kerze_ny": "10:15",
 "symbol": "AMAT",
@@ -5364,7 +5412,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 455,
+"id": 454,
 "tag": "2026-07-24",
 "kerze_ny": "14:00",
 "symbol": "ZTS",
@@ -5376,7 +5424,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 456,
+"id": 455,
 "tag": "2026-07-24",
 "kerze_ny": "14:30",
 "symbol": "AVGO",
@@ -5388,7 +5436,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 457,
+"id": 456,
 "tag": "2026-07-24",
 "kerze_ny": "15:00",
 "symbol": "CI",
@@ -5400,7 +5448,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 458,
+"id": 457,
 "tag": "2026-07-28",
 "kerze_ny": "09:30",
 "symbol": "GOOGL",
@@ -5412,7 +5460,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 459,
+"id": 458,
 "tag": "2026-07-28",
 "kerze_ny": "14:00",
 "symbol": "COF",
@@ -5424,7 +5472,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 460,
+"id": 459,
 "tag": "2026-07-29",
 "kerze_ny": "10:00",
 "symbol": "AMZN",
@@ -5436,7 +5484,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 461,
+"id": 460,
 "tag": "2026-07-29",
 "kerze_ny": "12:00",
 "symbol": "TSLA",
@@ -5448,7 +5496,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 462,
+"id": 461,
 "tag": "2026-07-30",
 "kerze_ny": "09:30",
 "symbol": "UBER",
@@ -5460,7 +5508,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 463,
+"id": 462,
 "tag": "2026-07-30",
 "kerze_ny": "09:45",
 "symbol": "KO",
@@ -5472,7 +5520,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 464,
+"id": 463,
 "tag": "2026-07-30",
 "kerze_ny": "10:15",
 "symbol": "GOOGL",
@@ -5484,7 +5532,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 465,
+"id": 464,
 "tag": "2026-07-30",
 "kerze_ny": "10:45",
 "symbol": "LUV",
@@ -5496,7 +5544,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 466,
+"id": 465,
 "tag": "2026-08-03",
 "kerze_ny": "14:00",
 "symbol": "BLK",
@@ -5508,7 +5556,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 467,
+"id": 466,
 "tag": "2026-08-03",
 "kerze_ny": "14:30",
 "symbol": "IR",
@@ -5520,7 +5568,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 468,
+"id": 467,
 "tag": "2026-08-03",
 "kerze_ny": "15:00",
 "symbol": "CDNS",
@@ -5532,7 +5580,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 470,
+"id": 469,
 "tag": "2026-08-06",
 "kerze_ny": "11:30",
 "symbol": "AFL",
@@ -5544,7 +5592,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 471,
+"id": 470,
 "tag": "2026-08-06",
 "kerze_ny": "11:45",
 "symbol": "XOM",
@@ -5556,7 +5604,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 472,
+"id": 471,
 "tag": "2026-08-06",
 "kerze_ny": "14:30",
 "symbol": "PYPL",
@@ -5568,7 +5616,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 473,
+"id": 472,
 "tag": "2026-08-07",
 "kerze_ny": "14:30",
 "symbol": "PFE",
@@ -5580,7 +5628,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 474,
+"id": 473,
 "tag": "2026-08-07",
 "kerze_ny": "14:45",
 "symbol": "MDT",
@@ -5592,7 +5640,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 475,
+"id": 474,
 "tag": "2026-08-10",
 "kerze_ny": "10:00",
 "symbol": "AVGO",
@@ -5604,7 +5652,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 476,
+"id": 475,
 "tag": "2026-08-10",
 "kerze_ny": "10:15",
 "symbol": "BSX",
@@ -5616,7 +5664,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 477,
+"id": 476,
 "tag": "2026-08-10",
 "kerze_ny": "12:15",
 "symbol": "NVDA",
@@ -5628,7 +5676,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 478,
+"id": 477,
 "tag": "2026-08-12",
 "kerze_ny": "10:00",
 "symbol": "GOOG",
@@ -5640,7 +5688,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 479,
+"id": 478,
 "tag": "2026-08-13",
 "kerze_ny": "09:45",
 "symbol": "NVDA",
@@ -5652,7 +5700,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 480,
+"id": 479,
 "tag": "2026-08-13",
 "kerze_ny": "10:00",
 "symbol": "PFE",
@@ -5664,7 +5712,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 481,
+"id": 480,
 "tag": "2026-08-13",
 "kerze_ny": "14:00",
 "symbol": "GPN",
@@ -5676,7 +5724,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 482,
+"id": 481,
 "tag": "2026-08-13",
 "kerze_ny": "14:00",
 "symbol": "CARR",
@@ -5688,7 +5736,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 483,
+"id": 482,
 "tag": "2026-08-13",
 "kerze_ny": "14:30",
 "symbol": "ADI",
@@ -5700,7 +5748,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 484,
+"id": 483,
 "tag": "2026-08-14",
 "kerze_ny": "14:30",
 "symbol": "SLB",
@@ -5712,7 +5760,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 485,
+"id": 484,
 "tag": "2026-08-14",
 "kerze_ny": "14:45",
 "symbol": "INTC",
@@ -5724,7 +5772,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 486,
+"id": 485,
 "tag": "2026-08-17",
 "kerze_ny": "14:30",
 "symbol": "FAST",
@@ -5736,7 +5784,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 487,
+"id": 486,
 "tag": "2026-08-18",
 "kerze_ny": "09:30",
 "symbol": "SLB",
@@ -5748,7 +5796,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 488,
+"id": 487,
 "tag": "2026-08-19",
 "kerze_ny": "09:30",
 "symbol": "CVX",
@@ -5760,7 +5808,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 489,
+"id": 488,
 "tag": "2026-08-19",
 "kerze_ny": "09:45",
 "symbol": "PYPL",
@@ -5772,7 +5820,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 490,
+"id": 489,
 "tag": "2026-08-20",
 "kerze_ny": "09:45",
 "symbol": "TMO",
@@ -5784,7 +5832,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 491,
+"id": 490,
 "tag": "2026-08-20",
 "kerze_ny": "09:45",
 "symbol": "ETN",
@@ -5796,7 +5844,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 492,
+"id": 491,
 "tag": "2026-08-20",
 "kerze_ny": "14:00",
 "symbol": "TMUS",
@@ -5808,7 +5856,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 493,
+"id": 492,
 "tag": "2026-08-20",
 "kerze_ny": "15:00",
 "symbol": "MU",
@@ -5820,7 +5868,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 494,
+"id": 493,
 "tag": "2026-08-21",
 "kerze_ny": "10:00",
 "symbol": "NVDA",
@@ -5832,7 +5880,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 495,
+"id": 494,
 "tag": "2026-08-24",
 "kerze_ny": "10:15",
 "symbol": "CRM",
@@ -5844,7 +5892,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 496,
+"id": 495,
 "tag": "2026-08-24",
 "kerze_ny": "12:00",
 "symbol": "DUK",
@@ -5856,7 +5904,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 497,
+"id": 496,
 "tag": "2026-08-24",
 "kerze_ny": "13:45",
 "symbol": "VZ",
@@ -5868,7 +5916,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 498,
+"id": 497,
 "tag": "2026-08-24",
 "kerze_ny": "14:45",
 "symbol": "PFE",
@@ -5880,7 +5928,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 499,
+"id": 498,
 "tag": "2026-08-25",
 "kerze_ny": "09:45",
 "symbol": "TSLA",
@@ -5892,7 +5940,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 500,
+"id": 499,
 "tag": "2026-08-25",
 "kerze_ny": "13:45",
 "symbol": "ETN",
@@ -5904,7 +5952,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 501,
+"id": 500,
 "tag": "2026-08-27",
 "kerze_ny": "14:30",
 "symbol": "PLD",
@@ -5916,7 +5964,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 502,
+"id": 501,
 "tag": "2026-08-27",
 "kerze_ny": "14:30",
 "symbol": "TT",
@@ -5928,7 +5976,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 503,
+"id": 502,
 "tag": "2026-08-28",
 "kerze_ny": "11:15",
 "symbol": "MDT",
@@ -5940,7 +5988,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 504,
+"id": 503,
 "tag": "2026-08-28",
 "kerze_ny": "13:30",
 "symbol": "SO",
@@ -5952,7 +6000,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 505,
+"id": 504,
 "tag": "2026-08-31",
 "kerze_ny": "09:30",
 "symbol": "CSX",
@@ -5964,7 +6012,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 506,
+"id": 505,
 "tag": "2026-08-31",
 "kerze_ny": "10:30",
 "symbol": "PFE",
@@ -5976,7 +6024,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 507,
+"id": 506,
 "tag": "2026-08-31",
 "kerze_ny": "13:00",
 "symbol": "MRK",
@@ -5988,7 +6036,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 508,
+"id": 507,
 "tag": "2026-08-31",
 "kerze_ny": "14:00",
 "symbol": "PG",
@@ -6000,7 +6048,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 509,
+"id": 508,
 "tag": "2026-08-31",
 "kerze_ny": "14:15",
 "symbol": "TGT",
@@ -6012,7 +6060,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 510,
+"id": 509,
 "tag": "2026-09-01",
 "kerze_ny": "14:15",
 "symbol": "TT",
@@ -6024,7 +6072,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 511,
+"id": 510,
 "tag": "2026-09-02",
 "kerze_ny": "10:00",
 "symbol": "BAC",
@@ -6036,7 +6084,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 512,
+"id": 511,
 "tag": "2026-09-02",
 "kerze_ny": "10:30",
 "symbol": "ELV",
@@ -6048,7 +6096,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 513,
+"id": 512,
 "tag": "2026-09-03",
 "kerze_ny": "09:30",
 "symbol": "NEM",
@@ -6060,7 +6108,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 514,
+"id": 513,
 "tag": "2026-09-03",
 "kerze_ny": "14:00",
 "symbol": "MSFT",
@@ -6072,7 +6120,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 515,
+"id": 514,
 "tag": "2026-09-03",
 "kerze_ny": "14:30",
 "symbol": "GILD",
@@ -6084,7 +6132,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 516,
+"id": 515,
 "tag": "2026-09-04",
 "kerze_ny": "15:00",
 "symbol": "META",
@@ -6096,7 +6144,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 517,
+"id": 516,
 "tag": "2026-09-08",
 "kerze_ny": "11:30",
 "symbol": "ZTS",
@@ -6108,7 +6156,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 518,
+"id": 517,
 "tag": "2026-09-08",
 "kerze_ny": "14:45",
 "symbol": "GPN",
@@ -6120,7 +6168,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 519,
+"id": 518,
 "tag": "2026-09-08",
 "kerze_ny": "14:45",
 "symbol": "PCAR",
@@ -6132,7 +6180,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 520,
+"id": 519,
 "tag": "2026-09-10",
 "kerze_ny": "15:00",
 "symbol": "FAST",
@@ -6144,7 +6192,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 521,
+"id": 520,
 "tag": "2026-09-11",
 "kerze_ny": "11:45",
 "symbol": "ICE",
@@ -6156,7 +6204,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 522,
+"id": 521,
 "tag": "2026-09-11",
 "kerze_ny": "14:30",
 "symbol": "AJG",
@@ -6168,7 +6216,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 523,
+"id": 522,
 "tag": "2026-09-15",
 "kerze_ny": "09:30",
 "symbol": "HIG",
@@ -6180,7 +6228,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 524,
+"id": 523,
 "tag": "2026-09-15",
 "kerze_ny": "13:15",
 "symbol": "TT",
@@ -6192,7 +6240,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 525,
+"id": 524,
 "tag": "2026-09-15",
 "kerze_ny": "14:45",
 "symbol": "AON",
@@ -6204,7 +6252,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 526,
+"id": 525,
 "tag": "2026-09-16",
 "kerze_ny": "10:15",
 "symbol": "GOOG",
@@ -6216,7 +6264,7 @@
 "ausstieg": "tp"
 },
 {
-"id": 527,
+"id": 526,
 "tag": "2026-09-17",
 "kerze_ny": "09:30",
 "symbol": "CDNS",
@@ -6228,7 +6276,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 528,
+"id": 527,
 "tag": "2026-09-17",
 "kerze_ny": "09:45",
 "symbol": "REGN",
@@ -6240,7 +6288,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 529,
+"id": 528,
 "tag": "2026-09-17",
 "kerze_ny": "11:15",
 "symbol": "TXN",
@@ -6252,7 +6300,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 530,
+"id": 529,
 "tag": "2026-09-17",
 "kerze_ny": "12:00",
 "symbol": "AAPL",
@@ -6264,7 +6312,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 531,
+"id": 530,
 "tag": "2026-09-17",
 "kerze_ny": "13:00",
 "symbol": "STT",
@@ -6276,7 +6324,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 532,
+"id": 531,
 "tag": "2026-09-18",
 "kerze_ny": "13:45",
 "symbol": "FISV",
@@ -6288,7 +6336,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 533,
+"id": 532,
 "tag": "2026-09-18",
 "kerze_ny": "14:30",
 "symbol": "BKNG",
@@ -6300,7 +6348,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 534,
+"id": 533,
 "tag": "2026-09-21",
 "kerze_ny": "10:45",
 "symbol": "NVDA",
@@ -6312,7 +6360,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 535,
+"id": 534,
 "tag": "2026-09-22",
 "kerze_ny": "10:30",
 "symbol": "SLB",
@@ -6324,7 +6372,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 536,
+"id": 535,
 "tag": "2026-09-23",
 "kerze_ny": "09:30",
 "symbol": "INTU",
@@ -6336,7 +6384,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 537,
+"id": 536,
 "tag": "2026-09-23",
 "kerze_ny": "09:45",
 "symbol": "AVGO",
@@ -6348,7 +6396,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 538,
+"id": 537,
 "tag": "2026-09-23",
 "kerze_ny": "11:15",
 "symbol": "MET",
@@ -6360,7 +6408,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 539,
+"id": 538,
 "tag": "2026-09-24",
 "kerze_ny": "10:15",
 "symbol": "META",
@@ -6372,7 +6420,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 540,
+"id": 539,
 "tag": "2026-09-24",
 "kerze_ny": "10:30",
 "symbol": "GS",
@@ -6384,7 +6432,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 541,
+"id": 540,
 "tag": "2026-09-24",
 "kerze_ny": "11:15",
 "symbol": "AON",
@@ -6396,7 +6444,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 542,
+"id": 541,
 "tag": "2026-09-24",
 "kerze_ny": "13:30",
 "symbol": "SHW",
@@ -6408,7 +6456,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 543,
+"id": 542,
 "tag": "2026-09-25",
 "kerze_ny": "10:15",
 "symbol": "ITW",
@@ -6420,7 +6468,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 544,
+"id": 543,
 "tag": "2026-09-25",
 "kerze_ny": "14:45",
 "symbol": "GWW",
@@ -6432,7 +6480,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 545,
+"id": 544,
 "tag": "2026-09-28",
 "kerze_ny": "14:30",
 "symbol": "C",
@@ -6444,7 +6492,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 546,
+"id": 545,
 "tag": "2026-09-29",
 "kerze_ny": "12:15",
 "symbol": "SCHW",
@@ -6456,7 +6504,7 @@
 "ausstieg": "sl"
 },
 {
-"id": 547,
+"id": 546,
 "tag": "2026-09-29",
 "kerze_ny": "13:30",
 "symbol": "TJX",
@@ -6468,7 +6516,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 548,
+"id": 547,
 "tag": "2026-09-30",
 "kerze_ny": "09:30",
 "symbol": "AVGO",
@@ -6480,7 +6528,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 549,
+"id": 548,
 "tag": "2026-09-30",
 "kerze_ny": "11:30",
 "symbol": "MS",
@@ -6492,7 +6540,7 @@
 "ausstieg": "time_stop"
 },
 {
-"id": 550,
+"id": 549,
 "tag": "2026-09-30",
 "kerze_ny": "13:45",
 "symbol": "ZTS",
@@ -6504,7 +6552,7 @@
 "ausstieg": "eod"
 },
 {
-"id": 551,
+"id": 550,
 "tag": "2026-09-30",
 "kerze_ny": "15:00",
 "symbol": "PH",

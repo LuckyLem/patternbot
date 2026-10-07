@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-07T15:38:41+00:00",
- "heartbeat": "2026-10-07T15:38:41+00:00",
+ "updated": "2026-10-07T15:49:38+00:00",
+ "heartbeat": "2026-10-07T15:49:38+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10014.25,
+  "equity": 10012.8,
   "last_equity": 10041.07,
-  "day_change": -26.82,
-  "total_change": 14.25
+  "day_change": -28.27,
+  "total_change": 12.8
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 143,
    "entry": 12.7,
-   "current": 12.76,
-   "pl": -7.87
+   "current": 12.75,
+   "pl": -7.15
   },
   {
    "symbol": "BSX",
    "side": "short",
    "qty": 48,
    "entry": 41.82,
-   "current": 42.22,
-   "pl": -18.96
+   "current": 42.26,
+   "pl": -21.12
   }
  ],
  "trades": [

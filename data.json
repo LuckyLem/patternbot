@@ -1,31 +1,23 @@
 {
  "version": 1,
- "updated": "2026-10-07T15:49:38+00:00",
- "heartbeat": "2026-10-07T15:49:38+00:00",
+ "updated": "2026-10-07T15:59:44+00:00",
+ "heartbeat": "2026-10-07T15:59:44+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10012.8,
+  "equity": 10007.29,
   "last_equity": 10041.07,
-  "day_change": -28.27,
-  "total_change": 12.8
+  "day_change": -33.78,
+  "total_change": 7.29
  },
  "positions": [
-  {
-   "symbol": "AAL",
-   "side": "short",
-   "qty": 143,
-   "entry": 12.7,
-   "current": 12.75,
-   "pl": -7.15
-  },
   {
    "symbol": "BSX",
    "side": "short",
    "qty": 48,
    "entry": 41.82,
-   "current": 42.26,
-   "pl": -21.12
+   "current": 42.34,
+   "pl": -25.2
   }
  ],
  "trades": [
@@ -56,19 +48,19 @@
    "side": "short",
    "day": "2026-10-07",
    "opened": "2026-10-07T13:50:30.456936+00:00",
-   "closed": null,
+   "closed": "2026-10-07T15:50:39.292675746+00:00",
    "entry": 12.7,
    "stop": 13.04,
    "target": 12.29,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 12.76,
+   "pnl": -8.58,
+   "r": -0.174,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<12.79",
    "max_r": null,
    "key": "t73",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,13 +1283,13 @@
   }
  ],
  "stats": {
-  "n": 70,
-  "pnl": 62.15,
-  "winrate": 0.486,
-  "expectancy": 0.016,
-  "pf": 1.2,
+  "n": 71,
+  "pnl": 53.57,
+  "winrate": 0.479,
+  "expectancy": 0.013,
+  "pf": 1.17,
   "avg_win": 10.75,
-  "avg_loss": -8.42
+  "avg_loss": -8.43
  },
  "equity_curve": [
   {

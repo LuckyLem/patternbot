@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-07T19:28:42+00:00",
- "heartbeat": "2026-10-07T19:28:42+00:00",
+ "updated": "2026-10-07T19:39:40+00:00",
+ "heartbeat": "2026-10-07T19:39:40+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9999.12,
+  "equity": 9991.87,
   "last_equity": 10041.07,
-  "day_change": -41.95,
-  "total_change": -0.88
+  "day_change": -49.2,
+  "total_change": -8.13
  },
- "positions": [
-  {
-   "symbol": "QCOM",
-   "side": "short",
-   "qty": 11,
-   "entry": 176.2,
-   "current": 176.92,
-   "pl": -7.93
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "QCOM",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-10-07",
    "opened": "2026-10-07T17:30:35.196367+00:00",
-   "closed": null,
+   "closed": "2026-10-07T19:31:26.921139139+00:00",
    "entry": 176.2,
    "stop": 179.99,
    "target": 171.21,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 177.58,
+   "pnl": -15.18,
+   "r": -0.364,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "H&S neckline_break<176.98",
    "max_r": 0.11,
    "key": "t75",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 72,
-  "pnl": 28.13,
-  "winrate": 0.472,
-  "expectancy": 0.003,
-  "pf": 1.08,
+  "n": 73,
+  "pnl": 12.95,
+  "winrate": 0.466,
+  "expectancy": -0.002,
+  "pf": 1.04,
   "avg_win": 10.75,
-  "avg_loss": -8.88
+  "avg_loss": -9.04
  },
  "equity_curve": [
   {

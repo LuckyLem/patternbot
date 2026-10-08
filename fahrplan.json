@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "stand": "2026-10-08T13:26:42-04:00",
+ "stand": "2026-10-08T17:01:40-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
@@ -14,12 +14,15 @@
   "Notfallplan geschrieben, die alten Listen liegen unter docs/.",
   "Lern-Labor Etappe 0: Lernzeit-Wächter und Abschneide-Test gebaut, beide mit Selbsttest; Logbuch, Prüftopf-Logbuch und Kandidatenliste angelegt; Datenplan erstellt: Lerntopf etwa 2,7 GB; Telegram-Texte entworfen.",
   "Befund Datenplan: IEX-Tageskerzen gibt es erst ab August 2020, der Tagestrend ist am Anfang des Lerntopfs deshalb eingeschränkt; Entscheidung dazu in der Vorab-Datei.",
-  "Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung nach dem Simulatorfehler; die Zahlen sind unverändert."
+  "Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung nach dem Simulatorfehler; die Zahlen sind unverändert.",
+  "ORB Jahr 1 fertig: 973 Trades, −0,465R, 1 von 5 Kriterien.",
+  "Tagestrend SIP gegen IEX gemessen: 0,46 % abweichend, also SIP-Vorlauf; der Suchtopf bleibt ab Okt 2020.",
+  "Entscheidungen des Inhabers eingetragen."
  ],
  "als_naechstes": [
   "Wochenreview.",
   "Technik-Paket ab 22:30 (16:30 New York), sobald setups/2026-10-09.json auf main liegt. Mit dabei: Halbtag-Test, Speicherschutz für den Bot-Dienst und die Seiten-Dateien mit gleicher Prüfsumme. Danach ist live eingefroren.",
-  "ORB Jahr 1 weiter, Downloads ab 22:00."
+  "ORB: Entscheidung des Inhabers zur Tick-Neuberechnung, danach Jahr 2."
  ],
  "bereiche": [
   {
@@ -45,19 +48,19 @@
    "nr": "2",
    "anker": "b2",
    "titel": "Backtest-Runden und ORB",
-   "status": "laeuft",
-   "erledigt": 4,
-   "gesamt": 9,
+   "status": "teils",
+   "erledigt": 5,
+   "gesamt": 10,
    "zaehlung": {
-    "erledigt": 4,
-    "laeuft": 1,
-    "offen": 3,
+    "erledigt": 5,
+    "laeuft": 0,
+    "offen": 4,
     "test": 1,
     "verworfen": 0
    },
-   "naechster_schritt": "ORB Jahr 1 (Okt 2025–Sep 2026) nach den Vorab-Regeln. Bericht zusätzlich mit Trefferquote, längster Verlustserie, Ergebnis geteilt durch Drawdown. Dann Stopp bis zum OK",
-   "naechster_nr": "2.6",
-   "datum": "sobald die Downloads durch sind",
+   "naechster_schritt": "Runde 2 (Okt 2024–Sep 2025), einzige Änderung: Rechtecke gestrichen. Bericht",
+   "naechster_nr": "2.3",
+   "datum": "Sa/So 10.–11.10.",
    "wer": "VS Code"
   },
   {
@@ -84,11 +87,11 @@
    "anker": "b4",
    "titel": "Lern-Labor – das Hauptziel",
    "status": "laeuft",
-   "erledigt": 5,
-   "gesamt": 52,
+   "erledigt": 6,
+   "gesamt": 56,
    "zaehlung": {
-    "erledigt": 5,
-    "laeuft": 1,
+    "erledigt": 6,
+    "laeuft": 4,
     "offen": 46,
     "test": 0,
     "verworfen": 0
@@ -199,11 +202,11 @@
    "nr": 0,
    "titel": "Fundament",
    "status": "laeuft",
-   "erledigt": 5,
-   "gesamt": 23,
+   "erledigt": 6,
+   "gesamt": 27,
    "zaehlung": {
-    "erledigt": 5,
-    "laeuft": 1,
+    "erledigt": 6,
+    "laeuft": 4,
     "offen": 17,
     "test": 0,
     "verworfen": 0
@@ -322,5 +325,5 @@
    "wer": "VS Code"
   }
  ],
- "punkte_gesamt": 135
+ "punkte_gesamt": 140
 }

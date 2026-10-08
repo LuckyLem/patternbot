@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-08T14:52:39+00:00",
- "heartbeat": "2026-10-08T14:52:39+00:00",
+ "updated": "2026-10-08T15:02:42+00:00",
+ "heartbeat": "2026-10-08T15:02:42+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9990.75,
+  "equity": 9992.37,
   "last_equity": 9991.74,
-  "day_change": -0.99,
-  "total_change": -9.25
+  "day_change": 0.63,
+  "total_change": -7.63
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 9,
    "entry": 210.97,
-   "current": 211.5,
-   "pl": 4.77
+   "current": 211.62,
+   "pl": 5.85
   },
   {
    "symbol": "IBM",
    "side": "short",
    "qty": 9,
    "entry": 218.92,
-   "current": 219.56,
-   "pl": -5.76
+   "current": 219.5,
+   "pl": -5.22
   }
  ],
  "trades": [
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>210.09",
-   "max_r": 0.15,
+   "max_r": 0.19,
    "key": "t76",
    "detail": false,
    "ai_verdict": null
@@ -1435,17 +1435,17 @@
  ],
  "funnel": {
   "day": "2026-10-08",
-  "setups": 62,
+  "setups": 69,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
   "traded": 2,
   "coverage_from": "2026-10-08T13:50:24.653328+00:00",
   "rejected": {
-   "skip-chase": 6,
-   "skip-spread": 9,
+   "skip-chase": 8,
+   "skip-spread": 10,
    "skip-stale": 5,
-   "skip-vol": 40
+   "skip-vol": 44
   }
  },
  "funnel_days": [
@@ -1585,17 +1585,17 @@
   },
   {
    "day": "2026-10-08",
-   "setups": 62,
+   "setups": 69,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
    "traded": 2,
    "coverage_from": "2026-10-08T13:50:24.653328+00:00",
    "rejected": {
-    "skip-chase": 6,
-    "skip-spread": 9,
+    "skip-chase": 8,
+    "skip-spread": 10,
     "skip-stale": 5,
-    "skip-vol": 40
+    "skip-vol": 44
    }
   }
  ],

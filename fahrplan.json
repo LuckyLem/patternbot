@@ -1,0 +1,326 @@
+{
+ "schema": 1,
+ "stand": "2026-10-08T13:21:28-04:00",
+ "kriterien": {
+  "commit": "4c580ae",
+  "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
+  "pruefung": "online gegen Commit 4c580ae geprüft"
+ },
+ "tageslog": "Do 08.10.2026",
+ "zuletzt": [
+  "Fahrplan angelegt, Erfolgskriterien wörtlich übernommen (Commit 4c580ae).",
+  "Halbtage geprüft, kein Fix nötig.",
+  "Raster „Fahrplan“ und Lern-Labor-Seite mit Knopf sind online.",
+  "Notfallplan geschrieben, die alten Listen liegen unter docs/.",
+  "Lern-Labor Etappe 0:",
+  "Befund Datenplan:",
+  "Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung"
+ ],
+ "als_naechstes": [
+  "Wochenreview.",
+  "Technik-Paket ab 22:30 (16:30 New York), sobald setups/2026-10-09.json auf main liegt. Mit dabei: Halbtag-Test,",
+  "ORB Jahr 1 weiter, Downloads ab 22:00."
+ ],
+ "bereiche": [
+  {
+   "nr": "1",
+   "anker": "b1",
+   "titel": "Betrieb und diese Woche",
+   "status": "laeuft",
+   "erledigt": 2,
+   "gesamt": 10,
+   "zaehlung": {
+    "erledigt": 2,
+    "laeuft": 4,
+    "offen": 4,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Halbtag-Test: Einstiege bis 12:30, Glattstellung 12:50 New York, danach keine Order",
+   "naechster_nr": "1.2",
+   "datum": "Fr 09.10.",
+   "wer": "VS Code"
+  },
+  {
+   "nr": "2",
+   "anker": "b2",
+   "titel": "Backtest-Runden und ORB",
+   "status": "laeuft",
+   "erledigt": 4,
+   "gesamt": 9,
+   "zaehlung": {
+    "erledigt": 4,
+    "laeuft": 1,
+    "offen": 3,
+    "test": 1,
+    "verworfen": 0
+   },
+   "naechster_schritt": "ORB Jahr 1 (Okt 2025–Sep 2026) nach den Vorab-Regeln. Bericht zusätzlich mit Trefferquote, längster Verlustserie, Ergebnis geteilt durch Drawdown. Dann Stopp bis zum OK",
+   "naechster_nr": "2.6",
+   "datum": "sobald die Downloads durch sind",
+   "wer": "VS Code"
+  },
+  {
+   "nr": "3",
+   "anker": "b3",
+   "titel": "Offene Punkte aus den alten Listen",
+   "status": "laeuft",
+   "erledigt": 11,
+   "gesamt": 28,
+   "zaehlung": {
+    "erledigt": 11,
+    "laeuft": 3,
+    "offen": 5,
+    "test": 9,
+    "verworfen": 11
+   },
+   "naechster_schritt": "(#2) Blinde Fenster bei 5 offenen Positionen",
+   "naechster_nr": "3.2",
+   "datum": "Fr 09.10.",
+   "wer": "VS Code"
+  },
+  {
+   "nr": "4",
+   "anker": "b4",
+   "titel": "Lern-Labor – das Hauptziel",
+   "status": "laeuft",
+   "erledigt": 5,
+   "gesamt": 52,
+   "zaehlung": {
+    "erledigt": 5,
+    "laeuft": 1,
+    "offen": 46,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Bot-Schutz: MemoryLow und negatives OOMScoreAdjust",
+   "naechster_nr": "4.0.5",
+   "datum": "Fr 09.10.",
+   "wer": "VS Code + Inhaber"
+  },
+  {
+   "nr": "5",
+   "anker": "b5",
+   "titel": "Ideen aus Büchern",
+   "status": "teils",
+   "erledigt": 1,
+   "gesamt": 5,
+   "zaehlung": {
+    "erledigt": 1,
+    "laeuft": 0,
+    "offen": 4,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "López de Prado, „Advances in Financial Machine Learning“",
+   "naechster_nr": "5.2",
+   "datum": "",
+   "wer": "Inhaber + Chat"
+  },
+  {
+   "nr": "6",
+   "anker": "b6",
+   "titel": "Messenger (Telegram)",
+   "status": "teils",
+   "erledigt": 1,
+   "gesamt": 3,
+   "zaehlung": {
+    "erledigt": 1,
+    "laeuft": 0,
+    "offen": 2,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Einbau in den Labor-Dienst; jede Nachricht läuft durch den Prüfer (nie Schlüssel, Tokens oder Kontodaten)",
+   "naechster_nr": "6.3",
+   "datum": "Sa/So 10.–11.10.",
+   "wer": "VS Code"
+  },
+  {
+   "nr": "7",
+   "anker": "b7",
+   "titel": "Webseiten",
+   "status": "laeuft",
+   "erledigt": 2,
+   "gesamt": 5,
+   "zaehlung": {
+    "erledigt": 2,
+    "laeuft": 2,
+    "offen": 1,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Seiten-Dateien mit gleicher Prüfsumme ins Technik-Paket, damit ein späteres Hochladen der Dashboard-Seite nichts überschreibt",
+   "naechster_nr": "7.5",
+   "datum": "Fr 09.10.",
+   "wer": "VS Code"
+  },
+  {
+   "nr": "8",
+   "anker": "b8",
+   "titel": "Risiko und später Echtgeld (nur nach bestandenen Tests)",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 9,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 9,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Gleiches echtes Risiko je Trade",
+   "naechster_nr": "8.1",
+   "datum": "",
+   "wer": "VS Code"
+  },
+  {
+   "nr": "9",
+   "anker": "b9",
+   "titel": "Routine",
+   "status": "laeuft",
+   "erledigt": 0,
+   "gesamt": 3,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 2,
+    "offen": 1,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Täglich: Broker flach, Abgleich stimmt, Alarme geprüft, Tageslog",
+   "naechster_nr": "9.1",
+   "datum": "täglich",
+   "wer": "VS Code"
+  }
+ ],
+ "etappen": [
+  {
+   "nr": 0,
+   "titel": "Fundament",
+   "status": "laeuft",
+   "erledigt": 5,
+   "gesamt": 23,
+   "zaehlung": {
+    "erledigt": 5,
+    "laeuft": 1,
+    "offen": 17,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Bot-Schutz: MemoryLow und negatives OOMScoreAdjust",
+   "naechster_nr": "4.0.5",
+   "datum": "Fr 09.10.",
+   "wer": "VS Code + Inhaber"
+  },
+  {
+   "nr": 1,
+   "titel": "Trade ja oder nein (Meta-Labeling)",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 8,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 8,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Vorab-Datei ETAPPE1_V1_PREREG.md: Entwurf an den Inhaber vor dem finalen Commit",
+   "naechster_nr": "4.1.2",
+   "datum": "Sa/So 10.–11.10.",
+   "wer": "VS Code"
+  },
+  {
+   "nr": 2,
+   "titel": "Eigene Muster aus Form und Situation",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 7,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 7,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Fenster von 8, 16 und 32 Kerzen auf denselben IEX-15-Min-Kerzen wie live, normiert (Kurs in ATR, Volumen relativ zur Uhrzeit), dazu die Situation",
+   "naechster_nr": "4.2.1",
+   "datum": "",
+   "wer": "VS Code"
+  },
+  {
+   "nr": 3,
+   "titel": "Eigenes neuronales Netz",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 4,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 4,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Lernt Signal und Entscheidung zusammen aus den Kerzen; Linien (Unterstützung, Widerstand, Trendlinien, VWAP, Durchschnitte) als Eingaben",
+   "naechster_nr": "4.3.1",
+   "datum": "",
+   "wer": "VS Code"
+  },
+  {
+   "nr": 4,
+   "titel": "Schattenbetrieb",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 4,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 4,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Jede Nacht alle eingefrorenen Modelle und Muster mit den Daten des Tages nachrechnen, dazu die klassischen Muster ohne 5-Plätze-Grenze",
+   "naechster_nr": "4.4.1",
+   "datum": "",
+   "wer": "VS Code"
+  },
+  {
+   "nr": 5,
+   "titel": "Paper",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 3,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 3,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Nur nach bestandener Prüfung und mit ausdrücklichem OK",
+   "naechster_nr": "4.5.1",
+   "datum": "",
+   "wer": "Inhaber"
+  },
+  {
+   "nr": 6,
+   "titel": "Perfektionieren",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 3,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 3,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Risiko senken: schwache Setups auslassen, bei Unsicherheit kleiner handeln",
+   "naechster_nr": "4.6.1",
+   "datum": "",
+   "wer": "VS Code"
+  }
+ ],
+ "punkte_gesamt": 135
+}

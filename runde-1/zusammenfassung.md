@@ -1,6 +1,8 @@
 # Runde 1 · 2025-10-01..2026-09-30
 
-Regel-Version: chase_anchor=close, universe_exclude=BK,MMC,FI (alle übrigen Einstellungen wie live) · erstes Rechnen, unverändert.
+Regel-Version: chase_anchor=close, universe_exclude=BK,MMC,FI (alle übrigen Einstellungen wie live) · Neuberechnung nach Simulatorfehler, Regeln unverändert.
+
+_Kopfzeile korrigiert am 08.10.2026: Hier stand irrtümlich „erstes Rechnen, unverändert“. Alle Zahlen sind unverändert, siehe `protokoll.md`._
 
 **Es zählt der Hauptlauf mit V1 an (Regeln wie live). Der Vergleichslauf mit V1 aus ist Information, keine Prüfung.**
 

@@ -70,3 +70,8 @@ Wird nur ergänzt, nie geändert.
 - Hinweis: Neuberechnung nach Simulatorfehler (gefunden nach der ersten Rechnung am 03.10.): Im Tick-Pfad lösten Fehlkurse Stops aus, z. B. 1 Aktie außerbörslich zu 310,00 bei ELV am 20.10.2025 (Markt 352). Behoben (nur Abschlüsse innerhalb der offiziellen SIP-Minutenkerze), neu kalibriert. Regeln unverändert. Die erste Rechnung bleibt im Protokoll stehen.
 - Beschlossene Korrekturen: (offen – erst nach OK des Nutzers)
 
+
+## Korrektur · 08.10.2026 19:21
+- Die Kopfzeile von `runde-1/zusammenfassung.md` (hochgeladen mit Commit 91526e9) nannte die Rechnung vom 06.10. irrtümlich „erstes Rechnen, unverändert“.
+- Richtig ist: Neuberechnung nach dem Simulatorfehler (Fehlkurse im Tick-Pfad), Regeln unverändert, wie im Eintrag „Runde 1 · 06.10.2026 21:16“ oben.
+- Korrigiert wurde nur diese Kopfzeile; alle Zahlen bleiben.

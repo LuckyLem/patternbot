@@ -1,0 +1,257 @@
+{
+ "schema": 1,
+ "stand": "2026-10-08T13:21:28-04:00",
+ "quelle": "PC",
+ "code_labor": "e52378c6f0cd",
+ "labor": {
+  "eingerichtet": false,
+  "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
+  "job": null,
+  "fenster": [
+   {
+    "start": "2026-10-08T16:30:00-04:00",
+    "stopp": "2026-10-09T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-09T16:30:00-04:00",
+    "stopp": "2026-10-12T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-12T16:30:00-04:00",
+    "stopp": "2026-10-13T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-13T16:30:00-04:00",
+    "stopp": "2026-10-14T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-14T16:30:00-04:00",
+    "stopp": "2026-10-15T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-15T16:30:00-04:00",
+    "stopp": "2026-10-16T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-16T16:30:00-04:00",
+    "stopp": "2026-10-19T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-19T16:30:00-04:00",
+    "stopp": "2026-10-20T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-20T16:30:00-04:00",
+    "stopp": "2026-10-21T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-21T16:30:00-04:00",
+    "stopp": "2026-10-22T09:00:00-04:00"
+   }
+  ]
+ },
+ "etappen": [
+  {
+   "nr": 0,
+   "titel": "Fundament",
+   "status": "laeuft",
+   "erledigt": 5,
+   "gesamt": 23,
+   "zaehlung": {
+    "erledigt": 5,
+    "laeuft": 1,
+    "offen": 17,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Bot-Schutz: MemoryLow und negatives OOMScoreAdjust",
+   "naechster_nr": "4.0.5",
+   "datum": "Fr 09.10.",
+   "wer": "VS Code + Inhaber"
+  },
+  {
+   "nr": 1,
+   "titel": "Trade ja oder nein (Meta-Labeling)",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 8,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 8,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Vorab-Datei ETAPPE1_V1_PREREG.md: Entwurf an den Inhaber vor dem finalen Commit",
+   "naechster_nr": "4.1.2",
+   "datum": "Sa/So 10.–11.10.",
+   "wer": "VS Code"
+  },
+  {
+   "nr": 2,
+   "titel": "Eigene Muster aus Form und Situation",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 7,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 7,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Fenster von 8, 16 und 32 Kerzen auf denselben IEX-15-Min-Kerzen wie live, normiert (Kurs in ATR, Volumen relativ zur Uhrzeit), dazu die Situation",
+   "naechster_nr": "4.2.1",
+   "datum": "",
+   "wer": "VS Code"
+  },
+  {
+   "nr": 3,
+   "titel": "Eigenes neuronales Netz",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 4,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 4,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Lernt Signal und Entscheidung zusammen aus den Kerzen; Linien (Unterstützung, Widerstand, Trendlinien, VWAP, Durchschnitte) als Eingaben",
+   "naechster_nr": "4.3.1",
+   "datum": "",
+   "wer": "VS Code"
+  },
+  {
+   "nr": 4,
+   "titel": "Schattenbetrieb",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 4,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 4,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Jede Nacht alle eingefrorenen Modelle und Muster mit den Daten des Tages nachrechnen, dazu die klassischen Muster ohne 5-Plätze-Grenze",
+   "naechster_nr": "4.4.1",
+   "datum": "",
+   "wer": "VS Code"
+  },
+  {
+   "nr": 5,
+   "titel": "Paper",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 3,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 3,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Nur nach bestandener Prüfung und mit ausdrücklichem OK",
+   "naechster_nr": "4.5.1",
+   "datum": "",
+   "wer": "Inhaber"
+  },
+  {
+   "nr": 6,
+   "titel": "Perfektionieren",
+   "status": "offen",
+   "erledigt": 0,
+   "gesamt": 3,
+   "zaehlung": {
+    "erledigt": 0,
+    "laeuft": 0,
+    "offen": 3,
+    "test": 0,
+    "verworfen": 0
+   },
+   "naechster_schritt": "Risiko senken: schwache Setups auslassen, bei Unsicherheit kleiner handeln",
+   "naechster_nr": "4.6.1",
+   "datum": "",
+   "wer": "VS Code"
+  }
+ ],
+ "logbuch": [
+  {
+   "datum": "2026-10-08",
+   "zeit": "2026-10-08 13:04",
+   "art": "Lernzeit-Wächter",
+   "text": "Rechnet in New-York-Zeit mit dem NYSE-Kalender: Handelstage 16:30–09:00, Wochenende und Feiertage durchgehend. 17 Prüfungen grün, darunter Halbtage 27.11. und 24.12., Thanksgiving, Weihnachten und die Zeitumstellung 25.10.–01.11. (Start dann 21:30 deutscher Zeit).",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-08",
+   "zeit": "2026-10-08 13:04",
+   "art": "Abschneide-Test",
+   "text": "Feste Funktion angelegt (Code-Hash Labor e52378c6f0cd). Selbsttest auf künstlichen 15-Min-Kerzen, 80 Zeitpunkte: 4 Merkmale ohne Zukunftsdaten identisch; 4 absichtlich undichte Merkmale (zentrierter Durchschnitt, Normierung über alle Daten, Kurs der nächsten Kerze, Rückwärts-Auffüllen) alle als Leck erkannt.",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-08",
+   "zeit": "2026-10-08 13:04",
+   "art": "Einrichtung",
+   "text": "Logbuch und Prüftopf-Logbuch angelegt. Prüftopf 01.10.2023–30.09.2026: 0 von 3 Öffnungen.",
+   "ok": null
+  }
+ ],
+ "prueftopf": {
+  "oeffnungen": 0,
+  "maximal": 3,
+  "zeitraum": "01.10.2023–30.09.2026"
+ },
+ "backtest": [
+  {
+   "name": "Kalibrierung",
+   "status": "bestanden",
+   "datum": "2026-10-06",
+   "text": "659/659 Entscheidungen gleich · 11/11 Orders · Simulator 61750fbbc22e",
+   "beleg": "kalibrierung/bericht.md"
+  },
+  {
+   "name": "Runde 1",
+   "zeitraum": "Okt 2025–Sep 2026",
+   "status": "fertig",
+   "ziel": false,
+   "werte": {
+    "trades": 1009,
+    "ev_r": -0.056,
+    "pf": 0.76,
+    "max_dd_r": 65.23,
+    "zufall": 25
+   },
+   "kriterien": [
+    true,
+    false,
+    false,
+    false,
+    false
+   ],
+   "text": "1 von 5 Kriterien erfüllt",
+   "beleg": "runde-1/zusammenfassung.md",
+   "datum": "2026-10-06"
+  },
+  {
+   "name": "Runde 2",
+   "zeitraum": "Okt 2024–Sep 2025",
+   "status": "geplant",
+   "text": "einzige Änderung: Rechtecke gestrichen"
+  },
+  {
+   "name": "ORB Jahr 1",
+   "zeitraum": "Okt 2025–Sep 2026",
+   "text": "nach den Vorab-Regeln (Commit d48250c); Downloads nur außerhalb der Handelszeit",
+   "status": "läuft"
+  }
+ ],
+ "muster": [],
+ "schatten": [],
+ "versionen": [],
+ "wochenberichte": []
+}

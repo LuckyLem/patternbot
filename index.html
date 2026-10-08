@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="labor-name.js"></script>
 <style>
 /* ================================================================ tokens */
 :root{
@@ -384,6 +385,50 @@ h2{font-size:12.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;
 
 footer{margin-top:80px;padding-top:26px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;
   gap:14px;flex-wrap:wrap;color:var(--ink-3);font-size:12.5px}
+
+/* ================================================================ lern-labor link + fahrplan raster */
+.labbtn{margin-left:auto;display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border-radius:999px;
+  font:600 13.5px var(--sans);letter-spacing:-.01em;text-decoration:none;color:var(--accent);
+  background:rgba(var(--accent-rgb),.10);box-shadow:inset 0 0 0 1px rgba(var(--accent-rgb),.24);
+  transition:background .2s var(--ease)}
+.labbtn:hover{background:rgba(var(--accent-rgb),.18)}
+.labbtn .ar{display:inline-block;transition:transform .28s var(--spring)}
+.labbtn:hover .ar{transform:translateX(3px)}
+.plannow{display:grid;grid-template-columns:1fr 1fr;gap:1px;border-radius:20px;overflow:hidden;background:var(--hair-soft);
+  box-shadow:var(--lift)}
+.plannow>div{background:var(--raised);padding:18px 22px 20px;min-width:0}
+.plannow .k{font-size:11.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.07em}
+.plannow .k span{text-transform:none;letter-spacing:0;font-weight:500}
+.plannow ul{list-style:none;display:grid;gap:8px;margin-top:12px}
+.plannow li{display:flex;gap:10px;font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.plannow li b{flex:none;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font-size:10.5px;margin-top:2px}
+.plannow li.done b{background:var(--up-wash);color:var(--up)}
+.plannow li.next b{background:rgba(var(--accent-rgb),.12);color:var(--accent)}
+.plannow li.none{color:var(--ink-3)}
+@media(max-width:640px){.plannow{grid-template-columns:1fr}}
+.plangrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-top:14px}
+.ptile{display:flex;flex-direction:column;gap:11px;padding:18px 20px 17px;min-width:0;text-decoration:none;color:inherit;
+  transition:transform .3s var(--spring)}
+.ptile:hover{transform:translateY(-2px)}
+.ptile .top{display:flex;align-items:flex-start;gap:9px}
+.ptile .nr{font-size:12px;font-weight:600;color:var(--ink-3);padding-top:2px}
+.ptile .t{flex:1;min-width:0;font-weight:600;font-size:15px;letter-spacing:-.02em;line-height:1.3}
+.pst{flex:none;font:600 10px var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:6px;
+  white-space:nowrap}
+.pst.erledigt{background:var(--up-wash);color:var(--up)}
+.pst.laeuft{background:rgba(var(--accent-rgb),.12);color:var(--accent)}
+.pst.teils{background:var(--be-wash);color:var(--be)}
+.pst.offen{background:var(--sunken);color:var(--ink-2)}
+.ptile .prog{display:flex;align-items:baseline;gap:9px}
+.ptile .frac{font-size:22px;font-weight:600;letter-spacing:-.04em}
+.ptile .of{font-size:12.5px;color:var(--ink-3)}
+.pbar{display:flex;height:6px;border-radius:999px;overflow:hidden;background:var(--sunken)}
+.pbar i{display:block;height:100%;width:0;transition:width 1.1s var(--ease)}
+.pbar i.d{background:var(--up)} .pbar i.l{background:var(--accent);opacity:.7}
+.ptile .nx{font-size:13.5px;line-height:1.45;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:3;
+  -webkit-box-orient:vertical;overflow:hidden}
+.ptile .nx span{color:var(--ink-3)}
+.ptile .dt{margin-top:auto;font-size:12px;color:var(--ink-3)}
 </style>
 </head>
 <body>
@@ -396,6 +441,8 @@ footer{margin-top:80px;padding-top:26px;border-top:1px solid var(--hair);display
         <span class="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 68 L38 46 L56 58 L84 26" fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         PatternBot
       </div>
+      <a class="labbtn" href="labor.html"><span id="labName"></span><span class="ar" aria-hidden="true">→</span></a>
+      <script>document.getElementById("labName").textContent=window.LABOR_NAME||"Labor";</script>
       <div class="stamp" id="stamp">—</div>
     </div>
 
@@ -467,6 +514,15 @@ footer{margin-top:80px;padding-top:26px;border-top:1px solid var(--hair);display
     <section class="enter s7" id="weekWrap" hidden>
       <div class="head"><h2 id="weekTitle">Wochenanalyse</h2><span class="aside" id="weekDay"></span></div>
       <div class="card paper"><div class="prose" id="weekProse"></div></div>
+    </section>
+
+    <section class="enter s7" id="planWrap" hidden>
+      <div class="head">
+        <div class="hleft"><h2>Fahrplan</h2><span class="aside" id="planNote"></span></div>
+        <a class="kibtn" id="planLink" href="FAHRPLAN.md" target="_blank" rel="noopener">Ganzer Fahrplan ↗</a>
+      </div>
+      <div class="plannow" id="planNow"></div>
+      <div class="plangrid" id="planGrid"></div>
     </section>
 
     <footer>
@@ -1095,6 +1151,46 @@ if(!window.__PB_DATA__){
   setInterval(()=>fetch("data.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(heartbeat).catch(()=>{}),20000);
   addEventListener("visibilitychange",()=>{if(!document.hidden) load();});
 }
+
+/* ------------------------------------------------------------ fahrplan raster (fahrplan.json, erzeugt aus FAHRPLAN.md) */
+const PSTATE={erledigt:"erledigt",laeuft:"läuft",teils:"teils",offen:"offen"};
+const ghBlob=f=>{const h=location.hostname;                      // GitHub-Ansicht der Datei, ohne Kontonamen im Code
+  if(!h.endsWith(".github.io")) return f;
+  return "https://github.com/"+h.split(".")[0]+"/"+(location.pathname.split("/").filter(Boolean)[0]||"")+"/blob/main/"+f;};
+const berlin=iso=>{const t=new Date(iso); return isNaN(t)?"—":t.toLocaleString("de-DE",
+  {timeZone:"Europe/Berlin",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});};
+async function plan(){
+  let p=null;
+  try{
+    if(window.__PB_DATA__) p=window.__PB_DATA__.fahrplan||null;
+    else{const r=await fetch("fahrplan.json?t="+Date.now(),{cache:"no-store"}); if(r.ok) p=await r.json();}
+  }catch(e){}
+  const w=$("planWrap");
+  if(!p||!Array.isArray(p.bereiche)||!p.bereiche.length){w.hidden=true;return;}
+  w.hidden=false;
+  $("planNote").textContent="Stand "+berlin(p.stand);
+  $("planLink").href=ghBlob("FAHRPLAN.md");
+  const li=(xs,cls,mark)=>xs&&xs.length
+    ?xs.map(x=>`<li class="${cls}"><b aria-hidden="true">${mark}</b><span>${esc(x)}</span></li>`).join("")
+    :'<li class="none">—</li>';
+  $("planNow").innerHTML=`<div><div class="k">Zuletzt geschafft${p.tageslog?` <span>· ${esc(p.tageslog)}</span>`:""}</div>
+      <ul>${li(p.zuletzt,"done","✓")}</ul></div>
+    <div><div class="k">Als Nächstes</div><ul>${li(p.als_naechstes,"next","→")}</ul></div>`;
+  $("planGrid").innerHTML=p.bereiche.map((b,i)=>{
+    const tot=Math.max(1,b.gesamt||0), dn=b.erledigt||0, run=(b.zaehlung||{}).laeuft||0;
+    return `<a class="card ptile row-in" style="--i:${i}" href="${esc(ghBlob("FAHRPLAN.md")+"#"+(b.anker||""))}" target="_blank" rel="noopener">
+      <div class="top"><span class="nr num">${esc(b.nr)}</span><span class="t">${esc(b.titel)}</span>
+        <span class="pst ${esc(b.status)}">${esc(PSTATE[b.status]||b.status)}</span></div>
+      <div class="prog"><span class="frac num">${dn}/${esc(b.gesamt)}</span>
+        <span class="of">erledigt${run?` · ${run} ${run===1?"läuft":"laufen"}`:""}</span></div>
+      <div class="pbar"><i class="d" data-w="${dn/tot*100}"></i><i class="l" data-w="${run/tot*100}"></i></div>
+      <div class="nx">${b.naechster_schritt?`<span>Als Nächstes:</span> ${esc(b.naechster_schritt)}`:"alles erledigt"}</div>
+      <div class="dt num">${esc(b.datum||"")}${b.datum&&b.wer?" · ":""}${esc(b.wer||"")}</div></a>`;}).join("");
+  const grow=()=>$("planGrid").querySelectorAll(".pbar i").forEach(x=>x.style.width=x.dataset.w+"%");
+  calm?grow():setTimeout(grow,500);
+}
+plan();
+if(!window.__PB_DATA__) addEventListener("visibilitychange",()=>{if(!document.hidden) plan();});
 </script>
 </body>
 </html>

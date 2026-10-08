@@ -423,7 +423,7 @@ Neuester Tag oben.
   - Telegram-Texte entworfen.
 - Befund Datenplan:
   - IEX-Tageskerzen gibt es erst ab August 2020, der Tagestrend ist am Anfang des Lerntopfs deshalb eingeschränkt.
-  - Die Entscheidung dazu kommt in die Vorab-Datei.
+  - Entscheidung dazu in der Vorab-Datei.
 - Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung
   nach dem Simulatorfehler; die Zahlen sind unverändert.
 

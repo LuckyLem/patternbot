@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "stand": "2026-10-08T16:48:50-04:00",
+ "stand": "2026-10-08T17:01:40-04:00",
  "quelle": "PC",
- "code_labor": "dfaa701a76f7",
+ "code_labor": "780f6d714e9c",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
@@ -55,11 +55,11 @@
    "nr": 0,
    "titel": "Fundament",
    "status": "laeuft",
-   "erledigt": 5,
-   "gesamt": 23,
+   "erledigt": 6,
+   "gesamt": 27,
    "zaehlung": {
-    "erledigt": 5,
-    "laeuft": 1,
+    "erledigt": 6,
+    "laeuft": 4,
     "offen": 17,
     "test": 0,
     "verworfen": 0
@@ -179,6 +179,13 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-08",
+   "zeit": "2026-10-08 16:57",
+   "art": "Messung",
+   "text": "Tagestrend SIP gegen IEX (147 Werte, 03.08.2020–29.09.2023, Funktion des Bots, unbereinigte Tageskerzen): bei vollen 120 Kerzen weichen 459 von 100.107 Entscheidungen ab (0,46 %; 2021 0,55 %, 2022 0,53 %, 2023 0,24 %). Unter 1 %: SIP-Vorlauf, der Suchtopf bleibt ab 01.10.2020. Aufwärmphase mit Vorlauf 0,28 % gegen das volle SIP-Fenster, ohne Vorlauf 3,32 %. Bericht: messungen/trend_sip_iex.md",
+   "ok": null
+  },
   {
    "datum": "2026-10-08",
    "zeit": "2026-10-08 13:04",

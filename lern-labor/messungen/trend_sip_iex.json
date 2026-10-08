@@ -1,0 +1,90 @@
+{
+ "stand": "2026-10-08T22:57",
+ "regel": "unter 1 % abweichend (Phase voll: beide 120 Tageskerzen) -> SIP-Vorlauf, sonst Okt 2020-Jan 2021 nur zum Aufwärmen",
+ "werte": 147,
+ "tage": 796,
+ "erste_iex_kerze": "2020-07-27",
+ "voll_iex_gegen_sip": {
+  "n": 100107,
+  "abweichend": 459,
+  "anteil_pct": 0.459
+ },
+ "voll_je_jahr": {
+  "2021": {
+   "n": 35721,
+   "abweichend": 195,
+   "anteil_pct": 0.546
+  },
+  "2022": {
+   "n": 36897,
+   "abweichend": 197,
+   "anteil_pct": 0.534
+  },
+  "2023": {
+   "n": 27489,
+   "abweichend": 67,
+   "anteil_pct": 0.244
+  }
+ },
+ "voll_matrix_iex_x_sip": {
+  "down->down": 34451,
+  "flat->flat": 16885,
+  "flat->up": 133,
+  "up->up": 48312,
+  "down->flat": 87,
+  "up->flat": 130,
+  "flat->down": 108,
+  "up->down": 1
+ },
+ "aufwaermen_iex_gegen_sip_gleich_kurz": {
+  "n": 9555,
+  "abweichend": 18,
+  "anteil_pct": 0.188
+ },
+ "aufwaermen_iex_kurz_gegen_sip_voll": {
+  "n": 9555,
+  "abweichend": 317,
+  "anteil_pct": 3.318
+ },
+ "aufwaermen_vorlauf_gegen_sip_voll": {
+  "n": 9555,
+  "abweichend": 27,
+  "anteil_pct": 0.283
+ },
+ "zu_kurz": {
+  "n": 7276,
+  "iex_sagt": {
+   "flat": 7276
+  },
+  "sip_sagt": {
+   "up": 4736,
+   "flat": 1109,
+   "down": 1431
+  },
+  "vorlauf_gegen_sip": {
+   "n": 7276,
+   "abweichend": 25,
+   "anteil_pct": 0.344
+  }
+ },
+ "zeitraum_aufwaermen": [
+  "2020-10-13",
+  "2021-01-14"
+ ],
+ "zeitraum_zu_kurz": [
+  "2020-08-03",
+  "2020-10-12"
+ ],
+ "downloads": 176,
+ "voll_meiste_abweichungen": {
+  "TRV": 11,
+  "AON": 11,
+  "ITW": 9,
+  "WM": 8,
+  "WMT": 8,
+  "OTIS": 8,
+  "DAL": 8,
+  "MRK": 8
+ },
+ "urteil": "SIP-Vorlauf: der Suchtopf bleibt ab Okt 2020"
+}

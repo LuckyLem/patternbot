@@ -116,9 +116,9 @@ hochgeladen.
 | Nr | Punkt | Status | Wer | Datum | Abhängigkeit | Beleg |
 |---|---|---|---|---|---|---|
 | 1.1 | Halbtage 27.11. und 24.12. (Schluss 19:00, 13:00 New York): kennt der Live-Bot sie? | ✅ 08.10. | VS Code | 08.10. | – | Kein Fix nötig, Befund im Tageslog 08.10. |
-| 1.2 | Halbtag-Test: Einstiege bis 12:30, Glattstellung 12:50 New York, danach keine Order | ⏳ | VS Code | Fr 09.10. | geht ins Technik-Paket | – |
+| 1.2 | Halbtag-Test: Einstiege bis 12:30, Glattstellung 12:50 New York, danach keine Order | ⏳ gebaut | VS Code | Fr 09.10. | geht ins Technik-Paket | Tagestest Abschnitt 4 (27.11.), lokal grün 08.10. |
 | 1.3 | Technik-Paket aufspielen: Bot-Version, Änderungsprotokoll, Stop-Protokoll, skip-maxopen, Universum ohne BK/MMC/FI, Review nach Kosten, Halbtag-Test, Speicherschutz, Seiten-Dateien | ⏳ gebaut | VS Code + Inhaber | Fr 09.10. ab 22:30 | `setups/2026-10-09.json` auf main; Review (22:05) und Export (22:20) durch; Broker flach; Backup; Suiten grün auf dem Pi | Änderungsprotokoll mit echter Uhrzeit |
-| 1.4 | Speicherschutz für den Bot-Dienst: MemoryLow und negatives OOMScoreAdjust (Drop-in) | ⏳ | VS Code + Inhaber | Fr 09.10. | Technik-Paket; danach Startzeile und Dienst-Einstellungen prüfen | – |
+| 1.4 | Speicherschutz für den Bot-Dienst: MemoryLow und negatives OOMScoreAdjust (Drop-in) | ⏳ gebaut | VS Code + Inhaber | Fr 09.10. | Technik-Paket; danach Startzeile und Dienst-Einstellungen prüfen. MemoryLow wirkt erst mit 4.0.24 | Startzeile zeigt den wirksamen Schutz (Test grün 08.10.) |
 | 1.5 | Live einfrieren: danach nur Technik- und Sicherheits-Fixes mit OK | ⬜ | Inhaber | Fr 09.10. | 1.3 | – |
 | 1.6 | Wochenreview | ⬜ | VS Code | Fr 09.10. | Handelsschluss | – |
 | 1.7 | V1-Woche 05.–09.10. im Replay nachrechnen und mit Paper vergleichen (gleiche Kriterien wie die Kalibrierung) | ⬜ | VS Code | Sa 10.10. | frische Kopie der Live-Datenbank nach dem 09.10. | – |
@@ -136,10 +136,11 @@ hochgeladen.
 | 2.3 | Runde 2 (Okt 2024–Sep 2025), einzige Änderung: Rechtecke gestrichen. Bericht | ⬜ | VS Code | Sa/So 10.–11.10. | nur im Replay, kein Bot-Code; Kalibrierung gültig; Downloads außerhalb der Handelszeit | – |
 | 2.4 | Entscheidung nach Runde 2: liegt sie bei null oder darunter, enden die Jahresrunden des jetzigen Bots, dann Fokus auf ORB und Lern-Labor | ⬜ | Inhaber | nach 2.3 | 2.3 | – |
 | 2.5 | ORB-Studie: Regeln vorab festgelegt | ✅ 05.10. | VS Code | 05.10. | – | [Commit d48250c](../../commit/d48250c2), `orb-studie/VORAB-REGELN.md` |
-| 2.6 | ORB Jahr 1 (Okt 2025–Sep 2026) nach den Vorab-Regeln. Bericht zusätzlich mit Trefferquote, längster Verlustserie, Ergebnis geteilt durch Drawdown. Dann Stopp bis zum OK | ⏳ läuft | VS Code | sobald die Downloads durch sind | Downloads nur nach 22:00 | – |
-| 2.7 | ORB Jahr 2 (Okt 2024–Sep 2025) | ⬜ | VS Code | nach OK zu 2.6 | OK des Inhabers | – |
+| 2.6 | ORB Jahr 1 (Okt 2025–Sep 2026) nach den Vorab-Regeln. Bericht zusätzlich mit Trefferquote, längster Verlustserie, Ergebnis geteilt durch Drawdown. Dann Stopp bis zum OK | ✅ 08.10. | VS Code | 08.10. | – | 973 Trades, −0,465R, PF 0,57, Zufall 0/100: 1 von 5 Kriterien. Trefferquote 7,3 %, längste Verlustserie 46, Ergebnis/Drawdown −0,96. [Commit 98def9a](../../commit/98def9a7), `orb-jahr-1/zusammenfassung.md` auf backtest |
+| 2.7 | ORB Jahr 2 (Okt 2024–Sep 2025) | ⬜ | VS Code | nach OK zu 2.6 | OK des Inhabers, Entscheidung 2.10 | – |
 | 2.8 | Rechtecke im Live-Bot streichen | 🔬 | Inhaber | nach 2.3 | nur wenn ein Test es trägt und der Inhaber zustimmt | Runde 1: 567 Rechtecke, −0,087R je Trade |
 | 2.9 | Replay-Seite (claude.ai) nach jeder Runde aktualisieren | ✅ bis 07.10. | Chat | nach jeder Runde | – | Runde 1 mit echten Zahlen |
+| 2.10 | ORB Jahr 1 mit Ticks für die Einstiegsminute neu rechnen? 594 von 973 Trades wurden schon in ihrer Einstiegsminute gestoppt (Vorab-Regel 7, vorsichtig). Mit der Kerzenpfad-Annahme wären es +0,33R und PF 1,32, der Drawdown bliebe aber bei 119R | ⬜ | Inhaber | – | Entscheidung, ob das als Simulatorfehler gilt (Handelsregeln bleiben unverändert) | – |
 
 <a id="b3"></a>
 ## 3. Offene Punkte aus den alten Listen
@@ -200,7 +201,7 @@ eigene Mustersuche, keine automatische Optimierung) gelten weiter für die Runde
 |---|---|---|---|---|---|---|
 | 4.0.1 | Zeit im Code nur America/New_York mit echtem NYSE-Kalender (Feiertage, Halbtage); deutsche Zeit nur in Anzeigen | ✅ 08.10. | VS Code | 08.10. | – | Lernzeit-Wächter, Logbuch 08.10. |
 | 4.0.2 | Lernzeit-Wächter: an Handelstagen 22:30–15:00 (16:30–09:00 New York), am Wochenende und an Feiertagen durchgehend | ✅ 08.10. | VS Code | 08.10. | – | 17 Prüfungen grün (Logbuch 08.10.); Entwurf `lern-labor/entwuerfe/lernzeit-waechter.md` auf backtest |
-| 4.0.3 | Labor-Ordner außerhalb des Home-Bereichs, eigener Linux-Nutzer ohne Zugriff auf den Bot | ⬜ | VS Code + Inhaber | Sa/So 10.–11.10. | außerhalb der Handelszeit, Inhaber führt die Befehle mit Administratorrechten aus | – |
+| 4.0.3 | Labor-Ordner außerhalb des Home-Bereichs, eigener Linux-Nutzer ohne Zugriff auf den Bot | ⏳ gebaut | VS Code + Inhaber | Sa/So 10.–11.10. | Obergrenze 12 GB (OK 08.10.); außerhalb der Handelszeit, Inhaber führt das Skript mit Administratorrechten aus | Einrichtungsskript Teil 1 bereit (08.10.) |
 | 4.0.4 | Eigene systemd-Slice: MemoryMax 40 %, MemorySwapMax=0, CPUWeight=10, CPUQuota=200 %, IOWeight=10, Nice=19, IOSchedulingClass=idle, OOMScoreAdjust=1000 | ⬜ | VS Code + Inhaber | Sa/So 10.–11.10. | 4.0.3 | – |
 | 4.0.5 | Bot-Schutz: MemoryLow und negatives OOMScoreAdjust | ⏳ | VS Code + Inhaber | Fr 09.10. | Technik-Paket, siehe 1.4 | – |
 | 4.0.6 | Zugriff: InaccessiblePaths für Bot-Verzeichnis und Schlüssel, ProtectHome, ProtectSystem=strict, ReadWritePaths nur Labor-Ordner, NoNewPrivileges, PrivateTmp | ⬜ | VS Code + Inhaber | Sa/So 10.–11.10. | 4.0.3 | – |
@@ -208,10 +209,10 @@ eigene Mustersuche, keine automatische Optimierung) gelten weiter für die Runde
 | 4.0.8 | Timer in New-York-Zeit: Start 16:30, harter Stopp 09:00 mit Alarm; den Börsenkalender prüft der Job selbst; bei jedem Deploy pausiert alles | ⬜ | VS Code | Sa/So 10.–11.10. | 4.0.2 | – |
 | 4.0.9 | Immer nur ein schwerer Job. Vorrang: Live-Bot, Runde 2, ORB, Lern-Labor | ⬜ | VS Code | Sa/So 10.–11.10. | – | – |
 | 4.0.10 | Zwischenstände, damit ein gestoppter Job weitermachen kann | ⬜ | VS Code | Sa/So 10.–11.10. | – | Replay kann es schon |
-| 4.0.11 | Speicherwächter: Stopp unter 5 GB frei, feste Obergrenze für den Labor-Ordner, Alarm per Telegram | ⬜ | VS Code | Sa/So 10.–11.10. | 4.0.3, 6.1 | – |
+| 4.0.11 | Speicherwächter: Stopp unter 5 GB frei auf dem System, zusätzlich zur festen Obergrenze von 12 GB für den Labor-Ordner; Alarm per Telegram | ⬜ | VS Code | Sa/So 10.–11.10. | 4.0.3, 6.1 | – |
 | 4.0.12 | Harte Sperre wie im Replay: nur Marktdaten, kein Trading. Eigene Sperrliste mit SEC-EDGAR (höchstens 10 Abrufe/s, Kontakt im User-Agent nur aus der .env, nie im Repo) | ⬜ | VS Code | Sa/So 10.–11.10. | – | – |
-| 4.0.13 | Eigene Alpaca-Schlüssel (z. B. zweites Paper-Konto) in eigener .env im Labor-Ordner. Nie die Schlüssel des Bots: eigenes Abruflimit, keine Leserechte auf dessen .env. Ohne eigene Schlüssel holt das Labor auf dem Pi keine Daten | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | – | – |
-| 4.0.14 | Eigener GitHub-Token mit minimalen Rechten, nur für Ergebnisse | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | – | – |
+| 4.0.13 | Eigene Alpaca-Schlüssel (z. B. zweites Paper-Konto) in eigener .env im Labor-Ordner. Nie die Schlüssel des Bots: eigenes Abruflimit, keine Leserechte auf dessen .env. Ohne eigene Schlüssel holt das Labor auf dem Pi keine Daten | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | Anleitung 08.10.; .env-Vorlage aus 4.0.27 | – |
+| 4.0.14 | Eigener GitHub-Token mit minimalen Rechten, nur für Ergebnisse: fein abgestuft, nur dieses Repo, nur Contents lesen und schreiben, mit Ablaufdatum | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | Anleitung 08.10.; .env-Vorlage aus 4.0.27 | – |
 | 4.0.15 | Downloads nur außerhalb der Handelszeit und gedrosselt | ⬜ | VS Code | Sa/So 10.–11.10. | – | Replay-Sperre als Vorlage |
 | 4.0.16 | Datenplan mit Größe je Teil | ✅ 08.10. | VS Code | 08.10. | – | `lern-labor/datenplan.md` auf backtest |
 | 4.0.17 | Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY | ⬜ | VS Code | Sa/So 10.–11.10. | 4.0.16; auf dem PC, außerhalb der Handelszeit | – |
@@ -221,6 +222,10 @@ eigene Mustersuche, keine automatische Optimierung) gelten weiter für die Runde
 | 4.0.21 | Nächtliche Schattenbilanz (Grundgerüst) | ⬜ | VS Code | – | 4.0.8 | – |
 | 4.0.22 | Logbuch und Prüftopf-Logbuch | ✅ 08.10. | VS Code | 08.10. | – | `lern-labor/logbuch.md`, `lern-labor/prueftopf-logbuch.md` auf backtest |
 | 4.0.23 | Abschneide-Test als feste Funktion: jedes Merkmal mit allen Daten und mit Daten nur bis zum Signal, beides muss gleich sein | ✅ 08.10. | VS Code | 08.10. | – | Selbsttest: 4 eingebaute Datenlecks erkannt (Logbuch 08.10.) |
+| 4.0.24 | Speicher-Controller im Kernel des Pi einschalten. Der Pi startet mit abgeschalteter Speichersteuerung; ohne sie wirken MemoryMax (Labor) und MemoryLow (Bot) nicht, OOMScoreAdjust und die CPU-Grenzen schon | ⏳ gebaut | Inhaber + VS Code | Sa/So 10.–11.10. | OK des Inhabers 08.10.: cmdline.txt vorher sichern, nur cgroup_enable=memory anhängen, die Datei bleibt eine Zeile; Neustart außerhalb der Handelszeit, Broker flach; danach prüfen: Bot läuft, Startzeile zeigt memory.low wirksam, MemoryMax fürs Labor greift | Skript bereit und an einer Kopie getestet (08.10.) |
+| 4.0.25 | Schwere Labor-Jobs auf dem Pi erst, wenn MemoryMax nachweislich wirkt (Test im Labor-Slice) | ⬜ | VS Code | Sa/So 10.–11.10. | 4.0.24 | – |
+| 4.0.26 | Tagestrend 2020: SIP- gegen IEX-Tageskerzen messen. Unter 1 % abweichend: SIP-Vorlauf, der Suchtopf bleibt ab Okt 2020; sonst Okt 2020 bis Jan 2021 nur zum Aufwärmen | ✅ 08.10. | VS Code | 08.10. | – | 459 von 100.107 Entscheidungen abweichend (0,46 %): SIP-Vorlauf. `lern-labor/messungen/trend_sip_iex.md` auf backtest, Logbuch 08.10. |
+| 4.0.27 | .env-Vorlage des Labors: leere Zeilen, Rechte 600, gehört dem Labor-Nutzer | ⏳ gebaut | VS Code + Inhaber | Sa/So 10.–11.10. | wird mit dem Einrichtungsskript Teil 1 angelegt (4.0.3) | Vorlage bereit (08.10.) |
 
 ### Etappe 1 – Trade ja oder nein (Meta-Labeling)
 
@@ -362,7 +367,7 @@ Buchinhalte kommen nicht ins Repo.
 
 | Nr | Punkt | Status | Wer | Datum | Abhängigkeit | Beleg |
 |---|---|---|---|---|---|---|
-| 6.1 | Eigener Telegram-Bot oder Kanal fürs Lern-Labor, getrennt vom Handels-Bot. Zugang nur in die .env des Labors, nie in den Chat | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | – | – |
+| 6.1 | Eigener Telegram-Bot oder Kanal fürs Lern-Labor, getrennt vom Handels-Bot. Zugang nur in die .env des Labors, nie in den Chat | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | Anleitung 08.10. (BotFather); .env-Vorlage aus 4.0.27 | – |
 | 6.2 | Texte entwerfen: Lernen startet und stoppt, nachts eine Bilanz, Wochenbericht, Alarme, abends „Heute geschafft / Morgen dran“ | ✅ 08.10. | VS Code | 08.10. | – | Entwurf `lern-labor/entwuerfe/telegram-texte.md` auf backtest |
 | 6.3 | Einbau in den Labor-Dienst; jede Nachricht läuft durch den Prüfer (nie Schlüssel, Tokens oder Kontodaten) | ⬜ | VS Code | Sa/So 10.–11.10. | 6.1 | – |
 
@@ -426,9 +431,16 @@ Neuester Tag oben.
   - Entscheidung dazu in der Vorab-Datei.
 - Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung
   nach dem Simulatorfehler; die Zahlen sind unverändert.
+- ORB Jahr 1 fertig: 973 Trades, −0,465R, 1 von 5 Kriterien.
+  - 594 Trades wurden schon in ihrer Einstiegsminute gestoppt (vorsichtige Vorab-Regel).
+  - Die Neuberechnung mit Ticks ist vorgeschlagen, die Entscheidung liegt beim Inhaber.
+- Tagestrend SIP gegen IEX gemessen: 0,46 % abweichend, also SIP-Vorlauf; der Suchtopf bleibt ab Okt 2020.
+- Entscheidungen des Inhabers eingetragen.
+  - .env-Vorlage und Einrichtungsskripte für Etappe 0 sind vorbereitet.
+  - Der Fahrplan-Wächter prüft jetzt auch Belege, Feste Regeln und Prüfregeln.
 
 **Morgen dran (Fr 09.10.):**
 - Wochenreview.
 - Technik-Paket ab 22:30 (16:30 New York), sobald `setups/2026-10-09.json` auf main liegt. Mit dabei: Halbtag-Test,
   Speicherschutz für den Bot-Dienst und die Seiten-Dateien mit gleicher Prüfsumme. Danach ist live eingefroren.
-- ORB Jahr 1 weiter, Downloads ab 22:00.
+- ORB: Entscheidung des Inhabers zur Tick-Neuberechnung, danach Jahr 2.

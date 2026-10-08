@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "stand": "2026-10-08T13:21:28-04:00",
+ "stand": "2026-10-08T13:26:42-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
@@ -12,13 +12,13 @@
   "Halbtage geprüft, kein Fix nötig.",
   "Raster „Fahrplan“ und Lern-Labor-Seite mit Knopf sind online.",
   "Notfallplan geschrieben, die alten Listen liegen unter docs/.",
-  "Lern-Labor Etappe 0:",
-  "Befund Datenplan:",
-  "Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung"
+  "Lern-Labor Etappe 0: Lernzeit-Wächter und Abschneide-Test gebaut, beide mit Selbsttest; Logbuch, Prüftopf-Logbuch und Kandidatenliste angelegt; Datenplan erstellt: Lerntopf etwa 2,7 GB; Telegram-Texte entworfen.",
+  "Befund Datenplan: IEX-Tageskerzen gibt es erst ab August 2020, der Tagestrend ist am Anfang des Lerntopfs deshalb eingeschränkt; Entscheidung dazu in der Vorab-Datei.",
+  "Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung nach dem Simulatorfehler; die Zahlen sind unverändert."
  ],
  "als_naechstes": [
   "Wochenreview.",
-  "Technik-Paket ab 22:30 (16:30 New York), sobald setups/2026-10-09.json auf main liegt. Mit dabei: Halbtag-Test,",
+  "Technik-Paket ab 22:30 (16:30 New York), sobald setups/2026-10-09.json auf main liegt. Mit dabei: Halbtag-Test, Speicherschutz für den Bot-Dienst und die Seiten-Dateien mit gleicher Prüfsumme. Danach ist live eingefroren.",
   "ORB Jahr 1 weiter, Downloads ab 22:00."
  ],
  "bereiche": [

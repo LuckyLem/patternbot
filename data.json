@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-08T14:02:13+00:00",
- "heartbeat": "2026-10-08T14:02:13+00:00",
+ "updated": "2026-10-08T14:12:16+00:00",
+ "heartbeat": "2026-10-08T14:12:16+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9990.03,
+  "equity": 9988.68,
   "last_equity": 9991.74,
-  "day_change": -1.71,
-  "total_change": -9.97
+  "day_change": -3.06,
+  "total_change": -11.32
  },
  "positions": [
   {
@@ -16,8 +16,8 @@
    "side": "long",
    "qty": 9,
    "entry": 210.97,
-   "current": 210.78,
-   "pl": -1.71
+   "current": 210.63,
+   "pl": -3.06
   }
  ],
  "trades": [
@@ -37,7 +37,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>210.09",
-   "max_r": null,
+   "max_r": 0.01,
    "key": "t76",
    "detail": false,
    "ai_verdict": null

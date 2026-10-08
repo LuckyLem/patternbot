@@ -48,7 +48,14 @@ Ein Vorteil unter +0,10R zählt nur als „echter kleiner Vorteil“, wenn er be
 Eine spätere Änderung der Kriterien gilt nur als neue Fassung mit Begründung und neuer Commit-ID, und nur für Prüfungen, die danach festgelegt werden.
 <!-- KRITERIEN:ENDE -->
 
-Commit-ID dieses Abschnitts: wird nach dem ersten Commit dieser Datei eingetragen.
+Commit-ID dieses Abschnitts: [4c580ae](../../commit/4c580ae51667568a4d3c0d0be90d4f62ba1964c1), der erste Commit
+dieser Datei am 08.10.2026 um 19:19.
+
+SHA-256 des Abschnitts zwischen den Markierungen:
+`e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75`.
+
+Der Generator der Webseite prüft diesen Wert bei jedem Lauf. Weicht der Abschnitt ab, bricht er ab, und nichts wird
+hochgeladen.
 
 ## Feste Regeln (gelten immer)
 
@@ -115,7 +122,7 @@ Commit-ID dieses Abschnitts: wird nach dem ersten Commit dieser Datei eingetrage
 | 1.5 | Live einfrieren: danach nur Technik- und Sicherheits-Fixes mit OK | ⬜ | Inhaber | Fr 09.10. | 1.3 | – |
 | 1.6 | Wochenreview | ⬜ | VS Code | Fr 09.10. | Handelsschluss | – |
 | 1.7 | V1-Woche 05.–09.10. im Replay nachrechnen und mit Paper vergleichen (gleiche Kriterien wie die Kalibrierung) | ⬜ | VS Code | Sa 10.10. | frische Kopie der Live-Datenbank nach dem 09.10. | – |
-| 1.8 | Notfallplan schriftlich: Strom, Internet oder API fallen aus, während Positionen offen sind | ⏳ | VS Code | 08.10. | – | [docs/notfallplan.md](docs/notfallplan.md) |
+| 1.8 | Notfallplan schriftlich: Strom, Internet oder API fallen aus, während Positionen offen sind | ✅ 08.10. | VS Code | 08.10. | – | [docs/notfallplan.md](docs/notfallplan.md), [Commit 7e8a063](../../commit/7e8a063135) |
 | 1.9 | Bot-Version je Trade und Änderungsprotokoll | ⏳ gebaut | VS Code | Fr 09.10. | Technik-Paket | Prüfung nach dem Aufspielen |
 | 1.10 | Kalibrierung auf dem Pi wiederholen, bevor dort gerechnet wird | ⬜ | VS Code | vor dem ersten Lauf auf dem Pi | nur falls auf dem Pi gerechnet wird; bisher rechnet der PC (dort bestanden 06.10.) | – |
 
@@ -159,7 +166,7 @@ Nummern in Klammern = Nummer in [Fehler und Verbesserungen](docs/fehler-und-verb
 | 3.16 | (#16) Webseite zeigt den nachgezogenen Stop (Break-even) | ✅ 03.10. | VS Code | 03.10. | – | Dashboard, [Commit 80348db](../../commit/80348dbcf5) |
 | 3.17 | (#16) BK, MMC und FI liefern keine Kerzen | ⏳ gebaut | VS Code | Fr 09.10. | Technik-Paket (Universum ohne BK/MMC/FI) | – |
 | 3.18 | (#16) Bot-Version je Trade | ⏳ gebaut | VS Code | Fr 09.10. | siehe 1.9 | – |
-| 3.19 | (#16) Schriftlicher Notfallplan | ⏳ | VS Code | 08.10. | siehe 1.8 | – |
+| 3.19 | (#16) Schriftlicher Notfallplan | ✅ 08.10. | VS Code | 08.10. | – | siehe 1.8 |
 | 3.20 | (#16) Kein Echtzeit-SIP | ⬜ | Inhaber | vor Echtgeld | kostet: nur mit OK, siehe 8.6 | – |
 | 3.21 | (#16) Übrige Technikpunkte (zehn Stück, vom Buchungsfehler bis zur Log-Rotation) | ✅ bis 02.10. | VS Code | – | – | alte Liste |
 | 3.22 | Ausbrüche laufen kaum weiter | 🔬 | VS Code | – | Test | – |
@@ -191,8 +198,8 @@ eigene Mustersuche, keine automatische Optimierung) gelten weiter für die Runde
 
 | Nr | Punkt | Status | Wer | Datum | Abhängigkeit | Beleg |
 |---|---|---|---|---|---|---|
-| 4.0.1 | Zeit im Code nur America/New_York mit echtem NYSE-Kalender (Feiertage, Halbtage); deutsche Zeit nur in Anzeigen | ⏳ | VS Code | 08.10. | – | Lernzeit-Wächter |
-| 4.0.2 | Lernzeit-Wächter: an Handelstagen 22:30–15:00 (16:30–09:00 New York), am Wochenende und an Feiertagen durchgehend | ⏳ | VS Code | 08.10. | – | Entwurf `lern-labor/entwuerfe/lernzeit-waechter.md` auf backtest |
+| 4.0.1 | Zeit im Code nur America/New_York mit echtem NYSE-Kalender (Feiertage, Halbtage); deutsche Zeit nur in Anzeigen | ✅ 08.10. | VS Code | 08.10. | – | Lernzeit-Wächter, Logbuch 08.10. |
+| 4.0.2 | Lernzeit-Wächter: an Handelstagen 22:30–15:00 (16:30–09:00 New York), am Wochenende und an Feiertagen durchgehend | ✅ 08.10. | VS Code | 08.10. | – | 17 Prüfungen grün (Logbuch 08.10.); Entwurf `lern-labor/entwuerfe/lernzeit-waechter.md` auf backtest |
 | 4.0.3 | Labor-Ordner außerhalb des Home-Bereichs, eigener Linux-Nutzer ohne Zugriff auf den Bot | ⬜ | VS Code + Inhaber | Sa/So 10.–11.10. | außerhalb der Handelszeit, Inhaber führt die Befehle mit Administratorrechten aus | – |
 | 4.0.4 | Eigene systemd-Slice: MemoryMax 40 %, MemorySwapMax=0, CPUWeight=10, CPUQuota=200 %, IOWeight=10, Nice=19, IOSchedulingClass=idle, OOMScoreAdjust=1000 | ⬜ | VS Code + Inhaber | Sa/So 10.–11.10. | 4.0.3 | – |
 | 4.0.5 | Bot-Schutz: MemoryLow und negatives OOMScoreAdjust | ⏳ | VS Code + Inhaber | Fr 09.10. | Technik-Paket, siehe 1.4 | – |
@@ -206,14 +213,14 @@ eigene Mustersuche, keine automatische Optimierung) gelten weiter für die Runde
 | 4.0.13 | Eigene Alpaca-Schlüssel (z. B. zweites Paper-Konto) in eigener .env im Labor-Ordner. Nie die Schlüssel des Bots: eigenes Abruflimit, keine Leserechte auf dessen .env. Ohne eigene Schlüssel holt das Labor auf dem Pi keine Daten | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | – | – |
 | 4.0.14 | Eigener GitHub-Token mit minimalen Rechten, nur für Ergebnisse | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | – | – |
 | 4.0.15 | Downloads nur außerhalb der Handelszeit und gedrosselt | ⬜ | VS Code | Sa/So 10.–11.10. | – | Replay-Sperre als Vorlage |
-| 4.0.16 | Datenplan mit Größe je Teil | ⏳ | VS Code | 08.10. | – | `lern-labor/datenplan.md` auf backtest |
+| 4.0.16 | Datenplan mit Größe je Teil | ✅ 08.10. | VS Code | 08.10. | – | `lern-labor/datenplan.md` auf backtest |
 | 4.0.17 | Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY | ⬜ | VS Code | Sa/So 10.–11.10. | 4.0.16; auf dem PC, außerhalb der Handelszeit | – |
 | 4.0.18 | Situation zur Form point-in-time: Kurslücke, relatives Volumen, Quartalszahlen, Nachrichten. Quellen klären, nichts Kostenpflichtiges ohne OK | ⬜ | VS Code | ab Mo 12.10. | – | – |
 | 4.0.19 | Universum zum Stichtag inklusive gestrichener Werte (Überlebensverzerrung). Quelle klären | ⬜ | VS Code | ab Mo 12.10. | – | – |
 | 4.0.20 | Jeder Trade wird bewertet wie der Bot handelt: Stop, Ziel, Zeitstopp, Tagesende. Kosten wie unter Erfolgskriterien | ⬜ | VS Code | ab Mo 12.10. | schneller Simulator | – |
 | 4.0.21 | Nächtliche Schattenbilanz (Grundgerüst) | ⬜ | VS Code | – | 4.0.8 | – |
-| 4.0.22 | Logbuch und Prüftopf-Logbuch | ⏳ | VS Code | 08.10. | – | `lern-labor/logbuch.md`, `lern-labor/prueftopf-logbuch.md` auf backtest |
-| 4.0.23 | Abschneide-Test als feste Funktion: jedes Merkmal mit allen Daten und mit Daten nur bis zum Signal, beides muss gleich sein | ⏳ | VS Code | 08.10. | – | Logbuch |
+| 4.0.22 | Logbuch und Prüftopf-Logbuch | ✅ 08.10. | VS Code | 08.10. | – | `lern-labor/logbuch.md`, `lern-labor/prueftopf-logbuch.md` auf backtest |
+| 4.0.23 | Abschneide-Test als feste Funktion: jedes Merkmal mit allen Daten und mit Daten nur bis zum Signal, beides muss gleich sein | ✅ 08.10. | VS Code | 08.10. | – | Selbsttest: 4 eingebaute Datenlecks erkannt (Logbuch 08.10.) |
 
 ### Etappe 1 – Trade ja oder nein (Meta-Labeling)
 
@@ -344,7 +351,7 @@ Buchinhalte kommen nicht ins Repo.
 
 | Nr | Punkt | Status | Wer | Datum | Abhängigkeit | Beleg |
 |---|---|---|---|---|---|---|
-| 5.1 | Kandidatenliste anlegen und pflegen | ⏳ | VS Code | 08.10. | – | `lern-labor/kandidaten.md` auf backtest |
+| 5.1 | Kandidatenliste anlegen und pflegen | ✅ 08.10. | VS Code | 08.10. | – | `lern-labor/kandidaten.md` auf backtest |
 | 5.2 | López de Prado, „Advances in Financial Machine Learning“ | ⬜ | Inhaber + Chat | – | – | – |
 | 5.3 | Bellafiore, „The Playbook“ | ⬜ | Inhaber + Chat | – | – | – |
 | 5.4 | Schwager, „Market Wizards“ | ⬜ | Inhaber + Chat | – | – | – |
@@ -356,7 +363,7 @@ Buchinhalte kommen nicht ins Repo.
 | Nr | Punkt | Status | Wer | Datum | Abhängigkeit | Beleg |
 |---|---|---|---|---|---|---|
 | 6.1 | Eigener Telegram-Bot oder Kanal fürs Lern-Labor, getrennt vom Handels-Bot. Zugang nur in die .env des Labors, nie in den Chat | ⬜ | Inhaber | vor dem ersten Lauf auf dem Pi | – | – |
-| 6.2 | Texte entwerfen: Lernen startet und stoppt, nachts eine Bilanz, Wochenbericht, Alarme, abends „Heute geschafft / Morgen dran“ | ⏳ | VS Code | 08.10. | – | `lern-labor/entwuerfe/telegram-texte.md` auf backtest |
+| 6.2 | Texte entwerfen: Lernen startet und stoppt, nachts eine Bilanz, Wochenbericht, Alarme, abends „Heute geschafft / Morgen dran“ | ✅ 08.10. | VS Code | 08.10. | – | Entwurf `lern-labor/entwuerfe/telegram-texte.md` auf backtest |
 | 6.3 | Einbau in den Labor-Dienst; jede Nachricht läuft durch den Prüfer (nie Schlüssel, Tokens oder Kontodaten) | ⬜ | VS Code | Sa/So 10.–11.10. | 6.1 | – |
 
 <a id="b7"></a>
@@ -364,9 +371,9 @@ Buchinhalte kommen nicht ins Repo.
 
 | Nr | Punkt | Status | Wer | Datum | Abhängigkeit | Beleg |
 |---|---|---|---|---|---|---|
-| 7.1 | Raster „Fahrplan“ im Dashboard: eine Kachel je Bereich, darüber „Zuletzt geschafft“ und „Als Nächstes“ | ⏳ | VS Code | 08.10. | `fahrplan.json` | – |
-| 7.2 | Lern-Labor-Seite mit Knopf im Dashboard; Daten als JSON vom Branch backtest | ⏳ | VS Code | 08.10. | – | – |
-| 7.3 | Generator für `lern-labor/status.json`: heute vom PC, später jede Nacht vom Pi | ⏳ | VS Code | 08.10. | – | – |
+| 7.1 | Raster „Fahrplan“ im Dashboard: eine Kachel je Bereich, darüber „Zuletzt geschafft“ und „Als Nächstes“ | ✅ 08.10. | VS Code | 08.10. | `fahrplan.json` | [Commit 1faf3c1](../../commit/1faf3c1330) |
+| 7.2 | Lern-Labor-Seite mit Knopf im Dashboard; Daten als JSON vom Branch backtest | ✅ 08.10. | VS Code | 08.10. | – | `labor.html`, [Commit cbc3202](../../commit/cbc320241b) |
+| 7.3 | Generator für `lern-labor/status.json`: heute vom PC, später jede Nacht vom Pi | ⏳ | VS Code | ab Sa/So 10.–11.10. | Etappe 0 auf dem Pi | vom PC seit 08.10. |
 | 7.4 | Auf der Lern-Labor-Seite: gefundene Muster als Bilder, Schattenbilanz je Modell und Muster, Versionen, Wochenberichte | ⬜ | VS Code | – | Etappen 2 und 4 | Leerzustände stehen |
 | 7.5 | Seiten-Dateien mit gleicher Prüfsumme ins Technik-Paket, damit ein späteres Hochladen der Dashboard-Seite nichts überschreibt | ⏳ | VS Code | Fr 09.10. | 1.3 | – |
 
@@ -402,13 +409,26 @@ Neuester Tag oben.
 ### Do 08.10.2026
 
 **Geschafft:**
-- Fahrplan angelegt, Erfolgskriterien wörtlich übernommen.
+- Fahrplan angelegt, Erfolgskriterien wörtlich übernommen (Commit 4c580ae).
 - Halbtage geprüft, kein Fix nötig.
   - Der Bot rechnet das Einstiegsende und die Glattstellung mit dem Börsenschluss aus der Broker-Uhr.
   - Der Börsenkalender des Brokers führt den 27.11. und den 24.12. mit Schluss 13:00 New York.
   - Damit gilt an beiden Tagen: letzte Einstiege 18:30 (12:30 New York), Glattstellung 18:50 (12:50 New York).
+- Raster „Fahrplan“ und Lern-Labor-Seite mit Knopf sind online.
+- Notfallplan geschrieben, die alten Listen liegen unter docs/.
+- Lern-Labor Etappe 0:
+  - Lernzeit-Wächter und Abschneide-Test gebaut, beide mit Selbsttest.
+  - Logbuch, Prüftopf-Logbuch und Kandidatenliste angelegt.
+  - Datenplan erstellt: Lerntopf etwa 2,7 GB.
+  - Telegram-Texte entworfen.
+- Befund Datenplan:
+  - IEX-Tageskerzen gibt es erst ab August 2020, der Tagestrend ist am Anfang des Lerntopfs deshalb eingeschränkt.
+  - Die Entscheidung dazu kommt in die Vorab-Datei.
+- Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung
+  nach dem Simulatorfehler; die Zahlen sind unverändert.
 
 **Morgen dran (Fr 09.10.):**
 - Wochenreview.
-- Technik-Paket ab 22:30 (16:30 New York), sobald `setups/2026-10-09.json` auf main liegt; danach live eingefroren.
+- Technik-Paket ab 22:30 (16:30 New York), sobald `setups/2026-10-09.json` auf main liegt. Mit dabei: Halbtag-Test,
+  Speicherschutz für den Bot-Dienst und die Seiten-Dateien mit gleicher Prüfsumme. Danach ist live eingefroren.
 - ORB Jahr 1 weiter, Downloads ab 22:00.

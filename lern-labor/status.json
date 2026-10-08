@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "stand": "2026-10-08T13:21:28-04:00",
+ "stand": "2026-10-08T16:48:50-04:00",
  "quelle": "PC",
- "code_labor": "e52378c6f0cd",
+ "code_labor": "dfaa701a76f7",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
@@ -246,8 +246,25 @@
   {
    "name": "ORB Jahr 1",
    "zeitraum": "Okt 2025–Sep 2026",
-   "text": "nach den Vorab-Regeln (Commit d48250c); Downloads nur außerhalb der Handelszeit",
-   "status": "läuft"
+   "text": "1 von 5 Kriterien erfüllt · 594 von 973 Trades schon in der Einstiegsminute gestoppt (vorsichtige Vorab-Regel), Neuberechnung mit Ticks vorgeschlagen",
+   "status": "fertig",
+   "ziel": false,
+   "werte": {
+    "trades": 973,
+    "ev_r": -0.465,
+    "pf": 0.57,
+    "max_dd_r": 469.65,
+    "zufall": 0
+   },
+   "kriterien": [
+    true,
+    false,
+    false,
+    false,
+    false
+   ],
+   "beleg": "orb-jahr-1/zusammenfassung.md",
+   "datum": "2026-10-08"
   }
  ],
  "muster": [],

@@ -75,3 +75,15 @@ Wird nur ergänzt, nie geändert.
 - Die Kopfzeile von `runde-1/zusammenfassung.md` (hochgeladen mit Commit 91526e9) nannte die Rechnung vom 06.10. irrtümlich „erstes Rechnen, unverändert“.
 - Richtig ist: Neuberechnung nach dem Simulatorfehler (Fehlkurse im Tick-Pfad), Regeln unverändert, wie im Eintrag „Runde 1 · 06.10.2026 21:16“ oben.
 - Korrigiert wurde nur diese Kopfzeile; alle Zahlen bleiben.
+## ORB-Studie · Jahr 2025-10-01..2026-09-30 · 08.10.2026 22:18
+- Regeln vorab festgelegt (Commit `d48250c2`), unverändert
+- Hauptvariante: 973 Trades · Erwartungswert n.K. -0.465R · PF 0.57 · max. DD 469.65R · Zufall 0/100 · Ziel nein
+- Nachbarwerte (Information): or15 -0.386R · or30 -0.448R · stop5 -1.072R · stop20 -0.196R · top10 -0.349R · top20 -0.433R
+- Code: ORB `orb/` sha256 `59213253980c`, `bt/` sha256 `61750fbbc22e`.
+- Beschlossene Korrekturen: keine (Regeln fest; neue Ideen brauchen ein frisches Jahr)
+
+
+## Diagnose ORB Jahr 1 · 08.10.2026 22:48
+- 594 von 973 Trades der Hauptvariante wurden in ihrer Einstiegsminute gestoppt (Vorab-Regel 7, vorsichtig gerechnet).
+- Nur zur Information: Mit der Kerzenpfad-Annahme wären es +0,329R (PF 1,32, DD 119R), mit der günstigsten Grenze +0,400R (PF 1,39, DD 119R). Gezählt bleibt −0,465R.
+- Vorschlag: Neuberechnung mit Ticks für die Einstiegsminute, Handelsregeln unverändert. Die Entscheidung des Inhabers ist offen.

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-08T15:33:16+00:00",
- "heartbeat": "2026-10-08T15:33:16+00:00",
+ "updated": "2026-10-08T15:43:26+00:00",
+ "heartbeat": "2026-10-08T15:43:26+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9987.92,
+  "equity": 9986.43,
   "last_equity": 9991.74,
-  "day_change": -3.82,
-  "total_change": -12.08
+  "day_change": -5.31,
+  "total_change": -13.57
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 9,
    "entry": 210.97,
-   "current": 211.13,
-   "pl": 1.44
+   "current": 211.34,
+   "pl": 3.33
   },
   {
    "symbol": "IBM",
    "side": "short",
    "qty": 9,
    "entry": 218.92,
-   "current": 219.5,
-   "pl": -5.26
+   "current": 219.88,
+   "pl": -8.64
   }
  ],
  "trades": [

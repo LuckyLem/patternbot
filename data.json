@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-09T19:46:25+00:00",
- "heartbeat": "2026-10-09T19:46:25+00:00",
+ "updated": "2026-10-09T19:56:33+00:00",
+ "heartbeat": "2026-10-09T19:56:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10000.44,
+  "equity": 9998.24,
   "last_equity": 10006.27,
-  "day_change": -5.83,
-  "total_change": 0.44
+  "day_change": -8.03,
+  "total_change": -1.76
  },
- "positions": [
-  {
-   "symbol": "FISV",
-   "side": "short",
-   "qty": 44,
-   "entry": 45.34,
-   "current": 45.35,
-   "pl": -0.43
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "FISV",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-10-09",
    "opened": "2026-10-09T19:00:39.687950+00:00",
-   "closed": null,
+   "closed": "2026-10-09T19:50:30.502768233+00:00",
    "entry": 45.34,
    "stop": 45.65,
    "target": 44.76,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 45.4,
+   "pnl": -2.63,
+   "r": -0.196,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "desc_triangle break<45.39",
    "max_r": 0.08,
    "key": "t80",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 77,
-  "pnl": 22.22,
-  "winrate": 0.468,
-  "expectancy": 0.003,
-  "pf": 1.06,
+  "n": 78,
+  "pnl": 19.59,
+  "winrate": 0.462,
+  "expectancy": -0.0,
+  "pf": 1.05,
   "avg_win": 10.91,
-  "avg_loss": -9.04
+  "avg_loss": -8.89
  },
  "equity_curve": [
   {

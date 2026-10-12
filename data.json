@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-12T14:10:16+00:00",
- "heartbeat": "2026-10-12T14:10:16+00:00",
+ "updated": "2026-10-12T14:20:32+00:00",
+ "heartbeat": "2026-10-12T14:20:32+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10010.23,
+  "equity": 10002.15,
   "last_equity": 9998.14,
-  "day_change": 12.09,
-  "total_change": 10.23
+  "day_change": 4.01,
+  "total_change": 2.15
  },
  "positions": [
   {
@@ -16,11 +16,40 @@
    "side": "long",
    "qty": 22,
    "entry": 88.67,
-   "current": 89.22,
-   "pl": 12.09
+   "current": 89.08,
+   "pl": 9.01
+  },
+  {
+   "symbol": "TSLA",
+   "side": "short",
+   "qty": 5,
+   "entry": 379.69,
+   "current": 380.74,
+   "pl": -5.22
   }
  ],
  "trades": [
+  {
+   "symbol": "TSLA",
+   "pattern": "DoubleTop",
+   "side": "short",
+   "day": "2026-10-12",
+   "opened": "2026-10-12T14:15:28.004822+00:00",
+   "closed": null,
+   "entry": 379.69,
+   "stop": 388.51,
+   "target": 371.36,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "double_top neckline_break<379.74",
+   "max_r": null,
+   "key": "t82",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "KO",
    "pattern": "Rectangle",
@@ -37,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>88.47",
-   "max_r": 0.52,
+   "max_r": 0.53,
    "key": "t81",
    "detail": false,
    "ai_verdict": null
@@ -1259,27 +1288,6 @@
    "key": "t21",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "BKNG",
-   "pattern": "Rectangle",
-   "side": "short",
-   "day": "2026-09-23",
-   "opened": "2026-09-23T13:58:35.783944+00:00",
-   "closed": "2026-09-23T15:59:57.363452+00:00",
-   "entry": 157.25,
-   "stop": 166.96,
-   "target": 148.6,
-   "exit": 156.65,
-   "pnl": 3.0,
-   "r": 0.062,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "rectangle break<160.84",
-   "max_r": 0.18,
-   "key": "t20",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1435,17 +1443,17 @@
  ],
  "funnel": {
   "day": "2026-10-12",
-  "setups": 21,
-  "orders": 1,
-  "filled": 1,
+  "setups": 26,
+  "orders": 2,
+  "filled": 2,
   "unfilled": 0,
-  "traded": 1,
+  "traded": 2,
   "coverage_from": "2026-10-12T13:50:44.185457+00:00",
   "rejected": {
-   "skip-chase": 4,
+   "skip-chase": 5,
    "skip-spread": 1,
    "skip-stale": 1,
-   "skip-vol": 14
+   "skip-vol": 17
   }
  },
  "funnel_days": [
@@ -1606,17 +1614,17 @@
   },
   {
    "day": "2026-10-12",
-   "setups": 21,
-   "orders": 1,
-   "filled": 1,
+   "setups": 26,
+   "orders": 2,
+   "filled": 2,
    "unfilled": 0,
-   "traded": 1,
+   "traded": 2,
    "coverage_from": "2026-10-12T13:50:44.185457+00:00",
    "rejected": {
-    "skip-chase": 4,
+    "skip-chase": 5,
     "skip-spread": 1,
     "skip-stale": 1,
-    "skip-vol": 14
+    "skip-vol": 17
    }
   }
  ],

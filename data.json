@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-12T19:40:25+00:00",
- "heartbeat": "2026-10-12T19:40:25+00:00",
+ "updated": "2026-10-12T19:50:35+00:00",
+ "heartbeat": "2026-10-12T19:50:35+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10010.23,
+  "equity": 10013.98,
   "last_equity": 9998.14,
-  "day_change": 12.09,
-  "total_change": 10.23
+  "day_change": 15.84,
+  "total_change": 13.98
  },
- "positions": [
-  {
-   "symbol": "MET",
-   "side": "long",
-   "qty": 19,
-   "entry": 100.04,
-   "current": 99.89,
-   "pl": -2.85
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "MET",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-10-12",
    "opened": "2026-10-12T18:00:33.122999+00:00",
-   "closed": null,
+   "closed": "2026-10-12T19:50:31.707357174+00:00",
    "entry": 100.04,
    "stop": 98.3,
    "target": 102.9,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 100.09,
+   "pnl": 0.9,
+   "r": 0.027,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "rectangle break>99.83",
-   "max_r": null,
+   "max_r": 0.03,
    "key": "t83",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 80,
-  "pnl": 34.53,
-  "winrate": 0.475,
+  "n": 81,
+  "pnl": 35.43,
+  "winrate": 0.481,
   "expectancy": 0.007,
   "pf": 1.09,
-  "avg_win": 10.73,
+  "avg_win": 10.48,
   "avg_loss": -8.89
  },
  "equity_curve": [

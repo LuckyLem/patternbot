@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-10-12T20:01:24+00:00",
- "heartbeat": "2026-10-12T20:01:24+00:00",
+ "updated": "2026-10-12T20:05:36+00:00",
+ "heartbeat": "2026-10-12T20:05:36+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1623,6 +1623,14 @@
   "universe": 150
  },
  "review": {
+  "title": "Tagesreview 2026-10-12",
+  "kind": "daily",
+  "day": "2026-10-12",
+  "markdown": "# Tagesreview 2026-10-12\n\n_Erstellt 2026-10-12 20:05 UTC | Datenbasis: Handelstag 2026-10-12 | 3 Trade(s) erfasst_\n\n## 1. Zahlen\n\n| Kennzahl | Wert | Gesund? |\n|---|---|---|\n| Abgeschlossene Trades | 3 | zu wenig fuer ein Urteil |\n| Trefferquote | 100% | - |\n| Ergebnis | +15.84 $ | OK |\n| Durchschn. Gewinn / Verlust | +5.28 / -0.00 $ | OK Gewinner groesser |\n| **Erwartungswert je Trade** | **+0.19R** | OK positiv |\n\n> **3 Trades sind statistisch noch kein Urteil.** Aussagekraeftig wird es ab ca. 60. Alles hier ist Beobachtung, noch kein Beweis.\n\n## 2. Aufschluesselung\n\n**Nach Pattern**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| DoubleTop | 1 | 1 | +5.05 $ | +0.11 |\n| Rectangle | 2 | 2 | +10.79 $ | +0.23 |\n\n**Nach Ausstiegsgrund**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Tagesende-Glattstellung | 1 | 1 | +0.90 $ | +0.03 |\n| Zeit-Stop (Pattern-Zeitfenster abgelaufen) | 2 | 2 | +14.94 $ | +0.27 |\n\n**Nach Richtung**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Short | 1 | 1 | +5.05 $ | +0.11 |\n| Long | 2 | 2 | +10.79 $ | +0.23 |\n\n## 3. Jeder einzelne Trade\n\n#### KO - Rectangle (LONG)\n\n- **Warum eingestiegen:** rectangle break>88.47\n- **Plan:** Einstieg 88.67 | Stop 87.61 | Ziel 90.21 | 22 Stueck\n- **Warum ausgestiegen:** Zeit-Stop (Pattern-Zeitfenster abgelaufen)\n- **Ergebnis:** Ausstieg 89.12 | **+9.89 $** | +0.42R\n- **Haltedauer:** 121 Minuten\n- Hoechststand im Trade: +0.53R\n\n#### TSLA - DoubleTop (SHORT)\n\n- **Warum eingestiegen:** double_top neckline_break<379.74\n- **Plan:** Einstieg 379.69 | Stop 388.51 | Ziel 371.36 | 5 Stueck\n- **Warum ausgestiegen:** Zeit-Stop (Pattern-Zeitfenster abgelaufen)\n- **Ergebnis:** Ausstieg 378.68 | **+5.05 $** | +0.11R\n- **Haltedauer:** 121 Minuten\n- Hoechststand im Trade: +0.16R\n\n#### MET - Rectangle (LONG)\n\n- **Warum eingestiegen:** rectangle break>99.83\n- **Plan:** Einstieg 100.04 | Stop 98.30 | Ziel 102.90 | 19 Stueck\n- **Warum ausgestiegen:** Tagesende-Glattstellung\n- **Ergebnis:** Ausstieg 100.09 | **+0.90 $** | +0.03R\n- **Haltedauer:** 110 Minuten\n- Hoechststand im Trade: +0.03R\n\n## 4. Filter\n\n**Was der Bot bewusst NICHT gehandelt hat** (die Filter sind die halbe Strategie)\n\n| Filter | Abgelehnt | Warum |\n|---|---|---|\n| `skip-vol` | 106 | zu wenig Volumen beim Ausbruch (Ausbrueche ohne Volumen scheitern meist) |\n| `skip-chase` | 5 | Preis war schon aus der Einstiegszone gelaufen (kein Hinterherjagen) |\n| `skip-spread` | 5 | - |\n| `skip-dup` | 2 | - |\n| `skip-stale` | 2 | Signal war zu alt (Pattern nicht mehr gueltig) |\n| `skip-rr` | 1 | - |\n\n## 5. Bewertung\n\n### Was funktioniert hat\n\n- _Nichts mit genug Datenpunkten (mind. 3 Trades) war klar positiv._\n\n### Was nicht funktioniert hat\n\n- _Keine wiederkehrenden Probleme erkennbar._\n",
+  "headline": "3 Trade(s), +15.84 $. Statistisch noch kein Urteil - aussagekraeftig ab ca. 60.",
+  "ai": false
+ },
+ "review_week": {
   "title": "Wochenreview 2026-10-09",
   "kind": "weekly",
   "day": "2026-10-09",

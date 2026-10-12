@@ -1,31 +1,23 @@
 {
  "version": 1,
- "updated": "2026-10-12T15:46:30+00:00",
- "heartbeat": "2026-10-12T15:46:30+00:00",
+ "updated": "2026-10-12T15:56:41+00:00",
+ "heartbeat": "2026-10-12T15:56:41+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10007.83,
+  "equity": 10005.18,
   "last_equity": 9998.14,
-  "day_change": 9.69,
-  "total_change": 7.83
+  "day_change": 7.04,
+  "total_change": 5.18
  },
  "positions": [
-  {
-   "symbol": "KO",
-   "side": "long",
-   "qty": 22,
-   "entry": 88.67,
-   "current": 89.05,
-   "pl": 8.24
-  },
   {
    "symbol": "TSLA",
    "side": "short",
    "qty": 5,
    "entry": 379.69,
-   "current": 379.4,
-   "pl": 1.45
+   "current": 380.25,
+   "pl": -2.8
   }
  ],
  "trades": [
@@ -56,19 +48,19 @@
    "side": "long",
    "day": "2026-10-12",
    "opened": "2026-10-12T13:50:45.219924+00:00",
-   "closed": null,
+   "closed": "2026-10-12T15:51:39.236427864+00:00",
    "entry": 88.67,
    "stop": 87.61,
    "target": 90.21,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 89.12,
+   "pnl": 9.89,
+   "r": 0.423,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>88.47",
    "max_r": 0.53,
    "key": "t81",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,12 +1283,12 @@
   }
  ],
  "stats": {
-  "n": 78,
-  "pnl": 19.59,
-  "winrate": 0.462,
-  "expectancy": -0.0,
-  "pf": 1.05,
-  "avg_win": 10.91,
+  "n": 79,
+  "pnl": 29.48,
+  "winrate": 0.468,
+  "expectancy": 0.005,
+  "pf": 1.08,
+  "avg_win": 10.88,
   "avg_loss": -8.89
  },
  "equity_curve": [

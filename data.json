@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-12T15:03:34+00:00",
- "heartbeat": "2026-10-12T15:03:34+00:00",
+ "updated": "2026-10-12T15:13:42+00:00",
+ "heartbeat": "2026-10-12T15:13:42+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10002.81,
+  "equity": 10006.1,
   "last_equity": 9998.14,
-  "day_change": 4.67,
-  "total_change": 2.81
+  "day_change": 7.96,
+  "total_change": 6.1
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 22,
    "entry": 88.67,
-   "current": 88.96,
-   "pl": 6.37
+   "current": 89.05,
+   "pl": 8.24
   },
   {
    "symbol": "TSLA",
    "side": "short",
    "qty": 5,
    "entry": 379.69,
-   "current": 380.03,
-   "pl": -1.7
+   "current": 379.69,
+   "pl": 0.0
   }
  ],
  "trades": [

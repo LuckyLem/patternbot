@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-13T19:30:10+00:00",
- "heartbeat": "2026-10-13T19:30:10+00:00",
+ "updated": "2026-10-13T19:40:23+00:00",
+ "heartbeat": "2026-10-13T19:40:23+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10006.43,
+  "equity": 10013.27,
   "last_equity": 10013.85,
-  "day_change": -7.42,
-  "total_change": 6.43
+  "day_change": -0.58,
+  "total_change": 13.27
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 5,
    "entry": 356.94,
-   "current": 358.36,
-   "pl": 7.1
+   "current": 358.38,
+   "pl": 7.2
   },
   {
    "symbol": "ETN",
    "side": "long",
    "qty": 4,
    "entry": 428.36,
-   "current": 429.12,
-   "pl": 3.06
+   "current": 430.85,
+   "pl": 9.94
   },
   {
    "symbol": "MRK",
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>428.15",
-   "max_r": 0.28,
+   "max_r": 0.45,
    "key": "t89",
    "detail": false,
    "ai_verdict": null
@@ -95,7 +95,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "double_bottom neckline_break>356.77",
-   "max_r": 0.17,
+   "max_r": 0.25,
    "key": "t87",
    "detail": false,
    "ai_verdict": null

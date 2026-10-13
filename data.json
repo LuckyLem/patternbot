@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-13T15:44:51+00:00",
- "heartbeat": "2026-10-13T15:44:51+00:00",
+ "updated": "2026-10-13T15:55:45+00:00",
+ "heartbeat": "2026-10-13T15:55:45+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10007.19,
+  "equity": 10004.23,
   "last_equity": 10013.85,
-  "day_change": -6.66,
-  "total_change": 7.19
+  "day_change": -9.62,
+  "total_change": 4.23
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "short",
    "qty": 37,
    "entry": 53.93,
-   "current": 54.23,
-   "pl": -11.02
+   "current": 54.13,
+   "pl": -7.59
   },
   {
    "symbol": "CVX",
    "side": "long",
    "qty": 9,
    "entry": 217.82,
-   "current": 218.72,
-   "pl": 8.1
+   "current": 218.22,
+   "pl": 3.59
   },
   {
    "symbol": "PH",
    "side": "short",
    "qty": 2,
    "entry": 947.37,
-   "current": 949.24,
-   "pl": -3.74
+   "current": 950.18,
+   "pl": -5.62
   }
  ],
  "trades": [
@@ -74,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>216.65",
-   "max_r": 0.24,
+   "max_r": 0.25,
    "key": "t85",
    "detail": false,
    "ai_verdict": null
@@ -1455,7 +1455,7 @@
  ],
  "funnel": {
   "day": "2026-10-13",
-  "setups": 59,
+  "setups": 60,
   "orders": 3,
   "filled": 3,
   "unfilled": 0,
@@ -1465,7 +1465,7 @@
    "skip-chase": 9,
    "skip-rr": 1,
    "skip-spread": 9,
-   "skip-vol": 37
+   "skip-vol": 38
   }
  },
  "funnel_days": [
@@ -1627,7 +1627,7 @@
   },
   {
    "day": "2026-10-13",
-   "setups": 59,
+   "setups": 60,
    "orders": 3,
    "filled": 3,
    "unfilled": 0,
@@ -1637,7 +1637,7 @@
     "skip-chase": 9,
     "skip-rr": 1,
     "skip-spread": 9,
-    "skip-vol": 37
+    "skip-vol": 38
    }
   }
  ],

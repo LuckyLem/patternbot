@@ -1,41 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-13T19:40:23+00:00",
- "heartbeat": "2026-10-13T19:40:23+00:00",
+ "updated": "2026-10-13T19:50:53+00:00",
+ "heartbeat": "2026-10-13T19:50:53+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10013.27,
+  "equity": 10003.91,
   "last_equity": 10013.85,
-  "day_change": -0.58,
-  "total_change": 13.27
+  "day_change": -9.94,
+  "total_change": 3.91
  },
- "positions": [
-  {
-   "symbol": "AVGO",
-   "side": "long",
-   "qty": 5,
-   "entry": 356.94,
-   "current": 358.38,
-   "pl": 7.2
-  },
-  {
-   "symbol": "ETN",
-   "side": "long",
-   "qty": 4,
-   "entry": 428.36,
-   "current": 430.85,
-   "pl": 9.94
-  },
-  {
-   "symbol": "MRK",
-   "side": "short",
-   "qty": 14,
-   "entry": 142.15,
-   "current": 141.91,
-   "pl": 3.42
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "ETN",
@@ -43,19 +18,19 @@
    "side": "long",
    "day": "2026-10-13",
    "opened": "2026-10-13T18:15:37.372887+00:00",
-   "closed": null,
+   "closed": "2026-10-13T19:50:40.454948582+00:00",
    "entry": 428.36,
    "stop": 422.82,
    "target": 439.29,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 428.95,
+   "pnl": 2.38,
+   "r": 0.107,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "inverse_H&S neckline_break>428.15",
    "max_r": 0.45,
    "key": "t89",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -64,19 +39,19 @@
    "side": "short",
    "day": "2026-10-13",
    "opened": "2026-10-13T18:15:35.590484+00:00",
-   "closed": null,
+   "closed": "2026-10-13T19:50:44.783887415+00:00",
    "entry": 142.15,
    "stop": 143.45,
    "target": 139.25,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 141.82,
+   "pnl": 4.62,
+   "r": 0.254,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "H&S neckline_break<142.59",
    "max_r": 0.42,
    "key": "t88",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -85,19 +60,19 @@
    "side": "long",
    "day": "2026-10-13",
    "opened": "2026-10-13T18:15:34.807940+00:00",
-   "closed": null,
+   "closed": "2026-10-13T19:50:36.928070115+00:00",
    "entry": 356.94,
    "stop": 347.97,
    "target": 365.23,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 357.75,
+   "pnl": 4.06,
+   "r": 0.091,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "double_bottom neckline_break>356.77",
    "max_r": 0.25,
    "key": "t87",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1299,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 84,
-  "pnl": 14.43,
-  "winrate": 0.464,
-  "expectancy": -0.003,
-  "pf": 1.04,
-  "avg_win": 10.48,
+  "n": 87,
+  "pnl": 25.49,
+  "winrate": 0.483,
+  "expectancy": 0.002,
+  "pf": 1.06,
+  "avg_win": 9.99,
   "avg_loss": -8.76
  },
  "equity_curve": [

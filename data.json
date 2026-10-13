@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-13T14:43:10+00:00",
- "heartbeat": "2026-10-13T14:43:10+00:00",
+ "updated": "2026-10-13T14:53:18+00:00",
+ "heartbeat": "2026-10-13T14:53:18+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10002.27,
+  "equity": 10004.12,
   "last_equity": 10013.85,
-  "day_change": -11.58,
-  "total_change": 2.27
+  "day_change": -9.73,
+  "total_change": 4.12
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 37,
    "entry": 53.93,
-   "current": 54.25,
-   "pl": -11.85
+   "current": 54.3,
+   "pl": -13.51
   },
   {
    "symbol": "CVX",
    "side": "long",
    "qty": 9,
    "entry": 217.82,
-   "current": 217.85,
-   "pl": 0.27
+   "current": 218.2,
+   "pl": 3.42
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>216.65",
-   "max_r": 0.05,
+   "max_r": 0.11,
    "key": "t85",
    "detail": false,
    "ai_verdict": null
@@ -1447,17 +1447,17 @@
  ],
  "funnel": {
   "day": "2026-10-13",
-  "setups": 36,
+  "setups": 44,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
   "traded": 2,
   "coverage_from": "2026-10-13T13:50:26.774692+00:00",
   "rejected": {
-   "skip-chase": 8,
+   "skip-chase": 9,
    "skip-rr": 1,
-   "skip-spread": 6,
-   "skip-vol": 19
+   "skip-spread": 8,
+   "skip-vol": 24
   }
  },
  "funnel_days": [
@@ -1619,17 +1619,17 @@
   },
   {
    "day": "2026-10-13",
-   "setups": 36,
+   "setups": 44,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
    "traded": 2,
    "coverage_from": "2026-10-13T13:50:26.774692+00:00",
    "rejected": {
-    "skip-chase": 8,
+    "skip-chase": 9,
     "skip-rr": 1,
-    "skip-spread": 6,
-    "skip-vol": 19
+    "skip-spread": 8,
+    "skip-vol": 24
    }
   }
  ],

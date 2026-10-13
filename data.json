@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-13T18:39:03+00:00",
- "heartbeat": "2026-10-13T18:39:03+00:00",
+ "updated": "2026-10-13T18:49:12+00:00",
+ "heartbeat": "2026-10-13T18:49:12+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9995.61,
+  "equity": 9983.39,
   "last_equity": 10013.85,
-  "day_change": -18.24,
-  "total_change": -4.39
+  "day_change": -30.46,
+  "total_change": -16.61
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 5,
    "entry": 356.94,
-   "current": 357.58,
-   "pl": 3.2
+   "current": 356.18,
+   "pl": -3.8
   },
   {
    "symbol": "ETN",
    "side": "long",
    "qty": 4,
    "entry": 428.36,
-   "current": 428.17,
-   "pl": -0.78
+   "current": 426.75,
+   "pl": -6.42
   },
   {
    "symbol": "MRK",
    "side": "short",
    "qty": 14,
    "entry": 142.15,
-   "current": 142.13,
-   "pl": 0.34
+   "current": 142.1,
+   "pl": 0.76
   }
  ],
  "trades": [
@@ -1455,7 +1455,7 @@
  ],
  "funnel": {
   "day": "2026-10-13",
-  "setups": 122,
+  "setups": 135,
   "orders": 6,
   "filled": 6,
   "unfilled": 0,
@@ -1467,7 +1467,7 @@
    "skip-rr": 2,
    "skip-spread": 11,
    "skip-stale": 4,
-   "skip-vol": 87
+   "skip-vol": 100
   }
  },
  "funnel_days": [
@@ -1629,7 +1629,7 @@
   },
   {
    "day": "2026-10-13",
-   "setups": 122,
+   "setups": 135,
    "orders": 6,
    "filled": 6,
    "unfilled": 0,
@@ -1641,7 +1641,7 @@
     "skip-rr": 2,
     "skip-spread": 11,
     "skip-stale": 4,
-    "skip-vol": 87
+    "skip-vol": 100
    }
   }
  ],

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-13T14:33:03+00:00",
- "heartbeat": "2026-10-13T14:33:03+00:00",
+ "updated": "2026-10-13T14:43:10+00:00",
+ "heartbeat": "2026-10-13T14:43:10+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10007.96,
+  "equity": 10002.27,
   "last_equity": 10013.85,
-  "day_change": -5.89,
-  "total_change": 7.96
+  "day_change": -11.58,
+  "total_change": 2.27
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 37,
    "entry": 53.93,
-   "current": 54.05,
-   "pl": -4.45
+   "current": 54.25,
+   "pl": -11.85
   },
   {
    "symbol": "CVX",
    "side": "long",
    "qty": 9,
    "entry": 217.82,
-   "current": 217.66,
-   "pl": -1.44
+   "current": 217.85,
+   "pl": 0.27
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>216.65",
-   "max_r": null,
+   "max_r": 0.05,
    "key": "t85",
    "detail": false,
    "ai_verdict": null

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-13T19:09:47+00:00",
- "heartbeat": "2026-10-13T19:09:47+00:00",
+ "updated": "2026-10-13T19:19:58+00:00",
+ "heartbeat": "2026-10-13T19:19:58+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10002.94,
+  "equity": 10009.24,
   "last_equity": 10013.85,
-  "day_change": -10.91,
-  "total_change": 2.94
+  "day_change": -4.61,
+  "total_change": 9.24
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 5,
    "entry": 356.94,
-   "current": 357.67,
-   "pl": 3.65
+   "current": 358.27,
+   "pl": 6.65
   },
   {
    "symbol": "ETN",
    "side": "long",
    "qty": 4,
    "entry": 428.36,
-   "current": 429.08,
-   "pl": 2.88
+   "current": 429.73,
+   "pl": 5.48
   },
   {
    "symbol": "MRK",
    "side": "short",
    "qty": 14,
    "entry": 142.15,
-   "current": 141.9,
-   "pl": 3.56
+   "current": 141.85,
+   "pl": 4.26
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>428.15",
-   "max_r": 0.13,
+   "max_r": 0.23,
    "key": "t89",
    "detail": false,
    "ai_verdict": null
@@ -95,7 +95,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "double_bottom neckline_break>356.77",
-   "max_r": 0.14,
+   "max_r": 0.15,
    "key": "t87",
    "detail": false,
    "ai_verdict": null
@@ -1455,7 +1455,7 @@
  ],
  "funnel": {
   "day": "2026-10-13",
-  "setups": 139,
+  "setups": 146,
   "orders": 6,
   "filled": 6,
   "unfilled": 0,
@@ -1463,11 +1463,11 @@
   "coverage_from": "2026-10-13T13:50:26.774692+00:00",
   "rejected": {
    "skip-chase": 10,
-   "skip-dup": 2,
+   "skip-dup": 3,
    "skip-rr": 2,
    "skip-spread": 11,
    "skip-stale": 4,
-   "skip-vol": 104
+   "skip-vol": 110
   }
  },
  "funnel_days": [
@@ -1629,7 +1629,7 @@
   },
   {
    "day": "2026-10-13",
-   "setups": 139,
+   "setups": 146,
    "orders": 6,
    "filled": 6,
    "unfilled": 0,
@@ -1637,11 +1637,11 @@
    "coverage_from": "2026-10-13T13:50:26.774692+00:00",
    "rejected": {
     "skip-chase": 10,
-    "skip-dup": 2,
+    "skip-dup": 3,
     "skip-rr": 2,
     "skip-spread": 11,
     "skip-stale": 4,
-    "skip-vol": 104
+    "skip-vol": 110
    }
   }
  ],

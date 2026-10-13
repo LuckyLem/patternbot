@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-13T18:49:12+00:00",
- "heartbeat": "2026-10-13T18:49:12+00:00",
+ "updated": "2026-10-13T18:59:24+00:00",
+ "heartbeat": "2026-10-13T18:59:24+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9983.39,
+  "equity": 9997.56,
   "last_equity": 10013.85,
-  "day_change": -30.46,
-  "total_change": -16.61
+  "day_change": -16.29,
+  "total_change": -2.44
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 5,
    "entry": 356.94,
-   "current": 356.18,
-   "pl": -3.8
+   "current": 357.15,
+   "pl": 1.05
   },
   {
    "symbol": "ETN",
    "side": "long",
    "qty": 4,
    "entry": 428.36,
-   "current": 426.75,
-   "pl": -6.42
+   "current": 427.79,
+   "pl": -2.28
   },
   {
    "symbol": "MRK",
    "side": "short",
    "qty": 14,
    "entry": 142.15,
-   "current": 142.1,
-   "pl": 0.76
+   "current": 141.73,
+   "pl": 5.94
   }
  ],
  "trades": [
@@ -74,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<142.59",
-   "max_r": 0.09,
+   "max_r": 0.33,
    "key": "t88",
    "detail": false,
    "ai_verdict": null

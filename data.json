@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-14T15:58:32+00:00",
- "heartbeat": "2026-10-14T15:58:32+00:00",
+ "updated": "2026-10-14T16:08:43+00:00",
+ "heartbeat": "2026-10-14T16:08:43+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9985.44,
+  "equity": 9986.52,
   "last_equity": 10003.66,
-  "day_change": -18.22,
-  "total_change": -14.56
+  "day_change": -17.14,
+  "total_change": -13.48
  },
- "positions": [
-  {
-   "symbol": "PG",
-   "side": "long",
-   "qty": 12,
-   "entry": 154.94,
-   "current": 155.23,
-   "pl": 3.48
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "AON",
@@ -48,19 +39,19 @@
    "side": "long",
    "day": "2026-10-14",
    "opened": "2026-10-14T14:00:34.134255+00:00",
-   "closed": null,
+   "closed": "2026-10-14T16:01:32.709721665+00:00",
    "entry": 154.94,
    "stop": 153.5,
    "target": 156.96,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 155.32,
+   "pnl": 4.56,
+   "r": 0.263,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>154.65",
    "max_r": 0.46,
    "key": "t90",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 88,
-  "pnl": 3.79,
-  "winrate": 0.477,
-  "expectancy": -0.01,
-  "pf": 1.01,
-  "avg_win": 9.99,
+  "n": 89,
+  "pnl": 8.35,
+  "winrate": 0.483,
+  "expectancy": -0.007,
+  "pf": 1.02,
+  "avg_win": 9.87,
   "avg_loss": -9.04
  },
  "equity_curve": [
@@ -1443,7 +1434,7 @@
  ],
  "funnel": {
   "day": "2026-10-14",
-  "setups": 73,
+  "setups": 77,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
@@ -1451,10 +1442,11 @@
   "coverage_from": "2026-10-14T13:50:21.923707+00:00",
   "rejected": {
    "skip-chase": 8,
+   "skip-market": 1,
    "skip-rr": 3,
    "skip-rs": 6,
    "skip-spread": 4,
-   "skip-vol": 50
+   "skip-vol": 53
   }
  },
  "funnel_days": [
@@ -1615,7 +1607,7 @@
   },
   {
    "day": "2026-10-14",
-   "setups": 73,
+   "setups": 77,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
@@ -1623,10 +1615,11 @@
    "coverage_from": "2026-10-14T13:50:21.923707+00:00",
    "rejected": {
     "skip-chase": 8,
+    "skip-market": 1,
     "skip-rr": 3,
     "skip-rs": 6,
     "skip-spread": 4,
-    "skip-vol": 50
+    "skip-vol": 53
    }
   }
  ],

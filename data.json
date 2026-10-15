@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-15T14:01:19+00:00",
- "heartbeat": "2026-10-15T14:01:19+00:00",
+ "updated": "2026-10-15T14:11:25+00:00",
+ "heartbeat": "2026-10-15T14:11:25+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10014.92,
+  "equity": 10007.43,
   "last_equity": 9986.43,
-  "day_change": 28.49,
-  "total_change": 14.92
+  "day_change": 21.0,
+  "total_change": 7.43
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "long",
    "qty": 8,
    "entry": 228.25,
-   "current": 229.69,
-   "pl": 11.52
+   "current": 229.38,
+   "pl": 9.08
   },
   {
    "symbol": "GS",
    "side": "short",
    "qty": 1,
    "entry": 865.01,
-   "current": 861.15,
-   "pl": 3.85
+   "current": 864.17,
+   "pl": 0.83
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 11,
    "entry": 178.39,
-   "current": 177.66,
-   "pl": 8.03
+   "current": 177.96,
+   "pl": 4.79
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 63,
    "entry": 29.68,
-   "current": 29.79,
-   "pl": 7.07
+   "current": 29.75,
+   "pl": 4.71
   },
   {
    "symbol": "SLB",
    "side": "short",
    "qty": 42,
    "entry": 47.41,
-   "current": 47.46,
-   "pl": -1.99
+   "current": 47.38,
+   "pl": 1.58
   }
  ],
  "trades": [
@@ -69,7 +69,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<47.76",
-   "max_r": null,
+   "max_r": 0.11,
    "key": "t96",
    "detail": false,
    "ai_verdict": null
@@ -90,7 +90,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "asc_triangle break>29.37",
-   "max_r": 0.22,
+   "max_r": 0.24,
    "key": "t95",
    "detail": false,
    "ai_verdict": null
@@ -111,7 +111,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<179.38",
-   "max_r": 0.3,
+   "max_r": 0.37,
    "key": "t94",
    "detail": false,
    "ai_verdict": null
@@ -132,7 +132,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<868.43",
-   "max_r": 0.12,
+   "max_r": 0.15,
    "key": "t93",
    "detail": false,
    "ai_verdict": null
@@ -153,7 +153,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>227.82",
-   "max_r": 0.49,
+   "max_r": 0.74,
    "key": "t92",
    "detail": false,
    "ai_verdict": null

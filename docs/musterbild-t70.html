@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Musterbild AMD t70</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  /* Layout: eine Seite wie das Dashboard. Oben der Chart als Bild des Musters, darunter Befund und Herkunft der Linien. Farben und Schriften aus dem Dashboard. */
+  --ground:#fcfcfd; --raised:#ffffff; --sunken:#f3f3f6;
+  --hair:rgba(9,9,20,.09); --hair-soft:rgba(9,9,20,.055);
+  --ink:#0a0a0c; --ink-2:#55555f; --ink-3:#8b8b96;
+  --up:#08a742; --down:#e02f24; --accent:#0a6bff; --be:#a35f00;
+  --up-wash:rgba(8,167,66,.10); --down-wash:rgba(224,47,36,.09); --accent-wash:rgba(10,107,255,.08); --be-wash:rgba(163,95,0,.12);
+  --grid:rgba(9,9,20,.06); --vol:rgba(9,9,20,.16);
+  --lift:0 0 0 1px var(--hair-soft), 0 1px 2px rgba(9,9,20,.04), 0 14px 34px -14px rgba(9,9,20,.12);
+  --sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0a0a0c; --raised:#141418; --sunken:#1b1b20;
+    --hair:rgba(255,255,255,.10); --hair-soft:rgba(255,255,255,.06);
+    --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
+    --up:#32d74b; --down:#ff453a; --accent:#3d9bff; --be:#ffb340;
+    --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --accent-wash:rgba(61,155,255,.12); --be-wash:rgba(255,179,64,.14);
+    --grid:rgba(255,255,255,.06); --vol:rgba(255,255,255,.18);
+    --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0a0a0c; --raised:#141418; --sunken:#1b1b20;
+  --hair:rgba(255,255,255,.10); --hair-soft:rgba(255,255,255,.06);
+  --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
+  --up:#32d74b; --down:#ff453a; --accent:#3d9bff; --be:#ffb340;
+  --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --accent-wash:rgba(61,155,255,.12); --be-wash:rgba(255,179,64,.14);
+  --grid:rgba(255,255,255,.06); --vol:rgba(255,255,255,.18);
+  --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 15.5px/1.55 var(--sans);letter-spacing:-.011em;-webkit-font-smoothing:antialiased;padding-inline:16px;padding-block:28px 56px}
+.page{max-width:1080px;margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+h1,h2{margin:0;font-weight:600;letter-spacing:-.03em;text-wrap:balance}
+p{margin:0}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font:500 11px/1.3 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
+.head{display:grid;gap:10px;padding-inline:4px}
+.head h1{font-size:clamp(28px,4.4vw,40px);line-height:1.1}
+.sub{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;color:var(--ink-2);font-size:14.5px}
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font:500 12.5px/1.5 var(--sans);white-space:nowrap}
+.chip.ok{background:var(--up-wash);color:var(--up)}
+.chip.test{background:var(--accent-wash);color:var(--accent)}
+.card{background:var(--raised);border-radius:22px;box-shadow:var(--lift);padding:clamp(18px,3vw,28px);min-width:0}
+.card h2{font-size:19px;margin-bottom:12px}
+.chart-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 18px;margin-bottom:12px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.k{display:inline-block;width:16px;height:0;border-top:2px solid var(--c)}
+.k.dash{border-top-style:dashed}
+.k.box{height:10px;border:1.5px solid var(--accent);background:var(--accent-wash);border-radius:2px}
+.toggle{appearance:none;border:0;cursor:pointer;border-radius:999px;padding:8px 14px;font:500 13px/1 var(--sans);color:var(--ink);background:var(--sunken);box-shadow:inset 0 0 0 1px var(--hair)}
+.toggle[aria-pressed="true"]{background:var(--be-wash);color:var(--be);box-shadow:inset 0 0 0 1px var(--be)}
+.toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.chart-host{position:relative}
+svg.chart{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.chart .grid{stroke:var(--grid);stroke-width:1;shape-rendering:crispEdges}
+.chart .tick{font:400 10.5px var(--mono);fill:var(--ink-3)}
+.chart .day{font:500 11.5px var(--sans);fill:var(--ink-2)}
+.chart .lab{font:500 11.5px var(--sans);fill:var(--ink-2)}
+.chart .labv{font:600 11.5px var(--mono);fill:var(--ink)}
+.chart .note{font:500 11px var(--sans);fill:var(--ink-2)}
+.chart .sep{stroke:var(--hair);stroke-width:1;stroke-dasharray:2 4}
+.chart .xh{stroke:var(--ink-3);stroke-width:1;shape-rendering:crispEdges}
+.cap{margin-top:10px;font-size:12.5px;color:var(--ink-3)}
+.tip{position:fixed;z-index:20;pointer-events:none;min-width:180px;border-radius:12px;padding:9px 11px;background:var(--raised);box-shadow:var(--lift),0 0 0 1px var(--hair);font-size:12.5px;line-height:1.5;transform:translate(-50%,calc(-100% - 12px))}
+.tip h4{margin:0 0 4px;font:500 11px var(--mono);color:var(--ink-3)}
+.tip div{display:flex;justify-content:space-between;gap:14px;color:var(--ink-2)}
+.tip b{font:600 12px var(--mono);color:var(--ink)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+dl.facts{margin:0;display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:9px 18px;font-size:14px}
+dl.facts dt{color:var(--ink-3);font-size:13px}
+dl.facts dd{margin:0;color:var(--ink)}
+ul.points{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:14.5px;color:var(--ink-2)}
+ul.points li{display:grid;grid-template-columns:8px minmax(0,1fr);gap:12px}
+ul.points li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c,var(--ink-3));margin-top:8px}
+ul.points b{color:var(--ink);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 10px;vertical-align:top}
+th{font:500 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--hair-soft)}
+tbody tr+tr td{border-top:1px solid var(--hair-soft)}
+td:first-child{white-space:nowrap;font-weight:600}
+.tw{overflow-x:auto}
+.foot{font-size:12.5px;color:var(--ink-3);text-align:center;padding-top:4px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+@media (max-width:480px){dl.facts{grid-template-columns:1fr;gap:2px 0}dl.facts dd{margin-bottom:8px}}
+</style>
+</head>
+<body>
+
+
+<div class="page">
+  <header class="head">
+    <p class="eyebrow">Testseite · Trade t70 · nachträglich gezeichnet</p>
+    <h1>AMD · Rechteck long</h1>
+    <p class="sub"><span>Di 06.10.2026</span><span class="chip ok">Ziel erreicht</span><span class="num">+1,51 R · +42,84 $</span><span class="chip test">Linien aus den gespeicherten Zahlen</span></p>
+  </header>
+
+  <section class="card" aria-labelledby="t-chart">
+    <div class="chart-top">
+      <h2 id="t-chart" style="margin:0">So sieht der Bot das Muster</h2>
+      <button class="toggle" type="button" id="human" aria-pressed="false">Menschliche Lesart zeigen</button>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k box"></i>Rechteck des Bots</span>
+      <span><i class="k dash" style="--c:var(--up)"></i>Ziel</span>
+      <span><i class="k dash" style="--c:var(--down)"></i>Stop</span>
+      <span><i class="k" style="--c:var(--ink-2)"></i>Einstieg und Ausstieg</span>
+      <span id="lgHuman" hidden><i class="k dash" style="--c:var(--be)"></i>Menschliche Lesart</span>
+    </div>
+    <div class="chart-host" id="chart" tabindex="0" aria-label="Kerzenchart AMD, 15 Minuten, 02. bis 06.10.2026, mit den Linien des Rechtecks. Mit den Pfeiltasten durch die Kerzen gehen."></div>
+    <p class="cap">15-Minuten-Kerzen von IEX, wie der Bot sie live sieht. Zeiten in New York, im Infofeld zusätzlich deutsche Zeit. Volumen liegt erst ab dem 05.10. vor.</p>
+  </section>
+
+  <div class="cols">
+    <section class="card" aria-labelledby="t-facts">
+      <h2 id="t-facts">Was der Bot gesehen hat</h2>
+      <dl class="facts">
+        <dt>Zeitebene</dt><dd>15-Minuten-Kerzen, IEX</dd>
+        <dt>Obere Linie</dt><dd><span class="num">635,86</span>: höchstes Hoch, Fr 02.10. um 15:45. Das ist die Ausbruchskante.</dd>
+        <dt>Untere Linie</dt><dd><span class="num">620,05</span>: tiefstes Tief, Mo 05.10. in der Eröffnungskerze</dd>
+        <dt>Höhe und Ziel</dt><dd><span class="num">15,81</span> hoch, Ziel <span class="num">635,86 + 15,81 = 651,67</span></dd>
+        <dt>Stop</dt><dd><span class="num">627,96</span>, genau die Mitte des Rechtecks</dd>
+        <dt>Signal</dt><dd>Die Eröffnungskerze am 06.10. schließt bei <span class="num">637,25</span>, über der Kante. Volumen 5,3-fach über dem Schnitt.</dd>
+        <dt>Einstieg</dt><dd>09:50 in der Nachholrunde, gefüllt zu <span class="num">637,40</span>, 0,16 R schlechter als geplant</dd>
+        <dt>Ausstieg</dt><dd>Ziel nach 63 Minuten, um 10:53 zu <span class="num">651,68</span>. Der Stop war vorher auf den Einstieg nachgezogen.</dd>
+      </dl>
+    </section>
+
+    <section class="card" aria-labelledby="t-find">
+      <h2 id="t-find">Was das Bild zeigt</h2>
+      <ul class="points">
+        <li style="--c:var(--accent)"><span><b>Beide Linien hängen an einzelnen Dochten.</b> Oben gibt es 2 Berührungen bei 0,15 % Toleranz, unten nur 1. Nach Lehrbuch braucht ein Rechteck mehrere Berührungen an jeder Linie.</span></li>
+        <li style="--c:var(--be)"><span><b>Die untere Linie stammt aus einem kurzen Durchrutscher.</b> Die Eröffnungskerze am 05.10. fiel kurz bis 620,05. Die Unterstützung, die man im Bild sieht, liegt eher bei 627,4, mit drei Berührungen. Dann läge das Ziel bei 644,36 statt 651,67.</span></li>
+        <li style="--c:var(--down)"><span><b>Die Signalkerze war kein sauberer Ausbruch.</b> Sie öffnete mit einer Kurslücke bei 648,98, fiel bis 628,21 und schloss erst dann bei 637,25 über der Kante.</span></li>
+        <li style="--c:var(--up)"><span><b>Der Gewinn ist echt, aber er kam vom Tag.</b> AMD stieg an diesem Tag bis 658,45, gut 4 % über dem Schluss vom Vortag. Ein lehrbuchhaftes Rechteck war es nicht. Genau das macht das Bild auf einen Blick sichtbar.</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="t-src">
+    <h2 id="t-src">Was exakt ist und was rekonstruiert</h2>
+    <div class="tw"><table>
+      <thead><tr><th scope="col">Art</th><th scope="col">Was</th></tr></thead>
+      <tbody>
+        <tr><td>Exakt</td><td>Kerzen, Kante, Stop, Ziel, Einstieg, Ausstieg, Volumen ab 05.10. Alles aus der Trade-Datei t70 und dem Setup-Export vom 06.10.</td></tr>
+        <tr><td>Zurückgerechnet</td><td>Die untere Linie ergibt sich aus Ziel minus Kante (Höhe 15,81). Die Berührungspunkte sind gezählt mit 0,15 % Toleranz.</td></tr>
+        <tr><td>Angenommen</td><td>Wo das Rechteck links beginnt. Hier beim ersten Extrempunkt am 02.10. Wie weit der Bot genau zurückschaut, ist nicht gespeichert.</td></tr>
+        <tr><td>Nicht vom Bot</td><td>Die menschliche Lesart (Unterstützung 627,4, Ziel 644,36) ist eine Einschätzung zum Vergleich.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="cap" style="margin-top:14px">Damit die Webseite solche Bilder ohne Rekonstruktion zeichnen kann, müsste der Bot beim Signal speichern: Wendepunkte, Linien mit Anfang und Ende, Fenster, Berührungen und die Gültigkeitsprüfung. Und zwar so, wie er sie im Moment der Entscheidung gesehen hat.</p>
+  </section>
+
+  <p class="foot">Nur Paper-Trading. Daten: LuckyLem/patternbot, trades/t70.json und setups/2026-10-06.json.</p>
+</div>
+
+<div class="tip" id="tip" role="status" hidden></div>
+
+<script>
+(() => {
+"use strict";
+const BARS = [["2026-10-02","13:15","19:15",630.34,631.68,628.76,629.39,null],["2026-10-02","13:30","19:30",629.065,630.845,629.065,630.495,null],["2026-10-02","13:45","19:45",630.57,632.29,630.29,631.95,null],["2026-10-02","14:00","20:00",631.4,631.8,630.23,631.33,null],["2026-10-02","14:15","20:15",631.59,632.285,630.82,631.36,null],["2026-10-02","14:30","20:30",631.25,631.9,630.64,631.71,null],["2026-10-02","14:45","20:45",631.59,633.235,631.36,633.105,null],["2026-10-02","15:00","21:00",632.84,633.005,631.86,632.495,null],["2026-10-02","15:15","21:15",632.495,634.055,632.295,633.385,null],["2026-10-02","15:30","21:30",634.135,635.095,633.775,634.5,null],["2026-10-02","15:45","21:45",634.38,635.86,633.395,633.745,null],["2026-10-05","08:30","14:30",628.41,628.41,628.41,628.41,140],["2026-10-05","08:45","14:45",627.52,627.52,627.52,627.52,120],["2026-10-05","09:30","15:30",630.06,631.0,620.05,630.835,34282],["2026-10-05","09:45","15:45",631.48,632.64,628.485,629.045,20867],["2026-10-05","10:00","16:00",628.51,629.46,627.355,629.11,10838],["2026-10-05","10:15","16:15",629.19,631.795,629.05,630.75,9556],["2026-10-05","10:30","16:30",630.55,631.11,629.685,631.11,8581],["2026-10-05","10:45","16:45",630.55,631.22,629.935,630.83,4584],["2026-10-05","11:00","17:00",630.745,630.745,627.74,628.82,19260],["2026-10-05","11:15","17:15",628.98,630.25,628.27,629.825,10874],["2026-10-05","11:30","17:30",629.985,630.645,629.5,630.53,4970],["2026-10-05","11:45","17:45",631.71,632.65,630.28,632.52,5810],["2026-10-05","12:00","18:00",632.65,632.735,631.67,631.96,4544],["2026-10-05","12:15","18:15",632.2,632.41,631.14,631.475,7922],["2026-10-05","12:30","18:30",631.535,632.2,630.95,632.08,7691],["2026-10-05","12:45","18:45",632.1,632.1,630.84,630.97,7471],["2026-10-05","13:00","19:00",630.8,631.93,630.15,631.93,6263],["2026-10-05","13:15","19:15",631.9,632.45,630.23,630.31,9917],["2026-10-05","13:30","19:30",630.35,632.1,630.305,631.005,11889],["2026-10-05","13:45","19:45",631.38,632.53,631.07,631.67,11066],["2026-10-05","14:00","20:00",631.49,632.38,630.85,630.905,14495],["2026-10-05","14:15","20:15",631.125,631.875,631.05,631.44,8995],["2026-10-05","14:30","20:30",631.34,631.63,630.425,630.83,7994],["2026-10-05","14:45","20:45",630.87,630.87,629.37,629.905,7744],["2026-10-05","15:00","21:00",629.79,632.7,629.79,632.53,12303],["2026-10-05","15:15","21:15",632.78,633.2,632.465,632.465,10588],["2026-10-05","15:30","21:30",632.195,632.53,631.44,632.0,11503],["2026-10-05","15:45","21:45",631.8,632.11,630.55,631.96,46590],["2026-10-06","09:30","15:30",648.98,649.74,628.21,637.25,75958],["2026-10-06","09:45","15:45",637.47,643.8,634.69,642.5,38162],["2026-10-06","10:00","16:00",642.7,645.66,641.83,644.6,33825],["2026-10-06","10:15","16:15",644.68,647.935,644.375,646.36,27134],["2026-10-06","10:30","16:30",646.315,650.49,645.78,650.13,31673],["2026-10-06","10:45","16:45",649.73,654.74,649.14,653.67,23263],["2026-10-06","11:00","17:00",653.845,658.45,653.72,657.73,26963],["2026-10-06","11:15","17:15",657.77,657.93,654.895,655.66,17186],["2026-10-06","11:30","17:30",656.0,657.64,654.92,656.27,15150],["2026-10-06","11:45","17:45",656.0,656.965,655.55,655.55,10097],["2026-10-06","12:00","18:00",655.55,656.195,654.375,655.28,13492],["2026-10-06","12:15","18:15",655.54,657.29,655.37,655.52,10893]];
+
+const $ = (s) => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const S = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a || {}) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const nf = (v, d = 2) => v.toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
+const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+const dayLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); const w = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); return `${WD[w]} ${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.`; };
+
+/* Werte aus trades/t70.json */
+const T = { top: 635.86, low: 620.05, stop: 627.955, target: 651.67, entry: 637.40, exit: 651.68, humanLow: 627.36, humanTarget: 644.36 };
+const idx = (day, hm) => BARS.findIndex((b) => b[0] === day && b[1] === hm);
+const I = {
+  top: idx("2026-10-02", "15:45"), nearTop: idx("2026-10-02", "15:30"), low: idx("2026-10-05", "09:30"),
+  signal: idx("2026-10-06", "09:30"), entry: idx("2026-10-06", "09:45"), exit: idx("2026-10-06", "10:45"),
+  human: [idx("2026-10-05", "08:45"), idx("2026-10-05", "10:00"), idx("2026-10-05", "11:00")],
+};
+let human = false, CH = null;
+
+function draw() {
+  const host = $("#chart"); host.textContent = "";
+  const W = Math.max(300, Math.round(host.clientWidth)), small = W < 600;
+  const m = { l: small ? 40 : 48, r: small ? 86 : 132, t: 22, b: 30 };
+  const PH = small ? 300 : 380, VH = small ? 54 : 70, GAP = 14, H = m.t + PH + GAP + VH + m.b;
+  // x mit Lücken zwischen den Handelstagen
+  const gaps = []; let g = 0;
+  BARS.forEach((b, i) => { if (i && b[0] !== BARS[i - 1][0]) g++; gaps.push(g); });
+  const slots = BARS.length + g * 1.6, slot = (W - m.l - m.r) / slots;
+  const X = (i) => m.l + slot * (i + gaps[i] * 1.6 + 0.5);
+  let lo = Infinity, hi = -Infinity; for (const b of BARS) { lo = Math.min(lo, b[5]); hi = Math.max(hi, b[4]); }
+  lo = Math.min(lo, T.low) - 2; hi = Math.max(hi, T.target) + 3;
+  const Y = (v) => m.t + (1 - (v - lo) / (hi - lo)) * PH;
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: "chart", role: "img", "aria-label": "Rechteck von 620,05 bis 635,86, Ausbruch am 06.10., Ziel 651,67 erreicht" }, host);
+  // Raster und Achse
+  for (let v = Math.ceil(lo / 5) * 5; v <= hi; v += 5) { S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: "grid" }, svg); S("text", { x: m.l - 8, y: Y(v) + 3.5, class: "tick", "text-anchor": "end" }, svg).textContent = nf(v, 0); }
+  // Tage
+  let start = 0;
+  BARS.forEach((b, i) => {
+    const last = i === BARS.length - 1 || BARS[i + 1][0] !== b[0];
+    if (last) {
+      const cx = (X(start) + X(i)) / 2;
+      S("text", { x: cx, y: H - 8, class: "day", "text-anchor": "middle" }, svg).textContent = dayLabel(b[0]);
+      if (i < BARS.length - 1) { const sx = (X(i) + X(i + 1)) / 2; S("line", { x1: sx, x2: sx, y1: m.t, y2: m.t + PH + GAP + VH, class: "sep" }, svg); }
+      start = i + 1;
+    }
+  });
+  // Rechteck des Bots
+  const bx0 = X(I.top) - slot * 0.5, bx1 = X(I.signal) - slot * 0.5;
+  S("rect", { x: bx0, y: Y(T.top), width: bx1 - bx0, height: Y(T.low) - Y(T.top), style: "fill:var(--accent-wash);stroke:none" }, svg);
+  S("line", { x1: bx0, x2: bx1, y1: Y(T.top), y2: Y(T.top), style: "stroke:var(--accent);stroke-width:1.6" }, svg);
+  S("line", { x1: bx1, x2: W - m.r, y1: Y(T.top), y2: Y(T.top), style: "stroke:var(--accent);stroke-width:1.6;stroke-dasharray:5 4" }, svg);
+  S("line", { x1: bx0, x2: bx1, y1: Y(T.low), y2: Y(T.low), style: "stroke:var(--accent);stroke-width:1.6" }, svg);
+  // Höhe im Rechteck und Projektion
+  const hx = bx0 + 12;
+  S("line", { x1: hx, x2: hx, y1: Y(T.top) + 4, y2: Y(T.low) - 4, style: "stroke:var(--accent);stroke-width:1.2" }, svg);
+  S("path", { d: `M${hx - 4} ${Y(T.top) + 9}L${hx} ${Y(T.top) + 3}L${hx + 4} ${Y(T.top) + 9}M${hx - 4} ${Y(T.low) - 9}L${hx} ${Y(T.low) - 3}L${hx + 4} ${Y(T.low) - 9}`, style: "fill:none;stroke:var(--accent);stroke-width:1.2" }, svg);
+  S("text", { x: bx0, y: Y(T.low) + 16, class: "note" }, svg).textContent = "Höhe 15,81";
+  const px = X(I.signal) - slot * 1.4;
+  S("line", { x1: px, x2: px, y1: Y(T.top), y2: Y(T.target), style: "stroke:var(--up);stroke-width:1.2;stroke-dasharray:3 3" }, svg);
+  S("text", { x: px - 6, y: (Y(T.top) + Y(T.target)) / 2 + 4, class: "note", "text-anchor": "end" }, svg).textContent = "+15,81";
+  // Signalkerze hervorheben
+  S("rect", { x: X(I.signal) - slot * 0.55, y: m.t, width: slot * 1.1, height: PH, style: "fill:var(--accent-wash)" }, svg);
+  S("text", { x: X(I.signal), y: m.t - 8, class: "note", "text-anchor": "middle" }, svg).textContent = "Signal";
+  // Ziel und Stop während des Trades
+  S("line", { x1: X(I.entry), x2: X(I.exit) + slot, y1: Y(T.target), y2: Y(T.target), style: "stroke:var(--up);stroke-width:1.6;stroke-dasharray:6 4" }, svg);
+  S("line", { x1: X(I.entry), x2: X(I.exit) + slot, y1: Y(T.stop), y2: Y(T.stop), style: "stroke:var(--down);stroke-width:1.6;stroke-dasharray:6 4" }, svg);
+  // menschliche Lesart
+  const hg = S("g", { visibility: human ? "visible" : "hidden" }, svg);
+  const hx0 = X(I.human[0]) - slot * 0.5;
+  S("line", { x1: hx0, x2: bx1, y1: Y(T.humanLow), y2: Y(T.humanLow), style: "stroke:var(--be);stroke-width:1.6;stroke-dasharray:5 3" }, hg);
+  S("line", { x1: X(I.signal), x2: X(I.exit) + slot, y1: Y(T.humanTarget), y2: Y(T.humanTarget), style: "stroke:var(--be);stroke-width:1.6;stroke-dasharray:5 3" }, hg);
+  for (const i of I.human) S("circle", { cx: X(i), cy: Y(BARS[i][5]), r: 4.5, style: "fill:none;stroke:var(--be);stroke-width:1.6" }, hg);
+  S("text", { x: bx1 - 6, y: Y(T.humanLow) + 15, class: "note", "text-anchor": "end" }, hg).textContent = small ? "~627,4 (3 Berührungen)" : "Unterstützung im Bild ~627,4 (3 Berührungen)";
+  // Kerzen
+  const cw = Math.max(2, slot * 0.62);
+  BARS.forEach((b, i) => {
+    const [, hm, , o, h, l, c] = b, up = c >= o, col = up ? "var(--up)" : "var(--down)", pre = hm < "09:30";
+    const gc = S("g", { opacity: pre ? .45 : 1 }, svg);
+    S("line", { x1: X(i), x2: X(i), y1: Y(h), y2: Y(l), style: `stroke:${col};stroke-width:1` }, gc);
+    const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
+    S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(1, y1 - y0), rx: 1, style: `fill:${col}` }, gc);
+  });
+  // Berührungen
+  S("circle", { cx: X(I.top), cy: Y(T.top), r: 4.5, style: "fill:none;stroke:var(--accent);stroke-width:1.8" }, svg);
+  S("circle", { cx: X(I.nearTop), cy: Y(BARS[I.nearTop][4]), r: 3.5, style: "fill:none;stroke:var(--accent);stroke-width:1.4;stroke-dasharray:2 2" }, svg);
+  S("circle", { cx: X(I.low), cy: Y(T.low), r: 4.5, style: "fill:none;stroke:var(--accent);stroke-width:1.8" }, svg);
+  // Einstieg und Ausstieg
+  const ex = X(I.entry), ey = Y(T.entry);
+  S("path", { d: `M${ex - 12} ${ey}L${ex - 4} ${ey}M${ex - 8} ${ey - 4}L${ex - 4} ${ey}L${ex - 8} ${ey + 4}`, style: "fill:none;stroke:var(--ink);stroke-width:1.6" }, svg);
+  S("circle", { cx: ex, cy: ey, r: 3.5, style: "fill:var(--ink)" }, svg);
+  const xx = X(I.exit), xy = Y(T.exit);
+  S("circle", { cx: xx, cy: xy, r: 5, style: "fill:var(--up);stroke:var(--ground);stroke-width:2" }, svg);
+  if (!small) {
+    S("text", { x: ex + 10, y: Y(T.top) + 17, class: "note" }, svg).textContent = "Einstieg 637,40 · 09:50";
+    S("text", { x: xx - 8, y: xy - 10, class: "note", "text-anchor": "end" }, svg).textContent = "Ziel erreicht · 10:53";
+  }
+  // Beschriftungen rechts, ohne Überlappung
+  const labs = [
+    { v: T.target, t: "Ziel", c: "var(--up)" }, { v: T.top, t: "Kante", c: "var(--accent)" },
+    { v: T.stop, t: "Stop", c: "var(--down)" }, { v: T.low, t: "Unterkante", c: "var(--accent)" },
+  ];
+  if (human) labs.push({ v: T.humanTarget, t: "Ziel Mensch", c: "var(--be)" });
+  labs.forEach((l) => (l.y = Y(l.v))); labs.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 28);
+  const lx = W - m.r + 10;
+  for (const l of labs) {
+    S("line", { x1: lx, x2: lx + 10, y1: l.y, y2: l.y, style: `stroke:${l.c};stroke-width:2` }, svg);
+    S("text", { x: lx + 15, y: l.y - 2, class: "lab" }, svg).textContent = l.t;
+    S("text", { x: lx + 15, y: l.y + 11, class: "labv" }, svg).textContent = nf(l.v);
+  }
+  // Volumen
+  const vt = m.t + PH + GAP, vmax = Math.max(...BARS.map((b) => b[7] || 0));
+  BARS.forEach((b, i) => {
+    if (b[7] == null) return;
+    const h = (b[7] / vmax) * VH;
+    S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(.5, h), style: `fill:${i === I.signal ? "var(--accent)" : "var(--vol)"}` }, svg);
+  });
+  S("text", { x: X(I.signal) + cw, y: vt + 11, class: "note" }, svg).textContent = "5,3× Schnitt";
+  S("text", { x: m.l - 8, y: vt + VH, class: "tick", "text-anchor": "end" }, svg).textContent = "Vol.";
+  // Fadenkreuz
+  const xh = S("line", { class: "xh", y1: m.t, y2: vt + VH, visibility: "hidden" }, svg);
+  const hit = S("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: PH + GAP + VH, style: "fill:transparent;cursor:crosshair" }, svg);
+  CH = { svg, W, X, Y, xh, idx: I.signal };
+  const near = (cx) => { let best = 0, bd = Infinity; BARS.forEach((b, i) => { const d = Math.abs(X(i) - cx); if (d < bd) { bd = d; best = i; } }); return best; };
+  const move = (e) => { const r = svg.getBoundingClientRect(); showAt(near(((e.clientX - r.left) * W) / r.width), e.clientX); };
+  hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
+  hit.addEventListener("pointerleave", () => { xh.setAttribute("visibility", "hidden"); $("#tip").hidden = true; });
+}
+function showAt(i, clientX) {
+  const { svg, W, X, Y, xh } = CH; CH.idx = i;
+  const b = BARS[i], r = svg.getBoundingClientRect(), k = r.width / W;
+  xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
+  const tip = $("#tip"); tip.textContent = "";
+  const h4 = document.createElement("h4"); h4.textContent = `${dayLabel(b[0])} ${b[1]} New York · ${b[2]} bei uns`; tip.appendChild(h4);
+  for (const [l, v] of [["Eröffnung", b[3]], ["Hoch", b[4]], ["Tief", b[5]], ["Schluss", b[6]]]) {
+    const row = document.createElement("div"); row.append(l); const bb = document.createElement("b"); bb.textContent = nf(v); row.appendChild(bb); tip.appendChild(row);
+  }
+  const row = document.createElement("div"); row.append("Volumen"); const bb = document.createElement("b"); bb.textContent = b[7] == null ? "nicht im Export" : b[7].toLocaleString("de-DE"); row.appendChild(bb); tip.appendChild(row);
+  tip.hidden = false;
+  const x = clientX ?? r.left + X(i) * k, y = r.top + Y(b[4]) * k, w = tip.offsetWidth;
+  tip.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, x)) + "px";
+  tip.style.top = Math.max(tip.offsetHeight + 20, y) + "px";
+}
+
+$("#human").addEventListener("click", (e) => {
+  human = !human; e.currentTarget.setAttribute("aria-pressed", String(human));
+  e.currentTarget.textContent = human ? "Menschliche Lesart ausblenden" : "Menschliche Lesart zeigen";
+  $("#lgHuman").hidden = !human; draw();
+});
+$("#chart").addEventListener("keydown", (e) => {
+  if (!CH) return; let i = CH.idx;
+  if (e.key === "ArrowRight") i++; else if (e.key === "ArrowLeft") i--; else if (e.key === "Escape") { $("#tip").hidden = true; return; } else return;
+  e.preventDefault(); showAt(Math.max(0, Math.min(BARS.length - 1, i)));
+});
+$("#chart").addEventListener("blur", () => { $("#tip").hidden = true; });
+addEventListener("scroll", () => { $("#tip").hidden = true; }, { passive: true });
+let rw = 0; new ResizeObserver(() => { const w = Math.round($("#chart").clientWidth); if (Math.abs(w - rw) > 2) { rw = w; draw(); } }).observe($("#chart"));
+draw();
+})();
+</script>
+
+</body>
+</html>

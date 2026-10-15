@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-15T15:34:45+00:00",
- "heartbeat": "2026-10-15T15:34:45+00:00",
+ "updated": "2026-10-15T15:44:56+00:00",
+ "heartbeat": "2026-10-15T15:44:56+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9956.64,
+  "equity": 9943.11,
   "last_equity": 9986.43,
-  "day_change": -29.79,
-  "total_change": -43.36
+  "day_change": -43.32,
+  "total_change": -56.89
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 1,
    "entry": 865.01,
-   "current": 878.49,
-   "pl": -13.48
+   "current": 878.9,
+   "pl": -13.89
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 11,
    "entry": 178.39,
-   "current": 179.34,
-   "pl": -10.45
+   "current": 179.95,
+   "pl": -17.16
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 63,
    "entry": 29.68,
-   "current": 29.79,
-   "pl": 6.6
+   "current": 29.73,
+   "pl": 2.82
   },
   {
    "symbol": "SLB",
    "side": "short",
    "qty": 42,
    "entry": 47.41,
-   "current": 47.7,
-   "pl": -12.07
+   "current": 47.77,
+   "pl": -15.01
   }
  ],
  "trades": [

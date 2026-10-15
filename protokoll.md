@@ -87,3 +87,12 @@ Wird nur ergänzt, nie geändert.
 - 594 von 973 Trades der Hauptvariante wurden in ihrer Einstiegsminute gestoppt (Vorab-Regel 7, vorsichtig gerechnet).
 - Nur zur Information: Mit der Kerzenpfad-Annahme wären es +0,329R (PF 1,32, DD 119R), mit der günstigsten Grenze +0,400R (PF 1,39, DD 119R). Gezählt bleibt −0,465R.
 - Vorschlag: Neuberechnung mit Ticks für die Einstiegsminute, Handelsregeln unverändert. Die Entscheidung des Inhabers ist offen.
+## Vorab-Festlegung Runde 2 · 15.10.2026 20:23
+- Zeitraum 2024-10-01..2025-09-30. Es zählt nur der Hauptlauf: Regeln wie live ({'chase_anchor': 'close', 'universe_exclude': 'BK,MMC,FI'}), ohne die Muster Rectangle.
+- Die Nebenrechnung „wie live“ mit allen Mustern ist Information und zählt nicht. Sie zeigt nur, ob das Streichen hilft, denn live handelt der Bot diese Muster noch.
+- Simulator `bt/` sha256 `61750fbbc22e` (kalibriert), Bot-Code `cbfe06cff`.
+
+## Vorab-Festlegung ORB-Ticks · 15.10.2026 20:25
+- Neuberechnung von ORB Jahr 1 mit Ticks in der Einstiegsminute, Handelsregeln unverändert (Commit d48250c2). Methode: orb-studie/TICK-METHODE.md, sha256 4d6917b952ef4586.
+- Gleicher Tick-Filter wie beim Simulatorfix vom 05.10., Stop füllt zum Kurs des auslösenden Abschlusses, gleiches Kostenmodell, Zufallsläufe mit denselben Ziehungen und demselben Filter. Kein Jahr 2.
+

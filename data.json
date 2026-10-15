@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-15T14:11:25+00:00",
- "heartbeat": "2026-10-15T14:11:25+00:00",
+ "updated": "2026-10-15T14:21:39+00:00",
+ "heartbeat": "2026-10-15T14:21:39+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10007.43,
+  "equity": 10010.4,
   "last_equity": 9986.43,
-  "day_change": 21.0,
-  "total_change": 7.43
+  "day_change": 23.97,
+  "total_change": 10.4
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "long",
    "qty": 8,
    "entry": 228.25,
-   "current": 229.38,
-   "pl": 9.08
+   "current": 229.67,
+   "pl": 11.36
   },
   {
    "symbol": "GS",
    "side": "short",
    "qty": 1,
    "entry": 865.01,
-   "current": 864.17,
-   "pl": 0.83
+   "current": 865.31,
+   "pl": -0.3
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 11,
    "entry": 178.39,
-   "current": 177.96,
-   "pl": 4.79
+   "current": 177.62,
+   "pl": 8.47
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 63,
    "entry": 29.68,
-   "current": 29.75,
-   "pl": 4.71
+   "current": 29.78,
+   "pl": 6.43
   },
   {
    "symbol": "SLB",
    "side": "short",
    "qty": 42,
    "entry": 47.41,
-   "current": 47.38,
-   "pl": 1.58
+   "current": 47.46,
+   "pl": -1.99
   }
  ],
  "trades": [
@@ -69,7 +69,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<47.76",
-   "max_r": 0.11,
+   "max_r": 0.17,
    "key": "t96",
    "detail": false,
    "ai_verdict": null
@@ -1479,7 +1479,7 @@
  ],
  "funnel": {
   "day": "2026-10-15",
-  "setups": 23,
+  "setups": 24,
   "orders": 5,
   "filled": 5,
   "unfilled": 0,
@@ -1488,6 +1488,7 @@
   "rejected": {
    "skip-chase": 1,
    "skip-dup": 1,
+   "skip-maxopen": 1,
    "skip-rr": 2,
    "skip-rs": 1,
    "skip-spread": 4,
@@ -1653,7 +1654,7 @@
   },
   {
    "day": "2026-10-15",
-   "setups": 23,
+   "setups": 24,
    "orders": 5,
    "filled": 5,
    "unfilled": 0,
@@ -1662,6 +1663,7 @@
    "rejected": {
     "skip-chase": 1,
     "skip-dup": 1,
+    "skip-maxopen": 1,
     "skip-rr": 2,
     "skip-rs": 1,
     "skip-spread": 4,

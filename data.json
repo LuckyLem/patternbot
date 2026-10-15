@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-15T13:51:11+00:00",
- "heartbeat": "2026-10-15T13:51:11+00:00",
+ "updated": "2026-10-15T14:01:19+00:00",
+ "heartbeat": "2026-10-15T14:01:19+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9993.39,
+  "equity": 10014.92,
   "last_equity": 9986.43,
-  "day_change": 6.96,
-  "total_change": -6.61
+  "day_change": 28.49,
+  "total_change": 14.92
  },
  "positions": [
   {
@@ -16,35 +16,64 @@
    "side": "long",
    "qty": 8,
    "entry": 228.25,
-   "current": 228.51,
-   "pl": 2.08
+   "current": 229.69,
+   "pl": 11.52
   },
   {
    "symbol": "GS",
    "side": "short",
    "qty": 1,
    "entry": 865.01,
-   "current": 864.21,
-   "pl": 0.8
+   "current": 861.15,
+   "pl": 3.85
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 11,
    "entry": 178.39,
-   "current": 178.25,
-   "pl": 1.54
+   "current": 177.66,
+   "pl": 8.03
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 63,
    "entry": 29.68,
-   "current": 29.73,
-   "pl": 2.82
+   "current": 29.79,
+   "pl": 7.07
+  },
+  {
+   "symbol": "SLB",
+   "side": "short",
+   "qty": 42,
+   "entry": 47.41,
+   "current": 47.46,
+   "pl": -1.99
   }
  ],
  "trades": [
+  {
+   "symbol": "SLB",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-10-15",
+   "opened": "2026-10-15T14:00:38.994763+00:00",
+   "closed": null,
+   "entry": 47.41,
+   "stop": 48.52,
+   "target": 46.24,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<47.76",
+   "max_r": null,
+   "key": "t96",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "PFE",
    "pattern": "AscendingTriangle",
@@ -61,7 +90,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "asc_triangle break>29.37",
-   "max_r": 0.06,
+   "max_r": 0.22,
    "key": "t95",
    "detail": false,
    "ai_verdict": null
@@ -82,7 +111,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<179.38",
-   "max_r": 0.04,
+   "max_r": 0.3,
    "key": "t94",
    "detail": false,
    "ai_verdict": null
@@ -103,7 +132,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<868.43",
-   "max_r": 0.0,
+   "max_r": 0.12,
    "key": "t93",
    "detail": false,
    "ai_verdict": null
@@ -124,7 +153,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>227.82",
-   "max_r": 0.09,
+   "max_r": 0.49,
    "key": "t92",
    "detail": false,
    "ai_verdict": null
@@ -1283,27 +1312,6 @@
    "key": "t35",
    "detail": true,
    "ai_verdict": "neutral"
-  },
-  {
-   "symbol": "MDT",
-   "pattern": "DoubleTop",
-   "side": "short",
-   "day": "2026-09-24",
-   "opened": "2026-09-24T18:33:43.487947+00:00",
-   "closed": "2026-09-24T19:50:27.097664+00:00",
-   "entry": 88.94,
-   "stop": 90.07,
-   "target": 88.2,
-   "exit": 88.54,
-   "pnl": 8.8,
-   "r": 0.352,
-   "status": "closed",
-   "exit_source": "eod",
-   "reason": "double_top neckline_break<89.09",
-   "max_r": 0.33,
-   "key": "t34",
-   "detail": true,
-   "ai_verdict": "gut"
   }
  ],
  "stats": {
@@ -1471,18 +1479,19 @@
  ],
  "funnel": {
   "day": "2026-10-15",
-  "setups": 17,
-  "orders": 4,
-  "filled": 4,
+  "setups": 23,
+  "orders": 5,
+  "filled": 5,
   "unfilled": 0,
-  "traded": 4,
+  "traded": 5,
   "coverage_from": "2026-10-15T13:50:26.511395+00:00",
   "rejected": {
    "skip-chase": 1,
    "skip-dup": 1,
    "skip-rr": 2,
-   "skip-spread": 3,
-   "skip-vol": 6
+   "skip-rs": 1,
+   "skip-spread": 4,
+   "skip-vol": 9
   }
  },
  "funnel_days": [
@@ -1644,18 +1653,19 @@
   },
   {
    "day": "2026-10-15",
-   "setups": 17,
-   "orders": 4,
-   "filled": 4,
+   "setups": 23,
+   "orders": 5,
+   "filled": 5,
    "unfilled": 0,
-   "traded": 4,
+   "traded": 5,
    "coverage_from": "2026-10-15T13:50:26.511395+00:00",
    "rejected": {
     "skip-chase": 1,
     "skip-dup": 1,
     "skip-rr": 2,
-    "skip-spread": 3,
-    "skip-vol": 6
+    "skip-rs": 1,
+    "skip-spread": 4,
+    "skip-vol": 9
    }
   }
  ],

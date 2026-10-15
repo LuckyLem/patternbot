@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-15T14:21:39+00:00",
- "heartbeat": "2026-10-15T14:21:39+00:00",
+ "updated": "2026-10-15T14:32:39+00:00",
+ "heartbeat": "2026-10-15T14:32:39+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10010.4,
+  "equity": 9986.91,
   "last_equity": 9986.43,
-  "day_change": 23.97,
-  "total_change": 10.4
+  "day_change": 0.48,
+  "total_change": -13.09
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "long",
    "qty": 8,
    "entry": 228.25,
-   "current": 229.67,
-   "pl": 11.36
+   "current": 229.07,
+   "pl": 6.56
   },
   {
    "symbol": "GS",
    "side": "short",
    "qty": 1,
    "entry": 865.01,
-   "current": 865.31,
-   "pl": -0.3
+   "current": 867.84,
+   "pl": -2.83
   },
   {
    "symbol": "MS",
    "side": "short",
    "qty": 11,
    "entry": 178.39,
-   "current": 177.62,
-   "pl": 8.47
+   "current": 178.17,
+   "pl": 2.42
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 63,
    "entry": 29.68,
-   "current": 29.78,
-   "pl": 6.43
+   "current": 29.68,
+   "pl": -0.33
   },
   {
    "symbol": "SLB",
    "side": "short",
    "qty": 42,
    "entry": 47.41,
-   "current": 47.46,
-   "pl": -1.99
+   "current": 47.54,
+   "pl": -5.35
   }
  ],
  "trades": [
@@ -1479,7 +1479,7 @@
  ],
  "funnel": {
   "day": "2026-10-15",
-  "setups": 24,
+  "setups": 26,
   "orders": 5,
   "filled": 5,
   "unfilled": 0,
@@ -1488,7 +1488,7 @@
   "rejected": {
    "skip-chase": 1,
    "skip-dup": 1,
-   "skip-maxopen": 1,
+   "skip-maxopen": 3,
    "skip-rr": 2,
    "skip-rs": 1,
    "skip-spread": 4,
@@ -1654,7 +1654,7 @@
   },
   {
    "day": "2026-10-15",
-   "setups": 24,
+   "setups": 26,
    "orders": 5,
    "filled": 5,
    "unfilled": 0,
@@ -1663,7 +1663,7 @@
    "rejected": {
     "skip-chase": 1,
     "skip-dup": 1,
-    "skip-maxopen": 1,
+    "skip-maxopen": 3,
     "skip-rr": 2,
     "skip-rs": 1,
     "skip-spread": 4,

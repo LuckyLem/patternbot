@@ -23,3 +23,14 @@ Regeln:
 | – | Bellafiore, „The Playbook“ | – | – | vorgemerkt, noch nicht gelesen |
 | – | Schwager, „Market Wizards“ | – | – | vorgemerkt, noch nicht gelesen |
 | – | Aronson, „Evidence-Based Technical Analysis“ | – | – | vorgemerkt, noch nicht gelesen |
+
+## Neue Muster des Labors (Steckbriefe)
+
+Neue Muster bekommen einen Steckbrief in `steckbriefe/` (Vorlage `VORLAGE.md`). Getestet wird einmal pro Woche als
+Paket im Lerntopf. Eine Änderung ergibt ein neues Muster mit neuer Nummer.
+
+| Nr | Muster | Herkunft | Stufe | Paket |
+|---|---|---|---|---|
+| M008 | Keil steigend (nach Aufwärtstrend, short) | Auftrag des Inhabers 15.10. | 0 | 1 (sobald der Lerntopf geladen ist) |
+| M009 | Keil fallend (nach Abwärtstrend, long) | Auftrag des Inhabers 15.10. | 0 | 1 |
+| M010 | Doppelboden mit Kaufkraft (long) | Idee des Inhabers 15.10. | 0 | 1 |

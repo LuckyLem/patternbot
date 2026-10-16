@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "stand": "2026-10-16T08:20:35-04:00",
+ "stand": "2026-10-16T08:24:50-04:00",
  "quelle": "PC",
  "code_labor": "11510c609e88",
  "labor": {
@@ -74,11 +74,11 @@
    "titel": "Trade ja oder nein (Meta-Labeling)",
    "status": "offen",
    "erledigt": 0,
-   "gesamt": 8,
+   "gesamt": 9,
    "zaehlung": {
     "erledigt": 0,
     "laeuft": 0,
-    "offen": 8,
+    "offen": 9,
     "test": 0,
     "verworfen": 0
    },
@@ -179,6 +179,13 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-16",
+   "zeit": "2026-10-16 08:24",
+   "art": "Vorab-Datei",
+   "text": "Chart-Leser Festlegung v1.1 (chartleser/CHARTLESER.md, SHA-256 1277e3236a96aa439f1123a95a26c3d5d030d417d1877d8346c80f909aac5eb3): Teil 2 (Lesen ohne Bot: Rechteck, Keil steigend/fallend, Doppelboden/-top) festgelegt, Teil 1 unverändert. Code-Hash v1.1 c5ca9efa1343 (Kern + Lesen + Signalprüfung + Geometrie). Pflichttests grün: Keil 48/50 und 50/50, Doppelboden 45/50, Rechteck 50/50 (Grenze 45); Rauschen Zufallspfade 15/300, stationär 9/300 (Grenze 15); Ausreißer verworfen; Abschneide-Test identisch. Grenzen nach der Messung auf künstlichen Daten gesetzt, vor dem ersten Lauf von Teil 2 auf echten Daten.",
+   "ok": true
+  },
   {
    "datum": "2026-10-16",
    "zeit": "2026-10-16 08:19",

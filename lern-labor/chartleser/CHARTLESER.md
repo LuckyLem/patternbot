@@ -1,4 +1,7 @@
-# Chart-Leser · Festlegung v1 · 15.10.2026
+# Chart-Leser · Festlegung v1.1 · 16.10.2026
+
+Fassungen: **v1** vom 15.10.2026 (Teil 1, SHA-256 93efee36…, im Logbuch); **v1.1** vom 16.10.2026 legt Teil 2 fest,
+Teil 1 ist Wort für Wort unverändert.
 
 Der Chart-Leser zeichnet die Linien eines Musters selbst, prüft sie auf Fehler und bewertet das Muster. Er ist vom
 Bot getrennt: Er liest nur Kerzen und ändert am Bot nichts.
@@ -70,28 +73,78 @@ Teil 1 prüft ein Signal des Live-Bots: Hängen seine Linien an echten Kursen?
    - den korrigierten Werten (Kante, Gegenkante, Stop, Ziel);
    - der Prüfung der Signalkerze und der Bewertung.
 
-## Teil 2 · Lesen ohne Bot (im Bau, Freitag und Samstag)
+## Teil 2 · Lesen ohne Bot (Fassung v1.1, festgelegt 16.10.2026)
 
-Teil 2 liest den Chart ohne den Bot. Seine Bausteine stehen schon im Code und im Abschneide-Test:
+Teil 2 sucht zum Entscheidungszeitpunkt Muster, die auf der letzten geschlossenen Kerze ausbrechen. Er kennt
+Rechteck, Keil steigend, Keil fallend, Doppelboden und Doppeltop.
 
-- **Wendepunkte:** Zickzack in 3 Größen, 1, 2 und 4 ATR (Wilder 14).
-  - Ein Hoch ist bestätigt, sobald der Kurs um Größe × ATR der bestätigenden Kerze darunter fällt. Für ein Tief gilt
-    das gespiegelt.
-  - Hochs und Tiefs wechseln sich ab. Bekannt ist ein Punkt erst ab der bestätigenden Kerze.
-- **Zoom:** 50, 100 und 200 Kerzen.
-- **Waagerechte Zonen:** Gruppen von Hochs bzw. Tiefs innerhalb der Toleranz. Die Linie geht durch den äußersten
-  Docht.
-- **Trend- und Nackenlinien:** Geraden durch Wendepunkte, durch die Dochte, mit Berührungen innerhalb der Toleranz.
-- **Passgüte:** Streuung der Berührungen gemessen an der Toleranz.
-- **Selbstkontrolle:** wie in Teil 1.
+1. **Wendepunkte:**
+   - Zickzack in 3 Größen: 1, 2 und 4 ATR (Wilder 14).
+   - Ein Hoch ist bestätigt, sobald der Kurs um Größe × ATR der bestätigenden Kerze darunter fällt. Für ein Tief gilt
+     das gespiegelt. Hochs und Tiefs wechseln sich ab.
+   - Gelesen werden nur Punkte, die spätestens mit der Kerze vor dem Signal bestätigt sind.
+2. **Zoom:** 50, 100 und 200 Kerzen.
+   - Je Muster und Seite zählt der beste Fund über alle Größen und Zoomstufen: die meisten Berührungen, dann die beste
+     Passgüte, dann die kleineren Wendepunkte.
+3. **Selbstkontrolle zuerst:**
+   - Jeder Wendepunkt aller Größen im 200er-Fenster wird geprüft wie in Teil 1. Gibt es eine SIP-Kerze, entscheidet
+     SIP, sonst die 3×-Regel.
+   - Ein verworfener Docht wird ersetzt: durch den SIP-Wert, ohne SIP-Kerze durch den Kerzenkörper. Das geht höchstens
+     3 Runden lang.
+   - Danach wird auf den korrigierten Kerzen gelesen. Liegt ein verworfener Punkt in der Zeitspanne des Musters, gibt
+     es einen Abzug.
+4. **Toleranz:** 0,5 ATR der Kerze vor dem Signal, mindestens 0,1 % vom Kurs.
+   - Berührung heißt: ein Wendepunkt liegt innerhalb der Toleranz der Linie.
+   - Passgüte = 1 − (mittlere Abweichung der Berührungen ÷ Toleranz).
+5. **Mindestgröße, gilt für alle Muster:** Höhe mindestens 3 ATR; von der ersten bis zur letzten Berührung
+   mindestens 10 Kerzen.
+6. **Rechteck:**
+   - Obere Zone (Hochs) und untere Zone (Tiefs) mit je mindestens 2 Berührungen. Die Linie geht durch den äußersten
+     Docht der Zone.
+   - Die Berührungen wechseln mindestens 3-mal zwischen oben und unten. Die Höhe beträgt höchstens 12 % vom Kurs.
+   - Ab der ersten Berührung bis zur Kerze vor dem Signal liegt kein Wendepunkt und kein Schlusskurs außerhalb der
+     Zonen (± Toleranz).
+   - **Ausbruch:** Schlusskurs über der oberen Zone (long) bzw. unter der unteren Zone (short), die Kerze davor
+     schließt noch innerhalb.
+   - Stop in der Mitte, Ziel Kante ± Höhe.
+7. **Keil steigend und fallend:**
+   - Obere Linie durch 2 Hochs, untere durch 2 Tiefs, jeweils durch die Dochte.
+   - Ab dem Start der Linie durchsticht kein Wendepunkt sie um mehr als die Toleranz. Kein Schlusskurs bis zur Kerze
+     vor dem Signal liegt jenseits der Linie. Beste Linie: die meisten Berührungen, dann Passgüte, dann Länge.
+   - **Steigend:** beide Steigungen über 0, die untere ist steiler. **Fallend:** beide unter 0, die obere ist steiler.
+     In beiden Fällen wird der Keil enger.
+   - Eine Linie hat mindestens 3 Berührungen, die andere mindestens 2. Zusammen also mindestens 5, wie bei
+     Kirkpatrick.
+   - Vom Beginn bis zum Signal wird der Keil um mindestens 30 % enger. Seine Breite am Beginn beträgt mindestens 3 ATR.
+   - **Ausbruch:** Der steigende Keil bricht nach unten aus (short), der fallende nach oben (long).
+   - **Ziel:** der Preis der Gegenlinie am Beginn des Keils. **Stop:** der äußerste Berührungspunkt der Gegenseite.
+8. **Doppelboden und Doppeltop:**
+   - Zwei Tiefs (Hochs) innerhalb 1 ATR, mindestens 10 Kerzen auseinander.
+   - Die Nackenlinie ist das höchste Hoch (tiefste Tief) dazwischen, durch den Docht. Der Abprall bis dorthin beträgt
+     mindestens 3 ATR.
+   - Der zweite Boden ist der tiefste Punkt nach der Nackenlinie (beim Top der höchste).
+   - Seit dem ersten Boden schließt keine Kerze unter dem Boden (− Toleranz). Vor der Signalkerze schließt keine über
+     der Nackenlinie. Beim Top gilt alles gespiegelt.
+   - **Ausbruch:** Schlusskurs über (unter) der Nackenlinie.
+   - Ziel: Nackenlinie ± Höhe. Stop: Boden − 0,15 ATR (Top + 0,15 ATR). Es zählt das jüngste Paar.
+9. **Signalkerze und Bewertung:** wie in Teil 1.
+10. **Nicht Sache des Lesers:** Vortrend, Volumen und Kaufkraft. Das legen die Steckbriefe fest.
 
-**Noch nicht festgelegt:**
-- die Toleranz;
-- die Bedingungen für Rechteck, Keil und Doppelboden;
-- die Berührungsregeln je Linie.
+**Pflichttests v1.1 (alle grün am 16.10.):**
 
-Sie werden vor dem ersten Lauf auf echten Daten als Fassung v1.1 festgelegt, mit Hash und den Pflichttests:
-künstlicher Keil, künstliches Rechteck und künstlicher Doppelboden werden erkannt, Rauschen nicht.
+| Test | Ergebnis | Grenze |
+|---|---|---|
+| Keil steigend, 50 verrauschte Varianten (mittleres Rauschen) | 48 erkannt | mindestens 45 |
+| Keil fallend | 50 erkannt | mindestens 45 |
+| Doppelboden | 45 erkannt | mindestens 45 |
+| Rechteck | 50 erkannt | mindestens 45 |
+| Zufallspfade, 300 Reihen | 15 mit Muster | höchstens 15 |
+| stationäres Rauschen, 300 Reihen | 9 mit Muster | höchstens 15 |
+| eingebauter Ausreißer-Docht an einem echten Tiefpunkt | verworfen; Rechteck danach mit 16 und 17 statt 4 und 4 Berührungen gelesen | verworfen |
+| Abschneide-Test | spätere Kerzen ändern nichts | identisch |
+
+Die Grenzen sind nach der Messung auf künstlichen Daten gesetzt. Echte Daten hat Teil 2 bis zu dieser Festlegung
+nicht gesehen. Doppelboden und Zufallspfade liegen genau an der Grenze; das wird so berichtet und nicht nachgestellt.
 
 ## Diagnose Runde 1 (Okt. 2025 – Sep. 2026, Prüftopf)
 

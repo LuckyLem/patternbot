@@ -1,28 +1,24 @@
 {
  "schema": 1,
- "stand": "2026-10-08T17:01:40-04:00",
+ "stand": "2026-10-16T08:21:56-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
   "pruefung": "online gegen Commit 4c580ae geprüft"
  },
- "tageslog": "Do 08.10.2026",
+ "tageslog": "Fr 16.10.2026",
  "zuletzt": [
-  "Fahrplan angelegt, Erfolgskriterien wörtlich übernommen (Commit 4c580ae).",
-  "Halbtage geprüft, kein Fix nötig.",
-  "Raster „Fahrplan“ und Lern-Labor-Seite mit Knopf sind online.",
-  "Notfallplan geschrieben, die alten Listen liegen unter docs/.",
-  "Lern-Labor Etappe 0: Lernzeit-Wächter und Abschneide-Test gebaut, beide mit Selbsttest; Logbuch, Prüftopf-Logbuch und Kandidatenliste angelegt; Datenplan erstellt: Lerntopf etwa 2,7 GB; Telegram-Texte entworfen.",
-  "Befund Datenplan: IEX-Tageskerzen gibt es erst ab August 2020, der Tagestrend ist am Anfang des Lerntopfs deshalb eingeschränkt; Entscheidung dazu in der Vorab-Datei.",
-  "Kopfzeile der Zusammenfassung von Runde 1 korrigiert. Dort stand „erstes Rechnen“, richtig ist die Neuberechnung nach dem Simulatorfehler; die Zahlen sind unverändert.",
-  "ORB Jahr 1 fertig: 973 Trades, −0,465R, 1 von 5 Kriterien.",
-  "Tagestrend SIP gegen IEX gemessen: 0,46 % abweichend, also SIP-Vorlauf; der Suchtopf bleibt ab Okt 2020.",
-  "Entscheidungen des Inhabers eingetragen."
+  "Export vom 13.10. nachgeholt: nur die fehlende 1-Min-Datei (920 KB, 67 Werte), Commit 9258adb.",
+  "Prüfung der Eröffnungskerzen: keine Ausreißer.",
+  "Chart-Leser Teil 1 auf t70, Festlegung v1 unverändert: alle 10 Ankerpunkte von SIP bestätigt, die Unterkante 620,05 bleibt. Abzug nur für die Signalkerze (Lücke 7,0 ATR, Durchfall 4,1 ATR). Die erwartete Unterkante 627,36 trifft nicht zu, weil SIP den Kurs bestätigt.",
+  "Erstes Musterbild t70, hell und dunkel, Handy und Desktop (Commit 7172713).",
+  "Befund am Pi: Er läuft seit dem 22.09. über WLAN, nicht über das Kabel, und hat seit heute eine neue Adresse."
  ],
  "als_naechstes": [
-  "Wochenreview.",
-  "Technik-Paket ab 22:30 (16:30 New York), sobald setups/2026-10-09.json auf main liegt. Mit dabei: Halbtag-Test, Speicherschutz für den Bot-Dienst und die Seiten-Dateien mit gleicher Prüfsumme. Danach ist live eingefroren.",
-  "ORB: Entscheidung des Inhabers zur Tick-Neuberechnung, danach Jahr 2."
+  "Technik-Paket ab 22:30 (16:30 New York): erst der Bedingungsbericht, dann schaltet der Inhaber um.",
+  "Wochenreview nach Handelsschluss.",
+  "Chart-Leser Teil 2 als Fassung v1.1 festlegen; ORB mit Ticks umsetzen und laden.",
+  "Etappe 0 mit dem Inhaber; Diagnose des Chart-Lesers auf Runde 1 (nur Geometrie, 40 Bilder)."
  ],
  "bereiche": [
   {
@@ -30,12 +26,12 @@
    "anker": "b1",
    "titel": "Betrieb und diese Woche",
    "status": "laeuft",
-   "erledigt": 2,
-   "gesamt": 10,
+   "erledigt": 3,
+   "gesamt": 12,
    "zaehlung": {
-    "erledigt": 2,
+    "erledigt": 3,
     "laeuft": 4,
-    "offen": 4,
+    "offen": 5,
     "test": 0,
     "verworfen": 0
    },
@@ -48,19 +44,19 @@
    "nr": "2",
    "anker": "b2",
    "titel": "Backtest-Runden und ORB",
-   "status": "teils",
+   "status": "laeuft",
    "erledigt": 5,
    "gesamt": 10,
    "zaehlung": {
     "erledigt": 5,
-    "laeuft": 0,
-    "offen": 4,
+    "laeuft": 2,
+    "offen": 2,
     "test": 1,
     "verworfen": 0
    },
    "naechster_schritt": "Runde 2 (Okt 2024–Sep 2025), einzige Änderung: Rechtecke gestrichen. Bericht",
    "naechster_nr": "2.3",
-   "datum": "Sa/So 10.–11.10.",
+   "datum": "seit Do 15.10.",
    "wer": "VS Code"
   },
   {
@@ -87,12 +83,12 @@
    "anker": "b4",
    "titel": "Lern-Labor – das Hauptziel",
    "status": "laeuft",
-   "erledigt": 6,
-   "gesamt": 56,
+   "erledigt": 11,
+   "gesamt": 76,
    "zaehlung": {
-    "erledigt": 6,
-    "laeuft": 4,
-    "offen": 46,
+    "erledigt": 11,
+    "laeuft": 8,
+    "offen": 57,
     "test": 0,
     "verworfen": 0
    },
@@ -145,17 +141,17 @@
    "titel": "Webseiten",
    "status": "laeuft",
    "erledigt": 2,
-   "gesamt": 5,
+   "gesamt": 7,
    "zaehlung": {
     "erledigt": 2,
     "laeuft": 2,
-    "offen": 1,
+    "offen": 3,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Seiten-Dateien mit gleicher Prüfsumme ins Technik-Paket, damit ein späteres Hochladen der Dashboard-Seite nichts überschreibt",
-   "naechster_nr": "7.5",
-   "datum": "Fr 09.10.",
+   "naechster_schritt": "Generator für lern-labor/status.json: heute vom PC, später jede Nacht vom Pi",
+   "naechster_nr": "7.3",
+   "datum": "ab Sa/So 10.–11.10.",
    "wer": "VS Code"
   },
   {
@@ -221,11 +217,11 @@
    "titel": "Trade ja oder nein (Meta-Labeling)",
    "status": "offen",
    "erledigt": 0,
-   "gesamt": 8,
+   "gesamt": 9,
    "zaehlung": {
     "erledigt": 0,
     "laeuft": 0,
-    "offen": 8,
+    "offen": 9,
     "test": 0,
     "verworfen": 0
    },
@@ -325,5 +321,5 @@
    "wer": "VS Code"
   }
  ],
- "punkte_gesamt": 140
+ "punkte_gesamt": 164
 }

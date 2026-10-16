@@ -1,33 +1,13 @@
 {
  "schema": 1,
- "stand": "2026-10-08T17:01:40-04:00",
+ "stand": "2026-10-16T08:20:35-04:00",
  "quelle": "PC",
- "code_labor": "780f6d714e9c",
+ "code_labor": "11510c609e88",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
   "job": null,
   "fenster": [
-   {
-    "start": "2026-10-08T16:30:00-04:00",
-    "stopp": "2026-10-09T09:00:00-04:00"
-   },
-   {
-    "start": "2026-10-09T16:30:00-04:00",
-    "stopp": "2026-10-12T09:00:00-04:00"
-   },
-   {
-    "start": "2026-10-12T16:30:00-04:00",
-    "stopp": "2026-10-13T09:00:00-04:00"
-   },
-   {
-    "start": "2026-10-13T16:30:00-04:00",
-    "stopp": "2026-10-14T09:00:00-04:00"
-   },
-   {
-    "start": "2026-10-14T16:30:00-04:00",
-    "stopp": "2026-10-15T09:00:00-04:00"
-   },
    {
     "start": "2026-10-15T16:30:00-04:00",
     "stopp": "2026-10-16T09:00:00-04:00"
@@ -47,6 +27,26 @@
    {
     "start": "2026-10-21T16:30:00-04:00",
     "stopp": "2026-10-22T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-22T16:30:00-04:00",
+    "stopp": "2026-10-23T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-23T16:30:00-04:00",
+    "stopp": "2026-10-26T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-26T16:30:00-04:00",
+    "stopp": "2026-10-27T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-27T16:30:00-04:00",
+    "stopp": "2026-10-28T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-28T16:30:00-04:00",
+    "stopp": "2026-10-29T09:00:00-04:00"
    }
   ]
  },
@@ -180,6 +180,48 @@
  ],
  "logbuch": [
   {
+   "datum": "2026-10-16",
+   "zeit": "2026-10-16 08:19",
+   "art": "Chart-Leser",
+   "text": "Erster Lauf auf echten Daten, Teil 1 Festlegung v1 (CHARTLESER.md sha256 93efee36…, Code-Hash ec953819abf7) unverändert: Live-Trade t70 (AMD, Rechteck long, 06.10.). Bot-Werte exakt nachgerechnet und gleich dem Setup-Export (Kante 635,86, Stop 627,955, Ziel 651,67). Alle 10 Ankerpunkte von SIP bestätigt, darunter die Unterkante 620,05 (SIP 619,99; Docht 0,93× die mittlere Spanne der Eröffnungskerzen) - nach Regel 2 echt, sie bleibt. Abzug nur für die Signalkerze (Lücke 7,0 ATR, Durchfall 4,1 ATR). Erwartung des Inhabers (Docht verworfen, Unterkante ~627,36) trifft nicht zu, Grund: SIP bestätigt den Kurs. Ergebnis: chartleser/signale/2026-10-06_AMD_Rectangle_0930.json, Bild: bilder/",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-16",
+   "zeit": "2026-10-16 08:19",
+   "art": "Messung",
+   "text": "Prüfung der Eröffnungskerzen (Inhaber 15.10., A4), Daten bis 15.10.: a) AMD 05.10.: IEX-Tief 620,05 von SIP bestätigt (SIP-Tief 619,99 in Minute 09:31, 524.112 Stück in Minute 09:30); 06.10.: IEX-Tief 628,21 bestätigt (SIP 628,00), IEX-Eröffnung 648,98 gegen SIP 648,00 (erster IEX-Abschluss, innerhalb der SIP-Spanne). b) 2.788 Symbol-Tage (147 Werte, 19 Tage): IEX nie außerhalb der SIP-Spanne, 0 Ausreißer. c) 1.912 Setups seit 28.09., 1.903 nachgebaut, 799 Ankerpunkte an Eröffnungskerzen, 0 an Ausreißern. Bericht: messungen/eroeffnungskerzen.md",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-15",
+   "zeit": "2026-10-15 14:55",
+   "art": "Vorab-Datei",
+   "text": "Chart-Leser v1, Code-Hash jetzt ec953819abf7 (vorher 4a7527d722f6): nur Ausgabe ergänzt (Ankerpunkte der neu gezogenen Linien im JSON) und Text der Signalkerze für Short berichtigt; Logik und Festlegung CHARTLESER.md unverändert. Pflichttests erneut grün. Weiterhin vor dem ersten Lauf auf echten Daten.",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-15",
+   "zeit": "2026-10-15 14:48",
+   "art": "Regel",
+   "text": "3×-Regel für Ausreißer-Dochte ohne SIP-Kerze: Herkunft Live-Trade t70 (AMD, Rechteck long 06.10.2026; Unterkante 620,05 aus der IEX-Eröffnungskerze vom 05.10.). Mit SIP-Kerze entscheidet SIP (Inhaber 15.10.): bestätigt SIP den Kurs, bleibt der Docht Ankerpunkt.",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-15",
+   "zeit": "2026-10-15 14:48",
+   "art": "Abschneide-Test",
+   "text": "Chart-Leser v1: Wendepunkte 1/2/4 ATR und ATR, 120 Zeitpunkte identisch; Gegenprobe zentriertes Fenster als Leck erkannt. Pflichttest Ausreißer: eingebauter Docht an einer Eröffnungskerze ohne SIP verworfen (5,8× über 3×), Linie neu gezogen wie ohne Ausreißer; SIP bestätigt → bleibt; SIP bestätigt nicht → SIP-Wert.",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-15",
+   "zeit": "2026-10-15 14:48",
+   "art": "Vorab-Datei",
+   "text": "Chart-Leser Festlegung v1 (chartleser/CHARTLESER.md, SHA-256 93efee362f5e11d46ceac33cb70649867b57e04d25aea2f16f3652a981f1237c), Code-Hash Chart-Leser 4a7527d722f6. Festgelegt vor dem ersten Lauf auf echten Daten (t70, Diagnose Runde 1).",
+   "ok": null
+  },
+  {
    "datum": "2026-10-08",
    "zeit": "2026-10-08 16:57",
    "art": "Messung",
@@ -247,8 +289,9 @@
   {
    "name": "Runde 2",
    "zeitraum": "Okt 2024–Sep 2025",
-   "status": "geplant",
-   "text": "einzige Änderung: Rechtecke gestrichen"
+   "status": "läuft",
+   "text": "einzige Änderung: Rechtecke gestrichen · vorab festgelegt (VORAB.md), rechnet; Downloads nur außerhalb der Handelszeit",
+   "beleg": "runde-2/VORAB.md"
   },
   {
    "name": "ORB Jahr 1",

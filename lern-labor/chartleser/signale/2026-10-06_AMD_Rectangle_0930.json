@@ -1,0 +1,304 @@
+{
+ "chartleser": "v1 Signalprüfung",
+ "symbol": "AMD",
+ "muster": "Rectangle",
+ "name": "Rechteck",
+ "entscheidung": "2026-10-06T13:50:26.644143+00:00",
+ "signalkerze": "2026-10-06T13:30:00+00:00",
+ "bot": {
+  "signal": true,
+  "seite": "long",
+  "kante": 635.86,
+  "stop": 627.955,
+  "ziel": 651.67,
+  "schluss": 637.25,
+  "atr_pct": 0.005160954015902284,
+  "vol_ratio": 5.338121558609494
+ },
+ "nachgebaut": true,
+ "linien_bot": {
+  "kante": 635.86,
+  "gegenkante": 620.05,
+  "punkte": [
+   {
+    "rolle": "Oberkante",
+    "index": 170,
+    "zeit": "2026-10-02T19:45:00+00:00",
+    "preis": 635.86,
+    "art": "hoch"
+   },
+   {
+    "rolle": "Unterkante",
+    "index": 173,
+    "zeit": "2026-10-05T13:30:00+00:00",
+    "preis": 620.05,
+    "art": "tief"
+   },
+   {
+    "rolle": "Berührung oben",
+    "index": 162,
+    "zeit": "2026-10-02T17:45:00+00:00",
+    "preis": 632.29,
+    "art": "hoch"
+   },
+   {
+    "rolle": "Berührung oben",
+    "index": 174,
+    "zeit": "2026-10-05T13:45:00+00:00",
+    "preis": 632.64,
+    "art": "hoch"
+   },
+   {
+    "rolle": "Berührung oben",
+    "index": 183,
+    "zeit": "2026-10-05T16:00:00+00:00",
+    "preis": 632.735,
+    "art": "hoch"
+   },
+   {
+    "rolle": "Berührung oben",
+    "index": 190,
+    "zeit": "2026-10-05T17:45:00+00:00",
+    "preis": 632.53,
+    "art": "hoch"
+   },
+   {
+    "rolle": "Berührung unten",
+    "index": 160,
+    "zeit": "2026-10-02T17:15:00+00:00",
+    "preis": 628.76,
+    "art": "tief"
+   },
+   {
+    "rolle": "Berührung unten",
+    "index": 179,
+    "zeit": "2026-10-05T15:00:00+00:00",
+    "preis": 627.74,
+    "art": "tief"
+   },
+   {
+    "rolle": "Berührung unten",
+    "index": 187,
+    "zeit": "2026-10-05T17:00:00+00:00",
+    "preis": 630.15,
+    "art": "tief"
+   },
+   {
+    "rolle": "Berührung unten",
+    "index": 194,
+    "zeit": "2026-10-05T18:45:00+00:00",
+    "preis": 629.37,
+    "art": "tief"
+   }
+  ],
+  "fenster": [
+   "2026-10-02T14:45:00+00:00",
+   "2026-10-06T13:30:00+00:00"
+  ]
+ },
+ "pruefungen": [
+  {
+   "zeit": "2026-10-02T19:45:00+00:00",
+   "typ": "hoch",
+   "preis": 635.86,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 1.48,
+   "mittlere_spanne": 2.31,
+   "faktor": 0.64,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 635.8899,
+   "sip_verfuegbar": true,
+   "rolle": "Oberkante",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-05T13:30:00+00:00",
+   "typ": "tief",
+   "preis": 620.05,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 10.01,
+   "mittlere_spanne": 10.7845,
+   "faktor": 0.93,
+   "massstab": "Eröffnungskerzen der letzten 20 Tage",
+   "sip": 619.99,
+   "sip_verfuegbar": true,
+   "rolle": "Unterkante",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-02T17:45:00+00:00",
+   "typ": "hoch",
+   "preis": 632.29,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 0.34,
+   "mittlere_spanne": 3.8262,
+   "faktor": 0.09,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 632.32,
+   "sip_verfuegbar": true,
+   "rolle": "Berührung oben",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-05T13:45:00+00:00",
+   "typ": "hoch",
+   "preis": 632.64,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 1.16,
+   "mittlere_spanne": 2.6107,
+   "faktor": 0.44,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 633.5,
+   "sip_verfuegbar": true,
+   "rolle": "Berührung oben",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-05T16:00:00+00:00",
+   "typ": "hoch",
+   "preis": 632.735,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 0.085,
+   "mittlere_spanne": 2.3903,
+   "faktor": 0.04,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 632.85,
+   "sip_verfuegbar": true,
+   "rolle": "Berührung oben",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-05T17:45:00+00:00",
+   "typ": "hoch",
+   "preis": 632.53,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 0.86,
+   "mittlere_spanne": 2.3675,
+   "faktor": 0.36,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 632.65,
+   "sip_verfuegbar": true,
+   "rolle": "Berührung oben",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-02T17:15:00+00:00",
+   "typ": "tief",
+   "preis": 628.76,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 0.63,
+   "mittlere_spanne": 3.841,
+   "faktor": 0.16,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 628.55,
+   "sip_verfuegbar": true,
+   "rolle": "Berührung unten",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-05T15:00:00+00:00",
+   "typ": "tief",
+   "preis": 627.74,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 1.08,
+   "mittlere_spanne": 2.42,
+   "faktor": 0.45,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 627.5,
+   "sip_verfuegbar": true,
+   "rolle": "Berührung unten",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-05T17:00:00+00:00",
+   "typ": "tief",
+   "preis": 630.15,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 0.65,
+   "mittlere_spanne": 2.2918,
+   "faktor": 0.28,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 630.0101,
+   "sip_verfuegbar": true,
+   "rolle": "Berührung unten",
+   "runde": 1
+  },
+  {
+   "zeit": "2026-10-05T18:45:00+00:00",
+   "typ": "tief",
+   "preis": 629.37,
+   "behalten": true,
+   "grund": "SIP bestätigt den Kurs",
+   "ersatz": null,
+   "docht": 0.535,
+   "mittlere_spanne": 1.7938,
+   "faktor": 0.3,
+   "massstab": "die 20 Kerzen der Handelszeit davor",
+   "sip": 629.2,
+   "sip_verfuegbar": true,
+   "rolle": "Berührung unten",
+   "runde": 1
+  }
+ ],
+ "verworfen": [],
+ "korrigiert": null,
+ "signalkerze_pruefung": {
+  "luecke_atr": 6.96,
+  "durchfall_atr": 4.06,
+  "abzug": true,
+  "text": "Kurslücke von 7.0 ATR über die Kante, Durchfall 4.1 ATR zurück hinter die Kante",
+  "eigener_docht": {
+   "zeit": "2026-10-06T13:30:00+00:00",
+   "typ": "tief",
+   "preis": 628.21,
+   "behalten": true,
+   "grund": "ohne SIP-Kerze, Docht 0.8× die mittlere Spanne (unter 3×)",
+   "ersatz": null,
+   "docht": 9.04,
+   "mittlere_spanne": 10.8345,
+   "faktor": 0.83,
+   "massstab": "Eröffnungskerzen der letzten 20 Tage",
+   "sip": null,
+   "sip_verfuegbar": false
+  },
+  "atr_davor": 1.8857
+ },
+ "bewertung": {
+  "stufe": "mit Abzug",
+  "abzuege": [
+   "Signalkerze: Kurslücke von 7.0 ATR über die Kante, Durchfall 4.1 ATR zurück hinter die Kante"
+  ]
+ },
+ "export": {
+  "kante": 635.86,
+  "stop": 627.955,
+  "ziel": 651.67,
+  "entscheidung": "order",
+  "signal_bar": {
+   "o": 648.98,
+   "h": 649.74,
+   "l": 628.21,
+   "c": 637.25,
+   "v": 75958.0
+  }
+ },
+ "gleich_export": true
+}

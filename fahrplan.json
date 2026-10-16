@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "stand": "2026-10-16T08:21:56-04:00",
+ "stand": "2026-10-16T08:52:43-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
@@ -83,12 +83,12 @@
    "anker": "b4",
    "titel": "Lern-Labor – das Hauptziel",
    "status": "laeuft",
-   "erledigt": 11,
+   "erledigt": 17,
    "gesamt": 76,
    "zaehlung": {
-    "erledigt": 11,
-    "laeuft": 8,
-    "offen": 57,
+    "erledigt": 17,
+    "laeuft": 4,
+    "offen": 55,
     "test": 0,
     "verworfen": 0
    },

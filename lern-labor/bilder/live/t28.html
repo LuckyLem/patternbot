@@ -74,21 +74,7 @@ p{margin:0}
 .toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .chart-host{position:relative}
 .chart-host:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
-svg.chart{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
-.chart .grid{stroke:var(--grid);stroke-width:1;shape-rendering:crispEdges}
-.chart .tick{font:400 10.5px var(--mono);fill:var(--ink-3)}
-.chart .day{font:500 11.5px var(--sans);fill:var(--ink-2)}
-.chart .lab{font:500 11.5px var(--sans);fill:var(--ink-2)}
-.chart .labv{font:600 11.5px var(--mono);fill:var(--ink)}
-.chart .note{font:500 11px var(--sans);fill:var(--ink-2)}
-.chart .sep{stroke:var(--hair);stroke-width:1;stroke-dasharray:2 4}
-.chart .xh{stroke:var(--ink-3);stroke-width:1;shape-rendering:crispEdges}
 .cap{margin-top:10px;font-size:12.5px;color:var(--ink-3)}
-.tip{position:fixed;z-index:20;pointer-events:none;min-width:190px;max-width:280px;border-radius:12px;padding:9px 11px;background:var(--raised);box-shadow:var(--lift),0 0 0 1px var(--hair);font-size:12.5px;line-height:1.5;transform:translate(-50%,calc(-100% - 12px))}
-.tip h4{margin:0 0 4px;font:500 11px var(--mono);color:var(--ink-3)}
-.tip div{display:flex;justify-content:space-between;gap:14px;color:var(--ink-2)}
-.tip b{font:600 12px var(--mono);color:var(--ink)}
-.tip p{margin-top:6px;color:var(--down);font-size:12px}
 .cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 dl.facts{margin:0;display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:9px 18px;font-size:14px}
 dl.facts dt{color:var(--ink-3);font-size:13px}
@@ -130,7 +116,7 @@ td:first-child{white-space:nowrap;font-weight:600}
   <div class="cols">
     <section class="card" aria-labelledby="t-facts">
       <h2 id="t-facts">Was der Bot gesehen hat</h2>
-      <dl class="facts"><dt>Zeitebene</dt><dd>15-Minuten-Kerzen von IEX, wie live</dd><dt>Kante</dt><dd><span class="num">223,42</span>, Mi 23.09. 09:30. Das ist die Ausbruchskante.</dd><dt>Gegenkante</dt><dd><span class="num">220,01</span>, Mi 23.09. 10:45</dd><dt>Höhe und Ziel</dt><dd><span class="num">3,41</span> hoch, Ziel <span class="num">226,83</span></dd><dt>Stop</dt><dd><span class="num">221,72</span></dd><dt>Signal</dt><dd>Signalkerze Do 24.09. 09:30, Schluss <span class="num">224,25</span>, Volumen 2,9-fach über dem Schnitt</dd><dt>Einstieg</dt><dd>09:53, gefüllt zu <span class="num">224,91</span>, 0,47 R hinter der Kante</dd><dt>Ausstieg</dt><dd>11:30 zu <span class="num">221,53</span>, Stop-Loss, nach 97 Minuten</dd></dl>
+      <dl class="facts"><dt>Zeitebene</dt><dd>15-Minuten-Kerzen von IEX, wie live</dd><dt>Kante</dt><dd>223,42, Mi 23.09. 09:30. Das ist die Ausbruchskante.</dd><dt>Gegenkante</dt><dd>220,01, Mi 23.09. 10:45</dd><dt>Höhe und Ziel</dt><dd>3,41 hoch, Ziel 226,83</dd><dt>Stop</dt><dd>221,72</dd><dt>Signal</dt><dd>Signalkerze Do 24.09. 09:30, Schluss 224,25, Volumen 2,9-fach über dem Schnitt</dd><dt>Einstieg</dt><dd>09:53, gefüllt zu 224,91, 0,47 R hinter der Kante</dd><dt>Ausstieg</dt><dd>11:30 zu 221,53, Stop-Loss, nach 97 Minuten</dd></dl>
     </section>
     <section class="card" aria-labelledby="t-find">
       <h2 id="t-find">Was der Chart-Leser prüft</h2>
@@ -148,154 +134,210 @@ td:first-child{white-space:nowrap;font-weight:600}
 
   <p class="foot">Nur Paper-Trading. Lern-Labor, getrennt vom Live-Bot.</p>
 </div>
-<div class="tip" id="tip" role="status" hidden></div>
+<script>/* Musterbild des Lern-Labors: zeichnet ein Musterbild (Kerzen, Linien, Punkte, verworfene Dochte, Trade, Volumen,
+   Fadenkreuz mit New-York- und deutscher Zeit) aus den Bilddaten des Labors. Eine Quelle für die einzelnen Bildseiten
+   und die Webseite (labor.html, index.html). Nutzt die Farb-Tokens der Seite, mit Ersatzwerten. Ohne Bibliothek.
+
+   const c = Musterbild.zeichne(host, daten);   c.gruppe("geprueft", false);   c.neu(); */
+(function () {
+  "use strict";
+  const NS = "http://www.w3.org/2000/svg";
+  const S = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a || {}) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+  const nf = (v, d = 2) => Number(v).toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+  const dayLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); const w = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); return `${WD[w]} ${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.`; };
+  const DASH = { voll: "", strich: "6 4", kurz: "5 3", punkt: "2 3" };
+  const WASH = { accent: "var(--accent-wash, rgba(var(--accent-rgb, 10,107,255), .08))", up: "var(--up-wash, rgba(8,167,66,.10))",
+                 down: "var(--down-wash, rgba(224,47,36,.09))", be: "var(--be-wash, rgba(163,95,0,.12))" };
+  const wash = (f) => WASH[f] || WASH.accent;
+  const col = (f) => `var(--${f})`;
+  const step = (range, n) => { const raw = range / n, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; };
+
+  const CSS = `
+.mb-chart{position:relative}
+.mb-chart:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+.mb-svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.mb-grid{stroke:var(--grid, var(--hair-soft, rgba(128,128,140,.12)));stroke-width:1;shape-rendering:crispEdges}
+.mb-tick{font:400 10.5px var(--mono, ui-monospace, monospace);fill:var(--ink-3)}
+.mb-day{font:500 11.5px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-lab{font:500 11.5px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-labv{font:600 11.5px var(--mono, ui-monospace, monospace);fill:var(--ink)}
+.mb-note{font:500 11px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-sep{stroke:var(--hair, rgba(128,128,140,.2));stroke-width:1;stroke-dasharray:2 4}
+.mb-xh{stroke:var(--ink-3);stroke-width:1;shape-rendering:crispEdges}
+.mb-tip{position:fixed;z-index:60;pointer-events:none;min-width:190px;max-width:280px;border-radius:12px;padding:9px 11px;
+  background:var(--raised);color:var(--ink);box-shadow:0 14px 34px -14px rgba(0,0,0,.35),0 0 0 1px var(--hair, rgba(128,128,140,.2));
+  font:400 12.5px/1.5 var(--sans, system-ui, sans-serif);transform:translate(-50%,calc(-100% - 12px))}
+.mb-tip h4{margin:0 0 4px;font:500 11px var(--mono, ui-monospace, monospace);color:var(--ink-3)}
+.mb-tip div{display:flex;justify-content:space-between;gap:14px;color:var(--ink-2)}
+.mb-tip b{font:600 12px var(--mono, ui-monospace, monospace);color:var(--ink)}
+.mb-tip p{margin:6px 0 0;color:var(--down);font-size:12px}`;
+  let cssDone = false, tip = null;
+  function css() { if (cssDone) return; const s = document.createElement("style"); s.textContent = CSS; document.head.appendChild(s); cssDone = true; }
+  function tipEl() {
+    if (tip && document.body.contains(tip)) return tip;
+    tip = document.createElement("div"); tip.className = "mb-tip"; tip.hidden = true; tip.setAttribute("role", "status");
+    document.body.appendChild(tip); return tip;
+  }
+  addEventListener("scroll", () => { if (tip) tip.hidden = true; }, { passive: true, capture: true });
+
+  function zeichne(host, D, opts) {
+    css();
+    opts = opts || {};
+    const B = D.kerzen || [];
+    const show = {}; for (const g in D.gruppen || {}) show[g] = D.gruppen[g].an !== false;
+    const vis = (o) => !o.gruppe || show[o.gruppe] !== false;
+    const verw = {}; for (const v of D.verworfen || []) verw[v.i] = v;
+    let CH = null;
+    host.classList.add("mb-chart");
+    if (!host.hasAttribute("tabindex")) host.tabIndex = 0;
+
+    function draw() {
+      host.textContent = "";
+      if (B.length < 2) return;
+      const W = Math.max(300, Math.round(host.clientWidth)), small = W < 600;
+      const m = { l: small ? 46 : 54, r: small ? 96 : 150, t: 24, b: 30 };
+      const PH = opts.hoehe || (small ? 300 : 390), VH = small ? 54 : 70, GAP = 14, H = m.t + PH + GAP + VH + m.b;
+      const gaps = []; let g = 0;
+      B.forEach((b, i) => { if (i && b[0] !== B[i - 1][0]) g++; gaps.push(g); });
+      const slots = B.length + g * 1.6, slot = (W - m.l - m.r) / slots;
+      const X = (i) => m.l + slot * (i + gaps[i] * 1.6 + 0.5);
+      let lo = Infinity, hi = -Infinity;
+      for (const b of B) { lo = Math.min(lo, b[5]); hi = Math.max(hi, b[4]); }
+      for (const l of D.linien || []) if (vis(l)) { lo = Math.min(lo, l.p0, l.p1 ?? l.p0); hi = Math.max(hi, l.p0, l.p1 ?? l.p0); }
+      for (const r of D.rechts || []) if (vis(r)) { lo = Math.min(lo, r.p); hi = Math.max(hi, r.p); }
+      const pad = (hi - lo) * 0.05; lo -= pad; hi += pad;
+      const Y = (v) => m.t + (1 - (v - lo) / (hi - lo)) * PH;
+      const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: "mb-svg", role: "img", "aria-label": D.aria || "" }, host);
+      const st = step(hi - lo, small ? 5 : 7), dec = st >= 1 ? 0 : st >= 0.1 ? 1 : 2;
+      for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) {
+        S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: "mb-grid" }, svg);
+        S("text", { x: m.l - 8, y: Y(v) + 3.5, class: "mb-tick", "text-anchor": "end" }, svg).textContent = nf(v, dec);
+      }
+      let start = 0;
+      B.forEach((b, i) => {
+        if (i === B.length - 1 || B[i + 1][0] !== b[0]) {
+          if (X(i) - X(start) + slot >= (small ? 52 : 60) || (start === 0 && i === B.length - 1)) S("text", { x: (X(start) + X(i)) / 2, y: H - 8, class: "mb-day", "text-anchor": "middle" }, svg).textContent = dayLabel(b[0]);
+          if (i < B.length - 1) { const sx = (X(i) + X(i + 1)) / 2; S("line", { x1: sx, x2: sx, y1: m.t, y2: m.t + PH + GAP + VH, class: "mb-sep" }, svg); }
+          start = i + 1;
+        }
+      });
+      for (const f of D.flaechen || []) if (vis(f)) S("rect", { x: X(f.von), y: Y(f.oben), width: Math.max(1, X(f.bis) - X(f.von)), height: Math.max(1, Y(f.unten) - Y(f.oben)), style: `fill:${wash(f.farbe)}` }, svg);
+      if (D.signal != null) {
+        S("rect", { x: X(D.signal) - slot * 0.55, y: m.t, width: slot * 1.1, height: PH, style: `fill:${wash("accent")}` }, svg);
+        S("text", { x: X(D.signal), y: m.t - 8, class: "mb-note", "text-anchor": "middle" }, svg).textContent = "Signal";
+      }
+      for (const l of D.linien || []) {
+        if (!vis(l)) continue;
+        const p1 = l.p1 ?? l.p0, sty = `stroke:${col(l.farbe)};stroke-width:${l.breite || 1.6};fill:none` + (DASH[l.strich] ? `;stroke-dasharray:${DASH[l.strich]}` : "");
+        S("line", { x1: X(l.von), x2: X(l.bis), y1: Y(l.p0), y2: Y(p1), style: sty }, svg);
+        if (l.weiter != null && l.weiter > l.bis) {
+          const pw = l.p0 + (p1 - l.p0) * (l.weiter - l.von) / Math.max(1, l.bis - l.von);
+          S("line", { x1: X(l.bis), x2: X(l.weiter), y1: Y(p1), y2: Y(pw), style: `stroke:${col(l.farbe)};stroke-width:${l.breite || 1.6};stroke-dasharray:5 4` }, svg);
+        }
+      }
+      const cw = Math.max(2, slot * 0.62);
+      B.forEach((b, i) => {
+        const [, hm, , o, h, l, c] = b, up = c >= o, cc = up ? "var(--up)" : "var(--down)", ext = hm < "09:30" || hm >= "16:00";
+        const gc = S("g", { opacity: ext ? .45 : 1 }, svg);
+        const v = verw[i];
+        const hiW = v && v.typ === "hoch" ? v.bis : h, loW = v && v.typ === "tief" ? v.bis : l;
+        S("line", { x1: X(i), x2: X(i), y1: Y(hiW), y2: Y(loW), style: `stroke:${cc};stroke-width:1` }, gc);
+        const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
+        S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(1, y1 - y0), rx: 1, style: `fill:${cc}` }, gc);
+        if (v) {
+          S("line", { x1: X(i), x2: X(i), y1: Y(v.bis), y2: Y(v.von), style: "stroke:var(--down);stroke-width:1.4;stroke-dasharray:2 3" }, svg);
+          const yx = Y(v.von), r = 4;
+          S("path", { d: `M${X(i) - r} ${yx - r}L${X(i) + r} ${yx + r}M${X(i) + r} ${yx - r}L${X(i) - r} ${yx + r}`, style: "stroke:var(--down);stroke-width:1.8;fill:none" }, svg);
+        }
+      });
+      for (const p of D.punkte || []) if (vis(p)) S("circle", { cx: X(p.i), cy: Y(p.p), r: p.klein ? 3.5 : 4.5, style: `fill:none;stroke:${col(p.farbe)};stroke-width:${p.klein ? 1.4 : 1.8}` + (p.strich ? ";stroke-dasharray:2 2" : "") }, svg);
+      if (D.einstieg) {
+        const ex = X(D.einstieg.i), ey = Y(D.einstieg.p);
+        S("path", { d: `M${ex - 12} ${ey}L${ex - 4} ${ey}M${ex - 8} ${ey - 4}L${ex - 4} ${ey}L${ex - 8} ${ey + 4}`, style: "fill:none;stroke:var(--ink);stroke-width:1.6" }, svg);
+        S("circle", { cx: ex, cy: ey, r: 3.5, style: "fill:var(--ink)" }, svg);
+      }
+      if (D.ausstieg) S("circle", { cx: X(D.ausstieg.i), cy: Y(D.ausstieg.p), r: 5, style: `fill:${col(D.ausstieg.farbe || "ink")};stroke:var(--ground);stroke-width:2` }, svg);
+      for (const n of D.notizen || []) {
+        if (!vis(n) || (n.gross && W < 800)) continue;
+        S("text", { x: X(n.i) + (n.dx || 0), y: Y(n.p) + (n.dy || 0), class: "mb-note", "text-anchor": n.anker || "start", style: n.farbe ? `fill:${col(n.farbe)}` : "" }, svg).textContent = small && n.kurz ? n.kurz : n.text;
+      }
+      const labs = (D.rechts || []).filter(vis).map((l) => ({ ...l, y: Y(l.p) }));
+      labs.sort((a, b) => a.y - b.y);
+      for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 28);
+      const lx = W - m.r + 10;
+      for (const l of labs) {
+        S("line", { x1: lx, x2: lx + 10, y1: l.y, y2: l.y, style: `stroke:${col(l.farbe)};stroke-width:2` + (l.strich ? ";stroke-dasharray:3 2" : "") }, svg);
+        S("text", { x: lx + 15, y: l.y - 2, class: "mb-lab" }, svg).textContent = small && l.kurz ? l.kurz : l.t;
+        S("text", { x: lx + 15, y: l.y + 11, class: "mb-labv" }, svg).textContent = nf(l.p);
+      }
+      const vt = m.t + PH + GAP, vmax = Math.max(1, ...B.map((b) => b[7] || 0));
+      B.forEach((b, i) => {
+        if (b[7] == null) return;
+        const h = (b[7] / vmax) * VH;
+        S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(.5, h), style: `fill:${i === D.signal ? "var(--accent)" : "var(--vol, var(--hair, rgba(128,128,140,.25)))"}` }, svg);
+      });
+      if (D.vol_notiz && D.signal != null) S("text", { x: X(D.signal) + cw, y: vt + 11, class: "mb-note" }, svg).textContent = D.vol_notiz;
+      S("text", { x: m.l - 8, y: vt + VH, class: "mb-tick", "text-anchor": "end" }, svg).textContent = "Vol.";
+      const xh = S("line", { class: "mb-xh", y1: m.t, y2: vt + VH, visibility: "hidden" }, svg);
+      const hit = S("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: PH + GAP + VH, style: "fill:transparent;cursor:crosshair" }, svg);
+      CH = { svg, W, X, Y, xh, idx: CH ? CH.idx : (D.signal ?? B.length - 1) };
+      const near = (cx) => { let best = 0, bd = Infinity; B.forEach((b, i) => { const d = Math.abs(X(i) - cx); if (d < bd) { bd = d; best = i; } }); return best; };
+      const move = (e) => { const r = svg.getBoundingClientRect(); showAt(near(((e.clientX - r.left) * W) / r.width), e.clientX); };
+      hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
+      hit.addEventListener("pointerleave", () => { xh.setAttribute("visibility", "hidden"); tipEl().hidden = true; });
+    }
+    function showAt(i, clientX) {
+      if (!CH) return;
+      const { svg, W, X, Y, xh } = CH; CH.idx = i;
+      const b = B[i], r = svg.getBoundingClientRect(), k = r.width / W;
+      xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
+      const t = tipEl(); t.textContent = "";
+      const h4 = document.createElement("h4"); h4.textContent = `${dayLabel(b[0])} ${b[1]} New York · ${b[2]} bei uns`; t.appendChild(h4);
+      for (const [l, v] of [["Eröffnung", b[3]], ["Hoch", b[4]], ["Tief", b[5]], ["Schluss", b[6]]]) {
+        const row = document.createElement("div"); row.append(l); const bb = document.createElement("b"); bb.textContent = nf(v); row.appendChild(bb); t.appendChild(row);
+      }
+      const row = document.createElement("div"); row.append("Volumen"); const bb = document.createElement("b"); bb.textContent = b[7] == null ? "nicht vorhanden" : Number(b[7]).toLocaleString("de-DE"); row.appendChild(bb); t.appendChild(row);
+      if (verw[i]) { const p = document.createElement("p"); p.textContent = verw[i].text; t.appendChild(p); }
+      t.hidden = false;
+      const x = clientX ?? r.left + X(i) * k, y = r.top + Y(b[4]) * k, w = t.offsetWidth;
+      t.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, x)) + "px";
+      t.style.top = Math.max(t.offsetHeight + 20, y) + "px";
+    }
+    host.addEventListener("keydown", (e) => {
+      if (!CH) return; let i = CH.idx;
+      if (e.key === "ArrowRight") i++; else if (e.key === "ArrowLeft") i--; else if (e.key === "Escape") { tipEl().hidden = true; return; } else return;
+      e.preventDefault(); showAt(Math.max(0, Math.min(B.length - 1, i)));
+    });
+    host.addEventListener("blur", () => { tipEl().hidden = true; });
+    let rw = 0;
+    const ro = new ResizeObserver(() => { const w = Math.round(host.clientWidth); if (w > 0 && Math.abs(w - rw) > 2) { rw = w; draw(); } });
+    ro.observe(host);
+    draw();
+    return {
+      neu: draw,
+      gruppe(name, an) { show[name] = !!an; draw(); },
+      zu() { ro.disconnect(); tipEl().hidden = true; },
+    };
+  }
+  window.Musterbild = { zeichne };
+})();
+</script>
 <script>
 (() => {
-"use strict";
-const D = {"kerzen":[["2026-09-21","15:15","21:15",214.885,215.05,214.47,214.86,13021],["2026-09-21","15:30","21:30",214.96,215.195,214.84,214.98,12300],["2026-09-21","15:45","21:45",214.975,216.175,214.94,215.82,53629],["2026-09-22","09:30","15:30",214.85,215.51,214.415,215.12,16229],["2026-09-22","09:45","15:45",215.09,215.76,215.09,215.45,8287],["2026-09-22","10:00","16:00",216.26,217.52,216.26,217.52,12344],["2026-09-22","10:15","16:15",217.335,218.67,217.305,217.88,8673],["2026-09-22","10:30","16:30",217.84,218.6,217.835,218.6,11205],["2026-09-22","10:45","16:45",218.655,219.065,218.43,219.025,9821],["2026-09-22","11:00","17:00",219.21,220.37,219.21,220.37,4394],["2026-09-22","11:15","17:15",220.365,221.18,220.225,220.225,7557],["2026-09-22","11:30","17:30",220.26,221.33,220.26,221.29,5517],["2026-09-22","11:45","17:45",221.37,221.445,221.165,221.21,7513],["2026-09-22","12:00","18:00",221.225,221.61,221.225,221.55,4486],["2026-09-22","12:15","18:15",222.06,222.22,221.73,222.15,7068],["2026-09-22","12:30","18:30",222.22,222.22,221.935,222.05,7493],["2026-09-22","12:45","18:45",222.04,222.35,221.825,222.33,7196],["2026-09-22","13:00","19:00",222.31,222.31,220.93,221.31,6210],["2026-09-22","13:15","19:15",221.09,221.31,220.705,221.305,9531],["2026-09-22","13:30","19:30",221.36,221.61,221.295,221.61,15326],["2026-09-22","13:45","19:45",221.66,222.235,221.66,222.19,9560],["2026-09-22","14:00","20:00",222.12,222.12,221.57,221.72,9120],["2026-09-22","14:15","20:15",221.755,221.755,221.175,221.23,7385],["2026-09-22","14:30","20:30",221.225,221.45,220.925,220.925,6721],["2026-09-22","14:45","20:45",220.95,220.975,220.535,220.71,16631],["2026-09-22","15:00","21:00",220.745,221.11,220.745,220.93,18646],["2026-09-22","15:15","21:15",220.93,221.01,220.655,220.87,19342],["2026-09-22","15:30","21:30",220.885,221.63,220.81,221.375,15305],["2026-09-22","15:45","21:45",221.37,221.77,221.065,221.21,56244],["2026-09-23","09:30","15:30",221.4,223.42,221.4,222.85,5193],["2026-09-23","09:45","15:45",220.915,222.13,220.9,222.01,6090],["2026-09-23","10:00","16:00",221.715,222.5,221.54,222.215,2996],["2026-09-23","10:15","16:15",222.08,222.08,220.34,220.545,16798],["2026-09-23","10:30","16:30",220.65,221.07,220.17,220.25,27976],["2026-09-23","10:45","16:45",220.01,220.89,220.01,220.89,4713],["2026-09-23","11:00","17:00",221.12,221.31,220.94,221.115,2754],["2026-09-23","11:15","17:15",221.12,221.39,220.94,220.94,2844],["2026-09-23","11:30","17:30",220.77,221.12,220.76,220.99,8769],["2026-09-23","11:45","17:45",221.0,221.13,220.81,220.81,10037],["2026-09-23","12:00","18:00",220.8,220.8,220.44,220.66,11332],["2026-09-23","12:15","18:15",220.72,221.02,220.49,221.02,4235],["2026-09-23","12:30","18:30",221.04,221.14,221.04,221.125,1265],["2026-09-23","12:45","18:45",221.04,221.155,220.95,221.0,7789],["2026-09-23","13:00","19:00",221.045,221.12,220.795,221.07,7533],["2026-09-23","13:15","19:15",221.085,221.09,220.7,221.055,6014],["2026-09-23","13:30","19:30",221.03,221.03,220.575,220.76,6585],["2026-09-23","13:45","19:45",220.79,220.93,220.685,220.79,5333],["2026-09-23","14:00","20:00",220.755,221.145,220.755,221.09,2619],["2026-09-23","14:15","20:15",221.33,221.33,220.7,220.7,10929],["2026-09-23","14:30","20:30",220.81,220.89,220.57,220.69,7816],["2026-09-23","14:45","20:45",220.72,221.335,220.72,221.28,3010],["2026-09-23","15:00","21:00",221.56,221.56,220.97,221.01,6872],["2026-09-23","15:15","21:15",221.12,221.12,220.41,220.96,13962],["2026-09-23","15:30","21:30",220.725,221.23,220.72,221.185,8499],["2026-09-23","15:45","21:45",221.23,221.84,221.185,221.71,30613],["2026-09-24","09:30","15:30",220.01,224.48,219.935,224.25,26384],["2026-09-24","09:45","15:45",224.52,224.66,223.605,224.64,13762],["2026-09-24","10:00","16:00",224.24,226.585,223.98,226.4,9464],["2026-09-24","10:15","16:15",226.535,226.535,224.7,224.7,12856],["2026-09-24","10:30","16:30",224.46,225.24,224.11,224.61,16792],["2026-09-24","10:45","16:45",224.44,224.745,223.56,223.73,3471],["2026-09-24","11:00","17:00",223.77,224.04,223.4,223.82,3873],["2026-09-24","11:15","17:15",224.055,224.06,221.99,222.02,4860],["2026-09-24","11:30","17:30",222.0,222.0,221.5,221.5,7949],["2026-09-24","11:45","17:45",221.505,222.17,221.425,221.525,12408],["2026-09-24","12:00","18:00",221.46,221.72,221.35,221.55,6074],["2026-09-24","12:15","18:15",221.79,222.23,221.69,222.01,8277],["2026-09-24","12:30","18:30",221.8,221.93,221.595,221.62,4026],["2026-09-24","12:45","18:45",221.47,221.51,220.78,220.97,9891],["2026-09-24","13:00","19:00",221.13,221.79,221.0,221.79,3301]],"flaechen":[{"von":16,"bis":55,"oben":223.42,"unten":220.01,"farbe":"accent","gruppe":"bot"}],"linien":[{"von":29,"bis":55,"p0":223.42,"farbe":"accent","weiter":69,"gruppe":"bot"},{"von":34,"bis":55,"p0":220.01,"farbe":"accent","gruppe":"bot"},{"von":56,"bis":63,"p0":226.82999999999998,"farbe":"up","strich":"strich","gruppe":"bot"},{"von":56,"bis":63,"p0":221.71499999999997,"farbe":"down","strich":"strich","gruppe":"bot"}],"punkte":[{"i":29,"p":223.42,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":34,"p":220.01,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":16,"p":222.35,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":36,"p":221.39,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":42,"p":221.155,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":18,"p":220.705,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":24,"p":220.535,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":39,"p":220.44,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":45,"p":220.575,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"}],"verworfen":[],"signal":55,"einstieg":{"i":56,"p":224.91},"ausstieg":{"i":63,"p":221.53,"farbe":"down"},"notizen":[{"i":56,"p":224.91,"dx":10,"dy":16,"gross":true,"text":"Einstieg 224,91 · 09:53"},{"i":63,"p":221.53,"dx":-8,"dy":-10,"anker":"end","gross":true,"text":"Stop-Loss · 11:30"}],"rechts":[{"p":226.83,"t":"Ziel Bot","kurz":"Ziel","farbe":"up","gruppe":"bot"},{"p":223.42,"t":"Kante","farbe":"accent","gruppe":"bot"},{"p":221.715,"t":"Stop Bot","kurz":"Stop","farbe":"down","gruppe":"bot"},{"p":220.01,"t":"Unterkante Bot","kurz":"Unterkante","farbe":"accent","gruppe":"bot"}],"gruppen":{},"vol_notiz":"2,9× Schnitt","aria":"DHR Rechteck long: Linien des Bots und geprüfte Linien"};
-const B = D.kerzen;                         // [Tag, Zeit NY, Zeit DE, Eröffnung, Hoch, Tief, Schluss, Volumen]
-const $ = (s) => document.querySelector(s);
-const NS = "http://www.w3.org/2000/svg";
-const S = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a || {}) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
-const nf = (v, d = 2) => v.toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
-const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
-const dayLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); const w = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); return `${WD[w]} ${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.`; };
-const DASH = { voll: "", strich: "6 4", kurz: "5 3", punkt: "2 3" };
-const show = {}; for (const g in D.gruppen || {}) show[g] = D.gruppen[g].an !== false;
-const vis = (o) => !o.gruppe || show[o.gruppe] !== false;
-const verw = {}; for (const v of D.verworfen || []) verw[v.i] = v;
-let CH = null;
-
-function step(range, n) { const raw = range / n, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; }
-
-function draw() {
-  const host = $("#chart"); host.textContent = "";
-  const W = Math.max(300, Math.round(host.clientWidth)), small = W < 600;
-  const m = { l: small ? 46 : 54, r: small ? 96 : 150, t: 24, b: 30 };
-  const PH = small ? 300 : 390, VH = small ? 54 : 70, GAP = 14, H = m.t + PH + GAP + VH + m.b;
-  const gaps = []; let g = 0;
-  B.forEach((b, i) => { if (i && b[0] !== B[i - 1][0]) g++; gaps.push(g); });
-  const slots = B.length + g * 1.6, slot = (W - m.l - m.r) / slots;
-  const X = (i) => m.l + slot * (i + gaps[i] * 1.6 + 0.5);
-  let lo = Infinity, hi = -Infinity;
-  for (const b of B) { lo = Math.min(lo, b[5]); hi = Math.max(hi, b[4]); }
-  for (const l of D.linien || []) if (vis(l)) { lo = Math.min(lo, l.p0, l.p1 ?? l.p0); hi = Math.max(hi, l.p0, l.p1 ?? l.p0); }
-  for (const r of D.rechts || []) if (vis(r)) { lo = Math.min(lo, r.p); hi = Math.max(hi, r.p); }
-  const pad = (hi - lo) * 0.05; lo -= pad; hi += pad;
-  const Y = (v) => m.t + (1 - (v - lo) / (hi - lo)) * PH;
-  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: "chart", role: "img", "aria-label": D.aria || "" }, host);
-  const st = step(hi - lo, small ? 5 : 7), dec = st >= 1 ? 0 : st >= 0.1 ? 1 : 2;
-  for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) {
-    S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: "grid" }, svg);
-    S("text", { x: m.l - 8, y: Y(v) + 3.5, class: "tick", "text-anchor": "end" }, svg).textContent = nf(v, dec);
+  "use strict";
+  const D = {"kerzen":[["2026-09-21","15:15","21:15",214.885,215.05,214.47,214.86,13021],["2026-09-21","15:30","21:30",214.96,215.195,214.84,214.98,12300],["2026-09-21","15:45","21:45",214.975,216.175,214.94,215.82,53629],["2026-09-22","09:30","15:30",214.85,215.51,214.415,215.12,16229],["2026-09-22","09:45","15:45",215.09,215.76,215.09,215.45,8287],["2026-09-22","10:00","16:00",216.26,217.52,216.26,217.52,12344],["2026-09-22","10:15","16:15",217.335,218.67,217.305,217.88,8673],["2026-09-22","10:30","16:30",217.84,218.6,217.835,218.6,11205],["2026-09-22","10:45","16:45",218.655,219.065,218.43,219.025,9821],["2026-09-22","11:00","17:00",219.21,220.37,219.21,220.37,4394],["2026-09-22","11:15","17:15",220.365,221.18,220.225,220.225,7557],["2026-09-22","11:30","17:30",220.26,221.33,220.26,221.29,5517],["2026-09-22","11:45","17:45",221.37,221.445,221.165,221.21,7513],["2026-09-22","12:00","18:00",221.225,221.61,221.225,221.55,4486],["2026-09-22","12:15","18:15",222.06,222.22,221.73,222.15,7068],["2026-09-22","12:30","18:30",222.22,222.22,221.935,222.05,7493],["2026-09-22","12:45","18:45",222.04,222.35,221.825,222.33,7196],["2026-09-22","13:00","19:00",222.31,222.31,220.93,221.31,6210],["2026-09-22","13:15","19:15",221.09,221.31,220.705,221.305,9531],["2026-09-22","13:30","19:30",221.36,221.61,221.295,221.61,15326],["2026-09-22","13:45","19:45",221.66,222.235,221.66,222.19,9560],["2026-09-22","14:00","20:00",222.12,222.12,221.57,221.72,9120],["2026-09-22","14:15","20:15",221.755,221.755,221.175,221.23,7385],["2026-09-22","14:30","20:30",221.225,221.45,220.925,220.925,6721],["2026-09-22","14:45","20:45",220.95,220.975,220.535,220.71,16631],["2026-09-22","15:00","21:00",220.745,221.11,220.745,220.93,18646],["2026-09-22","15:15","21:15",220.93,221.01,220.655,220.87,19342],["2026-09-22","15:30","21:30",220.885,221.63,220.81,221.375,15305],["2026-09-22","15:45","21:45",221.37,221.77,221.065,221.21,56244],["2026-09-23","09:30","15:30",221.4,223.42,221.4,222.85,5193],["2026-09-23","09:45","15:45",220.915,222.13,220.9,222.01,6090],["2026-09-23","10:00","16:00",221.715,222.5,221.54,222.215,2996],["2026-09-23","10:15","16:15",222.08,222.08,220.34,220.545,16798],["2026-09-23","10:30","16:30",220.65,221.07,220.17,220.25,27976],["2026-09-23","10:45","16:45",220.01,220.89,220.01,220.89,4713],["2026-09-23","11:00","17:00",221.12,221.31,220.94,221.115,2754],["2026-09-23","11:15","17:15",221.12,221.39,220.94,220.94,2844],["2026-09-23","11:30","17:30",220.77,221.12,220.76,220.99,8769],["2026-09-23","11:45","17:45",221.0,221.13,220.81,220.81,10037],["2026-09-23","12:00","18:00",220.8,220.8,220.44,220.66,11332],["2026-09-23","12:15","18:15",220.72,221.02,220.49,221.02,4235],["2026-09-23","12:30","18:30",221.04,221.14,221.04,221.125,1265],["2026-09-23","12:45","18:45",221.04,221.155,220.95,221.0,7789],["2026-09-23","13:00","19:00",221.045,221.12,220.795,221.07,7533],["2026-09-23","13:15","19:15",221.085,221.09,220.7,221.055,6014],["2026-09-23","13:30","19:30",221.03,221.03,220.575,220.76,6585],["2026-09-23","13:45","19:45",220.79,220.93,220.685,220.79,5333],["2026-09-23","14:00","20:00",220.755,221.145,220.755,221.09,2619],["2026-09-23","14:15","20:15",221.33,221.33,220.7,220.7,10929],["2026-09-23","14:30","20:30",220.81,220.89,220.57,220.69,7816],["2026-09-23","14:45","20:45",220.72,221.335,220.72,221.28,3010],["2026-09-23","15:00","21:00",221.56,221.56,220.97,221.01,6872],["2026-09-23","15:15","21:15",221.12,221.12,220.41,220.96,13962],["2026-09-23","15:30","21:30",220.725,221.23,220.72,221.185,8499],["2026-09-23","15:45","21:45",221.23,221.84,221.185,221.71,30613],["2026-09-24","09:30","15:30",220.01,224.48,219.935,224.25,26384],["2026-09-24","09:45","15:45",224.52,224.66,223.605,224.64,13762],["2026-09-24","10:00","16:00",224.24,226.585,223.98,226.4,9464],["2026-09-24","10:15","16:15",226.535,226.535,224.7,224.7,12856],["2026-09-24","10:30","16:30",224.46,225.24,224.11,224.61,16792],["2026-09-24","10:45","16:45",224.44,224.745,223.56,223.73,3471],["2026-09-24","11:00","17:00",223.77,224.04,223.4,223.82,3873],["2026-09-24","11:15","17:15",224.055,224.06,221.99,222.02,4860],["2026-09-24","11:30","17:30",222.0,222.0,221.5,221.5,7949],["2026-09-24","11:45","17:45",221.505,222.17,221.425,221.525,12408],["2026-09-24","12:00","18:00",221.46,221.72,221.35,221.55,6074],["2026-09-24","12:15","18:15",221.79,222.23,221.69,222.01,8277],["2026-09-24","12:30","18:30",221.8,221.93,221.595,221.62,4026],["2026-09-24","12:45","18:45",221.47,221.51,220.78,220.97,9891],["2026-09-24","13:00","19:00",221.13,221.79,221.0,221.79,3301]],"flaechen":[{"von":16,"bis":55,"oben":223.42,"unten":220.01,"farbe":"accent","gruppe":"bot"}],"linien":[{"von":29,"bis":55,"p0":223.42,"farbe":"accent","weiter":69,"gruppe":"bot"},{"von":34,"bis":55,"p0":220.01,"farbe":"accent","gruppe":"bot"},{"von":56,"bis":63,"p0":226.82999999999998,"farbe":"up","strich":"strich","gruppe":"bot"},{"von":56,"bis":63,"p0":221.71499999999997,"farbe":"down","strich":"strich","gruppe":"bot"}],"punkte":[{"i":29,"p":223.42,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":34,"p":220.01,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":16,"p":222.35,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":36,"p":221.39,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":42,"p":221.155,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":18,"p":220.705,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":24,"p":220.535,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":39,"p":220.44,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":45,"p":220.575,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"}],"verworfen":[],"signal":55,"einstieg":{"i":56,"p":224.91},"ausstieg":{"i":63,"p":221.53,"farbe":"down"},"notizen":[{"i":56,"p":224.91,"dx":10,"dy":16,"gross":true,"text":"Einstieg 224,91 · 09:53"},{"i":63,"p":221.53,"dx":-8,"dy":-10,"anker":"end","gross":true,"text":"Stop-Loss · 11:30"}],"rechts":[{"p":226.83,"t":"Ziel Bot","kurz":"Ziel","farbe":"up","gruppe":"bot"},{"p":223.42,"t":"Kante","farbe":"accent","gruppe":"bot"},{"p":221.715,"t":"Stop Bot","kurz":"Stop","farbe":"down","gruppe":"bot"},{"p":220.01,"t":"Unterkante Bot","kurz":"Unterkante","farbe":"accent","gruppe":"bot"}],"gruppen":{},"vol_notiz":"2,9× Schnitt","aria":"DHR Rechteck long: Linien des Bots und geprüfte Linien"};
+  const c = Musterbild.zeichne(document.getElementById("chart"), D);
+  for (const btn of document.querySelectorAll("[data-gruppe]")) {
+    btn.addEventListener("click", () => {
+      const g = btn.dataset.gruppe, txt = ((D.gruppen || {})[g] || {}).knopf || ["zeigen", "ausblenden"];
+      const an = btn.getAttribute("aria-pressed") !== "true";
+      btn.setAttribute("aria-pressed", String(an));
+      btn.textContent = an ? txt[1] : txt[0];
+      for (const el of document.querySelectorAll(`[data-legende="${g}"]`)) el.hidden = !an;
+      c.gruppe(g, an);
+    });
   }
-  let start = 0;
-  B.forEach((b, i) => {
-    if (i === B.length - 1 || B[i + 1][0] !== b[0]) {
-      if (X(i) - X(start) + slot >= (small ? 52 : 60) || start === 0 && i === B.length - 1) S("text", { x: (X(start) + X(i)) / 2, y: H - 8, class: "day", "text-anchor": "middle" }, svg).textContent = dayLabel(b[0]);
-      if (i < B.length - 1) { const sx = (X(i) + X(i + 1)) / 2; S("line", { x1: sx, x2: sx, y1: m.t, y2: m.t + PH + GAP + VH, class: "sep" }, svg); }
-      start = i + 1;
-    }
-  });
-  for (const f of D.flaechen || []) if (vis(f)) S("rect", { x: X(f.von), y: Y(f.oben), width: Math.max(1, X(f.bis) - X(f.von)), height: Math.max(1, Y(f.unten) - Y(f.oben)), style: `fill:var(--${f.farbe}-wash)` }, svg);
-  if (D.signal != null) {
-    S("rect", { x: X(D.signal) - slot * 0.55, y: m.t, width: slot * 1.1, height: PH, style: "fill:var(--accent-wash)" }, svg);
-    S("text", { x: X(D.signal), y: m.t - 8, class: "note", "text-anchor": "middle" }, svg).textContent = "Signal";
-  }
-  for (const l of D.linien || []) {
-    if (!vis(l)) continue;
-    const p1 = l.p1 ?? l.p0, sty = `stroke:var(--${l.farbe});stroke-width:${l.breite || 1.6};fill:none` + (DASH[l.strich] ? `;stroke-dasharray:${DASH[l.strich]}` : "");
-    S("line", { x1: X(l.von), x2: X(l.bis), y1: Y(l.p0), y2: Y(p1), style: sty }, svg);
-    if (l.weiter != null && l.weiter > l.bis) {
-      const pw = l.p0 + (p1 - l.p0) * (l.weiter - l.von) / Math.max(1, l.bis - l.von);
-      S("line", { x1: X(l.bis), x2: X(l.weiter), y1: Y(p1), y2: Y(pw), style: `stroke:var(--${l.farbe});stroke-width:${l.breite || 1.6};stroke-dasharray:5 4` }, svg);
-    }
-  }
-  const cw = Math.max(2, slot * 0.62);
-  B.forEach((b, i) => {
-    const [, hm, , o, h, l, c] = b, up = c >= o, col = up ? "var(--up)" : "var(--down)", ext = hm < "09:30" || hm >= "16:00";
-    const gc = S("g", { opacity: ext ? .45 : 1 }, svg);
-    const v = verw[i];
-    const hiW = v && v.typ === "hoch" ? v.bis : h, loW = v && v.typ === "tief" ? v.bis : l;
-    S("line", { x1: X(i), x2: X(i), y1: Y(hiW), y2: Y(loW), style: `stroke:${col};stroke-width:1` }, gc);
-    const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
-    S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(1, y1 - y0), rx: 1, style: `fill:${col}` }, gc);
-    if (v) {
-      S("line", { x1: X(i), x2: X(i), y1: Y(v.bis), y2: Y(v.von), style: "stroke:var(--down);stroke-width:1.4;stroke-dasharray:2 3" }, svg);
-      const yx = Y(v.von), r = 4;
-      S("path", { d: `M${X(i) - r} ${yx - r}L${X(i) + r} ${yx + r}M${X(i) + r} ${yx - r}L${X(i) - r} ${yx + r}`, style: "stroke:var(--down);stroke-width:1.8;fill:none" }, svg);
-    }
-  });
-  for (const p of D.punkte || []) if (vis(p)) S("circle", { cx: X(p.i), cy: Y(p.p), r: p.klein ? 3.5 : 4.5, style: `fill:none;stroke:var(--${p.farbe});stroke-width:${p.klein ? 1.4 : 1.8}` + (p.strich ? ";stroke-dasharray:2 2" : "") }, svg);
-  if (D.einstieg) {
-    const ex = X(D.einstieg.i), ey = Y(D.einstieg.p);
-    S("path", { d: `M${ex - 12} ${ey}L${ex - 4} ${ey}M${ex - 8} ${ey - 4}L${ex - 4} ${ey}L${ex - 8} ${ey + 4}`, style: "fill:none;stroke:var(--ink);stroke-width:1.6" }, svg);
-    S("circle", { cx: ex, cy: ey, r: 3.5, style: "fill:var(--ink)" }, svg);
-  }
-  if (D.ausstieg) S("circle", { cx: X(D.ausstieg.i), cy: Y(D.ausstieg.p), r: 5, style: `fill:var(--${D.ausstieg.farbe || "ink"});stroke:var(--ground);stroke-width:2` }, svg);
-  for (const n of D.notizen || []) {
-    if (!vis(n) || (n.gross && small)) continue;
-    S("text", { x: X(n.i) + (n.dx || 0), y: Y(n.p) + (n.dy || 0), class: "note", "text-anchor": n.anker || "start", style: n.farbe ? `fill:var(--${n.farbe})` : "" }, svg).textContent = small && n.kurz ? n.kurz : n.text;
-  }
-  const labs = (D.rechts || []).filter(vis).map((l) => ({ ...l, y: Y(l.p) }));
-  labs.sort((a, b) => a.y - b.y);
-  for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 28);
-  const lx = W - m.r + 10;
-  for (const l of labs) {
-    S("line", { x1: lx, x2: lx + 10, y1: l.y, y2: l.y, style: `stroke:var(--${l.farbe});stroke-width:2` + (l.strich ? ";stroke-dasharray:3 2" : "") }, svg);
-    S("text", { x: lx + 15, y: l.y - 2, class: "lab" }, svg).textContent = small && l.kurz ? l.kurz : l.t;
-    S("text", { x: lx + 15, y: l.y + 11, class: "labv" }, svg).textContent = nf(l.p);
-  }
-  const vt = m.t + PH + GAP, vmax = Math.max(1, ...B.map((b) => b[7] || 0));
-  B.forEach((b, i) => {
-    if (b[7] == null) return;
-    const h = (b[7] / vmax) * VH;
-    S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(.5, h), style: `fill:${i === D.signal ? "var(--accent)" : "var(--vol)"}` }, svg);
-  });
-  if (D.vol_notiz && D.signal != null) S("text", { x: X(D.signal) + cw, y: vt + 11, class: "note" }, svg).textContent = D.vol_notiz;
-  S("text", { x: m.l - 8, y: vt + VH, class: "tick", "text-anchor": "end" }, svg).textContent = "Vol.";
-  const xh = S("line", { class: "xh", y1: m.t, y2: vt + VH, visibility: "hidden" }, svg);
-  const hit = S("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: PH + GAP + VH, style: "fill:transparent;cursor:crosshair" }, svg);
-  CH = { svg, W, X, Y, xh, idx: D.signal ?? B.length - 1 };
-  const near = (cx) => { let best = 0, bd = Infinity; B.forEach((b, i) => { const d = Math.abs(X(i) - cx); if (d < bd) { bd = d; best = i; } }); return best; };
-  const move = (e) => { const r = svg.getBoundingClientRect(); showAt(near(((e.clientX - r.left) * W) / r.width), e.clientX); };
-  hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
-  hit.addEventListener("pointerleave", () => { xh.setAttribute("visibility", "hidden"); $("#tip").hidden = true; });
-}
-function showAt(i, clientX) {
-  const { svg, W, X, Y, xh } = CH; CH.idx = i;
-  const b = B[i], r = svg.getBoundingClientRect(), k = r.width / W;
-  xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
-  const tip = $("#tip"); tip.textContent = "";
-  const h4 = document.createElement("h4"); h4.textContent = `${dayLabel(b[0])} ${b[1]} New York · ${b[2]} bei uns`; tip.appendChild(h4);
-  for (const [l, v] of [["Eröffnung", b[3]], ["Hoch", b[4]], ["Tief", b[5]], ["Schluss", b[6]]]) {
-    const row = document.createElement("div"); row.append(l); const bb = document.createElement("b"); bb.textContent = nf(v); row.appendChild(bb); tip.appendChild(row);
-  }
-  const row = document.createElement("div"); row.append("Volumen"); const bb = document.createElement("b"); bb.textContent = b[7] == null ? "nicht vorhanden" : b[7].toLocaleString("de-DE"); row.appendChild(bb); tip.appendChild(row);
-  if (verw[i]) { const p = document.createElement("p"); p.textContent = verw[i].text; tip.appendChild(p); }
-  tip.hidden = false;
-  const x = clientX ?? r.left + X(i) * k, y = r.top + Y(b[4]) * k, w = tip.offsetWidth;
-  tip.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, x)) + "px";
-  tip.style.top = Math.max(tip.offsetHeight + 20, y) + "px";
-}
-for (const btn of document.querySelectorAll("[data-gruppe]")) {
-  btn.addEventListener("click", () => {
-    const gname = btn.dataset.gruppe, txt = (D.gruppen[gname] || {}).knopf || ["zeigen", "ausblenden"];
-    show[gname] = !show[gname]; btn.setAttribute("aria-pressed", String(show[gname]));
-    btn.textContent = show[gname] ? txt[1] : txt[0];
-    for (const el of document.querySelectorAll(`[data-legende="${gname}"]`)) el.hidden = !show[gname];
-    draw();
-  });
-}
-$("#chart").addEventListener("keydown", (e) => {
-  if (!CH) return; let i = CH.idx;
-  if (e.key === "ArrowRight") i++; else if (e.key === "ArrowLeft") i--; else if (e.key === "Escape") { $("#tip").hidden = true; return; } else return;
-  e.preventDefault(); showAt(Math.max(0, Math.min(B.length - 1, i)));
-});
-$("#chart").addEventListener("blur", () => { $("#tip").hidden = true; });
-addEventListener("scroll", () => { $("#tip").hidden = true; }, { passive: true });
-let rw = 0; new ResizeObserver(() => { const w = Math.round($("#chart").clientWidth); if (Math.abs(w - rw) > 2) { rw = w; draw(); } }).observe($("#chart"));
-draw();
 })();
 </script>
 </body>

@@ -1,17 +1,13 @@
 {
  "schema": 1,
- "stand": "2026-10-16T08:24:50-04:00",
+ "stand": "2026-10-16T09:10:22-04:00",
  "quelle": "PC",
- "code_labor": "11510c609e88",
+ "code_labor": "3e3d78d9370b",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
   "job": null,
   "fenster": [
-   {
-    "start": "2026-10-15T16:30:00-04:00",
-    "stopp": "2026-10-16T09:00:00-04:00"
-   },
    {
     "start": "2026-10-16T16:30:00-04:00",
     "stopp": "2026-10-19T09:00:00-04:00"
@@ -47,6 +43,10 @@
    {
     "start": "2026-10-28T16:30:00-04:00",
     "stopp": "2026-10-29T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-29T16:30:00-04:00",
+    "stopp": "2026-10-30T09:00:00-04:00"
    }
   ]
  },
@@ -303,7 +303,7 @@
   {
    "name": "ORB Jahr 1",
    "zeitraum": "Okt 2025–Sep 2026",
-   "text": "1 von 5 Kriterien erfüllt · 594 von 973 Trades schon in der Einstiegsminute gestoppt (vorsichtige Vorab-Regel), Neuberechnung mit Ticks vorgeschlagen",
+   "text": "1 von 5 Kriterien erfüllt · 594 von 973 Trades schon in der Einstiegsminute gestoppt (vorsichtige Vorab-Regel); die Neuberechnung mit Ticks läuft (Methode vorab festgelegt, Commit 21f93ab)",
    "status": "fertig",
    "ziel": false,
    "werte": {
@@ -327,5 +327,92 @@
  "muster": [],
  "schatten": [],
  "versionen": [],
- "wochenberichte": []
+ "wochenberichte": [],
+ "steckbriefe": [
+  {
+   "nr": "M001",
+   "name": "Aufsteigendes Dreieck",
+   "stufe": 0,
+   "herkunft": "Live-Bot",
+   "detektor": "AscendingTriangle",
+   "datei": "steckbriefe/M001-aufsteigendes-dreieck.md"
+  },
+  {
+   "nr": "M002",
+   "name": "Absteigendes Dreieck",
+   "stufe": 0,
+   "herkunft": "Live-Bot",
+   "detektor": "DescendingTriangle",
+   "datei": "steckbriefe/M002-absteigendes-dreieck.md"
+  },
+  {
+   "nr": "M003",
+   "name": "Rechteck",
+   "stufe": 0,
+   "herkunft": "Live-Bot",
+   "detektor": "Rectangle",
+   "datei": "steckbriefe/M003-rechteck.md"
+  },
+  {
+   "nr": "M004",
+   "name": "Doppeltop",
+   "stufe": 0,
+   "herkunft": "Live-Bot",
+   "detektor": "DoubleTop",
+   "datei": "steckbriefe/M004-doppeltop.md"
+  },
+  {
+   "nr": "M005",
+   "name": "Doppelboden",
+   "stufe": 0,
+   "herkunft": "Live-Bot",
+   "detektor": "DoubleBottom",
+   "datei": "steckbriefe/M005-doppelboden.md"
+  },
+  {
+   "nr": "M006",
+   "name": "Schulter-Kopf-Schulter",
+   "stufe": 0,
+   "herkunft": "Live-Bot",
+   "detektor": "HeadShouldersTop",
+   "datei": "steckbriefe/M006-schulter-kopf-schulter.md"
+  },
+  {
+   "nr": "M007",
+   "name": "Inverse Schulter-Kopf-Schulter",
+   "stufe": 0,
+   "herkunft": "Live-Bot",
+   "detektor": "InverseHeadShoulders",
+   "datei": "steckbriefe/M007-inverse-schulter-kopf-schulter.md"
+  },
+  {
+   "nr": "M008",
+   "name": "Keil steigend",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M008-keil-steigend.md"
+  },
+  {
+   "nr": "M009",
+   "name": "Keil fallend",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M009-keil-fallend.md"
+  },
+  {
+   "nr": "M010",
+   "name": "Doppelboden mit Kaufkraft",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M010-doppelboden-mit-kaufkraft.md"
+  }
+ ],
+ "rangliste": [],
+ "im_aufbau": [],
+ "bilder": {
+  "liste": "bilder/live/liste.json"
+ }
 }

@@ -74,21 +74,7 @@ p{margin:0}
 .toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .chart-host{position:relative}
 .chart-host:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
-svg.chart{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
-.chart .grid{stroke:var(--grid);stroke-width:1;shape-rendering:crispEdges}
-.chart .tick{font:400 10.5px var(--mono);fill:var(--ink-3)}
-.chart .day{font:500 11.5px var(--sans);fill:var(--ink-2)}
-.chart .lab{font:500 11.5px var(--sans);fill:var(--ink-2)}
-.chart .labv{font:600 11.5px var(--mono);fill:var(--ink)}
-.chart .note{font:500 11px var(--sans);fill:var(--ink-2)}
-.chart .sep{stroke:var(--hair);stroke-width:1;stroke-dasharray:2 4}
-.chart .xh{stroke:var(--ink-3);stroke-width:1;shape-rendering:crispEdges}
 .cap{margin-top:10px;font-size:12.5px;color:var(--ink-3)}
-.tip{position:fixed;z-index:20;pointer-events:none;min-width:190px;max-width:280px;border-radius:12px;padding:9px 11px;background:var(--raised);box-shadow:var(--lift),0 0 0 1px var(--hair);font-size:12.5px;line-height:1.5;transform:translate(-50%,calc(-100% - 12px))}
-.tip h4{margin:0 0 4px;font:500 11px var(--mono);color:var(--ink-3)}
-.tip div{display:flex;justify-content:space-between;gap:14px;color:var(--ink-2)}
-.tip b{font:600 12px var(--mono);color:var(--ink)}
-.tip p{margin-top:6px;color:var(--down);font-size:12px}
 .cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 dl.facts{margin:0;display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:9px 18px;font-size:14px}
 dl.facts dt{color:var(--ink-3);font-size:13px}
@@ -130,11 +116,11 @@ td:first-child{white-space:nowrap;font-weight:600}
   <div class="cols">
     <section class="card" aria-labelledby="t-facts">
       <h2 id="t-facts">Was der Bot gesehen hat</h2>
-      <dl class="facts"><dt>Zeitebene</dt><dd>15-Minuten-Kerzen von IEX, wie live</dd><dt>Kante</dt><dd><span class="num">245,91</span>, Do 24.09. 12:00. Das ist die Ausbruchskante.</dd><dt>Gegenkante</dt><dd><span class="num">250,84</span>, Fr 25.09. 12:30</dd><dt>Höhe und Ziel</dt><dd><span class="num">4,94</span> hoch, Ziel <span class="num">240,97</span></dd><dt>Stop</dt><dd><span class="num">248,37</span></dd><dt>Signal</dt><dd>Signalkerze Mo 28.09. 09:45, Schluss <span class="num">245,81</span>, Volumen 3,7-fach über dem Schnitt</dd><dt>Einstieg</dt><dd>10:05, gefüllt zu <span class="num">245,43</span>, 0,16 R hinter der Kante</dd><dt>Ausstieg</dt><dd>12:05 zu <span class="num">246,13</span>, Zeit-Stop, nach 120 Minuten</dd></dl>
+      <dl class="facts"><dt>Zeitebene</dt><dd>15-Minuten-Kerzen von IEX, wie live</dd><dt>Kante</dt><dd>245,91, Do 24.09. 12:00. Das ist die Ausbruchskante.</dd><dt>Gegenkante</dt><dd>250,84, Fr 25.09. 12:30</dd><dt>Höhe und Ziel</dt><dd>4,94 hoch, Ziel 240,97</dd><dt>Stop</dt><dd>248,37</dd><dt>Signal</dt><dd>Signalkerze Mo 28.09. 09:45, Schluss 245,81, Volumen 3,7-fach über dem Schnitt</dd><dt>Einstieg</dt><dd>10:05, gefüllt zu 245,43, 0,16 R hinter der Kante</dd><dt>Ausstieg</dt><dd>12:05 zu 246,13, Zeit-Stop, nach 120 Minuten</dd></dl>
     </section>
     <section class="card" aria-labelledby="t-find">
       <h2 id="t-find">Was der Chart-Leser prüft</h2>
-      <ul class="points"><li style="--c:var(--up)"><span><b>Oberkante 250,84 ist echt.</b> Fr 25.09. 12:30: SIP-Hoch 250,88 über alle Börsen; der Docht ist 0,1× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>Unterkante 245,91 ist echt.</b> Do 24.09. 12:00: SIP-Tief 245,88 über alle Börsen; der Docht ist 0,8× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>7 Ankerpunkt(e) bestätigt.</b> 7 davon durch SIP, 0 ohne SIP-Kerze nach der 3×-Regel.</span></li><li style="--c:var(--up)"><span><b>Signalkerze: sauber.</b> keine Kurslücke über die Kante, Durchfall 0,5 ATR hinter die Kante.</span></li><li style="--c:var(--accent)"><span><b>Bewertung: sauber.</b> keine Abzüge</span></li></ul>
+      <ul class="points"><li style="--c:var(--up)"><span><b>Oberkante 250,84 ist echt.</b> Fr 25.09. 12:30: SIP-Hoch 250,88 über alle Börsen; der Docht ist 0,1× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>Unterkante 245,91 ist echt.</b> Do 24.09. 12:00: SIP-Tief 245,88 über alle Börsen; der Docht ist 0,8× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>7 Ankerpunkt(e) bestätigt.</b> 7 davon durch SIP, 0 ohne SIP-Kerze nach der 3×-Regel.</span></li><li style="--c:var(--up)"><span><b>Signalkerze: sauber.</b> keine Kurslücke unter die Kante, Durchfall 0,5 ATR hinter die Kante.</span></li><li style="--c:var(--accent)"><span><b>Bewertung: sauber.</b> keine Abzüge</span></li></ul>
     </section>
   </div>
 
@@ -148,154 +134,210 @@ td:first-child{white-space:nowrap;font-weight:600}
 
   <p class="foot">Nur Paper-Trading. Lern-Labor, getrennt vom Live-Bot.</p>
 </div>
-<div class="tip" id="tip" role="status" hidden></div>
+<script>/* Musterbild des Lern-Labors: zeichnet ein Musterbild (Kerzen, Linien, Punkte, verworfene Dochte, Trade, Volumen,
+   Fadenkreuz mit New-York- und deutscher Zeit) aus den Bilddaten des Labors. Eine Quelle für die einzelnen Bildseiten
+   und die Webseite (labor.html, index.html). Nutzt die Farb-Tokens der Seite, mit Ersatzwerten. Ohne Bibliothek.
+
+   const c = Musterbild.zeichne(host, daten);   c.gruppe("geprueft", false);   c.neu(); */
+(function () {
+  "use strict";
+  const NS = "http://www.w3.org/2000/svg";
+  const S = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a || {}) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+  const nf = (v, d = 2) => Number(v).toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+  const dayLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); const w = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); return `${WD[w]} ${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.`; };
+  const DASH = { voll: "", strich: "6 4", kurz: "5 3", punkt: "2 3" };
+  const WASH = { accent: "var(--accent-wash, rgba(var(--accent-rgb, 10,107,255), .08))", up: "var(--up-wash, rgba(8,167,66,.10))",
+                 down: "var(--down-wash, rgba(224,47,36,.09))", be: "var(--be-wash, rgba(163,95,0,.12))" };
+  const wash = (f) => WASH[f] || WASH.accent;
+  const col = (f) => `var(--${f})`;
+  const step = (range, n) => { const raw = range / n, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; };
+
+  const CSS = `
+.mb-chart{position:relative}
+.mb-chart:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+.mb-svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.mb-grid{stroke:var(--grid, var(--hair-soft, rgba(128,128,140,.12)));stroke-width:1;shape-rendering:crispEdges}
+.mb-tick{font:400 10.5px var(--mono, ui-monospace, monospace);fill:var(--ink-3)}
+.mb-day{font:500 11.5px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-lab{font:500 11.5px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-labv{font:600 11.5px var(--mono, ui-monospace, monospace);fill:var(--ink)}
+.mb-note{font:500 11px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-sep{stroke:var(--hair, rgba(128,128,140,.2));stroke-width:1;stroke-dasharray:2 4}
+.mb-xh{stroke:var(--ink-3);stroke-width:1;shape-rendering:crispEdges}
+.mb-tip{position:fixed;z-index:60;pointer-events:none;min-width:190px;max-width:280px;border-radius:12px;padding:9px 11px;
+  background:var(--raised);color:var(--ink);box-shadow:0 14px 34px -14px rgba(0,0,0,.35),0 0 0 1px var(--hair, rgba(128,128,140,.2));
+  font:400 12.5px/1.5 var(--sans, system-ui, sans-serif);transform:translate(-50%,calc(-100% - 12px))}
+.mb-tip h4{margin:0 0 4px;font:500 11px var(--mono, ui-monospace, monospace);color:var(--ink-3)}
+.mb-tip div{display:flex;justify-content:space-between;gap:14px;color:var(--ink-2)}
+.mb-tip b{font:600 12px var(--mono, ui-monospace, monospace);color:var(--ink)}
+.mb-tip p{margin:6px 0 0;color:var(--down);font-size:12px}`;
+  let cssDone = false, tip = null;
+  function css() { if (cssDone) return; const s = document.createElement("style"); s.textContent = CSS; document.head.appendChild(s); cssDone = true; }
+  function tipEl() {
+    if (tip && document.body.contains(tip)) return tip;
+    tip = document.createElement("div"); tip.className = "mb-tip"; tip.hidden = true; tip.setAttribute("role", "status");
+    document.body.appendChild(tip); return tip;
+  }
+  addEventListener("scroll", () => { if (tip) tip.hidden = true; }, { passive: true, capture: true });
+
+  function zeichne(host, D, opts) {
+    css();
+    opts = opts || {};
+    const B = D.kerzen || [];
+    const show = {}; for (const g in D.gruppen || {}) show[g] = D.gruppen[g].an !== false;
+    const vis = (o) => !o.gruppe || show[o.gruppe] !== false;
+    const verw = {}; for (const v of D.verworfen || []) verw[v.i] = v;
+    let CH = null;
+    host.classList.add("mb-chart");
+    if (!host.hasAttribute("tabindex")) host.tabIndex = 0;
+
+    function draw() {
+      host.textContent = "";
+      if (B.length < 2) return;
+      const W = Math.max(300, Math.round(host.clientWidth)), small = W < 600;
+      const m = { l: small ? 46 : 54, r: small ? 96 : 150, t: 24, b: 30 };
+      const PH = opts.hoehe || (small ? 300 : 390), VH = small ? 54 : 70, GAP = 14, H = m.t + PH + GAP + VH + m.b;
+      const gaps = []; let g = 0;
+      B.forEach((b, i) => { if (i && b[0] !== B[i - 1][0]) g++; gaps.push(g); });
+      const slots = B.length + g * 1.6, slot = (W - m.l - m.r) / slots;
+      const X = (i) => m.l + slot * (i + gaps[i] * 1.6 + 0.5);
+      let lo = Infinity, hi = -Infinity;
+      for (const b of B) { lo = Math.min(lo, b[5]); hi = Math.max(hi, b[4]); }
+      for (const l of D.linien || []) if (vis(l)) { lo = Math.min(lo, l.p0, l.p1 ?? l.p0); hi = Math.max(hi, l.p0, l.p1 ?? l.p0); }
+      for (const r of D.rechts || []) if (vis(r)) { lo = Math.min(lo, r.p); hi = Math.max(hi, r.p); }
+      const pad = (hi - lo) * 0.05; lo -= pad; hi += pad;
+      const Y = (v) => m.t + (1 - (v - lo) / (hi - lo)) * PH;
+      const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: "mb-svg", role: "img", "aria-label": D.aria || "" }, host);
+      const st = step(hi - lo, small ? 5 : 7), dec = st >= 1 ? 0 : st >= 0.1 ? 1 : 2;
+      for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) {
+        S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: "mb-grid" }, svg);
+        S("text", { x: m.l - 8, y: Y(v) + 3.5, class: "mb-tick", "text-anchor": "end" }, svg).textContent = nf(v, dec);
+      }
+      let start = 0;
+      B.forEach((b, i) => {
+        if (i === B.length - 1 || B[i + 1][0] !== b[0]) {
+          if (X(i) - X(start) + slot >= (small ? 52 : 60) || (start === 0 && i === B.length - 1)) S("text", { x: (X(start) + X(i)) / 2, y: H - 8, class: "mb-day", "text-anchor": "middle" }, svg).textContent = dayLabel(b[0]);
+          if (i < B.length - 1) { const sx = (X(i) + X(i + 1)) / 2; S("line", { x1: sx, x2: sx, y1: m.t, y2: m.t + PH + GAP + VH, class: "mb-sep" }, svg); }
+          start = i + 1;
+        }
+      });
+      for (const f of D.flaechen || []) if (vis(f)) S("rect", { x: X(f.von), y: Y(f.oben), width: Math.max(1, X(f.bis) - X(f.von)), height: Math.max(1, Y(f.unten) - Y(f.oben)), style: `fill:${wash(f.farbe)}` }, svg);
+      if (D.signal != null) {
+        S("rect", { x: X(D.signal) - slot * 0.55, y: m.t, width: slot * 1.1, height: PH, style: `fill:${wash("accent")}` }, svg);
+        S("text", { x: X(D.signal), y: m.t - 8, class: "mb-note", "text-anchor": "middle" }, svg).textContent = "Signal";
+      }
+      for (const l of D.linien || []) {
+        if (!vis(l)) continue;
+        const p1 = l.p1 ?? l.p0, sty = `stroke:${col(l.farbe)};stroke-width:${l.breite || 1.6};fill:none` + (DASH[l.strich] ? `;stroke-dasharray:${DASH[l.strich]}` : "");
+        S("line", { x1: X(l.von), x2: X(l.bis), y1: Y(l.p0), y2: Y(p1), style: sty }, svg);
+        if (l.weiter != null && l.weiter > l.bis) {
+          const pw = l.p0 + (p1 - l.p0) * (l.weiter - l.von) / Math.max(1, l.bis - l.von);
+          S("line", { x1: X(l.bis), x2: X(l.weiter), y1: Y(p1), y2: Y(pw), style: `stroke:${col(l.farbe)};stroke-width:${l.breite || 1.6};stroke-dasharray:5 4` }, svg);
+        }
+      }
+      const cw = Math.max(2, slot * 0.62);
+      B.forEach((b, i) => {
+        const [, hm, , o, h, l, c] = b, up = c >= o, cc = up ? "var(--up)" : "var(--down)", ext = hm < "09:30" || hm >= "16:00";
+        const gc = S("g", { opacity: ext ? .45 : 1 }, svg);
+        const v = verw[i];
+        const hiW = v && v.typ === "hoch" ? v.bis : h, loW = v && v.typ === "tief" ? v.bis : l;
+        S("line", { x1: X(i), x2: X(i), y1: Y(hiW), y2: Y(loW), style: `stroke:${cc};stroke-width:1` }, gc);
+        const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
+        S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(1, y1 - y0), rx: 1, style: `fill:${cc}` }, gc);
+        if (v) {
+          S("line", { x1: X(i), x2: X(i), y1: Y(v.bis), y2: Y(v.von), style: "stroke:var(--down);stroke-width:1.4;stroke-dasharray:2 3" }, svg);
+          const yx = Y(v.von), r = 4;
+          S("path", { d: `M${X(i) - r} ${yx - r}L${X(i) + r} ${yx + r}M${X(i) + r} ${yx - r}L${X(i) - r} ${yx + r}`, style: "stroke:var(--down);stroke-width:1.8;fill:none" }, svg);
+        }
+      });
+      for (const p of D.punkte || []) if (vis(p)) S("circle", { cx: X(p.i), cy: Y(p.p), r: p.klein ? 3.5 : 4.5, style: `fill:none;stroke:${col(p.farbe)};stroke-width:${p.klein ? 1.4 : 1.8}` + (p.strich ? ";stroke-dasharray:2 2" : "") }, svg);
+      if (D.einstieg) {
+        const ex = X(D.einstieg.i), ey = Y(D.einstieg.p);
+        S("path", { d: `M${ex - 12} ${ey}L${ex - 4} ${ey}M${ex - 8} ${ey - 4}L${ex - 4} ${ey}L${ex - 8} ${ey + 4}`, style: "fill:none;stroke:var(--ink);stroke-width:1.6" }, svg);
+        S("circle", { cx: ex, cy: ey, r: 3.5, style: "fill:var(--ink)" }, svg);
+      }
+      if (D.ausstieg) S("circle", { cx: X(D.ausstieg.i), cy: Y(D.ausstieg.p), r: 5, style: `fill:${col(D.ausstieg.farbe || "ink")};stroke:var(--ground);stroke-width:2` }, svg);
+      for (const n of D.notizen || []) {
+        if (!vis(n) || (n.gross && W < 800)) continue;
+        S("text", { x: X(n.i) + (n.dx || 0), y: Y(n.p) + (n.dy || 0), class: "mb-note", "text-anchor": n.anker || "start", style: n.farbe ? `fill:${col(n.farbe)}` : "" }, svg).textContent = small && n.kurz ? n.kurz : n.text;
+      }
+      const labs = (D.rechts || []).filter(vis).map((l) => ({ ...l, y: Y(l.p) }));
+      labs.sort((a, b) => a.y - b.y);
+      for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 28);
+      const lx = W - m.r + 10;
+      for (const l of labs) {
+        S("line", { x1: lx, x2: lx + 10, y1: l.y, y2: l.y, style: `stroke:${col(l.farbe)};stroke-width:2` + (l.strich ? ";stroke-dasharray:3 2" : "") }, svg);
+        S("text", { x: lx + 15, y: l.y - 2, class: "mb-lab" }, svg).textContent = small && l.kurz ? l.kurz : l.t;
+        S("text", { x: lx + 15, y: l.y + 11, class: "mb-labv" }, svg).textContent = nf(l.p);
+      }
+      const vt = m.t + PH + GAP, vmax = Math.max(1, ...B.map((b) => b[7] || 0));
+      B.forEach((b, i) => {
+        if (b[7] == null) return;
+        const h = (b[7] / vmax) * VH;
+        S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(.5, h), style: `fill:${i === D.signal ? "var(--accent)" : "var(--vol, var(--hair, rgba(128,128,140,.25)))"}` }, svg);
+      });
+      if (D.vol_notiz && D.signal != null) S("text", { x: X(D.signal) + cw, y: vt + 11, class: "mb-note" }, svg).textContent = D.vol_notiz;
+      S("text", { x: m.l - 8, y: vt + VH, class: "mb-tick", "text-anchor": "end" }, svg).textContent = "Vol.";
+      const xh = S("line", { class: "mb-xh", y1: m.t, y2: vt + VH, visibility: "hidden" }, svg);
+      const hit = S("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: PH + GAP + VH, style: "fill:transparent;cursor:crosshair" }, svg);
+      CH = { svg, W, X, Y, xh, idx: CH ? CH.idx : (D.signal ?? B.length - 1) };
+      const near = (cx) => { let best = 0, bd = Infinity; B.forEach((b, i) => { const d = Math.abs(X(i) - cx); if (d < bd) { bd = d; best = i; } }); return best; };
+      const move = (e) => { const r = svg.getBoundingClientRect(); showAt(near(((e.clientX - r.left) * W) / r.width), e.clientX); };
+      hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
+      hit.addEventListener("pointerleave", () => { xh.setAttribute("visibility", "hidden"); tipEl().hidden = true; });
+    }
+    function showAt(i, clientX) {
+      if (!CH) return;
+      const { svg, W, X, Y, xh } = CH; CH.idx = i;
+      const b = B[i], r = svg.getBoundingClientRect(), k = r.width / W;
+      xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
+      const t = tipEl(); t.textContent = "";
+      const h4 = document.createElement("h4"); h4.textContent = `${dayLabel(b[0])} ${b[1]} New York · ${b[2]} bei uns`; t.appendChild(h4);
+      for (const [l, v] of [["Eröffnung", b[3]], ["Hoch", b[4]], ["Tief", b[5]], ["Schluss", b[6]]]) {
+        const row = document.createElement("div"); row.append(l); const bb = document.createElement("b"); bb.textContent = nf(v); row.appendChild(bb); t.appendChild(row);
+      }
+      const row = document.createElement("div"); row.append("Volumen"); const bb = document.createElement("b"); bb.textContent = b[7] == null ? "nicht vorhanden" : Number(b[7]).toLocaleString("de-DE"); row.appendChild(bb); t.appendChild(row);
+      if (verw[i]) { const p = document.createElement("p"); p.textContent = verw[i].text; t.appendChild(p); }
+      t.hidden = false;
+      const x = clientX ?? r.left + X(i) * k, y = r.top + Y(b[4]) * k, w = t.offsetWidth;
+      t.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, x)) + "px";
+      t.style.top = Math.max(t.offsetHeight + 20, y) + "px";
+    }
+    host.addEventListener("keydown", (e) => {
+      if (!CH) return; let i = CH.idx;
+      if (e.key === "ArrowRight") i++; else if (e.key === "ArrowLeft") i--; else if (e.key === "Escape") { tipEl().hidden = true; return; } else return;
+      e.preventDefault(); showAt(Math.max(0, Math.min(B.length - 1, i)));
+    });
+    host.addEventListener("blur", () => { tipEl().hidden = true; });
+    let rw = 0;
+    const ro = new ResizeObserver(() => { const w = Math.round(host.clientWidth); if (w > 0 && Math.abs(w - rw) > 2) { rw = w; draw(); } });
+    ro.observe(host);
+    draw();
+    return {
+      neu: draw,
+      gruppe(name, an) { show[name] = !!an; draw(); },
+      zu() { ro.disconnect(); tipEl().hidden = true; },
+    };
+  }
+  window.Musterbild = { zeichne };
+})();
+</script>
 <script>
 (() => {
-"use strict";
-const D = {"kerzen":[["2026-09-24","08:30","14:30",246.67,246.67,246.67,246.67,200],["2026-09-24","09:30","15:30",246.035,247.48,245.78,246.55,91799],["2026-09-24","09:45","15:45",246.51,246.78,245.645,245.71,46834],["2026-09-24","10:00","16:00",245.72,246.695,245.68,246.4,42362],["2026-09-24","10:15","16:15",246.41,247.055,245.71,246.6,37679],["2026-09-24","10:30","16:30",246.58,246.99,246.245,246.245,20920],["2026-09-24","10:45","16:45",246.105,247.05,246.08,246.555,30406],["2026-09-24","11:00","17:00",246.555,246.75,245.91,245.94,20191],["2026-09-24","11:15","17:15",245.99,246.705,245.99,246.11,38460],["2026-09-24","11:30","17:30",246.1,246.455,246.08,246.455,24858],["2026-09-24","11:45","17:45",246.415,246.84,246.175,246.76,29391],["2026-09-24","12:00","18:00",246.82,246.82,245.905,246.53,18050],["2026-09-24","12:15","18:15",246.65,248.31,246.64,247.87,47506],["2026-09-24","12:30","18:30",247.895,249.05,247.48,248.47,38203],["2026-09-24","12:45","18:45",248.45,249.73,248.28,249.31,37078],["2026-09-24","13:00","19:00",249.155,249.525,248.85,249.5,25846],["2026-09-24","13:15","19:15",249.5,249.605,248.95,249.335,24323],["2026-09-24","13:30","19:30",249.355,249.44,248.48,248.5,50924],["2026-09-24","13:45","19:45",248.525,249.515,248.525,249.51,22066],["2026-09-24","14:00","20:00",249.63,249.885,248.93,249.66,21327],["2026-09-24","14:15","20:15",249.77,249.97,249.61,249.865,19115],["2026-09-24","14:30","20:30",249.875,250.39,249.79,249.98,23594],["2026-09-24","14:45","20:45",250.0,250.295,249.82,250.17,22773],["2026-09-24","15:00","21:00",250.045,250.11,249.575,249.725,20028],["2026-09-24","15:15","21:15",249.76,249.775,249.37,249.5,24864],["2026-09-24","15:30","21:30",249.43,249.51,249.19,249.335,25593],["2026-09-24","15:45","21:45",249.28,249.76,249.11,249.34,104246],["2026-09-25","08:30","14:30",250.55,250.55,250.55,250.55,200],["2026-09-25","09:30","15:30",248.56,250.08,247.745,248.39,238300],["2026-09-25","09:45","15:45",248.42,249.08,247.855,248.55,111451],["2026-09-25","10:00","16:00",248.515,248.6,247.31,247.6,74531],["2026-09-25","10:15","16:15",247.535,247.95,247.26,247.525,47738],["2026-09-25","10:30","16:30",247.55,248.435,247.425,248.01,40017],["2026-09-25","10:45","16:45",248.04,248.555,247.54,248.27,28176],["2026-09-25","11:00","17:00",248.3,249.21,248.295,248.73,63997],["2026-09-25","11:15","17:15",248.74,249.455,248.63,248.92,33694],["2026-09-25","11:30","17:30",248.93,249.3,248.605,248.615,21544],["2026-09-25","11:45","17:45",248.61,249.64,248.31,249.64,15418],["2026-09-25","12:00","18:00",249.75,250.6,249.585,250.6,36173],["2026-09-25","12:15","18:15",250.53,250.74,249.77,250.71,43526],["2026-09-25","12:30","18:30",250.755,250.84,250.21,250.265,34855],["2026-09-25","12:45","18:45",250.24,250.71,250.14,250.53,23841],["2026-09-25","13:00","19:00",250.475,250.795,250.28,250.45,21205],["2026-09-25","13:15","19:15",250.55,250.66,250.265,250.48,14069],["2026-09-25","13:30","19:30",250.35,250.35,249.87,249.905,12933],["2026-09-25","13:45","19:45",249.9,250.18,249.78,250.045,13656],["2026-09-25","14:00","20:00",250.1,250.14,249.59,249.88,17214],["2026-09-25","14:15","20:15",249.88,250.0,249.52,249.69,24286],["2026-09-25","14:30","20:30",249.715,249.94,249.405,249.735,15270],["2026-09-25","14:45","20:45",249.76,249.76,249.465,249.47,14792],["2026-09-25","15:00","21:00",249.45,249.73,249.27,249.625,17587],["2026-09-25","15:15","21:15",249.63,249.92,249.59,249.755,19400],["2026-09-25","15:30","21:30",249.835,250.34,249.75,250.29,36147],["2026-09-25","15:45","21:45",250.33,250.755,249.48,249.63,101133],["2026-09-28","09:30","15:30",246.33,246.72,244.755,245.99,172672],["2026-09-28","09:45","15:45",245.91,246.38,245.35,245.815,147383],["2026-09-28","10:00","16:00",245.82,246.585,245.385,245.97,63320],["2026-09-28","10:15","16:15",245.975,247.15,245.83,246.91,74266],["2026-09-28","10:30","16:30",246.87,247.12,246.215,246.385,66289],["2026-09-28","10:45","16:45",246.38,246.495,245.93,246.325,31023],["2026-09-28","11:00","17:00",246.345,247.495,246.25,247.17,42730],["2026-09-28","11:15","17:15",247.14,247.29,246.57,246.63,48330],["2026-09-28","11:30","17:30",246.64,246.88,246.425,246.51,33674],["2026-09-28","11:45","17:45",246.515,246.62,246.23,246.39,43338],["2026-09-28","12:00","18:00",246.39,246.42,246.05,246.215,21416],["2026-09-28","12:15","18:15",246.23,247.7,246.115,247.305,25484],["2026-09-28","12:30","18:30",247.38,247.43,246.6,246.67,30649],["2026-09-28","12:45","18:45",246.74,246.9,246.55,246.71,13900],["2026-09-28","13:00","19:00",246.64,247.69,246.445,247.57,40326],["2026-09-28","13:15","19:15",247.61,247.64,246.85,246.98,15818],["2026-09-28","13:30","19:30",247.005,247.27,247.005,247.225,9358]],"flaechen":[{"von":11,"bis":55,"oben":250.84,"unten":245.905,"farbe":"accent","gruppe":"bot"}],"linien":[{"von":11,"bis":55,"p0":245.905,"farbe":"accent","weiter":70,"gruppe":"bot"},{"von":40,"bis":55,"p0":250.84,"farbe":"accent","gruppe":"bot"},{"von":56,"bis":64,"p0":240.97,"farbe":"up","strich":"strich","gruppe":"bot"},{"von":56,"bis":64,"p0":248.3725,"farbe":"down","strich":"strich","gruppe":"bot"}],"punkte":[{"i":40,"p":250.84,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":11,"p":245.905,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":14,"p":249.73,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":21,"p":250.39,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":27,"p":250.55,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":31,"p":247.26,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":50,"p":249.27,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"}],"verworfen":[],"signal":55,"einstieg":{"i":56,"p":245.42625},"ausstieg":{"i":64,"p":246.135,"farbe":"down"},"notizen":[{"i":56,"p":245.42625,"dx":10,"dy":16,"gross":true,"text":"Einstieg 245,43 · 10:05"},{"i":64,"p":246.135,"dx":-8,"dy":-10,"anker":"end","gross":true,"text":"Zeit-Stop · 12:05"}],"rechts":[{"p":240.97,"t":"Ziel Bot","kurz":"Ziel","farbe":"up","gruppe":"bot"},{"p":245.905,"t":"Kante","farbe":"accent","gruppe":"bot"},{"p":248.3725,"t":"Stop Bot","kurz":"Stop","farbe":"down","gruppe":"bot"},{"p":250.84,"t":"Oberkante Bot","kurz":"Oberkante","farbe":"accent","gruppe":"bot"}],"gruppen":{},"vol_notiz":"3,7× Schnitt","aria":"AMZN Rechteck short: Linien des Bots und geprüfte Linien"};
-const B = D.kerzen;                         // [Tag, Zeit NY, Zeit DE, Eröffnung, Hoch, Tief, Schluss, Volumen]
-const $ = (s) => document.querySelector(s);
-const NS = "http://www.w3.org/2000/svg";
-const S = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a || {}) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
-const nf = (v, d = 2) => v.toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
-const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
-const dayLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); const w = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); return `${WD[w]} ${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.`; };
-const DASH = { voll: "", strich: "6 4", kurz: "5 3", punkt: "2 3" };
-const show = {}; for (const g in D.gruppen || {}) show[g] = D.gruppen[g].an !== false;
-const vis = (o) => !o.gruppe || show[o.gruppe] !== false;
-const verw = {}; for (const v of D.verworfen || []) verw[v.i] = v;
-let CH = null;
-
-function step(range, n) { const raw = range / n, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; }
-
-function draw() {
-  const host = $("#chart"); host.textContent = "";
-  const W = Math.max(300, Math.round(host.clientWidth)), small = W < 600;
-  const m = { l: small ? 46 : 54, r: small ? 96 : 150, t: 24, b: 30 };
-  const PH = small ? 300 : 390, VH = small ? 54 : 70, GAP = 14, H = m.t + PH + GAP + VH + m.b;
-  const gaps = []; let g = 0;
-  B.forEach((b, i) => { if (i && b[0] !== B[i - 1][0]) g++; gaps.push(g); });
-  const slots = B.length + g * 1.6, slot = (W - m.l - m.r) / slots;
-  const X = (i) => m.l + slot * (i + gaps[i] * 1.6 + 0.5);
-  let lo = Infinity, hi = -Infinity;
-  for (const b of B) { lo = Math.min(lo, b[5]); hi = Math.max(hi, b[4]); }
-  for (const l of D.linien || []) if (vis(l)) { lo = Math.min(lo, l.p0, l.p1 ?? l.p0); hi = Math.max(hi, l.p0, l.p1 ?? l.p0); }
-  for (const r of D.rechts || []) if (vis(r)) { lo = Math.min(lo, r.p); hi = Math.max(hi, r.p); }
-  const pad = (hi - lo) * 0.05; lo -= pad; hi += pad;
-  const Y = (v) => m.t + (1 - (v - lo) / (hi - lo)) * PH;
-  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: "chart", role: "img", "aria-label": D.aria || "" }, host);
-  const st = step(hi - lo, small ? 5 : 7), dec = st >= 1 ? 0 : st >= 0.1 ? 1 : 2;
-  for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) {
-    S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: "grid" }, svg);
-    S("text", { x: m.l - 8, y: Y(v) + 3.5, class: "tick", "text-anchor": "end" }, svg).textContent = nf(v, dec);
+  "use strict";
+  const D = {"kerzen":[["2026-09-24","08:30","14:30",246.67,246.67,246.67,246.67,200],["2026-09-24","09:30","15:30",246.035,247.48,245.78,246.55,91799],["2026-09-24","09:45","15:45",246.51,246.78,245.645,245.71,46834],["2026-09-24","10:00","16:00",245.72,246.695,245.68,246.4,42362],["2026-09-24","10:15","16:15",246.41,247.055,245.71,246.6,37679],["2026-09-24","10:30","16:30",246.58,246.99,246.245,246.245,20920],["2026-09-24","10:45","16:45",246.105,247.05,246.08,246.555,30406],["2026-09-24","11:00","17:00",246.555,246.75,245.91,245.94,20191],["2026-09-24","11:15","17:15",245.99,246.705,245.99,246.11,38460],["2026-09-24","11:30","17:30",246.1,246.455,246.08,246.455,24858],["2026-09-24","11:45","17:45",246.415,246.84,246.175,246.76,29391],["2026-09-24","12:00","18:00",246.82,246.82,245.905,246.53,18050],["2026-09-24","12:15","18:15",246.65,248.31,246.64,247.87,47506],["2026-09-24","12:30","18:30",247.895,249.05,247.48,248.47,38203],["2026-09-24","12:45","18:45",248.45,249.73,248.28,249.31,37078],["2026-09-24","13:00","19:00",249.155,249.525,248.85,249.5,25846],["2026-09-24","13:15","19:15",249.5,249.605,248.95,249.335,24323],["2026-09-24","13:30","19:30",249.355,249.44,248.48,248.5,50924],["2026-09-24","13:45","19:45",248.525,249.515,248.525,249.51,22066],["2026-09-24","14:00","20:00",249.63,249.885,248.93,249.66,21327],["2026-09-24","14:15","20:15",249.77,249.97,249.61,249.865,19115],["2026-09-24","14:30","20:30",249.875,250.39,249.79,249.98,23594],["2026-09-24","14:45","20:45",250.0,250.295,249.82,250.17,22773],["2026-09-24","15:00","21:00",250.045,250.11,249.575,249.725,20028],["2026-09-24","15:15","21:15",249.76,249.775,249.37,249.5,24864],["2026-09-24","15:30","21:30",249.43,249.51,249.19,249.335,25593],["2026-09-24","15:45","21:45",249.28,249.76,249.11,249.34,104246],["2026-09-25","08:30","14:30",250.55,250.55,250.55,250.55,200],["2026-09-25","09:30","15:30",248.56,250.08,247.745,248.39,238300],["2026-09-25","09:45","15:45",248.42,249.08,247.855,248.55,111451],["2026-09-25","10:00","16:00",248.515,248.6,247.31,247.6,74531],["2026-09-25","10:15","16:15",247.535,247.95,247.26,247.525,47738],["2026-09-25","10:30","16:30",247.55,248.435,247.425,248.01,40017],["2026-09-25","10:45","16:45",248.04,248.555,247.54,248.27,28176],["2026-09-25","11:00","17:00",248.3,249.21,248.295,248.73,63997],["2026-09-25","11:15","17:15",248.74,249.455,248.63,248.92,33694],["2026-09-25","11:30","17:30",248.93,249.3,248.605,248.615,21544],["2026-09-25","11:45","17:45",248.61,249.64,248.31,249.64,15418],["2026-09-25","12:00","18:00",249.75,250.6,249.585,250.6,36173],["2026-09-25","12:15","18:15",250.53,250.74,249.77,250.71,43526],["2026-09-25","12:30","18:30",250.755,250.84,250.21,250.265,34855],["2026-09-25","12:45","18:45",250.24,250.71,250.14,250.53,23841],["2026-09-25","13:00","19:00",250.475,250.795,250.28,250.45,21205],["2026-09-25","13:15","19:15",250.55,250.66,250.265,250.48,14069],["2026-09-25","13:30","19:30",250.35,250.35,249.87,249.905,12933],["2026-09-25","13:45","19:45",249.9,250.18,249.78,250.045,13656],["2026-09-25","14:00","20:00",250.1,250.14,249.59,249.88,17214],["2026-09-25","14:15","20:15",249.88,250.0,249.52,249.69,24286],["2026-09-25","14:30","20:30",249.715,249.94,249.405,249.735,15270],["2026-09-25","14:45","20:45",249.76,249.76,249.465,249.47,14792],["2026-09-25","15:00","21:00",249.45,249.73,249.27,249.625,17587],["2026-09-25","15:15","21:15",249.63,249.92,249.59,249.755,19400],["2026-09-25","15:30","21:30",249.835,250.34,249.75,250.29,36147],["2026-09-25","15:45","21:45",250.33,250.755,249.48,249.63,101133],["2026-09-28","09:30","15:30",246.33,246.72,244.755,245.99,172672],["2026-09-28","09:45","15:45",245.91,246.38,245.35,245.815,147383],["2026-09-28","10:00","16:00",245.82,246.585,245.385,245.97,63320],["2026-09-28","10:15","16:15",245.975,247.15,245.83,246.91,74266],["2026-09-28","10:30","16:30",246.87,247.12,246.215,246.385,66289],["2026-09-28","10:45","16:45",246.38,246.495,245.93,246.325,31023],["2026-09-28","11:00","17:00",246.345,247.495,246.25,247.17,42730],["2026-09-28","11:15","17:15",247.14,247.29,246.57,246.63,48330],["2026-09-28","11:30","17:30",246.64,246.88,246.425,246.51,33674],["2026-09-28","11:45","17:45",246.515,246.62,246.23,246.39,43338],["2026-09-28","12:00","18:00",246.39,246.42,246.05,246.215,21416],["2026-09-28","12:15","18:15",246.23,247.7,246.115,247.305,25484],["2026-09-28","12:30","18:30",247.38,247.43,246.6,246.67,30649],["2026-09-28","12:45","18:45",246.74,246.9,246.55,246.71,13900],["2026-09-28","13:00","19:00",246.64,247.69,246.445,247.57,40326],["2026-09-28","13:15","19:15",247.61,247.64,246.85,246.98,15818],["2026-09-28","13:30","19:30",247.005,247.27,247.005,247.225,9358]],"flaechen":[{"von":11,"bis":55,"oben":250.84,"unten":245.905,"farbe":"accent","gruppe":"bot"}],"linien":[{"von":11,"bis":55,"p0":245.905,"farbe":"accent","weiter":70,"gruppe":"bot"},{"von":40,"bis":55,"p0":250.84,"farbe":"accent","gruppe":"bot"},{"von":56,"bis":64,"p0":240.97,"farbe":"up","strich":"strich","gruppe":"bot"},{"von":56,"bis":64,"p0":248.3725,"farbe":"down","strich":"strich","gruppe":"bot"}],"punkte":[{"i":40,"p":250.84,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":11,"p":245.905,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":14,"p":249.73,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":21,"p":250.39,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":27,"p":250.55,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":31,"p":247.26,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":50,"p":249.27,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"}],"verworfen":[],"signal":55,"einstieg":{"i":56,"p":245.42625},"ausstieg":{"i":64,"p":246.135,"farbe":"down"},"notizen":[{"i":56,"p":245.42625,"dx":10,"dy":16,"gross":true,"text":"Einstieg 245,43 · 10:05"},{"i":64,"p":246.135,"dx":-8,"dy":-10,"anker":"end","gross":true,"text":"Zeit-Stop · 12:05"}],"rechts":[{"p":240.97,"t":"Ziel Bot","kurz":"Ziel","farbe":"up","gruppe":"bot"},{"p":245.905,"t":"Kante","farbe":"accent","gruppe":"bot"},{"p":248.3725,"t":"Stop Bot","kurz":"Stop","farbe":"down","gruppe":"bot"},{"p":250.84,"t":"Oberkante Bot","kurz":"Oberkante","farbe":"accent","gruppe":"bot"}],"gruppen":{},"vol_notiz":"3,7× Schnitt","aria":"AMZN Rechteck short: Linien des Bots und geprüfte Linien"};
+  const c = Musterbild.zeichne(document.getElementById("chart"), D);
+  for (const btn of document.querySelectorAll("[data-gruppe]")) {
+    btn.addEventListener("click", () => {
+      const g = btn.dataset.gruppe, txt = ((D.gruppen || {})[g] || {}).knopf || ["zeigen", "ausblenden"];
+      const an = btn.getAttribute("aria-pressed") !== "true";
+      btn.setAttribute("aria-pressed", String(an));
+      btn.textContent = an ? txt[1] : txt[0];
+      for (const el of document.querySelectorAll(`[data-legende="${g}"]`)) el.hidden = !an;
+      c.gruppe(g, an);
+    });
   }
-  let start = 0;
-  B.forEach((b, i) => {
-    if (i === B.length - 1 || B[i + 1][0] !== b[0]) {
-      if (X(i) - X(start) + slot >= (small ? 52 : 60) || start === 0 && i === B.length - 1) S("text", { x: (X(start) + X(i)) / 2, y: H - 8, class: "day", "text-anchor": "middle" }, svg).textContent = dayLabel(b[0]);
-      if (i < B.length - 1) { const sx = (X(i) + X(i + 1)) / 2; S("line", { x1: sx, x2: sx, y1: m.t, y2: m.t + PH + GAP + VH, class: "sep" }, svg); }
-      start = i + 1;
-    }
-  });
-  for (const f of D.flaechen || []) if (vis(f)) S("rect", { x: X(f.von), y: Y(f.oben), width: Math.max(1, X(f.bis) - X(f.von)), height: Math.max(1, Y(f.unten) - Y(f.oben)), style: `fill:var(--${f.farbe}-wash)` }, svg);
-  if (D.signal != null) {
-    S("rect", { x: X(D.signal) - slot * 0.55, y: m.t, width: slot * 1.1, height: PH, style: "fill:var(--accent-wash)" }, svg);
-    S("text", { x: X(D.signal), y: m.t - 8, class: "note", "text-anchor": "middle" }, svg).textContent = "Signal";
-  }
-  for (const l of D.linien || []) {
-    if (!vis(l)) continue;
-    const p1 = l.p1 ?? l.p0, sty = `stroke:var(--${l.farbe});stroke-width:${l.breite || 1.6};fill:none` + (DASH[l.strich] ? `;stroke-dasharray:${DASH[l.strich]}` : "");
-    S("line", { x1: X(l.von), x2: X(l.bis), y1: Y(l.p0), y2: Y(p1), style: sty }, svg);
-    if (l.weiter != null && l.weiter > l.bis) {
-      const pw = l.p0 + (p1 - l.p0) * (l.weiter - l.von) / Math.max(1, l.bis - l.von);
-      S("line", { x1: X(l.bis), x2: X(l.weiter), y1: Y(p1), y2: Y(pw), style: `stroke:var(--${l.farbe});stroke-width:${l.breite || 1.6};stroke-dasharray:5 4` }, svg);
-    }
-  }
-  const cw = Math.max(2, slot * 0.62);
-  B.forEach((b, i) => {
-    const [, hm, , o, h, l, c] = b, up = c >= o, col = up ? "var(--up)" : "var(--down)", ext = hm < "09:30" || hm >= "16:00";
-    const gc = S("g", { opacity: ext ? .45 : 1 }, svg);
-    const v = verw[i];
-    const hiW = v && v.typ === "hoch" ? v.bis : h, loW = v && v.typ === "tief" ? v.bis : l;
-    S("line", { x1: X(i), x2: X(i), y1: Y(hiW), y2: Y(loW), style: `stroke:${col};stroke-width:1` }, gc);
-    const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
-    S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(1, y1 - y0), rx: 1, style: `fill:${col}` }, gc);
-    if (v) {
-      S("line", { x1: X(i), x2: X(i), y1: Y(v.bis), y2: Y(v.von), style: "stroke:var(--down);stroke-width:1.4;stroke-dasharray:2 3" }, svg);
-      const yx = Y(v.von), r = 4;
-      S("path", { d: `M${X(i) - r} ${yx - r}L${X(i) + r} ${yx + r}M${X(i) + r} ${yx - r}L${X(i) - r} ${yx + r}`, style: "stroke:var(--down);stroke-width:1.8;fill:none" }, svg);
-    }
-  });
-  for (const p of D.punkte || []) if (vis(p)) S("circle", { cx: X(p.i), cy: Y(p.p), r: p.klein ? 3.5 : 4.5, style: `fill:none;stroke:var(--${p.farbe});stroke-width:${p.klein ? 1.4 : 1.8}` + (p.strich ? ";stroke-dasharray:2 2" : "") }, svg);
-  if (D.einstieg) {
-    const ex = X(D.einstieg.i), ey = Y(D.einstieg.p);
-    S("path", { d: `M${ex - 12} ${ey}L${ex - 4} ${ey}M${ex - 8} ${ey - 4}L${ex - 4} ${ey}L${ex - 8} ${ey + 4}`, style: "fill:none;stroke:var(--ink);stroke-width:1.6" }, svg);
-    S("circle", { cx: ex, cy: ey, r: 3.5, style: "fill:var(--ink)" }, svg);
-  }
-  if (D.ausstieg) S("circle", { cx: X(D.ausstieg.i), cy: Y(D.ausstieg.p), r: 5, style: `fill:var(--${D.ausstieg.farbe || "ink"});stroke:var(--ground);stroke-width:2` }, svg);
-  for (const n of D.notizen || []) {
-    if (!vis(n) || (n.gross && small)) continue;
-    S("text", { x: X(n.i) + (n.dx || 0), y: Y(n.p) + (n.dy || 0), class: "note", "text-anchor": n.anker || "start", style: n.farbe ? `fill:var(--${n.farbe})` : "" }, svg).textContent = small && n.kurz ? n.kurz : n.text;
-  }
-  const labs = (D.rechts || []).filter(vis).map((l) => ({ ...l, y: Y(l.p) }));
-  labs.sort((a, b) => a.y - b.y);
-  for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 28);
-  const lx = W - m.r + 10;
-  for (const l of labs) {
-    S("line", { x1: lx, x2: lx + 10, y1: l.y, y2: l.y, style: `stroke:var(--${l.farbe});stroke-width:2` + (l.strich ? ";stroke-dasharray:3 2" : "") }, svg);
-    S("text", { x: lx + 15, y: l.y - 2, class: "lab" }, svg).textContent = small && l.kurz ? l.kurz : l.t;
-    S("text", { x: lx + 15, y: l.y + 11, class: "labv" }, svg).textContent = nf(l.p);
-  }
-  const vt = m.t + PH + GAP, vmax = Math.max(1, ...B.map((b) => b[7] || 0));
-  B.forEach((b, i) => {
-    if (b[7] == null) return;
-    const h = (b[7] / vmax) * VH;
-    S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(.5, h), style: `fill:${i === D.signal ? "var(--accent)" : "var(--vol)"}` }, svg);
-  });
-  if (D.vol_notiz && D.signal != null) S("text", { x: X(D.signal) + cw, y: vt + 11, class: "note" }, svg).textContent = D.vol_notiz;
-  S("text", { x: m.l - 8, y: vt + VH, class: "tick", "text-anchor": "end" }, svg).textContent = "Vol.";
-  const xh = S("line", { class: "xh", y1: m.t, y2: vt + VH, visibility: "hidden" }, svg);
-  const hit = S("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: PH + GAP + VH, style: "fill:transparent;cursor:crosshair" }, svg);
-  CH = { svg, W, X, Y, xh, idx: D.signal ?? B.length - 1 };
-  const near = (cx) => { let best = 0, bd = Infinity; B.forEach((b, i) => { const d = Math.abs(X(i) - cx); if (d < bd) { bd = d; best = i; } }); return best; };
-  const move = (e) => { const r = svg.getBoundingClientRect(); showAt(near(((e.clientX - r.left) * W) / r.width), e.clientX); };
-  hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
-  hit.addEventListener("pointerleave", () => { xh.setAttribute("visibility", "hidden"); $("#tip").hidden = true; });
-}
-function showAt(i, clientX) {
-  const { svg, W, X, Y, xh } = CH; CH.idx = i;
-  const b = B[i], r = svg.getBoundingClientRect(), k = r.width / W;
-  xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
-  const tip = $("#tip"); tip.textContent = "";
-  const h4 = document.createElement("h4"); h4.textContent = `${dayLabel(b[0])} ${b[1]} New York · ${b[2]} bei uns`; tip.appendChild(h4);
-  for (const [l, v] of [["Eröffnung", b[3]], ["Hoch", b[4]], ["Tief", b[5]], ["Schluss", b[6]]]) {
-    const row = document.createElement("div"); row.append(l); const bb = document.createElement("b"); bb.textContent = nf(v); row.appendChild(bb); tip.appendChild(row);
-  }
-  const row = document.createElement("div"); row.append("Volumen"); const bb = document.createElement("b"); bb.textContent = b[7] == null ? "nicht vorhanden" : b[7].toLocaleString("de-DE"); row.appendChild(bb); tip.appendChild(row);
-  if (verw[i]) { const p = document.createElement("p"); p.textContent = verw[i].text; tip.appendChild(p); }
-  tip.hidden = false;
-  const x = clientX ?? r.left + X(i) * k, y = r.top + Y(b[4]) * k, w = tip.offsetWidth;
-  tip.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, x)) + "px";
-  tip.style.top = Math.max(tip.offsetHeight + 20, y) + "px";
-}
-for (const btn of document.querySelectorAll("[data-gruppe]")) {
-  btn.addEventListener("click", () => {
-    const gname = btn.dataset.gruppe, txt = (D.gruppen[gname] || {}).knopf || ["zeigen", "ausblenden"];
-    show[gname] = !show[gname]; btn.setAttribute("aria-pressed", String(show[gname]));
-    btn.textContent = show[gname] ? txt[1] : txt[0];
-    for (const el of document.querySelectorAll(`[data-legende="${gname}"]`)) el.hidden = !show[gname];
-    draw();
-  });
-}
-$("#chart").addEventListener("keydown", (e) => {
-  if (!CH) return; let i = CH.idx;
-  if (e.key === "ArrowRight") i++; else if (e.key === "ArrowLeft") i--; else if (e.key === "Escape") { $("#tip").hidden = true; return; } else return;
-  e.preventDefault(); showAt(Math.max(0, Math.min(B.length - 1, i)));
-});
-$("#chart").addEventListener("blur", () => { $("#tip").hidden = true; });
-addEventListener("scroll", () => { $("#tip").hidden = true; }, { passive: true });
-let rw = 0; new ResizeObserver(() => { const w = Math.round($("#chart").clientWidth); if (Math.abs(w - rw) > 2) { rw = w; draw(); } }).observe($("#chart"));
-draw();
 })();
 </script>
 </body>

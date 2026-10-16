@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Musterbild UAL t47</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  /* Musterbild des Lern-Labors im Stil des Dashboards: oben der Chart, darunter Befund und Herkunft der Linien. */
+  --ground:#fcfcfd; --raised:#ffffff; --sunken:#f3f3f6;
+  --hair:rgba(9,9,20,.09); --hair-soft:rgba(9,9,20,.055);
+  --ink:#0a0a0c; --ink-2:#55555f; --ink-3:#8b8b96;
+  --up:#08a742; --down:#e02f24; --accent:#0a6bff; --be:#a35f00;
+  --up-wash:rgba(8,167,66,.10); --down-wash:rgba(224,47,36,.09); --accent-wash:rgba(10,107,255,.08); --be-wash:rgba(163,95,0,.12);
+  --grid:rgba(9,9,20,.06); --vol:rgba(9,9,20,.16);
+  --lift:0 0 0 1px var(--hair-soft), 0 1px 2px rgba(9,9,20,.04), 0 14px 34px -14px rgba(9,9,20,.12);
+  --sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0a0a0c; --raised:#141418; --sunken:#1b1b20;
+    --hair:rgba(255,255,255,.10); --hair-soft:rgba(255,255,255,.06);
+    --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
+    --up:#32d74b; --down:#ff453a; --accent:#3d9bff; --be:#ffb340;
+    --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --accent-wash:rgba(61,155,255,.12); --be-wash:rgba(255,179,64,.14);
+    --grid:rgba(255,255,255,.06); --vol:rgba(255,255,255,.18);
+    --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0a0a0c; --raised:#141418; --sunken:#1b1b20;
+  --hair:rgba(255,255,255,.10); --hair-soft:rgba(255,255,255,.06);
+  --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
+  --up:#32d74b; --down:#ff453a; --accent:#3d9bff; --be:#ffb340;
+  --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --accent-wash:rgba(61,155,255,.12); --be-wash:rgba(255,179,64,.14);
+  --grid:rgba(255,255,255,.06); --vol:rgba(255,255,255,.18);
+  --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 15.5px/1.55 var(--sans);letter-spacing:-.011em;-webkit-font-smoothing:antialiased;padding-inline:16px;padding-block:28px 56px}
+.page{max-width:1080px;margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+h1,h2{margin:0;font-weight:600;letter-spacing:-.03em;text-wrap:balance}
+p{margin:0}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font:500 11px/1.3 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
+.head{display:grid;gap:10px;padding-inline:4px}
+.head h1{font-size:clamp(28px,4.4vw,40px);line-height:1.1}
+.sub{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;color:var(--ink-2);font-size:14.5px}
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font:500 12.5px/1.5 var(--sans);white-space:nowrap}
+.chip.ok{background:var(--up-wash);color:var(--up)}
+.chip.bad{background:var(--down-wash);color:var(--down)}
+.chip.test{background:var(--accent-wash);color:var(--accent)}
+.chip.warn{background:var(--be-wash);color:var(--be)}
+.card{background:var(--raised);border-radius:22px;box-shadow:var(--lift);padding:clamp(18px,3vw,28px);min-width:0}
+.card h2{font-size:19px;margin-bottom:12px}
+.chart-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 18px;margin-bottom:12px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.k{display:inline-block;width:16px;height:0;border-top:2px solid var(--c)}
+.k.dash{border-top-style:dashed}
+.k.box{height:10px;border:1.5px solid var(--c);background:var(--w);border-radius:2px}
+.k.x{width:12px;height:12px;border:0;position:relative}
+.k.x::before,.k.x::after{content:"";position:absolute;left:50%;top:0;width:2px;height:12px;background:var(--down);transform:rotate(45deg)}
+.k.x::after{transform:rotate(-45deg)}
+.toggle{appearance:none;border:0;cursor:pointer;border-radius:999px;padding:8px 14px;font:500 13px/1 var(--sans);color:var(--ink);background:var(--sunken);box-shadow:inset 0 0 0 1px var(--hair)}
+.toggle[aria-pressed="true"]{background:var(--be-wash);color:var(--be);box-shadow:inset 0 0 0 1px var(--be)}
+.toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.chart-host{position:relative}
+.chart-host:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+svg.chart{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.chart .grid{stroke:var(--grid);stroke-width:1;shape-rendering:crispEdges}
+.chart .tick{font:400 10.5px var(--mono);fill:var(--ink-3)}
+.chart .day{font:500 11.5px var(--sans);fill:var(--ink-2)}
+.chart .lab{font:500 11.5px var(--sans);fill:var(--ink-2)}
+.chart .labv{font:600 11.5px var(--mono);fill:var(--ink)}
+.chart .note{font:500 11px var(--sans);fill:var(--ink-2)}
+.chart .sep{stroke:var(--hair);stroke-width:1;stroke-dasharray:2 4}
+.chart .xh{stroke:var(--ink-3);stroke-width:1;shape-rendering:crispEdges}
+.cap{margin-top:10px;font-size:12.5px;color:var(--ink-3)}
+.tip{position:fixed;z-index:20;pointer-events:none;min-width:190px;max-width:280px;border-radius:12px;padding:9px 11px;background:var(--raised);box-shadow:var(--lift),0 0 0 1px var(--hair);font-size:12.5px;line-height:1.5;transform:translate(-50%,calc(-100% - 12px))}
+.tip h4{margin:0 0 4px;font:500 11px var(--mono);color:var(--ink-3)}
+.tip div{display:flex;justify-content:space-between;gap:14px;color:var(--ink-2)}
+.tip b{font:600 12px var(--mono);color:var(--ink)}
+.tip p{margin-top:6px;color:var(--down);font-size:12px}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+dl.facts{margin:0;display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:9px 18px;font-size:14px}
+dl.facts dt{color:var(--ink-3);font-size:13px}
+dl.facts dd{margin:0;color:var(--ink)}
+ul.points{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:14.5px;color:var(--ink-2)}
+ul.points li{display:grid;grid-template-columns:8px minmax(0,1fr);gap:12px}
+ul.points li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c,var(--ink-3));margin-top:8px}
+ul.points b{color:var(--ink);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 10px;vertical-align:top}
+th{font:500 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--hair-soft)}
+tbody tr+tr td{border-top:1px solid var(--hair-soft)}
+td:first-child{white-space:nowrap;font-weight:600}
+.tw{overflow-x:auto}
+.foot{font-size:12.5px;color:var(--ink-3);text-align:center;padding-top:4px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+@media (max-width:480px){dl.facts{grid-template-columns:1fr;gap:2px 0}dl.facts dd{margin-bottom:8px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <p class="eyebrow">Lern-Labor · Chart-Leser v1 · Signalprüfung · Trade t47</p>
+    <h1>UAL · Schulter-Kopf-Schulter short</h1>
+    <p class="sub"><span>Mo 28.09.2026</span><span class="chip bad">Zeit-Stop</span><span class="num">−0,05 R · −2,86 $</span><span class="chip ok">Chart-Leser: sauber</span><span class="chip test">rekonstruiert, nicht vom Live-Bot</span></p>
+  </header>
+
+  <section class="card" aria-labelledby="t-chart">
+    <div class="chart-top">
+      <h2 id="t-chart" style="margin:0">So liest der Chart-Leser das Muster</h2>
+      
+    </div>
+    <div class="legend" aria-hidden="true"><span><i class="k box" style="--c:var(--accent);--w:var(--accent-wash)"></i>Linien des Bots</span><span><i class="k dash" style="--c:var(--up)"></i>Ziel</span><span><i class="k dash" style="--c:var(--down)"></i>Stop</span></div>
+    <div class="chart-host" id="chart" tabindex="0" aria-label="Kerzenchart UAL, 15 Minuten, mit den Linien des Bots und den geprüften Linien. Mit den Pfeiltasten durch die Kerzen gehen."></div>
+    <p class="cap">15-Minuten-Kerzen von IEX, wie der Bot sie live sieht. Zeiten in New York, im Infofeld zusätzlich deutsche Zeit. Vor- und nachbörsliche Kerzen blass.</p>
+  </section>
+
+  <div class="cols">
+    <section class="card" aria-labelledby="t-facts">
+      <h2 id="t-facts">Was der Bot gesehen hat</h2>
+      <dl class="facts"><dt>Zeitebene</dt><dd>15-Minuten-Kerzen von IEX, wie live</dd><dt>Kante</dt><dd><span class="num">110,78</span>. Das ist die Ausbruchskante.</dd><dt>Gegenkante</dt><dd><span class="num">115,61</span></dd><dt>Höhe und Ziel</dt><dd><span class="num">4,83</span> hoch, Ziel <span class="num">105,95</span></dd><dt>Stop</dt><dd><span class="num">114,69</span></dd><dt>Signal</dt><dd>Signalkerze Mo 28.09. 09:30, Schluss <span class="num">110,17</span>, Volumen 3,0-fach über dem Schnitt</dd><dt>Einstieg</dt><dd>09:58, gefüllt zu <span class="num">109,83</span>, 0,20 R hinter der Kante</dd><dt>Ausstieg</dt><dd>11:58 zu <span class="num">110,09</span>, Zeit-Stop, nach 121 Minuten</dd></dl>
+    </section>
+    <section class="card" aria-labelledby="t-find">
+      <h2 id="t-find">Was der Chart-Leser prüft</h2>
+      <ul class="points"><li style="--c:var(--up)"><span><b>linke Schulter 113,20 ist echt.</b> Fr 25.09. 09:30: SIP-Hoch 113,40 über alle Börsen; der Docht ist 0,0× die mittlere Spanne (Eröffnungskerzen der letzten 20 Tage).</span></li><li style="--c:var(--up)"><span><b>Kopf 115,61 ist echt.</b> Fr 25.09. 12:30: SIP-Hoch 115,71 über alle Börsen; der Docht ist 0,6× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>rechte Schulter 114,55 ist echt.</b> Fr 25.09. 14:30: SIP-Hoch 114,62 über alle Börsen; der Docht ist 0,0× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>Tal 1 110,78 ist echt.</b> Fr 25.09. 10:00: SIP-Tief 110,72 über alle Börsen; der Docht ist 0,9× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>Tal 2 113,90 ist echt.</b> Fr 25.09. 13:30: SIP-Tief 113,83 über alle Börsen; der Docht ist 0,6× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>5 Ankerpunkt(e) bestätigt.</b> 5 davon durch SIP, 0 ohne SIP-Kerze nach der 3×-Regel.</span></li><li style="--c:var(--up)"><span><b>Signalkerze: sauber.</b> Kurslücke 0,0 ATR, kein Durchfall hinter die Kante.</span></li><li style="--c:var(--accent)"><span><b>Bewertung: sauber.</b> keine Abzüge</span></li></ul>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="t-src">
+    <h2 id="t-src">Was exakt ist und was rekonstruiert</h2>
+    <div class="tw"><table>
+      <thead><tr><th scope="col">Art</th><th scope="col">Was</th></tr></thead>
+      <tbody><tr><td>Exakt</td><td>Kerzen: IEX-15-Min, roh, aus dem historischen Abruf. Kante, Stop und Ziel des Bots: mit dem Detektor des Bots auf diesen Kerzen nachgerechnet. Einstieg und Ausstieg aus der Trade-Datei.</td></tr><tr><td>Exakt</td><td>SIP-Werte: SIP-1-Min-Kerzen derselben 15 Minuten (alle Börsen).</td></tr><tr><td>Nachgebaut</td><td>Die Ankerpunkte: mit der Wendepunkt-Funktion des Bots aus denselben Kerzen, gegen den Detektor geprüft (Kante und Ziel identisch).</td></tr><tr><td>Angenommen</td><td>SIP steht 15 Minuten nach Kerzenende bereit (gemessen am 15.10.2026, Gratis-Tarif). Die Kerzen des historischen Abrufs sind dieselben, die der Bot live sah.</td></tr><tr><td>Nicht vom Bot</td><td>Die geprüften Linien rechnet der Chart-Leser des Lern-Labors (Festlegung v1). Der Live-Bot kennt sie nicht und handelt unverändert.</td></tr></tbody>
+    </table></div>
+  </section>
+
+  <p class="foot">Nur Paper-Trading. Lern-Labor, getrennt vom Live-Bot.</p>
+</div>
+<div class="tip" id="tip" role="status" hidden></div>
+<script>
+(() => {
+"use strict";
+const D = {"kerzen":[["2026-09-24","14:30","20:30",111.43,112.0,111.15,111.49,5823],["2026-09-24","14:45","20:45",111.375,111.65,111.355,111.42,4337],["2026-09-24","15:00","21:00",111.43,111.43,111.04,111.275,7819],["2026-09-24","15:15","21:15",111.27,111.54,111.27,111.42,9276],["2026-09-24","15:30","21:30",111.395,111.56,111.395,111.45,6743],["2026-09-24","15:45","21:45",111.45,111.54,111.145,111.21,16386],["2026-09-25","09:30","15:30",113.2,113.2,111.99,112.24,6194],["2026-09-25","09:45","15:45",111.88,111.975,111.21,111.56,2958],["2026-09-25","10:00","16:00",111.42,111.53,110.78,111.39,4111],["2026-09-25","10:15","16:15",111.39,111.43,111.16,111.325,3698],["2026-09-25","10:30","16:30",111.3,111.605,111.3,111.58,4550],["2026-09-25","10:45","16:45",111.62,111.8,111.55,111.55,5001],["2026-09-25","11:00","17:00",111.69,112.1,111.65,111.71,2191],["2026-09-25","11:15","17:15",111.695,111.91,111.6,111.84,3851],["2026-09-25","11:30","17:30",112.04,112.24,111.76,111.79,4007],["2026-09-25","11:45","17:45",111.88,112.89,111.675,112.79,3227],["2026-09-25","12:00","18:00",112.95,114.89,112.95,114.89,9158],["2026-09-25","12:15","18:15",115.14,115.44,114.85,115.36,12302],["2026-09-25","12:30","18:30",115.26,115.61,114.6,114.665,13562],["2026-09-25","12:45","18:45",114.58,114.925,114.45,114.59,9599],["2026-09-25","13:00","19:00",114.44,114.75,114.4,114.53,4291],["2026-09-25","13:15","19:15",114.48,114.48,114.21,114.275,2957],["2026-09-25","13:30","19:30",114.26,114.32,113.9,114.32,1763],["2026-09-25","13:45","19:45",114.32,114.32,114.19,114.3,1358],["2026-09-25","14:00","20:00",114.205,114.545,114.05,114.495,5140],["2026-09-25","14:15","20:15",114.49,114.49,114.29,114.405,3407],["2026-09-25","14:30","20:30",114.485,114.55,114.16,114.55,3143],["2026-09-25","14:45","20:45",114.5,114.5,114.055,114.06,5814],["2026-09-25","15:00","21:00",114.095,114.095,113.745,114.06,4421],["2026-09-25","15:15","21:15",114.08,114.08,113.77,113.77,3652],["2026-09-25","15:30","21:30",113.73,114.37,113.73,114.31,3935],["2026-09-25","15:45","21:45",114.35,114.35,113.91,114.0,24979],["2026-09-28","09:30","15:30",110.77,110.77,108.72,110.175,21012],["2026-09-28","09:45","15:45",109.875,110.64,109.875,110.025,10829],["2026-09-28","10:00","16:00",110.22,111.32,110.22,110.9,9800],["2026-09-28","10:15","16:15",110.96,111.05,110.635,110.635,3957],["2026-09-28","10:30","16:30",110.615,110.745,110.4,110.745,6825],["2026-09-28","10:45","16:45",110.28,110.365,110.07,110.13,2692],["2026-09-28","11:00","17:00",110.14,110.355,110.085,110.21,3575],["2026-09-28","11:15","17:15",110.025,110.025,109.55,109.79,6665],["2026-09-28","11:30","17:30",109.84,110.04,109.8,109.875,1890],["2026-09-28","11:45","17:45",109.8,110.04,109.8,110.04,2793],["2026-09-28","12:00","18:00",110.04,110.25,109.895,110.17,5751],["2026-09-28","12:15","18:15",110.24,113.06,110.24,112.525,13481],["2026-09-28","12:30","18:30",112.605,112.605,111.08,111.08,5525],["2026-09-28","12:45","18:45",111.43,111.43,110.89,111.29,4518],["2026-09-28","13:00","19:00",111.33,113.22,111.2,112.63,10988],["2026-09-28","13:15","19:15",112.555,112.555,111.74,111.75,4760]],"flaechen":[],"linien":[{"von":6,"bis":32,"p0":110.78,"farbe":"accent","weiter":47,"gruppe":"bot"},{"von":6,"bis":32,"p0":115.61,"farbe":"accent","gruppe":"bot"},{"von":33,"bis":41,"p0":105.95,"farbe":"up","strich":"strich","gruppe":"bot"},{"von":33,"bis":41,"p0":114.68530106920866,"farbe":"down","strich":"strich","gruppe":"bot"}],"punkte":[{"i":6,"p":113.2,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":18,"p":115.61,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":26,"p":114.55,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":8,"p":110.78,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":22,"p":113.9,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"}],"verworfen":[],"signal":32,"einstieg":{"i":33,"p":109.83},"ausstieg":{"i":41,"p":110.09,"farbe":"down"},"notizen":[{"i":33,"p":109.83,"dx":10,"dy":16,"gross":true,"text":"Einstieg 109,83 · 09:58"},{"i":41,"p":110.09,"dx":-8,"dy":-10,"anker":"end","gross":true,"text":"Zeit-Stop · 11:58"}],"rechts":[{"p":105.95,"t":"Ziel Bot","kurz":"Ziel","farbe":"up","gruppe":"bot"},{"p":110.78,"t":"Kante","farbe":"accent","gruppe":"bot"},{"p":114.6853,"t":"Stop Bot","kurz":"Stop","farbe":"down","gruppe":"bot"},{"p":115.61,"t":"Gegenkante Bot","kurz":"Gegenk.","farbe":"accent","gruppe":"bot"}],"gruppen":{},"vol_notiz":"3,0× Schnitt","aria":"UAL Schulter-Kopf-Schulter short: Linien des Bots und geprüfte Linien"};
+const B = D.kerzen;                         // [Tag, Zeit NY, Zeit DE, Eröffnung, Hoch, Tief, Schluss, Volumen]
+const $ = (s) => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const S = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a || {}) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const nf = (v, d = 2) => v.toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
+const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+const dayLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); const w = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); return `${WD[w]} ${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.`; };
+const DASH = { voll: "", strich: "6 4", kurz: "5 3", punkt: "2 3" };
+const show = {}; for (const g in D.gruppen || {}) show[g] = D.gruppen[g].an !== false;
+const vis = (o) => !o.gruppe || show[o.gruppe] !== false;
+const verw = {}; for (const v of D.verworfen || []) verw[v.i] = v;
+let CH = null;
+
+function step(range, n) { const raw = range / n, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; }
+
+function draw() {
+  const host = $("#chart"); host.textContent = "";
+  const W = Math.max(300, Math.round(host.clientWidth)), small = W < 600;
+  const m = { l: small ? 46 : 54, r: small ? 96 : 150, t: 24, b: 30 };
+  const PH = small ? 300 : 390, VH = small ? 54 : 70, GAP = 14, H = m.t + PH + GAP + VH + m.b;
+  const gaps = []; let g = 0;
+  B.forEach((b, i) => { if (i && b[0] !== B[i - 1][0]) g++; gaps.push(g); });
+  const slots = B.length + g * 1.6, slot = (W - m.l - m.r) / slots;
+  const X = (i) => m.l + slot * (i + gaps[i] * 1.6 + 0.5);
+  let lo = Infinity, hi = -Infinity;
+  for (const b of B) { lo = Math.min(lo, b[5]); hi = Math.max(hi, b[4]); }
+  for (const l of D.linien || []) if (vis(l)) { lo = Math.min(lo, l.p0, l.p1 ?? l.p0); hi = Math.max(hi, l.p0, l.p1 ?? l.p0); }
+  for (const r of D.rechts || []) if (vis(r)) { lo = Math.min(lo, r.p); hi = Math.max(hi, r.p); }
+  const pad = (hi - lo) * 0.05; lo -= pad; hi += pad;
+  const Y = (v) => m.t + (1 - (v - lo) / (hi - lo)) * PH;
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: "chart", role: "img", "aria-label": D.aria || "" }, host);
+  const st = step(hi - lo, small ? 5 : 7), dec = st >= 1 ? 0 : st >= 0.1 ? 1 : 2;
+  for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) {
+    S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: "grid" }, svg);
+    S("text", { x: m.l - 8, y: Y(v) + 3.5, class: "tick", "text-anchor": "end" }, svg).textContent = nf(v, dec);
+  }
+  let start = 0;
+  B.forEach((b, i) => {
+    if (i === B.length - 1 || B[i + 1][0] !== b[0]) {
+      if (X(i) - X(start) + slot >= (small ? 52 : 60) || start === 0 && i === B.length - 1) S("text", { x: (X(start) + X(i)) / 2, y: H - 8, class: "day", "text-anchor": "middle" }, svg).textContent = dayLabel(b[0]);
+      if (i < B.length - 1) { const sx = (X(i) + X(i + 1)) / 2; S("line", { x1: sx, x2: sx, y1: m.t, y2: m.t + PH + GAP + VH, class: "sep" }, svg); }
+      start = i + 1;
+    }
+  });
+  for (const f of D.flaechen || []) if (vis(f)) S("rect", { x: X(f.von), y: Y(f.oben), width: Math.max(1, X(f.bis) - X(f.von)), height: Math.max(1, Y(f.unten) - Y(f.oben)), style: `fill:var(--${f.farbe}-wash)` }, svg);
+  if (D.signal != null) {
+    S("rect", { x: X(D.signal) - slot * 0.55, y: m.t, width: slot * 1.1, height: PH, style: "fill:var(--accent-wash)" }, svg);
+    S("text", { x: X(D.signal), y: m.t - 8, class: "note", "text-anchor": "middle" }, svg).textContent = "Signal";
+  }
+  for (const l of D.linien || []) {
+    if (!vis(l)) continue;
+    const p1 = l.p1 ?? l.p0, sty = `stroke:var(--${l.farbe});stroke-width:${l.breite || 1.6};fill:none` + (DASH[l.strich] ? `;stroke-dasharray:${DASH[l.strich]}` : "");
+    S("line", { x1: X(l.von), x2: X(l.bis), y1: Y(l.p0), y2: Y(p1), style: sty }, svg);
+    if (l.weiter != null && l.weiter > l.bis) {
+      const pw = l.p0 + (p1 - l.p0) * (l.weiter - l.von) / Math.max(1, l.bis - l.von);
+      S("line", { x1: X(l.bis), x2: X(l.weiter), y1: Y(p1), y2: Y(pw), style: `stroke:var(--${l.farbe});stroke-width:${l.breite || 1.6};stroke-dasharray:5 4` }, svg);
+    }
+  }
+  const cw = Math.max(2, slot * 0.62);
+  B.forEach((b, i) => {
+    const [, hm, , o, h, l, c] = b, up = c >= o, col = up ? "var(--up)" : "var(--down)", ext = hm < "09:30" || hm >= "16:00";
+    const gc = S("g", { opacity: ext ? .45 : 1 }, svg);
+    const v = verw[i];
+    const hiW = v && v.typ === "hoch" ? v.bis : h, loW = v && v.typ === "tief" ? v.bis : l;
+    S("line", { x1: X(i), x2: X(i), y1: Y(hiW), y2: Y(loW), style: `stroke:${col};stroke-width:1` }, gc);
+    const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
+    S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(1, y1 - y0), rx: 1, style: `fill:${col}` }, gc);
+    if (v) {
+      S("line", { x1: X(i), x2: X(i), y1: Y(v.bis), y2: Y(v.von), style: "stroke:var(--down);stroke-width:1.4;stroke-dasharray:2 3" }, svg);
+      const yx = Y(v.von), r = 4;
+      S("path", { d: `M${X(i) - r} ${yx - r}L${X(i) + r} ${yx + r}M${X(i) + r} ${yx - r}L${X(i) - r} ${yx + r}`, style: "stroke:var(--down);stroke-width:1.8;fill:none" }, svg);
+    }
+  });
+  for (const p of D.punkte || []) if (vis(p)) S("circle", { cx: X(p.i), cy: Y(p.p), r: p.klein ? 3.5 : 4.5, style: `fill:none;stroke:var(--${p.farbe});stroke-width:${p.klein ? 1.4 : 1.8}` + (p.strich ? ";stroke-dasharray:2 2" : "") }, svg);
+  if (D.einstieg) {
+    const ex = X(D.einstieg.i), ey = Y(D.einstieg.p);
+    S("path", { d: `M${ex - 12} ${ey}L${ex - 4} ${ey}M${ex - 8} ${ey - 4}L${ex - 4} ${ey}L${ex - 8} ${ey + 4}`, style: "fill:none;stroke:var(--ink);stroke-width:1.6" }, svg);
+    S("circle", { cx: ex, cy: ey, r: 3.5, style: "fill:var(--ink)" }, svg);
+  }
+  if (D.ausstieg) S("circle", { cx: X(D.ausstieg.i), cy: Y(D.ausstieg.p), r: 5, style: `fill:var(--${D.ausstieg.farbe || "ink"});stroke:var(--ground);stroke-width:2` }, svg);
+  for (const n of D.notizen || []) {
+    if (!vis(n) || (n.gross && small)) continue;
+    S("text", { x: X(n.i) + (n.dx || 0), y: Y(n.p) + (n.dy || 0), class: "note", "text-anchor": n.anker || "start", style: n.farbe ? `fill:var(--${n.farbe})` : "" }, svg).textContent = small && n.kurz ? n.kurz : n.text;
+  }
+  const labs = (D.rechts || []).filter(vis).map((l) => ({ ...l, y: Y(l.p) }));
+  labs.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 28);
+  const lx = W - m.r + 10;
+  for (const l of labs) {
+    S("line", { x1: lx, x2: lx + 10, y1: l.y, y2: l.y, style: `stroke:var(--${l.farbe});stroke-width:2` + (l.strich ? ";stroke-dasharray:3 2" : "") }, svg);
+    S("text", { x: lx + 15, y: l.y - 2, class: "lab" }, svg).textContent = small && l.kurz ? l.kurz : l.t;
+    S("text", { x: lx + 15, y: l.y + 11, class: "labv" }, svg).textContent = nf(l.p);
+  }
+  const vt = m.t + PH + GAP, vmax = Math.max(1, ...B.map((b) => b[7] || 0));
+  B.forEach((b, i) => {
+    if (b[7] == null) return;
+    const h = (b[7] / vmax) * VH;
+    S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(.5, h), style: `fill:${i === D.signal ? "var(--accent)" : "var(--vol)"}` }, svg);
+  });
+  if (D.vol_notiz && D.signal != null) S("text", { x: X(D.signal) + cw, y: vt + 11, class: "note" }, svg).textContent = D.vol_notiz;
+  S("text", { x: m.l - 8, y: vt + VH, class: "tick", "text-anchor": "end" }, svg).textContent = "Vol.";
+  const xh = S("line", { class: "xh", y1: m.t, y2: vt + VH, visibility: "hidden" }, svg);
+  const hit = S("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: PH + GAP + VH, style: "fill:transparent;cursor:crosshair" }, svg);
+  CH = { svg, W, X, Y, xh, idx: D.signal ?? B.length - 1 };
+  const near = (cx) => { let best = 0, bd = Infinity; B.forEach((b, i) => { const d = Math.abs(X(i) - cx); if (d < bd) { bd = d; best = i; } }); return best; };
+  const move = (e) => { const r = svg.getBoundingClientRect(); showAt(near(((e.clientX - r.left) * W) / r.width), e.clientX); };
+  hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
+  hit.addEventListener("pointerleave", () => { xh.setAttribute("visibility", "hidden"); $("#tip").hidden = true; });
+}
+function showAt(i, clientX) {
+  const { svg, W, X, Y, xh } = CH; CH.idx = i;
+  const b = B[i], r = svg.getBoundingClientRect(), k = r.width / W;
+  xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
+  const tip = $("#tip"); tip.textContent = "";
+  const h4 = document.createElement("h4"); h4.textContent = `${dayLabel(b[0])} ${b[1]} New York · ${b[2]} bei uns`; tip.appendChild(h4);
+  for (const [l, v] of [["Eröffnung", b[3]], ["Hoch", b[4]], ["Tief", b[5]], ["Schluss", b[6]]]) {
+    const row = document.createElement("div"); row.append(l); const bb = document.createElement("b"); bb.textContent = nf(v); row.appendChild(bb); tip.appendChild(row);
+  }
+  const row = document.createElement("div"); row.append("Volumen"); const bb = document.createElement("b"); bb.textContent = b[7] == null ? "nicht vorhanden" : b[7].toLocaleString("de-DE"); row.appendChild(bb); tip.appendChild(row);
+  if (verw[i]) { const p = document.createElement("p"); p.textContent = verw[i].text; tip.appendChild(p); }
+  tip.hidden = false;
+  const x = clientX ?? r.left + X(i) * k, y = r.top + Y(b[4]) * k, w = tip.offsetWidth;
+  tip.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, x)) + "px";
+  tip.style.top = Math.max(tip.offsetHeight + 20, y) + "px";
+}
+for (const btn of document.querySelectorAll("[data-gruppe]")) {
+  btn.addEventListener("click", () => {
+    const gname = btn.dataset.gruppe, txt = (D.gruppen[gname] || {}).knopf || ["zeigen", "ausblenden"];
+    show[gname] = !show[gname]; btn.setAttribute("aria-pressed", String(show[gname]));
+    btn.textContent = show[gname] ? txt[1] : txt[0];
+    for (const el of document.querySelectorAll(`[data-legende="${gname}"]`)) el.hidden = !show[gname];
+    draw();
+  });
+}
+$("#chart").addEventListener("keydown", (e) => {
+  if (!CH) return; let i = CH.idx;
+  if (e.key === "ArrowRight") i++; else if (e.key === "ArrowLeft") i--; else if (e.key === "Escape") { $("#tip").hidden = true; return; } else return;
+  e.preventDefault(); showAt(Math.max(0, Math.min(B.length - 1, i)));
+});
+$("#chart").addEventListener("blur", () => { $("#tip").hidden = true; });
+addEventListener("scroll", () => { $("#tip").hidden = true; }, { passive: true });
+let rw = 0; new ResizeObserver(() => { const w = Math.round($("#chart").clientWidth); if (Math.abs(w - rw) > 2) { rw = w; draw(); } }).observe($("#chart"));
+draw();
+})();
+</script>
+</body>
+</html>

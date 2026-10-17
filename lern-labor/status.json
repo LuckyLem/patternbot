@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "stand": "2026-10-16T09:10:22-04:00",
+ "stand": "2026-10-17T10:26:01-04:00",
  "quelle": "PC",
  "code_labor": "3e3d78d9370b",
  "labor": {
@@ -179,6 +179,27 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-17",
+   "zeit": "2026-10-17 10:25",
+   "art": "Korrektur",
+   "text": "Steckbriefe M001–M007: Kennung des Bot-Codes auf die Schreibweise cbfe06cff gebracht (vorher bfe06cff ohne das c der Bot-Version). Nur die Bezeichnung, keine Regel geändert, darum keine neue Nummer.",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-17",
+   "zeit": "2026-10-17 10:25",
+   "art": "Regel",
+   "text": "Die 3×-Regel (ohne SIP-Kerze wird ein Docht verworfen, der länger als 3× die mittlere Spanne ist) hat ihre Begründung verloren: Sie stammt aus t70, und dort war der Docht echt. Sie bleibt in v1/v1.1 unverändert, bis geprüft ist: Im Lerntopf (Okt. 2020–Sep. 2023) wird für jeden Ankerpunkt mit SIP-Kerze gezählt, wie oft die 3×-Regel einen von SIP bestätigten Docht verworfen hätte und wie oft einen nicht bestätigten. Danach entscheidet der Inhaber über Fassung v1.2 (Auftrag 17.10.).",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-17",
+   "zeit": "2026-10-17 10:25",
+   "art": "Befund",
+   "text": "t70 (AMD, Rechteck long, 06.10.2026): Die Unterkante 620,05 aus der IEX-Eröffnungskerze vom 05.10. ist ein echter Kurs. SIP handelte in Minute 09:31 bis 619,99, in Minute 09:30 gingen 524.112 Stück um. Der Chart-Leser v1 behält den Docht nach Regel 2 (SIP entscheidet); die Erwartung (Docht verworfen, Unterkante ~627,36, Ziel 644,36) trifft nicht zu. Dazu passt: An 2.788 Symbol-Tagen seit 21.09. lag die IEX-Eröffnungskerze nie außerhalb der SIP-Spanne, und bei allen 94 Live-Trades wurde mit SIP kein Ankerpunkt verworfen.",
+   "ok": null
+  },
   {
    "datum": "2026-10-16",
    "zeit": "2026-10-16 08:24",

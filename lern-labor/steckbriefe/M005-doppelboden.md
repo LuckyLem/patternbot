@@ -1,6 +1,6 @@
 # M005 · Doppelboden
 
-Steckbrief des Live-Bots, genau so, wie der Code das Muster heute erkennt (Code-Hash bfe06cff, Detektor
+Steckbrief des Live-Bots, genau so, wie der Code das Muster heute erkennt (Bot-Code cbfe06cff, Detektor
 „DoubleBottom“). Angelegt am 15.10.2026 · **Stufe 0** (Steckbrief liegt vor). Eine Änderung ergibt ein neues Muster mit
 neuer Nummer.
 

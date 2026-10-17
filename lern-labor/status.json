@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "stand": "2026-10-17T10:26:01-04:00",
+ "stand": "2026-10-17T11:21:28-04:00",
  "quelle": "PC",
- "code_labor": "3e3d78d9370b",
+ "code_labor": "d9f3a51601e9",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
@@ -179,6 +179,13 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-17",
+   "zeit": "2026-10-17 11:21",
+   "art": "Chart-Leser",
+   "text": "Diagnose Runde 1, nur Geometrie (Inhaber 15.10.; Runde 1 gehört zum Prüftopf, darum kein Vorher/Nachher in R, keine Auswahl nach Ergebnis). Chart-Leser Teil 1, Festlegung v1 unverändert, SIP-1-Min als zweite Quelle. 1.009 von 1.009 Signalen gleich dem Replay nachgebaut (Kante, Stop, Ziel). 6.639 Ankerpunkte geprüft, alle mit SIP-Kerze; verworfen 1 (WMT 06.01.2026, Berührung oben, SIP 2 Cent tiefer), dadurch keine Kante, Gegenkante, kein Stop und kein Ziel geändert. Signalkerze mit Abzug: 8. Ausgänge (nur Zählung): Ziel 38 (3,8 %), Zeit-Stop 616, Tagesende 250, Anfangsstop 74, Stop auf dem Einstieg 31. 40 Bilder, zufällig gezogen mit festem Seed 20261015. Bericht: diagnose-runde-1/zusammenfassung.md",
+   "ok": null
+  },
   {
    "datum": "2026-10-17",
    "zeit": "2026-10-17 10:25",

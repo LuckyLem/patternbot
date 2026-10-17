@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Musterbild Runde 1 Nr. 240</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  /* Musterbild des Lern-Labors im Stil des Dashboards: oben der Chart, darunter Befund und Herkunft der Linien. */
+  --ground:#fcfcfd; --raised:#ffffff; --sunken:#f3f3f6;
+  --hair:rgba(9,9,20,.09); --hair-soft:rgba(9,9,20,.055);
+  --ink:#0a0a0c; --ink-2:#55555f; --ink-3:#8b8b96;
+  --up:#08a742; --down:#e02f24; --accent:#0a6bff; --be:#a35f00;
+  --up-wash:rgba(8,167,66,.10); --down-wash:rgba(224,47,36,.09); --accent-wash:rgba(10,107,255,.08); --be-wash:rgba(163,95,0,.12);
+  --grid:rgba(9,9,20,.06); --vol:rgba(9,9,20,.16);
+  --lift:0 0 0 1px var(--hair-soft), 0 1px 2px rgba(9,9,20,.04), 0 14px 34px -14px rgba(9,9,20,.12);
+  --sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0a0a0c; --raised:#141418; --sunken:#1b1b20;
+    --hair:rgba(255,255,255,.10); --hair-soft:rgba(255,255,255,.06);
+    --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
+    --up:#32d74b; --down:#ff453a; --accent:#3d9bff; --be:#ffb340;
+    --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --accent-wash:rgba(61,155,255,.12); --be-wash:rgba(255,179,64,.14);
+    --grid:rgba(255,255,255,.06); --vol:rgba(255,255,255,.18);
+    --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0a0a0c; --raised:#141418; --sunken:#1b1b20;
+  --hair:rgba(255,255,255,.10); --hair-soft:rgba(255,255,255,.06);
+  --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
+  --up:#32d74b; --down:#ff453a; --accent:#3d9bff; --be:#ffb340;
+  --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --accent-wash:rgba(61,155,255,.12); --be-wash:rgba(255,179,64,.14);
+  --grid:rgba(255,255,255,.06); --vol:rgba(255,255,255,.18);
+  --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 15.5px/1.55 var(--sans);letter-spacing:-.011em;-webkit-font-smoothing:antialiased;padding-inline:16px;padding-block:28px 56px}
+.page{max-width:1080px;margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+h1,h2{margin:0;font-weight:600;letter-spacing:-.03em;text-wrap:balance}
+p{margin:0}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font:500 11px/1.3 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
+.head{display:grid;gap:10px;padding-inline:4px}
+.head h1{font-size:clamp(28px,4.4vw,40px);line-height:1.1}
+.sub{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;color:var(--ink-2);font-size:14.5px}
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font:500 12.5px/1.5 var(--sans);white-space:nowrap}
+.chip.ok{background:var(--up-wash);color:var(--up)}
+.chip.bad{background:var(--down-wash);color:var(--down)}
+.chip.test{background:var(--accent-wash);color:var(--accent)}
+.chip.warn{background:var(--be-wash);color:var(--be)}
+.card{background:var(--raised);border-radius:22px;box-shadow:var(--lift);padding:clamp(18px,3vw,28px);min-width:0}
+.card h2{font-size:19px;margin-bottom:12px}
+.chart-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 18px;margin-bottom:12px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.k{display:inline-block;width:16px;height:0;border-top:2px solid var(--c)}
+.k.dash{border-top-style:dashed}
+.k.box{height:10px;border:1.5px solid var(--c);background:var(--w);border-radius:2px}
+.k.x{width:12px;height:12px;border:0;position:relative}
+.k.x::before,.k.x::after{content:"";position:absolute;left:50%;top:0;width:2px;height:12px;background:var(--down);transform:rotate(45deg)}
+.k.x::after{transform:rotate(-45deg)}
+.toggle{appearance:none;border:0;cursor:pointer;border-radius:999px;padding:8px 14px;font:500 13px/1 var(--sans);color:var(--ink);background:var(--sunken);box-shadow:inset 0 0 0 1px var(--hair)}
+.toggle[aria-pressed="true"]{background:var(--be-wash);color:var(--be);box-shadow:inset 0 0 0 1px var(--be)}
+.toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.chart-host{position:relative}
+.chart-host:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+.cap{margin-top:10px;font-size:12.5px;color:var(--ink-3)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+dl.facts{margin:0;display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:9px 18px;font-size:14px}
+dl.facts dt{color:var(--ink-3);font-size:13px}
+dl.facts dd{margin:0;color:var(--ink)}
+ul.points{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:14.5px;color:var(--ink-2)}
+ul.points li{display:grid;grid-template-columns:8px minmax(0,1fr);gap:12px}
+ul.points li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c,var(--ink-3));margin-top:8px}
+ul.points b{color:var(--ink);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 10px;vertical-align:top}
+th{font:500 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--hair-soft)}
+tbody tr+tr td{border-top:1px solid var(--hair-soft)}
+td:first-child{white-space:nowrap;font-weight:600}
+.tw{overflow-x:auto}
+.foot{font-size:12.5px;color:var(--ink-3);text-align:center;padding-top:4px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+@media (max-width:480px){dl.facts{grid-template-columns:1fr;gap:2px 0}dl.facts dd{margin-bottom:8px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <p class="eyebrow">Lern-Labor · Chart-Leser v1 · Signalprüfung · Trade Runde 1 · Nr. 240</p>
+    <h1>XOM · Rechteck long</h1>
+    <p class="sub"><span>Do 11.12.2025</span><span class="chip bad">Zeit-Stop</span><span class="num">−0,85 R · −17,60 $</span><span class="chip ok">Chart-Leser: sauber</span><span class="chip test">rekonstruiert, nicht vom Live-Bot</span></p>
+  </header>
+
+  <section class="card" aria-labelledby="t-chart">
+    <div class="chart-top">
+      <h2 id="t-chart" style="margin:0">So liest der Chart-Leser das Muster</h2>
+      
+    </div>
+    <div class="legend" aria-hidden="true"><span><i class="k box" style="--c:var(--accent);--w:var(--accent-wash)"></i>Linien des Bots</span><span><i class="k dash" style="--c:var(--up)"></i>Ziel</span><span><i class="k dash" style="--c:var(--down)"></i>Stop</span></div>
+    <div class="chart-host" id="chart" tabindex="0" aria-label="Kerzenchart XOM, 15 Minuten, mit den Linien des Bots und den geprüften Linien. Mit den Pfeiltasten durch die Kerzen gehen."></div>
+    <p class="cap">15-Minuten-Kerzen von IEX, wie der Bot sie live sieht. Zeiten in New York, im Infofeld zusätzlich deutsche Zeit. Vor- und nachbörsliche Kerzen blass.</p>
+  </section>
+
+  <div class="cols">
+    <section class="card" aria-labelledby="t-facts">
+      <h2 id="t-facts">Was der Bot gesehen hat</h2>
+      <dl class="facts"><dt>Zeitebene</dt><dd>15-Minuten-Kerzen von IEX, wie live</dd><dt>Kante</dt><dd>119,98, Do 11.12. 09:45. Das ist die Ausbruchskante.</dd><dt>Gegenkante</dt><dd>118,03, Di 09.12. 15:45</dd><dt>Höhe und Ziel</dt><dd>1,95 hoch, Ziel 121,93</dd><dt>Stop</dt><dd>119,00</dd><dt>Signal</dt><dd>Signalkerze Do 11.12. 12:15, Schluss 120,25, Volumen 1,6-fach über dem Schnitt</dd><dt>Einstieg</dt><dd>12:30, gefüllt zu 120,30</dd><dt>Ausstieg</dt><dd>14:31 zu 119,20, Zeit-Stop, nach 120 Minuten</dd></dl>
+    </section>
+    <section class="card" aria-labelledby="t-find">
+      <h2 id="t-find">Was der Chart-Leser prüft</h2>
+      <ul class="points"><li style="--c:var(--up)"><span><b>Oberkante 119,98 ist echt.</b> Do 11.12. 09:45: SIP-Hoch 119,99 über alle Börsen; der Docht ist 0,2× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>Unterkante 118,03 ist echt.</b> Di 09.12. 15:45: SIP-Tief 118,02 über alle Börsen; der Docht ist 0,2× die mittlere Spanne (die 20 Kerzen der Handelszeit davor).</span></li><li style="--c:var(--up)"><span><b>12 Ankerpunkt(e) bestätigt.</b> 12 davon durch SIP, 0 ohne SIP-Kerze nach der 3×-Regel.</span></li><li style="--c:var(--up)"><span><b>Signalkerze: sauber.</b> keine Kurslücke über die Kante, Durchfall 0,7 ATR hinter die Kante.</span></li><li style="--c:var(--accent)"><span><b>Bewertung: sauber.</b> keine Abzüge</span></li></ul>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="t-src">
+    <h2 id="t-src">Was exakt ist und was rekonstruiert</h2>
+    <div class="tw"><table>
+      <thead><tr><th scope="col">Art</th><th scope="col">Was</th></tr></thead>
+      <tbody><tr><td>Exakt</td><td>Kerzen: IEX-15-Min, roh, aus dem historischen Abruf. Kante, Stop und Ziel des Bots: mit dem Detektor des Bots auf diesen Kerzen nachgerechnet. Einstieg und Ausstieg aus der Trade-Datei.</td></tr><tr><td>Exakt</td><td>SIP-Werte: SIP-1-Min-Kerzen derselben 15 Minuten (alle Börsen).</td></tr><tr><td>Nachgebaut</td><td>Die Ankerpunkte: mit der Wendepunkt-Funktion des Bots aus denselben Kerzen, gegen den Detektor geprüft (Kante und Ziel identisch).</td></tr><tr><td>Angenommen</td><td>SIP steht 15 Minuten nach Kerzenende bereit (gemessen am 15.10.2026, Gratis-Tarif). Die Kerzen des historischen Abrufs sind dieselben, die der Bot live sah.</td></tr><tr><td>Nicht vom Bot</td><td>Die geprüften Linien rechnet der Chart-Leser des Lern-Labors (Festlegung v1). Der Live-Bot kennt sie nicht und handelt unverändert.</td></tr></tbody>
+    </table></div>
+  </section>
+
+  <p class="foot">Nur Paper-Trading. Lern-Labor, getrennt vom Live-Bot.</p>
+</div>
+<script>/* Musterbild des Lern-Labors: zeichnet ein Musterbild (Kerzen, Linien, Punkte, verworfene Dochte, Trade, Volumen,
+   Fadenkreuz mit New-York- und deutscher Zeit) aus den Bilddaten des Labors. Eine Quelle für die einzelnen Bildseiten
+   und die Webseite (labor.html, index.html). Nutzt die Farb-Tokens der Seite, mit Ersatzwerten. Ohne Bibliothek.
+
+   const c = Musterbild.zeichne(host, daten);   c.gruppe("geprueft", false);   c.neu(); */
+(function () {
+  "use strict";
+  const NS = "http://www.w3.org/2000/svg";
+  const S = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a || {}) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+  const nf = (v, d = 2) => Number(v).toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+  const dayLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); const w = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); return `${WD[w]} ${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.`; };
+  const DASH = { voll: "", strich: "6 4", kurz: "5 3", punkt: "2 3" };
+  const WASH = { accent: "var(--accent-wash, rgba(var(--accent-rgb, 10,107,255), .08))", up: "var(--up-wash, rgba(8,167,66,.10))",
+                 down: "var(--down-wash, rgba(224,47,36,.09))", be: "var(--be-wash, rgba(163,95,0,.12))" };
+  const wash = (f) => WASH[f] || WASH.accent;
+  const col = (f) => `var(--${f})`;
+  const step = (range, n) => { const raw = range / n, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; };
+
+  const CSS = `
+.mb-chart{position:relative}
+.mb-chart:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+.mb-svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.mb-grid{stroke:var(--grid, var(--hair-soft, rgba(128,128,140,.12)));stroke-width:1;shape-rendering:crispEdges}
+.mb-tick{font:400 10.5px var(--mono, ui-monospace, monospace);fill:var(--ink-3)}
+.mb-day{font:500 11.5px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-lab{font:500 11.5px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-labv{font:600 11.5px var(--mono, ui-monospace, monospace);fill:var(--ink)}
+.mb-note{font:500 11px var(--sans, system-ui, sans-serif);fill:var(--ink-2)}
+.mb-sep{stroke:var(--hair, rgba(128,128,140,.2));stroke-width:1;stroke-dasharray:2 4}
+.mb-xh{stroke:var(--ink-3);stroke-width:1;shape-rendering:crispEdges}
+.mb-tip{position:fixed;z-index:60;pointer-events:none;min-width:190px;max-width:280px;border-radius:12px;padding:9px 11px;
+  background:var(--raised);color:var(--ink);box-shadow:0 14px 34px -14px rgba(0,0,0,.35),0 0 0 1px var(--hair, rgba(128,128,140,.2));
+  font:400 12.5px/1.5 var(--sans, system-ui, sans-serif);transform:translate(-50%,calc(-100% - 12px))}
+.mb-tip h4{margin:0 0 4px;font:500 11px var(--mono, ui-monospace, monospace);color:var(--ink-3)}
+.mb-tip div{display:flex;justify-content:space-between;gap:14px;color:var(--ink-2)}
+.mb-tip b{font:600 12px var(--mono, ui-monospace, monospace);color:var(--ink)}
+.mb-tip p{margin:6px 0 0;color:var(--down);font-size:12px}`;
+  let cssDone = false, tip = null;
+  function css() { if (cssDone) return; const s = document.createElement("style"); s.textContent = CSS; document.head.appendChild(s); cssDone = true; }
+  function tipEl() {
+    if (tip && document.body.contains(tip)) return tip;
+    tip = document.createElement("div"); tip.className = "mb-tip"; tip.hidden = true; tip.setAttribute("role", "status");
+    document.body.appendChild(tip); return tip;
+  }
+  addEventListener("scroll", () => { if (tip) tip.hidden = true; }, { passive: true, capture: true });
+
+  function zeichne(host, D, opts) {
+    css();
+    opts = opts || {};
+    const B = D.kerzen || [];
+    const show = {}; for (const g in D.gruppen || {}) show[g] = D.gruppen[g].an !== false;
+    const vis = (o) => !o.gruppe || show[o.gruppe] !== false;
+    const verw = {}; for (const v of D.verworfen || []) verw[v.i] = v;
+    let CH = null;
+    host.classList.add("mb-chart");
+    if (!host.hasAttribute("tabindex")) host.tabIndex = 0;
+
+    function draw() {
+      host.textContent = "";
+      if (B.length < 2) return;
+      const W = Math.max(300, Math.round(host.clientWidth)), small = W < 600;
+      const m = { l: small ? 46 : 54, r: small ? 96 : 150, t: 24, b: 30 };
+      const PH = opts.hoehe || (small ? 300 : 390), VH = small ? 54 : 70, GAP = 14, H = m.t + PH + GAP + VH + m.b;
+      const gaps = []; let g = 0;
+      B.forEach((b, i) => { if (i && b[0] !== B[i - 1][0]) g++; gaps.push(g); });
+      const slots = B.length + g * 1.6, slot = (W - m.l - m.r) / slots;
+      const X = (i) => m.l + slot * (i + gaps[i] * 1.6 + 0.5);
+      let lo = Infinity, hi = -Infinity;
+      for (const b of B) { lo = Math.min(lo, b[5]); hi = Math.max(hi, b[4]); }
+      for (const l of D.linien || []) if (vis(l)) { lo = Math.min(lo, l.p0, l.p1 ?? l.p0); hi = Math.max(hi, l.p0, l.p1 ?? l.p0); }
+      for (const r of D.rechts || []) if (vis(r)) { lo = Math.min(lo, r.p); hi = Math.max(hi, r.p); }
+      const pad = (hi - lo) * 0.05; lo -= pad; hi += pad;
+      const Y = (v) => m.t + (1 - (v - lo) / (hi - lo)) * PH;
+      const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: "mb-svg", role: "img", "aria-label": D.aria || "" }, host);
+      const st = step(hi - lo, small ? 5 : 7), dec = st >= 1 ? 0 : st >= 0.1 ? 1 : 2;
+      for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) {
+        S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: "mb-grid" }, svg);
+        S("text", { x: m.l - 8, y: Y(v) + 3.5, class: "mb-tick", "text-anchor": "end" }, svg).textContent = nf(v, dec);
+      }
+      let start = 0;
+      B.forEach((b, i) => {
+        if (i === B.length - 1 || B[i + 1][0] !== b[0]) {
+          if (X(i) - X(start) + slot >= (small ? 52 : 60) || (start === 0 && i === B.length - 1)) S("text", { x: (X(start) + X(i)) / 2, y: H - 8, class: "mb-day", "text-anchor": "middle" }, svg).textContent = dayLabel(b[0]);
+          if (i < B.length - 1) { const sx = (X(i) + X(i + 1)) / 2; S("line", { x1: sx, x2: sx, y1: m.t, y2: m.t + PH + GAP + VH, class: "mb-sep" }, svg); }
+          start = i + 1;
+        }
+      });
+      for (const f of D.flaechen || []) if (vis(f)) S("rect", { x: X(f.von), y: Y(f.oben), width: Math.max(1, X(f.bis) - X(f.von)), height: Math.max(1, Y(f.unten) - Y(f.oben)), style: `fill:${wash(f.farbe)}` }, svg);
+      if (D.signal != null) {
+        S("rect", { x: X(D.signal) - slot * 0.55, y: m.t, width: slot * 1.1, height: PH, style: `fill:${wash("accent")}` }, svg);
+        S("text", { x: X(D.signal), y: m.t - 8, class: "mb-note", "text-anchor": "middle" }, svg).textContent = "Signal";
+      }
+      for (const l of D.linien || []) {
+        if (!vis(l)) continue;
+        const p1 = l.p1 ?? l.p0, sty = `stroke:${col(l.farbe)};stroke-width:${l.breite || 1.6};fill:none` + (DASH[l.strich] ? `;stroke-dasharray:${DASH[l.strich]}` : "");
+        S("line", { x1: X(l.von), x2: X(l.bis), y1: Y(l.p0), y2: Y(p1), style: sty }, svg);
+        if (l.weiter != null && l.weiter > l.bis) {
+          const pw = l.p0 + (p1 - l.p0) * (l.weiter - l.von) / Math.max(1, l.bis - l.von);
+          S("line", { x1: X(l.bis), x2: X(l.weiter), y1: Y(p1), y2: Y(pw), style: `stroke:${col(l.farbe)};stroke-width:${l.breite || 1.6};stroke-dasharray:5 4` }, svg);
+        }
+      }
+      const cw = Math.max(2, slot * 0.62);
+      B.forEach((b, i) => {
+        const [, hm, , o, h, l, c] = b, up = c >= o, cc = up ? "var(--up)" : "var(--down)", ext = hm < "09:30" || hm >= "16:00";
+        const gc = S("g", { opacity: ext ? .45 : 1 }, svg);
+        const v = verw[i];
+        const hiW = v && v.typ === "hoch" ? v.bis : h, loW = v && v.typ === "tief" ? v.bis : l;
+        S("line", { x1: X(i), x2: X(i), y1: Y(hiW), y2: Y(loW), style: `stroke:${cc};stroke-width:1` }, gc);
+        const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
+        S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(1, y1 - y0), rx: 1, style: `fill:${cc}` }, gc);
+        if (v) {
+          S("line", { x1: X(i), x2: X(i), y1: Y(v.bis), y2: Y(v.von), style: "stroke:var(--down);stroke-width:1.4;stroke-dasharray:2 3" }, svg);
+          const yx = Y(v.von), r = 4;
+          S("path", { d: `M${X(i) - r} ${yx - r}L${X(i) + r} ${yx + r}M${X(i) + r} ${yx - r}L${X(i) - r} ${yx + r}`, style: "stroke:var(--down);stroke-width:1.8;fill:none" }, svg);
+        }
+      });
+      for (const p of D.punkte || []) if (vis(p)) S("circle", { cx: X(p.i), cy: Y(p.p), r: p.klein ? 3.5 : 4.5, style: `fill:none;stroke:${col(p.farbe)};stroke-width:${p.klein ? 1.4 : 1.8}` + (p.strich ? ";stroke-dasharray:2 2" : "") }, svg);
+      if (D.einstieg) {
+        const ex = X(D.einstieg.i), ey = Y(D.einstieg.p);
+        S("path", { d: `M${ex - 12} ${ey}L${ex - 4} ${ey}M${ex - 8} ${ey - 4}L${ex - 4} ${ey}L${ex - 8} ${ey + 4}`, style: "fill:none;stroke:var(--ink);stroke-width:1.6" }, svg);
+        S("circle", { cx: ex, cy: ey, r: 3.5, style: "fill:var(--ink)" }, svg);
+      }
+      if (D.ausstieg) S("circle", { cx: X(D.ausstieg.i), cy: Y(D.ausstieg.p), r: 5, style: `fill:${col(D.ausstieg.farbe || "ink")};stroke:var(--ground);stroke-width:2` }, svg);
+      for (const n of D.notizen || []) {
+        if (!vis(n) || (n.gross && W < 800)) continue;
+        S("text", { x: X(n.i) + (n.dx || 0), y: Y(n.p) + (n.dy || 0), class: "mb-note", "text-anchor": n.anker || "start", style: n.farbe ? `fill:${col(n.farbe)}` : "" }, svg).textContent = small && n.kurz ? n.kurz : n.text;
+      }
+      const labs = (D.rechts || []).filter(vis).map((l) => ({ ...l, y: Y(l.p) }));
+      labs.sort((a, b) => a.y - b.y);
+      for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 28);
+      const lx = W - m.r + 10;
+      for (const l of labs) {
+        S("line", { x1: lx, x2: lx + 10, y1: l.y, y2: l.y, style: `stroke:${col(l.farbe)};stroke-width:2` + (l.strich ? ";stroke-dasharray:3 2" : "") }, svg);
+        S("text", { x: lx + 15, y: l.y - 2, class: "mb-lab" }, svg).textContent = small && l.kurz ? l.kurz : l.t;
+        S("text", { x: lx + 15, y: l.y + 11, class: "mb-labv" }, svg).textContent = nf(l.p);
+      }
+      const vt = m.t + PH + GAP, vmax = Math.max(1, ...B.map((b) => b[7] || 0));
+      B.forEach((b, i) => {
+        if (b[7] == null) return;
+        const h = (b[7] / vmax) * VH;
+        S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(.5, h), style: `fill:${i === D.signal ? "var(--accent)" : "var(--vol, var(--hair, rgba(128,128,140,.25)))"}` }, svg);
+      });
+      if (D.vol_notiz && D.signal != null) S("text", { x: X(D.signal) + cw, y: vt + 11, class: "mb-note" }, svg).textContent = D.vol_notiz;
+      S("text", { x: m.l - 8, y: vt + VH, class: "mb-tick", "text-anchor": "end" }, svg).textContent = "Vol.";
+      const xh = S("line", { class: "mb-xh", y1: m.t, y2: vt + VH, visibility: "hidden" }, svg);
+      const hit = S("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: PH + GAP + VH, style: "fill:transparent;cursor:crosshair" }, svg);
+      CH = { svg, W, X, Y, xh, idx: CH ? CH.idx : (D.signal ?? B.length - 1) };
+      const near = (cx) => { let best = 0, bd = Infinity; B.forEach((b, i) => { const d = Math.abs(X(i) - cx); if (d < bd) { bd = d; best = i; } }); return best; };
+      const move = (e) => { const r = svg.getBoundingClientRect(); showAt(near(((e.clientX - r.left) * W) / r.width), e.clientX); };
+      hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
+      hit.addEventListener("pointerleave", () => { xh.setAttribute("visibility", "hidden"); tipEl().hidden = true; });
+    }
+    function showAt(i, clientX) {
+      if (!CH) return;
+      const { svg, W, X, Y, xh } = CH; CH.idx = i;
+      const b = B[i], r = svg.getBoundingClientRect(), k = r.width / W;
+      xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
+      const t = tipEl(); t.textContent = "";
+      const h4 = document.createElement("h4"); h4.textContent = `${dayLabel(b[0])} ${b[1]} New York · ${b[2]} bei uns`; t.appendChild(h4);
+      for (const [l, v] of [["Eröffnung", b[3]], ["Hoch", b[4]], ["Tief", b[5]], ["Schluss", b[6]]]) {
+        const row = document.createElement("div"); row.append(l); const bb = document.createElement("b"); bb.textContent = nf(v); row.appendChild(bb); t.appendChild(row);
+      }
+      const row = document.createElement("div"); row.append("Volumen"); const bb = document.createElement("b"); bb.textContent = b[7] == null ? "nicht vorhanden" : Number(b[7]).toLocaleString("de-DE"); row.appendChild(bb); t.appendChild(row);
+      if (verw[i]) { const p = document.createElement("p"); p.textContent = verw[i].text; t.appendChild(p); }
+      t.hidden = false;
+      const x = clientX ?? r.left + X(i) * k, y = r.top + Y(b[4]) * k, w = t.offsetWidth;
+      t.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, x)) + "px";
+      t.style.top = Math.max(t.offsetHeight + 20, y) + "px";
+    }
+    host.addEventListener("keydown", (e) => {
+      if (!CH) return; let i = CH.idx;
+      if (e.key === "ArrowRight") i++; else if (e.key === "ArrowLeft") i--; else if (e.key === "Escape") { tipEl().hidden = true; return; } else return;
+      e.preventDefault(); showAt(Math.max(0, Math.min(B.length - 1, i)));
+    });
+    host.addEventListener("blur", () => { tipEl().hidden = true; });
+    let rw = 0;
+    const ro = new ResizeObserver(() => { const w = Math.round(host.clientWidth); if (w > 0 && Math.abs(w - rw) > 2) { rw = w; draw(); } });
+    ro.observe(host);
+    draw();
+    return {
+      neu: draw,
+      gruppe(name, an) { show[name] = !!an; draw(); },
+      zu() { ro.disconnect(); tipEl().hidden = true; },
+    };
+  }
+  window.Musterbild = { zeichne };
+})();
+</script>
+<script>
+(() => {
+  "use strict";
+  const D = {"kerzen":[["2025-12-09","11:30","17:30",119.49,119.995,119.465,119.98,35302],["2025-12-09","11:45","17:45",119.98,120.05,119.605,119.605,39354],["2025-12-09","12:00","18:00",119.61,119.84,119.56,119.64,40157],["2025-12-09","12:15","18:15",119.655,119.69,119.25,119.29,24157],["2025-12-09","12:30","18:30",119.3,119.4,118.86,118.88,22957],["2025-12-09","12:45","18:45",118.9,118.99,118.73,118.83,25338],["2025-12-09","13:00","19:00",118.795,118.875,118.6,118.63,24053],["2025-12-09","13:15","19:15",118.625,118.94,118.61,118.66,23728],["2025-12-09","13:30","19:30",118.69,118.79,118.54,118.615,15182],["2025-12-09","13:45","19:45",118.62,118.825,118.62,118.74,17611],["2025-12-09","14:00","20:00",118.71,118.745,118.445,118.56,21868],["2025-12-09","14:15","20:15",118.555,118.63,118.525,118.625,18851],["2025-12-09","14:30","20:30",118.62,118.66,118.44,118.44,21905],["2025-12-09","14:45","20:45",118.44,118.53,118.405,118.465,17184],["2025-12-09","15:00","21:00",118.45,118.72,118.45,118.64,23888],["2025-12-09","15:15","21:15",118.61,118.69,118.235,118.255,42417],["2025-12-09","15:30","21:30",118.245,118.32,118.11,118.12,48036],["2025-12-09","15:45","21:45",118.115,118.305,118.03,118.24,140190],["2025-12-10","09:30","15:30",118.685,119.335,118.435,118.805,74167],["2025-12-10","09:45","15:45",118.855,119.1,118.7,118.785,33923],["2025-12-10","10:00","16:00",118.8,119.24,118.77,119.09,34484],["2025-12-10","10:15","16:15",119.07,119.3,118.99,119.12,28838],["2025-12-10","10:30","16:30",119.12,119.44,119.0,119.44,38640],["2025-12-10","10:45","16:45",119.45,119.6,119.37,119.47,40789],["2025-12-10","11:00","17:00",119.48,119.63,119.34,119.34,34206],["2025-12-10","11:15","17:15",119.36,119.51,119.11,119.11,19402],["2025-12-10","11:30","17:30",119.06,119.3,119.01,119.26,25457],["2025-12-10","11:45","17:45",119.26,119.29,118.89,119.055,16942],["2025-12-10","12:00","18:00",119.0,119.22,118.95,119.175,10063],["2025-12-10","12:15","18:15",119.24,119.36,119.225,119.295,13396],["2025-12-10","12:30","18:30",119.3,119.34,119.19,119.195,16040],["2025-12-10","12:45","18:45",119.18,119.265,119.14,119.21,16905],["2025-12-10","13:00","19:00",119.22,119.36,119.195,119.28,23963],["2025-12-10","13:15","19:15",119.28,119.365,119.18,119.23,12830],["2025-12-10","13:30","19:30",119.22,119.28,118.75,118.88,122307],["2025-12-10","13:45","19:45",118.94,119.06,118.74,118.925,13833],["2025-12-10","14:00","20:00",118.935,119.11,118.88,119.015,16950],["2025-12-10","14:15","20:15",119.06,119.35,119.03,119.32,20079],["2025-12-10","14:30","20:30",119.36,119.65,119.24,119.25,28169],["2025-12-10","14:45","20:45",119.31,119.5,119.26,119.37,15383],["2025-12-10","15:00","21:00",119.36,119.75,119.28,119.7,20171],["2025-12-10","15:15","21:15",119.705,119.77,119.565,119.73,28681],["2025-12-10","15:30","21:30",119.725,119.865,119.425,119.495,39025],["2025-12-10","15:45","21:45",119.5,119.6,119.285,119.525,102956],["2025-12-11","09:30","15:30",119.255,119.92,119.12,119.87,37160],["2025-12-11","09:45","15:45",119.91,119.98,119.48,119.48,34343],["2025-12-11","10:00","16:00",119.31,119.7,119.245,119.425,22878],["2025-12-11","10:15","16:15",119.43,119.77,119.34,119.75,20512],["2025-12-11","10:30","16:30",119.71,119.79,119.61,119.72,19981],["2025-12-11","10:45","16:45",119.75,119.85,119.59,119.7,26542],["2025-12-11","11:00","17:00",119.705,119.71,119.21,119.38,24295],["2025-12-11","11:15","17:15",119.32,119.405,119.205,119.36,17453],["2025-12-11","11:30","17:30",119.35,119.5,119.23,119.43,23327],["2025-12-11","11:45","17:45",119.465,119.7,119.36,119.66,31602],["2025-12-11","12:00","18:00",119.675,119.8,119.64,119.78,25347],["2025-12-11","12:15","18:15",119.79,120.35,119.75,120.25,47520],["2025-12-11","12:30","18:30",120.25,120.33,120.045,120.1,22372],["2025-12-11","12:45","18:45",120.1,120.15,119.95,120.08,21851],["2025-12-11","13:00","19:00",120.07,120.1,119.895,119.98,14695],["2025-12-11","13:15","19:15",119.97,120.03,119.78,119.78,17590],["2025-12-11","13:30","19:30",119.8,119.91,119.715,119.715,18655],["2025-12-11","13:45","19:45",119.715,119.715,119.54,119.62,22484],["2025-12-11","14:00","20:00",119.61,119.65,119.24,119.26,23204],["2025-12-11","14:15","20:15",119.29,119.34,119.08,119.145,16833],["2025-12-11","14:30","20:30",119.21,119.24,119.165,119.2,9004],["2025-12-11","14:45","20:45",119.24,119.6,119.235,119.53,24409],["2025-12-11","15:00","21:00",119.58,119.58,119.33,119.37,20746],["2025-12-11","15:15","21:15",119.385,119.49,119.355,119.355,16903],["2025-12-11","15:30","21:30",119.395,119.455,119.365,119.375,20278],["2025-12-11","15:45","21:45",119.355,119.55,119.25,119.54,80812],["2025-12-12","09:30","15:30",119.54,119.92,118.69,118.83,22106]],"flaechen":[{"von":14,"bis":55,"oben":119.98,"unten":118.03,"farbe":"accent","gruppe":"bot"}],"linien":[{"von":45,"bis":55,"p0":119.98,"farbe":"accent","weiter":70,"gruppe":"bot"},{"von":17,"bis":55,"p0":118.03,"farbe":"accent","gruppe":"bot"},{"von":56,"bis":64,"p0":121.93,"farbe":"up","strich":"strich","gruppe":"bot"},{"von":56,"bis":64,"p0":119.005,"farbe":"down","strich":"strich","gruppe":"bot"}],"punkte":[{"i":45,"p":119.98,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":17,"p":118.03,"farbe":"accent","klein":false,"strich":false,"gruppe":"bot"},{"i":14,"p":118.72,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":18,"p":119.335,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":24,"p":119.63,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":29,"p":119.36,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":33,"p":119.365,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":49,"p":119.85,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":27,"p":118.89,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":35,"p":118.74,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":44,"p":119.12,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"},{"i":51,"p":119.205,"farbe":"accent","klein":true,"strich":true,"gruppe":"bot"}],"verworfen":[],"signal":55,"einstieg":{"i":56,"p":120.3},"ausstieg":{"i":64,"p":119.2,"farbe":"down"},"notizen":[{"i":56,"p":120.3,"dx":10,"dy":16,"gross":true,"text":"Einstieg 120,30 · 12:30"},{"i":64,"p":119.2,"dx":-8,"dy":-10,"anker":"end","gross":true,"text":"Zeit-Stop · 14:31"}],"rechts":[{"p":121.93,"t":"Ziel Bot","kurz":"Ziel","farbe":"up","gruppe":"bot"},{"p":119.98,"t":"Kante","farbe":"accent","gruppe":"bot"},{"p":119.005,"t":"Stop Bot","kurz":"Stop","farbe":"down","gruppe":"bot"},{"p":118.03,"t":"Unterkante Bot","kurz":"Unterkante","farbe":"accent","gruppe":"bot"}],"gruppen":{},"vol_notiz":"1,6× Schnitt","aria":"XOM Rechteck long: Linien des Bots und geprüfte Linien"};
+  const c = Musterbild.zeichne(document.getElementById("chart"), D);
+  for (const btn of document.querySelectorAll("[data-gruppe]")) {
+    btn.addEventListener("click", () => {
+      const g = btn.dataset.gruppe, txt = ((D.gruppen || {})[g] || {}).knopf || ["zeigen", "ausblenden"];
+      const an = btn.getAttribute("aria-pressed") !== "true";
+      btn.setAttribute("aria-pressed", String(an));
+      btn.textContent = an ? txt[1] : txt[0];
+      for (const el of document.querySelectorAll(`[data-legende="${g}"]`)) el.hidden = !an;
+      c.gruppe(g, an);
+    });
+  }
+})();
+</script>
+</body>
+</html>

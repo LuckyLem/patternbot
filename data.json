@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-10-18T15:38:33+00:00",
- "heartbeat": "2026-10-18T15:38:33+00:00",
+ "updated": "2026-10-18T15:49:41+00:00",
+ "heartbeat": "2026-10-18T15:49:41+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1656,6 +1656,86 @@
   "headline": "18 Trade(s), -65.53 $. Statistisch noch kein Urteil - aussagekraeftig ab ca. 60.",
   "ai": false
  },
+ "bot_version": "2026-10-04+cbfe06cff.s5416c914",
+ "changelog": [
+  {
+   "ts": "2026-09-22T22:35:00+02:00",
+   "version": "2026-09-22+cba2ae145",
+   "code": "ba2ae145",
+   "art": "Betrieb",
+   "change": "Bot läuft auf dem Raspberry Pi (24/7). Alte Ausführung: Suchlauf etwa alle 4 Minuten, Market-Order, Anti-Chase-Zone am Schlusskurs, jede Kerze bis zu 4-mal geprüft.",
+   "settings": {
+    "chase_anchor": "level",
+    "universe_exclude": ""
+   }
+  },
+  {
+   "ts": "2026-09-28T17:32:42+02:00",
+   "version": "2026-09-28a",
+   "code": null,
+   "art": "Handel + Technik",
+   "change": "Neue Ausführung: Suchlauf 20 s nach Kerzenschluss, Limit-Order an der Zonenkante, Anti-Chase-Zone an der Ausbruchskante (Anker 'level'), jede Kerze genau einmal entschieden, Eröffnungskerze um 09:50 nachgeholt. Broker-Abgleich jede Minute, verifizierte Glattstellungen, Setup-Tabelle. Code nicht gesichert.",
+   "settings": {
+    "chase_anchor": "level",
+    "universe_exclude": ""
+   }
+  },
+  {
+   "ts": "2026-09-28T18:11:12+02:00",
+   "version": "2026-09-28b",
+   "code": null,
+   "art": "Technik",
+   "change": "Tempo: wiederverwendete Verbindungen, Caches beim Start vorwärmen, Verwaltung vor dem Suchlauf nur, wenn sie älter als 30 s ist. Suchlauf ~11 s statt ~70 s. Code nicht gesichert.",
+   "settings": {
+    "chase_anchor": "level",
+    "universe_exclude": ""
+   }
+  },
+  {
+   "ts": "2026-09-28T22:15:58+02:00",
+   "version": "2026-09-28c+c1892cb81",
+   "code": "1892cb81",
+   "art": "Technik",
+   "change": "KI-Tagesanalyse per Schalter (Standard aus, Telegram /ki_an /ki_aus), Wochenanalyse immer mit KI, Webseite zeigt Tagesreport und Wochenanalyse getrennt. NSC-Daten (t33/t41) korrigiert.",
+   "settings": {
+    "chase_anchor": "level",
+    "universe_exclude": ""
+   }
+  },
+  {
+   "ts": "2026-09-30T17:20:03+02:00",
+   "version": "2026-09-30+cad7e0c66",
+   "code": "ad7e0c66",
+   "art": "Technik",
+   "change": "Diagnose-Patch: Trichter zählt gefüllte Trades, Setup-Zeilen mit allen Messwerten, Schattenprüfung skip-vol 120 s nach Kerzenschluss, täglicher Setup-Export (setups/*.json), Schalter chase_anchor eingebaut (Standard 'level'). Keine Änderung an den Handelsentscheidungen.",
+   "settings": {
+    "chase_anchor": "level",
+    "universe_exclude": ""
+   }
+  },
+  {
+   "ts": "2026-10-03T10:39:49+02:00",
+   "version": "2026-10-03+cad7e0c66",
+   "code": "ad7e0c66",
+   "art": "Handel",
+   "change": "V1 eingeschaltet am Sa 03.10. um 10:39 (Börse zu, erster Handelstag damit Mo 05.10.): PATTERNBOT_CHASE_ANCHOR=close, Obergrenze der Anti-Chase-Zone am Schlusskurs statt an der Kante, mit ausdrücklicher Zustimmung. Dashboard zeigt Break-even (Liste, Detail, Chart) und alle Ablehnungsgründe im Trichter.",
+   "settings": {
+    "chase_anchor": "close",
+    "universe_exclude": ""
+   }
+  },
+  {
+   "ts": "2026-10-18T17:48:57+02:00",
+   "version": "2026-10-04+cbfe06cff",
+   "code": "bfe06cff",
+   "art": "Technik",
+   "change": "Technik-Paket, aufgespielt am Do 15.10. nach Handelsschluss (Release-Kennung 2026-10-04 beibehalten, damit der Code genau dem kalibrierten Stand cbfe06cff entspricht): Bot-Version bei jedem Trade und Setup, dieses Änderungsprotokoll, Stop-Protokoll je Trade, volle Prüfung auch bei 5 offenen Positionen (skip-maxopen), Ergebnis nach Kosten im Review (0,03R Long / 0,05R Short), Halbtag-Test, Speicherschutz für den Bot-Dienst (MemoryLow 512M, OOMScoreAdjust -500), Dashboard mit Fahrplan-Raster und Knopf zum Lern-Labor. Universum ohne BK, MMC und FI: keine Kerzen mehr wegen Tickerwechsel (jetzt BNY, MRSH, FISV), nicht ersetzt, 147 Symbole. Keine Änderung an den Handelsentscheidungen.",
+   "settings": {
+    "chase_anchor": "close",
+    "universe_exclude": "BK,MMC,FI"
+   }
+  }
+ ],
  "settings": {
   "ai_review_daily": false,
   "ai_review_weekly": true,

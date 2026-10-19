@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "stand": "2026-10-17T11:21:28-04:00",
+ "stand": "2026-10-19T08:53:50-04:00",
  "quelle": "PC",
- "code_labor": "d9f3a51601e9",
+ "code_labor": "ff6f1f5c08d1",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
@@ -324,14 +324,30 @@
   {
    "name": "Runde 2",
    "zeitraum": "Okt 2024–Sep 2025",
-   "status": "läuft",
-   "text": "einzige Änderung: Rechtecke gestrichen · vorab festgelegt (VORAB.md), rechnet; Downloads nur außerhalb der Handelszeit",
-   "beleg": "runde-2/VORAB.md"
+   "status": "fertig",
+   "ziel": false,
+   "werte": {
+    "trades": 511,
+    "ev_r": -0.083,
+    "pf": 0.66,
+    "max_dd_r": 43.18,
+    "zufall": 27
+   },
+   "kriterien": [
+    true,
+    false,
+    false,
+    false,
+    false
+   ],
+   "text": "1 von 5 Kriterien erfüllt",
+   "beleg": "runde-2/zusammenfassung.md",
+   "datum": "2026-10-17"
   },
   {
    "name": "ORB Jahr 1",
    "zeitraum": "Okt 2025–Sep 2026",
-   "text": "1 von 5 Kriterien erfüllt · 594 von 973 Trades schon in der Einstiegsminute gestoppt (vorsichtige Vorab-Regel); die Neuberechnung mit Ticks läuft (Methode vorab festgelegt, Commit 21f93ab)",
+   "text": "1 von 5 Kriterien erfüllt · 594 von 973 Trades schon in der Einstiegsminute gestoppt (vorsichtige Vorab-Regel); Neuberechnung mit Ticks siehe nächste Zeile",
    "status": "fertig",
    "ziel": false,
    "werte": {
@@ -350,6 +366,29 @@
    ],
    "beleg": "orb-jahr-1/zusammenfassung.md",
    "datum": "2026-10-08"
+  },
+  {
+   "name": "ORB Jahr 1 mit Ticks",
+   "zeitraum": "Okt 2025–Sep 2026",
+   "text": "1 von 5 Kriterien erfüllt",
+   "status": "fertig",
+   "ziel": false,
+   "werte": {
+    "trades": 973,
+    "ev_r": -0.404,
+    "pf": 0.69,
+    "max_dd_r": 434.35,
+    "zufall": 0
+   },
+   "kriterien": [
+    true,
+    false,
+    false,
+    false,
+    false
+   ],
+   "beleg": "orb-jahr-1-ticks/zusammenfassung.md",
+   "datum": "2026-10-18"
   }
  ],
  "muster": [],

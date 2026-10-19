@@ -96,3 +96,24 @@ Wird nur ergänzt, nie geändert.
 - Neuberechnung von ORB Jahr 1 mit Ticks in der Einstiegsminute, Handelsregeln unverändert (Commit d48250c2). Methode: orb-studie/TICK-METHODE.md, sha256 4d6917b952ef4586.
 - Gleicher Tick-Filter wie beim Simulatorfix vom 05.10., Stop füllt zum Kurs des auslösenden Abschlusses, gleiches Kostenmodell, Zufallsläufe mit denselben Ziehungen und demselben Filter. Kein Jahr 2.
 
+## Runde 2 · Jahr 2024-10-01..2025-09-30 · 17.10.2026 19:46
+- Regel-Version: {'chase_anchor': 'close', 'universe_exclude': 'BK,MMC,FI'}, ohne Muster Rectangle (sonst wie live)
+- Ergebnis beim ersten Rechnen (Hauptlauf, zählt): 511 Trades · Erwartungswert n.K. -0.083R · PF 0.66 · max. DD 43.18R · Zufall 27/100 · Ziel nein
+- Nebenrechnung wie live mit allen Mustern (zählt nicht): 1085 Trades · Erwartungswert n.K. -0.070R · PF 0.68 · Zufall 33/100
+- Ziel-Limits wie Paper: 3 Ziel(e) wären nur nach „durchgehandelt“ gefüllt worden (+1.17R). Stops mit Kurslücke: 4 von 72 (-0.32R).
+- Code: Simulator und Auswertung `bt/` sha256 `61750fbbc22e`; Bot-Code `cbfe06cff`.
+- Beschlossene Korrekturen: (offen – erst nach OK des Nutzers)
+
+## ORB-Studie · Jahr 2025-10-01..2026-09-30 · mit Ticks · 18.10.2026 13:47
+- Regeln vorab festgelegt (Commit `d48250c2`), unverändert · Neuberechnung wegen Simulatorfehler: Einstiegsminute mit SIP-Ticks nach TICK-METHODE.md (Commit 21f93abe), Freigabe des Inhabers 09.10./15.10.
+- Hauptvariante: 973 Trades · Erwartungswert n.K. -0.404R · PF 0.69 · max. DD 434.35R · Zufall 0/100 · Ziel nein
+- Nachbarwerte (Information): or15 -0.333R · or30 -0.435R · stop5 -1.407R · stop20 -0.147R · top10 -0.283R · top20 -0.341R
+- Code: ORB `orb/` sha256 `54e2b77872ef`, `bt/` sha256 `61750fbbc22e`.
+- Beschlossene Korrekturen: keine (Regeln fest; neue Ideen brauchen ein frisches Jahr)
+
+## Kalibrierung V1-Woche · 2026-10-05..2026-10-09 · 18.10.2026 18:52
+- Rechnung vom 17.10.2026 17:43 (gleiche Kriterien wie die Kalibrierung, Live-Datenbank als Kopie vom 17.10.): 19 von 19 echten Orders auch im Replay, 0 zusätzliche; 722 von 723 Entscheidungen gleich; 18 von 19 Ausstiegen höchstens 0,1R daneben. Nach den festen Kriterien nicht bestanden.
+- Offen waren 2 Fälle: KLAC 06.10. (Rechteck short: live geprüft, im Replay kein Setup, weil der Live-Bot den Tagestrend auf unbereinigten Tageskerzen rechnet; Split 1:10 am 12.06.2026; Befund am Live-Bot) und TT t68 (Glattstellung live 15:50:43, Replay 15:50:02; der Verwaltungstakt ist nicht nachstellbar, zum echten Zeitpunkt trifft der Simulator den Fill 471,42 genau). Erklärung: kalibrierung-v1/erklaerung.md.
+- Entscheidung des Inhabers 18.10.2026: Beide Fälle sind erklärt und angenommen. Die Kalibrierung gilt auch für V1 (Obergrenze der Anti-Chase-Zone am Schlusskurs).
+- Code: Simulator und Auswertung `bt/` sha256 `61750fbbc22e`; Bot-Code `cbfe06cff`.
+

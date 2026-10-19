@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "stand": "2026-10-16T08:52:43-04:00",
+ "stand": "2026-10-19T08:58:46-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
   "pruefung": "online gegen Commit 4c580ae geprüft"
  },
- "tageslog": "Fr 16.10.2026",
+ "tageslog": "So 18.10.2026",
  "zuletzt": [
-  "Export vom 13.10. nachgeholt: nur die fehlende 1-Min-Datei (920 KB, 67 Werte), Commit 9258adb.",
-  "Prüfung der Eröffnungskerzen: keine Ausreißer.",
-  "Chart-Leser Teil 1 auf t70, Festlegung v1 unverändert: alle 10 Ankerpunkte von SIP bestätigt, die Unterkante 620,05 bleibt. Abzug nur für die Signalkerze (Lücke 7,0 ATR, Durchfall 4,1 ATR). Die erwartete Unterkante 627,36 trifft nicht zu, weil SIP den Kurs bestätigt.",
-  "Erstes Musterbild t70, hell und dunkel, Handy und Desktop (Commit 7172713).",
-  "Befund am Pi: Er läuft seit dem 22.09. über WLAN, nicht über das Kabel, und hat seit heute eine neue Adresse."
+  "Technik-Paket umgeschaltet um 17:49 (Börse zu), nach einem grünen Probelauf aller Bedingungen.",
+  "Etappe 0 auf dem Pi mit dem Inhaber: Labor-Nutzer und Labor-Ordner (12 GB); .env mit Rechten 600, Zugänge vom Inhaber selbst eingetragen; Labor-Scheibe mit festen Grenzen und Sperren für jeden Labor-Dienst; Zugriffstest bestanden: Das Labor kann Bot, Schlüssel und Datenbank nicht lesen; Speichersteuerung im Kernel eingeschaltet; Startdatei vorher gesichert, Zeile vorher und nachher gezeigt; Neustart um 19:13 bei flachem Broker. Danach: Bot läuft, memory.low 512 MB wirksam, der Speichertest im Labor wird bei 200 MB vom Kernel beendet.",
+  "ORB Jahr 1 mit Ticks fertig: −0,404R, PF 0,69, Zufall 0/100, 1 von 5 Kriterien.",
+  "V1-Woche: Der Inhaber nimmt beide Abweichungen als erklärt an, die Kalibrierung gilt auch für V1."
  ],
  "als_naechstes": [
-  "Technik-Paket ab 22:30 (16:30 New York): erst der Bedingungsbericht, dann schaltet der Inhaber um.",
-  "Wochenreview nach Handelsschluss.",
-  "Chart-Leser Teil 2 als Fassung v1.1 festlegen; ORB mit Ticks umsetzen und laden.",
-  "Etappe 0 mit dem Inhaber; Diagnose des Chart-Lesers auf Runde 1 (nur Geometrie, 40 Bilder)."
+  "Berichte Runde 2 und ORB mit Ticks auf backtest; Änderungsprotokoll berichtigen; Fahrplan hochladen.",
+  "Vorab-Datei „Lerntopf-Lauf 1“; ab 22:00 Downloads für den Lerntopf.",
+  "Erster Handelstag mit dem Technik-Paket."
  ],
  "bereiche": [
   {
@@ -26,18 +24,18 @@
    "anker": "b1",
    "titel": "Betrieb und diese Woche",
    "status": "laeuft",
-   "erledigt": 3,
-   "gesamt": 12,
+   "erledigt": 9,
+   "gesamt": 13,
    "zaehlung": {
-    "erledigt": 3,
-    "laeuft": 4,
-    "offen": 5,
+    "erledigt": 9,
+    "laeuft": 2,
+    "offen": 2,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Halbtag-Test: Einstiege bis 12:30, Glattstellung 12:50 New York, danach keine Order",
-   "naechster_nr": "1.2",
-   "datum": "Fr 09.10.",
+   "naechster_schritt": "Bot-Version je Trade und Änderungsprotokoll",
+   "naechster_nr": "1.9",
+   "datum": "So 18.10.",
    "wer": "VS Code"
   },
   {
@@ -45,19 +43,19 @@
    "anker": "b2",
    "titel": "Backtest-Runden und ORB",
    "status": "laeuft",
-   "erledigt": 5,
+   "erledigt": 7,
    "gesamt": 10,
    "zaehlung": {
-    "erledigt": 5,
-    "laeuft": 2,
-    "offen": 2,
+    "erledigt": 7,
+    "laeuft": 1,
+    "offen": 1,
     "test": 1,
     "verworfen": 0
    },
-   "naechster_schritt": "Runde 2 (Okt 2024–Sep 2025), einzige Änderung: Rechtecke gestrichen. Bericht",
-   "naechster_nr": "2.3",
-   "datum": "seit Do 15.10.",
-   "wer": "VS Code"
+   "naechster_schritt": "Entscheidung nach Runde 2: liegt sie bei null oder darunter, enden die Jahresrunden des jetzigen Bots, dann Fokus auf ORB und Lern-Labor",
+   "naechster_nr": "2.4",
+   "datum": "Mo 19.10.",
+   "wer": "Inhaber"
   },
   {
    "nr": "3",
@@ -83,19 +81,19 @@
    "anker": "b4",
    "titel": "Lern-Labor – das Hauptziel",
    "status": "laeuft",
-   "erledigt": 17,
-   "gesamt": 76,
+   "erledigt": 28,
+   "gesamt": 81,
    "zaehlung": {
-    "erledigt": 17,
+    "erledigt": 28,
     "laeuft": 4,
-    "offen": 55,
+    "offen": 49,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Bot-Schutz: MemoryLow und negatives OOMScoreAdjust",
-   "naechster_nr": "4.0.5",
-   "datum": "Fr 09.10.",
-   "wer": "VS Code + Inhaber"
+   "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
+   "naechster_nr": "4.0.17",
+   "datum": "ab Mo 19.10. 22:00",
+   "wer": "VS Code"
   },
   {
    "nr": "5",
@@ -121,12 +119,12 @@
    "anker": "b6",
    "titel": "Messenger (Telegram)",
    "status": "teils",
-   "erledigt": 1,
+   "erledigt": 2,
    "gesamt": 3,
    "zaehlung": {
-    "erledigt": 1,
+    "erledigt": 2,
     "laeuft": 0,
-    "offen": 2,
+    "offen": 1,
     "test": 0,
     "verworfen": 0
    },
@@ -140,12 +138,12 @@
    "anker": "b7",
    "titel": "Webseiten",
    "status": "laeuft",
-   "erledigt": 2,
+   "erledigt": 3,
    "gesamt": 7,
    "zaehlung": {
-    "erledigt": 2,
-    "laeuft": 2,
-    "offen": 3,
+    "erledigt": 3,
+    "laeuft": 3,
+    "offen": 1,
     "test": 0,
     "verworfen": 0
    },
@@ -198,19 +196,19 @@
    "nr": 0,
    "titel": "Fundament",
    "status": "laeuft",
-   "erledigt": 6,
+   "erledigt": 16,
    "gesamt": 27,
    "zaehlung": {
-    "erledigt": 6,
-    "laeuft": 4,
-    "offen": 17,
+    "erledigt": 16,
+    "laeuft": 2,
+    "offen": 9,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Bot-Schutz: MemoryLow und negatives OOMScoreAdjust",
-   "naechster_nr": "4.0.5",
-   "datum": "Fr 09.10.",
-   "wer": "VS Code + Inhaber"
+   "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
+   "naechster_nr": "4.0.17",
+   "datum": "ab Mo 19.10. 22:00",
+   "wer": "VS Code"
   },
   {
    "nr": 1,
@@ -321,5 +319,5 @@
    "wer": "VS Code"
   }
  ],
- "punkte_gesamt": 164
+ "punkte_gesamt": 170
 }

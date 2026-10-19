@@ -90,7 +90,7 @@ nur der Ausstieg, und zwar je Variante nur eine Sache:
 | SPY am Tag höchstens 0,5 % gegen die Handelsrichtung | ja | ja |
 | Keine Einstiege in den ersten 20 und den letzten 30 Minuten | ja | ja |
 | Anti-Chase-Zone V1 (max(0,4 × ATR; 0,1 %), am Schlusskurs verankert), gemessen am Einstiegskurs aus Abschnitt 5 | ja | ja |
-| Chance-Risiko am Einstiegskurs mindestens 0,8 | ja | ja |
+| Chance-Risiko mindestens 0,8, gerechnet wie live am Limit (Rand der Anti-Chase-Zone, der schlechteste mögliche Einstieg); dazu die Geometrie Stop < Limit < Ziel | ja | ja |
 | Kursalter höchstens 60 s, Spread höchstens 0,25R | ohne Quotes nicht nachgebildet; das Kostenmodell deckt den Spread ab | ebenso |
 | 5 Plätze, Risiko 0,5 %, Positionswert 20 % | nicht angewendet: jedes Signal einzeln, Ergebnis in R | ebenso |
 

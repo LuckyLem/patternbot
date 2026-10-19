@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-10-19T12:40:37+00:00",
- "heartbeat": "2026-10-19T12:40:37+00:00",
+ "updated": "2026-10-19T12:51:30+00:00",
+ "heartbeat": "2026-10-19T12:51:30+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1729,7 +1729,7 @@
    "version": "2026-10-04+cbfe06cff",
    "code": "bfe06cff",
    "art": "Technik",
-   "change": "Technik-Paket, aufgespielt am Do 15.10. nach Handelsschluss (Release-Kennung 2026-10-04 beibehalten, damit der Code genau dem kalibrierten Stand cbfe06cff entspricht): Bot-Version bei jedem Trade und Setup, dieses Änderungsprotokoll, Stop-Protokoll je Trade, volle Prüfung auch bei 5 offenen Positionen (skip-maxopen), Ergebnis nach Kosten im Review (0,03R Long / 0,05R Short), Halbtag-Test, Speicherschutz für den Bot-Dienst (MemoryLow 512M, OOMScoreAdjust -500), Dashboard mit Fahrplan-Raster und Knopf zum Lern-Labor. Universum ohne BK, MMC und FI: keine Kerzen mehr wegen Tickerwechsel (jetzt BNY, MRSH, FISV), nicht ersetzt, 147 Symbole. Keine Änderung an den Handelsentscheidungen.",
+   "change": "Technik-Paket, aufgespielt am So 18.10. um 17:48 (Börse zu) (Release-Kennung 2026-10-04 beibehalten, damit der Code genau dem kalibrierten Stand cbfe06cff entspricht): Bot-Version bei jedem Trade und Setup, dieses Änderungsprotokoll, Stop-Protokoll je Trade, volle Prüfung auch bei 5 offenen Positionen (skip-maxopen), Ergebnis nach Kosten im Review (0,03R Long / 0,05R Short), Halbtag-Test, Speicherschutz für den Bot-Dienst (MemoryLow 512M, OOMScoreAdjust -500), Dashboard mit Fahrplan-Raster und Knopf zum Lern-Labor. Universum ohne BK, MMC und FI: keine Kerzen mehr wegen Tickerwechsel (jetzt BNY, MRSH, FISV), nicht ersetzt, 147 Symbole. Keine Änderung an den Handelsentscheidungen. Korrektur vom 19.10.2026: Hier stand zuerst „aufgespielt am Do 15.10.“; der Termin am 15.10. fiel aus, aufgespielt wurde am So 18.10.",
    "settings": {
     "chase_anchor": "close",
     "universe_exclude": "BK,MMC,FI"

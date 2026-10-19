@@ -1,17 +1,13 @@
 {
  "schema": 1,
- "stand": "2026-10-19T08:53:50-04:00",
+ "stand": "2026-10-19T10:10:18-04:00",
  "quelle": "PC",
- "code_labor": "ff6f1f5c08d1",
+ "code_labor": "b2ca98e8a48f",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
   "job": null,
   "fenster": [
-   {
-    "start": "2026-10-16T16:30:00-04:00",
-    "stopp": "2026-10-19T09:00:00-04:00"
-   },
    {
     "start": "2026-10-19T16:30:00-04:00",
     "stopp": "2026-10-20T09:00:00-04:00"
@@ -47,6 +43,10 @@
    {
     "start": "2026-10-29T16:30:00-04:00",
     "stopp": "2026-10-30T09:00:00-04:00"
+   },
+   {
+    "start": "2026-10-30T16:30:00-04:00",
+    "stopp": "2026-11-02T09:00:00-05:00"
    }
   ]
  },
@@ -55,19 +55,19 @@
    "nr": 0,
    "titel": "Fundament",
    "status": "laeuft",
-   "erledigt": 6,
+   "erledigt": 16,
    "gesamt": 27,
    "zaehlung": {
-    "erledigt": 6,
-    "laeuft": 4,
-    "offen": 17,
+    "erledigt": 16,
+    "laeuft": 2,
+    "offen": 9,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Bot-Schutz: MemoryLow und negatives OOMScoreAdjust",
-   "naechster_nr": "4.0.5",
-   "datum": "Fr 09.10.",
-   "wer": "VS Code + Inhaber"
+   "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
+   "naechster_nr": "4.0.17",
+   "datum": "ab Mo 19.10. 22:00",
+   "wer": "VS Code"
   },
   {
    "nr": 1,
@@ -179,6 +179,48 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-19",
+   "zeit": "2026-10-19 10:10",
+   "art": "Vorab-Datei",
+   "text": "Lerntopf-Lauf 1 als ENTWURF auf backtest (vorab/lerntopf-lauf-1-ENTWURF.md), mit den Entscheidungen des Inhabers vom 19.10. Noch nicht festgelegt: Festlegung erst nach der Prüfung durch Claude im Chat, mit Commit und SHA-256 in diesem Logbuch. Bis dahin kein Lauf auf echten Daten.",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-19",
+   "zeit": "2026-10-19 10:10",
+   "art": "Korrektur",
+   "text": "Steckbriefe M001–M010: Unter „Haltedauer“ fehlte der Trailing-Stop des Live-Bots (ab +1,5R folgt der Stop dem Kurs im Abstand von 1R, nur in Gewinnrichtung). Ergänzt als Korrektur der Beschreibung des Codes, keine neue Regel, keine neue Nummer (Inhaber 19.10.). Die neuen SHA-256 stehen in Anhang A der Vorab-Datei Lerntopf-Lauf 1.",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-18",
+   "zeit": "2026-10-18 13:14",
+   "art": "Speichersteuerung",
+   "text": "Kernel-Startzeile um cgroup_enable=memory ergänzt (vorher gesichert, bleibt eine Zeile), Neustart des Pi am 18.10. um 13:13 bei flachem Broker. Danach ist die Speichersteuerung an. Der Bot läuft wieder (Version 2026-10-04+cbfe06cff), OOMScoreAdjust -500, MemoryLow 512 MB jetzt wirksam. Speichertest im Labor (Grenze 200 MB, will 400 MB): bei 200 MB vom Kernel beendet (oom-kill), der Bot lief weiter. Grenze der Labor-Scheibe 1.518 MB (40 %). Schwere Labor-Jobs auf dem Pi sind damit erlaubt.",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-18",
+   "zeit": "2026-10-18 12:15",
+   "art": "Zugriffstest",
+   "text": "Als Labor-Dienst mit allen Sperren: 9 von 9 verbotenen Zugriffen scheitern (Schlüsseldatei, Ordner und Datenbank des Bots, persönlicher Ordner des Bot-Nutzers, Datei im gemeinsamen tmp, fremde Prozesse einschließlich Bot, Schreiben in zwei Systemordner, Administratorrechte). 5 von 5 erlaubten gehen (läuft als Labor-Nutzer in der Labor-Scheibe mit nice 19, eigene .env lesbar, eigener Ordner beschreibbar). Ohne Sperren, nur als Labor-Nutzer: Schlüsseldatei des Bots nicht lesbar. Vor und nach dem Neustart gleich.",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-18",
+   "zeit": "2026-10-18 12:10",
+   "art": "Einrichtung",
+   "text": "Etappe 0, Teil 2: Labor-Scheibe mit festen Grenzen (Speicher höchstens 40 %, kein Auslagern, CPU-Gewicht 10, höchstens 2 Kerne, IO-Gewicht 10) und Sperren für jeden Labor-Dienst (Nice 19, CPU und IO nur im Leerlauf, OOMScoreAdjust 1000, Home-Bereich unsichtbar, System nur lesbar, schreiben nur im Labor-Ordner, eigenes tmp, fremde Prozesse unsichtbar, keine neuen Rechte, keine Capabilities). systemd beanstandet nichts, Sicherheitsbewertung 2,9 (OK).",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-18",
+   "zeit": "2026-10-18 12:05",
+   "art": "Einrichtung",
+   "text": "Etappe 0 auf dem Pi, Teil 1 (Inhaber, außerhalb der Handelszeit): eigener Labor-Nutzer ohne Anmeldung; Labor-Ordner außerhalb des Home-Bereichs als eigenes Dateisystem mit fester Obergrenze 12 GB; .env des Labors mit Rechten 600, gehört nur dem Labor-Nutzer, Zugänge vom Inhaber selbst eingetragen (8 von 9 Feldern, der SEC-Kontakt folgt). Die Alpaca-Schlüssel des zweiten Kontos vorerst nur für Daten, die Handelssperre bleibt.",
+   "ok": null
+  },
   {
    "datum": "2026-10-17",
    "zeit": "2026-10-17 11:21",

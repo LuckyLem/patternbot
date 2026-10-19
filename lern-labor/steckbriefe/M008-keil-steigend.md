@@ -13,7 +13,7 @@ Neues Muster des Lern-Labors (Umkehr nach einem Aufwärtstrend, nur short), Auft
 | Stop | Der höchste Berührungspunkt der oberen Linie (Docht). |
 | Ziel | Der Preis der unteren Linie am Beginn des Keils. |
 | Ungültig, wenn … | Ein Schlusskurs über der oberen Linie vor dem Auslöser; die Linien treffen sich vor dem Signal. |
-| Haltedauer | Wie der Live-Bot: Stop und Ziel ruhen beim Broker, ab +0,6R Stop auf den Einstieg, Zeit-Stopp nach 120 Minuten (im Minus oder unter 80 % des besten R: schließen, sonst bis höchstens 240 Minuten), Glattstellung 10 Minuten vor Börsenschluss. Nie über Nacht. |
+| Haltedauer | Wie der Live-Bot: Stop und Ziel ruhen beim Broker, ab +0,6R Stop auf den Einstieg, ab +1,5R folgt der Stop dem Kurs im Abstand von 1R (Trailing), Zeit-Stopp nach 120 Minuten (im Minus oder unter 80 % des besten R: schließen, sonst bis höchstens 240 Minuten), Glattstellung 10 Minuten vor Börsenschluss. Nie über Nacht. |
 | Bewertungsmerkmale | Werden für jedes Signal gespeichert, auf Stufe 0 aber nicht zum Filtern benutzt: Berührungen und Passgüte je Linie, Verengung, Höhe in ATR, Prüfung der Signalkerze, verworfene Punkte. |
 | Darstellung im Bild | Beide Linien mit Berührungskreisen, Beginn des Keils markiert, Ziel und Stop gestrichelt, verworfene Dochte durchgestrichen. |
 | Selbstkontrolle | Chart-Leser Teil 2 v1.1: Jeder Wendepunkt im 200er-Fenster wird geprüft (SIP entscheidet, ohne SIP-Kerze die 3×-Regel), verworfene Dochte werden ersetzt und das Muster neu gelesen; Ziel und Stop nur aus geprüften Linien; Abzug für eine Signalkerze mit großer Lücke und tiefem Durchfall. |
@@ -31,3 +31,5 @@ Neues Muster des Lern-Labors (Umkehr nach einem Aufwärtstrend, nur short), Auft
 
 **Bisher gerechnet:** nichts. Getestet wird im Lerntopf (Okt. 2020–Sep. 2023), Jahr für Jahr, mit Selbstkontrolle,
 Zufallslatte und Kostenstress.
+
+**Korrektur 19.10.2026:** Unter „Haltedauer“ fehlte der Trailing-Stop des Live-Bots (ab +1,5R, Abstand 1R, `enable_trailing`). Das ist eine Korrektur der Beschreibung des Codes, keine neue Regel; die Nummer bleibt.

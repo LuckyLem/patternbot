@@ -15,7 +15,7 @@ neuer Nummer.
 | Stop | Mitte des Rechtecks. |
 | Ziel | Gebrochene Kante ± Höhe (long: Oberkante + Höhe; short: Unterkante − Höhe). |
 | Ungültig, wenn … | Weniger als 2 Berührungen an einer Kante, Höhe unter 1,5 % oder über 12 %. |
-| Haltedauer | Stop und Ziel ruhen als Bracket-Order beim Broker. Ab +0,6R wird der Stop auf den Einstieg nachgezogen. Zeit-Stopp nach 120 Minuten: Liegt der Trade dann im Minus oder unter 80 % seines besten R, wird er geschlossen, sonst bleibt er bis höchstens 240 Minuten. Glattstellung 10 Minuten vor Börsenschluss (an Halbtagen 12:50 New York). Nie über Nacht. |
+| Haltedauer | Stop und Ziel ruhen als Bracket-Order beim Broker. Ab +0,6R wird der Stop auf den Einstieg nachgezogen, ab +1,5R folgt er dem Kurs im Abstand von 1R (Trailing, nur in Gewinnrichtung, geprüft etwa einmal je Minute). Zeit-Stopp nach 120 Minuten: Liegt der Trade dann im Minus oder unter 80 % seines besten R, wird er geschlossen, sonst bleibt er bis höchstens 240 Minuten. Glattstellung 10 Minuten vor Börsenschluss (an Halbtagen 12:50 New York). Nie über Nacht. |
 | Bewertungsmerkmale | Der heutige Bot bewertet nicht. Er nimmt das erste Setup, das alle Filter besteht, in der Reihenfolge der Aktienliste. |
 | Darstellung im Bild | Fläche zwischen den Kanten, Berührungen als Kreise, Höhe als Pfeil, Projektion zum Ziel, Stop in der Mitte. |
 | Selbstkontrolle | Keine. Weder Mindestberührungen mit enger Toleranz noch eine Prüfung auf Ausreißer-Dochte oder gegen SIP (Beispiel t70: Unterkante an einem einzelnen Docht der Eröffnungskerze). Der Chart-Leser rüstet das als neue Muster nach; M001–M007 bleiben als Vergleich unverändert. |
@@ -32,3 +32,5 @@ neuer Nummer.
 
 **Bisher gerechnet:** Runde 1 (Okt. 2025–Sep. 2026) mit allen Mustern zusammen. Dieses Jahr gehört zum Prüftopf und
 gilt für das Lern-Labor nicht als Beweis.
+
+**Korrektur 19.10.2026:** Unter „Haltedauer“ fehlte der Trailing-Stop des Live-Bots (ab +1,5R, Abstand 1R, `enable_trailing`). Das ist eine Korrektur der Beschreibung des Codes, keine neue Regel; die Nummer bleibt.

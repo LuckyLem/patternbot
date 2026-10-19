@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-19T13:55:13+00:00",
- "heartbeat": "2026-10-19T13:55:13+00:00",
+ "updated": "2026-10-19T14:05:22+00:00",
+ "heartbeat": "2026-10-19T14:05:22+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9942.15,
+  "equity": 9938.76,
   "last_equity": 9939.98,
-  "day_change": 2.17,
-  "total_change": -57.85
+  "day_change": -1.22,
+  "total_change": -61.24
  },
  "positions": [
   {
@@ -16,19 +16,48 @@
    "side": "long",
    "qty": 24,
    "entry": 80.99,
-   "current": 81.06,
-   "pl": 1.71
+   "current": 80.88,
+   "pl": -2.61
   },
   {
    "symbol": "NFLX",
    "side": "short",
    "qty": 23,
    "entry": 69.4,
-   "current": 69.38,
-   "pl": 0.46
+   "current": 69.41,
+   "pl": -0.23
+  },
+  {
+   "symbol": "PGR",
+   "side": "long",
+   "qty": 9,
+   "entry": 218.81,
+   "current": 218.99,
+   "pl": 1.62
   }
  ],
  "trades": [
+  {
+   "symbol": "PGR",
+   "pattern": "InverseHeadShoulders",
+   "side": "long",
+   "day": "2026-10-19",
+   "opened": "2026-10-19T14:00:37.574404+00:00",
+   "closed": null,
+   "entry": 218.81,
+   "stop": 214.78,
+   "target": 223.36,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "inverse_H&S neckline_break>218.03",
+   "max_r": 0.04,
+   "key": "t99",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "AIG",
    "pattern": "Rectangle",
@@ -45,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>80.87",
-   "max_r": 0.06,
+   "max_r": 0.08,
    "key": "t98",
    "detail": false,
    "ai_verdict": null
@@ -66,7 +95,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<69.85",
-   "max_r": 0.04,
+   "max_r": 0.07,
    "key": "t97",
    "detail": false,
    "ai_verdict": null
@@ -1267,27 +1296,6 @@
    "key": "t38",
    "detail": true,
    "ai_verdict": "gut"
-  },
-  {
-   "symbol": "SHW",
-   "pattern": "DoubleTop",
-   "side": "short",
-   "day": "2026-09-24",
-   "opened": "2026-09-24T19:03:55.933972+00:00",
-   "closed": "2026-09-24T19:50:34.379222+00:00",
-   "entry": 318.4,
-   "stop": 328.11,
-   "target": 310.15,
-   "exit": 320.4,
-   "pnl": -10.02,
-   "r": -0.206,
-   "status": "closed",
-   "exit_source": "eod",
-   "reason": "double_top neckline_break<318.96",
-   "max_r": null,
-   "key": "t37",
-   "detail": true,
-   "ai_verdict": "schlecht"
   }
  ],
  "stats": {
@@ -1463,16 +1471,19 @@
  ],
  "funnel": {
   "day": "2026-10-19",
-  "setups": 15,
-  "orders": 2,
-  "filled": 2,
+  "setups": 20,
+  "orders": 3,
+  "filled": 3,
   "unfilled": 0,
-  "traded": 2,
+  "traded": 3,
   "coverage_from": "2026-10-19T13:50:46.822542+00:00",
   "rejected": {
+   "skip-chase": 1,
+   "skip-dup": 1,
    "skip-rr": 1,
    "skip-rs": 1,
-   "skip-vol": 11
+   "skip-spread": 1,
+   "skip-vol": 12
   }
  },
  "funnel_days": [
@@ -1635,16 +1646,19 @@
   },
   {
    "day": "2026-10-19",
-   "setups": 15,
-   "orders": 2,
-   "filled": 2,
+   "setups": 20,
+   "orders": 3,
+   "filled": 3,
    "unfilled": 0,
-   "traded": 2,
+   "traded": 3,
    "coverage_from": "2026-10-19T13:50:46.822542+00:00",
    "rejected": {
+    "skip-chase": 1,
+    "skip-dup": 1,
     "skip-rr": 1,
     "skip-rs": 1,
-    "skip-vol": 11
+    "skip-spread": 1,
+    "skip-vol": 12
    }
   }
  ],

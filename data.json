@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-10-19T20:01:24+00:00",
- "heartbeat": "2026-10-19T20:01:24+00:00",
+ "updated": "2026-10-19T20:05:43+00:00",
+ "heartbeat": "2026-10-19T20:05:43+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1645,6 +1645,14 @@
   "universe": 150
  },
  "review": {
+  "title": "Tagesreview 2026-10-19",
+  "kind": "daily",
+  "day": "2026-10-19",
+  "markdown": "# Tagesreview 2026-10-19\n\n_Erstellt 2026-10-19 20:05 UTC | Datenbasis: Handelstag 2026-10-19 | 6 Trade(s) erfasst_\n\n## 1. Zahlen\n\n| Kennzahl | Wert | Gesund? |\n|---|---|---|\n| Abgeschlossene Trades | 6 | zu wenig fuer ein Urteil |\n| Trefferquote | 17% | - |\n| Ergebnis | -28.54 $ | NEGATIV |\n| Durchschn. Gewinn / Verlust | +2.60 / -6.23 $ | PROBLEM Verlierer groesser |\n| Profitfaktor | 0.08 | NEGATIV <1,0 |\n| **Erwartungswert je Trade** | **-0.20R** | NEGATIV |\n| Ergebnis nach Kosten (0,03R Long / 0,05R Short) | -37.06 $ (-1.47R, Kosten 8.52 $) | NEGATIV |\n| **Erwartungswert nach Kosten** | **-0.25R** | NEGATIV |\n\n> **6 Trades sind statistisch noch kein Urteil.** Aussagekraeftig wird es ab ca. 60. Alles hier ist Beobachtung, noch kein Beweis.\n\n## 2. Aufschluesselung\n\n**Nach Pattern**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Rectangle | 2 | 0 | -10.65 $ | -0.13 |\n| InverseHeadShoulders | 1 | 0 | -10.62 $ | -0.29 |\n| DescendingTriangle | 3 | 1 | -7.27 $ | -0.22 |\n\n**Nach Ausstiegsgrund**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Zeit-Stop (Pattern-Zeitfenster abgelaufen) | 4 | 0 | -30.75 $ | -0.32 |\n| Tagesende-Glattstellung | 2 | 1 | +2.21 $ | +0.03 |\n\n**Nach Richtung**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Short | 4 | 1 | -15.55 $ | -0.21 |\n| Long | 2 | 0 | -12.99 $ | -0.19 |\n\n## 3. Jeder einzelne Trade\n\n#### NFLX - Rectangle (SHORT)\n\n- **Warum eingestiegen:** rectangle break<69.85\n- **Plan:** Einstieg 69.40 | Stop 71.46 | Ziel 66.63 | 23 Stueck\n- **Warum ausgestiegen:** Zeit-Stop (Pattern-Zeitfenster abgelaufen)\n- **Ergebnis:** Ausstieg 69.76 | **-8.28 $** | -0.17R\n- **Haltedauer:** 121 Minuten\n- Hoechststand im Trade: +0.08R\n\n#### AIG - Rectangle (LONG)\n\n- **Warum eingestiegen:** rectangle break>80.87\n- **Plan:** Einstieg 80.99 | Stop 79.78 | Ziel 83.05 | 24 Stueck\n- **Warum ausgestiegen:** Zeit-Stop (Pattern-Zeitfenster abgelaufen)\n- **Ergebnis:** Ausstieg 80.89 | **-2.37 $** | -0.08R\n- **Haltedauer:** 121 Minuten\n- Hoechststand im Trade: +0.08R\n\n#### PGR - InverseHeadShoulders (LONG)\n\n- **Warum eingestiegen:** inverse_H&S neckline_break>218.03\n- **Plan:** Einstieg 218.81 | Stop 214.78 | Ziel 223.36 | 9 Stueck\n- **Warum ausgestiegen:** Zeit-Stop (Pattern-Zeitfenster abgelaufen)\n- **Ergebnis:** Ausstieg 217.63 | **-10.62 $** | -0.29R\n- **Haltedauer:** 121 Minuten\n- Hoechststand im Trade: +0.04R\n\n#### AON - DescendingTriangle (SHORT)\n\n- **Warum eingestiegen:** desc_triangle break<288.72\n- **Plan:** Einstieg 288.21 | Stop 290.40 | Ziel 284.77 | 6 Stueck\n- **Warum ausgestiegen:** Zeit-Stop (Pattern-Zeitfenster abgelaufen)\n- **Ergebnis:** Ausstieg 289.79 | **-9.48 $** | -0.72R\n- **Haltedauer:** 121 Minuten\n- Hoechststand im Trade: +0.04R\n\n#### BAC - DescendingTriangle (SHORT)\n\n- **Warum eingestiegen:** desc_triangle break<50.38\n- **Plan:** Einstieg 50.36 | Stop 51.27 | Ziel 49.24 | 39 Stueck\n- **Warum ausgestiegen:** Tagesende-Glattstellung\n- **Ergebnis:** Ausstieg 50.37 | **-0.39 $** | -0.01R\n- **Haltedauer:** 35 Minuten\n- Hoechststand im Trade: +0.13R\n\n#### UAL - DescendingTriangle (SHORT)\n\n- **Warum eingestiegen:** desc_triangle break<95.77\n- **Plan:** Einstieg 95.60 | Stop 97.36 | Ziel 93.74 | 20 Stueck\n- **Warum ausgestiegen:** Tagesende-Glattstellung\n- **Ergebnis:** Ausstieg 95.47 | **+2.60 $** | +0.07R\n- **Haltedauer:** 35 Minuten\n- Hoechststand im Trade: +0.19R\n\n## 4. Filter\n\n**Was der Bot bewusst NICHT gehandelt hat** (die Filter sind die halbe Strategie)\n\n| Filter | Abgelehnt | Warum |\n|---|---|---|\n| `skip-vol` | 118 | zu wenig Volumen beim Ausbruch (Ausbrueche ohne Volumen scheitern meist) |\n| `skip-dup` | 3 | - |\n| `skip-chase` | 1 | Preis war schon aus der Einstiegszone gelaufen (kein Hinterherjagen) |\n| `skip-rr` | 1 | - |\n| `skip-rs` | 1 | relative Staerke/Schwaeche passte nicht zum Markt |\n| `skip-spread` | 1 | - |\n\n## 5. Bewertung\n\n### Was funktioniert hat\n\n- _Nichts mit genug Datenpunkten (mind. 3 Trades) war klar positiv._\n\n### Was nicht funktioniert hat\n\n- **DescendingTriangle** war negativ (3 Trades, -7.27 $) - beobachten, noch nicht abschalten\n",
+  "headline": "6 Trade(s), -28.54 $. Statistisch noch kein Urteil - aussagekraeftig ab ca. 60.",
+  "ai": false
+ },
+ "review_week": {
   "title": "Wochenreview 2026-10-16",
   "kind": "weekly",
   "day": "2026-10-16",

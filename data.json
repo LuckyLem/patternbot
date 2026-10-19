@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-19T19:08:36+00:00",
- "heartbeat": "2026-10-19T19:08:36+00:00",
+ "updated": "2026-10-19T19:19:35+00:00",
+ "heartbeat": "2026-10-19T19:19:35+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9908.69,
+  "equity": 9906.0,
   "last_equity": 9939.98,
-  "day_change": -31.29,
-  "total_change": -91.31
+  "day_change": -33.98,
+  "total_change": -94.0
  },
  "positions": [
   {
@@ -16,11 +16,69 @@
    "side": "short",
    "qty": 6,
    "entry": 288.21,
-   "current": 289.88,
-   "pl": -10.02
+   "current": 289.67,
+   "pl": -8.73
+  },
+  {
+   "symbol": "BAC",
+   "side": "short",
+   "qty": 39,
+   "entry": 50.36,
+   "current": 50.38,
+   "pl": -0.58
+  },
+  {
+   "symbol": "UAL",
+   "side": "short",
+   "qty": 20,
+   "entry": 95.6,
+   "current": 95.77,
+   "pl": -3.4
   }
  ],
  "trades": [
+  {
+   "symbol": "UAL",
+   "pattern": "DescendingTriangle",
+   "side": "short",
+   "day": "2026-10-19",
+   "opened": "2026-10-19T19:15:40.741267+00:00",
+   "closed": null,
+   "entry": 95.6,
+   "stop": 97.36,
+   "target": 93.74,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "desc_triangle break<95.77",
+   "max_r": null,
+   "key": "t102",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "BAC",
+   "pattern": "DescendingTriangle",
+   "side": "short",
+   "day": "2026-10-19",
+   "opened": "2026-10-19T19:15:37.533557+00:00",
+   "closed": null,
+   "entry": 50.36,
+   "stop": 51.27,
+   "target": 49.24,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "desc_triangle break<50.38",
+   "max_r": null,
+   "key": "t101",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "AON",
    "pattern": "DescendingTriangle",
@@ -1238,48 +1296,6 @@
    "key": "t41",
    "detail": true,
    "ai_verdict": "neutral"
-  },
-  {
-   "symbol": "ITW",
-   "pattern": "InverseHeadShoulders",
-   "side": "long",
-   "day": "2026-09-25",
-   "opened": "2026-09-25T14:31:56.484018+00:00",
-   "closed": "2026-09-25T16:35:27.716063+00:00",
-   "entry": 273.91,
-   "stop": 270.58,
-   "target": 276.66,
-   "exit": 274.94,
-   "pnl": 7.21,
-   "r": 0.31,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "inverse_H&S neckline_break>273.52",
-   "max_r": 0.75,
-   "key": "t40",
-   "detail": true,
-   "ai_verdict": "neutral"
-  },
-  {
-   "symbol": "WM",
-   "pattern": "Rectangle",
-   "side": "short",
-   "day": "2026-09-25",
-   "opened": "2026-09-25T14:05:43.958275+00:00",
-   "closed": "2026-09-25T16:09:07.598318+00:00",
-   "entry": 206.19,
-   "stop": 208.35,
-   "target": 202.79,
-   "exit": 207.53,
-   "pnl": -12.06,
-   "r": -0.62,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "rectangle break<206.50",
-   "max_r": null,
-   "key": "t39",
-   "detail": true,
-   "ai_verdict": "neutral"
   }
  ],
  "stats": {
@@ -1455,11 +1471,11 @@
  ],
  "funnel": {
   "day": "2026-10-19",
-  "setups": 125,
-  "orders": 4,
-  "filled": 4,
+  "setups": 131,
+  "orders": 6,
+  "filled": 6,
   "unfilled": 0,
-  "traded": 4,
+  "traded": 6,
   "coverage_from": "2026-10-19T13:50:46.822542+00:00",
   "rejected": {
    "skip-chase": 1,
@@ -1467,7 +1483,7 @@
    "skip-rr": 1,
    "skip-rs": 1,
    "skip-spread": 1,
-   "skip-vol": 114
+   "skip-vol": 118
   }
  },
  "funnel_days": [
@@ -1630,11 +1646,11 @@
   },
   {
    "day": "2026-10-19",
-   "setups": 125,
-   "orders": 4,
-   "filled": 4,
+   "setups": 131,
+   "orders": 6,
+   "filled": 6,
    "unfilled": 0,
-   "traded": 4,
+   "traded": 6,
    "coverage_from": "2026-10-19T13:50:46.822542+00:00",
    "rejected": {
     "skip-chase": 1,
@@ -1642,7 +1658,7 @@
     "skip-rr": 1,
     "skip-rs": 1,
     "skip-spread": 1,
-    "skip-vol": 114
+    "skip-vol": 118
    }
   }
  ],

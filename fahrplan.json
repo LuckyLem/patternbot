@@ -1,22 +1,25 @@
 {
  "schema": 1,
- "stand": "2026-10-19T08:58:46-04:00",
+ "stand": "2026-10-19T16:32:42-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
   "pruefung": "online gegen Commit 4c580ae geprüft"
  },
- "tageslog": "So 18.10.2026",
+ "tageslog": "Mo 19.10.2026",
  "zuletzt": [
-  "Technik-Paket umgeschaltet um 17:49 (Börse zu), nach einem grünen Probelauf aller Bedingungen.",
-  "Etappe 0 auf dem Pi mit dem Inhaber: Labor-Nutzer und Labor-Ordner (12 GB); .env mit Rechten 600, Zugänge vom Inhaber selbst eingetragen; Labor-Scheibe mit festen Grenzen und Sperren für jeden Labor-Dienst; Zugriffstest bestanden: Das Labor kann Bot, Schlüssel und Datenbank nicht lesen; Speichersteuerung im Kernel eingeschaltet; Startdatei vorher gesichert, Zeile vorher und nachher gezeigt; Neustart um 19:13 bei flachem Broker. Danach: Bot läuft, memory.low 512 MB wirksam, der Speichertest im Labor wird bei 200 MB vom Kernel beendet.",
-  "ORB Jahr 1 mit Ticks fertig: −0,404R, PF 0,69, Zufall 0/100, 1 von 5 Kriterien.",
-  "V1-Woche: Der Inhaber nimmt beide Abweichungen als erklärt an, die Kalibrierung gilt auch für V1."
+  "Berichte von Runde 2 (Haupt- und Nebenrechnung) und ORB mit Ticks auf backtest.",
+  "Änderungsprotokoll berichtigt („So 18.10.“ statt „Do 15.10.“), als Korrektur kenntlich.",
+  "Vorab-Datei „Lerntopf-Lauf 1“ als Entwurf auf backtest, mit den Entscheidungen des Inhabers.",
+  "Labor-Simulator, Signalquelle M001–M010, Auswertung, Lauf-Gerüst mit harter Sperre und Gegenprobe gebaut.",
+  "Erster Handelstag mit dem Technik-Paket: 6 Trades und 131 Setups, alle mit Bot-Version; Export mit Version; Review nach Kosten: −1,47R; Broker flach; Stop-Protokoll und skip-maxopen hatten heute keinen Anlass.",
+  "Ergänzt: Einreichung neuer Muster ab der ersten Rangliste (4.8.25); Etappe 2 startet danach (4.2.8–4.2.12).",
+  "Downloads für den Lerntopf: läuft seit 19.10. 22:30."
  ],
  "als_naechstes": [
-  "Berichte Runde 2 und ORB mit Ticks auf backtest; Änderungsprotokoll berichtigen; Fahrplan hochladen.",
-  "Vorab-Datei „Lerntopf-Lauf 1“; ab 22:00 Downloads für den Lerntopf.",
-  "Erster Handelstag mit dem Technik-Paket."
+  "Fortschritt der Downloads melden.",
+  "Prüfung des Entwurfs durch Claude im Chat, dann Festlegung mit Commit und SHA-256 im Logbuch.",
+  "Danach: Abschneide-Stichprobe auf echten Daten und die Gegenprobe auf J3, nach dem Hauptdownload."
  ],
  "bereiche": [
   {
@@ -24,38 +27,38 @@
    "anker": "b1",
    "titel": "Betrieb und diese Woche",
    "status": "laeuft",
-   "erledigt": 9,
+   "erledigt": 10,
    "gesamt": 13,
    "zaehlung": {
-    "erledigt": 9,
-    "laeuft": 2,
+    "erledigt": 10,
+    "laeuft": 1,
     "offen": 2,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Bot-Version je Trade und Änderungsprotokoll",
-   "naechster_nr": "1.9",
-   "datum": "So 18.10.",
-   "wer": "VS Code"
+   "naechster_schritt": "Befund: Der Tagestrend des Live-Bots ist nach einem Split monatelang verfälscht, weil er die Tageskerzen unbereinigt holt. Seit Okt. 2025 betraf das NFLX, NOW, BKNG und KLAC an 186 Symbol-Tagen, fast immer „down“ statt „flat“ oder „up“. Seit 13.10. ist kein Wert betroffen",
+   "naechster_nr": "1.13",
+   "datum": "eigener Termin nach dem Technik-Paket",
+   "wer": "VS Code + Inhaber"
   },
   {
    "nr": "2",
    "anker": "b2",
    "titel": "Backtest-Runden und ORB",
-   "status": "laeuft",
-   "erledigt": 7,
-   "gesamt": 10,
+   "status": "teils",
+   "erledigt": 8,
+   "gesamt": 9,
    "zaehlung": {
-    "erledigt": 7,
-    "laeuft": 1,
+    "erledigt": 8,
+    "laeuft": 0,
     "offen": 1,
-    "test": 1,
-    "verworfen": 0
+    "test": 0,
+    "verworfen": 1
    },
-   "naechster_schritt": "Entscheidung nach Runde 2: liegt sie bei null oder darunter, enden die Jahresrunden des jetzigen Bots, dann Fokus auf ORB und Lern-Labor",
-   "naechster_nr": "2.4",
-   "datum": "Mo 19.10.",
-   "wer": "Inhaber"
+   "naechster_schritt": "ORB Jahr 2 (Okt 2024–Sep 2025)",
+   "naechster_nr": "2.7",
+   "datum": "",
+   "wer": "VS Code"
   },
   {
    "nr": "3",
@@ -71,8 +74,8 @@
     "test": 9,
     "verworfen": 11
    },
-   "naechster_schritt": "(#2) Blinde Fenster bei 5 offenen Positionen",
-   "naechster_nr": "3.2",
+   "naechster_schritt": "(#16) BK, MMC und FI liefern keine Kerzen",
+   "naechster_nr": "3.17",
    "datum": "Fr 09.10.",
    "wer": "VS Code"
   },
@@ -82,17 +85,17 @@
    "titel": "Lern-Labor – das Hauptziel",
    "status": "laeuft",
    "erledigt": 28,
-   "gesamt": 81,
+   "gesamt": 87,
    "zaehlung": {
     "erledigt": 28,
-    "laeuft": 4,
-    "offen": 49,
+    "laeuft": 6,
+    "offen": 53,
     "test": 0,
     "verworfen": 0
    },
    "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
    "naechster_nr": "4.0.17",
-   "datum": "ab Mo 19.10. 22:00",
+   "datum": "ab Mo 19.10. 22:30",
    "wer": "VS Code"
   },
   {
@@ -207,7 +210,7 @@
    },
    "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
    "naechster_nr": "4.0.17",
-   "datum": "ab Mo 19.10. 22:00",
+   "datum": "ab Mo 19.10. 22:30",
    "wer": "VS Code"
   },
   {
@@ -233,17 +236,17 @@
    "titel": "Eigene Muster aus Form und Situation",
    "status": "offen",
    "erledigt": 0,
-   "gesamt": 7,
+   "gesamt": 12,
    "zaehlung": {
     "erledigt": 0,
     "laeuft": 0,
-    "offen": 7,
+    "offen": 12,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Fenster von 8, 16 und 32 Kerzen auf denselben IEX-15-Min-Kerzen wie live, normiert (Kurs in ATR, Volumen relativ zur Uhrzeit), dazu die Situation",
-   "naechster_nr": "4.2.1",
-   "datum": "",
+   "naechster_schritt": "Start von Etappe 2 direkt nach der ersten Rangliste, mit denselben Daten und demselben Simulator wie Lerntopf-Lauf 1 (Inhaber 19.10.)",
+   "naechster_nr": "4.2.8",
+   "datum": "nach der ersten Rangliste (24./25.10.)",
    "wer": "VS Code"
   },
   {
@@ -319,5 +322,5 @@
    "wer": "VS Code"
   }
  ],
- "punkte_gesamt": 170
+ "punkte_gesamt": 176
 }

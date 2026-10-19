@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-19T19:29:48+00:00",
- "heartbeat": "2026-10-19T19:29:48+00:00",
+ "updated": "2026-10-19T19:40:37+00:00",
+ "heartbeat": "2026-10-19T19:40:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9910.1,
+  "equity": 9917.08,
   "last_equity": 9939.98,
-  "day_change": -29.88,
-  "total_change": -89.9
+  "day_change": -22.9,
+  "total_change": -82.92
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "short",
    "qty": 6,
    "entry": 288.21,
-   "current": 289.34,
-   "pl": -6.78
+   "current": 289.38,
+   "pl": -7.02
   },
   {
    "symbol": "BAC",
    "side": "short",
    "qty": 39,
    "entry": 50.36,
-   "current": 50.33,
-   "pl": 1.36
+   "current": 50.24,
+   "pl": 4.49
   },
   {
    "symbol": "UAL",
    "side": "short",
    "qty": 20,
    "entry": 95.6,
-   "current": 95.76,
-   "pl": -3.2
+   "current": 95.55,
+   "pl": 1.1
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<95.77",
-   "max_r": null,
+   "max_r": 0.06,
    "key": "t102",
    "detail": false,
    "ai_verdict": null
@@ -74,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<50.38",
-   "max_r": 0.06,
+   "max_r": 0.13,
    "key": "t101",
    "detail": false,
    "ai_verdict": null

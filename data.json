@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-19T14:58:49+00:00",
- "heartbeat": "2026-10-19T14:58:49+00:00",
+ "updated": "2026-10-19T15:09:46+00:00",
+ "heartbeat": "2026-10-19T15:09:46+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9924.51,
+  "equity": 9917.34,
   "last_equity": 9939.98,
-  "day_change": -15.47,
-  "total_change": -75.49
+  "day_change": -22.64,
+  "total_change": -82.66
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 24,
    "entry": 80.99,
-   "current": 80.98,
-   "pl": -0.21
+   "current": 80.85,
+   "pl": -3.33
   },
   {
    "symbol": "NFLX",
    "side": "short",
    "qty": 23,
    "entry": 69.4,
-   "current": 69.6,
-   "pl": -4.6
+   "current": 69.77,
+   "pl": -8.51
   },
   {
    "symbol": "PGR",
    "side": "long",
    "qty": 9,
    "entry": 218.81,
-   "current": 217.62,
-   "pl": -10.66
+   "current": 217.61,
+   "pl": -10.8
   }
  ],
  "trades": [
@@ -1471,7 +1471,7 @@
  ],
  "funnel": {
   "day": "2026-10-19",
-  "setups": 40,
+  "setups": 41,
   "orders": 3,
   "filled": 3,
   "unfilled": 0,
@@ -1483,7 +1483,7 @@
    "skip-rr": 1,
    "skip-rs": 1,
    "skip-spread": 1,
-   "skip-vol": 31
+   "skip-vol": 32
   }
  },
  "funnel_days": [
@@ -1646,7 +1646,7 @@
   },
   {
    "day": "2026-10-19",
-   "setups": 40,
+   "setups": 41,
    "orders": 3,
    "filled": 3,
    "unfilled": 0,
@@ -1658,7 +1658,7 @@
     "skip-rr": 1,
     "skip-rs": 1,
     "skip-spread": 1,
-    "skip-vol": 31
+    "skip-vol": 32
    }
   }
  ],

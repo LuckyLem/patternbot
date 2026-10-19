@@ -181,8 +181,20 @@ Sie läuft vor dem eigentlichen Lauf. Sie wertet nichts und wählt nichts aus.
 ## 9. Was festgehalten wird
 
 - **Kennungen:** SHA-256 dieser Datei und der Steckbriefe M001–M010.
-- **Code-Hashes:** Bot cbfe06cff, Chart-Leser v1.1 c5ca9efa1343, `bt/` 61750fbbc22e und der Code-Hash des
-  Labor-Simulators, den der Logbuch-Eintrag vor dem Lauf nennt.
+- **Code-Hashes:**
+  - Bot cbfe06cff;
+  - Chart-Leser v1.1 c5ca9efa1343, gerechnet über `chartleser/__init__.py`, `kern.py`, `lesen.py`, `signal.py` und
+    `geometrie.py`, nach Namen sortiert, je Pfad und Inhalt (ohne das Startskript `pruefe.py`; nachgerechnet am
+    19.10.: unverändert);
+  - `bt/` 61750fbbc22e;
+  - der Code-Hash des Labor-Simulators und der Signalquelle (`simulator.py`, `signale.py`, `auswertung.py`), den der
+    Logbuch-Eintrag vor dem Lauf nennt.
+- **Chart-Leser-Eingabe (M008–M010):** die geschlossenen 15-Min-Kerzen der letzten 14 Tage bis zur Entscheidung (der
+  Abruf des Bots). Daraus liest er wie festgelegt mit Zoom 50, 100 und 200 Kerzen. Gelesen wird nur an Kerzen, die den
+  Volumenfilter des Bots bestehen; das spart Rechenzeit und ändert keinen Trade.
+- **Steckbrief-Bedingungen außerhalb des Chart-Lesers:** Vortrend (M008–M010) und die drei Zeichen von Kaufkraft (M010)
+  prüft die Signalquelle des Labors, genau nach dem Wortlaut der Steckbriefe. Der Chart-Leser selbst prüft nur die
+  Linien.
 - **Daten:** Stand der Daten (Ladezeitpunkt) und fehlende Werte.
 - **Bericht:** `lern-labor/lerntopf-lauf-1/` auf backtest, je Kandidat und Jahr, dazu die Rangliste.
   - Die Labor-Seite zeigt die Rangliste erst nach dem OK des Inhabers zum Diff.

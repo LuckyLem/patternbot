@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-19T14:48:37+00:00",
- "heartbeat": "2026-10-19T14:48:37+00:00",
+ "updated": "2026-10-19T14:58:49+00:00",
+ "heartbeat": "2026-10-19T14:58:49+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9923.98,
+  "equity": 9924.51,
   "last_equity": 9939.98,
-  "day_change": -16.0,
-  "total_change": -76.02
+  "day_change": -15.47,
+  "total_change": -75.49
  },
  "positions": [
   {
@@ -16,8 +16,8 @@
    "side": "long",
    "qty": 24,
    "entry": 80.99,
-   "current": 80.9,
-   "pl": -2.13
+   "current": 80.98,
+   "pl": -0.21
   },
   {
    "symbol": "NFLX",
@@ -32,8 +32,8 @@
    "side": "long",
    "qty": 9,
    "entry": 218.81,
-   "current": 217.78,
-   "pl": -9.27
+   "current": 217.62,
+   "pl": -10.66
   }
  ],
  "trades": [

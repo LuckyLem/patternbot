@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-19T15:51:50+00:00",
- "heartbeat": "2026-10-19T15:51:50+00:00",
+ "updated": "2026-10-19T16:02:36+00:00",
+ "heartbeat": "2026-10-19T16:02:36+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9917.45,
+  "equity": 9918.71,
   "last_equity": 9939.98,
-  "day_change": -22.53,
-  "total_change": -82.55
+  "day_change": -21.27,
+  "total_change": -81.29
  },
- "positions": [
-  {
-   "symbol": "PGR",
-   "side": "long",
-   "qty": 9,
-   "entry": 218.81,
-   "current": 217.49,
-   "pl": -11.88
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "PGR",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-10-19",
    "opened": "2026-10-19T14:00:37.574404+00:00",
-   "closed": null,
+   "closed": "2026-10-19T16:01:35.977237124+00:00",
    "entry": 218.81,
    "stop": 214.78,
    "target": 223.36,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 217.63,
+   "pnl": -10.62,
+   "r": -0.293,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "inverse_H&S neckline_break>218.03",
    "max_r": 0.04,
    "key": "t99",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 96,
-  "pnl": -48.56,
-  "winrate": 0.458,
-  "expectancy": -0.021,
-  "pf": 0.9,
+  "n": 97,
+  "pnl": -59.18,
+  "winrate": 0.454,
+  "expectancy": -0.024,
+  "pf": 0.88,
   "avg_win": 9.66,
-  "avg_loss": -9.1
+  "avg_loss": -9.13
  },
  "equity_curve": [
   {
@@ -1455,7 +1446,7 @@
  ],
  "funnel": {
   "day": "2026-10-19",
-  "setups": 53,
+  "setups": 55,
   "orders": 3,
   "filled": 3,
   "unfilled": 0,
@@ -1467,7 +1458,7 @@
    "skip-rr": 1,
    "skip-rs": 1,
    "skip-spread": 1,
-   "skip-vol": 43
+   "skip-vol": 45
   }
  },
  "funnel_days": [
@@ -1630,7 +1621,7 @@
   },
   {
    "day": "2026-10-19",
-   "setups": 53,
+   "setups": 55,
    "orders": 3,
    "filled": 3,
    "unfilled": 0,
@@ -1642,7 +1633,7 @@
     "skip-rr": 1,
     "skip-rs": 1,
     "skip-spread": 1,
-    "skip-vol": 43
+    "skip-vol": 45
    }
   }
  ],

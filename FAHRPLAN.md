@@ -118,7 +118,7 @@ Wird die Zeit knapp, gilt die Reihenfolge: Vorab-Datei, Downloads, Simulator, L�
 | 1.6 | Wochenreview | ✅ 17.10. | VS Code | Sa 17.10. | am Freitag ausgefallen (Sitzung beendet), am Samstag nachgeholt | Woche 12.–16.10.: 16 Trades, −2,43R nach Kosten, PF 0,30, −57,50 $; Vorwoche −0,85R. Tageslog 17.10. |
 | 1.7 | V1-Woche 05.–09.10. im Replay nachrechnen und mit Paper vergleichen (gleiche Kriterien wie die Kalibrierung) | ✅ 18.10. | VS Code + Inhaber | Sa 17.10. | – | 19 von 19 Orders, keine zusätzliche; 722 von 723 Entscheidungen gleich; 18 von 19 Ausstiegen ≤ 0,1R. Die 2 offenen Fälle (KLAC: Split, siehe 1.13; TT t68: Verwaltungstakt) hat der Inhaber am 18.10. als erklärt angenommen: Die Kalibrierung gilt auch für V1. `kalibrierung-v1/erklaerung.md`, Protokoll [Commit d0b4ea1](../../commit/d0b4ea1a) |
 | 1.8 | Notfallplan schriftlich: Strom, Internet oder API fallen aus, während Positionen offen sind | ✅ 08.10. | VS Code | 08.10. | – | [docs/notfallplan.md](docs/notfallplan.md), [Commit 7e8a063](../../commit/7e8a063135) |
-| 1.9 | Bot-Version je Trade und Änderungsprotokoll | ⏳ live | VS Code | So 18.10. | Technik-Paket | Startzeile und data.json zeigen die Version; Version bei Trades und Setups wird am ersten Handelstag (Mo 19.10.) geprüft |
+| 1.9 | Bot-Version je Trade und Änderungsprotokoll | ✅ 19.10. | VS Code | Mo 19.10. | Technik-Paket | Erster Handelstag: 6 von 6 Trades und 131 von 131 Setups mit Version `2026-10-04+cbfe06cff.s5416c914`, ebenso der Setup-Export vom 19.10. auf main; Änderungsprotokoll in data.json |
 | 1.10 | Kalibrierung auf dem Pi wiederholen, bevor dort gerechnet wird | ⬜ | VS Code | vor dem ersten Lauf auf dem Pi | nur falls auf dem Pi gerechnet wird; bisher rechnet der PC (dort bestanden 06.10.) | – |
 | 1.11 | 1-Min-Export vom 13.10. nachholen | ✅ 16.10. | VS Code | 16.10. | Ursache: einmaliger Fehler beim Hochladen; der Bot versucht es nur einmal am Tag (Größe war nicht der Grund) | Nur die fehlende Datei, 920 KB, 67 Werte; `setups/2026-10-13.json` blieb unverändert. [Commit 9258adb](../../commit/9258adbf69) |
 | 1.12 | Setup-Export: Wiederholversuch, wenn das Hochladen scheitert | ⬜ | VS Code | mit dem Ausgabe-Paket | nur Ausgabe, nur mit OK (4.8.11) | – |
@@ -132,11 +132,11 @@ Wird die Zeit knapp, gilt die Reihenfolge: Vorab-Datei, Downloads, Simulator, L�
 | 2.1 | Replay kalibrieren: 659/659 Entscheidungen, 11/11 Orders | ✅ 03.10. | VS Code | 03.10. | – | Neu bestanden 06.10., [Commit 91526e9](../../commit/91526e9ce2), `kalibrierung/bericht.md` auf backtest |
 | 2.2 | Runde 1 (Okt 2025–Sep 2026) | ✅ 06.10. | VS Code | 06.10. | – | 1.009 Trades, −0,056R, PF 0,76, max. DD 65R, Zufall 25/100: 1 von 5 Kriterien, Ziel nicht erreicht. [Commit 91526e9](../../commit/91526e9ce2), `runde-1/zusammenfassung.md` |
 | 2.3 | Runde 2 (Okt 2024–Sep 2025), einzige Änderung: Rechtecke gestrichen. Bericht | ✅ 17.10. | VS Code | 17.10. | nur im Replay, kein Bot-Code; Kalibrierung gültig | Hauptlauf ohne Rechteck (zählt): 511 Trades, −0,083R, PF 0,66, max. DD 43R, Zufall 27/100: 1 von 5 Kriterien, Ziel nicht erreicht. Nebenrechnung wie live (zählt nicht): 1.085 Trades, −0,070R, PF 0,68, Zufall 33/100. [Commit d0b4ea1](../../commit/d0b4ea1a), `runde-2/zusammenfassung.md` |
-| 2.4 | Entscheidung nach Runde 2: liegt sie bei null oder darunter, enden die Jahresrunden des jetzigen Bots, dann Fokus auf ORB und Lern-Labor | ⏳ Bestätigung | Inhaber | Mo 19.10. | 2.3 | Runde 2 liegt mit −0,083R unter null: Nach der vorab gesetzten Regel enden die Jahresrunden des jetzigen Bots. ORB hat auch mit Ticks nicht bestanden (2.10). Damit liegt der Fokus auf dem Lern-Labor |
+| 2.4 | Entscheidung nach Runde 2: liegt sie bei null oder darunter, enden die Jahresrunden des jetzigen Bots, dann Fokus auf ORB und Lern-Labor | ✅ 19.10. | Inhaber | Mo 19.10. | 2.3 | Bestätigt vom Inhaber: Runde 2 −0,083R, die Jahresrunden des jetzigen Bots enden; ORB hat auch mit Ticks nicht bestanden (2.10). Fokus auf dem Labor. Der Live-Bot läuft unverändert weiter (Paper, eingefroren) als Messgerät für Setups, Fills und Technik |
 | 2.5 | ORB-Studie: Regeln vorab festgelegt | ✅ 05.10. | VS Code | 05.10. | – | [Commit d48250c](../../commit/d48250c2), `orb-studie/VORAB-REGELN.md` |
 | 2.6 | ORB Jahr 1 (Okt 2025–Sep 2026) nach den Vorab-Regeln. Bericht zusätzlich mit Trefferquote, längster Verlustserie, Ergebnis geteilt durch Drawdown. Dann Stopp bis zum OK | ✅ 08.10. | VS Code | 08.10. | – | 973 Trades, −0,465R, PF 0,57, Zufall 0/100: 1 von 5 Kriterien. Trefferquote 7,3 %, längste Verlustserie 46, Ergebnis/Drawdown −0,96. [Commit 98def9a](../../commit/98def9a7), `orb-jahr-1/zusammenfassung.md` auf backtest |
 | 2.7 | ORB Jahr 2 (Okt 2024–Sep 2025) | ⬜ | VS Code | – | Inhaber 15.10.: vorerst kein Jahr 2 | – |
-| 2.8 | Rechtecke im Live-Bot streichen | 🔬 | Inhaber | nach 2.3 | nur wenn ein Test es trägt und der Inhaber zustimmt | Runde 1: 567 Rechtecke, −0,087R je Trade. Runde 2: ohne Rechteck −0,083R, mit Rechteck −0,070R, das Streichen hilft nicht. Vorschlag: verwerfen, live unverändert |
+| 2.8 | Rechtecke im Live-Bot streichen | ❌ 19.10. | Inhaber | Mo 19.10. | – | Verworfen vom Inhaber: In Runde 2 hilft das Streichen nicht (ohne Rechteck −0,083R, mit −0,070R). Live bleibt unverändert |
 | 2.9 | Replay-Seite (claude.ai) nach jeder Runde aktualisieren | ✅ bis 07.10. | Chat | nach jeder Runde | – | Runde 1 mit echten Zahlen |
 | 2.10 | ORB Jahr 1 mit Ticks für die Einstiegsminute neu rechnen. 594 von 973 Trades wurden schon in ihrer Einstiegsminute gestoppt (Vorab-Regel 7, vorsichtig). Tick-Methode vorher festgelegt, Zufallsläufe ebenfalls auf Ticks, Handelsregeln unverändert, kein Jahr 2 | ✅ 18.10. | VS Code | 18.10. | Freigabe des Inhabers 09.10./15.10. | 973 Trades, −0,404R, PF 0,69, Zufall 0/100: 1 von 5 Kriterien, Ziel nicht erreicht. In der Einstiegsminute gestoppt: 425 statt 594. [Commit d0b4ea1](../../commit/d0b4ea1a), `orb-jahr-1-ticks/zusammenfassung.md` |
 
@@ -148,7 +148,7 @@ Nummern in Klammern = Nummer in [Fehler und Verbesserungen](docs/fehler-und-verb
 | Nr | Punkt | Status | Wer | Datum | Abhängigkeit | Beleg |
 |---|---|---|---|---|---|---|
 | 3.1 | (#1) Einstieg erst Minuten nach Kerzenschluss | ✅ 28.09. | VS Code | 28.09. | – | Order 32–38 s nach Kerzenschluss |
-| 3.2 | (#2) Blinde Fenster bei 5 offenen Positionen | ⏳ gebaut | VS Code | Fr 09.10. | Technik-Paket (skip-maxopen) | – |
+| 3.2 | (#2) Blinde Fenster bei 5 offenen Positionen | ⏳ live | VS Code | seit So 18.10. | Technik-Paket (skip-maxopen) | Live seit 18.10.; am 19.10. ohne Anlass (höchstens 3 Positionen gleichzeitig offen). Abgehakt beim ersten Tag mit 5 offenen |
 | 3.3 | (#3) Orders vor Börsenöffnung | ✅ bis 02.10. | VS Code | – | – | alte Liste |
 | 3.4 | (#4) Zonengrenzen auf den Cent runden (V2) | ⬜ | VS Code | – | ändert die Auswahl: erst Test, dann OK | – |
 | 3.5 | (#5) Anti-Chase-Zone am Schlusskurs statt an der Kante (V1) | ✅ 05.10. | Inhaber | 05.10. | – | aktiv seit 05.10. |
@@ -213,7 +213,7 @@ eigene Mustersuche, keine automatische Optimierung) gelten weiter für die Runde
 | 4.0.14 | Eigener GitHub-Token mit minimalen Rechten, nur für Ergebnisse: fein abgestuft, nur dieses Repo, nur Contents lesen und schreiben, mit Ablaufdatum. Weil der Token technisch auch auf main schreiben kann: harte Sperre im Code, nur der Branch backtest (Inhaber 17.10.) | ✅ 18.10. | Inhaber + VS Code | So 18.10. | – | Token in der .env des Labors. `lern_labor/push_backtest.py`: nur ein Commit auf refs/heads/backtest, kein main, kein Contents-API, kein Force-Push; 20 Prüfungen grün (17.10.) |
 | 4.0.15 | Downloads nur außerhalb der Handelszeit und gedrosselt | ⬜ | VS Code | ab So 18.10. | – | Replay-Sperre als Vorlage |
 | 4.0.16 | Datenplan mit Größe je Teil | ✅ 08.10. | VS Code | 08.10. | – | `lern-labor/datenplan.md` auf backtest |
-| 4.0.17 | Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY | ⏳ ab 22:00 | VS Code | ab Mo 19.10. 22:00 | 4.0.16; auf dem PC, gedrosselt, nur außerhalb 15:30–22:00 | Lerntopf-Lauf 1 ohne Quotes, die Kosten laufen über das Kostenmodell (Inhaber 19.10.) |
+| 4.0.17 | Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY | ⏳ läuft seit 19.10. 22:30 | VS Code | ab Mo 19.10. 22:30 | 4.0.16; auf dem PC, gedrosselt auf 100 Abrufe je Minute, nur außerhalb 15:30–22:00 | Lerntopf-Lauf 1 ohne Quotes, die Kosten laufen über das Kostenmodell (Inhaber 19.10.). Auftrag `lerntopf-daten` in der Warteschlange des PCs, verweigert jeden Abruf ab 01.10.2023 |
 | 4.0.18 | Situation zur Form point-in-time: Kurslücke, relatives Volumen, Quartalszahlen, Nachrichten. Quellen klären, nichts Kostenpflichtiges ohne OK | ⬜ | VS Code | ab Mo 12.10. | – | – |
 | 4.0.19 | Universum zum Stichtag inklusive gestrichener Werte (Überlebensverzerrung). Quelle klären | ⬜ | VS Code | ab Mo 12.10. | – | – |
 | 4.0.20 | Jeder Trade wird bewertet wie der Bot handelt: Stop, Ziel, Zeitstopp, Tagesende. Kosten wie unter Erfolgskriterien | ⬜ | VS Code | ab Mo 12.10. | schneller Simulator | – |
@@ -250,6 +250,11 @@ eigene Mustersuche, keine automatische Optimierung) gelten weiter für die Runde
 | 4.2.5 | Ideen aus Büchern als feste Regeln durch dieselbe Prüfung | ⬜ | VS Code | – | Abschnitt 5 | – |
 | 4.2.6 | Vorab-Datei `ETAPPE2_V1_PREREG.md` | ⬜ | VS Code + Chat | – | 4.2.3 | – |
 | 4.2.7 | Prüftopf öffnen (Öffnung 2 von 3, mit allen Buch-Kandidaten, die bis dahin feststehen) | ⬜ | VS Code | – | 4.2.6 | – |
+| 4.2.8 | Start von Etappe 2 direkt nach der ersten Rangliste, mit denselben Daten und demselben Simulator wie Lerntopf-Lauf 1 (Inhaber 19.10.) | ⬜ | VS Code | nach der ersten Rangliste (24./25.10.) | 4.8.13 | – |
+| 4.2.9 | Formen-Gruppen aus normierten Ausschnitten, gesucht nur im Lerntopf. Eine Gruppe zählt nur, wenn sie bei vielen Aktien und in jedem Jahr wiederkehrt | ⬜ | VS Code | nach 4.2.8 | 4.2.1, 4.2.2 | – |
+| 4.2.10 | Zufallslatte nach der Zahl der getesteten Gruppen („Bester von N“) | ⬜ | VS Code | nach 4.2.8 | 4.2.9 | – |
+| 4.2.11 | Je Gruppe ein Bild der typischen Form mit Beispielen für den Inhaber | ⬜ | VS Code | nach 4.2.8 | 4.2.9 | – |
+| 4.2.12 | Fallende Gruppen werden mit ausgewertet: als Short-Kandidat oder als „Finger weg“-Filter für andere Muster | ⬜ | VS Code | nach 4.2.8 | 4.2.9 | – |
 
 ### Etappe 3 – Eigenes neuronales Netz
 
@@ -330,9 +335,10 @@ Die 7 heutigen Muster des Bots sind:
 | 4.8.19 | Später: Bild-Netz (Etappe 3) | ⬜ | VS Code | später | Etappe 3 | – |
 | 4.8.20 | 3×-Regel prüfen: Ihre Begründung (t70) ist weggefallen, der Docht dort war echt. Im Lerntopf zählen, wie oft sie einen von SIP bestätigten Docht verworfen hätte und wie oft einen nicht bestätigten; danach Entscheidung über Chart-Leser v1.2 | ⬜ | VS Code + Inhaber | mit dem Lerntopf | 4.8.13 | Logbuch 17.10. |
 | 4.8.21 | Erste Lerntopf-Frage: Ziel-Abstand und Haltedauer passend zur Zeitebene. Befund aus Runde 1: 86 % der Trades enden durch Zeit-Stop (61 %) oder Tagesende (25 %), nur 3,8 % erreichen das Ziel, die Ziele liegen im Median 1,49R entfernt. Varianten nur als neue Steckbriefe mit eigener Nummer, vorab festgelegt; live bleibt unverändert | ⬜ | VS Code + Inhaber | mit dem Lerntopf | 4.8.13 | Diagnose Runde 1 (17.10.) |
-| 4.8.22 | Vorab-Datei „Lerntopf-Lauf 1“: Daten Okt. 2020–Sep. 2023, Muster M001–M010 mit je 4 Varianten zu Ziel und Haltedauer (H0 wie live, H1 ohne Zeit-Stop, H2 halbe Musterhöhe als Ziel, H3 bis 3 Handelstage über Nacht), 40 Kandidaten, Zufallslatte „Bester von 40“, Kostenstress +0,03R. Festlegen mit Commit und SHA-256 im Logbuch, vor jedem Lauf auf echten Daten | ⏳ Entwurf | VS Code + Inhaber | Mo 19.10. | 4.8.21 | – |
-| 4.8.23 | Labor-Simulator aus dem schnellen Simulator von bt/ abgeleitet. Pflichttests: Abschneide-Test; künstliche Kurse mit bekanntem Ergebnis (Ziel, Stop, Zeit-Stop, Tagesende, über Nacht mit Lücke); Gegenprobe M003-H0 und M001-H0 auf einem Lerntopf-Jahr gegen das Replay | ⬜ | VS Code | Di–Mi 20.–21.10. | 4.8.22 | – |
-| 4.8.24 | Chart-Leser Teil 2 als Signalquelle für M008–M010 | ⬜ | VS Code | Di–Mi 20.–21.10. | 4.8.23 | – |
+| 4.8.22 | Vorab-Datei „Lerntopf-Lauf 1“: Daten Okt. 2020–Sep. 2023, Muster M001–M010 mit je 4 Varianten zu Ziel und Haltedauer (H0 wie live, H1 ohne Zeit-Stop, H2 halbe Musterhöhe als Ziel, H3 bis 3 Handelstage über Nacht), 40 Kandidaten, Zufallslatte „Bester von 40“, Kostenstress +0,03R. Festlegen mit Commit und SHA-256 im Logbuch, vor jedem Lauf auf echten Daten | ⏳ Entwurf zur Prüfung | VS Code + Chat + Inhaber | Mo 19.10. | 4.8.21 | Entwurf mit den Entscheidungen des Inhabers vom 19.10. (Latte über alle 3 Jahre, mindestens 30 Trades je Jahr, H3-Ende 29.09.2023), `lern-labor/vorab/lerntopf-lauf-1-ENTWURF.md` auf backtest; Prüfung durch Claude im Chat, dann Festlegung |
+| 4.8.23 | Labor-Simulator aus dem schnellen Simulator von bt/ abgeleitet. Pflichttests: Abschneide-Test; künstliche Kurse mit bekanntem Ergebnis (Ziel, Stop, Zeit-Stop, Tagesende, über Nacht mit Lücke); Gegenprobe M003-H0 und M001-H0 auf einem Lerntopf-Jahr gegen das Replay | ⏳ gebaut | VS Code | Mo 19.10. | 4.8.22 | Pflichttests auf künstlichen Kursen grün: H0 gleich dem Simulator des Replays auf 400 Zufallsverläufen, dazu Ziel, Stop, Lücke, Break-even, Trailing, Zeit-Stop, Tagesende, Halbtag, H3 über Nacht. Lauf und Gegenprobe gesperrt, bis die Vorab-Datei festgelegt ist; die Gegenprobe läuft danach auf J3 |
+| 4.8.24 | Chart-Leser Teil 2 als Signalquelle für M008–M010 | ⏳ gebaut | VS Code | Mo 19.10. | 4.8.23 | Chart-Leser v1.1 unverändert (Hash c5ca9efa1343 nachgerechnet); Vortrend und Kaufkraft prüft die Signalquelle nach dem Wortlaut der Steckbriefe; Abschneide-Test grün auf künstlichen Keilen und einem Doppelboden mit und ohne Kaufkraft |
+| 4.8.25 | Einreichung neuer Muster: Der Inhaber schickt Bild und Erklärung an Claude im Chat. Daraus wird ein Steckbrief mit Nummer, der in `kandidaten.md` kommt; getestet wird am Wochenende im Paket (4.8.15) | ⬜ | Inhaber + Chat + VS Code | ab der ersten Rangliste (Sa/So 24./25.10.) | 4.8.13 | – |
 
 ### Prüfregeln für alle Etappen
 
@@ -460,6 +466,33 @@ Buchinhalte kommen nicht ins Repo.
 ## Tageslog
 
 Neuester Tag oben.
+
+### Mo 19.10.2026
+
+**Geschafft:**
+- Berichte von Runde 2 (Haupt- und Nebenrechnung) und ORB mit Ticks auf backtest.
+  - 2.4 bestätigt: Die Jahresrunden des jetzigen Bots enden, der Fokus liegt auf dem Labor. Der Live-Bot läuft als
+    Messgerät weiter.
+  - 2.8 verworfen: Rechtecke live zu streichen hilft nicht.
+- Änderungsprotokoll berichtigt („So 18.10.“ statt „Do 15.10.“), als Korrektur kenntlich.
+- Vorab-Datei „Lerntopf-Lauf 1“ als Entwurf auf backtest, mit den Entscheidungen des Inhabers.
+  - Zufallslatte „Bester von 40“ über alle 3 Jahre; mindestens 30 Trades je Jahr, sonst „zu wenig Daten“.
+  - H3 endet spätestens am 29.09.2023.
+  - Die Steckbriefe M001–M010 sind um den Trailing-Stop ergänzt, als Korrektur der Beschreibung.
+- Labor-Simulator, Signalquelle M001–M010, Auswertung, Lauf-Gerüst mit harter Sperre und Gegenprobe gebaut.
+  - Geprüft nur auf künstlichen Kursen: 8 Suiten, 166 Prüfungen grün.
+  - Auf echten Daten läuft nichts, bis die Vorab-Datei festgelegt ist.
+- Erster Handelstag mit dem Technik-Paket:
+  - 6 Trades und 131 Setups, alle mit Bot-Version; Export mit Version.
+  - Review nach Kosten: −1,47R; Broker flach.
+  - Stop-Protokoll und skip-maxopen hatten heute keinen Anlass.
+- Ergänzt: Einreichung neuer Muster ab der ersten Rangliste (4.8.25); Etappe 2 startet danach (4.2.8–4.2.12).
+- Downloads für den Lerntopf: läuft seit 19.10. 22:30.
+
+**Morgen dran (Di 20.10.):**
+- Fortschritt der Downloads melden.
+- Prüfung des Entwurfs durch Claude im Chat, dann Festlegung mit Commit und SHA-256 im Logbuch.
+- Danach: Abschneide-Stichprobe auf echten Daten und die Gegenprobe auf J3, nach dem Hauptdownload.
 
 ### So 18.10.2026
 

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-19T15:31:32+00:00",
- "heartbeat": "2026-10-19T15:31:32+00:00",
+ "updated": "2026-10-19T15:41:44+00:00",
+ "heartbeat": "2026-10-19T15:41:44+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9928.91,
+  "equity": 9922.98,
   "last_equity": 9939.98,
-  "day_change": -11.07,
-  "total_change": -71.09
+  "day_change": -17.0,
+  "total_change": -77.02
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 24,
    "entry": 80.99,
-   "current": 81.07,
-   "pl": 1.95
+   "current": 80.94,
+   "pl": -1.29
   },
   {
    "symbol": "NFLX",
    "side": "short",
    "qty": 23,
    "entry": 69.4,
-   "current": 69.58,
-   "pl": -4.14
+   "current": 69.59,
+   "pl": -4.37
   },
   {
    "symbol": "PGR",
    "side": "long",
    "qty": 9,
    "entry": 218.81,
-   "current": 217.81,
-   "pl": -9.0
+   "current": 217.55,
+   "pl": -11.34
   }
  ],
  "trades": [

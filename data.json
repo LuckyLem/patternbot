@@ -1,41 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-19T19:40:37+00:00",
- "heartbeat": "2026-10-19T19:40:37+00:00",
+ "updated": "2026-10-19T19:50:53+00:00",
+ "heartbeat": "2026-10-19T19:50:53+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9917.08,
+  "equity": 9911.44,
   "last_equity": 9939.98,
-  "day_change": -22.9,
-  "total_change": -82.92
+  "day_change": -28.54,
+  "total_change": -88.56
  },
- "positions": [
-  {
-   "symbol": "AON",
-   "side": "short",
-   "qty": 6,
-   "entry": 288.21,
-   "current": 289.38,
-   "pl": -7.02
-  },
-  {
-   "symbol": "BAC",
-   "side": "short",
-   "qty": 39,
-   "entry": 50.36,
-   "current": 50.24,
-   "pl": 4.49
-  },
-  {
-   "symbol": "UAL",
-   "side": "short",
-   "qty": 20,
-   "entry": 95.6,
-   "current": 95.55,
-   "pl": 1.1
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "UAL",
@@ -43,19 +18,19 @@
    "side": "short",
    "day": "2026-10-19",
    "opened": "2026-10-19T19:15:40.741267+00:00",
-   "closed": null,
+   "closed": "2026-10-19T19:50:45.538756603+00:00",
    "entry": 95.6,
    "stop": 97.36,
    "target": 93.74,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 95.47,
+   "pnl": 2.6,
+   "r": 0.074,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "desc_triangle break<95.77",
-   "max_r": 0.06,
+   "max_r": 0.19,
    "key": "t102",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -64,19 +39,19 @@
    "side": "short",
    "day": "2026-10-19",
    "opened": "2026-10-19T19:15:37.533557+00:00",
-   "closed": null,
+   "closed": "2026-10-19T19:50:35.932756972+00:00",
    "entry": 50.36,
    "stop": 51.27,
    "target": 49.24,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 50.37,
+   "pnl": -0.39,
+   "r": -0.011,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "desc_triangle break<50.38",
    "max_r": 0.13,
    "key": "t101",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -85,19 +60,19 @@
    "side": "short",
    "day": "2026-10-19",
    "opened": "2026-10-19T17:45:31.525683+00:00",
-   "closed": null,
+   "closed": "2026-10-19T19:46:28.967972773+00:00",
    "entry": 288.21,
    "stop": 290.4,
    "target": 284.77,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 289.79,
+   "pnl": -9.48,
+   "r": -0.723,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "desc_triangle break<288.72",
    "max_r": 0.04,
    "key": "t100",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1299,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 97,
-  "pnl": -59.18,
-  "winrate": 0.454,
-  "expectancy": -0.024,
-  "pf": 0.88,
-  "avg_win": 9.66,
-  "avg_loss": -9.13
+  "n": 100,
+  "pnl": -66.45,
+  "winrate": 0.45,
+  "expectancy": -0.03,
+  "pf": 0.87,
+  "avg_win": 9.5,
+  "avg_loss": -8.98
  },
  "equity_curve": [
   {

@@ -1,25 +1,52 @@
-# Vorab-Datei · Lerntopf-Lauf 1 (großes Paket) · Fassung 2
+# Vorab-Datei · Lerntopf-Lauf 1 (großes Paket) · Fassung 3
 
-**Festgelegt am 20.10.2026.** Fassung 2 ersetzt Fassung 1 vom selben Tag, bevor ein Ergebnis da war. Commit und SHA-256
+**Festgelegt am 20.10.2026.** Fassung 3 ersetzt Fassung 2 vom selben Tag, bevor ein Ergebnis da war. Commit und SHA-256
 dieser Fassung stehen im Logbuch.
 
-- **Fassung 1:** SHA-256 `72e2443319802378aa73ae21298026ccadea6f0cc70c8d0c8737edd4b1b5bc4b`, Commit 4822820 auf
-  backtest. Sie liegt unverändert daneben als `lerntopf-lauf-1-fassung-1.md`. Grundlage war der Entwurf vom 20.10.
-  (Commit 8d7a7fd), geprüft von Claude im Chat, mit den Antworten und Ergänzungen des Inhabers (Abschnitt 13). Die
-  Prüfung der festgelegten Fassung 1 durch Claude im Chat fand keinen Fehler.
-- **Einzige Änderung (Inhaber 20.10.2026): Die Zeitebene 1 Min entfällt.** Damit gibt es 230 statt 345 Kandidaten.
-- **Grund:**
-  - Der PC kann nicht über Nacht laufen.
-  - Auf 1 Min fressen die Kosten am meisten.
-  - Live bräuchte es SIP-Echtzeitdaten.
-  - Die Muster sind vor allem für 5 und 15 Min gedacht.
-- **Sonst unverändert:** Stufe 1 mit „Zufall in derselben Richtung“, Top 10 mit höchstens 2 je Muster, Flop-Liste vor
-  Kosten, die Latte „Bester von N“ als Information.
-- **1 Min später:** Das kann ein eigener Lauf mit eigener Vorab-Datei werden (z. B. am Wochenende). Er ändert die Top 10
-  von Lauf 1 nicht nachträglich.
+**Frühere Fassungen** (beide liegen unverändert daneben):
+- **Fassung 2:** SHA-256 `5211cdd6e2fa1d5c1db64306fea82237aa3b1a586cbe39b2cf441657470d5b9e`, Commit 3c1f778 auf backtest,
+  Datei `lerntopf-lauf-1-fassung-2.md`. Einzige Änderung gegenüber Fassung 1: Die Zeitebene 1 Min entfällt, 230 statt
+  345 Kandidaten. Grund: Der PC kann nicht über Nacht laufen; auf 1 Min fressen die Kosten am meisten; live bräuchte es
+  SIP-Echtzeitdaten; die Muster sind vor allem für 5 und 15 Min gedacht. 1 Min kann später ein eigener Lauf mit eigener
+  Vorab-Datei werden; er ändert die Top 10 von Lauf 1 nicht nachträglich.
+- **Fassung 1:** SHA-256 `72e2443319802378aa73ae21298026ccadea6f0cc70c8d0c8737edd4b1b5bc4b`, Commit 4822820, Datei
+  `lerntopf-lauf-1-fassung-1.md`. Grundlage war der Entwurf vom 20.10. (Commit 8d7a7fd), geprüft von Claude im Chat,
+  mit den Antworten und Ergänzungen des Inhabers (Abschnitt 13). Die Prüfung von Fassung 1 im Chat fand keinen Fehler.
 
-Vor dieser Festlegung wurde kein Ergebnis gelesen. Auf echten Daten liefen bis dahin nur die Abschneide-Tests und die
-Gegenprobe J3; beide lesen keine Ergebnisse in R. Ab jetzt ändern sich die Regeln nicht mehr:
+**Zwei Änderungen gegenüber Fassung 2** (Inhaber 20.10.2026):
+1. **Daten:** SIP 1 Min ab 01.09.2020 als Vorlauf, nur zum Zurückschauen (Chart-Leser, Selbstkontrolle der
+   Ankerpunkte). Signale und Trades erst ab 01.10.2020. Nichts ab 01.10.2023.
+   - **Grund:** In den ersten Tagen des Lerntopfs schauen der Chart-Leser (M008–M010, 14 Tage) und die Selbstkontrolle
+     von M011–M023 vor den 01.10.2020 zurück. Ohne diese SIP-Minuten bricht der Lauf ab (Befund 20.10., Logbuch).
+2. **Fenster für alle Muster:** Jedes Muster muss vollständig in den letzten 200 Kerzen seiner Zeitebene liegen, wie
+   beim Bot (Abschnitt 4).
+   - **Wie gemessen:** Sein Beginn laut der Tabelle für H4 (Abschnitt 5) liegt höchstens 199 Kerzen vor der
+     Signalkerze; die Signalkerze zählt als eine der 200. Ein breiteres Muster wird nicht erkannt.
+   - **Vortrend:** Prüfungen, die laut Steckbrief vor den Beginn zurückschauen (z. B. der Vortrend 50 Kerzen vor dem
+     linken Rand bei M023), gehören nicht zum Muster und bleiben, wie sie sind.
+   - **Grund:** M023 reicht bei AMGN im Median 2.600 Kerzen zurück, höchstens fast 3 Jahre. Das ist kein Muster auf 15
+     oder 5 Min und widerspricht dem Fenster in Abschnitt 4.
+   - **Steckbriefe:** Sie bleiben unverändert, denn sie nennen nur Untergrenzen. Die Grenze ist eine Regel des Laufs.
+   - **Messung vorher** (nur Geometrie, keine Ergebnisse in R; AMGN, AAPL, MSFT, JPM; Signale ab 01.10.2020; Bericht
+     `messungen/fenster-200.md`):
+
+     | Muster | 15 Min: über der Grenze | 5 Min: über der Grenze |
+     |---|---|---|
+     | M023 | 362 von 394 Signalen (Median 1.823 Kerzen, höchstens 19.226) | 1.137 von 1.219 (Median 3.366, höchstens 56.336) |
+     | M009 | 1 von 123 (genau 200 Kerzen) | 0 von 124 |
+     | M008 | 0 von 131 | 1 von 123 (202 Kerzen) |
+     | alle übrigen | 0 (M001–M007 höchstens 67, M021 höchstens 82, M022 höchstens 64) | 0 (M021 höchstens 75, M022 höchstens 113) |
+
+**Code:** Die Fenster-Regel ändert den Labor-Code. Darum gibt es einen neuen Code-Hash und neue Abschneide-Tests für 15
+und 5 Min, dazu den Pflichttest „Muster breiter als 200 Kerzen wird nicht erkannt“ (Logbuch). Der Chart-Leser selbst
+bleibt unverändert (v1.1, c5ca9efa1343); die Grenze prüft die Signalquelle des Labors.
+
+**Sonst unverändert gegenüber Fassung 2:** 230 Kandidaten, Stufe 1 mit „Zufall in derselben Richtung“, Top 10 mit
+höchstens 2 je Muster, Flop-Liste vor Kosten, die Latte „Bester von N“ als Information.
+
+Vor dieser Festlegung wurde kein Ergebnis gelesen. Auf echten Daten liefen bis dahin nur die Abschneide-Tests, die
+Gegenprobe J3 (Signale und Entscheidungen) und die Messung der Musterbreite (nur Geometrie); keines davon liest
+Ergebnisse in R. Ab jetzt ändern sich die Regeln nicht mehr:
 - Eine Änderung ergibt eine neue Fassung mit neuer Nummer, und das nur, bevor Ergebnisse da sind.
 - Muster, die der Inhaber ab jetzt per Bild bringt, gehen in Lauf 2.
 
@@ -39,13 +66,14 @@ Befund aus Runde 1, der zur Frage nach Ziel und Haltedauer führt (nur Zählung)
 | Teil | Zeitraum | Wofür |
 |---|---|---|
 | IEX 15 Min, split-bereinigt | 01.10.2020–29.09.2023, Vorlauf ab 01.09.2020 | Zeitebene 15 Min wie live |
-| SIP 1 Min, split-bereinigt | jeder Handelstag, alle Werte und SPY | Zeitebene 5 Min (daraus zusammengesetzt), Einstieg, Stop, Ziel, Zeit-Stop, Tagesende, Kurslücken, Zufallsläufe |
+| SIP 1 Min, split-bereinigt | jeder Handelstag ab 01.09.2020, alle Werte und SPY; bis 30.09.2020 nur Vorlauf zum Zurückschauen | Zeitebene 5 Min (daraus zusammengesetzt), Einstieg, Stop, Ziel, Zeit-Stop, Tagesende, Kurslücken, Zufallsläufe |
 | IEX 1 Min, nur SPY | jeder Handelstag | „SPY heute“ auf 15 Min, wie im Replay |
 | IEX-Tageskerzen, split-bereinigt | ab 27.07.2020 | Tagestrend (M001–M007) |
 | SIP-Tageskerzen, split-bereinigt | 2020 als Vorlauf | Tagestrend am Anfang. Gemessen am 08.10. (Fahrplan 4.0.26): 0,46 % Abweichung, also beginnt der Lerntopf am 01.10.2020 |
 
 - **Stand der Daten:** alles geladen am 19./20.10.2026 (9.947 Abrufe, keine Wiederholung nach 429). Für die
-  Zeitebene 5 Min ist kein weiterer Download nötig.
+  Zeitebene 5 Min ist kein weiterer Download nötig. Der SIP-Vorlauf 01.–30.09.2020 (Fassung 3) wird am 21.10.2026 vor
+  dem Lauf geladen, mit derselben Drosselung und außerhalb von 15:30–22:00 deutscher Zeit.
 - **Werte:** die 150 Werte der heutigen Liste wie in den Jahresrunden, dazu SPY. Werte ohne Kerzen werden gezählt und
   genannt.
 - **Keine Quotes und keine einzelnen Abschlüsse im Lauf.** Spread und Schlupf laufen über das Kostenmodell
@@ -85,6 +113,9 @@ Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben
 | Fenster | 200 Kerzen aus 14 Tagen (Bot), Chart-Leser 14 Tage | die letzten 200 Kerzen; Chart-Leser die Kerzen der letzten 14 Tage |
 | SPY (relative Stärke, „SPY heute“) | IEX 15 Min und IEX 1 Min wie im Replay | SPY aus SIP auf derselben Zeitebene, „SPY heute“ aus SIP 1 Min |
 
+- **Fenster für alle Muster (Fassung 3):** Jedes Muster liegt vollständig in den letzten 200 Kerzen seiner
+  Zeitebene. Sein Beginn laut der Tabelle für H4 (Abschnitt 5) liegt höchstens 199 Kerzen vor der Signalkerze, sonst wird
+  es nicht erkannt. Das gilt auch für den Chart-Leser, der 14 Tage Kerzen bekommt.
 - **Einstieg auf beiden Zeitebenen:** zum Eröffnungskurs der SIP-Minute nach dem Entscheidungszeitpunkt.
 - **Im Bericht vermerkt:** Ein Gewinner auf 5 Min bräuchte live Echtzeitdaten von SIP (der Gratis-Tarif liefert
   SIP erst nach 15 Minuten) oder einen Zusatztest auf IEX-Kerzen.
@@ -103,7 +134,7 @@ Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben
   Trailing ab +1,5R im Abstand von 1R hinter dem besten Minutenschluss.
 - **Prüfungen:** Sie laufen am Minutenschluss; Ausstiege danach zum Eröffnungskurs der nächsten Minute.
 
-**Beginn des Musters für H4:**
+**Beginn des Musters für H4** (derselbe Beginn gilt für das Fenster von 200 Kerzen, Abschnitt 4):
 
 | Muster | Beginn |
 |---|---|
@@ -122,6 +153,8 @@ Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben
 - **Abschneide-Test:** Er ist Pflicht und läuft auf echten Daten als erster Schritt nach der Festlegung, mit einer
   Stichprobe von 300 Entscheidungen je Zeitebene. Signale mit allen Daten müssen gleich den Signalen mit Daten nur bis
   zum Zeitpunkt sein. Das Ergebnis kommt ins Logbuch; schlägt der Test fehl, bricht der Lauf ab.
+- **Fenster:** Ein Muster, dessen Beginn mehr als 199 Kerzen vor der Signalkerze liegt, wird nicht erkannt
+  (Abschnitt 4).
 - **Höchstens 1 Signal je Muster, Zeitebene, Aktie und Tag:** Es zählt das erste, das alle Filter besteht.
 - **Jedes Signal wird einzeln gewertet:** keine 5-Plätze-Grenze, keine Reihenfolge der Aktienliste.
 
@@ -218,7 +251,7 @@ Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben
 
 Sie läuft vor dem eigentlichen Lauf. Sie wertet nichts und wählt nichts aus.
 - **M001-15m-H0 und M003-15m-H0** werden auf J3 gegen das Replay verglichen. Das Replay ist auf diese beiden Detektoren
-  beschränkt.
+  beschränkt. Die Laborseite rechnet nur die Bot-Muster M001–M007 (Inhaber 20.10.).
 - **Signale:** müssen 1:1 übereinstimmen (Wert, Muster, Seite, Kerze, Kante, Stop, Ziel). Ergebnisse in R werden nicht
   gelesen.
 - **Abweichungen:** einzeln erklärt. Erwartet sind sie nur bei den Filtern ohne Quotes, durch die fehlende
@@ -228,9 +261,10 @@ Sie läuft vor dem eigentlichen Lauf. Sie wertet nichts und wählt nichts aus.
 
 1. Festlegung (Commit und SHA-256 im Logbuch).
 2. Abschneide-Test auf echten Daten, dann die Gegenprobe J3. Dabei werden keine Ergebnisse in R gelesen.
-   - Die Abschneide-Tests für 15 und 5 Min liefen mit Fassung 1 und dem Labor-Code ec10708d921d (bestanden).
-   - Fassung 2 ändert nur die Einstellung des Laufs (welche Zeitebenen gerechnet werden), nicht den Code. Darum bleiben
-     Code und Abschneide-Tests gültig (Logbuch).
+   - Fassung 3 ändert den Code (Fenster-Regel). Darum laufen die Abschneide-Tests für 15 und 5 Min mit dem neuen
+     Code-Hash neu, nach dem Laden des SIP-Vorlaufs. Das Ergebnis steht im Logbuch.
+   - Die Gegenprobe vergleicht nur M001–M007. An diesen Mustern ändert die Fenster-Regel nichts, sie liegen durch den Bot
+     ohnehin in den letzten 200 Kerzen.
 3. Läufe: zuerst 15 Min, dann 5 Min. Zwischenstände werden je Wert gesichert. Wird der PC ausgeschaltet, geht es danach
    mit den Zwischenständen weiter.
 4. Rechenzeit: Die Schätzung steht vor dem Lauf im Logbuch.
@@ -292,6 +326,13 @@ Für die im Prüftopf Bestätigten: Paper auf dem zweiten Alpaca-Konto (5.000 $)
 - Die Zeitebene 1 Min entfällt (Grund oben). Kandidaten: 23 Muster × 2 Zeitebenen × 5 Varianten = 230.
 - Sonst unverändert.
 - 1 Min kann später ein eigener Lauf mit eigener Vorab-Datei werden; er ändert die Top 10 von Lauf 1 nicht nachträglich.
+
+**20.10.2026, Fassung 3 (vor dem ersten Ergebnis):**
+- SIP 1 Min ab 01.09.2020 als Vorlauf, nur zum Zurückschauen; Signale und Trades erst ab 01.10.2020; nichts ab
+  01.10.2023.
+- Fenster für alle Muster: vollständig in den letzten 200 Kerzen der Zeitebene, wie beim Bot. Die Steckbriefe bleiben
+  unverändert; die Grenze ist eine Regel des Laufs.
+- Die Gegenprobe rechnet auf der Laborseite nur M001–M007.
 
 ## 14. Offene Punkte
 

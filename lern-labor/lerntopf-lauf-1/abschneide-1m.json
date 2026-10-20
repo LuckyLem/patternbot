@@ -1,0 +1,15 @@
+{
+ "bestanden": true,
+ "geprueft": 300,
+ "gleich": 300,
+ "abweichungen": [],
+ "zeitebene": "1m",
+ "muster": "M001-M010",
+ "meta": {
+  "vorab_sha256": "72e2443319802378aa73ae21298026ccadea6f0cc70c8d0c8737edd4b1b5bc4b",
+  "bot": "bfe06cff",
+  "chartleser": "c5ca9efa1343",
+  "bt": "61750fbbc22e",
+  "labor": "ec10708d921d"
+ }
+}

@@ -1,13 +1,26 @@
-# Vorab-Datei · Lerntopf-Lauf 1 (großes Paket) · Fassung 1
+# Vorab-Datei · Lerntopf-Lauf 1 (großes Paket) · Fassung 2
 
-**Festgelegt am 20.10.2026.** Grundlage ist der Entwurf vom 20.10. (Commit 8d7a7fd auf backtest), geprüft von Claude
-im Chat, mit den Antworten und Ergänzungen des Inhabers vom selben Tag (Abschnitt 13). Commit und SHA-256 dieser Datei
-stehen im Logbuch.
+**Festgelegt am 20.10.2026.** Fassung 2 ersetzt Fassung 1 vom selben Tag, bevor ein Ergebnis da war. Commit und SHA-256
+dieser Fassung stehen im Logbuch.
 
-Vor dieser Festlegung lief nichts auf echten Daten. Ab jetzt ändern sich die Regeln nicht mehr:
+- **Fassung 1:** SHA-256 `72e2443319802378aa73ae21298026ccadea6f0cc70c8d0c8737edd4b1b5bc4b`, Commit 4822820 auf
+  backtest. Sie liegt unverändert daneben als `lerntopf-lauf-1-fassung-1.md`. Grundlage war der Entwurf vom 20.10.
+  (Commit 8d7a7fd), geprüft von Claude im Chat, mit den Antworten und Ergänzungen des Inhabers (Abschnitt 13). Die
+  Prüfung der festgelegten Fassung 1 durch Claude im Chat fand keinen Fehler.
+- **Einzige Änderung (Inhaber 20.10.2026): Die Zeitebene 1 Min entfällt.** Damit gibt es 230 statt 345 Kandidaten.
+- **Grund:**
+  - Der PC kann nicht über Nacht laufen.
+  - Auf 1 Min fressen die Kosten am meisten.
+  - Live bräuchte es SIP-Echtzeitdaten.
+  - Die Muster sind vor allem für 5 und 15 Min gedacht.
+- **Sonst unverändert:** Stufe 1 mit „Zufall in derselben Richtung“, Top 10 mit höchstens 2 je Muster, Flop-Liste vor
+  Kosten, die Latte „Bester von N“ als Information.
+- **1 Min später:** Das kann ein eigener Lauf mit eigener Vorab-Datei werden (z. B. am Wochenende). Er ändert die Top 10
+  von Lauf 1 nicht nachträglich.
+
+Vor dieser Festlegung wurde kein Ergebnis gelesen. Auf echten Daten liefen bis dahin nur die Abschneide-Tests und die
+Gegenprobe J3; beide lesen keine Ergebnisse in R. Ab jetzt ändern sich die Regeln nicht mehr:
 - Eine Änderung ergibt eine neue Fassung mit neuer Nummer, und das nur, bevor Ergebnisse da sind.
-- Claude im Chat prüft diese festgelegte Datei, während Abschneide-Test und Gegenprobe laufen. Findet er noch einen
-  Fehler, gibt es vor dem ersten Ergebnis eine Fassung 2.
 - Muster, die der Inhaber ab jetzt per Bild bringt, gehen in Lauf 2.
 
 ## 1. Ziel
@@ -26,13 +39,13 @@ Befund aus Runde 1, der zur Frage nach Ziel und Haltedauer führt (nur Zählung)
 | Teil | Zeitraum | Wofür |
 |---|---|---|
 | IEX 15 Min, split-bereinigt | 01.10.2020–29.09.2023, Vorlauf ab 01.09.2020 | Zeitebene 15 Min wie live |
-| SIP 1 Min, split-bereinigt | jeder Handelstag, alle Werte und SPY | Zeitebenen 1 und 5 Min (daraus zusammengesetzt), Einstieg, Stop, Ziel, Zeit-Stop, Tagesende, Kurslücken, Zufallsläufe |
+| SIP 1 Min, split-bereinigt | jeder Handelstag, alle Werte und SPY | Zeitebene 5 Min (daraus zusammengesetzt), Einstieg, Stop, Ziel, Zeit-Stop, Tagesende, Kurslücken, Zufallsläufe |
 | IEX 1 Min, nur SPY | jeder Handelstag | „SPY heute“ auf 15 Min, wie im Replay |
 | IEX-Tageskerzen, split-bereinigt | ab 27.07.2020 | Tagestrend (M001–M007) |
 | SIP-Tageskerzen, split-bereinigt | 2020 als Vorlauf | Tagestrend am Anfang. Gemessen am 08.10. (Fahrplan 4.0.26): 0,46 % Abweichung, also beginnt der Lerntopf am 01.10.2020 |
 
 - **Stand der Daten:** alles geladen am 19./20.10.2026 (9.947 Abrufe, keine Wiederholung nach 429). Für die
-  Zeitebenen 1 und 5 Min ist kein weiterer Download nötig.
+  Zeitebene 5 Min ist kein weiterer Download nötig.
 - **Werte:** die 150 Werte der heutigen Liste wie in den Jahresrunden, dazu SPY. Werte ohne Kerzen werden gezählt und
   genannt.
 - **Keine Quotes und keine einzelnen Abschlüsse im Lauf.** Spread und Schlupf laufen über das Kostenmodell
@@ -44,7 +57,7 @@ Befund aus Runde 1, der zur Frage nach Ziel und Haltedauer führt (nur Zählung)
 - **Überlebensverzerrung:** Die Liste stammt von heute. Werte, die 2020–2023 groß waren und heute fehlen, sind nicht
   dabei. Das macht die Ergebnisse eher zu gut. Der Bericht nennt das an erster Stelle.
 
-## 3. Kandidaten: 23 Muster × 3 Zeitebenen × 5 Varianten = 345
+## 3. Kandidaten: 23 Muster × 2 Zeitebenen × 5 Varianten = 230
 
 Ein Kandidat heißt z. B. **M003-15m-H0**: Muster M003, Zeitebene 15 Min, Variante H0. Die Muster sind die Steckbriefe
 M001–M023 in der Fassung vom 20.10.2026, mit SHA-256 je Datei in Anhang A.
@@ -58,22 +71,22 @@ M001–M023 in der Fassung vom 20.10.2026, mit SHA-256 je Datei in Anhang A.
 **Je Muster und Zeitebene handeln alle 5 Varianten dieselben Signale zum selben Einstieg.** Auch Auswahl und Filter
 rechnen bei allen mit dem Ziel aus dem Steckbrief. Anders ist nur der Ausstieg.
 
-**Andere Zeitebene, gleiche Regeln:** Ein Muster auf 1 oder 5 Min ist ein eigener Kandidat. Die Regeln des Steckbriefs
+**Andere Zeitebene, gleiche Regeln:** Ein Muster auf 5 Min ist ein eigener Kandidat. Die Regeln des Steckbriefs
 gelten unverändert, alle Längen (Fenster, Zickzack, Kerzenzahlen) und das ATR in Kerzen der jeweiligen Zeitebene. Feste
 Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben, wie sie sind.
 
 ## 4. Zeitebenen
 
-| | 15 Min | 5 Min | 1 Min |
-|---|---|---|---|
-| Kerzen | IEX wie live, mit Vor- und Nachbörse wie im Abruf des Bots | aus SIP-1-Min, nur reguläre Handelszeit 09:30–16:00 | SIP-1-Min, nur reguläre Handelszeit |
-| Entscheidung | Kerzenschluss + 33 s; die Eröffnungskerze im Nachholdurchgang um 09:50:18 (wie live) | Kerzenschluss + 33 s | Kerzenschluss + 33 s |
-| Erste und letzte Entscheidung | mindestens 20 Minuten nach der Eröffnung, mehr als 30 Minuten vor Schluss | ebenso; kein Nachholdurchgang | ebenso; kein Nachholdurchgang |
-| Fenster | 200 Kerzen aus 14 Tagen (Bot), Chart-Leser 14 Tage | die letzten 200 Kerzen; Chart-Leser die Kerzen der letzten 14 Tage | ebenso |
-| SPY (relative Stärke, „SPY heute“) | IEX 15 Min und IEX 1 Min wie im Replay | SPY aus SIP auf derselben Zeitebene, „SPY heute“ aus SIP 1 Min | ebenso |
+| | 15 Min | 5 Min |
+|---|---|---|
+| Kerzen | IEX wie live, mit Vor- und Nachbörse wie im Abruf des Bots | aus SIP-1-Min, nur reguläre Handelszeit 09:30–16:00 |
+| Entscheidung | Kerzenschluss + 33 s; die Eröffnungskerze im Nachholdurchgang um 09:50:18 (wie live) | Kerzenschluss + 33 s |
+| Erste und letzte Entscheidung | mindestens 20 Minuten nach der Eröffnung, mehr als 30 Minuten vor Schluss | ebenso; kein Nachholdurchgang |
+| Fenster | 200 Kerzen aus 14 Tagen (Bot), Chart-Leser 14 Tage | die letzten 200 Kerzen; Chart-Leser die Kerzen der letzten 14 Tage |
+| SPY (relative Stärke, „SPY heute“) | IEX 15 Min und IEX 1 Min wie im Replay | SPY aus SIP auf derselben Zeitebene, „SPY heute“ aus SIP 1 Min |
 
-- **Einstieg auf allen Zeitebenen:** zum Eröffnungskurs der SIP-Minute nach dem Entscheidungszeitpunkt.
-- **Im Bericht vermerkt:** Ein Gewinner auf 1 oder 5 Min bräuchte live Echtzeitdaten von SIP (der Gratis-Tarif liefert
+- **Einstieg auf beiden Zeitebenen:** zum Eröffnungskurs der SIP-Minute nach dem Entscheidungszeitpunkt.
+- **Im Bericht vermerkt:** Ein Gewinner auf 5 Min bräuchte live Echtzeitdaten von SIP (der Gratis-Tarif liefert
   SIP erst nach 15 Minuten) oder einen Zusatztest auf IEX-Kerzen.
 
 ## 5. Varianten H0–H4: gleiche Signale, nur der Ausstieg ist anders
@@ -134,7 +147,7 @@ Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben
 
 ## 7. Ausführung und Kosten
 
-- **Stop und Ziel:** auf 1-Min-SIP-Kerzen, auf allen Zeitebenen.
+- **Stop und Ziel:** auf 1-Min-SIP-Kerzen, auf beiden Zeitebenen.
   - Berühren Stop und Ziel dieselbe Minute, zählt der Stop.
   - Öffnet eine Minute jenseits des Stops, zählt ihr Eröffnungskurs (Lücke voll).
   - Das Ziel füllt nur, wenn der Kurs durch das Ziel handelt.
@@ -144,8 +157,8 @@ Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben
   - 0,03R (long) bzw. 0,05R (short) und
   - der Slippage = 2 Seiten × max(0,01 $; 0,02 % vom Kurs) je Aktie, geteilt durch den Stop-Abstand.
 - **Kostenstress:** zusätzlich +0,03R je Trade.
-- **Hinweis zu den Kosten:** Auf 1 Min liegen die Stops oft eng. Dort kann die Slippage je Trade über 0,03R liegen,
-  dann zählt sie.
+- **Hinweis zu den Kosten:** Auf 5 Min liegen die Stops enger als auf 15 Min. Dort kann die Slippage je Trade über
+  0,03R liegen, dann zählt sie.
 
 ## 8. Auswertung, Stufe 1, Prüftopf und Flop-Liste
 
@@ -155,7 +168,7 @@ Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben
 - **Kennzahlen:** Trades, Erwartungswert nach Kosten, Erwartungswert mit Kostenstress, Profitfaktor, Trefferquote, max.
   Drawdown (Trade für Trade in R), Ausgänge (Ziel, Anfangsstop, nachgezogener Stop, Zeit-Stop, Tagesende, Ende der
   Haltedauer, Datenende).
-- **Große Rangliste aller 345 Kandidaten:** sortiert nach dem schwächsten der drei Jahre.
+- **Große Rangliste aller 230 Kandidaten:** sortiert nach dem schwächsten der drei Jahre.
 
 **Stufe 1** (Inhaber 20.10.) verlangt alle drei Bedingungen:
 1. **Jedes Jahr positiv:** nach Kosten, mit mindestens 30 Trades je Jahr. Darunter heißt es „zu wenig Daten“, nicht
@@ -215,7 +228,11 @@ Sie läuft vor dem eigentlichen Lauf. Sie wertet nichts und wählt nichts aus.
 
 1. Festlegung (Commit und SHA-256 im Logbuch).
 2. Abschneide-Test auf echten Daten, dann die Gegenprobe J3. Dabei werden keine Ergebnisse in R gelesen.
-3. Läufe: zuerst 15 Min, dann 5 Min, dann 1 Min. Zwischenstände werden gesichert.
+   - Die Abschneide-Tests für 15 und 5 Min liefen mit Fassung 1 und dem Labor-Code ec10708d921d (bestanden).
+   - Fassung 2 ändert nur die Einstellung des Laufs (welche Zeitebenen gerechnet werden), nicht den Code. Darum bleiben
+     Code und Abschneide-Tests gültig (Logbuch).
+3. Läufe: zuerst 15 Min, dann 5 Min. Zwischenstände werden je Wert gesichert. Wird der PC ausgeschaltet, geht es danach
+   mit den Zwischenständen weiter.
 4. Rechenzeit: Die Schätzung steht vor dem Lauf im Logbuch.
    - Grundlage: die Messung auf künstlichen Kursen in Originalgröße.
    - Wenn nötig, läuft es nachts zusätzlich im Labor-Slice auf dem Pi (MemoryMax wirkt dort seit 18.10.).
@@ -254,7 +271,7 @@ Für die im Prüftopf Bestätigten: Paper auf dem zweiten Alpaca-Konto (5.000 $)
 
 **20.10.2026 (großes Paket):**
 - M011–M023;
-- die Zeitebenen 1, 5 und 15 Min;
+- die Zeitebenen 1, 5 und 15 Min (1 Min entfällt mit Fassung 2);
 - die Varianten H0–H4 mit dem Zeit-Stop in Kerzen;
 - Stufe 1 wie in Abschnitt 8, die Latte nur aus Kandidaten mit mindestens 30 Trades je Jahr;
 - Top 10 in den Prüftopf (Öffnung 1 von 3, eigene Vorab-Datei, nur mit OK);
@@ -270,6 +287,11 @@ Für die im Prüftopf Bestätigten: Paper auf dem zweiten Alpaca-Konto (5.000 $)
 5. 1 und 5 Min nur reguläre Handelszeit, kein Nachholdurchgang, SPY aus SIP.
 6. Stufe 1 bekommt die dritte Bedingung „Zufall in derselben Richtung“ (Startwert 20261020).
 7. Top 10 für den Prüftopf mit höchstens 2 Kandidaten je Muster.
+
+**20.10.2026, Fassung 2 (vor dem ersten Ergebnis):**
+- Die Zeitebene 1 Min entfällt (Grund oben). Kandidaten: 23 Muster × 2 Zeitebenen × 5 Varianten = 230.
+- Sonst unverändert.
+- 1 Min kann später ein eigener Lauf mit eigener Vorab-Datei werden; er ändert die Top 10 von Lauf 1 nicht nachträglich.
 
 ## 14. Offene Punkte
 

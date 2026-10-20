@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "stand": "2026-10-20T07:40:03-04:00",
+ "stand": "2026-10-20T08:03:12-04:00",
  "quelle": "PC",
- "code_labor": "85d6e60b9194",
+ "code_labor": "46f50d75b714",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
@@ -179,6 +179,27 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 08:02",
+   "art": "Code",
+   "text": "Fassung 2 geht nur über die Einstellung des Laufs, der Code ändert sich nicht: gerechnet werden `lauf.py --lauf 15m` und `--lauf 5m`, ausgewertet `--auswerten 15m,5m`; 1 Min wird nicht gestartet. Der Labor-Code bleibt ec10708d921d (Bot bfe06cff, Chart-Leser c5ca9efa1343, bt 61750fbbc22e). Die Abschneide-Tests für 15 und 5 Min von 07:12–07:33 bleiben gültig. Geprüft im Code: Die Auswertung rechnet jeden Kandidaten für sich. Die 115 Namen auf 1 Min haben keine Trades, gelten als „zu wenig Daten“ und zählen weder für N noch für Stufe 1, Top 10 oder Flop-Liste. Die Zufallsläufe ziehen je Trade mit eigenem Startwert, für 15 und 5 Min ändert sich also nichts. Im Code bleiben die Liste der 345 Namen, Verweise auf „Fassung 1“ in Kommentaren und die feste Kopfzeile „Fassung 1“ in zusammenfassung.md; der SHA-256 dort ist der von Fassung 2, die 1-Min-Namen stehen dort als leere Zeilen. Maßgeblich ist der Bericht aus bericht_lauf1.py (230 Kandidaten; liest nur Ergebnisse und gehört nicht zum Hash). Der Test test_lauf erwartet jetzt den SHA-256 von Fassung 2.",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 08:02",
+   "art": "Erklärung",
+   "text": "Vor der Festlegung von Fassung 2 wurde kein Ergebnis gelesen. Auf echten Daten liefen bis dahin nur die 6 Abschneide-Tests (keine Ergebnisse in R gerechnet) und die Gegenprobe J3. Die Gegenprobe vergleicht nur Signale und Entscheidungen; ihr Replay rechnet intern auch Trades, gelesen werden davon nur die Setups. Kein Lauf von Lerntopf-Lauf 1 ist gestartet, es gibt keine Zwischenstände (lerntopf-lauf-1/zwischen/ fehlt).",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 08:02",
+   "art": "Vorab-Datei",
+   "text": "Lerntopf-Lauf 1 (großes Paket), Fassung 2 festgelegt: vorab/lerntopf-lauf-1.md, SHA-256 5211cdd6e2fa1d5c1db64306fea82237aa3b1a586cbe39b2cf441657470d5b9e, Commit 3c1f77831f145799b7876496f8f4f943d3b02780 auf backtest. Sie ersetzt Fassung 1 (SHA-256 72e2443319802378aa73ae21298026ccadea6f0cc70c8d0c8737edd4b1b5bc4b, Commit 482282056027f20b511ae1d36927238fe14f462d), die unverändert als vorab/lerntopf-lauf-1-fassung-1.md daneben liegt. Einzige Änderung (Inhaber 20.10.): Die Zeitebene 1 Min entfällt, 230 statt 345 Kandidaten (23 Muster × 15 und 5 Min × H0–H4). Grund: Der PC kann nicht über Nacht laufen; auf 1 Min fressen die Kosten am meisten; live bräuchte es SIP-Echtzeitdaten; die Muster sind vor allem für 5 und 15 Min gedacht. Sonst unverändert (Stufe 1 mit Zufall in derselben Richtung, Top 10 mit höchstens 2 je Muster, Flop-Liste vor Kosten, Latte „Bester von N“ nur Information). 1 Min kann später ein eigener Lauf mit eigener Vorab-Datei werden und ändert die Top 10 von Lauf 1 nicht.",
+   "ok": null
+  },
   {
    "datum": "2026-10-20",
    "zeit": "2026-10-20 07:39",

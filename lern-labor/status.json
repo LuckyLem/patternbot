@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "stand": "2026-10-20T17:17:39-04:00",
+ "stand": "2026-10-20T17:21:56-04:00",
  "quelle": "PC",
- "code_labor": "70854a96b8d6",
+ "code_labor": "27fb5b356d40",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
@@ -179,6 +179,13 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 17:21",
+   "art": "Freigabe",
+   "text": "Claude im Chat hat Fassung 3 geprüft: OK (SHA-256 96e06e84… stimmt, Fassung 2 unverändert daneben, der Vergleich zeigt nur die zwei freigegebenen Punkte; beide Auslegungen richtig: höchstens 199 Kerzen vor der Signalkerze, die Signalkerze zählt mit; der Vortrend zählt nicht zur Breite). Die Gegenprobe J3 ist angenommen. Freigabe des Inhabers: Läufe 15 Min, dann 5 Min, nach dem SIP-Vorlauf und den 4 Abschneide-Tests mit Labor-Code 435020e128b3; fällt ein Abschneide-Test durch, Stopp. Die Freigabe-Datei für die Warteschlange ist geschrieben. Hinweis für den Bericht (keine Regeländerung): Bei M001–M010 handelt das Labor ohne Quotes Setups, die live an Spread oder Kursalter scheitern würden; die Ergebnisse dieser Muster sind eher etwas zu gut.",
+   "ok": null
+  },
   {
    "datum": "2026-10-20",
    "zeit": "2026-10-20 17:15",

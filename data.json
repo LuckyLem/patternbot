@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-20T15:47:33+00:00",
- "heartbeat": "2026-10-20T15:47:33+00:00",
+ "updated": "2026-10-20T15:57:43+00:00",
+ "heartbeat": "2026-10-20T15:57:43+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9881.76,
+  "equity": 9878.01,
   "last_equity": 9911.2,
-  "day_change": -29.44,
-  "total_change": -118.24
+  "day_change": -33.19,
+  "total_change": -121.99
  },
  "positions": [
   {
@@ -16,16 +16,8 @@
    "side": "long",
    "qty": 38,
    "entry": 51.74,
-   "current": 51.7,
-   "pl": -1.71
-  },
-  {
-   "symbol": "LRCX",
-   "side": "short",
-   "qty": 4,
-   "entry": 262.75,
-   "current": 263.8,
-   "pl": -4.18
+   "current": 51.64,
+   "pl": -3.8
   }
  ],
  "trades": [
@@ -77,19 +69,19 @@
    "side": "short",
    "day": "2026-10-20",
    "opened": "2026-10-20T13:50:28.363421+00:00",
-   "closed": null,
+   "closed": "2026-10-20T15:50:40.256156657+00:00",
    "entry": 262.75,
    "stop": 271.62,
    "target": 246.74,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 264.21,
+   "pnl": -5.84,
+   "r": -0.165,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<263.33",
    "max_r": 0.0,
    "key": "t103",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,13 +1283,13 @@
   }
  ],
  "stats": {
-  "n": 101,
-  "pnl": -90.0,
-  "winrate": 0.446,
-  "expectancy": -0.04,
-  "pf": 0.83,
+  "n": 102,
+  "pnl": -95.84,
+  "winrate": 0.441,
+  "expectancy": -0.041,
+  "pf": 0.82,
   "avg_win": 9.5,
-  "avg_loss": -9.24
+  "avg_loss": -9.18
  },
  "equity_curve": [
   {

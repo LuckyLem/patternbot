@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-20T14:02:20+00:00",
- "heartbeat": "2026-10-20T14:02:20+00:00",
+ "updated": "2026-10-20T14:12:33+00:00",
+ "heartbeat": "2026-10-20T14:12:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9884.92,
+  "equity": 9870.2,
   "last_equity": 9911.2,
-  "day_change": -26.28,
-  "total_change": -115.08
+  "day_change": -41.0,
+  "total_change": -129.8
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 5,
    "entry": 361.21,
-   "current": 358.61,
-   "pl": -13.0
+   "current": 357.67,
+   "pl": -17.7
   },
   {
    "symbol": "FAST",
    "side": "long",
    "qty": 38,
    "entry": 51.74,
-   "current": 51.65,
-   "pl": -3.42
+   "current": 51.46,
+   "pl": -10.54
   },
   {
    "symbol": "LRCX",
    "side": "short",
    "qty": 4,
    "entry": 262.75,
-   "current": 265.21,
-   "pl": -9.86
+   "current": 265.94,
+   "pl": -12.76
   }
  ],
  "trades": [

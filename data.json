@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-20T14:43:42+00:00",
- "heartbeat": "2026-10-20T14:43:42+00:00",
+ "updated": "2026-10-20T14:54:38+00:00",
+ "heartbeat": "2026-10-20T14:54:38+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9867.73,
+  "equity": 9872.48,
   "last_equity": 9911.2,
-  "day_change": -43.47,
-  "total_change": -132.27
+  "day_change": -38.72,
+  "total_change": -127.52
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 38,
    "entry": 51.74,
-   "current": 51.69,
-   "pl": -1.9
+   "current": 51.77,
+   "pl": 0.95
   },
   {
    "symbol": "LRCX",
    "side": "short",
    "qty": 4,
    "entry": 262.75,
-   "current": 267.25,
-   "pl": -18.02
+   "current": 266.78,
+   "pl": -16.12
   }
  ],
  "trades": [
@@ -1467,7 +1467,7 @@
  ],
  "funnel": {
   "day": "2026-10-20",
-  "setups": 27,
+  "setups": 32,
   "orders": 3,
   "filled": 3,
   "unfilled": 0,
@@ -1477,8 +1477,8 @@
    "skip-chase": 7,
    "skip-rr": 1,
    "skip-rs": 1,
-   "skip-spread": 2,
-   "skip-vol": 13
+   "skip-spread": 4,
+   "skip-vol": 16
   }
  },
  "funnel_days": [
@@ -1641,7 +1641,7 @@
   },
   {
    "day": "2026-10-20",
-   "setups": 27,
+   "setups": 32,
    "orders": 3,
    "filled": 3,
    "unfilled": 0,
@@ -1651,8 +1651,8 @@
     "skip-chase": 7,
     "skip-rr": 1,
     "skip-rs": 1,
-    "skip-spread": 2,
-    "skip-vol": 13
+    "skip-spread": 4,
+    "skip-vol": 16
    }
   }
  ],

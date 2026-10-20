@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "stand": "2026-10-19T10:10:18-04:00",
+ "stand": "2026-10-20T06:12:09-04:00",
  "quelle": "PC",
- "code_labor": "b2ca98e8a48f",
+ "code_labor": "c706d660cab5",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
@@ -66,7 +66,7 @@
    },
    "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
    "naechster_nr": "4.0.17",
-   "datum": "ab Mo 19.10. 22:00",
+   "datum": "ab Mo 19.10. 22:30",
    "wer": "VS Code"
   },
   {
@@ -92,17 +92,17 @@
    "titel": "Eigene Muster aus Form und Situation",
    "status": "offen",
    "erledigt": 0,
-   "gesamt": 7,
+   "gesamt": 12,
    "zaehlung": {
     "erledigt": 0,
     "laeuft": 0,
-    "offen": 7,
+    "offen": 12,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Fenster von 8, 16 und 32 Kerzen auf denselben IEX-15-Min-Kerzen wie live, normiert (Kurs in ATR, Volumen relativ zur Uhrzeit), dazu die Situation",
-   "naechster_nr": "4.2.1",
-   "datum": "",
+   "naechster_schritt": "Start von Etappe 2 direkt nach der ersten Rangliste, mit denselben Daten und demselben Simulator wie Lerntopf-Lauf 1 (Inhaber 19.10.)",
+   "naechster_nr": "4.2.8",
+   "datum": "nach der ersten Rangliste (24./25.10.)",
    "wer": "VS Code"
   },
   {
@@ -179,6 +179,13 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 06:12",
+   "art": "Vorab-Datei",
+   "text": "Lerntopf-Lauf 1, großes Paket (Inhaber 20.10.): Entwurf ersetzt den vom 19.10. 23 Muster (M001–M023, neue Steckbriefe M011–M023) × 3 Zeitebenen (1, 5, 15 Min) × 5 Varianten (H0–H4) = 345 Kandidaten. Als ENTWURF auf backtest (vorab/lerntopf-lauf-1-ENTWURF.md), noch nicht festgelegt; Festlegung nach der Prüfung durch Claude im Chat und dem OK des Inhabers. Bis dahin kein Lauf auf echten Daten.",
+   "ok": null
+  },
   {
    "datum": "2026-10-19",
    "zeit": "2026-10-19 10:10",
@@ -517,6 +524,110 @@
    "herkunft": "Lern-Labor",
    "detektor": null,
    "datei": "steckbriefe/M010-doppelboden-mit-kaufkraft.md"
+  },
+  {
+   "nr": "M011",
+   "name": "Hammer nach Abwärtstrend",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M011-hammer.md"
+  },
+  {
+   "nr": "M012",
+   "name": "Shooting Star nach Aufwärtstrend",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M012-shooting-star.md"
+  },
+  {
+   "nr": "M013",
+   "name": "Bullische Umarmung nach Abwärtstrend",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M013-bullische-umarmung.md"
+  },
+  {
+   "nr": "M014",
+   "name": "Bärische Umarmung nach Aufwärtstrend",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M014-baerische-umarmung.md"
+  },
+  {
+   "nr": "M015",
+   "name": "Bullen-Flagge",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M015-bullen-flagge.md"
+  },
+  {
+   "nr": "M016",
+   "name": "Bären-Flagge",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M016-baeren-flagge.md"
+  },
+  {
+   "nr": "M017",
+   "name": "Symmetrisches Dreieck mit Ausbruch in Trendrichtung",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M017-symmetrisches-dreieck.md"
+  },
+  {
+   "nr": "M018",
+   "name": "Inside-Bar-Ausbruch in Trendrichtung",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M018-inside-bar.md"
+  },
+  {
+   "nr": "M019",
+   "name": "Morgenstern nach Abwärtstrend",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M019-morgenstern.md"
+  },
+  {
+   "nr": "M020",
+   "name": "Abendstern nach Aufwärtstrend",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M020-abendstern.md"
+  },
+  {
+   "nr": "M021",
+   "name": "Dreifachboden",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M021-dreifachboden.md"
+  },
+  {
+   "nr": "M022",
+   "name": "Dreifachtop",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M022-dreifachtop.md"
+  },
+  {
+   "nr": "M023",
+   "name": "Tasse mit Henkel",
+   "stufe": 0,
+   "herkunft": "Lern-Labor",
+   "detektor": null,
+   "datei": "steckbriefe/M023-tasse-mit-henkel.md"
   }
  ],
  "rangliste": [],

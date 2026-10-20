@@ -34,3 +34,16 @@ Paket im Lerntopf. Eine Änderung ergibt ein neues Muster mit neuer Nummer.
 | M008 | Keil steigend (nach Aufwärtstrend, short) | Auftrag des Inhabers 15.10. | 0 | 1 (sobald der Lerntopf geladen ist) |
 | M009 | Keil fallend (nach Abwärtstrend, long) | Auftrag des Inhabers 15.10. | 0 | 1 |
 | M010 | Doppelboden mit Kaufkraft (long) | Idee des Inhabers 15.10. | 0 | 1 |
+| M011 | Hammer nach Abwärtstrend (long) | Reel SmartForexPips, Inhaber 19./20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M012 | Shooting Star nach Aufwärtstrend (short) | Lehrbuch (Nison), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M013 | Bullische Umarmung nach Abwärtstrend (long) | Lehrbuch (Nison), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M014 | Bärische Umarmung nach Aufwärtstrend (short) | Lehrbuch (Nison), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M015 | Bullen-Flagge (long) | Lehrbuch (Bulkowski), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M016 | Bären-Flagge (short) | Lehrbuch (Bulkowski), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M017 | Symmetrisches Dreieck in Trendrichtung | Lehrbuch (Bulkowski), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M018 | Inside-Bar-Ausbruch in Trendrichtung | Lehrbuch (Crabel), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M019 | Morgenstern nach Abwärtstrend (long) | Lehrbuch (Nison), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M020 | Abendstern nach Aufwärtstrend (short) | Lehrbuch (Nison), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M021 | Dreifachboden (long) | Lehrbuch (Bulkowski), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M022 | Dreifachtop (short) | Lehrbuch (Bulkowski), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |
+| M023 | Tasse mit Henkel (long) | Lehrbuch (O'Neil), Inhaber 20.10. | 0 | 1 (Lerntopf-Lauf 1, großes Paket) |

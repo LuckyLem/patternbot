@@ -1,21 +1,23 @@
-# Vorab-Datei · Lerntopf-Lauf 1 · ENTWURF
+# Vorab-Datei · Lerntopf-Lauf 1 (großes Paket) · ENTWURF
 
-**Entwurf vom 19.10.2026, mit den Entscheidungen des Inhabers vom selben Tag. Noch nicht festgelegt.**
+**Entwurf vom 20.10.2026. Er ersetzt den Entwurf vom 19.10. Noch nicht festgelegt.**
 
-Festgelegt wird nach der Prüfung durch Claude im Chat:
+Festgelegt wird nach der Prüfung durch Claude im Chat und dem OK des Inhabers:
 - als `lern-labor/vorab/lerntopf-lauf-1.md` auf backtest;
 - mit Commit und SHA-256 im Logbuch.
 
-Erst danach läuft irgendetwas auf echten Daten: keine Signale, keine Ergebnisse, keine Zufallsläufe. Bis dahin sind
-nur Downloads und Tests auf künstlichen Kursen erlaubt. Nach der Festlegung ändert sich an den Regeln nichts mehr. Eine
-Änderung ergibt eine neue Fassung mit neuer Nummer, und das nur, bevor Ergebnisse da sind.
+Erst danach läuft irgendetwas auf echten Daten: keine Signale, keine Ergebnisse, keine Zufallsläufe. Der Code
+verweigert das (harte Sperre). Nach der Festlegung ändert sich an den Regeln nichts mehr. Eine Änderung ergibt eine
+neue Fassung mit neuer Nummer, und das nur, bevor Ergebnisse da sind. Bringt der Inhaber vor der Festlegung weitere
+Muster per Bild, kommen sie dazu; spätere gehen in Lauf 2.
 
-## 1. Frage
+## 1. Ziel
 
-Welche der 10 Muster M001–M010 haben im Lerntopf einen Vorteil? Und welcher Umgang mit Ziel und Haltedauer passt zu
-ihrer Zeitebene? Das ist die erste Lerntopf-Frage (Fahrplan 4.8.21).
+Eine große Rangliste: welche Muster auf welcher Zeitebene mit welchem Ausstieg über 3 Jahre nach Kosten funktionieren
+und welche nicht. Die Besten werden danach im Prüftopf bestätigt (eigene Vorab-Datei) und erst dann auf dem zweiten
+Paper-Konto gehandelt.
 
-Befund aus Runde 1, der zu dieser Frage führt (nur Zählung, ohne Auswahl nach Ergebnis):
+Befund aus Runde 1, der zur Frage nach Ziel und Haltedauer führt (nur Zählung):
 - 86 % der Trades enden durch Zeit-Stop oder Tagesende;
 - 3,8 % erreichen das Ziel;
 - die Ziele liegen im Median 1,49R entfernt.
@@ -24,198 +26,246 @@ Befund aus Runde 1, der zu dieser Frage führt (nur Zählung, ohne Auswahl nach 
 
 | Teil | Zeitraum | Wofür |
 |---|---|---|
-| IEX 15 Min, split-bereinigt | 01.10.2020–29.09.2023, dazu der Vorlauf ab 01.09.2020 | Erkennung, Volumen, ATR, relative Stärke (wie im kalibrierten Replay) |
-| IEX-Tageskerzen, split-bereinigt | ab 27.07.2020 | Tagestrend (EMA20/EMA50 aus 120 Sitzungen) |
-| SIP-Tageskerzen, split-bereinigt | 2020 als Vorlauf, solange IEX noch keine 120 Sitzungen hat | Tagestrend am Anfang. Gemessen am 08.10. (Fahrplan 4.0.26): 0,46 % Abweichung, also gilt der SIP-Vorlauf, und der Lerntopf beginnt am 01.10.2020 |
-| IEX 1 Min, nur SPY | jeder Handelstag | „SPY heute“ für den Marktfilter, wie im Replay |
-| SIP 1 Min, split-bereinigt | jeder Handelstag, alle Werte | Einstieg, Stop, Ziel, Zeit-Stop, Tagesende, Kurslücken, Zufallsläufe |
+| IEX 15 Min, split-bereinigt | 01.10.2020–29.09.2023, Vorlauf ab 01.09.2020 | Zeitebene 15 Min wie live |
+| SIP 1 Min, split-bereinigt | jeder Handelstag, alle Werte und SPY | Zeitebenen 1 und 5 Min (daraus zusammengesetzt), Einstieg, Stop, Ziel, Zeit-Stop, Tagesende, Kurslücken, Zufallsläufe |
+| IEX 1 Min, nur SPY | jeder Handelstag | „SPY heute“ auf 15 Min, wie im Replay |
+| IEX-Tageskerzen, split-bereinigt | ab 27.07.2020 | Tagestrend (M001–M007) |
+| SIP-Tageskerzen, split-bereinigt | 2020 als Vorlauf | Tagestrend am Anfang. Gemessen am 08.10. (Fahrplan 4.0.26): 0,46 % Abweichung, also beginnt der Lerntopf am 01.10.2020 |
 
-- **Werte:** die 150 Werte der heutigen Liste wie in den Jahresrunden, dazu SPY. Werte ohne Kerzen in einem Zeitraum
-  (z. B. nach einem Tickerwechsel) werden gezählt und im Bericht genannt.
+- **Stand der Daten:** alles geladen am 19./20.10.2026 (9.947 Abrufe, keine Wiederholung nach 429). Für die
+  Zeitebenen 1 und 5 Min ist kein weiterer Download nötig.
+- **Werte:** die 150 Werte der heutigen Liste wie in den Jahresrunden, dazu SPY. Werte ohne Kerzen werden gezählt und
+  genannt.
 - **Keine Quotes und keine einzelnen Abschlüsse im Lauf.** Spread und Schlupf laufen über das Kostenmodell
-  (Abschnitt 6). Für die Gegenprobe (Abschnitt 8) gibt es eine Ausnahme: IEX-Abschlüsse und -Quotes, nur für Setups nach
-  dem Volumenfilter. Sie werden nach dem Hauptdownload geladen, mit derselben Drosselung.
-- **Downloads:**
-  - nur auf dem PC;
-  - gedrosselt auf höchstens 100 Abrufe je Minute;
-  - an Handelstagen erst ab 22:30, nach dem Setup-Export des Bots um 22:20;
-  - nie zwischen 15:30 und 22:00.
-- **Split-bereinigt statt unbereinigt:** Die Steckbriefe sagen „unbereinigt, wie live“. Über drei Jahre ergäbe das an
-  jedem Split falsche Kanten und einen falschen Tagestrend (Befund 1.13). Das kalibrierte Replay rechnet ebenfalls
-  bereinigt.
-- **Prüftopf:** Er bleibt zu. Aus der Zeit ab dem 01.10.2023 wird nichts geladen und nichts gelesen. Der
-  Download-Auftrag verweigert jeden Abruf, der dort hineinreicht.
-- **Überlebensverzerrung:** Die Liste stammt von heute. Werte, die 2020–2023 groß waren und heute fehlen (Übernahmen,
-  Abstiege, Pleiten), sind nicht dabei. Das macht die Ergebnisse eher zu gut. Der Bericht nennt das an erster Stelle.
+  (Abschnitt 7). Für die Gegenprobe (Abschnitt 9) holt das Replay IEX-Abschlüsse und -Quotes, nur für Setups nach dem
+  Volumenfilter, mit derselben Drosselung.
+- **Split-bereinigt:** Unbereinigte Kerzen ergäben über drei Jahre an jedem Split falsche Kanten und einen falschen
+  Tagestrend (Befund 1.13). Das kalibrierte Replay rechnet ebenfalls bereinigt.
+- **Prüftopf:** Er bleibt zu. Aus der Zeit ab dem 01.10.2023 wird nichts geladen und nichts gelesen.
+- **Überlebensverzerrung:** Die Liste stammt von heute. Werte, die 2020–2023 groß waren und heute fehlen, sind nicht
+  dabei. Das macht die Ergebnisse eher zu gut. Der Bericht nennt das an erster Stelle.
 
-## 3. Kandidaten: 10 Muster × 4 Varianten = 40
+## 3. Kandidaten: 23 Muster × 3 Zeitebenen × 5 Varianten = 345
 
-Die Muster sind die Steckbriefe M001–M010 in der Fassung vom 19.10.2026, mit SHA-256 je Datei in Anhang A.
-- **M001–M007:** Erkennung mit dem Code des Live-Bots (Stand cbfe06cff), genau wie im Replay.
-- **M008–M010:** Erkennung mit dem Chart-Leser Teil 2, Festlegung v1.1 (Code-Hash c5ca9efa1343).
+Ein Kandidat heißt z. B. **M003-15m-H0**: Muster M003, Zeitebene 15 Min, Variante H0. Die Muster sind die Steckbriefe
+M001–M023 in der Fassung vom 20.10.2026, mit SHA-256 je Datei in Anhang A.
 
-Jede Variante bekommt eine eigene Nummer, z. B. M003-H0 bis M003-H3. **Je Muster handeln alle 4 Varianten dieselben
-Signale zum selben Einstieg.** Auch Auswahl und Filter rechnen bei allen 4 mit dem Ziel aus dem Steckbrief. Anders ist
-nur der Ausstieg, und zwar je Variante nur eine Sache:
-
-| Variante | Ziel | Haltedauer und Ausstieg |
+| Muster | Erkennung | Steckbriefe |
 |---|---|---|
-| **H0** wie live | aus dem Steckbrief | wie der Live-Bot (Abschnitt 5) |
-| **H1** ohne Zeit-Stop | aus dem Steckbrief | wie H0, nur ohne Zeit-Stop: bis Ziel, Stop oder Tagesende |
-| **H2** halbe Musterhöhe | Kante + ½ × (Ziel aus dem Steckbrief − Kante), d. h. der halbe Weg von der Kante zum Ziel | sonst wie H0 |
-| **H3** über Nacht | aus dem Steckbrief | wie H0, aber ohne Zeit-Stop und ohne Tagesende an Tag 1 und 2: bis Ziel oder Stop, höchstens 3 Handelstage (der Einstiegstag zählt als Tag 1), Ausstieg 10 Minuten vor Schluss des 3. Tages. Über Nacht gehalten, Kurslücken zählen voll. Spätestens Ausstieg am 29.09.2023 10 Minuten vor Schluss, damit kein Trade in den Prüftopf hineinläuft. Nur Simulation |
+| M001–M007 | Code des Live-Bots (Stand cbfe06cff), auf 15 Min genau wie im Replay | Aufsteigendes und absteigendes Dreieck, Rechteck, Doppeltop, Doppelboden, Schulter-Kopf-Schulter und inverse |
+| M008–M010 | Chart-Leser Teil 2 (v1.1, unverändert) plus Vortrend und Kaufkraft aus den Steckbriefen | Keil steigend, Keil fallend, Doppelboden mit Kaufkraft |
+| M011–M023 | neue Erkennung des Labors, genau nach den Steckbriefen | Hammer, Shooting Star, bullische und bärische Umarmung, Bullen- und Bären-Flagge, symmetrisches Dreieck, Inside-Bar, Morgen- und Abendstern, Dreifachboden und -top, Tasse mit Henkel |
 
-## 4. Signale
+**Je Muster und Zeitebene handeln alle 5 Varianten dieselben Signale zum selben Einstieg.** Auch Auswahl und Filter
+rechnen bei allen mit dem Ziel aus dem Steckbrief. Anders ist nur der Ausstieg.
 
-- **Point-in-time:** Jede 15-Min-Kerze wird nach ihrem Schluss bewertet, nur mit den Kerzen bis dahin. Es gilt dasselbe
-  Fenster wie live: 200 Kerzen aus 14 Tagen, Tagestrend aus abgeschlossenen Sitzungen.
-  - Die Eröffnungskerze wird wie live um 09:50 New York bewertet.
-- **Abschneide-Test:** Er ist Pflicht und läuft vor dem ersten Lauf. Für zufällig gezogene Zeitpunkte gibt die
-  Signalfunktion mit allen Daten und mit Daten nur bis zum Zeitpunkt genau dasselbe aus. Das Ergebnis kommt ins
-  Logbuch.
-- **Höchstens 1 Signal je Muster, Aktie und Tag:** Es zählt das erste Signal des Tages, das alle Filter besteht. Spätere
-  Signale desselben Musters an derselben Aktie und demselben Tag werden nur gezählt.
-- **Jedes Signal wird einzeln gewertet:** keine 5-Plätze-Grenze, keine Reihenfolge der Aktienliste. Verschiedene Muster
-  an derselben Aktie zählen jedes für sich.
+**Andere Zeitebene, gleiche Regeln:** Ein Muster auf 1 oder 5 Min ist ein eigener Kandidat. Die Regeln des Steckbriefs
+gelten unverändert, alle Längen (Fenster, Zickzack, Kerzenzahlen) und das ATR in Kerzen der jeweiligen Zeitebene. Feste
+Prozentgrenzen im Code des Bots (z. B. Höhe eines Rechtecks 1,5–12 %) bleiben, wie sie sind.
 
-**Filter: wie im jeweiligen Steckbrief, mit den Funktionen des Bots auf denselben Kerzen.**
+## 4. Zeitebenen
 
-| Filter | M001–M007 | M008–M010 |
+| | 15 Min | 5 Min | 1 Min |
+|---|---|---|---|
+| Kerzen | IEX wie live, mit Vor- und Nachbörse wie im Abruf des Bots | aus SIP-1-Min, nur reguläre Handelszeit 09:30–16:00 | SIP-1-Min, nur reguläre Handelszeit |
+| Entscheidung | Kerzenschluss + 33 s; die Eröffnungskerze im Nachholdurchgang um 09:50:18 (wie live) | Kerzenschluss + 33 s | Kerzenschluss + 33 s |
+| Erste und letzte Entscheidung | mindestens 20 Minuten nach der Eröffnung, mehr als 30 Minuten vor Schluss | ebenso; kein Nachholdurchgang | ebenso; kein Nachholdurchgang |
+| Fenster | 200 Kerzen aus 14 Tagen (Bot), Chart-Leser 14 Tage | die letzten 200 Kerzen; Chart-Leser die Kerzen der letzten 14 Tage | ebenso |
+| SPY (relative Stärke, „SPY heute“) | IEX 15 Min und IEX 1 Min wie im Replay | SPY aus SIP auf derselben Zeitebene, „SPY heute“ aus SIP 1 Min | ebenso |
+
+- **Einstieg auf allen Zeitebenen:** zum Eröffnungskurs der SIP-Minute nach dem Entscheidungszeitpunkt.
+- **Im Bericht vermerkt:** Ein Gewinner auf 1 oder 5 Min bräuchte live Echtzeitdaten von SIP (der Gratis-Tarif liefert
+  SIP erst nach 15 Minuten) oder einen Zusatztest auf IEX-Kerzen.
+
+## 5. Varianten H0–H4: gleiche Signale, nur der Ausstieg ist anders
+
+| Variante | Ziel | Ausstieg |
 |---|---|---|
-| Tagestrend in Handelsrichtung, wie im Code: nur für die Fortsetzungsmuster M001–M003; die Umkehrmuster M004–M007 laufen ohne diesen Filter | ja (M001–M003) | **nein**, stattdessen der Vortrend aus dem Steckbrief (4 ATR über bzw. unter dem Schluss 50 Kerzen davor) |
-| Mindest-Stop 0,3 % vom Schlusskurs (enger wird aufgeweitet) | ja | ja |
-| Chance-Risiko am Schlusskurs mindestens 0,8 | ja | ja |
-| Volumen der Signalkerze mindestens 1,5 × Schnitt der letzten 20 Kerzen | ja | ja |
-| Relative Stärke gegen SPY über 13 Kerzen in Handelsrichtung | ja | ja |
-| SPY am Tag höchstens 0,5 % gegen die Handelsrichtung | ja | ja |
-| Keine Einstiege in den ersten 20 und den letzten 30 Minuten | ja | ja |
-| Anti-Chase-Zone V1 (max(0,4 × ATR; 0,1 %), am Schlusskurs verankert), gemessen am Einstiegskurs aus Abschnitt 5 | ja | ja |
-| Chance-Risiko mindestens 0,8, gerechnet wie live am Limit (Rand der Anti-Chase-Zone, der schlechteste mögliche Einstieg); dazu die Geometrie Stop < Limit < Ziel | ja | ja |
-| Kursalter höchstens 60 s, Spread höchstens 0,25R | ohne Quotes nicht nachgebildet; das Kostenmodell deckt den Spread ab | ebenso |
-| 5 Plätze, Risiko 0,5 %, Positionswert 20 % | nicht angewendet: jedes Signal einzeln, Ergebnis in R | ebenso |
+| **H0** | aus dem Steckbrief | Zeit-Stop in Kerzen: nach 8 Kerzen raus, wenn R ≤ 0 oder unter 80 % des besten R; nach 16 Kerzen raus. Auf 15 Min ist das genau wie live (120/240 Minuten). Tagesende 10 Minuten vor Schluss |
+| **H1** | aus dem Steckbrief | ohne Zeit-Stop: bis Ziel, Stop oder Tagesende |
+| **H2** | Kante + ½ × (Ziel aus dem Steckbrief − Kante) | sonst wie H0 |
+| **H3** | aus dem Steckbrief | über Nacht bis Ziel oder Stop, höchstens 3 Handelstage (der Einstiegstag zählt als Tag 1), Ausstieg 10 Minuten vor Schluss des 3. Tages; spätestens am 29.09.2023 zehn Minuten vor Schluss. Kurslücken zählen voll. Nur Simulation |
+| **H4** | aus dem Steckbrief | Zeit-Stop nach L Kerzen, L = Entstehungsdauer des Musters vom Beginn bis zur Signalkerze (Tabelle unten); höchstens bis Tagesende |
 
-**Nebenzählung, zählt nicht (Fahrplan 4.8.20):** Bei M008–M010 wird für jeden Ankerpunkt mit SIP-Kerze gezählt, wie oft
-die 3×-Regel einen von SIP bestätigten Docht verworfen hätte und wie oft einen nicht bestätigten. Die Zählung ist
-Grundlage für die Entscheidung über Chart-Leser v1.2.
+- **In allen Varianten wie live:** Break-even ab einem Minutenschluss bei +0,6R (Stop auf Einstieg ± 0,05 %);
+  Trailing ab +1,5R im Abstand von 1R hinter dem besten Minutenschluss.
+- **Prüfungen:** Sie laufen am Minutenschluss; Ausstiege danach zum Eröffnungskurs der nächsten Minute.
 
-## 5. Ausführung (Simulation auf SIP 1 Min)
+**Beginn des Musters für H4:**
 
-- **Einstieg:** zum Eröffnungskurs der SIP-Minute nach dem Entscheidungszeitpunkt (Kerzenschluss + 33 s, wie live im
-  Median). Bei einer Kerze bis 10:15 ist das die Minute 10:16. Für die Eröffnungskerze gilt die Minute 09:51.
-- **Stop und Ziel:** auf 1-Min-SIP-Kerzen.
+| Muster | Beginn |
+|---|---|
+| M001–M007 | der erste Wendepunkt, den der Detektor für dieses Signal benutzt (nachgerechnet wie bei den rekonstruierten Bildern der Live-Trades) |
+| M008–M010 | erste Berührung bzw. erster Boden laut Chart-Leser |
+| M011–M014, M019, M020 | das Zickzack-Hoch bzw. -Tief, an dem der Vortrend beginnt (das Ziel) |
+| M015, M016 | das Tief bzw. Hoch, an dem die Fahnenstange beginnt |
+| M017 | die erste Berührung |
+| M018 | die Mutterkerze |
+| M021, M022 | der erste Boden bzw. das erste Top |
+| M023 | der linke Rand |
+
+## 6. Signale und Filter
+
+- **Point-in-time:** Jede Kerze wird nach ihrem Schluss bewertet, nur mit den Kerzen bis dahin.
+- **Abschneide-Test:** Er ist Pflicht und läuft auf echten Daten als erster Schritt nach der Festlegung, mit einer
+  Stichprobe von 300 Entscheidungen je Zeitebene. Signale mit allen Daten müssen gleich den Signalen mit Daten nur bis
+  zum Zeitpunkt sein. Das Ergebnis kommt ins Logbuch; schlägt der Test fehl, bricht der Lauf ab.
+- **Höchstens 1 Signal je Muster, Zeitebene, Aktie und Tag:** Es zählt das erste, das alle Filter besteht.
+- **Jedes Signal wird einzeln gewertet:** keine 5-Plätze-Grenze, keine Reihenfolge der Aktienliste.
+
+**Filter (wie im jeweiligen Steckbrief):**
+
+| Filter | M001–M007 | M008–M010 | M011–M023 |
+|---|---|---|---|
+| Zeitfenster (nicht in den ersten 20 und den letzten 30 Minuten) | ja | ja | ja |
+| Tagestrend in Handelsrichtung (nur Fortsetzungsmuster M001–M003, wie im Code) | ja | nein, Vortrend aus dem Steckbrief | nein, Vortrend bzw. Trend aus dem Steckbrief |
+| Mindest-Stop 0,3 % vom Schlusskurs | ja | ja | nein |
+| Chance-Risiko am Schlusskurs mindestens 0,8 | ja | ja | nein |
+| Volumen der Signalkerze mindestens 1,5 × Schnitt der letzten 20 Kerzen | ja | ja | nein |
+| Relative Stärke gegen SPY über 13 Kerzen; SPY am Tag höchstens 0,5 % dagegen | ja | ja | nein |
+| Anti-Chase-Zone V1, Chance-Risiko am Limit mindestens 0,8, Geometrie Stop < Limit < Ziel | ja | ja | nur die Geometrie: Einstieg zwischen Stop und Ziel |
+| Kursalter, Spread | ohne Quotes nicht nachgebildet, das Kostenmodell deckt den Spread ab | ebenso | – |
+
+- **Ausnahme Volumenfilter:** Bei M001–M010 werden Kerzen, die den Volumenfilter nicht bestehen, gar nicht erst
+  gelesen. Das spart Rechenzeit und ändert keinen Trade.
+- **Selbstkontrolle bei M011–M023:** Auf 15 Min (IEX) müssen die Ankerpunkte von SIP bestätigt sein, sonst ist das
+  Signal ungültig (Steckbrief).
+- **Nebenzählung (zählt nicht, Fahrplan 4.8.20):** Bei M008–M010 auf 15 Min wird für jeden Ankerpunkt mit SIP-Kerze
+  gezählt, wie oft die 3×-Regel einen von SIP bestätigten Docht verworfen hätte und wie oft einen nicht bestätigten.
+
+## 7. Ausführung und Kosten
+
+- **Stop und Ziel:** auf 1-Min-SIP-Kerzen, auf allen Zeitebenen.
   - Berühren Stop und Ziel dieselbe Minute, zählt der Stop.
-  - Der Stop füllt zum Stopkurs, oder zum Eröffnungskurs der Minute, wenn sie schon jenseits des Stops öffnet
-    (Kurslücke voll).
-  - Das Ziel füllt nur, wenn der Kurs durch das Ziel handelt, also nicht schon bei bloßer Berührung (wie im schnellen
-    Simulator). Öffnet die Minute schon jenseits des Ziels, zählt ihr Eröffnungskurs.
-- **Verwaltung wie live, in allen 4 Varianten** (die Werte stehen in der Einstellung des Bots):
-  - **Break-even:** ab einem Minutenschluss bei +0,6R Stop auf den Einstieg ± 0,05 %;
-  - **Trailing:** ab +1,5R folgt der Stop dem besten Minutenschluss im Abstand von 1R, nur in Gewinnrichtung;
-  - **Zeit-Stop** (nur H0 und H2): ab 120 Minuten raus, wenn R ≤ 0 oder unter 80 % des besten R; nach 240 Minuten raus;
-  - **Tagesende** (H0, H1, H2; H3 nur am 3. Tag): 10 Minuten vor Börsenschluss, an Halbtagen 12:50 New York.
-  - Ausstiege nach den Prüfungen am Minutenschluss erfolgen zum Eröffnungskurs der nächsten Minute.
-- **Steckbriefe:** Die Steckbriefe M001–M010 nannten den Trailing-Stop zunächst nicht. Er ist am 19.10. ergänzt, als
-  Korrektur der Beschreibung des Codes, ohne neue Nummer (Logbuch).
-- **H3 über Nacht:**
-  - Über Nacht gibt es keine Prüfung. Die erste Minute des nächsten Tages kann jenseits von Stop oder Ziel öffnen.
-    Dann zählt ihr Eröffnungskurs voll; beim Ziel ist das nie schlechter als das Ziel.
-  - Vor- und Nachbörse werden nicht simuliert.
-- **Schneller Simulator:** Grundlage ist `bt/exits.py`, für H1 und H3 erweitert. Seine Abweichung vom vollen Replay ist
-  aus den Runden bekannt und wird im Bericht genannt (Runde 2: −0,059R gegen −0,083R je Trade).
-
-## 6. Kosten und Kostenstress
-
+  - Öffnet eine Minute jenseits des Stops, zählt ihr Eröffnungskurs (Lücke voll).
+  - Das Ziel füllt nur, wenn der Kurs durch das Ziel handelt.
+- **Schneller Simulator:** `bt/exits.py` als Grundlage, für die Varianten erweitert. H0 auf 15 Min ist gleich
+  `bt.exits.simulate`, geprüft auf 400 Zufallsverläufen.
 - **Kosten nach den Erfolgskriterien** (Lern-Labor): je Trade der höhere Wert aus
   - 0,03R (long) bzw. 0,05R (short) und
-  - der Slippage = 2 Seiten × max(0,01 $; 0,02 % vom Kurs) je Aktie, geteilt durch den Stop-Abstand je Aktie.
+  - der Slippage = 2 Seiten × max(0,01 $; 0,02 % vom Kurs) je Aktie, geteilt durch den Stop-Abstand.
 - **Kostenstress:** zusätzlich +0,03R je Trade.
+- **Hinweis zu den Kosten:** Auf 1 Min liegen die Stops oft eng. Dort kann die Slippage je Trade über 0,03R liegen,
+  dann zählt sie.
 
-## 7. Auswertung und Stufe 1
+## 8. Auswertung, Stufe 1, Prüftopf und Flop-Liste
 
-**Je Kandidat und je Jahr:**
+**Je Kandidat, je Jahr und gesamt:**
 - **Jahre:** J1 = 01.10.2020–30.09.2021, J2 = 01.10.2021–30.09.2022, J3 = 01.10.2022–29.09.2023. Ein Trade zählt im Jahr
   seines Einstiegs.
-- **Kennzahlen:** Trades, Erwartungswert nach Kosten, Profitfaktor nach Kosten, Trefferquote, max. Drawdown (Trade für
-  Trade in R, nach Einstiegszeit sortiert).
-- **Ausgänge:** Ziel, Stop (Anfangsstop), Stop nach Break-even bzw. Trailing, Zeit-Stop, Tagesende, Ende der Haltedauer
-  (H3), Datenende.
-- **Zusätzlich:** Erwartungswert mit Kostenstress.
-- **Über alle 3 Jahre zusammen:** dieselben Kennzahlen und die Zufallslatte.
+- **Kennzahlen:** Trades, Erwartungswert nach Kosten, Erwartungswert mit Kostenstress, Profitfaktor, Trefferquote, max.
+  Drawdown (Trade für Trade in R), Ausgänge (Ziel, Anfangsstop, nachgezogener Stop, Zeit-Stop, Tagesende, Ende der
+  Haltedauer, Datenende).
+- **Große Rangliste aller 345 Kandidaten:** sortiert nach dem schwächsten der drei Jahre.
 
-**Zufallslatte „Bester von 40“ über alle 3 Jahre zusammen** (Erfolgskriterium K5 bei mehreren Kandidaten):
-- **Zufallstrades:** Je Kandidat gibt es 100 Zufallsläufe, gebaut wie der bestehende Zufallsvergleich:
-  - je echtem Trade derselbe Wert, derselbe Tag, eine zufällige Minute in derselben Stunde (nicht in den letzten
-    30 Minuten);
-  - die Richtung wird ausgelost;
+**Stufe 1** (Inhaber 20.10.):
+1. Jedes Jahr positiv nach Kosten, mit mindestens 30 Trades je Jahr. Darunter heißt es „zu wenig Daten“, nicht
+   „durchgefallen“.
+2. Über alle 3 Jahre mit Kostenstress (+0,03R) noch positiv.
+
+**Zufallslatte „Bester von N“:**
+- **N:** Gebildet wird sie nur aus den Kandidaten mit mindestens 30 Trades in jedem Jahr. N steht im Bericht.
+- **Zufallsläufe:** 100 je Kandidat, gebaut wie der bestehende Zufallsvergleich:
+  - derselbe Wert und Tag, eine zufällige Minute in derselben Stunde;
+  - die Richtung ausgelost;
   - Stop-Abstand in % und Ziel in R wie beim echten Trade;
-  - dieselben Ausstiegsregeln der Variante (H3 mehrtägig) und dieselben Kosten.
-- **Startwerte:** Fester Startwert 20261019. Lauf k zieht für alle Kandidaten mit demselben Startwert.
-- **Latte:** In Lauf k ist die Latte der beste Zufalls-Erwartungswert über alle 3 Jahre unter allen 40 Kandidaten (nur
-  Kandidaten mit Trades). Ein Kandidat liegt über der Latte, wenn sein Erwartungswert über alle 3 Jahre in mindestens
-  95 von 100 Läufen höher ist als die Latte dieses Laufs.
+  - dieselben Ausstiegsregeln und Kosten.
+- **Startwert:** fest 20261019. Lauf k zieht für alle Kandidaten mit demselben Startwert.
+- **Latte:** In Lauf k ist sie der beste Zufalls-Erwartungswert über alle 3 Jahre unter diesen N Kandidaten.
+- **Ergebnis je Kandidat:** in wie vielen der 100 Läufe er über der Latte liegt.
 
-**Stufe 1 (Lerntopf bestanden)** nur, wenn alle drei Bedingungen gelten:
-1. **Jedes Jahr positiv:** J1, J2 und J3 je mit mindestens 30 Trades und Erwartungswert nach Kosten > 0;
-2. **Zufallslatte:** über alle 3 Jahre über der Latte „Bester von 40“, also in mindestens 95 von 100 Läufen;
-3. **Kostenstress:** über alle 3 Jahre mit +0,03R Kostenstress noch > 0.
+**Weiter in den Prüftopf:**
+- **Wer:** die Top 10 der Kandidaten mit Stufe 1, nach dem schwächsten Jahr.
+- **Vorab-Datei:** eine eigene, mit der Latte „Bester von 10“ und den Kriterien K1–K5.
+- **Öffnung:** Das ist Öffnung 1 von 3, nur nach dem OK des Inhabers.
+- **Hinweis im Bericht:** Für M001–M007 auf 15 Min sind die Jahre 2024–2026 aus den Jahresrunden schon bekannt.
 
-**Einstufung in der Rangliste:**
-- **„Stufe 1“:** alle drei Bedingungen erfüllt.
-- **„zu wenig Daten“:** In mindestens einem Jahr gab es weniger als 30 Trades. Das gilt nicht als durchgefallen und
-  steht so in der Rangliste. Die Kennzahlen werden trotzdem gezeigt.
-- **„Stufe 0, nicht bestanden“:** sonst. Dazu steht, welche Bedingung fehlt.
-- **Sortierung:** nach dem schwächsten der drei Jahre (Erwartungswert nach Kosten), damit ein einzelnes gutes Jahr
-  nichts verdecken kann.
+**Flop-Liste:**
+- **Wer:** die 10 Kandidaten, die in jedem Jahr klar verlieren. Das heißt: in jedem Jahr mindestens 30 Trades und
+  Erwartungswert nach Kosten unter 0, über alle 3 Jahre höchstens −0,10R. Sortiert nach dem besten Jahr, vom
+  schlechtesten her.
+- **Wozu:** Sie sind Kandidaten für „Finger weg“-Filter oder die Gegenrichtung, als eigene neue Steckbriefe in einem
+  späteren Lauf.
 
-## 8. Gegenprobe vor dem Lauf
+**Seiten für die Top 10 und die Flop 10:**
+- je eine Seite wie das Rechteck-Beispiel: alle gefundenen Trades mit Linien, die Auswertung und ein Urteil;
+- nur aus dem Lerntopf.
+
+## 9. Gegenprobe vor dem Lauf (nur 15 Min)
 
 Sie läuft vor dem eigentlichen Lauf. Sie wertet nichts und wählt nichts aus.
-- **M001-H0 und M003-H0** werden auf einem Lerntopf-Jahr (J3) gegen das Replay verglichen. Das Replay ist auf diese
-  beiden Detektoren beschränkt.
-- **Daten:** Für Kursalter und Spread braucht das Replay IEX-Abschlüsse und -Quotes, nur für Setups nach dem
-  Volumenfilter. Sie werden nach dem Hauptdownload mit derselben Drosselung geladen.
-- **Signale:** müssen 1:1 übereinstimmen (Wert, Muster, Seite, Kerze, Kante, Stop, Ziel).
-- **Abweichungen:** werden einzeln erklärt. Erwartet sind sie nur bei den Filtern ohne Quotes (Kursalter, Spread), durch
-  die fehlende 5-Plätze-Grenze und durch den Einstieg zur Minute statt am echten Fill.
+- **M001-15m-H0 und M003-15m-H0** werden auf J3 gegen das Replay verglichen. Das Replay ist auf diese beiden Detektoren
+  beschränkt.
+- **Signale:** müssen 1:1 übereinstimmen (Wert, Muster, Seite, Kerze, Kante, Stop, Ziel). Ergebnisse in R werden nicht
+  gelesen.
+- **Abweichungen:** einzeln erklärt. Erwartet sind sie nur bei den Filtern ohne Quotes, durch die fehlende
+  5-Plätze-Grenze und durch den Einstieg zur Minute.
 
-## 9. Was festgehalten wird
+## 10. Reihenfolge und Rechenzeit
 
-- **Kennungen:** SHA-256 dieser Datei und der Steckbriefe M001–M010.
+1. Festlegung (Commit und SHA-256 im Logbuch).
+2. Abschneide-Test auf echten Daten, dann die Gegenprobe J3.
+3. Läufe: zuerst 15 Min, dann 5 Min, dann 1 Min. Zwischenstände werden gesichert.
+4. Rechenzeit: Die Schätzung steht vor dem Lauf im Logbuch.
+   - Grundlage: die Messung auf künstlichen Kursen in Originalgröße.
+   - Wenn nötig, läuft es nachts zusätzlich im Labor-Slice auf dem Pi (MemoryMax wirkt dort seit 18.10.).
+
+## 11. Was festgehalten wird
+
+- **Kennungen:** SHA-256 dieser Datei und der Steckbriefe M001–M023.
 - **Code-Hashes:**
   - Bot cbfe06cff;
-  - Chart-Leser v1.1 c5ca9efa1343, gerechnet über `chartleser/__init__.py`, `kern.py`, `lesen.py`, `signal.py` und
-    `geometrie.py`, nach Namen sortiert, je Pfad und Inhalt (ohne das Startskript `pruefe.py`; nachgerechnet am
-    19.10.: unverändert);
+  - Chart-Leser v1.1 c5ca9efa1343 (gerechnet über `chartleser/__init__.py`, `kern.py`, `lesen.py`, `signal.py` und
+    `geometrie.py`);
   - `bt/` 61750fbbc22e;
-  - der Code-Hash des Labor-Simulators und der Signalquelle (`simulator.py`, `signale.py`, `auswertung.py`), den der
-    Logbuch-Eintrag vor dem Lauf nennt.
-- **Chart-Leser-Eingabe (M008–M010):** die geschlossenen 15-Min-Kerzen der letzten 14 Tage bis zur Entscheidung (der
-  Abruf des Bots). Daraus liest er wie festgelegt mit Zoom 50, 100 und 200 Kerzen. Gelesen wird nur an Kerzen, die den
-  Volumenfilter des Bots bestehen; das spart Rechenzeit und ändert keinen Trade.
-- **Steckbrief-Bedingungen außerhalb des Chart-Lesers:** Vortrend (M008–M010) und die drei Zeichen von Kaufkraft (M010)
-  prüft die Signalquelle des Labors, genau nach dem Wortlaut der Steckbriefe. Der Chart-Leser selbst prüft nur die
-  Linien.
-- **Daten:** Stand der Daten (Ladezeitpunkt) und fehlende Werte.
-- **Bericht:** `lern-labor/lerntopf-lauf-1/` auf backtest, je Kandidat und Jahr, dazu die Rangliste.
-  - Die Labor-Seite zeigt die Rangliste erst nach dem OK des Inhabers zum Diff.
-- **Danach:** Nach dem Lauf wird an diesen Regeln nichts geändert. Neue Ideen aus dem Ergebnis werden neue Steckbriefe
-  mit neuer Nummer und gehen in einen späteren Lauf.
+  - der Code-Hash des Labors (Simulator, Signale, neue Erkennung M011–M023, Auswertung, Lauf), den der Logbuch-Eintrag
+    vor dem Lauf nennt.
+- **Bericht:** `lern-labor/lerntopf-lauf-1/` auf backtest. Die Labor-Seite zeigt die Rangliste erst nach dem OK des
+  Inhabers zum Diff.
+- **Danach:** Nach dem Lauf wird an diesen Regeln nichts geändert. Neue Ideen werden neue Steckbriefe mit neuer Nummer.
 
-## 10. Entscheidungen des Inhabers (19.10.2026)
+## 12. Danach (nur vorbereiten, nichts handeln)
 
-1. Break-even und Trailing bleiben auch bei H1 und H3, damit je Variante nur eine Sache anders ist.
-2. Die Filter rechnen auch bei H2 mit dem Ziel des Steckbriefs, also handeln alle 4 Varianten dieselben Signale.
-3. Mindestens 30 Trades je Jahr. Darunter heißt es „zu wenig Daten“, nicht „durchgefallen“, und so steht es in der
-   Rangliste.
-4. IEX-Abschlüsse und -Quotes für die Gegenprobe, nach dem Hauptdownload und mit gleicher Drosselung.
-5. Download-Start an Handelstagen um 22:30.
-6. Die Zufallslatte „Bester von 40“ gilt über alle 3 Jahre zusammen, nicht je Jahr. Stufe 1 wie in Abschnitt 7.
-7. H3 endet spätestens am 29.09.2023 zehn Minuten vor Schluss.
-8. Trailing-Stop (ab 1,5R, Abstand 1R) in M001–M010 ergänzt, als Korrektur der Beschreibung des Codes ohne neue Nummer.
-   Im Logbuch als Korrektur.
-9. Für M008–M010 ist ausdrücklich genannt, welche Filter gelten (Tabelle in Abschnitt 4).
+Für die im Prüftopf Bestätigten: Paper auf dem zweiten Alpaca-Konto (5.000 $).
+- eigener Dienst, nie das Konto des Live-Bots;
+- 0,5 % Risiko, höchstens 5 Positionen;
+- Ziel 200 Trades bzw. 3 Monate, Kriterien K1–K5;
+- Start nur mit OK des Inhabers.
 
-## Anhang A · SHA-256 der Steckbriefe (Fassung 19.10.2026)
+## 13. Entscheidungen des Inhabers
+
+**19.10.2026:**
+- Break-even und Trailing in allen Varianten;
+- die Filter rechnen mit dem Ziel aus dem Steckbrief;
+- mindestens 30 Trades je Jahr, sonst „zu wenig Daten“;
+- IEX-Abschlüsse und -Quotes für die Gegenprobe;
+- H3 endet spätestens am 29.09.2023;
+- Trailing in den Steckbriefen ergänzt.
+
+**20.10.2026 (großes Paket):**
+- M011–M023;
+- die Zeitebenen 1, 5 und 15 Min;
+- die Varianten H0–H4 mit dem Zeit-Stop in Kerzen;
+- Stufe 1 wie in Abschnitt 8, die Latte nur aus Kandidaten mit mindestens 30 Trades je Jahr;
+- Top 10 in den Prüftopf (Öffnung 1 von 3, eigene Vorab-Datei, nur mit OK);
+- die Flop-Liste;
+- Seiten für Top und Flop;
+- Paper auf Konto 2 nur vorbereiten.
+
+## 14. Offene Punkte für den Inhaber (vor der Festlegung)
+
+1. **H4:** Im Entwurf heißt es „nach L Kerzen raus“, als harte Grenze. Oder soll es wie H0 laufen: ab L Kerzen mit der
+   80-%-Regel prüfen, nach 2 L Kerzen raus?
+2. **Zufallslatte und Stufe 1:** Im Auftrag vom 20.10. steht die Latte nicht unter den Bedingungen für Stufe 1. Im
+   Entwurf ist sie deshalb nur Information, die eigentliche Prüfung gegen den Zufall kommt im Prüftopf mit „Bester
+   von 10“. Bisher (Fahrplan 4.8.14) war die Latte Teil von Stufe 1. Bitte bestätigen.
+3. **Filter für M012–M023:** Im Entwurf gilt wie bei M011 nur das Zeitfenster, damit die Lehrbuch-Muster ohne die
+   Filter des Bots gemessen werden. Einverstanden?
+4. **Flop-Liste:** „klar verlieren“ heißt im Entwurf: jedes Jahr unter 0 und über alle 3 Jahre höchstens −0,10R.
+   Einverstanden?
+5. **1 und 5 Min:** nur reguläre Handelszeit, kein Nachholdurchgang, SPY aus SIP. Einverstanden?
+
+## Anhang A · SHA-256 der Steckbriefe (Fassung 20.10.2026)
 
 | Steckbrief | SHA-256 |
 |---|---|
@@ -229,3 +279,16 @@ Sie läuft vor dem eigentlichen Lauf. Sie wertet nichts und wählt nichts aus.
 | M008-keil-steigend.md | `ea04a6698e4de7ce74b3e22dfb68ffe6f47e0d1a1eb9c0b4b7fa34ac5fb9d96e` |
 | M009-keil-fallend.md | `da4c8e2629354e7c5a50d5f45f8279e9fd7ab2efd215039950e1726e668b761e` |
 | M010-doppelboden-mit-kaufkraft.md | `d0ab6beac91b2228773346c19f1b542ca511385859e76f6ea746f84de3186ae2` |
+| M011-hammer.md | `0134383f5ee8935f55c433c342f7c75599305e1fd7220f3110ac1c74ea2d1d74` |
+| M012-shooting-star.md | `8b5115472b318eea72d897e9b16480b8afd95505d5fd81dcd9cd457ac285ce16` |
+| M013-bullische-umarmung.md | `13d2dc0ea22b5127f96f53710cf3bf72985a979924d3d4ec480d18eb9ffb4632` |
+| M014-baerische-umarmung.md | `628bfd21941f34b59e4f890b7cff191e7b8e58f1d526fbf8ca387b96d7f305fe` |
+| M015-bullen-flagge.md | `9daf150b325e3ec381a21bbfd62fc78f4fad7b1d576ca11bbaa079fdea14fc2c` |
+| M016-baeren-flagge.md | `cf305ea25154b99620c10ae3e93d4c91a10e26bbb1162c901c65fca2bf5bd9b9` |
+| M017-symmetrisches-dreieck.md | `af1878c6d6c01eec97e930c20eae4affb97f6bdcb676d7f31a610788eefd2adc` |
+| M018-inside-bar.md | `94cec3f3d1ae33b1319c1110cf76fb843c2a1d673f161fd11f92e5de48f60c98` |
+| M019-morgenstern.md | `b1e0e45027a25415310153c3985a20a3bcc76deef31da8eadbe5929fd9ebc5ad` |
+| M020-abendstern.md | `37ccf2d621dfe061f5903eeec6f0517d6e9204f6be09b78d536c5d615456a09b` |
+| M021-dreifachboden.md | `f20fc5ba2da010dd7917571689e4be99e1067f63b72a613f553c4d62317102e6` |
+| M022-dreifachtop.md | `4af57e0c944e1e191b21707195ecf2a6b818e97982e6748b0292376e1f39aefb` |
+| M023-tasse-mit-henkel.md | `9a5b53a5cbb986a87d547c4de0e87505957d1969435e7a02e240347eb63017f2` |

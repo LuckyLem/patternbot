@@ -1,17 +1,13 @@
 {
  "schema": 1,
- "stand": "2026-10-20T08:03:12-04:00",
+ "stand": "2026-10-20T17:17:39-04:00",
  "quelle": "PC",
- "code_labor": "46f50d75b714",
+ "code_labor": "70854a96b8d6",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
   "job": null,
   "fenster": [
-   {
-    "start": "2026-10-19T16:30:00-04:00",
-    "stopp": "2026-10-20T09:00:00-04:00"
-   },
    {
     "start": "2026-10-20T16:30:00-04:00",
     "stopp": "2026-10-21T09:00:00-04:00"
@@ -47,6 +43,10 @@
    {
     "start": "2026-10-30T16:30:00-04:00",
     "stopp": "2026-11-02T09:00:00-05:00"
+   },
+   {
+    "start": "2026-11-02T16:30:00-05:00",
+    "stopp": "2026-11-03T09:00:00-05:00"
    }
   ]
  },
@@ -179,6 +179,55 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 17:15",
+   "art": "Vorab-Datei",
+   "text": "Lerntopf-Lauf 1 (großes Paket), Fassung 3 festgelegt: vorab/lerntopf-lauf-1.md, SHA-256 96e06e84c61bcdd3cc0f5c39785149b3059aeef280fc17efd0bed30040885934, Commit 36dd52bf15ce0a3017301d7180fd7a6cb8f53f59 auf backtest. Sie ersetzt Fassung 2 (SHA-256 5211cdd6e2fa1d5c1db64306fea82237aa3b1a586cbe39b2cf441657470d5b9e, Commit 3c1f77831f145799b7876496f8f4f943d3b02780), die unverändert als vorab/lerntopf-lauf-1-fassung-2.md daneben liegt. Zwei Änderungen (Inhaber 20.10.): 1. SIP 1 Min ab 01.09.2020 als Vorlauf, nur zum Zurückschauen (Chart-Leser, Selbstkontrolle der Ankerpunkte); Signale und Trades erst ab 01.10.2020; nichts ab 01.10.2023. Grund: Chart-Leser und Selbstkontrolle schauen in den ersten Tagen vor den 01.10.2020 zurück, ohne diese Minuten bricht der Lauf ab. 2. Fenster für alle Muster: vollständig in den letzten 200 Kerzen der Zeitebene, wie beim Bot; Beginn laut Tabelle für H4 höchstens 199 Kerzen vor der Signalkerze. Grund: M023 reicht bei AMGN im Median 2.600 Kerzen zurück, höchstens fast 3 Jahre; das ist kein Muster auf 15 oder 5 Min und widerspricht dem Fenster in Abschnitt 4. Die Steckbriefe bleiben unverändert. Sonst unverändert (230 Kandidaten). Vor der Festlegung wurde kein Ergebnis gelesen.",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 17:15",
+   "art": "Code",
+   "text": "Fenster-Regel von Fassung 3 im Labor-Code, neuer Code-Hash 435020e128b3 (vorher ec10708d921d): M011–M023 in muster_neu.alle_signale, M008–M010 in signale.leser_signale (Beginn der Formation des Chart-Lesers); ein Muster, dessen Beginn mehr als 199 Kerzen vor der Signalkerze liegt, wird nicht erkannt. M001–M007 liegen durch den Bot ohnehin in den letzten 200 Kerzen. Der Chart-Leser bleibt unverändert (c5ca9efa1343). Pflichttest „Muster breiter als 200 Kerzen wird nicht erkannt“: M023-Tasse über 120 Kerzen erkannt, über 260 nicht; M011 mit Vortrend über 150 Kerzen erkannt, über 230 nicht; Grenze 199 erkannt, 200 nicht; M009 mit Beginn 199 Kerzen erkannt, 200 nicht. Alle 10 Test-Suiten grün. Die Abschneide-Tests für 15 und 5 Min laufen mit diesem Hash neu, nach dem SIP-Vorlauf.",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 17:15",
+   "art": "Messung",
+   "text": "Fenster von 200 Kerzen, vor Fassung 3 (nur Geometrie, keine Trades; AMGN, AAPL, MSFT, JPM; Signale ab 01.10.2020): Beginn mehr als 199 Kerzen vor der Signalkerze bei M023 auf 15 Min 362 von 394 Signalen (Median 1.823 Kerzen, höchstens 19.226), auf 5 Min 1.137 von 1.219 (Median 3.366, höchstens 56.336); M009 15 Min 1 von 123 (200 Kerzen); M008 5 Min 1 von 123 (202 Kerzen); alle übrigen Muster 0 (M001–M007 höchstens 67, M021 höchstens 82, M022 höchstens 113). Bericht: messungen/fenster-200.md",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 17:15",
+   "art": "Gegenprobe",
+   "text": "Gegenprobe J3 fertig (Vorab-Datei Fassung 2, Labor-Code ec10708d921d, Laborseite nur M001–M007): Signale 1:1 - 8.802 Setups im Labor und im Replay, alle 8.802 in beiden, 0 nur im Labor, 0 nur im Replay, 0 mit abweichender Kante, Stop oder Ziel. Abweichende Entscheidungen alle erklärt: Spread ohne Quotes 1.022, Kursalter ohne Quotes 424, Einstieg zur Minute 131, Position im Replay schon offen 70, 1 Signal je Muster, Aktie und Tag 13, 5-Plätze-Grenze 1; dazu 2 Fälle einzeln (APD 14.09.2023 und ELV 16.05.2023, Kerze 10:30 NY: in der SIP-Minute 10:46 nach der Entscheidung gab es keinen Abschluss, das Labor hat dort keinen Einstiegskurs, das Replay füllt am Live-Kurs - Einstieg zur Minute). Keine Ergebnisse in R gelesen. Die Fenster-Regel von Fassung 3 ändert an M001–M007 nichts. Bericht: gegenprobe/gegenprobe.md",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 17:02",
+   "art": "Daten",
+   "text": "Befund vor dem ersten Ergebnis: Auch der Lauf auf 15 Min bräuchte SIP-Minuten vor dem 01.10.2020 (Chart-Leser M008–M010 schaut in den ersten Tagen 14 Tage zurück, bei AMGN, AAPL, MSFT und JPM SIP-Tage 21.–30.09.2020; Selbstkontrolle M011–M023 teils ebenso). 5 Min ist nicht betroffen. Entscheidung des Inhabers 20.10.: SIP 1 Min ab 01.09.2020 als Vorlauf nachladen (am 21.10. vor 15:30 deutscher Zeit), nur zum Zurückschauen; dazu Fassung 3 der Vorab-Datei mit der Fenster-Regel (Beginn jedes Musters höchstens 200 Kerzen vor der Signalkerze). Kein Lauf vor Fassung 3.",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 17:02",
+   "art": "Gegenprobe",
+   "text": "Die Laborseite der Gegenprobe rechnet ab jetzt nur die Bot-Muster M001–M007 (Detektoren wie im Replay auf Aufsteigendes Dreieck und Rechteck beschränkt); M008–M023 gehören nicht in den Vergleich (Vorab-Datei Abschnitt 9). Geändert ist nur lern_labor/gegenprobe.py, das nicht zum Labor-Code-Hash gehört. Inhaber 20.10.: in Ordnung. Neustart 16:32.",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 17:02",
+   "art": "Gegenprobe",
+   "text": "Gegenprobe J3, Neustart mit Fassung 2 und Labor-Code ec10708d921d: Das Replay (M001/M003, 147 Werte) ist bis 29.09.2023 durchgelaufen. Die Laborseite brach um 08:33 ab: Sie rechnete auch M008–M023 mit, und die Selbstkontrolle von M023 verlangte SIP-Minuten vom 23.09.2020, die nicht geladen sind (SIP 1 Min nur ab 01.10.2020). Kein Ergebnis gelesen.",
+   "ok": false
+  },
   {
    "datum": "2026-10-20",
    "zeit": "2026-10-20 08:02",

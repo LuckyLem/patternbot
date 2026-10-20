@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "stand": "2026-10-20T06:12:09-04:00",
+ "stand": "2026-10-20T06:19:23-04:00",
  "quelle": "PC",
  "code_labor": "c706d660cab5",
  "labor": {
@@ -179,6 +179,13 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-20",
+   "zeit": "2026-10-20 06:18",
+   "art": "Vorab-Datei",
+   "text": "Lerntopf-Lauf 1 (großes Paket), Fassung 1 festgelegt: vorab/lerntopf-lauf-1.md, SHA-256 72e2443319802378aa73ae21298026ccadea6f0cc70c8d0c8737edd4b1b5bc4b, Commit 482282056027f20b511ae1d36927238fe14f462d auf backtest. Grundlage: Entwurf 8d7a7fd, geprüft von Claude im Chat, mit den Antworten und Ergänzungen des Inhabers vom 20.10. (H4 mit 80-%-Regel ab L und 2 L; Latte Bester von N nur Information; M012–M023 nur Zeitfenster; Flop-Liste vor Kosten; 1/5 Min reguläre Handelszeit; Stufe 1 mit Zufall in derselben Richtung, Startwert 20261020; Top 10 höchstens 2 je Muster). 345 Kandidaten, Steckbriefe M001–M023 mit SHA-256 im Anhang A. Ab jetzt keine Regeländerung; findet Claude im Chat vor dem ersten Ergebnis einen Fehler, gibt es Fassung 2.",
+   "ok": null
+  },
   {
    "datum": "2026-10-20",
    "zeit": "2026-10-20 06:12",

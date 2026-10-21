@@ -58,3 +58,4 @@ des Prüftopfs. Zeiten in New-York-Zeit, der neueste Eintrag steht unten. Eintr�
 | 2026-10-21 11:03 | Lauf | Lerntopf-Lauf 1, ausgewertet 15 Min (Vorab-Datei Fassung 3, Labor-Code 435020e128b3): Stufe 1 bei 0 Kandidaten. Bericht: lerntopf-lauf-1/bericht-15m.md | – |
 | 2026-10-21 11:09 | Lauf | Lerntopf-Lauf 1, ausgewertet 15 Min (Vorab-Datei Fassung 3, Labor-Code 435020e128b3): Stufe 1 bei 0 Kandidaten. Bericht: lerntopf-lauf-1/bericht-15m.md | – |
 | 2026-10-21 11:15 | Lauf | Lerntopf-Lauf 1, ausgewertet 15 Min (Vorab-Datei Fassung 3, Labor-Code 435020e128b3): Stufe 1 bei 0 Kandidaten. Bericht: lerntopf-lauf-1/bericht-15m.md | – |
+| 2026-10-21 11:21 | Lauf | Lerntopf-Lauf 1, ausgewertet 15 Min (Vorab-Datei Fassung 3, Labor-Code 435020e128b3): Stufe 1 bei 0 Kandidaten. Bericht: lerntopf-lauf-1/bericht-15m.md | – |

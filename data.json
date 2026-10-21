@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-21T14:36:58+00:00",
- "heartbeat": "2026-10-21T14:36:58+00:00",
+ "updated": "2026-10-21T14:47:06+00:00",
+ "heartbeat": "2026-10-21T14:47:06+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9890.55,
+  "equity": 9893.66,
   "last_equity": 9879.95,
-  "day_change": 10.6,
-  "total_change": -109.45
+  "day_change": 13.71,
+  "total_change": -106.34
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "short",
    "qty": 12,
    "entry": 99.82,
-   "current": 99.64,
-   "pl": 2.17
+   "current": 99.35,
+   "pl": 5.59
   },
   {
    "symbol": "META",
    "side": "long",
    "qty": 2,
    "entry": 709.89,
-   "current": 706.29,
-   "pl": -7.19
+   "current": 709.32,
+   "pl": -1.14
   },
   {
    "symbol": "TJX",
    "side": "short",
    "qty": 13,
    "entry": 146.33,
-   "current": 146.46,
-   "pl": -1.69
+   "current": 146.75,
+   "pl": -5.39
   },
   {
    "symbol": "TT",
    "side": "long",
    "qty": 4,
    "entry": 467.5,
-   "current": 466.96,
-   "pl": -2.14
+   "current": 467.75,
+   "pl": 1.01
   },
   {
    "symbol": "VZ",
    "side": "short",
    "qty": 45,
    "entry": 43.84,
-   "current": 43.41,
-   "pl": 19.44
+   "current": 43.53,
+   "pl": 13.64
   }
  ],
  "trades": [
@@ -1495,7 +1495,7 @@
  ],
  "funnel": {
   "day": "2026-10-21",
-  "setups": 41,
+  "setups": 48,
   "orders": 5,
   "filled": 5,
   "unfilled": 0,
@@ -1504,7 +1504,7 @@
   "rejected": {
    "skip-chase": 5,
    "skip-dup": 1,
-   "skip-maxopen": 4,
+   "skip-maxopen": 11,
    "skip-rr": 2,
    "skip-spread": 10,
    "skip-stale": 2,
@@ -1672,7 +1672,7 @@
   },
   {
    "day": "2026-10-21",
-   "setups": 41,
+   "setups": 48,
    "orders": 5,
    "filled": 5,
    "unfilled": 0,
@@ -1681,7 +1681,7 @@
    "rejected": {
     "skip-chase": 5,
     "skip-dup": 1,
-    "skip-maxopen": 4,
+    "skip-maxopen": 11,
     "skip-rr": 2,
     "skip-spread": 10,
     "skip-stale": 2,

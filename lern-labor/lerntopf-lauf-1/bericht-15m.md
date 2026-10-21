@@ -1,6 +1,6 @@
 # Lerntopf-Lauf 1 · Zwischenstand 15 Min
 
-Stand 21.10.2026 17:01 deutscher Zeit (11:01 New York).
+Stand 21.10.2026 17:44 deutscher Zeit (11:44 New York).
 
 | | |
 |---|---|
@@ -27,6 +27,34 @@ Stand 21.10.2026 17:01 deutscher Zeit (11:01 New York).
 - Für M001–M007 auf 15 Min sind die Jahre 2024–2026 aus den Jahresrunden schon bekannt.
 - M017 und M018 feuern auch auf trendlosem Rauschen (ihr Trend kommt nur aus EMA20/EMA50, Pflichttest 20.10.).
 - H4 ohne nachgebaute Entstehungsdauer (nicht gerechnet): 0 Signale.
+
+**Zur Auswertung (Diagnose, nur Information, ändert keine Einstufung):**
+
+*Kosten-Ausreißer.* Für M011–M023 gibt es keinen Mindest-Stop (Vorab-Datei, Abschnitt 6). Liegt der Stop fast auf dem Einstieg, werden die Kosten je Aktie durch einen winzigen Stop-Abstand geteilt, und ein einzelner Trade kostet Tausende oder Billionen R. Dann bestimmt dieser eine Trade den Erwartungswert nach Kosten. Nach den Regeln ist das richtig gerechnet; die Spalte „ohne Ausreißer“ zeigt nur, wie der Rest aussieht.
+
+| Kandidat (H0) | Trades | davon Kosten über 1R | größte Kosten | kleinster Stop-Abstand | EV nach Kosten | EV ohne Ausreißer (nur Info) |
+|---|---|---|---|---|---|---|
+| M008-15m-H0 | 507 | 1 | 1.5R | 0.0265 % | -0.116 | -0.114 |
+| M011-15m-H0 | 5722 | 10 | 6.9R | 0.0058 % | -0.085 | -0.082 |
+| M012-15m-H0 | 5675 | 18 | 3.2e+12R | 0.0000 % | -556154874.794 | -0.094 |
+| M013-15m-H0 | 13497 | 43 | 18.3R | 0.0022 % | -0.090 | -0.088 |
+| M014-15m-H0 | 14618 | 45 | 3.5e+12R | 0.0000 % | -454657761.102 | -0.108 |
+| M015-15m-H0 | 7850 | 122 | 693.2R | 0.0001 % | -0.164 | -0.162 |
+| M016-15m-H0 | 7176 | 116 | 181.0R | 0.0003 % | -0.203 | -0.138 |
+| M017-15m-H0 | 5056 | 5 | 16.5R | 0.0024 % | -0.103 | -0.097 |
+| M018-15m-H0 | 35365 | 24 | 2.6e+12R | 0.0000 % | -72523681.343 | -0.083 |
+| M019-15m-H0 | 2493 | 2 | 1.5R | 0.0273 % | -0.073 | -0.071 |
+| M020-15m-H0 | 2515 | 4 | 6.6R | 0.0060 % | -0.103 | -0.095 |
+
+Dieselben Trades stecken in allen 5 Varianten eines Musters (44 weitere Varianten betroffen).
+
+*Zufall in derselben Richtung.* Die Zufallsminute liegt laut Vorab-Datei irgendwo in derselben Stunde, also auch vor dem echten Einstieg. Die Richtung kommt vom echten Signal, das den Ausbruch schon gesehen hat. Zufalls-Einstiege vor dem echten Einstieg nehmen diesen Ausbruch mit; der Vergleich schaut damit zum Teil in die Zukunft und ist für die echten Trades unfair. Die Regel bleibt für Lauf 1, wie sie ist. Gemessen (Variante H0, jede 3. Minute der Stunde, ohne Kosten-Ausreißer):
+
+| Kandidat | echt, nach Kosten | Zufall vor dem echten Einstieg | Zufall ab dem echten Einstieg |
+|---|---|---|---|
+| M021-15m-H0 | -0.035 | +0.082 (4277) | -0.029 (5384) |
+| M007-15m-H0 | -0.039 | +0.146 (5813) | -0.020 (6994) |
+| M003-15m-H0 | -0.043 | +0.137 (28867) | -0.034 (34622) |
 
 ## 2. Signale je Muster und Jahr
 

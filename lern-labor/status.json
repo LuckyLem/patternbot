@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "stand": "2026-10-21T11:21:35-04:00",
+ "stand": "2026-10-21T11:44:16-04:00",
  "quelle": "PC",
- "code_labor": "70e9c0349b3f",
+ "code_labor": "18ab13ef6a8f",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
@@ -179,6 +179,13 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-21",
+   "zeit": "2026-10-21 11:38",
+   "art": "Erklärung",
+   "text": "Die vier Einträge „Lauf“ von 11:03, 11:09, 11:15 und 11:21 sind derselbe Eintrag. Die neue Automatik nach dem Lauf (nach_lauf.py) brach nach dem Upload an einem Schritt ab und wiederholte bei jedem neuen Versuch Logbuch-Eintrag und Upload. Behoben: jeder Schritt wird gemerkt und nur einmal gemacht. Einträge werden nicht gelöscht. Ergebnis 15 Min unverändert: Stufe 1 bei 0 Kandidaten. Neu im Bericht: Diagnose zu Kosten-Ausreißern (Stop fast auf dem Einstieg, kein Mindest-Stop für M011–M023) und zum Zufall in derselben Richtung (Zufallsminute darf vor dem echten Einstieg liegen); nur Information, keine Regel geändert.",
+   "ok": null
+  },
   {
    "datum": "2026-10-21",
    "zeit": "2026-10-21 11:21",

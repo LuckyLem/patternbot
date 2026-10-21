@@ -1,4 +1,4 @@
-Lerntopf-Lauf 1 · Zwischenstand 15 Min (21.10. 17:01)
+Lerntopf-Lauf 1 · Zwischenstand 15 Min (21.10. 17:44)
 
 115 Kandidaten, 110 mit genug Daten (mind. 30 Trades je Jahr). Stufe 1: 0.
 Vorbehalte: Überlebensverzerrung (Werteliste von heute) und ohne Quotes bei M001–M010 – beides macht die Ergebnisse eher zu gut.
@@ -8,6 +8,10 @@ Top 10 (nur innerhalb dieser Zeitebene):
 
 Flop 10 (vor Kosten in jedem Jahr klar negativ):
 1. M008-15m-H3: gesamt vor Kosten -0.158R
+
+Achtung Kosten-Ausreißer: Bei M012 (15m), M014 (15m), M016 (15m), M018 (15m) liegt bei einzelnen Trades der Stop fast auf dem Einstieg (kein Mindest-Stop für M011–M023). Diese Trades kosten bis zu Billionen R und bestimmen dort den Mittelwert nach Kosten. Ohne sie wäre keiner der betroffenen Kandidaten positiv. Regel bleibt, Details im Bericht.
+
+Zufall in derselben Richtung: Die Zufallsminute darf vor dem echten Einstieg liegen und kennt dann die Richtung des Ausbruchs - der Vergleich ist für die echten Trades unfair (Zahlen im Bericht). Regel bleibt für Lauf 1.
 
 Latte „Bester von N“ (nur Info): N = 110.
 Für die Top 10 wird nichts im Prüftopf geöffnet.

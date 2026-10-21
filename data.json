@@ -1,34 +1,92 @@
 {
  "version": 1,
- "updated": "2026-10-21T13:55:11+00:00",
- "heartbeat": "2026-10-21T13:55:11+00:00",
+ "updated": "2026-10-21T14:05:21+00:00",
+ "heartbeat": "2026-10-21T14:05:21+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9882.2,
+  "equity": 9892.96,
   "last_equity": 9879.95,
-  "day_change": 2.25,
-  "total_change": -117.8
+  "day_change": 13.01,
+  "total_change": -107.04
  },
  "positions": [
+  {
+   "symbol": "ABT",
+   "side": "short",
+   "qty": 12,
+   "entry": 99.82,
+   "current": 98.7,
+   "pl": 13.33
+  },
+  {
+   "symbol": "META",
+   "side": "long",
+   "qty": 2,
+   "entry": 709.89,
+   "current": 709.69,
+   "pl": -0.4
+  },
   {
    "symbol": "TT",
    "side": "long",
    "qty": 4,
    "entry": 467.5,
-   "current": 468.14,
-   "pl": 2.56
+   "current": 466.89,
+   "pl": -2.44
   },
   {
    "symbol": "VZ",
    "side": "short",
    "qty": 45,
    "entry": 43.84,
-   "current": 43.84,
-   "pl": -0.31
+   "current": 43.78,
+   "pl": 2.34
   }
  ],
  "trades": [
+  {
+   "symbol": "ABT",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-10-21",
+   "opened": "2026-10-21T14:00:34.787657+00:00",
+   "closed": null,
+   "entry": 99.82,
+   "stop": 103.14,
+   "target": 96.02,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<100.77",
+   "max_r": 0.33,
+   "key": "t110",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "META",
+   "pattern": "Rectangle",
+   "side": "long",
+   "day": "2026-10-21",
+   "opened": "2026-10-21T14:00:33.262464+00:00",
+   "closed": null,
+   "entry": 709.89,
+   "stop": 694.08,
+   "target": 732.76,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break>706.97",
+   "max_r": null,
+   "key": "t109",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "TT",
    "pattern": "Rectangle",
@@ -66,7 +124,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<44.02",
-   "max_r": 0.0,
+   "max_r": 0.09,
    "key": "t107",
    "detail": false,
    "ai_verdict": null
@@ -1246,48 +1304,6 @@
    "key": "t49",
    "detail": true,
    "ai_verdict": "neutral"
-  },
-  {
-   "symbol": "PANW",
-   "pattern": "AscendingTriangle",
-   "side": "long",
-   "day": "2026-09-28",
-   "opened": "2026-09-28T14:01:55.562710+00:00",
-   "closed": "2026-09-28T15:50:00.534957+00:00",
-   "entry": 382.52,
-   "stop": 375.5,
-   "target": 387.77,
-   "exit": 387.78,
-   "pnl": 26.3,
-   "r": 0.749,
-   "status": "closed",
-   "exit_source": "fill",
-   "reason": "asc_triangle break>381.01",
-   "max_r": 0.75,
-   "key": "t48",
-   "detail": true,
-   "ai_verdict": "gut"
-  },
-  {
-   "symbol": "UAL",
-   "pattern": "HeadShouldersTop",
-   "side": "short",
-   "day": "2026-09-28",
-   "opened": "2026-09-28T13:58:02.121163+00:00",
-   "closed": "2026-09-28T15:58:56.539672253+00:00",
-   "entry": 109.83,
-   "stop": 114.69,
-   "target": 105.95,
-   "exit": 110.09,
-   "pnl": -2.86,
-   "r": -0.054,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "H&S neckline_break<110.78",
-   "max_r": 0.06,
-   "key": "t47",
-   "detail": true,
-   "ai_verdict": "neutral"
   }
  ],
  "stats": {
@@ -1471,18 +1487,18 @@
  ],
  "funnel": {
   "day": "2026-10-21",
-  "setups": 20,
-  "orders": 2,
-  "filled": 2,
+  "setups": 30,
+  "orders": 4,
+  "filled": 4,
   "unfilled": 0,
-  "traded": 2,
+  "traded": 4,
   "coverage_from": "2026-10-21T13:50:25.240679+00:00",
   "rejected": {
-   "skip-chase": 3,
+   "skip-chase": 4,
    "skip-rr": 1,
-   "skip-spread": 8,
+   "skip-spread": 9,
    "skip-stale": 2,
-   "skip-vol": 4
+   "skip-vol": 10
   }
  },
  "funnel_days": [
@@ -1646,18 +1662,18 @@
   },
   {
    "day": "2026-10-21",
-   "setups": 20,
-   "orders": 2,
-   "filled": 2,
+   "setups": 30,
+   "orders": 4,
+   "filled": 4,
    "unfilled": 0,
-   "traded": 2,
+   "traded": 4,
    "coverage_from": "2026-10-21T13:50:25.240679+00:00",
    "rejected": {
-    "skip-chase": 3,
+    "skip-chase": 4,
     "skip-rr": 1,
-    "skip-spread": 8,
+    "skip-spread": 9,
     "skip-stale": 2,
-    "skip-vol": 4
+    "skip-vol": 10
    }
   }
  ],

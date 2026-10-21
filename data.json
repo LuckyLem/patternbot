@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-21T14:05:21+00:00",
- "heartbeat": "2026-10-21T14:05:21+00:00",
+ "updated": "2026-10-21T14:16:33+00:00",
+ "heartbeat": "2026-10-21T14:16:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9892.96,
+  "equity": 9871.0,
   "last_equity": 9879.95,
-  "day_change": 13.01,
-  "total_change": -107.04
+  "day_change": -8.95,
+  "total_change": -129.0
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 12,
    "entry": 99.82,
-   "current": 98.7,
-   "pl": 13.33
+   "current": 100.56,
+   "pl": -8.99
   },
   {
    "symbol": "META",
    "side": "long",
    "qty": 2,
    "entry": 709.89,
-   "current": 709.69,
-   "pl": -0.4
+   "current": 705.95,
+   "pl": -7.88
   },
   {
    "symbol": "TT",
    "side": "long",
    "qty": 4,
    "entry": 467.5,
-   "current": 466.89,
-   "pl": -2.44
+   "current": 466.08,
+   "pl": -5.68
   },
   {
    "symbol": "VZ",
    "side": "short",
    "qty": 45,
    "entry": 43.84,
-   "current": 43.78,
-   "pl": 2.34
+   "current": 43.53,
+   "pl": 13.59
   }
  ],
  "trades": [
@@ -124,7 +124,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<44.02",
-   "max_r": 0.09,
+   "max_r": 0.42,
    "key": "t107",
    "detail": false,
    "ai_verdict": null
@@ -1487,18 +1487,18 @@
  ],
  "funnel": {
   "day": "2026-10-21",
-  "setups": 30,
+  "setups": 35,
   "orders": 4,
   "filled": 4,
   "unfilled": 0,
   "traded": 4,
   "coverage_from": "2026-10-21T13:50:25.240679+00:00",
   "rejected": {
-   "skip-chase": 4,
-   "skip-rr": 1,
-   "skip-spread": 9,
+   "skip-chase": 5,
+   "skip-rr": 2,
+   "skip-spread": 10,
    "skip-stale": 2,
-   "skip-vol": 10
+   "skip-vol": 12
   }
  },
  "funnel_days": [
@@ -1662,18 +1662,18 @@
   },
   {
    "day": "2026-10-21",
-   "setups": 30,
+   "setups": 35,
    "orders": 4,
    "filled": 4,
    "unfilled": 0,
    "traded": 4,
    "coverage_from": "2026-10-21T13:50:25.240679+00:00",
    "rejected": {
-    "skip-chase": 4,
-    "skip-rr": 1,
-    "skip-spread": 9,
+    "skip-chase": 5,
+    "skip-rr": 2,
+    "skip-spread": 10,
     "skip-stale": 2,
-    "skip-vol": 10
+    "skip-vol": 12
    }
   }
  ],

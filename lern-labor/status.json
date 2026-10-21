@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "stand": "2026-10-21T11:09:36-04:00",
+ "stand": "2026-10-21T11:15:34-04:00",
  "quelle": "PC",
  "code_labor": "70e9c0349b3f",
  "labor": {
@@ -179,6 +179,13 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-21",
+   "zeit": "2026-10-21 11:15",
+   "art": "Lauf",
+   "text": "Lerntopf-Lauf 1, ausgewertet 15 Min (Vorab-Datei Fassung 3, Labor-Code 435020e128b3): Stufe 1 bei 0 Kandidaten. Bericht: lerntopf-lauf-1/bericht-15m.md",
+   "ok": null
+  },
   {
    "datum": "2026-10-21",
    "zeit": "2026-10-21 11:09",

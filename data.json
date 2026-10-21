@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-21T15:07:19+00:00",
- "heartbeat": "2026-10-21T15:07:19+00:00",
+ "updated": "2026-10-21T15:17:34+00:00",
+ "heartbeat": "2026-10-21T15:17:34+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9904.22,
+  "equity": 9901.37,
   "last_equity": 9879.95,
-  "day_change": 24.27,
-  "total_change": -95.78
+  "day_change": 21.42,
+  "total_change": -98.63
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "short",
    "qty": 12,
    "entry": 99.82,
-   "current": 98.44,
-   "pl": 16.51
+   "current": 98.5,
+   "pl": 15.79
   },
   {
    "symbol": "META",
    "side": "long",
    "qty": 2,
    "entry": 709.89,
-   "current": 708.5,
-   "pl": -2.78
+   "current": 708.87,
+   "pl": -2.04
   },
   {
    "symbol": "TJX",
    "side": "short",
    "qty": 13,
    "entry": 146.33,
-   "current": 146.88,
-   "pl": -7.15
+   "current": 146.89,
+   "pl": -7.28
   },
   {
    "symbol": "TT",
    "side": "long",
    "qty": 4,
    "entry": 467.5,
-   "current": 466.61,
-   "pl": -3.56
+   "current": 465.31,
+   "pl": -8.78
   },
   {
    "symbol": "VZ",
    "side": "short",
    "qty": 45,
    "entry": 43.84,
-   "current": 43.37,
-   "pl": 21.24
+   "current": 43.3,
+   "pl": 23.94
   }
  ],
  "trades": [
@@ -153,7 +153,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<44.02",
-   "max_r": 0.74,
+   "max_r": 0.79,
    "key": "t107",
    "detail": false,
    "ai_verdict": null
@@ -1495,7 +1495,7 @@
  ],
  "funnel": {
   "day": "2026-10-21",
-  "setups": 50,
+  "setups": 51,
   "orders": 5,
   "filled": 5,
   "unfilled": 0,
@@ -1504,7 +1504,7 @@
   "rejected": {
    "skip-chase": 5,
    "skip-dup": 1,
-   "skip-maxopen": 13,
+   "skip-maxopen": 14,
    "skip-rr": 2,
    "skip-spread": 10,
    "skip-stale": 2,
@@ -1672,7 +1672,7 @@
   },
   {
    "day": "2026-10-21",
-   "setups": 50,
+   "setups": 51,
    "orders": 5,
    "filled": 5,
    "unfilled": 0,
@@ -1681,7 +1681,7 @@
    "rejected": {
     "skip-chase": 5,
     "skip-dup": 1,
-    "skip-maxopen": 13,
+    "skip-maxopen": 14,
     "skip-rr": 2,
     "skip-spread": 10,
     "skip-stale": 2,

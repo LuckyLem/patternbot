@@ -1,25 +1,26 @@
 {
  "schema": 1,
- "stand": "2026-10-19T16:32:42-04:00",
+ "stand": "2026-10-21T11:49:02-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
   "pruefung": "online gegen Commit 4c580ae geprüft"
  },
- "tageslog": "Mo 19.10.2026",
+ "tageslog": "Mi 21.10.2026",
  "zuletzt": [
-  "Berichte von Runde 2 (Haupt- und Nebenrechnung) und ORB mit Ticks auf backtest.",
-  "Änderungsprotokoll berichtigt („So 18.10.“ statt „Do 15.10.“), als Korrektur kenntlich.",
-  "Vorab-Datei „Lerntopf-Lauf 1“ als Entwurf auf backtest, mit den Entscheidungen des Inhabers.",
-  "Labor-Simulator, Signalquelle M001–M010, Auswertung, Lauf-Gerüst mit harter Sperre und Gegenprobe gebaut.",
-  "Erster Handelstag mit dem Technik-Paket: 6 Trades und 131 Setups, alle mit Bot-Version; Export mit Version; Review nach Kosten: −1,47R; Broker flach; Stop-Protokoll und skip-maxopen hatten heute keinen Anlass.",
-  "Ergänzt: Einreichung neuer Muster ab der ersten Rangliste (4.8.25); Etappe 2 startet danach (4.2.8–4.2.12).",
-  "Downloads für den Lerntopf: läuft seit 19.10. 22:30."
+  "SIP-Vorlauf 01.–30.09.2020 geladen (168 Abrufe, vor 15:30).",
+  "Die 4 Abschneide-Tests mit dem Labor-Code 435020e128b3 bestanden (15 und 5 Min, je 300 von 300).",
+  "Lauf 15 Min gestartet um 11:39 (150 Werte, 14 Prozesse).",
+  "Bericht in der Reihenfolge des Inhabers, mit CSV aller Kandidaten und Kurzfassung für Telegram.",
+  "Musterseiten gebaut (labor.html-Sektion, muster.html, musterbild.js, Generator der Daten); Diff an den Inhaber.",
+  "Automatik nach jedem Lauf gebaut (4.8.28).",
+  "Briefkasten für den Labor-Bot eingerichtet (6.4, sudo durch den Inhaber); erste Nachrichten zugestellt."
  ],
  "als_naechstes": [
-  "Fortschritt der Downloads melden.",
-  "Prüfung des Entwurfs durch Claude im Chat, dann Festlegung mit Commit und SHA-256 im Logbuch.",
-  "Danach: Abschneide-Stichprobe auf echten Daten und die Gegenprobe auf J3, nach dem Hauptdownload."
+  "Schlussbericht nach dem Lauf auf 5 Min, Musterseiten mit beiden Zeitebenen.",
+  "Vorab-Datei für Öffnung 1 nur als Entwurf.",
+  "17:48 Lerntopf-Lauf 1 ausgewertet (15m): Stufe 1 bei 0 Kandidaten. Bericht, Rangliste und Diagnose auf backtest (Commit cd5a351).",
+  "17:49 Lerntopf-Lauf 1 ausgewertet (15m): Stufe 1 bei 0 Kandidaten. Bericht, Rangliste und Diagnose auf backtest (Commit cd5a351)."
  ],
  "bereiche": [
   {
@@ -84,18 +85,18 @@
    "anker": "b4",
    "titel": "Lern-Labor – das Hauptziel",
    "status": "laeuft",
-   "erledigt": 28,
-   "gesamt": 87,
+   "erledigt": 33,
+   "gesamt": 90,
    "zaehlung": {
-    "erledigt": 28,
-    "laeuft": 6,
-    "offen": 53,
+    "erledigt": 33,
+    "laeuft": 5,
+    "offen": 52,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
-   "naechster_nr": "4.0.17",
-   "datum": "ab Mo 19.10. 22:30",
+   "naechster_schritt": "Lerntopf (Okt. 2020–Sep. 2023): alle Steckbriefe, jedes Jahr einzeln, mit Selbstkontrolle, Zufallslatte und Kostenstress. Daraus entsteht die erste Rangliste. Vorher/Nachher in R gibt es nur hier",
+   "naechster_nr": "4.8.13",
+   "datum": "Mi 21.10.",
    "wer": "VS Code"
   },
   {
@@ -122,10 +123,10 @@
    "anker": "b6",
    "titel": "Messenger (Telegram)",
    "status": "teils",
-   "erledigt": 2,
-   "gesamt": 3,
+   "erledigt": 3,
+   "gesamt": 4,
    "zaehlung": {
-    "erledigt": 2,
+    "erledigt": 3,
     "laeuft": 0,
     "offen": 1,
     "test": 0,
@@ -142,10 +143,10 @@
    "titel": "Webseiten",
    "status": "laeuft",
    "erledigt": 3,
-   "gesamt": 7,
+   "gesamt": 8,
    "zaehlung": {
     "erledigt": 3,
-    "laeuft": 3,
+    "laeuft": 4,
     "offen": 1,
     "test": 0,
     "verworfen": 0
@@ -199,18 +200,18 @@
    "nr": 0,
    "titel": "Fundament",
    "status": "laeuft",
-   "erledigt": 16,
+   "erledigt": 17,
    "gesamt": 27,
    "zaehlung": {
-    "erledigt": 16,
-    "laeuft": 2,
+    "erledigt": 17,
+    "laeuft": 1,
     "offen": 9,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
-   "naechster_nr": "4.0.17",
-   "datum": "ab Mo 19.10. 22:30",
+   "naechster_schritt": "Harte Sperre wie im Replay: nur Marktdaten, kein Trading. Eigene Sperrliste mit SEC-EDGAR (höchstens 10 Abrufe/s, Kontakt im User-Agent nur aus der .env, nie im Repo)",
+   "naechster_nr": "4.0.12",
+   "datum": "",
    "wer": "VS Code"
   },
   {
@@ -322,5 +323,5 @@
    "wer": "VS Code"
   }
  ],
- "punkte_gesamt": 176
+ "punkte_gesamt": 181
 }

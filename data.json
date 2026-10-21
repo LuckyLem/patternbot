@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-21T19:33:33+00:00",
- "heartbeat": "2026-10-21T19:33:33+00:00",
+ "updated": "2026-10-21T19:43:43+00:00",
+ "heartbeat": "2026-10-21T19:43:43+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9893.35,
+  "equity": 9898.5,
   "last_equity": 9879.95,
-  "day_change": 13.4,
-  "total_change": -106.65
+  "day_change": 18.55,
+  "total_change": -101.5
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "long",
    "qty": 8,
    "entry": 228.07,
-   "current": 226.61,
-   "pl": -11.68
+   "current": 226.87,
+   "pl": -9.6
   },
   {
    "symbol": "GE",
    "side": "short",
    "qty": 6,
    "entry": 293.88,
-   "current": 294.25,
-   "pl": -2.21
+   "current": 294.81,
+   "pl": -5.6
   },
   {
    "symbol": "ORCL",
    "side": "short",
    "qty": 14,
    "entry": 128.07,
-   "current": 129.12,
-   "pl": -14.77
+   "current": 128.85,
+   "pl": -10.92
   },
   {
    "symbol": "UBER",
    "side": "short",
    "qty": 29,
    "entry": 67.81,
-   "current": 67.62,
-   "pl": 5.37
+   "current": 67.54,
+   "pl": 7.83
   }
  ],
  "trades": [

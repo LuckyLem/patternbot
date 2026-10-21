@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-21T15:17:34+00:00",
- "heartbeat": "2026-10-21T15:17:34+00:00",
+ "updated": "2026-10-21T15:27:41+00:00",
+ "heartbeat": "2026-10-21T15:27:41+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9901.37,
+  "equity": 9904.16,
   "last_equity": 9879.95,
-  "day_change": 21.42,
-  "total_change": -98.63
+  "day_change": 24.21,
+  "total_change": -95.84
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 12,
    "entry": 99.82,
-   "current": 98.5,
-   "pl": 15.79
+   "current": 98.53,
+   "pl": 15.43
   },
   {
    "symbol": "META",
    "side": "long",
    "qty": 2,
    "entry": 709.89,
-   "current": 708.87,
-   "pl": -2.04
+   "current": 710.12,
+   "pl": 0.45
   },
   {
    "symbol": "TJX",
    "side": "short",
    "qty": 13,
    "entry": 146.33,
-   "current": 146.89,
-   "pl": -7.28
+   "current": 147.0,
+   "pl": -8.64
   },
   {
    "symbol": "TT",
    "side": "long",
    "qty": 4,
    "entry": 467.5,
-   "current": 465.31,
-   "pl": -8.78
+   "current": 465.64,
+   "pl": -7.42
   },
   {
    "symbol": "VZ",
@@ -49,7 +49,7 @@
    "qty": 45,
    "entry": 43.84,
    "current": 43.3,
-   "pl": 23.94
+   "pl": 24.39
   }
  ],
  "trades": [

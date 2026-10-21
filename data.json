@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-21T15:49:35+00:00",
- "heartbeat": "2026-10-21T15:49:35+00:00",
+ "updated": "2026-10-21T15:59:51+00:00",
+ "heartbeat": "2026-10-21T15:59:51+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9930.83,
+  "equity": 9924.25,
   "last_equity": 9879.95,
-  "day_change": 50.88,
-  "total_change": -69.17
+  "day_change": 44.3,
+  "total_change": -75.75
  },
  "positions": [
   {
@@ -16,40 +16,32 @@
    "side": "short",
    "qty": 12,
    "entry": 99.82,
-   "current": 97.81,
-   "pl": 24.13
+   "current": 98.35,
+   "pl": 17.56
   },
   {
    "symbol": "META",
    "side": "long",
    "qty": 2,
    "entry": 709.89,
-   "current": 711.11,
-   "pl": 2.44
+   "current": 711.1,
+   "pl": 2.42
   },
   {
    "symbol": "TJX",
    "side": "short",
    "qty": 13,
    "entry": 146.33,
-   "current": 147.02,
-   "pl": -8.97
-  },
-  {
-   "symbol": "TT",
-   "side": "long",
-   "qty": 4,
-   "entry": 467.5,
-   "current": 467.64,
-   "pl": 0.56
+   "current": 146.93,
+   "pl": -7.8
   },
   {
    "symbol": "VZ",
    "side": "short",
    "qty": 45,
    "entry": 43.84,
-   "current": 43.11,
-   "pl": 32.72
+   "current": 43.12,
+   "pl": 32.27
   }
  ],
  "trades": [
@@ -122,19 +114,19 @@
    "side": "long",
    "day": "2026-10-21",
    "opened": "2026-10-21T13:50:31.446434+00:00",
-   "closed": null,
+   "closed": "2026-10-21T15:50:39.735143618+00:00",
    "entry": 467.5,
    "stop": 459.54,
    "target": 481.19,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 467.41,
+   "pnl": -0.36,
+   "r": -0.011,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>466.76",
    "max_r": 0.09,
    "key": "t108",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -153,7 +145,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<44.02",
-   "max_r": 1.03,
+   "max_r": 1.09,
    "key": "t107",
    "detail": false,
    "ai_verdict": null
@@ -1315,13 +1307,13 @@
   }
  ],
  "stats": {
-  "n": 104,
-  "pnl": -97.56,
-  "winrate": 0.442,
-  "expectancy": -0.041,
-  "pf": 0.82,
+  "n": 105,
+  "pnl": -97.92,
+  "winrate": 0.438,
+  "expectancy": -0.04,
+  "pf": 0.81,
   "avg_win": 9.35,
-  "avg_loss": -9.09
+  "avg_loss": -8.95
  },
  "equity_curve": [
   {

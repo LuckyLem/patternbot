@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-21T19:01:36+00:00",
- "heartbeat": "2026-10-21T19:01:36+00:00",
+ "updated": "2026-10-21T19:11:49+00:00",
+ "heartbeat": "2026-10-21T19:11:49+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9915.41,
+  "equity": 9926.41,
   "last_equity": 9879.95,
-  "day_change": 35.46,
-  "total_change": -84.59
+  "day_change": 46.46,
+  "total_change": -73.59
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 8,
    "entry": 228.07,
-   "current": 227.98,
-   "pl": -0.72
+   "current": 228.25,
+   "pl": 1.4
   },
   {
    "symbol": "GE",
    "side": "short",
    "qty": 6,
    "entry": 293.88,
-   "current": 294.04,
-   "pl": -0.95
+   "current": 294.37,
+   "pl": -2.93
   },
   {
    "symbol": "UBER",
    "side": "short",
    "qty": 29,
    "entry": 67.81,
-   "current": 67.8,
-   "pl": 0.29
+   "current": 67.41,
+   "pl": 11.74
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<67.90",
-   "max_r": 0.01,
+   "max_r": 0.38,
    "key": "t114",
    "detail": false,
    "ai_verdict": null
@@ -74,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<294.47",
-   "max_r": null,
+   "max_r": 0.04,
    "key": "t113",
    "detail": false,
    "ai_verdict": null
@@ -95,7 +95,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>227.14",
-   "max_r": null,
+   "max_r": 0.1,
    "key": "t112",
    "detail": false,
    "ai_verdict": null

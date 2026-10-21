@@ -489,7 +489,6 @@ Neuester Tag oben.
 
 **Automatisch:**
 - 17:48 Lerntopf-Lauf 1 ausgewertet (15m): Stufe 1 bei 0 Kandidaten. Bericht, Rangliste und Diagnose auf backtest (Commit cd5a351).
-- 17:49 Lerntopf-Lauf 1 ausgewertet (15m): Stufe 1 bei 0 Kandidaten. Bericht, Rangliste und Diagnose auf backtest (Commit cd5a351).
 
 ### Di 20.10.2026
 

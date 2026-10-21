@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-21T14:47:06+00:00",
- "heartbeat": "2026-10-21T14:47:06+00:00",
+ "updated": "2026-10-21T14:57:12+00:00",
+ "heartbeat": "2026-10-21T14:57:12+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9893.66,
+  "equity": 9911.61,
   "last_equity": 9879.95,
-  "day_change": 13.71,
-  "total_change": -106.34
+  "day_change": 31.66,
+  "total_change": -88.39
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "short",
    "qty": 12,
    "entry": 99.82,
-   "current": 99.35,
-   "pl": 5.59
+   "current": 98.0,
+   "pl": 21.79
   },
   {
    "symbol": "META",
    "side": "long",
    "qty": 2,
    "entry": 709.89,
-   "current": 709.32,
-   "pl": -1.14
+   "current": 711.68,
+   "pl": 3.58
   },
   {
    "symbol": "TJX",
    "side": "short",
    "qty": 13,
    "entry": 146.33,
-   "current": 146.75,
-   "pl": -5.39
+   "current": 146.73,
+   "pl": -5.2
   },
   {
    "symbol": "TT",
    "side": "long",
    "qty": 4,
    "entry": 467.5,
-   "current": 467.75,
-   "pl": 1.01
+   "current": 466.32,
+   "pl": -4.7
   },
   {
    "symbol": "VZ",
    "side": "short",
    "qty": 45,
    "entry": 43.84,
-   "current": 43.53,
-   "pl": 13.64
+   "current": 43.48,
+   "pl": 16.07
   }
  ],
  "trades": [
@@ -90,7 +90,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<100.77",
-   "max_r": 0.33,
+   "max_r": 0.55,
    "key": "t110",
    "detail": false,
    "ai_verdict": null
@@ -111,7 +111,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>706.97",
-   "max_r": null,
+   "max_r": 0.08,
    "key": "t109",
    "detail": false,
    "ai_verdict": null
@@ -132,7 +132,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>466.76",
-   "max_r": 0.08,
+   "max_r": 0.09,
    "key": "t108",
    "detail": false,
    "ai_verdict": null

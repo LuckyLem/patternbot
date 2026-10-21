@@ -1,0 +1,14 @@
+Lerntopf-Lauf 1 · Zwischenstand 15 Min (21.10. 17:01)
+
+115 Kandidaten, 110 mit genug Daten (mind. 30 Trades je Jahr). Stufe 1: 0.
+Vorbehalte: Überlebensverzerrung (Werteliste von heute) und ohne Quotes bei M001–M010 – beides macht die Ergebnisse eher zu gut.
+
+Top 10 (nur innerhalb dieser Zeitebene):
+– keiner mit Stufe 1
+
+Flop 10 (vor Kosten in jedem Jahr klar negativ):
+1. M008-15m-H3: gesamt vor Kosten -0.158R
+
+Latte „Bester von N“ (nur Info): N = 110.
+Für die Top 10 wird nichts im Prüftopf geöffnet.
+Bericht und CSV: lern-labor/lerntopf-lauf-1/ auf backtest.

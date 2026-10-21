@@ -1,17 +1,13 @@
 {
  "schema": 1,
- "stand": "2026-10-20T17:21:56-04:00",
+ "stand": "2026-10-21T11:03:45-04:00",
  "quelle": "PC",
- "code_labor": "27fb5b356d40",
+ "code_labor": "70e9c0349b3f",
  "labor": {
   "eingerichtet": false,
   "hinweis": "Etappe 0: Einrichtung auf dem Pi folgt",
   "job": null,
   "fenster": [
-   {
-    "start": "2026-10-20T16:30:00-04:00",
-    "stopp": "2026-10-21T09:00:00-04:00"
-   },
    {
     "start": "2026-10-21T16:30:00-04:00",
     "stopp": "2026-10-22T09:00:00-04:00"
@@ -47,6 +43,10 @@
    {
     "start": "2026-11-02T16:30:00-05:00",
     "stopp": "2026-11-03T09:00:00-05:00"
+   },
+   {
+    "start": "2026-11-03T16:30:00-05:00",
+    "stopp": "2026-11-04T09:00:00-05:00"
    }
   ]
  },
@@ -55,18 +55,18 @@
    "nr": 0,
    "titel": "Fundament",
    "status": "laeuft",
-   "erledigt": 16,
+   "erledigt": 17,
    "gesamt": 27,
    "zaehlung": {
-    "erledigt": 16,
-    "laeuft": 2,
+    "erledigt": 17,
+    "laeuft": 1,
     "offen": 9,
     "test": 0,
     "verworfen": 0
    },
-   "naechster_schritt": "Daten 2020–2023 laden: IEX 15 Min und Tageskerzen, IEX-Kurse und -Quotes für die Filter, SIP 1 Min; 150 Werte und SPY",
-   "naechster_nr": "4.0.17",
-   "datum": "ab Mo 19.10. 22:30",
+   "naechster_schritt": "Harte Sperre wie im Replay: nur Marktdaten, kein Trading. Eigene Sperrliste mit SEC-EDGAR (höchstens 10 Abrufe/s, Kontakt im User-Agent nur aus der .env, nie im Repo)",
+   "naechster_nr": "4.0.12",
+   "datum": "",
    "wer": "VS Code"
   },
   {
@@ -179,6 +179,48 @@
   }
  ],
  "logbuch": [
+  {
+   "datum": "2026-10-21",
+   "zeit": "2026-10-21 11:03",
+   "art": "Lauf",
+   "text": "Lerntopf-Lauf 1, ausgewertet 15 Min (Vorab-Datei Fassung 3, Labor-Code 435020e128b3): Stufe 1 bei 0 Kandidaten. Bericht: lerntopf-lauf-1/bericht-15m.md",
+   "ok": null
+  },
+  {
+   "datum": "2026-10-21",
+   "zeit": "2026-10-21 05:18",
+   "art": "Daten",
+   "text": "SIP-Vorlauf nach Vorab-Datei Fassung 3 geladen: SIP 1 Min, split-bereinigt, 01.–30.09.2020 (21 Handelstage), 150 Werte und SPY, 168 Abrufe, keine Wiederholung nach 429, 05:15–05:18 (11:15–11:18 deutscher Zeit). Ein erster Versuch um 05:05 brach ohne Abruf ab (Netz direkt nach dem Hochfahren noch nicht da). Nur zum Zurückschauen; nichts ab 01.10.2023.",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-21",
+   "zeit": "2026-10-21 05:39",
+   "art": "Abschneide-Test",
+   "text": "Lerntopf-Lauf 1, Zeitebene 5m, Muster M011–M023 (neue Erkennung, Code-Hash 435020e128b3): 300 von 300 zufälligen Schnitten in echten Reihen liefern bis zum Schnitt genau die Signale der ganzen Reihe (Startwert 20261019). Keine Ergebnisse in R gerechnet. Ergebnis: lerntopf-lauf-1/abschneide-neu-5m.json",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-21",
+   "zeit": "2026-10-21 05:36",
+   "art": "Abschneide-Test",
+   "text": "Lerntopf-Lauf 1, Zeitebene 5m, Muster M001–M010 (Signalquelle des Labors, Code-Hash 435020e128b3): 300 von 300 zufällig gezogenen echten Entscheidungen (Startwert 20261019) liefern mit allen Daten und mit Daten nur bis zum Zeitpunkt dieselben Signale, auch die SIP-Minuten abgeschnitten. Keine Ergebnisse in R gerechnet. Ergebnis: lerntopf-lauf-1/abschneide-5m.json",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-21",
+   "zeit": "2026-10-21 05:21",
+   "art": "Abschneide-Test",
+   "text": "Lerntopf-Lauf 1, Zeitebene 15m, Muster M011–M023 (neue Erkennung, Code-Hash 435020e128b3): 300 von 300 zufälligen Schnitten in echten Reihen liefern bis zum Schnitt genau die Signale der ganzen Reihe (Startwert 20261019). Keine Ergebnisse in R gerechnet. Ergebnis: lerntopf-lauf-1/abschneide-neu-15m.json",
+   "ok": true
+  },
+  {
+   "datum": "2026-10-21",
+   "zeit": "2026-10-21 05:20",
+   "art": "Abschneide-Test",
+   "text": "Lerntopf-Lauf 1, Zeitebene 15m, Muster M001–M010 (Signalquelle des Labors, Code-Hash 435020e128b3): 300 von 300 zufällig gezogenen echten Entscheidungen (Startwert 20261019) liefern mit allen Daten und mit Daten nur bis zum Zeitpunkt dieselben Signale, auch die SIP-Minuten abgeschnitten. Keine Ergebnisse in R gerechnet. Ergebnis: lerntopf-lauf-1/abschneide-15m.json",
+   "ok": true
+  },
   {
    "datum": "2026-10-20",
    "zeit": "2026-10-20 17:21",

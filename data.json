@@ -1,47 +1,23 @@
 {
  "version": 1,
- "updated": "2026-10-21T15:59:51+00:00",
- "heartbeat": "2026-10-21T15:59:51+00:00",
+ "updated": "2026-10-21T16:10:51+00:00",
+ "heartbeat": "2026-10-21T16:10:51+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9924.25,
+  "equity": 9916.53,
   "last_equity": 9879.95,
-  "day_change": 44.3,
-  "total_change": -75.75
+  "day_change": 36.58,
+  "total_change": -83.47
  },
  "positions": [
-  {
-   "symbol": "ABT",
-   "side": "short",
-   "qty": 12,
-   "entry": 99.82,
-   "current": 98.35,
-   "pl": 17.56
-  },
-  {
-   "symbol": "META",
-   "side": "long",
-   "qty": 2,
-   "entry": 709.89,
-   "current": 711.1,
-   "pl": 2.42
-  },
   {
    "symbol": "TJX",
    "side": "short",
    "qty": 13,
    "entry": 146.33,
-   "current": 146.93,
-   "pl": -7.8
-  },
-  {
-   "symbol": "VZ",
-   "side": "short",
-   "qty": 45,
-   "entry": 43.84,
-   "current": 43.12,
-   "pl": 32.27
+   "current": 146.92,
+   "pl": -7.67
   }
  ],
  "trades": [
@@ -72,19 +48,19 @@
    "side": "short",
    "day": "2026-10-21",
    "opened": "2026-10-21T14:00:34.787657+00:00",
-   "closed": null,
+   "closed": "2026-10-21T16:01:41.993496449+00:00",
    "entry": 99.82,
    "stop": 103.14,
    "target": 96.02,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 98.55,
+   "pnl": 15.19,
+   "r": 0.38,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<100.77",
    "max_r": 0.62,
    "key": "t110",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -93,19 +69,19 @@
    "side": "long",
    "day": "2026-10-21",
    "opened": "2026-10-21T14:00:33.262464+00:00",
-   "closed": null,
+   "closed": "2026-10-21T16:01:39.722104189+00:00",
    "entry": 709.89,
    "stop": 694.08,
    "target": 732.76,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 710.94,
+   "pnl": 2.1,
+   "r": 0.066,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>706.97",
    "max_r": 0.17,
    "key": "t109",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -135,19 +111,19 @@
    "side": "short",
    "day": "2026-10-21",
    "opened": "2026-10-21T13:50:29.929990+00:00",
-   "closed": null,
+   "closed": "2026-10-21T16:09:44.327064629+00:00",
    "entry": 43.84,
    "stop": 44.55,
    "target": 42.94,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 43.23,
+   "pnl": 27.32,
+   "r": 0.849,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<44.02",
    "max_r": 1.09,
    "key": "t107",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1307,12 +1283,12 @@
   }
  ],
  "stats": {
-  "n": 105,
-  "pnl": -97.92,
-  "winrate": 0.438,
-  "expectancy": -0.04,
-  "pf": 0.81,
-  "avg_win": 9.35,
+  "n": 108,
+  "pnl": -53.31,
+  "winrate": 0.454,
+  "expectancy": -0.027,
+  "pf": 0.9,
+  "avg_win": 9.68,
   "avg_loss": -8.95
  },
  "equity_curve": [
@@ -1487,7 +1463,7 @@
  ],
  "funnel": {
   "day": "2026-10-21",
-  "setups": 61,
+  "setups": 63,
   "orders": 5,
   "filled": 5,
   "unfilled": 0,
@@ -1500,7 +1476,7 @@
    "skip-rr": 2,
    "skip-spread": 10,
    "skip-stale": 2,
-   "skip-vol": 12
+   "skip-vol": 14
   }
  },
  "funnel_days": [
@@ -1664,7 +1640,7 @@
   },
   {
    "day": "2026-10-21",
-   "setups": 61,
+   "setups": 63,
    "orders": 5,
    "filled": 5,
    "unfilled": 0,
@@ -1677,7 +1653,7 @@
     "skip-rr": 2,
     "skip-spread": 10,
     "skip-stale": 2,
-    "skip-vol": 12
+    "skip-vol": 14
    }
   }
  ],

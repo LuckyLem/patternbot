@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "stand": "2026-10-21T11:49:02-04:00",
+ "stand": "2026-10-21T11:50:17-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
@@ -19,8 +19,7 @@
  "als_naechstes": [
   "Schlussbericht nach dem Lauf auf 5 Min, Musterseiten mit beiden Zeitebenen.",
   "Vorab-Datei für Öffnung 1 nur als Entwurf.",
-  "17:48 Lerntopf-Lauf 1 ausgewertet (15m): Stufe 1 bei 0 Kandidaten. Bericht, Rangliste und Diagnose auf backtest (Commit cd5a351).",
-  "17:49 Lerntopf-Lauf 1 ausgewertet (15m): Stufe 1 bei 0 Kandidaten. Bericht, Rangliste und Diagnose auf backtest (Commit cd5a351)."
+  "17:48 Lerntopf-Lauf 1 ausgewertet (15m): Stufe 1 bei 0 Kandidaten. Bericht, Rangliste und Diagnose auf backtest (Commit cd5a351)."
  ],
  "bereiche": [
   {

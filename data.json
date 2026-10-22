@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T15:01:33+00:00",
- "heartbeat": "2026-10-22T15:01:33+00:00",
+ "updated": "2026-10-22T15:11:47+00:00",
+ "heartbeat": "2026-10-22T15:11:47+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9884.66,
+  "equity": 9892.79,
   "last_equity": 9886.66,
-  "day_change": -2.0,
-  "total_change": -115.34
+  "day_change": 6.13,
+  "total_change": -107.21
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 6,
    "entry": 327.89,
-   "current": 327.09,
-   "pl": 4.77
+   "current": 326.91,
+   "pl": 5.88
   },
   {
    "symbol": "KO",
    "side": "long",
    "qty": 20,
    "entry": 94.44,
-   "current": 94.23,
-   "pl": -4.2
+   "current": 94.58,
+   "pl": 2.82
   },
   {
    "symbol": "MPC",
    "side": "short",
    "qty": 2,
    "entry": 456.8,
-   "current": 456.95,
-   "pl": -0.3
+   "current": 458.81,
+   "pl": -4.02
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 65,
    "entry": 30.29,
-   "current": 30.25,
-   "pl": -2.27
+   "current": 30.32,
+   "pl": 1.62
   }
  ],
  "trades": [
@@ -61,7 +61,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>30.25",
-   "max_r": null,
+   "max_r": 0.1,
    "key": "t119",
    "detail": false,
    "ai_verdict": null
@@ -82,7 +82,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>94.20",
-   "max_r": null,
+   "max_r": 0.13,
    "key": "t118",
    "detail": false,
    "ai_verdict": null

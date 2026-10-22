@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T17:05:41+00:00",
- "heartbeat": "2026-10-22T17:05:41+00:00",
+ "updated": "2026-10-22T17:16:41+00:00",
+ "heartbeat": "2026-10-22T17:16:41+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9909.16,
+  "equity": 9906.52,
   "last_equity": 9886.66,
-  "day_change": 22.5,
-  "total_change": -90.84
+  "day_change": 19.86,
+  "total_change": -93.48
  },
  "positions": [
   {
@@ -16,16 +16,8 @@
    "side": "short",
    "qty": 11,
    "entry": 86.17,
-   "current": 86.07,
-   "pl": 1.09
-  },
-  {
-   "symbol": "MA",
-   "side": "long",
-   "qty": 3,
-   "entry": 628.08,
-   "current": 631.31,
-   "pl": 9.7
+   "current": 86.09,
+   "pl": 0.87
   }
  ],
  "trades": [
@@ -56,19 +48,19 @@
    "side": "long",
    "day": "2026-10-22",
    "opened": "2026-10-22T15:15:35.250140+00:00",
-   "closed": null,
+   "closed": "2026-10-22T17:16:35.477363785+00:00",
    "entry": 628.08,
    "stop": 622.69,
    "target": 638.65,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 630.52,
+   "pnl": 7.33,
+   "r": 0.453,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>628.01",
    "max_r": 0.94,
    "key": "t120",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,12 +1283,12 @@
   }
  ],
  "stats": {
-  "n": 117,
-  "pnl": -78.91,
-  "winrate": 0.453,
-  "expectancy": -0.031,
-  "pf": 0.86,
-  "avg_win": 9.22,
+  "n": 118,
+  "pnl": -71.58,
+  "winrate": 0.458,
+  "expectancy": -0.027,
+  "pf": 0.87,
+  "avg_win": 9.18,
   "avg_loss": -8.87
  },
  "equity_curve": [
@@ -1471,7 +1463,7 @@
  ],
  "funnel": {
   "day": "2026-10-22",
-  "setups": 69,
+  "setups": 76,
   "orders": 6,
   "filled": 6,
   "unfilled": 0,
@@ -1485,7 +1477,7 @@
    "skip-rs": 1,
    "skip-spread": 4,
    "skip-stale": 2,
-   "skip-vol": 37
+   "skip-vol": 44
   }
  },
  "funnel_days": [
@@ -1649,7 +1641,7 @@
   },
   {
    "day": "2026-10-22",
-   "setups": 69,
+   "setups": 76,
    "orders": 6,
    "filled": 6,
    "unfilled": 0,
@@ -1663,7 +1655,7 @@
     "skip-rs": 1,
     "skip-spread": 4,
     "skip-stale": 2,
-    "skip-vol": 37
+    "skip-vol": 44
    }
   }
  ],

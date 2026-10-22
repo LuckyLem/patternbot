@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T14:18:34+00:00",
- "heartbeat": "2026-10-22T14:18:34+00:00",
+ "updated": "2026-10-22T14:28:44+00:00",
+ "heartbeat": "2026-10-22T14:28:44+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9885.75,
+  "equity": 9888.67,
   "last_equity": 9886.66,
-  "day_change": -0.91,
-  "total_change": -114.25
+  "day_change": 2.01,
+  "total_change": -111.33
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 6,
    "entry": 327.89,
-   "current": 327.57,
-   "pl": 1.92
+   "current": 327.1,
+   "pl": 4.74
   },
   {
    "symbol": "MPC",
    "side": "short",
    "qty": 2,
    "entry": 456.8,
-   "current": 458.21,
-   "pl": -2.83
+   "current": 458.03,
+   "pl": -2.46
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<459.20",
-   "max_r": null,
+   "max_r": 0.05,
    "key": "t117",
    "detail": false,
    "ai_verdict": null
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<328.03",
-   "max_r": 0.08,
+   "max_r": 0.13,
    "key": "t116",
    "detail": false,
    "ai_verdict": null

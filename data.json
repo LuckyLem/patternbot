@@ -1,55 +1,47 @@
 {
  "version": 1,
- "updated": "2026-10-22T15:54:37+00:00",
- "heartbeat": "2026-10-22T15:54:37+00:00",
+ "updated": "2026-10-22T16:04:45+00:00",
+ "heartbeat": "2026-10-22T16:04:45+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9893.28,
+  "equity": 9904.01,
   "last_equity": 9886.66,
-  "day_change": 6.62,
-  "total_change": -106.72
+  "day_change": 17.35,
+  "total_change": -95.99
  },
  "positions": [
-  {
-   "symbol": "GOOGL",
-   "side": "short",
-   "qty": 6,
-   "entry": 327.89,
-   "current": 327.48,
-   "pl": 2.46
-  },
   {
    "symbol": "KO",
    "side": "long",
    "qty": 20,
    "entry": 94.44,
-   "current": 94.68,
-   "pl": 4.8
+   "current": 94.64,
+   "pl": 4.1
   },
   {
    "symbol": "MA",
    "side": "long",
    "qty": 3,
    "entry": 628.08,
-   "current": 629.34,
-   "pl": 3.77
+   "current": 631.47,
+   "pl": 10.18
   },
   {
    "symbol": "MPC",
    "side": "short",
    "qty": 2,
    "entry": 456.8,
-   "current": 457.17,
-   "pl": -0.74
+   "current": 454.58,
+   "pl": 4.44
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 65,
    "entry": 30.29,
-   "current": 30.25,
-   "pl": -2.92
+   "current": 30.27,
+   "pl": -0.97
   }
  ],
  "trades": [
@@ -69,7 +61,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>628.01",
-   "max_r": 0.4,
+   "max_r": 0.66,
    "key": "t120",
    "detail": false,
    "ai_verdict": null
@@ -111,7 +103,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>94.20",
-   "max_r": 0.26,
+   "max_r": 0.29,
    "key": "t118",
    "detail": false,
    "ai_verdict": null
@@ -143,19 +135,19 @@
    "side": "short",
    "day": "2026-10-22",
    "opened": "2026-10-22T14:00:35.543680+00:00",
-   "closed": null,
+   "closed": "2026-10-22T16:01:39.850590199+00:00",
    "entry": 327.89,
    "stop": 334.04,
    "target": 316.01,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 327.96,
+   "pnl": -0.4,
+   "r": -0.011,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<328.03",
    "max_r": 0.24,
    "key": "t116",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1315,13 +1307,13 @@
   }
  ],
  "stats": {
-  "n": 113,
-  "pnl": -90.51,
-  "winrate": 0.442,
+  "n": 114,
+  "pnl": -90.91,
+  "winrate": 0.439,
   "expectancy": -0.037,
   "pf": 0.84,
   "avg_win": 9.53,
-  "avg_loss": -9.0
+  "avg_loss": -8.87
  },
  "equity_curve": [
   {

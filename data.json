@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T15:43:44+00:00",
- "heartbeat": "2026-10-22T15:43:44+00:00",
+ "updated": "2026-10-22T15:54:37+00:00",
+ "heartbeat": "2026-10-22T15:54:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9892.02,
+  "equity": 9893.28,
   "last_equity": 9886.66,
-  "day_change": 5.36,
-  "total_change": -107.98
+  "day_change": 6.62,
+  "total_change": -106.72
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 6,
    "entry": 327.89,
-   "current": 327.28,
-   "pl": 3.66
+   "current": 327.48,
+   "pl": 2.46
   },
   {
    "symbol": "KO",
    "side": "long",
    "qty": 20,
    "entry": 94.44,
-   "current": 94.54,
-   "pl": 2.0
+   "current": 94.68,
+   "pl": 4.8
   },
   {
    "symbol": "MA",
    "side": "long",
    "qty": 3,
    "entry": 628.08,
-   "current": 628.78,
-   "pl": 2.11
+   "current": 629.34,
+   "pl": 3.77
   },
   {
    "symbol": "MPC",
    "side": "short",
    "qty": 2,
    "entry": 456.8,
-   "current": 456.86,
-   "pl": -0.11
+   "current": 457.17,
+   "pl": -0.74
   },
   {
    "symbol": "PFE",
@@ -49,7 +49,7 @@
    "qty": 65,
    "entry": 30.29,
    "current": 30.25,
-   "pl": -2.6
+   "pl": -2.92
   }
  ],
  "trades": [
@@ -111,7 +111,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>94.20",
-   "max_r": 0.17,
+   "max_r": 0.26,
    "key": "t118",
    "detail": false,
    "ai_verdict": null
@@ -1495,7 +1495,7 @@
  ],
  "funnel": {
   "day": "2026-10-22",
-  "setups": 49,
+  "setups": 52,
   "orders": 5,
   "filled": 5,
   "unfilled": 0,
@@ -1504,7 +1504,7 @@
   "rejected": {
    "skip-chase": 10,
    "skip-dup": 4,
-   "skip-maxopen": 1,
+   "skip-maxopen": 4,
    "skip-rr": 1,
    "skip-rs": 1,
    "skip-spread": 3,
@@ -1673,7 +1673,7 @@
   },
   {
    "day": "2026-10-22",
-   "setups": 49,
+   "setups": 52,
    "orders": 5,
    "filled": 5,
    "unfilled": 0,
@@ -1682,7 +1682,7 @@
    "rejected": {
     "skip-chase": 10,
     "skip-dup": 4,
-    "skip-maxopen": 1,
+    "skip-maxopen": 4,
     "skip-rr": 1,
     "skip-rs": 1,
     "skip-spread": 3,

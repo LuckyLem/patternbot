@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T19:34:31+00:00",
- "heartbeat": "2026-10-22T19:34:31+00:00",
+ "updated": "2026-10-22T19:44:41+00:00",
+ "heartbeat": "2026-10-22T19:44:41+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9913.2,
+  "equity": 9928.86,
   "last_equity": 9886.66,
-  "day_change": 26.54,
-  "total_change": -86.8
+  "day_change": 42.2,
+  "total_change": -71.14
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "short",
    "qty": 87,
    "entry": 22.7,
-   "current": 22.97,
-   "pl": -23.49
+   "current": 22.89,
+   "pl": -16.96
   },
   {
    "symbol": "GOOGL",
    "side": "short",
    "qty": 6,
    "entry": 326.07,
-   "current": 322.76,
-   "pl": 19.83
+   "current": 322.48,
+   "pl": 21.54
   },
   {
    "symbol": "INTC",
    "side": "short",
    "qty": 23,
    "entry": 85.62,
-   "current": 85.35,
-   "pl": 6.31
+   "current": 85.02,
+   "pl": 13.91
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<85.77",
-   "max_r": 0.22,
+   "max_r": 0.51,
    "key": "t124",
    "detail": false,
    "ai_verdict": null
@@ -95,7 +95,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<326.40",
-   "max_r": 0.48,
+   "max_r": 0.51,
    "key": "t122",
    "detail": false,
    "ai_verdict": null

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T14:50:39+00:00",
- "heartbeat": "2026-10-22T14:50:39+00:00",
+ "updated": "2026-10-22T15:01:33+00:00",
+ "heartbeat": "2026-10-22T15:01:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9890.59,
+  "equity": 9884.66,
   "last_equity": 9886.66,
-  "day_change": 3.93,
-  "total_change": -109.41
+  "day_change": -2.0,
+  "total_change": -115.34
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 6,
    "entry": 327.89,
-   "current": 326.73,
-   "pl": 6.96
+   "current": 327.09,
+   "pl": 4.77
   },
   {
    "symbol": "KO",
    "side": "long",
    "qty": 20,
    "entry": 94.44,
-   "current": 94.38,
-   "pl": -1.2
+   "current": 94.23,
+   "pl": -4.2
   },
   {
    "symbol": "MPC",
    "side": "short",
    "qty": 2,
    "entry": 456.8,
-   "current": 457.57,
-   "pl": -1.54
+   "current": 456.95,
+   "pl": -0.3
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 65,
    "entry": 30.29,
-   "current": 30.29,
-   "pl": -0.33
+   "current": 30.25,
+   "pl": -2.27
   }
  ],
  "trades": [
@@ -1487,20 +1487,20 @@
  ],
  "funnel": {
   "day": "2026-10-22",
-  "setups": 38,
+  "setups": 45,
   "orders": 4,
   "filled": 4,
   "unfilled": 0,
   "traded": 4,
   "coverage_from": "2026-10-22T13:50:27.270344+00:00",
   "rejected": {
-   "skip-chase": 7,
-   "skip-dup": 1,
+   "skip-chase": 10,
+   "skip-dup": 4,
    "skip-rr": 1,
    "skip-rs": 1,
    "skip-spread": 2,
    "skip-stale": 2,
-   "skip-vol": 20
+   "skip-vol": 21
   }
  },
  "funnel_days": [
@@ -1664,20 +1664,20 @@
   },
   {
    "day": "2026-10-22",
-   "setups": 38,
+   "setups": 45,
    "orders": 4,
    "filled": 4,
    "unfilled": 0,
    "traded": 4,
    "coverage_from": "2026-10-22T13:50:27.270344+00:00",
    "rejected": {
-    "skip-chase": 7,
-    "skip-dup": 1,
+    "skip-chase": 10,
+    "skip-dup": 4,
     "skip-rr": 1,
     "skip-rs": 1,
     "skip-spread": 2,
     "skip-stale": 2,
-    "skip-vol": 20
+    "skip-vol": 21
    }
   }
  ],

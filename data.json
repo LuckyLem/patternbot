@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T15:22:37+00:00",
- "heartbeat": "2026-10-22T15:22:37+00:00",
+ "updated": "2026-10-22T15:33:37+00:00",
+ "heartbeat": "2026-10-22T15:33:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9893.73,
+  "equity": 9907.31,
   "last_equity": 9886.66,
-  "day_change": 7.07,
-  "total_change": -106.27
+  "day_change": 20.65,
+  "total_change": -92.69
  },
  "positions": [
   {
@@ -16,40 +16,40 @@
    "side": "short",
    "qty": 6,
    "entry": 327.89,
-   "current": 327.31,
-   "pl": 3.48
+   "current": 327.39,
+   "pl": 3.0
   },
   {
    "symbol": "KO",
    "side": "long",
    "qty": 20,
    "entry": 94.44,
-   "current": 94.53,
-   "pl": 1.8
+   "current": 94.56,
+   "pl": 2.4
   },
   {
    "symbol": "MA",
    "side": "long",
    "qty": 3,
    "entry": 628.08,
-   "current": 628.73,
-   "pl": 1.96
+   "current": 630.1,
+   "pl": 6.07
   },
   {
    "symbol": "MPC",
    "side": "short",
    "qty": 2,
    "entry": 456.8,
-   "current": 457.36,
-   "pl": -1.11
+   "current": 454.16,
+   "pl": 5.28
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 65,
    "entry": 30.29,
-   "current": 30.3,
-   "pl": 0.94
+   "current": 30.36,
+   "pl": 4.22
   }
  ],
  "trades": [
@@ -69,7 +69,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>628.01",
-   "max_r": 0.12,
+   "max_r": 0.4,
    "key": "t120",
    "detail": false,
    "ai_verdict": null
@@ -90,7 +90,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>30.25",
-   "max_r": 0.1,
+   "max_r": 0.19,
    "key": "t119",
    "detail": false,
    "ai_verdict": null
@@ -111,7 +111,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>94.20",
-   "max_r": 0.16,
+   "max_r": 0.17,
    "key": "t118",
    "detail": false,
    "ai_verdict": null
@@ -132,7 +132,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<459.20",
-   "max_r": 0.08,
+   "max_r": 0.16,
    "key": "t117",
    "detail": false,
    "ai_verdict": null

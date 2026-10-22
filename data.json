@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T17:48:33+00:00",
- "heartbeat": "2026-10-22T17:48:33+00:00",
+ "updated": "2026-10-22T17:58:40+00:00",
+ "heartbeat": "2026-10-22T17:58:40+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9904.71,
+  "equity": 9915.52,
   "last_equity": 9886.66,
-  "day_change": 18.05,
-  "total_change": -95.29
+  "day_change": 28.86,
+  "total_change": -84.48
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 6,
    "entry": 326.07,
-   "current": 325.62,
-   "pl": 2.7
+   "current": 324.8,
+   "pl": 7.65
   },
   {
    "symbol": "INTC",
    "side": "short",
    "qty": 11,
    "entry": 86.17,
-   "current": 86.5,
-   "pl": -3.58
+   "current": 85.97,
+   "pl": 2.25
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<326.40",
-   "max_r": 0.06,
+   "max_r": 0.18,
    "key": "t122",
    "detail": false,
    "ai_verdict": null

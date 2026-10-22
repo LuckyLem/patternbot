@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-22T19:02:35+00:00",
- "heartbeat": "2026-10-22T19:02:35+00:00",
+ "updated": "2026-10-22T19:12:58+00:00",
+ "heartbeat": "2026-10-22T19:12:58+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9928.43,
+  "equity": 9913.66,
   "last_equity": 9886.66,
-  "day_change": 41.77,
-  "total_change": -71.57
+  "day_change": 27.0,
+  "total_change": -86.34
  },
  "positions": [
   {
@@ -16,24 +16,16 @@
    "side": "short",
    "qty": 87,
    "entry": 22.7,
-   "current": 22.73,
-   "pl": -3.04
+   "current": 22.88,
+   "pl": -15.22
   },
   {
    "symbol": "GOOGL",
    "side": "short",
    "qty": 6,
    "entry": 326.07,
-   "current": 322.9,
-   "pl": 19.02
-  },
-  {
-   "symbol": "INTC",
-   "side": "short",
-   "qty": 11,
-   "entry": 86.17,
-   "current": 85.55,
-   "pl": 6.87
+   "current": 323.03,
+   "pl": 18.24
   }
  ],
  "trades": [
@@ -74,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<326.40",
-   "max_r": 0.43,
+   "max_r": 0.48,
    "key": "t122",
    "detail": false,
    "ai_verdict": null
@@ -85,19 +77,19 @@
    "side": "short",
    "day": "2026-10-22",
    "opened": "2026-10-22T17:00:39.778178+00:00",
-   "closed": null,
+   "closed": "2026-10-22T19:12:55.231639856+00:00",
    "entry": 86.17,
    "stop": 90.42,
    "target": 78.69,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 85.71,
+   "pnl": 5.05,
+   "r": 0.108,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<86.51",
-   "max_r": 0.15,
+   "max_r": 0.16,
    "key": "t121",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1299,12 +1291,12 @@
   }
  ],
  "stats": {
-  "n": 118,
-  "pnl": -71.58,
-  "winrate": 0.458,
-  "expectancy": -0.027,
-  "pf": 0.87,
-  "avg_win": 9.18,
+  "n": 119,
+  "pnl": -66.53,
+  "winrate": 0.462,
+  "expectancy": -0.026,
+  "pf": 0.88,
+  "avg_win": 9.11,
   "avg_loss": -8.87
  },
  "equity_curve": [

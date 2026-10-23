@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)">
+<title>Lernhub · PatternBot</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0c'/><path d='M20 66 L38 48 L54 58 L80 30' stroke='%2332d74b' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="labor-name.js"></script>
+<script>document.title=((window.LABOR_NAME&&window.LABOR_NAME!=="Lern-Labor")?window.LABOR_NAME:"Lernhub")+" · PatternBot";</script>
+<style>
+/* ================================================================ tokens (wie das Dashboard) */
+:root{
+  --ground:#fcfcfd; --raised:#ffffff; --sunken:#f3f3f6;
+  --hair:rgba(9,9,20,.09); --hair-soft:rgba(9,9,20,.055);
+  --ink:#0a0a0c; --ink-2:#55555f; --ink-3:#8b8b96;
+  --up:#08a742; --down:#e02f24; --accent:#0a6bff;
+  --up-rgb:8,167,66; --down-rgb:224,47,36; --accent-rgb:10,107,255;
+  --up-wash:rgba(8,167,66,.10); --down-wash:rgba(224,47,36,.09);
+  --be:#a35f00; --be-wash:rgba(163,95,0,.12);
+  --glow:.55;
+  --lift:0 0 0 1px var(--hair-soft), 0 1px 2px rgba(9,9,20,.04), 0 14px 34px -14px rgba(9,9,20,.12);
+  --sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --spring:cubic-bezier(.34,1.3,.64,1);
+  --gut:clamp(20px,5vw,40px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0a0a0c; --raised:#141418; --sunken:#1b1b20;
+    --hair:rgba(255,255,255,.10); --hair-soft:rgba(255,255,255,.06);
+    --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
+    --up:#32d74b; --down:#ff453a; --accent:#3d9bff;
+    --up-rgb:50,215,75; --down-rgb:255,69,58; --accent-rgb:61,155,255;
+    --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --be:#ffb340; --be-wash:rgba(255,179,64,.14);
+    --glow:.9;
+    --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0a0a0c; --raised:#141418; --sunken:#1b1b20;
+  --hair:rgba(255,255,255,.10); --hair-soft:rgba(255,255,255,.06);
+  --ink:#f2f2f5; --ink-2:#9c9ca8; --ink-3:#66666f;
+  --up:#32d74b; --down:#ff453a; --accent:#3d9bff;
+  --up-rgb:50,215,75; --down-rgb:255,69,58; --accent-rgb:61,155,255;
+  --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --be:#ffb340; --be-wash:rgba(255,179,64,.14);
+  --glow:.9;
+  --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+}
+
+/* ================================================================ base */
+*{box-sizing:border-box;margin:0;padding:0}
+*{scrollbar-width:thin;scrollbar-color:var(--hair) transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--hair);border-radius:10px;border:3px solid transparent;background-clip:padding-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;overscroll-behavior-x:none;-webkit-tap-highlight-color:transparent}
+body{
+  background:var(--ground); color:var(--ink);
+  font:400 16px/1.5 var(--sans); letter-spacing:-.011em;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  padding-inline:var(--gut); padding-block:0 120px; overflow-x:clip; position:relative;
+}
+.shell{max-width:1060px;margin-inline:auto;position:relative}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.up{color:var(--up)} .down{color:var(--down)} .dim{color:var(--ink-3)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* ================================================================ motion */
+@keyframes enter{from{opacity:.4;transform:translateY(16px)}to{opacity:1;transform:none}}
+.enter{animation:enter .85s var(--ease) backwards}
+.s1{animation-delay:.05s}.s2{animation-delay:.12s}.s3{animation-delay:.19s}
+.s4{animation-delay:.26s}.s5{animation-delay:.33s}.s6{animation-delay:.40s}
+@keyframes rowIn{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:none}}
+.row-in{animation:rowIn .6s var(--ease) backwards;animation-delay:calc(.45s + var(--i,0) * 55ms)}
+@keyframes breathe{
+  0%,100%{box-shadow:0 0 0 0 var(--pulse),0 0 10px 1px var(--pulse)}
+  50%    {box-shadow:0 0 0 7px transparent,0 0 16px 3px var(--pulse)}
+}
+@keyframes drift{
+  0%  {transform:translate3d(-6%,-4%,0) scale(1)}
+  50% {transform:translate3d(8%,6%,0) scale(1.12)}
+  100%{transform:translate3d(-6%,-4%,0) scale(1)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;animation-delay:0s!important;transition-duration:.001s!important}
+}
+
+/* ================================================================ ambient glow */
+.ambient{position:absolute;left:0;right:0;top:0;height:760px;overflow:hidden;pointer-events:none;z-index:0}
+.glow{position:absolute;inset:-120px 0 auto 0;height:660px;pointer-events:none;opacity:var(--glow)}
+.glow::before{content:"";position:absolute;left:0;top:40px;width:62%;height:380px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(var(--accent-rgb),.20),transparent);animation:drift 22s ease-in-out infinite}
+.glow::after{content:"";position:absolute;right:4%;top:0;width:44%;height:320px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(var(--accent-rgb),.10),transparent);animation:drift 28s ease-in-out infinite reverse}
+.layer{position:relative;z-index:1}
+
+/* ================================================================ masthead */
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-block:34px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:15px;letter-spacing:-.02em}
+.mark{width:26px;height:26px;border-radius:8px;background:var(--ink);display:grid;place-items:center;flex:none}
+.mark svg{width:15px;height:15px;display:block}
+.mark path{stroke:var(--ground)}
+.stamp{font-size:12.5px;color:var(--ink-3);font-family:var(--mono);letter-spacing:-.02em}
+.labbtn{margin-left:auto;display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border-radius:999px;
+  font:600 13.5px var(--sans);letter-spacing:-.01em;text-decoration:none;color:var(--accent);
+  background:rgba(var(--accent-rgb),.10);box-shadow:inset 0 0 0 1px rgba(var(--accent-rgb),.24);
+  transition:background .2s var(--ease)}
+.labbtn:hover{background:rgba(var(--accent-rgb),.18)}
+.labbtn .ar{display:inline-block;transition:transform .28s var(--spring)}
+.labbtn:hover .ar{transform:translateX(-3px)}
+
+/* ================================================================ hero */
+.hero{padding-block:48px 6px}
+.live{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:var(--ink-2);
+  margin-bottom:22px;padding:6px 13px 6px 11px;border-radius:999px;background:var(--raised);box-shadow:var(--lift)}
+.bead{width:7px;height:7px;border-radius:50%;background:var(--ink-3);flex:none;--pulse:transparent}
+.bead.on{background:var(--up);--pulse:var(--up-wash);animation:breathe 2.6s ease-in-out infinite}
+.bead.pause{background:var(--be)}
+.bead.trade{background:var(--accent)}
+.bead.idle{background:var(--ink-3)}
+.ltitle{font-size:clamp(46px,8.5vw,92px);font-weight:600;line-height:.95;letter-spacing:-.055em}
+.context{margin-top:22px;color:var(--ink-2);font-size:15px;line-height:1.55;max-width:70ch}
+.context b{color:var(--ink);font-weight:600}
+
+/* ================================================================ strip */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:1px solid var(--hair);
+  border-bottom:1px solid var(--hair)}
+.stat{padding:22px 26px 24px;border-left:1px solid var(--hair-soft);min-width:0}
+.stat:first-child{border-left:none;padding-left:0}
+.stat .k{font-size:11.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.07em}
+.stat .v{font-size:26px;font-weight:600;margin-top:9px;letter-spacing:-.03em;line-height:1.1}
+.stat .v.txt{font-size:19px;letter-spacing:-.02em;line-height:1.25}
+.stat .n{font-size:12.5px;color:var(--ink-3);margin-top:5px}
+.jbar{height:5px;border-radius:999px;background:var(--sunken);overflow:hidden;margin-top:9px}
+.jbar i{display:block;height:100%;background:var(--accent);width:0;transition:width 1.1s var(--ease)}
+@media(max-width:720px){
+  .strip{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:20px 0 20px 20px}
+  .stat:nth-child(odd){border-left:none;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--hair-soft)}
+}
+
+/* ================================================================ sections + cards */
+section{margin-top:64px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:12px 14px;margin-bottom:18px;flex-wrap:wrap}
+.hleft{display:flex;align-items:baseline;gap:12px}
+h2{font-size:12.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.09em}
+.aside{font-size:12.5px;color:var(--ink-3);font-family:var(--mono)}
+.card{border-radius:20px;background:var(--raised);box-shadow:var(--lift)}
+.list{overflow:hidden}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:64px}
+.duo>section{margin-top:0;min-width:0}
+@media(max-width:820px){.duo{grid-template-columns:1fr;gap:56px}}
+.void{padding:30px 22px;text-align:center;color:var(--ink-3);font-size:14.5px;line-height:1.55}
+.void b{display:block;color:var(--ink-2);font-weight:600;margin-bottom:4px}
+.chip{display:inline-block;flex:none;font:600 10px var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;
+  border-radius:6px;white-space:nowrap;background:var(--sunken);color:var(--ink-2)}
+.chip.good{background:var(--up-wash);color:var(--up)} .chip.bad{background:var(--down-wash);color:var(--down)}
+.chip.run{background:rgba(var(--accent-rgb),.12);color:var(--accent)} .chip.part{background:var(--be-wash);color:var(--be)}
+
+
+/* ================================================================ lernhub */
+body{padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
+h3{font-size:16px;font-weight:600;letter-spacing:-.02em}
+p{max-width:72ch}
+a{color:var(--accent)}
+.lead{color:var(--ink-2);font-size:14.5px;line-height:1.55;max-width:72ch;margin-top:-6px;margin-bottom:18px}
+.banner{margin-top:22px;border-radius:14px;padding:12px 16px;background:var(--be-wash);color:var(--ink);font-size:14px;line-height:1.5}
+.banner b{color:var(--be)}
+
+/* plan */
+.plan{display:grid}
+.pl{display:grid;grid-template-columns:40px minmax(0,1fr) auto;align-items:center;gap:16px;padding:15px 22px;border-top:1px solid var(--hair-soft)}
+.pl:first-child{border-top:none}
+.pl .nr{width:40px;height:40px;border-radius:12px;background:var(--sunken);display:grid;place-items:center;font:600 14px var(--mono);color:var(--ink-2)}
+.pl.laeuft .nr{background:rgba(var(--accent-rgb),.12);color:var(--accent)}
+.pl.fertig .nr{background:var(--up-wash);color:var(--up)}
+.pl .t{font-weight:600;font-size:15px;letter-spacing:-.02em}
+.pl .sub{font-size:13px;color:var(--ink-3);margin-top:2px;line-height:1.45}
+.pl .when{font:500 12px var(--mono);color:var(--ink-3);text-align:right}
+@media(max-width:600px){.pl{grid-template-columns:40px minmax(0,1fr);padding:14px 16px}.pl .when{grid-column:2;text-align:left}}
+
+/* rechteck */
+.two{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:18px}
+@media(max-width:820px){.two{grid-template-columns:minmax(0,1fr)}}
+.pad{padding:22px}
+.schema{display:block;width:100%;height:auto}
+.schema text{font:500 11.5px var(--sans);fill:var(--ink-2)}
+.schema text.h{font-weight:600;fill:var(--ink)}
+dl.rules{display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:10px 16px;font-size:14px;line-height:1.45}
+dl.rules dt{color:var(--ink-3);font-size:13px}
+dl.rules dd{min-width:0}
+dl.rules b{font-weight:600}
+.stages{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:18px}
+@media(max-width:760px){.stages{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stg{border-radius:14px;background:var(--sunken);padding:12px 14px;display:grid;gap:4px;font-size:13px;color:var(--ink-2);line-height:1.4;min-width:0}
+.stg b{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.stg strong{font-size:14px;color:var(--ink);font-weight:600}
+.stg.s3{background:rgba(var(--accent-rgb),.10)} .stg.s3 b{color:var(--accent)}
+.stg.s4{background:var(--up-wash)} .stg.s4 b{color:var(--up)}
+
+/* einstiege */
+.entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(max-width:760px){.entries{grid-template-columns:minmax(0,1fr)}}
+.en{padding:18px 18px 20px;display:grid;gap:10px;min-width:0}
+.en .top{display:flex;align-items:center;gap:10px}
+.en .ltr{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font:700 15px var(--mono);background:rgba(var(--accent-rgb),.12);color:var(--accent);flex:none}
+.en p{font-size:13.5px;color:var(--ink-2);line-height:1.5}
+.en .pro{font-size:12.5px;color:var(--ink-3);line-height:1.45}
+.en svg{width:100%;height:auto;display:block;border-radius:12px;background:var(--sunken)}
+
+/* ergebnisse */
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:760px}
+th,td{padding:11px 12px;text-align:right;border-bottom:1px solid var(--hair-soft);white-space:nowrap}
+th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}
+thead th{font:600 10.5px var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+thead tr.grp th{border-bottom:none;padding-bottom:0;color:var(--ink-2)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+tbody tr:last-child td{border-bottom:none}
+
+/* steuerung */
+.ctrl{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:14px}
+.seg{display:inline-flex;gap:3px;padding:3px;border-radius:999px;background:var(--sunken)}
+.seg button{appearance:none;border:0;background:transparent;color:var(--ink-2);font:500 13px/1 var(--sans);padding:8px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--raised);color:var(--ink);box-shadow:0 0 0 1px var(--hair)}
+.btn{appearance:none;border:0;cursor:pointer;border-radius:999px;padding:9px 15px;font:600 13px/1 var(--sans);color:var(--accent);background:rgba(var(--accent-rgb),.10);box-shadow:inset 0 0 0 1px rgba(var(--accent-rgb),.22)}
+.btn:hover{background:rgba(var(--accent-rgb),.16)}
+.btn.ok{color:var(--up);background:var(--up-wash);box-shadow:inset 0 0 0 1px rgba(var(--up-rgb),.3)}
+.btn.no{color:var(--down);background:var(--down-wash);box-shadow:inset 0 0 0 1px rgba(var(--down-rgb),.3)}
+.btn.mid{color:var(--ink-2);background:var(--sunken);box-shadow:inset 0 0 0 1px var(--hair)}
+.count{font:500 12.5px var(--mono);color:var(--ink-3)}
+
+/* galerie */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:10px}
+.tile{appearance:none;text-align:left;cursor:pointer;border:0;border-radius:14px;background:var(--raised);box-shadow:var(--lift);color:var(--ink);padding:8px 8px 10px;display:grid;gap:6px;font:inherit;min-width:0}
+.tile[aria-pressed="true"]{box-shadow:0 0 0 2px var(--accent)}
+.tile svg{width:100%;height:auto;display:block;border-radius:8px;background:var(--sunken)}
+.tile .r1,.tile .r2{display:flex;justify-content:space-between;gap:6px}
+.tile .r1{font-size:13px;font-weight:600}
+.tile .r2{font-size:12px;color:var(--ink-3)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.more{display:flex;justify-content:center;margin-top:14px}
+
+/* detail */
+.detail{padding:20px;margin-bottom:16px;display:grid;gap:14px}
+.dhead{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.dhead h3{font-size:18px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.k{display:inline-block;width:16px;height:0;border-top:2px solid var(--c)}
+.k.dash{border-top-style:dashed}
+.k.dot{width:9px;height:9px;border:0;border-radius:50%;background:var(--c)}
+.k.ring{width:10px;height:10px;border:1.8px solid var(--c);border-radius:50%}
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.chart text{font:400 10.5px var(--mono);fill:var(--ink-3)}
+.chart text.lab{font:500 11.5px var(--sans);fill:var(--ink-2)}
+.chart text.val{font:600 11.5px var(--mono);fill:var(--ink)}
+dl.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px 18px;font-size:13.5px}
+dl.facts div{display:grid;gap:2px}
+dl.facts dt{color:var(--ink-3);font-size:12px}
+.tip{position:fixed;z-index:60;pointer-events:none;min-width:170px;border-radius:12px;padding:8px 11px;background:var(--raised);color:var(--ink);
+  box-shadow:0 14px 34px -14px rgba(0,0,0,.35),0 0 0 1px var(--hair);font:400 12.5px/1.5 var(--sans);transform:translate(-50%,calc(-100% - 12px))}
+.tip h4{font:500 11px var(--mono);color:var(--ink-3);margin-bottom:3px}
+.tip div{display:flex;justify-content:space-between;gap:14px;color:var(--ink-2)}
+.tip b{font:600 12px var(--mono);color:var(--ink)}
+
+/* sichtpruefung */
+.sicht{padding:20px;display:grid;gap:14px}
+.sicht .q{font-size:17px;font-weight:600;letter-spacing:-.02em}
+.sicht .btns{display:flex;flex-wrap:wrap;gap:10px}
+.sbar{height:6px;border-radius:999px;background:var(--sunken);overflow:hidden}
+.sbar i{display:block;height:100%;background:var(--accent);width:0;transition:width .4s var(--ease)}
+pre.out{background:var(--sunken);border-radius:12px;padding:12px 14px;font:400 12.5px/1.55 var(--mono);white-space:pre-wrap;color:var(--ink)}
+
+/* scanner */
+.scan td .mini{width:120px;height:auto;display:block;border-radius:6px;background:var(--sunken)}
+.stagechip{display:inline-flex;align-items:center;gap:6px;font:600 11px var(--mono);padding:3px 8px;border-radius:6px;background:var(--sunken);color:var(--ink-2)}
+.stagechip.s2{background:var(--be-wash);color:var(--be)} .stagechip.s3{background:rgba(var(--accent-rgb),.12);color:var(--accent)} .stagechip.s4{background:var(--up-wash);color:var(--up)}
+
+/* doku */
+.row{display:flex;gap:12px;align-items:flex-start;padding:13px 22px;border-top:1px solid var(--hair-soft)}
+.row:first-child{border-top:none}
+.row .when{flex:none;width:92px;font:500 12px var(--mono);color:var(--ink-3);padding-top:2px}
+.row .txt{font-size:13.5px;color:var(--ink-2);line-height:1.5;min-width:0}
+.src{display:grid;gap:8px;font-size:13.5px;color:var(--ink-2);padding:18px 22px}
+footer a{color:var(--ink-3)}
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><div class="glow"></div></div>
+<div class="shell">
+  <div class="layer">
+    <div class="masthead enter">
+      <div class="brand">
+        <span class="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 68 L38 46 L56 58 L84 26" fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        PatternBot
+      </div>
+      <a class="labbtn" href="./"><span class="ar" aria-hidden="true">←</span>Dashboard</a>
+      <div class="stamp" id="stamp">—</div>
+    </div>
+
+    <div class="hero enter s1">
+      <div class="live"><span class="bead" id="bead"></span><span id="liveText">lade …</span></div>
+      <h1 class="ltitle" id="hubTitle">Lernhub</h1>
+      <p class="context">Die Werkbank für <b>ein Muster: das Rechteck</b>. Der Bot zieht seine Linien selbst, sie müssen wirklich berühren,
+        und jedes Bild zeigt genau das, was der Bot im Moment der Entscheidung gesehen hat. Gehandelt wird nur das saubere
+        Lehrbuch-Rechteck. Getestet auf 5- und 15-Minuten-Kerzen, 50 Aktien mit dem meisten Handel.</p>
+      <div class="banner" id="exBanner" hidden><b>Beispielbilder.</b> Diese Vorschau zeigt künstliche Kurse, damit man das Format sieht. Echte Trades erscheinen hier, sobald der erste Lauf fertig ist.</div>
+    </div>
+
+    <div class="strip enter s2" id="strip"></div>
+
+    <section class="enter s3" id="plan-sec">
+      <div class="head"><div class="hleft"><h2>Der Plan</h2><span class="aside" id="planNote"></span></div></div>
+      <div class="card plan" id="plan"></div>
+    </section>
+
+    <section class="enter s4" id="rechteck">
+      <div class="head"><div class="hleft"><h2>So liest der Bot ein Rechteck</h2></div></div>
+      <p class="lead">Zwei waagerechte Linien, an denen der Kurs mehrmals abprallt. Der Bot zeichnet sie selbst aus den Wendepunkten des Tages.
+        Kein Spielraum von Prozenten: Eine Berührung zählt nur, wenn der Docht die Linie wirklich erreicht.</p>
+      <div class="two">
+        <div class="card pad"><svg class="schema" id="schemaRect" viewBox="0 0 520 280" role="img" aria-label="Schema eines Rechtecks mit zwei Linien, je drei Berührungen, schmalem Berührungsband und Ausbruch nach oben"></svg></div>
+        <div class="card pad">
+          <dl class="rules">
+            <dt>Kerzen</dt><dd>5 und 15 Minuten, nur reguläre Handelszeit (09:30–16:00 New York), aus den vollständigen Kursen aller Börsen (SIP).</dd>
+            <dt>Ein Tag</dt><dd><b>Das Muster entsteht und wird gehandelt am selben Tag.</b> Keine Linie über Nacht, kein Trade über Nacht.</dd>
+            <dt>Berührung</dt><dd>Docht innerhalb von <b>0,15 Kerzenspannen (ATR)</b> an der Linie. Zwischen zwei Berührungen derselben Linie läuft der Kurs mindestens 40 % der Kastenhöhe weg und kommt zurück.</dd>
+            <dt>Mindestens</dt><dd>2 Berührungen oben <b>und</b> 2 unten, abwechselnd. Kein Schluss außerhalb des Kastens, höchstens ein Docht ragt bis 0,3 ATR hinaus.</dd>
+            <dt>Größe</dt><dd>Höhe 1,5 bis 6 ATR. Breite mindestens 10 Kerzen (15 Min) bzw. 12 Kerzen (5 Min).</dd>
+            <dt>Note</dt><dd><b>A</b> lehrbuchreif (3+ Berührungen an einer Linie, alle eng an der Linie, kein Docht außerhalb), <b>B</b> brauchbar, <b>C</b> ungefähr. Gehandelt wird nur A.</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="stages" aria-label="Reifegrad des Musters, die Anzeige des Bots">
+        <div class="stg"><b>Stufe 0</b><strong>nichts</strong>Keine zwei Hochs oder Tiefs auf gleicher Höhe.</div>
+        <div class="stg"><b>Stufe 1</b><strong>entsteht</strong>Zwei Berührungen an einer Linie. Der Bot beobachtet.</div>
+        <div class="stg"><b>Stufe 2</b><strong>reif</strong>2 + 2 Berührungen, Kurs bleibt im Kasten. Auf die Prioritätsliste.</div>
+        <div class="stg s3"><b>Stufe 3</b><strong>Auslöser</strong>Die Regel des Einstiegs ist erfüllt. Nur Note A wird gehandelt.</div>
+        <div class="stg s4"><b>Stufe 4</b><strong>im Trade</strong>Stop und Ziel kommen aus den eigenen Linien.</div>
+      </div>
+    </section>
+
+    <section class="enter s5" id="einstiege">
+      <div class="head"><div class="hleft"><h2>Vier Einstiege im Vergleich</h2></div></div>
+      <p class="lead">Dasselbe Rechteck, vier Arten zu handeln. Alle vier werden auf denselben Kästen getestet. So zeigt sich, welcher Einstieg auf 5 und 15 Minuten wirklich trägt.</p>
+      <div class="entries" id="entries"></div>
+    </section>
+
+    <section id="ergebnisse">
+      <div class="head"><div class="hleft"><h2>Ergebnisse</h2><span class="aside" id="resNote"></span></div></div>
+      <p class="lead">Nach Kosten, je Einstieg und Zeitebene. Entwickelt wird auf Okt. 2021 bis Sep. 2023. Die Jahre 2024 und 2025 werden genau einmal geprüft, wenn eine Variante überzeugt.</p>
+      <div class="card"><div class="tablewrap" id="results"></div></div>
+    </section>
+
+    <section id="trades">
+      <div class="head"><div class="hleft"><h2>Alle Trades</h2><span class="aside" id="trNote"></span></div></div>
+      <p class="lead">Jeder gefundene Trade mit den Linien, die der Bot selbst gezogen hat. Das Bild endet zuerst im Moment der Entscheidung, so wie der Bot es gesehen hat. Mit „mit Ausgang“ siehst du, was danach passiert ist.</p>
+      <div class="ctrl">
+        <div class="seg" role="group" aria-label="Zeitebene" id="fTf"><button type="button" data-v="15" aria-pressed="true">15 Min</button><button type="button" data-v="5" aria-pressed="false">5 Min</button></div>
+        <div class="seg" role="group" aria-label="Einstieg" id="fEn"><button type="button" data-v="A" aria-pressed="true">A</button><button type="button" data-v="B" aria-pressed="false">B</button><button type="button" data-v="C" aria-pressed="false">C</button><button type="button" data-v="D" aria-pressed="false">D</button></div>
+        <div class="seg" role="group" aria-label="Ergebnis" id="fRes"><button type="button" data-v="alle" aria-pressed="true">alle</button><button type="button" data-v="plus" aria-pressed="false">Gewinner</button><button type="button" data-v="minus" aria-pressed="false">Verlierer</button></div>
+        <div class="seg" role="group" aria-label="Note" id="fNote"><button type="button" data-v="alle" aria-pressed="true">alle Noten</button><button type="button" data-v="A" aria-pressed="false">A</button><button type="button" data-v="B" aria-pressed="false">B</button><button type="button" data-v="C" aria-pressed="false">C</button></div>
+        <div class="seg" role="group" aria-label="Bild" id="fView"><button type="button" data-v="moment" aria-pressed="true">Moment der Entscheidung</button><button type="button" data-v="aus" aria-pressed="false">mit Ausgang</button></div>
+      </div>
+      <div class="card detail" id="detail" hidden>
+        <div class="dhead"><h3 id="dTitle"></h3><span id="dChips"></span></div>
+        <div class="legend">
+          <span><i class="k" style="--c:var(--accent)"></i>Linien des Bots</span>
+          <span><i class="k ring" style="--c:var(--accent)"></i>Berührung</span>
+          <span><i class="k dash" style="--c:var(--up)"></i>Ziel</span>
+          <span><i class="k dash" style="--c:var(--down)"></i>Stop</span>
+          <span><i class="k dot" style="--c:var(--ink)"></i>Einstieg</span>
+        </div>
+        <div class="chart" id="dChart" tabindex="0" aria-label="Großes Bild des Trades"></div>
+        <dl class="facts" id="dFacts"></dl>
+      </div>
+      <div class="gallery" id="gallery"></div>
+      <div class="more"><button type="button" class="btn" id="moreBtn" hidden>Mehr laden</button></div>
+    </section>
+
+    <section id="sicht">
+      <div class="head"><div class="hleft"><h2>Sichtprüfung</h2><span class="aside" id="siNote"></span></div></div>
+      <p class="lead">Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen, das Bild endet an der Signalkerze, ohne Ausgang. Gerechnet wird erst, wenn mindestens 80 % „ja“ sind.</p>
+      <div class="card sicht" id="sichtBox"></div>
+    </section>
+
+    <section id="scanner">
+      <div class="head"><div class="hleft"><h2>Was der Bot gerade sieht</h2><span class="aside" id="scNote"></span></div></div>
+      <p class="lead">Der Scanner über die 50 Aktien: welche gerade ein Rechteck bilden, auf welcher Stufe und wie nah der Kurs an der Kante ist.</p>
+      <div class="card"><div class="tablewrap" id="scan"></div></div>
+    </section>
+
+    <section id="doku">
+      <div class="head"><div class="hleft"><h2>Dokumentation</h2></div></div>
+      <div class="duo" style="margin-top:0">
+        <div class="card" id="log"></div>
+        <div class="card src" id="sources">
+          <h3>Was Profis und Statistiken sagen</h3>
+          <span>Rechtecke (Tageskerzen): Nach dem Ausbruch kommt der Kurs in etwa zwei von drei Fällen noch einmal zur Kante zurück, und gerade diese Rücksetzer schwächen das Ergebnis. Quelle: <a href="https://thepatternsite.com/recttops.html" target="_blank" rel="noopener">Bulkowski, Rectangle Tops</a> und <a href="https://thepatternsite.com/rectbots.html" target="_blank" rel="noopener">Rectangle Bottoms</a>.</span>
+          <span>Seitwärtsphasen im Intraday: Die meisten Ausbruchsversuche scheitern, oft innerhalb von 1–5 Kerzen. Profis warten deshalb auf den zweiten Einstieg oder handeln den Fehlausbruch. Quelle: <a href="https://www.brookstradingcourse.com/support-forum/12-market-cycle/breakout-fail/" target="_blank" rel="noopener">Brooks Trading Course, Forum</a> (Faustregel, keine genaue Zahl).</span>
+          <span>Ausbruch gegen Retest: Der Retest bringt den besseren Preis, kommt aber nur bei etwa der Hälfte der Ausbrüche. In einer offenen Testreihe war der Erwartungswert je Ausbruch am Ende ähnlich. Quelle: <a href="https://www.tradingview.com/script/SA4YoyNF-Breakout-Retest-Entry-Signals-the-Break-vs-Retest/" target="_blank" rel="noopener">TradingView-Studie „Break vs Retest“</a> (eine Stichprobe, kein Beweis).</span>
+          <span class="dim">Darum testen wir alle vier Einstiege selbst, auf unseren Aktien, nach Kosten.</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Nur Paper · keine Live-Freigabe</span>
+      <span>Daten vom Branch backtest · <a href="labor-archiv.html">Altes Lern-Labor (Lauf 1)</a></span>
+    </footer>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* Lernhub · Werkbank Rechteck. Liest alle Daten vom Branch backtest (lernhub/daten/), die Seite selbst liegt auf main.
+   Dateien: status.json, ergebnisse.json, trades/index.json (+ Teile), sichtpruefung.json, scanner.json. Fehlt eine Datei,
+   zeigt der Abschnitt einen Leerzustand. Beispieldaten nur in der Vorschau (window.LERNHUB_BEISPIEL). */
+const $ = (id) => document.getElementById(id);
+const esc = (v) => String(v ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const nf = (n, d = 2) => (n == null || isNaN(n) ? "—" : Number(n).toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d }));
+const sg = (n, d = 2) => (n == null || isNaN(n) ? "—" : (n > 0 ? "+" : n < 0 ? "−" : "") + nf(Math.abs(n), d));
+const NS = "http://www.w3.org/2000/svg";
+const S = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a || {}) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const dayDE = (iso) => { if (!iso) return "—"; const [y, m, d] = String(iso).slice(0, 10).split("-"); return `${d}.${m}.${y}`; };
+const tsDE = (iso) => { try { return new Date(iso).toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }); } catch (e) { return "—"; } };
+const EX = window.LERNHUB_BEISPIEL || null;
+const REPO = (() => { const h = location.hostname; if (!h.endsWith(".github.io")) return null; return { owner: h.split(".")[0], repo: location.pathname.split("/").filter(Boolean)[0] || "" }; })();
+const BASE = REPO ? `https://raw.githubusercontent.com/${REPO.owner}/${REPO.repo}/backtest/lernhub/daten/` : "lernhub/daten/";
+async function get(name) {
+  if (EX && Object.prototype.hasOwnProperty.call(EX, name)) return EX[name];
+  if (EX) return null;
+  try { const r = await fetch(BASE + name + "?t=" + Date.now(), { cache: "no-store" }); if (!r.ok) return null; return await r.json(); } catch (e) { return null; }
+}
+const ENTRY = {
+  A: { t: "Ausbruch", s: "Schluss außerhalb des Kastens, sofort rein. So handelt der Bot heute.", p: "Schnell dabei, aber voll im Risiko eines Fehlausbruchs." },
+  B: { t: "Retest", s: "Nach dem Ausbruch warten, bis der Kurs zur alten Kante zurückkommt und dort hält. Erst dann rein.", p: "Besserer Preis, engerer Stop. Kommt nur bei etwa der Hälfte der Ausbrüche." },
+  C: { t: "Abpraller", s: "Im Kasten handeln: an der unteren Linie kaufen, an der oberen verkaufen, sobald die Kerze dort abprallt.", p: "Intraday halten Kästen oft länger als gedacht. Ziel ist die andere Seite des Kastens." },
+  D: { t: "Fehlausbruch", s: "Der Kurs bricht aus und schließt innerhalb von 1–3 Kerzen wieder im Kasten. Dann in die Gegenrichtung zur anderen Seite.", p: "Profis sagen: Die meisten Ausbrüche aus Seitwärtsphasen scheitern. Genau die nutzt D." },
+};
+
+/* ------------------------------------------------------------ Kopf und Kennzahlen */
+function renderHead(st, idx, si) {
+  const title = window.LABOR_NAME && window.LABOR_NAME !== "Lern-Labor" ? window.LABOR_NAME : "Lernhub";
+  $("hubTitle").textContent = title;
+  $("stamp").textContent = st && st.stand ? "Stand " + tsDE(st.stand) : "—";
+  const bead = $("bead"), lt = $("liveText");
+  const phase = (st && st.phase) || "Vorbereitung";
+  bead.className = "bead " + (st && st.laeuft ? "on" : "idle");
+  lt.textContent = (st && st.laeuft ? "läuft: " : "") + phase;
+  const n = idx && idx.gruppen ? idx.gruppen.reduce((a, g) => a + (g.anzahl || 0), 0) : null;
+  const sv = sichtSummary(si);
+  const cells = [
+    ["Muster", "Rechteck", "ein Muster, perfekt gemacht"],
+    ["Aktien", "50", "die mit dem meisten Handel"],
+    ["Trades gefunden", n == null ? "—" : n.toLocaleString("de-DE"), n == null ? "kommt mit dem ersten Lauf" : "5 und 15 Min, alle Einstiege"],
+    ["Sichtprüfung", sv.done ? Math.round((sv.ja / sv.done) * 100) + " % ja" : "—", sv.total ? `${sv.done} von ${sv.total} angesehen` : "Bilder kommen mit dem Lauf"],
+  ];
+  $("strip").innerHTML = cells.map(([k, v, s]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v ${/^\d|—/.test(v) ? "num" : "txt"}">${esc(v)}</div><div class="n">${esc(s)}</div></div>`).join("");
+  if (EX) $("exBanner").hidden = false;
+}
+
+/* ------------------------------------------------------------ Plan */
+const PLAN_DEFAULT = [
+  { titel: "Lernhub-Seite neu", text: "Diese Seite: Plan, Regeln, Ergebnisse, alle Trades, Sichtprüfung, Scanner.", status: "laeuft", datum: "Fr 23.10." },
+  { titel: "Strenge Rechteck-Erkennung", text: "Linien aus den Wendepunkten des Tages, echte Berührungen, Reifegrad 0–4, Note A/B/C. Jedes Bild wird im Moment der Entscheidung gespeichert.", status: "offen", datum: "So 25.10." },
+  { titel: "Sichtprüfung durch dich", text: "30 zufällige Erkennungen ansehen. Weiter erst bei mindestens 80 % „ja“.", status: "offen", datum: "So 25.10." },
+  { titel: "Regeln festlegen", text: "Vorab-Datei mit Hash, bevor ein Ergebnis da ist.", status: "offen", datum: "So 25.10." },
+  { titel: "Entwicklung Okt. 2021 – Sep. 2023", text: "5 und 15 Min, Einstiege A–D, nach Kosten, gegen den Zufall. Nachricht per Telegram, wenn fertig.", status: "offen", datum: "So 25.10." },
+  { titel: "Prüfung 2024 und 2025", text: "Einmal, nur für die Variante, die überzeugt.", status: "offen", datum: "danach" },
+  { titel: "Paper auf Konto 2 mit Scanner", text: "Live mitlaufen, der Scanner zeigt, was der Bot gerade sieht.", status: "offen", datum: "später" },
+];
+function renderPlan(st) {
+  const P = (st && st.plan && st.plan.length ? st.plan : PLAN_DEFAULT);
+  $("plan").innerHTML = P.map((p, i) => `<div class="pl ${esc(p.status)}"><div class="nr">${p.status === "fertig" ? "✓" : i + 1}</div>
+    <div><div class="t">${esc(p.titel)}</div><div class="sub">${esc(p.text || "")}</div></div><div class="when">${esc(p.datum || "")}</div></div>`).join("");
+  const done = P.filter((p) => p.status === "fertig").length;
+  $("planNote").textContent = `${done} von ${P.length} erledigt`;
+}
+
+/* ------------------------------------------------------------ Schemata */
+function schemaRect() {
+  const svg = $("schemaRect");
+  const top = 92, bot = 188, x0 = 40, x1 = 350;
+  S("rect", { x: x0, y: top - 7, width: x1 - x0, height: 14, style: "fill:rgba(var(--accent-rgb),.12)" }, svg);
+  S("rect", { x: x0, y: bot - 7, width: x1 - x0, height: 14, style: "fill:rgba(var(--accent-rgb),.12)" }, svg);
+  S("line", { x1: x0, x2: 470, y1: top, y2: top, style: "stroke:var(--accent);stroke-width:2" }, svg);
+  S("line", { x1: x0, x2: x1, y1: bot, y2: bot, style: "stroke:var(--accent);stroke-width:2" }, svg);
+  const pts = [[40, 160], [75, top + 2], [112, bot - 2], [150, top - 3], [190, bot + 2], [228, top + 1], [268, bot - 1], [305, 140], [330, 118], [350, 98], [372, 70], [400, 58], [430, 44], [460, 40]];
+  S("polyline", { points: pts.map((p) => p.join(",")).join(" "), style: "fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round" }, svg);
+  for (const [x, y] of [[75, top + 2], [150, top - 3], [228, top + 1]]) S("circle", { cx: x, cy: y, r: 6, style: "fill:none;stroke:var(--accent);stroke-width:1.8" }, svg);
+  for (const [x, y] of [[112, bot - 2], [190, bot + 2], [268, bot - 1]]) S("circle", { cx: x, cy: y, r: 6, style: "fill:none;stroke:var(--accent);stroke-width:1.8" }, svg);
+  const tx = (x, y, t, cls, anchor) => { const e = S("text", { x, y, class: cls || "", "text-anchor": anchor || "start" }, svg); e.textContent = t; return e; };
+  tx(44, top - 14, "Obere Linie: 3 Berührungen", "h");
+  tx(44, bot + 26, "Untere Linie: 3 Berührungen", "h");
+  tx(358, top + 30, "Band ±0,15 ATR", "");
+  tx(358, top + 46, "= „berührt“", "");
+  tx(380, 30, "Ausbruch", "h");
+  S("path", { d: `M486 ${top}V${bot}M482 ${top + 4}L486 ${top}L490 ${top + 4}M482 ${bot - 4}L486 ${bot}L490 ${bot - 4}`, style: "fill:none;stroke:var(--ink-3);stroke-width:1.2" }, svg);
+  tx(494, (top + bot) / 2 + 4, "Höhe", "");
+  tx(44, 262, "Alles an einem Handelstag · nur 09:30–16:00 New York", "");
+}
+function entrySchema(k) {
+  const svg = S("svg", { viewBox: "0 0 300 120", role: "img", "aria-label": "Schema Einstieg " + k });
+  const top = 40, bot = 82;
+  S("rect", { x: 16, y: top, width: 150, height: bot - top, style: "fill:rgba(var(--accent-rgb),.08)" }, svg);
+  S("line", { x1: 16, x2: 284, y1: top, y2: top, style: "stroke:var(--accent);stroke-width:1.6" }, svg);
+  S("line", { x1: 16, x2: 284, y1: bot, y2: bot, style: "stroke:var(--accent);stroke-width:1.6" }, svg);
+  const P = {
+    A: [[16, 70], [40, 42], [64, 80], [90, 42], [116, 80], [140, 44], [166, 60], [180, 30], [208, 24], [240, 14], [280, 8]],
+    B: [[16, 70], [40, 42], [64, 80], [90, 42], [116, 80], [140, 44], [166, 60], [182, 26], [204, 38], [216, 41], [236, 24], [280, 8]],
+    C: [[16, 60], [40, 42], [64, 80], [90, 42], [116, 80], [140, 44], [166, 81], [196, 62], [226, 44], [250, 52], [280, 62]],
+    D: [[16, 70], [40, 42], [64, 80], [90, 42], [116, 80], [140, 44], [160, 50], [176, 30], [192, 46], [222, 62], [250, 80], [280, 84]],
+  }[k];
+  S("polyline", { points: P.map((p) => p.join(",")).join(" "), style: "fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round" }, svg);
+  const E = { A: [180, 30], B: [216, 41], C: [166, 81], D: [192, 46] }[k];
+  S("circle", { cx: E[0], cy: E[1], r: 4.5, style: "fill:var(--ink);stroke:var(--raised);stroke-width:1.5" }, svg);
+  const lab = { A: "rein beim Schluss außerhalb", B: "rein am Retest der Kante", C: "rein am Abpraller unten", D: "rein, wenn der Ausbruch scheitert" }[k];
+  const t = S("text", { x: E[0] - 8, y: E[1] + (k === "C" ? 24 : -12), "text-anchor": "end", style: "font:500 11px var(--sans);fill:var(--ink-2)" }, svg); t.textContent = lab;
+  return svg;
+}
+function renderEntries() {
+  const box = $("entries");
+  for (const k of ["A", "B", "C", "D"]) {
+    const c = document.createElement("div"); c.className = "card en";
+    c.innerHTML = `<div class="top"><span class="ltr">${k}</span><h3>${ENTRY[k].t}</h3></div><p>${esc(ENTRY[k].s)}</p><p class="pro">${esc(ENTRY[k].p)}</p>`;
+    c.appendChild(entrySchema(k));
+    box.appendChild(c);
+  }
+}
+
+/* ------------------------------------------------------------ Ergebnisse */
+function renderResults(er) {
+  const box = $("results");
+  const V = er && er.varianten ? er.varianten : [];
+  $("resNote").textContent = er && er.stand ? "Stand " + tsDE(er.stand) : "";
+  const rows = [];
+  for (const tf of [15, 5]) for (const k of ["A", "B", "C", "D"]) {
+    const v = V.find((x) => x.zeitebene === tf && x.einstieg === k) || null;
+    const e = v && v.werte && v.werte.entw, p = v && v.werte && v.werte.pruef;
+    const cell = (x, d = 3, cls = "") => `<td class="num ${cls}">${x == null ? "—" : sg(x, d)}</td>`;
+    const tone = (x) => (x == null ? "" : x > 0 ? "up" : "down");
+    const jahr = (j) => (e && e.jahre && e.jahre[j] ? e.jahre[j].ev : null);
+    const urteil = v && v.urteil ? `<span class="chip ${v.urteil_art || ""}">${esc(v.urteil)}</span>` : `<span class="chip">${e ? "offen" : "noch nicht gerechnet"}</span>`;
+    rows.push(`<tr><td>${tf} Min</td><td><b>${k}</b> · ${ENTRY[k].t}</td>
+      <td class="num">${e && e.trades != null ? e.trades.toLocaleString("de-DE") : "—"}</td>
+      ${cell(e && e.ev_vor, 3, tone(e && e.ev_vor))}${cell(e && e.ev, 3, tone(e && e.ev))}${cell(jahr(0), 3, tone(jahr(0)))}${cell(jahr(1), 3, tone(jahr(1)))}
+      <td class="num">${e && e.pf != null ? nf(e.pf, 2) : "—"}</td>
+      ${cell(e && e.noten && e.noten.A && e.noten.A.ev, 3, tone(e && e.noten && e.noten.A && e.noten.A.ev))}${cell(e && e.noten && e.noten.C && e.noten.C.ev, 3)}
+      <td class="num">${e && e.zufall != null ? e.zufall + "/100" : "—"}</td>
+      ${cell(p && p.ev, 3, tone(p && p.ev))}<td>${urteil}</td></tr>`);
+  }
+  box.innerHTML = `<table><thead>
+    <tr class="grp"><th></th><th></th><th colspan="9">Entwicklung Okt. 2021 – Sep. 2023</th><th>Prüfung</th><th></th></tr>
+    <tr><th>Zeitebene</th><th>Einstieg</th><th>Trades</th><th>Ø R vor Kosten</th><th>Ø R nach Kosten</th><th>Jahr 1</th><th>Jahr 2</th><th>PF</th><th>Note A</th><th>Note C</th><th>Zufall</th><th>2024–25</th><th>Urteil</th></tr>
+    </thead><tbody>${rows.join("")}</tbody></table>`;
+}
+
+/* ------------------------------------------------------------ Diagramm */
+let tipEl = null;
+const tip = () => { if (!tipEl) { tipEl = document.createElement("div"); tipEl.className = "tip"; tipEl.hidden = true; document.body.appendChild(tipEl); } return tipEl; };
+addEventListener("scroll", () => { if (tipEl) tipEl.hidden = true; }, { passive: true });
+function scales(T, cut, W, H, m) {
+  const K = T.kerzen.slice(0, cut + 1);
+  let lo = Infinity, hi = -Infinity;
+  for (const k of K) { lo = Math.min(lo, k[3]); hi = Math.max(hi, k[2]); }
+  for (const p of [T.oben, T.unten, T.stop, T.ziel]) if (p != null) { lo = Math.min(lo, p); hi = Math.max(hi, p); }
+  const pad = (hi - lo) * 0.06; lo -= pad; hi += pad;
+  const n = T.kerzen.length, slot = (W - m.l - m.r) / n;
+  return { K, X: (i) => m.l + slot * (i + 0.5), Y: (v) => m.t + (1 - (v - lo) / (hi - lo)) * H, slot, lo, hi };
+}
+function drawTrade(host, T, mode, big) {
+  host.textContent = "";
+  const cut = mode === "aus" ? T.kerzen.length - 1 : T.entscheidung;
+  const W = big ? Math.max(320, Math.round(host.clientWidth || 640)) : 300;
+  const small = big && W < 600;
+  const m = big ? { l: 8, r: small ? 78 : 112, t: 18, b: 22 } : { l: 4, r: 4, t: 6, b: 6 };
+  const PH = big ? (small ? 250 : 330) : 118, VH = big ? 46 : 0, GAP = big ? 10 : 0;
+  const H = m.t + PH + GAP + VH + m.b;
+  const { K, X, Y, slot, lo, hi } = scales(T, cut, W, PH, m);
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, "aria-hidden": big ? "false" : "true", role: big ? "img" : "presentation" }, host);
+  if (big) {
+    const step = (() => { const raw = (hi - lo) / 5, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; })();
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), style: "stroke:var(--hair-soft);stroke-width:1" }, svg);
+  }
+  const bx0 = X(T.box_von) - slot / 2, bx1 = X(T.box_bis) + slot / 2;
+  S("rect", { x: bx0, y: Y(T.oben), width: bx1 - bx0, height: Math.max(1, Y(T.unten) - Y(T.oben)), style: "fill:rgba(var(--accent-rgb),.08)" }, svg);
+  S("rect", { x: X(T.entscheidung) - slot * 0.6, y: m.t, width: slot * 1.2, height: PH, style: "fill:rgba(var(--accent-rgb),.10)" }, svg);
+  const lineEnd = mode === "aus" ? X(T.kerzen.length - 1) : X(T.entscheidung);
+  for (const p of [T.oben, T.unten]) S("line", { x1: bx0, x2: lineEnd, y1: Y(p), y2: Y(p), style: `stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
+  {
+    const x0 = X(T.entscheidung), x1 = mode === "aus" ? X(T.kerzen.length - 1) : Math.min(W - m.r, X(T.entscheidung) + slot * 4);
+    for (const [p, c] of [[T.ziel, "up"], [T.stop, "down"]]) if (p != null) S("line", { x1: x0, x2: x1, y1: Y(p), y2: Y(p), style: `stroke:var(--${c});stroke-width:${big ? 1.5 : 1.2};stroke-dasharray:5 4` }, svg);
+  }
+  const cw = Math.max(1, slot * 0.62);
+  K.forEach((k, i) => {
+    const [, o, h, l, c] = k, up = c >= o, cc = up ? "var(--up)" : "var(--down)";
+    S("line", { x1: X(i), x2: X(i), y1: Y(h), y2: Y(l), style: `stroke:${cc};stroke-width:${big ? 1 : 0.8}` }, svg);
+    const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
+    S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(big ? 1 : 0.8, y1 - y0), rx: big ? 1 : 0, style: `fill:${cc}` }, svg);
+  });
+  for (const b of T.beruehrungen || []) if (b.i <= cut) S("circle", { cx: X(b.i), cy: Y(b.p), r: big ? 5 : 3, style: `fill:none;stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
+  if (T.einstieg_i != null && T.einstieg_i <= cut + 1) S("circle", { cx: X(Math.min(T.einstieg_i, T.kerzen.length - 1)), cy: Y(T.einstieg_p), r: big ? 4.5 : 3, style: "fill:var(--ink);stroke:var(--raised);stroke-width:1.5" }, svg);
+  if (mode === "aus" && T.ausstieg_i != null) S("circle", { cx: X(T.ausstieg_i), cy: Y(T.ausstieg_p), r: big ? 5 : 3.4, style: `fill:var(--${T.r > 0 ? "up" : "down"});stroke:var(--raised);stroke-width:1.5` }, svg);
+  if (!big) return;
+  const labs = [[T.ziel, "Ziel", "up"], [T.oben, "Oben", "accent"], [T.unten, "Unten", "accent"], [T.stop, "Stop", "down"]].filter((x) => x[0] != null).map(([p, t, c]) => ({ p, t, c, y: Y(p) })).sort((a, b) => a.y - b.y);
+  for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 26);
+  const lx = W - m.r + 8;
+  for (const l of labs) {
+    S("line", { x1: lx, x2: lx + 9, y1: l.y, y2: l.y, style: `stroke:var(--${l.c});stroke-width:2` }, svg);
+    const a = S("text", { x: lx + 13, y: l.y - 2, class: "lab" }, svg); a.textContent = l.t;
+    const b = S("text", { x: lx + 13, y: l.y + 11, class: "val" }, svg); b.textContent = nf(l.p);
+  }
+  const vt = m.t + PH + GAP, vmax = Math.max(1, ...K.map((k) => k[5] || 0));
+  K.forEach((k, i) => { const h = ((k[5] || 0) / vmax) * VH; S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(0.5, h), style: `fill:${i === T.entscheidung ? "var(--accent)" : "var(--hair)"}` }, svg); });
+  for (const [i, t] of [[0, K[0][0]], [Math.floor(K.length / 2), K[Math.floor(K.length / 2)][0]], [K.length - 1, K[K.length - 1][0]]]) {
+    const e = S("text", { x: X(i), y: H - 6, "text-anchor": i === 0 ? "start" : i === K.length - 1 ? "end" : "middle" }, svg); e.textContent = t;
+  }
+  const xh = S("line", { y1: m.t, y2: vt + VH, style: "stroke:var(--ink-3);stroke-width:1", visibility: "hidden" }, svg);
+  const hit = S("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: PH + GAP + VH, style: "fill:transparent;cursor:crosshair" }, svg);
+  const show = (e) => {
+    const r = svg.getBoundingClientRect(), cx = ((e.clientX - r.left) * W) / r.width;
+    let i = Math.round((cx - m.l) / slot - 0.5); i = Math.max(0, Math.min(K.length - 1, i));
+    const k = K[i]; xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
+    const t = tip();
+    t.innerHTML = `<h4>${esc(dayDE(T.tag))} ${esc(k[0])} New York</h4>` + [["Eröffnung", k[1]], ["Hoch", k[2]], ["Tief", k[3]], ["Schluss", k[4]]].map(([a, v]) => `<div>${a}<b>${nf(v)}</b></div>`).join("") + `<div>Volumen<b>${(k[5] || 0).toLocaleString("de-DE")}</b></div>`;
+    t.hidden = false; const w = t.offsetWidth;
+    t.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, e.clientX)) + "px"; t.style.top = Math.max(t.offsetHeight + 16, r.top + Y(k[2]) * (r.width / W)) + "px";
+  };
+  hit.addEventListener("pointermove", show); hit.addEventListener("pointerdown", show);
+  hit.addEventListener("pointerleave", () => { xh.setAttribute("visibility", "hidden"); tip().hidden = true; });
+}
+
+/* ------------------------------------------------------------ Trades */
+const F = { tf: "15", en: "A", res: "alle", note: "alle", view: "moment" };
+let IDX = null, LOADED = {}, SHOWN = 60, CUR = null;
+function seg(id, key, cb) {
+  for (const b of $(id).querySelectorAll("button")) b.addEventListener("click", () => {
+    for (const o of $(id).querySelectorAll("button")) o.setAttribute("aria-pressed", String(o === b));
+    F[key] = b.dataset.v; cb();
+  });
+}
+async function groupTrades() {
+  const id = `${F.tf}m-${F.en}`;
+  if (LOADED[id]) return LOADED[id];
+  const g = IDX && IDX.gruppen ? IDX.gruppen.find((x) => x.id === id) : null;
+  if (!g) return (LOADED[id] = []);
+  const parts = await Promise.all((g.teile || []).map((p) => get(p)));
+  return (LOADED[id] = parts.flatMap((p) => (p && p.trades) || []));
+}
+async function renderGallery(reset) {
+  if (reset) SHOWN = 60;
+  const all = await groupTrades();
+  const list = all.filter((t) => (F.res === "plus" ? t.r > 0 : F.res === "minus" ? t.r <= 0 : true) && (F.note === "alle" ? true : t.note === F.note));
+  $("trNote").textContent = IDX ? `${list.length.toLocaleString("de-DE")} Trades in dieser Auswahl` : "";
+  const gal = $("gallery"); gal.textContent = "";
+  if (!list.length) {
+    gal.innerHTML = `<div class="card void" style="grid-column:1/-1"><b>${IDX ? "Keine Trades in dieser Auswahl" : "Noch keine Trades"}</b>${IDX ? "Andere Filter wählen." : "Sie erscheinen hier nach dem ersten Lauf, mit den Linien, die der Bot selbst gezogen hat."}</div>`;
+    $("moreBtn").hidden = true; return;
+  }
+  for (const t of list.slice(0, SHOWN)) {
+    const b = document.createElement("button"); b.type = "button"; b.className = "tile"; b.dataset.id = t.id;
+    b.setAttribute("aria-pressed", String(CUR && CUR.id === t.id));
+    b.setAttribute("aria-label", `${t.symbol} ${t.richtung}, ${dayDE(t.tag)}, Note ${t.note}, ${sg(t.r)} R. Groß öffnen`);
+    const holder = document.createElement("div"); drawTrade(holder, t, F.view, false);
+    b.appendChild(holder.firstChild);
+    b.insertAdjacentHTML("beforeend", `<div class="r1"><span>${esc(t.symbol)} · ${t.richtung === "long" ? "long" : "short"}</span><span class="mono ${t.r > 0 ? "up" : "down"}">${F.view === "aus" ? sg(t.r) + " R" : "Note " + esc(t.note)}</span></div>
+      <div class="r2"><span>${esc(dayDE(t.tag))} · ${esc(t.kerzen[t.entscheidung][0])}</span><span>${F.view === "aus" ? esc(ausgang(t.ausgang)) : "Stufe 3"}</span></div>`);
+    b.addEventListener("click", () => openTrade(t));
+    gal.appendChild(b);
+  }
+  $("moreBtn").hidden = list.length <= SHOWN;
+}
+const ausgang = (a) => ({ ziel: "Ziel", stop: "Stop", tagesende: "Tagesende" }[a] || a || "—");
+function openTrade(t) {
+  CUR = t; $("detail").hidden = false;
+  $("dTitle").textContent = `${t.symbol} · Rechteck ${t.richtung} · ${dayDE(t.tag)}`;
+  const chips = [`<span class="chip run">Einstieg ${esc(t.einstieg)} · ${esc(ENTRY[t.einstieg].t)}</span>`, `<span class="chip">${t.zeitebene} Min</span>`, `<span class="chip ${t.note === "A" ? "good" : t.note === "C" ? "bad" : "part"}">Note ${esc(t.note)}</span>`];
+  if (F.view === "aus") chips.push(`<span class="chip ${t.r > 0 ? "good" : "bad"}">${sg(t.r)} R · ${esc(ausgang(t.ausgang))}</span>`);
+  $("dChips").innerHTML = chips.join(" ");
+  drawTrade($("dChart"), t, F.view, true);
+  const facts = [["Bild", F.view === "aus" ? "mit Ausgang" : "Moment der Entscheidung"], ["Entscheidung", t.kerzen[t.entscheidung][0] + " New York"], ["Oben · Unten", nf(t.oben) + " · " + nf(t.unten)], ["Berührungen", (t.beruehrungen || []).filter((b) => b.seite === "oben").length + " oben · " + (t.beruehrungen || []).filter((b) => b.seite === "unten").length + " unten"]].concat(t.fakten || []);
+  if (F.view === "aus") facts.push(["Ergebnis", `${sg(t.r)} R nach Kosten (${sg(t.r_vor)} R vor Kosten)`]);
+  $("dFacts").innerHTML = facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  for (const b of document.querySelectorAll(".tile")) b.setAttribute("aria-pressed", String(b.dataset.id === t.id));
+  $("detail").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
+let rw = 0;
+new ResizeObserver(() => { const w = Math.round($("dChart").clientWidth); if (CUR && w > 0 && Math.abs(w - rw) > 2) { rw = w; drawTrade($("dChart"), CUR, F.view, true); } }).observe($("dChart"));
+
+/* ------------------------------------------------------------ Sichtprüfung */
+const SKEY = "lernhub-sicht-v1";
+const sload = () => { try { return JSON.parse(localStorage.getItem(SKEY) || "{}"); } catch (e) { return {}; } };
+const ssave = (o) => { try { localStorage.setItem(SKEY, JSON.stringify(o)); } catch (e) { /* ohne Speicher geht es trotzdem */ } };
+let SI = null, SANS = sload();
+function sichtSummary(si) {
+  const B = (si && si.bilder) || [], A = (si && si.id && SANS[si.id]) || {};
+  let ja = 0, nein = 0, un = 0; for (const b of B) { const v = A[b.id]; if (v === "ja") ja++; else if (v === "nein") nein++; else if (v === "unsicher") un++; }
+  return { total: B.length, ja, nein, un, done: ja + nein + un };
+}
+function renderSicht() {
+  const box = $("sichtBox");
+  const B = (SI && SI.bilder) || [];
+  if (!B.length) { box.innerHTML = `<div class="void"><b>Noch keine Bilder</b>Die Sichtprüfung startet mit der strengen Erkennung. Dann siehst du hier 30 zufällige Rechtecke.</div>`; $("siNote").textContent = ""; return; }
+  const A = SANS[SI.id] || (SANS[SI.id] = {});
+  const sm = sichtSummary(SI);
+  $("siNote").textContent = `${sm.done} von ${sm.total} · ${sm.done ? Math.round((sm.ja / sm.done) * 100) : 0} % ja`;
+  const next = B.find((b) => !A[b.id]);
+  if (!next) {
+    const neinIds = B.filter((b) => A[b.id] === "nein").map((b) => b.id);
+    const txt = `Sichtprüfung ${SI.muster || "Rechteck"} (${SI.id}): ${sm.total} Bilder, ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un} → ${Math.round((sm.ja / sm.total) * 100)} % ja.` + (neinIds.length ? `\nNein: ${neinIds.join(", ")}` : "");
+    box.innerHTML = `<div class="q">Fertig: ${Math.round((sm.ja / sm.total) * 100)} % „ja“</div><p class="dim">Kopiere das Ergebnis und schick es im Chat oder an VS Code. Es wird dort ins Logbuch übernommen.</p><pre class="out" id="sOut">${esc(txt)}</pre>
+      <div class="btns"><button type="button" class="btn" id="sCopy">Ergebnis kopieren</button><button type="button" class="btn mid" id="sReset">Neu anfangen</button></div>`;
+    $("sCopy").addEventListener("click", () => { const done = () => ($("sCopy").textContent = "Kopiert"); try { navigator.clipboard.writeText(txt).then(done, () => sel()); } catch (e) { sel(); } function sel() { const r = document.createRange(); r.selectNodeContents($("sOut")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } });
+    $("sReset").addEventListener("click", () => { SANS[SI.id] = {}; ssave(SANS); renderSicht(); renderHeadAgain(); });
+    return;
+  }
+  const i = B.indexOf(next);
+  box.innerHTML = `<div class="sbar"><i style="width:${(sm.done / sm.total) * 100}%"></i></div>
+    <div class="q">Bild ${i + 1} von ${B.length}: Ist das ein sauberes Rechteck?</div>
+    <div class="dim">${esc(next.symbol)} · ${esc(dayDE(next.tag))} · ${next.zeitebene} Min · das Bild endet an der Signalkerze</div>
+    <div class="chart" id="sChart"></div>
+    <div class="btns"><button type="button" class="btn ok" data-a="ja">Ja, sauber</button><button type="button" class="btn no" data-a="nein">Nein</button><button type="button" class="btn mid" data-a="unsicher">Unsicher</button></div>`;
+  drawTrade($("sChart"), next, "moment", true);
+  for (const b of box.querySelectorAll("[data-a]")) b.addEventListener("click", () => { A[next.id] = b.dataset.a; ssave(SANS); renderSicht(); renderHeadAgain(); });
+}
+
+/* ------------------------------------------------------------ Scanner */
+function renderScanner(sc) {
+  const box = $("scan");
+  const Z = (sc && sc.zeilen) || [];
+  $("scNote").textContent = sc && sc.stand ? "Stand " + tsDE(sc.stand) + (sc.markt_offen ? " · Markt offen" : " · Markt zu") : "";
+  if (!Z.length) { box.innerHTML = `<div class="void"><b>Der Scanner startet später</b>Er läuft mit dem Paper-Konto 2 mit. Dann siehst du hier live, welche der 50 Aktien gerade ein Rechteck bilden.</div>`; return; }
+  const ST = ["nichts", "entsteht", "reif", "Auslöser", "im Trade"];
+  const sorted = Z.slice().sort((a, b) => (b.stufe - a.stufe) || ((a.abstand_atr ?? 9) - (b.abstand_atr ?? 9)));
+  box.innerHTML = `<table class="scan"><thead><tr><th>Aktie</th><th>Bild</th><th>Stufe</th><th>Note</th><th>Abstand zur Kante</th><th>Zeitebene</th></tr></thead><tbody></tbody></table>`;
+  const tb = box.querySelector("tbody");
+  for (const z of sorted) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td><b>${esc(z.symbol)}</b></td><td></td><td><span class="stagechip s${z.stufe}">${z.stufe} · ${ST[z.stufe] || ""}</span></td><td>${esc(z.note || "—")}</td><td class="num">${z.abstand_atr == null ? "—" : nf(z.abstand_atr, 2) + " ATR"}</td><td>${z.zeitebene} Min</td>`;
+    if (z.kerzen && z.kerzen.length > 1) { const h = document.createElement("div"); drawTrade(h, Object.assign({ entscheidung: z.kerzen.length - 1, box_von: z.box_von ?? 0, box_bis: z.box_bis ?? z.kerzen.length - 1, tag: "" }, z), "moment", false); const s = h.firstChild; s.classList.add("mini"); tr.children[1].appendChild(s); }
+    tb.appendChild(tr);
+  }
+}
+
+/* ------------------------------------------------------------ Doku */
+function renderLog(st) {
+  const L = (st && st.log) || [];
+  $("log").innerHTML = L.length ? L.slice().reverse().map((l) => `<div class="row"><div class="when">${esc(tsDE(l.zeit))}</div><div class="txt">${esc(l.text)}${l.link ? ` <a href="${esc(l.link)}" target="_blank" rel="noopener">ansehen</a>` : ""}</div></div>`).join("")
+    : `<div class="void"><b>Noch keine Einträge</b>Jeder Schritt landet hier: Regeln mit Hash, Läufe, Meldungen.</div>`;
+}
+
+/* ------------------------------------------------------------ Start */
+let ST = null;
+function renderHeadAgain() { renderHead(ST, IDX, SI); }
+async function load() {
+  const [st, er, idx, si, sc] = await Promise.all([get("status.json"), get("ergebnisse.json"), get("trades/index.json"), get("sichtpruefung.json"), get("scanner.json")]);
+  ST = st; IDX = idx; SI = si; LOADED = {};
+  renderHead(st, idx, si); renderPlan(st); renderResults(er); renderSicht(); renderScanner(sc); renderLog(st);
+  await renderGallery(true);
+}
+schemaRect(); renderEntries();
+seg("fTf", "tf", () => renderGallery(true)); seg("fEn", "en", () => renderGallery(true)); seg("fRes", "res", () => renderGallery(true)); seg("fNote", "note", () => renderGallery(true));
+seg("fView", "view", () => { renderGallery(false); if (CUR) openTrade(CUR); });
+$("moreBtn").addEventListener("click", () => { SHOWN += 60; renderGallery(false); });
+load();
+setInterval(() => { if (!EX) get("scanner.json").then(renderScanner); }, 120000);
+</script>
+</body>
+</html>

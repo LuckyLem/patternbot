@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-23T15:32:38+00:00",
- "heartbeat": "2026-10-23T15:32:38+00:00",
+ "updated": "2026-10-23T15:42:47+00:00",
+ "heartbeat": "2026-10-23T15:42:47+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9934.77,
+  "equity": 9943.11,
   "last_equity": 9922.54,
-  "day_change": 12.23,
-  "total_change": -65.23
+  "day_change": 20.57,
+  "total_change": -56.89
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 2,
    "entry": 688.78,
-   "current": 689.14,
-   "pl": -0.73
+   "current": 686.19,
+   "pl": 5.18
   },
   {
    "symbol": "T",
    "side": "short",
    "qty": 81,
    "entry": 21.64,
-   "current": 21.48,
-   "pl": 12.96
+   "current": 21.45,
+   "pl": 15.39
   }
  ],
  "trades": [

@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-23T19:41:26+00:00",
- "heartbeat": "2026-10-23T19:41:26+00:00",
+ "updated": "2026-10-23T19:51:33+00:00",
+ "heartbeat": "2026-10-23T19:51:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9937.3,
+  "equity": 9943.86,
   "last_equity": 9922.54,
-  "day_change": 14.76,
-  "total_change": -62.7
+  "day_change": 21.32,
+  "total_change": -56.14
  },
- "positions": [
-  {
-   "symbol": "KLAC",
-   "side": "short",
-   "qty": 13,
-   "entry": 145.49,
-   "current": 145.45,
-   "pl": 0.52
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "KLAC",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-10-23",
    "opened": "2026-10-23T19:15:36.038450+00:00",
-   "closed": null,
+   "closed": "2026-10-23T19:51:29.944864419+00:00",
    "entry": 145.49,
    "stop": 148.05,
    "target": 141.18,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 144.95,
+   "pnl": 7.02,
+   "r": 0.211,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "rectangle break<145.76",
-   "max_r": 0.09,
+   "max_r": 0.22,
    "key": "t127",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 124,
-  "pnl": -40.0,
-  "winrate": 0.468,
-  "expectancy": -0.02,
-  "pf": 0.93,
-  "avg_win": 9.43,
+  "n": 125,
+  "pnl": -32.98,
+  "winrate": 0.472,
+  "expectancy": -0.018,
+  "pf": 0.94,
+  "avg_win": 9.39,
   "avg_loss": -8.89
  },
  "equity_curve": [

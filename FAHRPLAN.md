@@ -84,24 +84,19 @@ hochgeladen.
 
 ## Zeitplan
 
-Stand 21.10. Ziel dieser Woche: Das Labor findet und bewertet die ersten Trades; die erste Rangliste kommt schon am
-Mi 21.10. (15 Min), der Schlussbericht aus allen 230 Kandidaten nach dem Lauf auf 5 Min.
+Stand 23.10. Neuer Auftrag: Große Umstellung v2: Werkbank Rechteck (`lernhub/prompts/grosse-umstellung-v2-zielsetzung.md` auf dem Branch claude/epic-gates-iz9swg, Commit c4831e3). Er ersetzt den großen Auftrag vom 20.10.; Lerntopf-Lauf 1 ist archiviert
+und wird nicht weiter gerechnet.
 
-**Di 20.10.:** ✅
-- Vorab-Datei „Lerntopf-Lauf 1“ festgelegt (Fassung 1), dann vor dem ersten Ergebnis Fassung 2 (ohne 1 Min) und
-  Fassung 3 (SIP-Vorlauf, Fenster von 200 Kerzen). Abschneide-Tests auf echten Daten, Gegenprobe J3: Signale 1:1.
+**Di–Mi 20.–21.10.:** ✅
+- Lerntopf-Lauf 1: Vorab-Datei Fassung 3, Gegenprobe J3 (Signale 1:1), Lauf und Bericht 15 Min, Lauf 5 Min.
 
-**Mi 21.10.:**
-- SIP-Vorlauf geladen, die 4 Abschneide-Tests mit dem Labor-Code 435020e128b3 bestanden. ✅
-- Lauf 15 Min (ab 11:39), Bericht als „Zwischenstand 15 Min“ mit CSV, Telegram über den Labor-Bot.
-- Musterseiten (Sektion „Muster“ auf labor.html, muster.html, musterbild.js) als Diff an den Inhaber.
-- Danach Lauf 5 Min und Schlussbericht: endgültige Top 10 (höchstens 2 je Muster) und Flop 10.
+**Fr 23.10.:** ✅
+- Lernhub-Seite online (labor.html aus `lernhub/vorlage/lernhub.html`, die bisherige Seite als labor-archiv.html,
+  Name „Lernhub“). Sonst wird heute nichts gerechnet.
 
-**Do–Fr 22.–23.10.:**
-- Vorab-Datei für Öffnung 1 des Prüftopfs nur als Entwurf; erst nach Prüfung im Chat und mit OK des Inhabers.
-
-**Sa/So 24.–25.10.:**
-- Wochenroutine: neue Steckbriefe der Woche, Vorab-Datei für Lauf 2 als Entwurf aus Lauf 1 Fassung 3.
+**So 25.10. ab 14:00:**
+- Werkbank Rechteck nach Abschnitt 13 des Auftrags: Aktienliste, Erkennung mit Reifegrad, Note und Schnappschuss,
+  Sichtprüfung durch den Inhaber, Vorab-Datei als Entwurf, dann die Entwicklung 15 und 5 Min.
 
 Wird die Zeit knapp, gilt die Reihenfolge: Vorab-Datei, Downloads, Simulator, Läufe, Rangliste. Der Prüftopf (Okt. 2023–Sep. 2026) bleibt zu.
 
@@ -326,7 +321,7 @@ Die 7 heutigen Muster des Bots sind:
 | 4.8.10 | Rekonstruierte Bilder für alle bisherigen Live-Trades, deutlich als „rekonstruiert“ markiert, mit der Tabelle „exakt / zurückgerechnet / angenommen“ | ✅ 16.10. | VS Code | 16.10. | 4.8.9 | Alle 94 Live-Trades (t1–t96 ohne die 2 stornierten), Kante, Stop und Ziel bei allen 94 exakt nachgebaut, mit SIP geprüft: 0 Ankerpunkte verworfen, 3 Abzüge für die Signalkerze (t17, t70, t92). [Commit 923c3a4](../../commit/923c3a41), `lern-labor/bilder/live/` |
 | 4.8.11 | Ausgabe-Paket für den Live-Bot: Geometrie des Detektors beim Signal speichern (Wendepunkte, Kante, Gegenkante, Fenster, Berührungen); dazu Startzeilen-Anzeige Speicherschutz und Export-Wiederholversuch. Nur Ausgabe, Test: alle Entscheidungen von entry_scan unverändert | ⬜ | VS Code + Inhaber | nach dem Technik-Paket | nur mit OK, nach den Deploy-Regeln | – |
 | 4.8.12 | Diagnose des Chart-Lesers auf Runde 1, nur Geometrie (das Jahr gehört zum Prüftopf): Wie viele Linien hängen an Ausreißern, wie würden sich Kante, Ziel und Stop ändern? Kein Vorher/Nachher in R, keine Auswahl nach Ergebnis. Bilder für 40 zufällig gezogene Trades (fester Seed). Dazu (Inhaber 17.10.): wie oft das Ziel erreicht wird und wie die Trades enden | ✅ 17.10. | VS Code | Sa 17.10. | 4.8.1–4.8.5 | Mit SIP: 1.009 von 1.009 Signalen exakt nachgebaut; 6.639 Ankerpunkte geprüft, 1 verworfen (WMT, 2 Cent), dadurch keine Kante, kein Stop und kein Ziel geändert. Ausgänge: Ziel 38 (3,8 %), Zeit-Stop 616, Tagesende 250, Stop 105 (davon 31 auf dem Einstieg). 40 Bilder. [Commit e77d2ca](../../commit/e77d2cad), `lern-labor/diagnose-runde-1/` auf backtest |
-| 4.8.13 | Lerntopf (Okt. 2020–Sep. 2023): alle Steckbriefe, jedes Jahr einzeln, mit Selbstkontrolle, Zufallslatte und Kostenstress. Daraus entsteht die erste Rangliste. Vorher/Nachher in R gibt es nur hier | ⏳ Lauf 15 Min seit 21.10. 11:39 | VS Code | Mi 21.10. | 4.0.17, 4.8.22–4.8.24 | Vorab-Datei Fassung 3 (Commit 36dd52b), Abschneide-Tests mit Code 435020e128b3 bestanden (Logbuch 21.10.) |
+| 4.8.13 | Lerntopf (Okt. 2020–Sep. 2023): alle Steckbriefe, jedes Jahr einzeln, mit Selbstkontrolle, Zufallslatte und Kostenstress. Daraus entsteht die erste Rangliste. Vorher/Nachher in R gibt es nur hier | ❌ archiviert, nicht weiter gerechnet (23.10.) | VS Code | Mi 21.10. | 4.0.17, 4.8.22–4.8.24 | Vorab-Datei Fassung 3 (Commit 36dd52b), Abschneide-Tests mit Code 435020e128b3 bestanden (Logbuch 21.10.) |
 | 4.8.14 | Stufen: 0 Idee (Steckbrief liegt vor); 1 Lerntopf bestanden (jedes Lernjahr positiv, über der Zufallslatte, hält dem Kostenstress stand); 2 Prüfung bestanden (bei einer der 3 Öffnungen); 3 Schatten bestanden (200 Trades, 3 Monate, alle 5 Kriterien); 4 Paper, nur mit OK | ⬜ | VS Code | mit 4.8.13 | – | – |
 | 4.8.15 | Wochenroutine: neue Steckbriefe als Paket im Lerntopf; alle Muster bekommen die neue Handelswoche im Schatten; Rangliste und Bericht auf GitHub, per Telegram und auf der Webseite | ⏳ Auftrag 21.10. | VS Code | jedes Wochenende | 4.8.13, 6.1 | Inhaber 21.10.: neue Steckbriefe der Woche in `kandidaten.md`; am Wochenende Vorab-Datei für den nächsten Lauf aus Lauf 1 Fassung 3 (gleiche Regeln, nur die neuen Muster), Entwurf an den Inhaber, Prüfung im Chat, dann festlegen und rechnen; Rangliste fortlaufend mit Spalte „Lauf“ |
 | 4.8.16 | Prüfung der Eröffnungskerzen (nur lesen): a) AMD 05.10./06.10. gegen SIP; b) alle 147 Werte seit 21.09.: IEX außerhalb der SIP-Spanne; c) Setups seit 28.09. mit einer Linie an so einem Ausreißer, mit der Wirkung auf Ziel und Stop | ✅ 16.10. | VS Code | 16.10. | Downloads außerhalb 15:30–22:00 | Keine Ausreißer: an 2.788 Symbol-Tagen lag IEX nie außerhalb der SIP-Spanne; 0 von 1.912 Setups mit einer Linie an einem Ausreißer. AMD 05.10.: 620,05 ist echt (SIP-Tief 619,99). [Commit 7172713](../../commit/7172713f), `lern-labor/messungen/eroeffnungskerzen.md` |
@@ -340,8 +335,9 @@ Die 7 heutigen Muster des Bots sind:
 | 4.8.24 | Chart-Leser Teil 2 als Signalquelle für M008–M010 | ✅ 21.10. | VS Code | Mo 19.10. | 4.8.23 | Chart-Leser v1.1 unverändert (Hash c5ca9efa1343 nachgerechnet); Vortrend und Kaufkraft prüft die Signalquelle nach dem Wortlaut der Steckbriefe; Abschneide-Test grün auf künstlichen Keilen und einem Doppelboden mit und ohne Kaufkraft; auf echten Daten Abschneide-Test 15 und 5 Min mit M008–M010 bestanden (Logbuch 21.10.) |
 | 4.8.25 | Einreichung neuer Muster: Der Inhaber schickt Bild und Erklärung an Claude im Chat. Daraus wird ein Steckbrief mit Nummer, der in `kandidaten.md` kommt; getestet wird am Wochenende im Paket (4.8.15) | ⬜ | Inhaber + Chat + VS Code | ab der ersten Rangliste (Sa/So 24./25.10.) | 4.8.13 | – |
 | 4.8.26 | Gegenprobe J3: M001-H0 und M003-H0 des Labors gegen das kalibrierte Replay, nur Signale und Entscheidungen | ✅ 20.10. | VS Code | 20.10. | 4.8.23 | Signale 1:1 (8.802 Setups in beiden, keine Linie abweichend), alle abweichenden Entscheidungen erklärt; `lern-labor/gegenprobe/gegenprobe.md` (Commit 36dd52b), Logbuch 20.10. |
-| 4.8.27 | Musterseiten: Sektion „Muster“ auf labor.html (je Steckbrief eine Kachel), muster.html je Muster (Idee mit Schema, großes Bild, 40 Trades je Zeitebene, Auswertung je Jahr und Quartal, Ausgänge, H0–H4 × Zeitebenen, Urteil), Daten `muster/*.json` (höchstens 2 MB, nur Lerntopf) | ⏳ gebaut, Diff an den Inhaber | VS Code + Inhaber | Mi 21.10. | 4.8.13; Seiten einmal als Diff an den Inhaber, die Daten danach von selbst | hell, dunkel, Handy und Desktop geprüft; Inhaltsprüfung (2 MB, kein Datum ab 01.10.2023, Pflichtfelder) |
+| 4.8.27 | Musterseiten: Sektion „Muster“ auf labor.html (je Steckbrief eine Kachel), muster.html je Muster (Idee mit Schema, großes Bild, 40 Trades je Zeitebene, Auswertung je Jahr und Quartal, Ausgänge, H0–H4 × Zeitebenen, Urteil), Daten `muster/*.json` (höchstens 2 MB, nur Lerntopf) | ❌ ersetzt durch die Lernhub-Seite (23.10.) | VS Code + Inhaber | Mi 21.10. | 4.8.13; Seiten einmal als Diff an den Inhaber, die Daten danach von selbst | hell, dunkel, Handy und Desktop geprüft; Inhaltsprüfung (2 MB, kein Datum ab 01.10.2023, Pflichtfelder) |
 | 4.8.28 | Nach jedem Lauf von selbst: Rangliste nach backtest, Musterseiten-Daten nach main, Telegram-Bericht, Fahrplan und Tageslog (`nach_lauf.py`) | ⏳ gebaut | VS Code | Mi 21.10. | 4.8.27, 6.4 | stehende Erlaubnis nur für die Daten-Dateien, mit push_main.py und grünem Prüfer (Inhaber 21.10.) |
+| 4.8.29 | Große Umstellung v2: Werkbank Rechteck (`lernhub/prompts/grosse-umstellung-v2-zielsetzung.md` auf dem Branch claude/epic-gates-iz9swg, Commit c4831e3). Ein Muster, 50 Aktien, 5 und 15 Min, vier Einstiege; strenge Erkennung in ATR mit Reifegrad und Note A/B/C; Bilder im Moment der Entscheidung; Sichtprüfung durch den Inhaber; Entwicklung Okt. 2021–Sep. 2023, Prüfung 2024–2025 erst nach eigener Vorab-Datei und OK | ⏳ Lernhub-Seite online 23.10., Werkbank ab So 25.10. 14:00 | VS Code + Inhaber + Chat | So 25.10. | – | Auftrag Abschnitte 12 und 13; Lerntopf-Lauf 1 archiviert (Berichte bleiben auf backtest) |
 
 ### Prüfregeln für alle Etappen
 
@@ -440,7 +436,8 @@ Buchinhalte kommen nicht ins Repo.
 | 7.4 | Auf der Lern-Labor-Seite: gefundene Muster als Bilder, Schattenbilanz je Modell und Muster, Versionen, Wochenberichte | ⬜ | VS Code | – | Etappen 2 und 4 | Leerzustände stehen |
 | 7.5 | Seiten-Dateien mit gleicher Prüfsumme ins Technik-Paket, damit ein späteres Hochladen der Dashboard-Seite nichts überschreibt | ✅ 18.10. | VS Code | So 18.10. | 1.3 | Prüfsummen von index.html, labor.html und labor-name.js gleich main (Bedingungsbericht 18.10.) |
 | 7.6 | Lern-Labor-Seite, neue Bereiche: Rangliste aller Muster mit Stufe und Kennzahlen; Galerie der Musterbilder mit Großansicht; Steckbriefe mit Beispielbild; Beobachtungsliste „Muster im Aufbau“ (vorerst Leerzustand, gefüllt erst, wenn die Bewertung nachweislich sortiert) | ⏳ gebaut, Diff gezeigt | VS Code + Inhaber | 16.10. | 4.8.9; Diff vor dem Push gezeigt (16.10.), Upload nach OK | Rangliste (10 Steckbriefe, Kennzahlen nach dem Lerntopf), Galerie mit 94 Bildern und Großansicht, Steckbriefe mit Beispielbild, „Muster im Aufbau“ leer; hell, dunkel, Handy geprüft |
-| 7.8 | Musterseiten (4.8.27) auf main: labor.html, muster.html, musterbild.js, danach `muster/*.json` | ⏳ Diff an den Inhaber | VS Code + Inhaber | Mi 21.10. | 4.8.27; Upload erst nach OK zum Diff; die Seiten-Dateien kommen ins nächste Ausgabe-Paket | – |
+| 7.8 | Musterseiten (4.8.27) auf main: labor.html, muster.html, musterbild.js, danach `muster/*.json` | ❌ ersetzt durch die Lernhub-Seite (23.10.) | VS Code + Inhaber | Mi 21.10. | 4.8.27; Upload erst nach OK zum Diff; die Seiten-Dateien kommen ins nächste Ausgabe-Paket | – |
+| 7.9 | Lernhub-Seite: labor.html neu aus `lernhub/vorlage/lernhub.html` (unverändert), die bisherige Seite als labor-archiv.html (in der Fußzeile verlinkt), Name „Lernhub“ in labor-name.js; Daten aus `lernhub/daten/` auf backtest | ✅ 23.10. | VS Code | Fr 23.10. | 4.8.29; Vorschau vom Inhaber freigegeben | main: labor-archiv.html e72fb18, labor-name.js e387ff8, labor.html e473810; backtest: `lernhub/daten/status.json` e63b78de. Die drei Seiten-Dateien kommen ins nächste Ausgabe-Paket, damit dashboard_sync sie nicht überschreibt |
 | 7.7 | Dashboard: in der Trade-Detailansicht das Musterbild mit den Linien des Bots, als „rekonstruiert“ markiert, bis das Ausgabe-Paket live ist. Das Fahrplan-Raster bleibt, wie es ist | ⏳ gebaut, Diff gezeigt | VS Code + Inhaber | 16.10. | 4.8.10; Diff vor dem Push gezeigt (16.10.), Upload nach OK; Seiten-Dateien ins nächste Paket | Musterbild im Trade-Detail nur, wenn eines da ist; Raster unverändert |
 
 <a id="b8"></a>
@@ -471,6 +468,21 @@ Buchinhalte kommen nicht ins Repo.
 ## Tageslog
 
 Neuester Tag oben.
+
+### Fr 23.10.2026
+
+**Geschafft:**
+- Neuer Auftrag: Große Umstellung v2, Werkbank Rechteck (Abschnitt 12 heute, Abschnitt 13 ab So 25.10. 14:00).
+- Lernhub-Seite online: labor.html aus der Vorlage, die bisherige Seite als labor-archiv.html, Name „Lernhub“; Plan
+  und Log in `lernhub/daten/status.json` auf backtest.
+- Prüfer für öffentliche Dateien: die drei Quellen der Seite (thepatternsite.com, brookstradingcourse.com,
+  tradingview.com) als öffentliche Adressen zugelassen, sonst unverändert.
+- Lerntopf-Lauf 1 archiviert, nicht weiter gerechnet. Stand: Bericht 15 Min mit Diagnose (kein Stufe 1), Lauf 5 Min
+  gerechnet, die Schlussauswertung angehalten. Schneller Simulator mit gleichen Ergebnissen (Code fa903808c719), die
+  4 Abschneide-Tests dazu bestanden.
+
+**Dran am So 25.10. ab 14:00:**
+- Werkbank Rechteck nach Abschnitt 13: Aktienliste, Erkennung, Sichtprüfung, Vorab-Datei als Entwurf.
 
 ### Mi 21.10.2026
 

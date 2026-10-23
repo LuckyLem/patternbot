@@ -1,7 +1,18 @@
 # Große Umstellung · Prompt Version 2 · Zielsetzung
 
-Stand: Fr 23.10.2026. Geschrieben von Claude im Chat für VS Code, im Auftrag des Inhabers.
+Stand: Fr 23.10.2026, **Fassung 2.1**. Geschrieben von Claude im Chat für VS Code, im Auftrag des Inhabers.
 Ort: Branch `claude/epic-gates-iz9swg`, Ordner `lernhub/`. Vorlage der Seite: `lernhub/vorlage/lernhub.html`.
+
+**Neu in 2.1** (nach der Recherche `lernhub/recherche/rechteck-erkennung.md`; Abschnitt 12 ist schon erledigt):
+- ATR je Tageszeit;
+- kein Kastenpunkt vor 09:45;
+- Wendepunkte zweistufig, Linie als Median;
+- Prüfung „wirklich seitwärts“;
+- Abprall an der Linie;
+- Note als Punktzahl 0–100;
+- zweite Sichtprüfung (Trefferquote);
+- Toleranzband im Bild.
+Betroffen sind die Abschnitte 4, 8, 9 und 13. Die Seiten-Vorlage ist ebenfalls aktualisiert.
 
 Diese Datei ist der Auftrag. Sie ersetzt den großen Auftrag vom 20.10. (Lerntopf-Lauf 1 mit 230 Kandidaten).
 Lauf 1 wird nicht weiter gerechnet. Seine Berichte bleiben als Archiv auf backtest.
@@ -68,18 +79,33 @@ Erst wenn das Rechteck sauber erkannt wird und ein Einstieg nachweislich trägt,
 - Einstieg und Ausstieg am selben Tag, Glattstellung spätestens 15:50 New York.
 - Keine Linie und kein Trade über Nacht.
 
-**ATR**
-- Wilder 14 auf den Kerzen der Zeitebene, nur reguläre Handelszeit.
-- Vortage dürfen dafür mitzählen; das ATR misst nur die Schwankung, es ist kein Teil des Musters.
-- Wert der Kerze vor der Entscheidung.
+**ATR je Tageszeit** (Fassung 2.1)
+- Die Schwankung ist intraday U-förmig: morgens und kurz vor Schluss hoch, mittags niedrig.
+- Darum ist das ATR einer Kerze die mittlere Spanne (Hoch − Tief) **derselben Uhrzeit** an den letzten 20 Handelstagen davor.
+  Es stammt nur aus der Vergangenheit.
+- Alle ATR-Angaben dieser Datei (Toleranz, Höhe, Mindest-Stop, Abstände) rechnen mit diesem ATR.
+  Für die Kerzen eines Kastens gilt der Mittelwert über die Kasten-Uhrzeiten.
 
-**Wendepunkte**
-- Ein Hoch ist Wendepunkt, wenn es höher ist als die 2 Kerzen davor und danach. Tief entsprechend.
-- Bekannt ist ein Wendepunkt erst 2 Kerzen später, nie früher.
+**Beginn**
+- Kein Kastenpunkt vor 09:45 New York. Die Eröffnung ist zu wild.
+
+**Wendepunkte, zweistufig**
+- Ein Hoch ist Wendepunkt, wenn es höher ist als die 2 Kerzen davor und danach **und** mindestens 0,5 ATR über dem vorigen Wendepunkt-Tief liegt. Tief entsprechend.
+- Bekannt ist ein Wendepunkt erst 2 Kerzen später, nie früher. Nie zentriert glätten.
 
 **Linien**
-- Obere Linie = Mittelwert der Hochs ihrer Berührungen, untere Linie = Mittelwert der Tiefs ihrer Berührungen.
+- Obere Linie = **Median** der Hochs ihrer Berührungen, untere Linie = Median der Tiefs. So zieht ein Ausreißer die Linie nicht weg.
 - Die Linien sind waagerecht.
+- Passgüte = mittlere Abweichung der Berührungen von der Linie, in ATR.
+
+**Wirklich seitwärts** (Fassung 2.1)
+- Effizienz im Kasten: |Schluss am Ende − Schluss am Anfang| geteilt durch die Summe aller |Schluss-Schritte|, höchstens 0,3.
+- Steigung der Schlusskurse im Kasten (Regression): höchstens 0,03 ATR je Kerze.
+- So wird ein flacher Trendkanal nicht als Rechteck gezählt.
+
+**Abprall** (Fassung 2.1)
+- Eine Berührung mit Abprall: Die Kerze schließt in der von der Linie abgewandten Hälfte ihrer Spanne.
+- Die Zahl der Berührungen mit Abprall geht in die Note ein.
 
 **Berührung** (der Kern)
 - Der Docht eines Wendepunkts liegt höchstens **0,15 ATR** von der Linie entfernt.
@@ -93,6 +119,17 @@ Erst wenn das Rechteck sauber erkannt wird und ein Einstieg nachweislich trägt,
 - höchstens ein Docht ragt bis 0,3 ATR hinaus;
 - Höhe zwischen 1,5 und 6 ATR;
 - Breite mindestens 10 Kerzen (15 Min) bzw. 12 Kerzen (5 Min).
+
+**Punktzahl 0–100** (Fassung 2.1), im Moment der Entscheidung, Gewichte vorab fest:
+- Berührungen (Zahl und Abstand) 25;
+- Passgüte 20;
+- Kurs im Kasten 15;
+- seitwärts (Effizienz und Steigung) 15;
+- Abprall 15;
+- Proportion (Höhe zu Breite) 10.
+
+Sie ist der „Indikator“ und steigt, während der Kasten reift. Note A ab 80 und zusätzlich die Mindestbedingungen von A unten, B 60–79, C darunter.
+Geeicht wird die Punktzahl nur an den Antworten der Sichtprüfung (hohe Punktzahl soll oft „ja“ heißen), nie an Gewinn oder Verlust.
 
 **Note**, im Moment der Entscheidung berechnet:
 - **A, lehrbuchreif:**
@@ -216,6 +253,7 @@ Die Stufen werden je Kerze mitgeschrieben. So kann die Seite zeigen, wie ein Mus
   - Ein Kasten über zwei Tage wird nicht erkannt.
   - Ein Docht 0,2 ATR neben der Linie zählt nicht als Berührung.
   - Abschneide-Test: Mit Daten nur bis zur Entscheidung entstehen dieselben Signale.
+  - Fassung 2.1: Ein flacher Trendkanal wird nicht erkannt; eine Spitze in der Eröffnungskerze zählt nicht als Berührung; das ATR je Tageszeit nutzt nur Vortage.
 
 ## 9. Die Lernhub-Seite und der Datenvertrag
 
@@ -260,7 +298,7 @@ Die Stufen werden je Kerze mitgeschrieben. So kann die Seite zeigen, wie ein Mus
   {"trades": [{"id", "symbol", "tag": "YYYY-MM-DD", "zeitebene", "einstieg", "richtung": "long|short",
    "note": "A|B|C", "r", "r_vor", "ausgang": "ziel|stop|tagesende",
    "kerzen": [["HH:MM", o, h, l, c, v], …] (ganzer Handelstag, nur reguläre Zeit),
-   "entscheidung": Index, "oben", "unten", "box_von", "box_bis",
+   "entscheidung": Index, "oben", "unten", "box_von", "box_bis", "toleranz" (halbe Bandbreite in Kurs, Fassung 2.1), "punkte" (0–100),
    "beruehrungen": [{"i", "p", "seite": "oben|unten"}],
    "einstieg_i", "einstieg_p", "stop", "ziel", "ausstieg_i", "ausstieg_p",
    "fakten": [["Höhe", "3,2 ATR"], …]}]}
@@ -273,6 +311,9 @@ Die Stufen werden je Kerze mitgeschrieben. So kann die Seite zeigen, wie ein Mus
      "oben", "unten", "box_von", "box_bis", "beruehrungen"}]}
   ```
   30 zufällige Erkennungen aus der Entwicklungszeit, fester Startwert, **ohne Ausgang, ohne Stop und Ziel**.
+  Fassung 2.1: dazu die Felder `"art": "praezision" | "trefferquote"` und `"frage"` (Text der Frage auf der Seite).
+  Bei `trefferquote` sind es 30 zufällige Tagescharts **ohne** Linien des Bots (ohne `oben`, `unten`, `box_von`), mit der Frage „Siehst du in diesem Tag ein sauberes Rechteck?“.
+  Danach wird verglichen, wie viele der „ja“-Tage der Bot auch erkannt hat.
   Der Inhaber klickt ja/nein/unsicher, kopiert das Ergebnis und schickt es zurück. Es kommt ins Logbuch.
 - `scanner.json` kommt später (Paper auf Konto 2):
   ```
@@ -317,14 +358,17 @@ Der Labor-Bot meldet ohne Schlüssel und ohne Pfade:
 
 Reihenfolge, jeder Schritt erst nach dem vorigen:
 
+0. **Seite aktualisieren** (Fassung 2.1): `lernhub/vorlage/lernhub.html` erneut unverändert als `labor.html` auf main legen. Neu sind das Toleranzband und die zweite Sichtprüfung.
 1. **Aktienliste:** die 50 nach Dollar-Umsatz im September 2021 festlegen. Liste und Messung ins Logbuch.
-2. **Erkennung bauen** nach Abschnitt 4, mit Reifegrad, Note und Schnappschuss (Abschnitt 8). Alle Pflichttests auf künstlichen Kursen grün.
+2. **Erkennung bauen** nach Abschnitt 4 (Fassung 2.1), mit Reifegrad, Punktzahl, Note und Schnappschuss (Abschnitt 8). Alle Pflichttests auf künstlichen Kursen grün.
 3. **Sichtprüfung:**
    - 30 zufällige Erkennungen (15 und 5 Min gemischt, alle Noten, fester Startwert) aus Okt. 2021 bis Sep. 2023;
    - als `sichtpruefung.json` nach backtest;
    - Telegram an den Inhaber.
    - **Ab hier wartet die Warteschlange**, bis das Ergebnis des Inhabers da ist.
    - Unter 80 % „ja“: die Nein-Bilder ansehen, die Erkennung verbessern (es gibt noch keine Ergebnisse, das ist erlaubt), neue Runde mit neuem Startwert.
+   - Danach die zweite Sichtprüfung „Trefferquote“ (30 Tagescharts ohne Linien).
+     Findet der Bot weniger als 60 % der Tage, die der Inhaber mit „ja“ bewertet, ist er zu streng; dann Grenzen prüfen und neue Runde.
 4. **Vorab-Datei „Werkbank Rechteck v1“** mit allen Regeln dieser Datei:
    - Aktienliste, Zeiträume, Kriterien „überzeugt“, Zufallstest, Code-Hash;
    - als Entwurf an Claude im Chat;

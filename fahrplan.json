@@ -1,26 +1,20 @@
 {
  "schema": 1,
- "stand": "2026-10-21T11:50:17-04:00",
+ "stand": "2026-10-23T06:55:44-04:00",
  "kriterien": {
   "commit": "4c580ae",
   "sha256": "e5c7ba37755a34936d1c2101c550598a50c8ec493f8a63a7e46e615f7f70cd75",
   "pruefung": "online gegen Commit 4c580ae geprüft"
  },
- "tageslog": "Mi 21.10.2026",
+ "tageslog": "Fr 23.10.2026",
  "zuletzt": [
-  "SIP-Vorlauf 01.–30.09.2020 geladen (168 Abrufe, vor 15:30).",
-  "Die 4 Abschneide-Tests mit dem Labor-Code 435020e128b3 bestanden (15 und 5 Min, je 300 von 300).",
-  "Lauf 15 Min gestartet um 11:39 (150 Werte, 14 Prozesse).",
-  "Bericht in der Reihenfolge des Inhabers, mit CSV aller Kandidaten und Kurzfassung für Telegram.",
-  "Musterseiten gebaut (labor.html-Sektion, muster.html, musterbild.js, Generator der Daten); Diff an den Inhaber.",
-  "Automatik nach jedem Lauf gebaut (4.8.28).",
-  "Briefkasten für den Labor-Bot eingerichtet (6.4, sudo durch den Inhaber); erste Nachrichten zugestellt."
+  "Neuer Auftrag: Große Umstellung v2, Werkbank Rechteck (Abschnitt 12 heute, Abschnitt 13 ab So 25.10. 14:00).",
+  "Lernhub-Seite online: labor.html aus der Vorlage, die bisherige Seite als labor-archiv.html, Name „Lernhub“; Plan und Log in lernhub/daten/status.json auf backtest.",
+  "Prüfer für öffentliche Dateien: die drei Quellen der Seite (thepatternsite.com, brookstradingcourse.com, tradingview.com) als öffentliche Adressen zugelassen, sonst unverändert.",
+  "Lerntopf-Lauf 1 archiviert, nicht weiter gerechnet. Stand: Bericht 15 Min mit Diagnose (kein Stufe 1), Lauf 5 Min gerechnet, die Schlussauswertung angehalten. Schneller Simulator mit gleichen Ergebnissen (Code fa903808c719), die 4 Abschneide-Tests dazu bestanden.",
+  "Werkbank Rechteck nach Abschnitt 13: Aktienliste, Erkennung, Sichtprüfung, Vorab-Datei als Entwurf."
  ],
- "als_naechstes": [
-  "Schlussbericht nach dem Lauf auf 5 Min, Musterseiten mit beiden Zeitebenen.",
-  "Vorab-Datei für Öffnung 1 nur als Entwurf.",
-  "17:48 Lerntopf-Lauf 1 ausgewertet (15m): Stufe 1 bei 0 Kandidaten. Bericht, Rangliste und Diagnose auf backtest (Commit cd5a351)."
- ],
+ "als_naechstes": [],
  "bereiche": [
   {
    "nr": "1",
@@ -85,16 +79,16 @@
    "titel": "Lern-Labor – das Hauptziel",
    "status": "laeuft",
    "erledigt": 33,
-   "gesamt": 90,
+   "gesamt": 89,
    "zaehlung": {
     "erledigt": 33,
-    "laeuft": 5,
+    "laeuft": 4,
     "offen": 52,
     "test": 0,
-    "verworfen": 0
+    "verworfen": 2
    },
-   "naechster_schritt": "Lerntopf (Okt. 2020–Sep. 2023): alle Steckbriefe, jedes Jahr einzeln, mit Selbstkontrolle, Zufallslatte und Kostenstress. Daraus entsteht die erste Rangliste. Vorher/Nachher in R gibt es nur hier",
-   "naechster_nr": "4.8.13",
+   "naechster_schritt": "Nach jedem Lauf von selbst: Rangliste nach backtest, Musterseiten-Daten nach main, Telegram-Bericht, Fahrplan und Tageslog (nach_lauf.py)",
+   "naechster_nr": "4.8.28",
    "datum": "Mi 21.10.",
    "wer": "VS Code"
   },
@@ -141,14 +135,14 @@
    "anker": "b7",
    "titel": "Webseiten",
    "status": "laeuft",
-   "erledigt": 3,
+   "erledigt": 4,
    "gesamt": 8,
    "zaehlung": {
-    "erledigt": 3,
-    "laeuft": 4,
+    "erledigt": 4,
+    "laeuft": 3,
     "offen": 1,
     "test": 0,
-    "verworfen": 0
+    "verworfen": 1
    },
    "naechster_schritt": "Generator für lern-labor/status.json: heute vom PC, später jede Nacht vom Pi",
    "naechster_nr": "7.3",
@@ -322,5 +316,5 @@
    "wer": "VS Code"
   }
  ],
- "punkte_gesamt": 181
+ "punkte_gesamt": 183
 }

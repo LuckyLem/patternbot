@@ -1,0 +1,55 @@
+{
+ "stand": "2026-10-23T06:54:33-04:00",
+ "phase": "Vorbereitung · Werkbank Rechteck startet So 25.10. 14:00",
+ "laeuft": false,
+ "plan": [
+  {
+   "titel": "Lernhub-Seite neu",
+   "text": "Diese Seite: Plan, Regeln, Ergebnisse, alle Trades, Sichtprüfung, Scanner.",
+   "status": "fertig",
+   "datum": "Fr 23.10."
+  },
+  {
+   "titel": "Strenge Rechteck-Erkennung",
+   "text": "Linien aus den Wendepunkten des Tages, echte Berührungen, Reifegrad 0–4, Note A/B/C. Jedes Bild wird im Moment der Entscheidung gespeichert.",
+   "status": "offen",
+   "datum": "So 25.10."
+  },
+  {
+   "titel": "Sichtprüfung durch dich",
+   "text": "30 zufällige Erkennungen ansehen. Weiter erst bei mindestens 80 % „ja“.",
+   "status": "offen",
+   "datum": "So 25.10."
+  },
+  {
+   "titel": "Regeln festlegen",
+   "text": "Vorab-Datei mit Hash, bevor ein Ergebnis da ist.",
+   "status": "offen",
+   "datum": "So 25.10."
+  },
+  {
+   "titel": "Entwicklung Okt. 2021 – Sep. 2023",
+   "text": "5 und 15 Min, Einstiege A–D, nach Kosten, gegen den Zufall. Nachricht per Telegram, wenn fertig.",
+   "status": "offen",
+   "datum": "So 25.10."
+  },
+  {
+   "titel": "Prüfung 2024 und 2025",
+   "text": "Einmal, nur für die Variante, die überzeugt.",
+   "status": "offen",
+   "datum": "danach"
+  },
+  {
+   "titel": "Paper auf Konto 2 mit Scanner",
+   "text": "Live mitlaufen, der Scanner zeigt, was der Bot gerade sieht.",
+   "status": "offen",
+   "datum": "später"
+  }
+ ],
+ "log": [
+  {
+   "zeit": "2026-10-23T06:54:33-04:00",
+   "text": "Lernhub-Seite online, Werkbank Rechteck startet So 25.10. 14:00"
+  }
+ ]
+}

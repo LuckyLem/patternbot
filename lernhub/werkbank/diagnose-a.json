@@ -2975,5 +2975,222 @@
   "Steigung über die Linien prüfen (Berührungen oben und unten) statt über die Schlusskurse, oder die Grenze auf 0,05 ATR je Kerze; mit Bildern aus „nur Steigung“ prüfen.",
   "15 Min: entweder 3 + 2 nicht verlangen (A dort auch mit 2 + 2 bei sehr guter Passgüte) oder 15 Min nur als C/B messen und 5 Min als Hauptzeitebene; das Kriterium „je Jahr mindestens 50 A-Trades“ ist mit den heutigen Regeln auf keiner Zeitebene erreichbar.",
   "Fast-A-Bilder (30, je 10 für Punkte ≥ 80, ruhige Beine, 3. Berührung) und Trefferquote (30 Tagescharts) liegen bereit und kommen nach Runde 2 auf die Seite."
- ]
+ ],
+ "sichtpruefung_auswertung": {
+  "runde_1": {
+   "bilder": 30,
+   "ja": 20,
+   "je_note": {
+    "A": "4/5",
+    "B": "6/11",
+    "C": "10/14"
+   },
+   "je_zeitebene": {
+    "15m": "10/15",
+    "5m": "10/15"
+   },
+   "punkte_ja": 64.0,
+   "punkte_nein": 66.0,
+   "punkte_median_ja": 67.5,
+   "punkte_median_nein": 65.8
+  },
+  "runde_2": {
+   "bilder": 30,
+   "ja": 25,
+   "je_note": {
+    "A": "5/5",
+    "B": "10/12",
+    "C": "10/13"
+   },
+   "je_zeitebene": {
+    "15m": "13/15",
+    "5m": "12/15"
+   },
+   "punkte_ja": 63.6,
+   "punkte_nein": 59.7,
+   "punkte_median_ja": 64.9,
+   "punkte_median_nein": 63.5
+  },
+  "beide": {
+   "bilder": 60,
+   "ja": 45,
+   "je_note": {
+    "A": "9/10",
+    "B": "16/23",
+    "C": "20/27"
+   },
+   "je_zeitebene": {
+    "15m": "23/30",
+    "5m": "22/30"
+   },
+   "punkte_ja": 63.8,
+   "punkte_nein": 63.9,
+   "punkte_median_ja": 65.2,
+   "punkte_median_nein": 64.9
+  },
+  "hinweis": "Runde 1 (rechteck-1) mit Code fba7abcb039b, Runde 2 (rechteck-2) mit 8454cdc07786. Nachgerechnet: ja je Note A 9/10, B 16/23, C 20/27; je Zeitebene 15 Min 23/30, 5 Min 22/30; Punkte im Mittel ja 63,8 gegen nein 63,9 (Median 65,2 gegen 64,9) - die Punktzahl trennt ja und nein nicht. In Runde 2 allein: ja 63,6 gegen nein 59,7.",
+  "runde_2_hinweis": "Bei b16, b21 und b26 hat der Inhaber vorher mit Claude gesprochen; ohne diese mindestens 73 %. Kriterium in der Runde: Der Kurs läuft mindestens zweimal ganz von Linie zu Linie."
+ },
+ "kunsttage_2_2": {
+  "ergebnis": "Alle 6 (3 je Zeitebene) werden erkannt, Note B mit 92,5 Punkten, Steigung 0,00 und Effizienz 0,00; sie scheitern nur an der A-Bedingung 3. Berührung. Die Steigungsregel bremst saubere 2 + 2-Kästen nicht.",
+  "tage": [
+   {
+    "zeitebene": 15,
+    "beine_kerzen": 4,
+    "hoehe_atr": 3.0,
+    "beruehrungen": "2 + 2",
+    "erste": "10:15",
+    "letzte": "13:15",
+    "erkannt": "13:45",
+    "note": "B",
+    "note_spaeter_A": false,
+    "steigung_atr": -0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "teile": {
+     "beruehrungen": 17.5,
+     "passguete": 20.0,
+     "im_kasten": 15.0,
+     "seitwaerts": 15.0,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "scheitert_an": [
+     "gültig",
+     "A: dritte_beruehrung"
+    ]
+   },
+   {
+    "zeitebene": 15,
+    "beine_kerzen": 3,
+    "hoehe_atr": 2.5,
+    "beruehrungen": "2 + 2",
+    "erste": "10:15",
+    "letzte": "12:30",
+    "erkannt": "13:00",
+    "note": "B",
+    "note_spaeter_A": false,
+    "steigung_atr": -0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "teile": {
+     "beruehrungen": 17.5,
+     "passguete": 20.0,
+     "im_kasten": 15.0,
+     "seitwaerts": 15.0,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "scheitert_an": [
+     "gültig",
+     "A: dritte_beruehrung"
+    ]
+   },
+   {
+    "zeitebene": 15,
+    "beine_kerzen": 5,
+    "hoehe_atr": 4.0,
+    "beruehrungen": "2 + 2",
+    "erste": "10:15",
+    "letzte": "14:00",
+    "erkannt": "14:30",
+    "note": "B",
+    "note_spaeter_A": false,
+    "steigung_atr": -0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "teile": {
+     "beruehrungen": 17.5,
+     "passguete": 20.0,
+     "im_kasten": 15.0,
+     "seitwaerts": 15.0,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "scheitert_an": [
+     "gültig",
+     "A: dritte_beruehrung"
+    ]
+   },
+   {
+    "zeitebene": 5,
+    "beine_kerzen": 8,
+    "hoehe_atr": 3.0,
+    "beruehrungen": "2 + 2",
+    "erste": "10:00",
+    "letzte": "12:00",
+    "erkannt": "12:10",
+    "note": "B",
+    "note_spaeter_A": false,
+    "steigung_atr": -0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "teile": {
+     "beruehrungen": 17.5,
+     "passguete": 20.0,
+     "im_kasten": 15.0,
+     "seitwaerts": 15.0,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "scheitert_an": [
+     "gültig",
+     "A: dritte_beruehrung"
+    ]
+   },
+   {
+    "zeitebene": 5,
+    "beine_kerzen": 6,
+    "hoehe_atr": 2.5,
+    "beruehrungen": "2 + 2",
+    "erste": "10:00",
+    "letzte": "11:30",
+    "erkannt": "11:40",
+    "note": "B",
+    "note_spaeter_A": false,
+    "steigung_atr": 0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "teile": {
+     "beruehrungen": 17.5,
+     "passguete": 20.0,
+     "im_kasten": 15.0,
+     "seitwaerts": 15.0,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "scheitert_an": [
+     "gültig",
+     "A: dritte_beruehrung"
+    ]
+   },
+   {
+    "zeitebene": 5,
+    "beine_kerzen": 10,
+    "hoehe_atr": 4.0,
+    "beruehrungen": "2 + 2",
+    "erste": "10:00",
+    "letzte": "12:30",
+    "erkannt": "12:40",
+    "note": "B",
+    "note_spaeter_A": false,
+    "steigung_atr": 0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "teile": {
+     "beruehrungen": 17.5,
+     "passguete": 20.0,
+     "im_kasten": 15.0,
+     "seitwaerts": 15.0,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "scheitert_an": [
+     "gültig",
+     "A: dritte_beruehrung"
+    ]
+   }
+  ]
+ },
+ "mindest_stop": "Eingeplant für die Einstiege (Fassung 2.2): Abstand Einstieg–Stop mindestens max(0,5 × Kasten-ATR; 0,15 % vom Einstiegskurs); Kasten-ATR = dasselbe ATR wie für Toleranz, Höhe und Passgüte (Mittel der ATR je Tageszeit über die Kasten-Kerzen bis zur Entscheidung). Ein engerer Stop wird aufgeweitet, das Ziel bleibt (Abschnitt 5). Mit Pflichttest; noch nicht im Code."
 }

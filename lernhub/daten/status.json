@@ -1,6 +1,6 @@
 {
- "stand": "2026-10-25T12:41:00-04:00",
- "phase": "Sichtprüfung 2: 30 neue Bilder warten auf dich",
+ "stand": "2026-10-25T16:19:39-04:00",
+ "phase": "Sichtprüfung 2 bestanden (83 %). Als Nächstes: Grenzfälle (Runde 3), dann Fassung 2.2",
  "laeuft": false,
  "plan": [
   {
@@ -18,7 +18,7 @@
   {
    "titel": "Sichtprüfung durch dich",
    "text": "30 zufällige Erkennungen ansehen. Weiter erst bei mindestens 80 % „ja“.",
-   "status": "laeuft",
+   "status": "fertig",
    "datum": "So 25.10."
   },
   {
@@ -74,6 +74,10 @@
   {
    "zeit": "2026-10-25T12:41:00-04:00",
    "text": "Sichtprüfung 2 bereit: 30 neue Bilder. Weiter nur bei mindestens 80 % ja"
+  },
+  {
+   "zeit": "2026-10-25T16:19:39-04:00",
+   "text": "Sichtprüfung 2: 25 von 30 ja (83 %), bestanden"
   }
  ]
 }

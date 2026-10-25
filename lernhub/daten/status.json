@@ -1,6 +1,6 @@
 {
- "stand": "2026-10-25T07:40:48-04:00",
- "phase": "Sichtprüfung: 30 Bilder warten auf dich",
+ "stand": "2026-10-25T12:41:00-04:00",
+ "phase": "Sichtprüfung 2: 30 neue Bilder warten auf dich",
  "laeuft": false,
  "plan": [
   {
@@ -62,6 +62,18 @@
   {
    "zeit": "2026-10-25T07:40:48-04:00",
    "text": "Sichtprüfung bereit: 30 Bilder. Weiter erst nach deinem Ergebnis"
+  },
+  {
+   "zeit": "2026-10-25T12:26:35-04:00",
+   "text": "Sichtprüfung 1: 20 von 30 ja (67 %), unter 80 %. Die Erkennung wird nur an der Form nachgebessert, dann Runde 2"
+  },
+  {
+   "zeit": "2026-10-25T12:41:00-04:00",
+   "text": "Erkennung nachgebessert (Code 8454cdc07786): Toleranz höchstens 10 % der Höhe, Enge, ruhiges Pendeln, Höhe ab 1,75 ATR"
+  },
+  {
+   "zeit": "2026-10-25T12:41:00-04:00",
+   "text": "Sichtprüfung 2 bereit: 30 neue Bilder. Weiter nur bei mindestens 80 % ja"
   }
  ]
 }

@@ -1,65 +1,65 @@
 {
- "code": "fba7abcb039b",
+ "code": "8454cdc07786",
  "fassung": "2.1",
  "zeitraum": "2021-10-01 bis 2023-09-29",
  "aktien": 50,
- "erstellt": "2026-10-25T07:34:30-04:00",
- "dauer_s": 662,
+ "erstellt": "2026-10-25T12:37:39-04:00",
+ "dauer_s": 477,
  "zeitebenen": {
   "15m": {
    "tage": 25096,
-   "kaesten": 968,
+   "kaesten": 356,
    "kaesten_noten": {
-    "A": 2,
-    "B": 189,
-    "C": 777
+    "A": 0,
+    "B": 146,
+    "C": 210
    },
-   "entscheidungen": 691,
+   "entscheidungen": 232,
    "entscheidungen_noten": {
-    "A": 4,
-    "B": 119,
-    "C": 568
+    "A": 0,
+    "B": 85,
+    "C": 147
    },
    "entscheidungen_art": {
-    "A": 415,
-    "C": 276
+    "A": 146,
+    "C": 86
    },
    "kerzen_stufe": {
-    "0": 533039,
-    "1": 112373,
-    "2": 2594,
-    "3": 869
+    "0": 533137,
+    "1": 114450,
+    "2": 1006,
+    "3": 282
    }
   },
   "5m": {
    "tage": 25096,
-   "kaesten": 8463,
+   "kaesten": 4798,
    "kaesten_noten": {
-    "A": 37,
-    "B": 1718,
-    "C": 6708
+    "A": 16,
+    "B": 1534,
+    "C": 3248
    },
-   "entscheidungen": 9174,
+   "entscheidungen": 5001,
    "entscheidungen_noten": {
-    "A": 56,
-    "B": 1969,
-    "C": 7149
+    "A": 17,
+    "B": 1581,
+    "C": 3403
    },
    "entscheidungen_art": {
-    "A": 5782,
-    "C": 3392
+    "A": 3123,
+    "C": 1878
    },
    "kerzen_stufe": {
-    "0": 1131669,
-    "1": 751250,
-    "2": 50363,
-    "3": 13229
+    "0": 1108176,
+    "1": 801169,
+    "2": 30409,
+    "3": 6757
    }
   }
  },
  "abschneide": {
   "proben": 300,
   "bestanden": 300,
-  "mit_kasten": 9
+  "mit_kasten": 6
  }
 }

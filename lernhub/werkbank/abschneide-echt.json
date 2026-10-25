@@ -1,9 +1,9 @@
 {
- "code": "fba7abcb039b",
+ "code": "8454cdc07786",
  "startwert": 20261025,
  "proben": 300,
  "bestanden": 300,
- "mit_kasten": 9,
+ "mit_kasten": 6,
  "fehler": [],
  "liste": [
   {
@@ -947,7 +947,7 @@
    "tag": "2022-03-25",
    "zeitebene": 5,
    "kerze": 42,
-   "stufe_k": 2,
+   "stufe_k": 1,
    "fehler": []
   },
   {
@@ -1099,7 +1099,7 @@
    "tag": "2022-10-07",
    "zeitebene": 5,
    "kerze": 48,
-   "stufe_k": 0,
+   "stufe_k": 1,
    "fehler": []
   },
   {
@@ -1299,7 +1299,7 @@
    "tag": "2022-07-19",
    "zeitebene": 5,
    "kerze": 32,
-   "stufe_k": 2,
+   "stufe_k": 0,
    "fehler": []
   },
   {
@@ -2331,7 +2331,7 @@
    "tag": "2023-02-09",
    "zeitebene": 15,
    "kerze": 25,
-   "stufe_k": 3,
+   "stufe_k": 1,
    "fehler": []
   },
   {

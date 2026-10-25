@@ -1,0 +1,241 @@
+{
+ "titel": "Vorschlag Fassung 2.2 (nur Vorschlag, nichts umgesetzt)",
+ "stand": "2026-10-25T18:20:44-04:00",
+ "code": "8454cdc07786",
+ "grundlage": "Sichtprüfung 3 (rechteck-3, 41 von 50 ja) nach der vorher festgelegten Entscheidungsregel; Hochrechnung nur aus der Geometrie (keine Trades, kein R), Lerntopf Okt 2021 - Sep 2023, 50 Aktien.",
+ "sichtpruefung_3": [
+  {
+   "gruppe": "nur Steigung",
+   "ja": 7,
+   "nein": 2,
+   "unsicher": 1,
+   "entscheidung": "Messung wird korrigiert"
+  },
+  {
+   "gruppe": "nur Punkte ≥ 80",
+   "ja": 9,
+   "nein": 0,
+   "unsicher": 1,
+   "entscheidung": "Messung wird korrigiert"
+  },
+  {
+   "gruppe": "nur 3. Berührung",
+   "ja": 10,
+   "nein": 0,
+   "unsicher": 0,
+   "entscheidung": "Messung wird korrigiert"
+  },
+  {
+   "gruppe": "nur ruhige Beine",
+   "ja": 7,
+   "nein": 1,
+   "unsicher": 2,
+   "entscheidung": "Messung wird korrigiert"
+  },
+  {
+   "gruppe": "Vergleich heute A",
+   "ja": 5,
+   "nein": 0,
+   "unsicher": 0,
+   "entscheidung": "nur Vergleich"
+  },
+  {
+   "gruppe": "Vergleich heute B",
+   "ja": 3,
+   "nein": 1,
+   "unsicher": 1,
+   "entscheidung": "nur Vergleich"
+  }
+ ],
+ "korrekturen": [
+  {
+   "gruppe": "nur Steigung (7 von 10)",
+   "vorschlag": "Steigung über die Berührungslinien messen (eine gemeinsame Steigung durch die Berührungen oben und unten), Grenze unverändert 0,03 ATR je Kerze; die Regression der Schlusskurse nur noch mitschreiben. Effizienz ≤ 0,3 bleibt.",
+   "vorbehalt": "Trennt in Runde 3 nicht: 9 von 10 Bildern kämen durch, auch die beiden Nein (b39, b43); b41 (ja) wäre zu steil. Weil die Berührungen ohnehin in der Toleranz liegen, wirkt das fast wie das Streichen der Steigungsregel. Der künstliche Trendkanal (0,035–0,06 ATR je Kerze) würde über die Linien weiter abgelehnt; der Pflichttest bleibt."
+  },
+  {
+   "gruppe": "nur Punkte ≥ 80 (9 von 10)",
+   "vorschlag": "Note A ohne Punkteschwelle: A = gültig + Passgüte ≤ 0,08 ATR + kein Docht außerhalb + kein unruhiges Bein; die Punktzahl ordnet nur (beste zuerst).",
+   "vorbehalt": "Begründung: Die Punktzahl trennt ja und nein nicht (Runden 1 und 2: im Mittel 63,8 gegen 63,9)."
+  },
+  {
+   "gruppe": "nur 3. Berührung (10 von 10)",
+   "vorschlag": "Note A schon mit 2 + 2 Berührungen (der Kurs läuft dann dreimal ganz von Linie zu Linie, das erfüllt dein Kriterium „mindestens zweimal“); die 3. Berührung zählt nur noch in der Punktzahl.",
+   "vorbehalt": "Auf 15 Min ist sonst praktisch nie A möglich (4. Berührung im Median 14:15)."
+  },
+  {
+   "gruppe": "nur ruhige Beine (7 von 10)",
+   "vorschlag": "Unruhige Beine mit Band messen: eine Kreuzung der Kastenmitte zählt erst, wenn der Schluss jenseits Mitte ± 10 % der Höhe liegt (Zittern um die Mitte zählt nicht). Die Regel selbst bleibt (Gültigkeit: höchstens ein Drittel unruhig; A: keines).",
+   "vorbehalt": "Genau auf der Grenze (7 ja, 1 nein, 2 unsicher)."
+  }
+ ],
+ "toleranz": {
+  "beobachtung": "B und C sehen für das Auge gleich aus: Runden 1 und 2 zusammen ja bei B 16/23 (70 %), bei C 20/27 (74 %).",
+  "vorschlag": "Kandidat: Gültigkeit mit der Toleranz von heute C (0,3 ATR, höchstens 10 % der Höhe; Docht bis 0,6 ATR); Note A bleibt streng (Passgüte ≤ 0,08 ATR, kein Docht außerhalb des strengen Bands). Dann ist C kein eigener Toleranz-Fall mehr; für den Beweis „A besser als C“ müsste C neu bestimmt werden (zum Beispiel A gegen den Rest)."
+ },
+ "hochrechnung": {
+  "einheit": "Aktie-Tage (50 Aktien) mit mindestens einem Kasten, der unter der Variante gültig bzw. Note A ist und vor der letzten Einstiegszeit erkannt wird; je Jahr = Zahl / Jahre",
+  "jahre": 1.99,
+  "zeitebenen": {
+   "15m": {
+    "aktie_tage": 25096,
+    "varianten": {
+     "heute": {
+      "tage_gueltig": 85,
+      "tage_a": 0,
+      "a_je_jahr": 0.0,
+      "gueltig_je_jahr": 42.7
+     },
+     "K1 Steigung über Linien": {
+      "tage_gueltig": 280,
+      "tage_a": 0,
+      "a_je_jahr": 0.0,
+      "gueltig_je_jahr": 140.6
+     },
+     "K2 A ohne Punkteschwelle": {
+      "tage_gueltig": 85,
+      "tage_a": 7,
+      "a_je_jahr": 3.5,
+      "gueltig_je_jahr": 42.7
+     },
+     "K3 A schon mit 2 + 2": {
+      "tage_gueltig": 85,
+      "tage_a": 1,
+      "a_je_jahr": 0.5,
+      "gueltig_je_jahr": 42.7
+     },
+     "K4 unruhige Beine mit Band": {
+      "tage_gueltig": 88,
+      "tage_a": 0,
+      "a_je_jahr": 0.0,
+      "gueltig_je_jahr": 44.2
+     },
+     "K1-K4": {
+      "tage_gueltig": 289,
+      "tage_a": 177,
+      "a_je_jahr": 88.9,
+      "gueltig_je_jahr": 145.1
+     },
+     "K1-K4 + Toleranz wie C": {
+      "tage_gueltig": 422,
+      "tage_a": 177,
+      "a_je_jahr": 88.9,
+      "gueltig_je_jahr": 211.8
+     }
+    }
+   },
+   "5m": {
+    "aktie_tage": 25096,
+    "varianten": {
+     "heute": {
+      "tage_gueltig": 1451,
+      "tage_a": 21,
+      "a_je_jahr": 10.5,
+      "gueltig_je_jahr": 728.4
+     },
+     "K1 Steigung über Linien": {
+      "tage_gueltig": 3078,
+      "tage_a": 22,
+      "a_je_jahr": 11.0,
+      "gueltig_je_jahr": 1545.1
+     },
+     "K2 A ohne Punkteschwelle": {
+      "tage_gueltig": 1451,
+      "tage_a": 115,
+      "a_je_jahr": 57.7,
+      "gueltig_je_jahr": 728.4
+     },
+     "K3 A schon mit 2 + 2": {
+      "tage_gueltig": 1451,
+      "tage_a": 39,
+      "a_je_jahr": 19.6,
+      "gueltig_je_jahr": 728.4
+     },
+     "K4 unruhige Beine mit Band": {
+      "tage_gueltig": 1687,
+      "tage_a": 43,
+      "a_je_jahr": 21.6,
+      "gueltig_je_jahr": 846.9
+     },
+     "K1-K4": {
+      "tage_gueltig": 3437,
+      "tage_a": 1821,
+      "a_je_jahr": 914.1,
+      "gueltig_je_jahr": 1725.3
+     },
+     "K1-K4 + Toleranz wie C": {
+      "tage_gueltig": 5532,
+      "tage_a": 1821,
+      "a_je_jahr": 914.1,
+      "gueltig_je_jahr": 2777.0
+     }
+    }
+   }
+  },
+  "lesart": "Tage mit handelbarem Kasten (Note A, vor der letzten Einstiegszeit erkannt) je Jahr, 50 Aktien. Das ist eine Obergrenze für Trades: es braucht noch einen Auslöser, und es gibt höchstens 1 Trade je Einstieg, Aktie und Tag.",
+  "kurz": "heute: 15 Min 0, 5 Min 10,5 je Jahr. Jede Korrektur allein: höchstens 3,5 bzw. 57,7 (am meisten bringt A ohne Punkteschwelle). Alle vier zusammen: 15 Min 88,9, 5 Min 914 je Jahr; mit der Toleranz wie C dieselben A-Tage, aber 50 % mehr gültige Tage (15 Min 145 -> 212, 5 Min 1.725 -> 2.777 je Jahr). Das Kriterium „je Jahr mindestens 50 A-Trades“ wird erst mit allen vier Korrekturen erreichbar."
+ },
+ "wichtigster_vorbehalt": "Runde 3 hat nur Bilder gezeigt, die an genau EINER Regel scheitern. Die vielen neuen A-Tage mit allen vier Korrekturen kommen vor allem aus Kandidaten, die an mehreren dieser Regeln zugleich scheitern; die hat noch niemand angesehen. Vorschlag: vor dem Festlegen von 2.2 eine Sichtprüfung mit 30 zufälligen neuen A (beide Zeitebenen), Weiter nur bei mindestens 80 % ja.",
+ "mindest_stop": "Eingeplant für die Einstiege: max(0,5 × Kasten-ATR; 0,15 % vom Einstiegskurs), dasselbe Kasten-ATR; ein engerer Stop wird aufgeweitet, das Ziel bleibt; mit Pflichttest.",
+ "steigung_frage": {
+  "antwort": "Steigung und Effizienz werden über die vollen Pendel gemessen: von der ersten Berührung bis zur letzten Berührung derselben Linie. Das Fenster beginnt und endet damit auf derselben Höhe, egal ob der Kasten oben oder unten beginnt.",
+  "kunsttage_unten_oben": [
+   {
+    "zeitebene": 15,
+    "folge": "unten-oben-unten-oben",
+    "erkannt": "13:45",
+    "note": "B",
+    "fenster_messung": "10:15-12:15 (erste bis letzte Berührung derselben Linie, Schluss 100.6 und 100.6)",
+    "steigung_atr": 0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "scheitert_an": "A: 3. Berührung",
+    "zum_vergleich_steigung_erste_bis_letzte_beruehrung": 0.0478,
+    "zum_vergleich_steigung_erste_beruehrung_bis_entscheidung": 0.065,
+    "zum_vergleich_effizienz_erste_bis_letzte_beruehrung": 0.333
+   },
+   {
+    "zeitebene": 5,
+    "folge": "unten-oben-unten-oben",
+    "erkannt": "12:10",
+    "note": "B",
+    "fenster_messung": "10:00-11:20 (erste bis letzte Berührung derselben Linie, Schluss 100.6 und 100.6)",
+    "steigung_atr": 0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "scheitert_an": "A: 3. Berührung",
+    "zum_vergleich_steigung_erste_bis_letzte_beruehrung": 0.0192,
+    "zum_vergleich_steigung_erste_beruehrung_bis_entscheidung": 0.0265,
+    "zum_vergleich_effizienz_erste_bis_letzte_beruehrung": 0.222
+   },
+   {
+    "zeitebene": 15,
+    "folge": "oben-unten-oben-unten",
+    "erkannt": "13:45",
+    "note": "B",
+    "fenster_messung": "10:15-12:15 (erste bis letzte Berührung derselben Linie, Schluss 102.4 und 102.4)",
+    "steigung_atr": -0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "scheitert_an": "A: 3. Berührung",
+    "zum_vergleich_steigung_erste_bis_letzte_beruehrung": -0.0478,
+    "zum_vergleich_steigung_erste_beruehrung_bis_entscheidung": -0.065,
+    "zum_vergleich_effizienz_erste_bis_letzte_beruehrung": 0.333
+   },
+   {
+    "zeitebene": 5,
+    "folge": "oben-unten-oben-unten",
+    "erkannt": "12:10",
+    "note": "B",
+    "fenster_messung": "10:00-11:20 (erste bis letzte Berührung derselben Linie, Schluss 102.4 und 102.4)",
+    "steigung_atr": -0.0,
+    "effizienz": 0.0,
+    "punkte": 92.5,
+    "scheitert_an": "A: 3. Berührung",
+    "zum_vergleich_steigung_erste_bis_letzte_beruehrung": -0.0192,
+    "zum_vergleich_steigung_erste_beruehrung_bis_entscheidung": -0.0265,
+    "zum_vergleich_effizienz_erste_bis_letzte_beruehrung": 0.222
+   }
+  ]
+ }
+}

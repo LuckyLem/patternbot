@@ -1,0 +1,2979 @@
+{
+ "titel": "Diagnose: warum so wenige A",
+ "stand": "2026-10-25T13:12:35-04:00",
+ "code": "8454cdc07786",
+ "grenzen": "Nur gemessen. Erkennung, Regeln, Gewichte und Code unverändert (kein neuer Hash). Nur Lerntopf Okt 2021 - Sep 2023, nur Geometrie: keine Trades, kein R. sichtpruefung.json und status.json nicht angefasst.",
+ "einheit": "je Aktie-Tag und Zeitebene der beste Kasten-Kandidat aus den Wendepunkten des Tages (Fenster von einem Wendepunkt bis zu einem späteren, bewertet zwei Kerzen nach der letzten Berührung; Wendepunkte hier auch einfache Spitzen; bester = die wenigsten verfehlten Regeln)",
+ "spalten": {
+  "uebrig": "übrig nach dieser Regel, in Reihenfolge",
+  "nur_diese": "scheitert nur an dieser Regel (alles andere erfüllt; bei A-Zeilen: gültig und nur diese A-Bedingung fehlt)",
+  "insgesamt": "scheitert an dieser Regel überhaupt"
+ },
+ "tabellen": {
+  "15m": {
+   "einheit": "Aktie-Tage (je Tag der beste Kandidat)",
+   "kopf": [
+    "Regel",
+    "übrig",
+    "nur diese",
+    "insgesamt"
+   ],
+   "zeilen": [
+    [
+     "Aktie-Tage",
+     25096,
+     null,
+     null
+    ],
+    [
+     "Kandidat aus Wendepunkten vorhanden",
+     25012,
+     null,
+     84
+    ],
+    [
+     "Uhrzeit (Berührungen ab 09:45, Entscheidung bis zur letzten Einstiegszeit)",
+     22332,
+     47,
+     2680
+    ],
+    [
+     "Wendepunkt (2 Kerzen + 0,5 ATR)",
+     15662,
+     98,
+     7400
+    ],
+    [
+     "2 + 2 Berührungen in Toleranz",
+     1685,
+     23,
+     19675
+    ],
+    [
+     "abwechselnd (nach Zusammenfassen 2 + 2)",
+     949,
+     42,
+     21095
+    ],
+    [
+     "40 % Weg",
+     948,
+     0,
+     2
+    ],
+    [
+     "kein Schluss außerhalb",
+     934,
+     0,
+     283
+    ],
+    [
+     "Docht-Regel",
+     850,
+     11,
+     1477
+    ],
+    [
+     "Effizienz ≤ 0,3",
+     754,
+     1,
+     10760
+    ],
+    [
+     "Steigung ≤ 0,03 ATR je Kerze",
+     301,
+     189,
+     19014
+    ],
+    [
+     "Höhe 1,75–6 ATR",
+     127,
+     61,
+     4464
+    ],
+    [
+     "Breite (10 bzw. 12 Kerzen)",
+     87,
+     40,
+     12487
+    ],
+    [
+     "Enge",
+     87,
+     0,
+     3
+    ],
+    [
+     "ruhiges Pendeln",
+     85,
+     2,
+     960
+    ],
+    [
+     "A: 3. Berührung (3 + 2)",
+     22,
+     1,
+     63
+    ],
+    [
+     "A: Passgüte ≤ 0,08 ATR",
+     14,
+     0,
+     24
+    ],
+    [
+     "A: kein Docht außerhalb",
+     11,
+     0,
+     18
+    ],
+    [
+     "A: kein unruhiges Bein (Code, Runde 2)",
+     7,
+     0,
+     29
+    ],
+    [
+     "A: Punkte ≥ 80",
+     0,
+     7,
+     84
+    ],
+    [
+     "Abprall ≥ 2 (nicht im Code, nur gemessen)",
+     0,
+     0,
+     16
+    ]
+   ],
+   "gegenprobe": {
+    "gueltig_ohne_uhrzeit": 141,
+    "a_ohne_uhrzeit": 0,
+    "echte_erkennung_tage_mit_B_oder_A": 157,
+    "echte_erkennung_tage_mit_A": 0
+   }
+  },
+  "5m": {
+   "einheit": "Aktie-Tage (je Tag der beste Kandidat)",
+   "kopf": [
+    "Regel",
+    "übrig",
+    "nur diese",
+    "insgesamt"
+   ],
+   "zeilen": [
+    [
+     "Aktie-Tage",
+     25096,
+     null,
+     null
+    ],
+    [
+     "Kandidat aus Wendepunkten vorhanden",
+     25044,
+     null,
+     52
+    ],
+    [
+     "Uhrzeit (Berührungen ab 09:45, Entscheidung bis zur letzten Einstiegszeit)",
+     23526,
+     235,
+     1518
+    ],
+    [
+     "Wendepunkt (2 Kerzen + 0,5 ATR)",
+     18025,
+     895,
+     5811
+    ],
+    [
+     "2 + 2 Berührungen in Toleranz",
+     9300,
+     234,
+     10066
+    ],
+    [
+     "abwechselnd (nach Zusammenfassen 2 + 2)",
+     5790,
+     636,
+     14040
+    ],
+    [
+     "40 % Weg",
+     5789,
+     0,
+     4
+    ],
+    [
+     "kein Schluss außerhalb",
+     5634,
+     3,
+     345
+    ],
+    [
+     "Docht-Regel",
+     5002,
+     315,
+     2297
+    ],
+    [
+     "Effizienz ≤ 0,3",
+     4914,
+     6,
+     1523
+    ],
+    [
+     "Steigung ≤ 0,03 ATR je Kerze",
+     2793,
+     1326,
+     10545
+    ],
+    [
+     "Höhe 1,75–6 ATR",
+     2007,
+     382,
+     2834
+    ],
+    [
+     "Breite (10 bzw. 12 Kerzen)",
+     1669,
+     337,
+     5505
+    ],
+    [
+     "Enge",
+     1669,
+     0,
+     1
+    ],
+    [
+     "ruhiges Pendeln",
+     1451,
+     218,
+     2357
+    ],
+    [
+     "A: 3. Berührung (3 + 2)",
+     360,
+     18,
+     1091
+    ],
+    [
+     "A: Passgüte ≤ 0,08 ATR",
+     312,
+     0,
+     319
+    ],
+    [
+     "A: kein Docht außerhalb",
+     253,
+     0,
+     287
+    ],
+    [
+     "A: kein unruhiges Bein (Code, Runde 2)",
+     115,
+     21,
+     829
+    ],
+    [
+     "A: Punkte ≥ 80",
+     21,
+     94,
+     1373
+    ],
+    [
+     "Abprall ≥ 2 (nicht im Code, nur gemessen)",
+     21,
+     0,
+     245
+    ]
+   ],
+   "gegenprobe": {
+    "gueltig_ohne_uhrzeit": 1723,
+    "a_ohne_uhrzeit": 23,
+    "echte_erkennung_tage_mit_B_oder_A": 1784,
+    "echte_erkennung_tage_mit_A": 22
+   }
+  }
+ },
+ "gegenprobe": "Die Diagnose trifft die echte Erkennung: Tage mit gültigem Kasten (ohne Uhrzeit-Regel) 15 Min 141 gegen 157 Tage mit B/A in der Erkennung, 5 Min 1.723 gegen 1.784; Tage mit A 0 gegen 0 und 23 gegen 22. Die Uhrzeit-Regel (letzte Einstiegszeit) prüft die Erkennung selbst nicht, sie gehört zu den Einstiegen.",
+ "bremsen": [
+  {
+   "regel": "A: Punkte ≥ 80",
+   "beleg": "verfehlt auf 99 % (15 Min, 84 von 85) bzw. 95 % (5 Min, 1.373 von 1.451) der Tage mit gültigem Kasten; allein blockiert sie 7 bzw. 94 Tage, an denen alles andere für A erfüllt ist. Punktzahl der B-Kästen im Median 67,9 (15 Min) und 69,5 (5 Min); Teile im Median: Berührungen 14,1 von 25, Passgüte 12 von 20, seitwärts 8,8-10,1 von 15, Abprall 9-11 von 15. Schon ein Kasten mit 3 + 2 kommt mit üblichen Werten auf etwa 74."
+  },
+  {
+   "regel": "A: 3. Berührung (3 + 2), auf 15 Min das Zeitbudget",
+   "beleg": "fehlt auf 74 % (15 Min) bzw. 75 % (5 Min) der Tage mit gültigem Kasten. 15 Min: 1. Berührung im Median 11:00, 4. Berührung 14:15 (214 von 336 Kästen erst ab 14:00), nur 73 Kästen bekommen eine 5. Berührung (Median 14:30), davon 28 erst nach der letzten Einstiegszeit (Entscheidungskerze 15:00). Von den 73 Kästen mit 3 + 2 sind 50 nur gelockert erkennbar (Note C); bei den 23 strengen fehlt immer Punkte ≥ 80 (Höchstwert 78,3), bei 9 nur das."
+  },
+  {
+   "regel": "Gültigkeit: Steigung ≤ 0,03 ATR je Kerze",
+   "beleg": "der größte Einbruch im Trichter: 15 Min 754 -> 301, 5 Min 4.914 -> 2.793; allein blockiert sie 189 bzw. 1.326 Tage (die meisten aller Regeln). Danach Wendepunkt mit 0,5 ATR Schwung (allein 98 bzw. 895 Tage)."
+  }
+ ],
+ "fehler_oder_regel": "Regel, kein Fehler. Belege: (1) Alle 6 künstlichen Lehrbuch-Tage (3 je Zeitebene, 3 + 2 und 3 + 3) werden A mit 96 bis 100 Punkten, A ist also erreichbar. (2) Die Diagnose bildet die Erkennung nach (siehe Gegenprobe). (3) Die Grenze „Toleranz höchstens 10 % der Höhe“ greift bei A und B nie (0 von 16 A und 0 von 1.680 B), nur bei C (158 von 210 bzw. 1.886 von 3.248). (4) Toleranz, Höhe und Passgüte nutzen dasselbe Kasten-ATR. Die Seltenheit kommt aus dem Zusammenspiel: Punkte ≥ 80 mit den heutigen Teilwerten, die 3. Berührung (auf 15 Min reicht der Tag dafür selten) und die Steigungsgrenze. Ein Hinweis: „Abprall ≥ 2“ ist im Code keine A-Bedingung (Abschnitt 4 nennt sie nicht, nur die Recherche); gemessen ändert sie heute nichts (alle 21 A-Tage auf 5 Min haben mindestens 2).",
+ "atr": "Dasselbe ATR je Tageszeit aus derselben Zeitebene: erkennung.py rechnet es je Zeitebene aus deren eigenen Kerzen (atr_je_tageszeit(T) mit T = Kerzen der Zeitebene). In rechteck.py ist a = Mittel dieses ATR über die Kasten-Kerzen (atr_mittel), und damit rechnen Toleranz (toleranz(a, Höhe)), Höhe (Höhe / a) und Passgüte (Abweichung / a); die Auslöser nutzen das a des Kastens der Vorkerze, die Wendepunkte das ATR ihrer eigenen Kerze aus derselben Reihe. Einen Mindest-Stop gibt es im Code noch nicht (kommt mit den Einstiegen, Abschnitt 5); Vorschlag: dasselbe Kasten-ATR.",
+ "toleranz_10_prozent": {
+  "15m": {
+   "A": {
+    "faelle": 0,
+    "grenze_greift": 0
+   },
+   "B": {
+    "faelle": 146,
+    "grenze_greift": 0
+   },
+   "C": {
+    "faelle": 210,
+    "grenze_greift": 158
+   }
+  },
+  "5m": {
+   "A": {
+    "faelle": 16,
+    "grenze_greift": 0
+   },
+   "B": {
+    "faelle": 1534,
+    "grenze_greift": 0
+   },
+   "C": {
+    "faelle": 3248,
+    "grenze_greift": 1886
+   }
+  }
+ },
+ "b_nach_a_bei_erkennung": {
+  "15m": {
+   "anzahl": 146,
+   "fehlt_einzeln": {
+    "punkte_80": 144,
+    "dritte_beruehrung": 122,
+    "ruhige_beine": 57,
+    "passguete": 35,
+    "kein_docht": 12
+   },
+   "kombinationen_top5": [
+    {
+     "fehlt": "dritte_beruehrung + punkte_80",
+     "anzahl": 45
+    },
+    {
+     "fehlt": "dritte_beruehrung + ruhige_beine + punkte_80",
+     "anzahl": 36
+    },
+    {
+     "fehlt": "dritte_beruehrung + passguete + punkte_80",
+     "anzahl": 24
+    },
+    {
+     "fehlt": "punkte_80",
+     "anzahl": 11
+    },
+    {
+     "fehlt": "dritte_beruehrung + passguete + ruhige_beine + punkte_80",
+     "anzahl": 7
+    }
+   ],
+   "punkte_verteilung": {
+    "60–64": 40,
+    "65–69": 59,
+    "70–74": 34,
+    "75–79": 11,
+    "80–100": 2
+   },
+   "punkte_median": 67.9,
+   "teile_median": {
+    "beruehrungen": 14.1,
+    "passguete": 11.8,
+    "im_kasten": 15.0,
+    "seitwaerts": 8.8,
+    "abprall": 11.2,
+    "proportion": 10.0
+   },
+   "gewichte": {
+    "beruehrungen": 25,
+    "passguete": 20,
+    "im_kasten": 15,
+    "seitwaerts": 15,
+    "abprall": 15,
+    "proportion": 10
+   },
+   "abprall_unter_2": 18
+  },
+  "5m": {
+   "anzahl": 1534,
+   "fehlt_einzeln": {
+    "punkte_80": 1485,
+    "dritte_beruehrung": 1302,
+    "ruhige_beine": 905,
+    "passguete": 314,
+    "kein_docht": 124
+   },
+   "kombinationen_top5": [
+    {
+     "fehlt": "dritte_beruehrung + ruhige_beine + punkte_80",
+     "anzahl": 531
+    },
+    {
+     "fehlt": "dritte_beruehrung + punkte_80",
+     "anzahl": 350
+    },
+    {
+     "fehlt": "dritte_beruehrung + passguete + ruhige_beine + punkte_80",
+     "anzahl": 158
+    },
+    {
+     "fehlt": "dritte_beruehrung + passguete + punkte_80",
+     "anzahl": 125
+    },
+    {
+     "fehlt": "ruhige_beine + punkte_80",
+     "anzahl": 90
+    }
+   ],
+   "punkte_verteilung": {
+    "60–64": 337,
+    "65–69": 479,
+    "70–74": 422,
+    "75–79": 247,
+    "80–100": 49
+   },
+   "punkte_median": 69.5,
+   "teile_median": {
+    "beruehrungen": 14.1,
+    "passguete": 12.4,
+    "im_kasten": 15.0,
+    "seitwaerts": 10.1,
+    "abprall": 9.0,
+    "proportion": 10.0
+   },
+   "gewichte": {
+    "beruehrungen": 25,
+    "passguete": 20,
+    "im_kasten": 15,
+    "seitwaerts": 15,
+    "abprall": 15,
+    "proportion": 10
+   },
+   "abprall_unter_2": 212
+  }
+ },
+ "b_nach_a_im_reifsten_zustand": {
+  "15m": {
+   "anzahl": 143,
+   "fehlt_einzeln": {
+    "punkte_80": 141,
+    "dritte_beruehrung": 111,
+    "ruhige_beine": 58,
+    "kein_docht": 53,
+    "passguete": 33
+   },
+   "kombinationen_top5": [
+    {
+     "fehlt": "dritte_beruehrung + punkte_80",
+     "anzahl": 32
+    },
+    {
+     "fehlt": "dritte_beruehrung + ruhige_beine + punkte_80",
+     "anzahl": 23
+    },
+    {
+     "fehlt": "dritte_beruehrung + kein_docht + ruhige_beine + punkte_80",
+     "anzahl": 15
+    },
+    {
+     "fehlt": "dritte_beruehrung + passguete + punkte_80",
+     "anzahl": 13
+    },
+    {
+     "fehlt": "dritte_beruehrung + kein_docht + punkte_80",
+     "anzahl": 12
+    }
+   ],
+   "punkte_verteilung": {
+    "60–64": 35,
+    "65–69": 50,
+    "70–74": 26,
+    "75–79": 9,
+    "80–100": 2
+   },
+   "punkte_median": 66.7,
+   "teile_median": {
+    "beruehrungen": 14.1,
+    "passguete": 12.0,
+    "im_kasten": 15.0,
+    "seitwaerts": 8.9,
+    "abprall": 11.2,
+    "proportion": 10.0
+   },
+   "gewichte": {
+    "beruehrungen": 25,
+    "passguete": 20,
+    "im_kasten": 15,
+    "seitwaerts": 15,
+    "abprall": 15,
+    "proportion": 10
+   },
+   "abprall_unter_2": 14
+  },
+  "5m": {
+   "anzahl": 1477,
+   "fehlt_einzeln": {
+    "punkte_80": 1443,
+    "dritte_beruehrung": 1140,
+    "ruhige_beine": 903,
+    "kein_docht": 714,
+    "passguete": 294
+   },
+   "kombinationen_top5": [
+    {
+     "fehlt": "dritte_beruehrung + ruhige_beine + punkte_80",
+     "anzahl": 291
+    },
+    {
+     "fehlt": "dritte_beruehrung + kein_docht + ruhige_beine + punkte_80",
+     "anzahl": 250
+    },
+    {
+     "fehlt": "dritte_beruehrung + kein_docht + punkte_80",
+     "anzahl": 173
+    },
+    {
+     "fehlt": "dritte_beruehrung + punkte_80",
+     "anzahl": 163
+    },
+    {
+     "fehlt": "kein_docht + ruhige_beine + punkte_80",
+     "anzahl": 96
+    }
+   ],
+   "punkte_verteilung": {
+    "60–64": 350,
+    "65–69": 336,
+    "70–74": 296,
+    "75–79": 138,
+    "80–100": 34
+   },
+   "punkte_median": 65.8,
+   "teile_median": {
+    "beruehrungen": 14.3,
+    "passguete": 12.5,
+    "im_kasten": 15.0,
+    "seitwaerts": 10.1,
+    "abprall": 9.0,
+    "proportion": 10.0
+   },
+   "gewichte": {
+    "beruehrungen": 25,
+    "passguete": 20,
+    "im_kasten": 15,
+    "seitwaerts": 15,
+    "abprall": 15,
+    "proportion": 10
+   },
+   "abprall_unter_2": 199
+  }
+ },
+ "zeitbudget_15m": {
+  "kaesten_15m_nachgerechnet": 336,
+  "median_1_beruehrung": "11:00",
+  "median_4_beruehrung": "14:15",
+  "mit_5_beruehrung": 73,
+  "median_5_beruehrung": "14:30",
+  "5_beruehrung_erst_nach_letzter_einstiegszeit": 28,
+  "nur_4_beruehrungen": 263,
+  "vierte_nach_1400": 214,
+  "kaesten_3_2": 73,
+  "liste_3_2": [
+   {
+    "symbol": "TSLA",
+    "tag": "2022-05-03",
+    "note": "C",
+    "punkte": 66.5,
+    "beruehrungen": [
+     "10:45 unten",
+     "12:00 oben",
+     "12:15 unten",
+     "13:45 oben",
+     "14:30 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.13,
+     "passguete": 2.31,
+     "im_kasten": 15.0,
+     "seitwaerts": 8.05,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1326,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "TSLA",
+    "tag": "2022-05-17",
+    "note": "C",
+    "punkte": 65.7,
+    "beruehrungen": [
+     "12:30 oben",
+     "13:00 unten",
+     "13:15 oben",
+     "14:15 unten",
+     "14:45 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.41,
+     "passguete": 13.33,
+     "im_kasten": 0.0,
+     "seitwaerts": 14.0,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.05,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "AAPL",
+    "tag": "2022-12-21",
+    "note": "B",
+    "punkte": 65.7,
+    "beruehrungen": [
+     "12:15 unten",
+     "13:00 oben",
+     "13:15 unten",
+     "14:00 oben",
+     "14:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.79,
+     "passguete": 13.73,
+     "im_kasten": 7.5,
+     "seitwaerts": 10.72,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0471,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "AAPL",
+    "tag": "2023-03-24",
+    "note": "C",
+    "punkte": 59.5,
+    "beruehrungen": [
+     "10:00 oben",
+     "11:30 unten",
+     "12:00 oben",
+     "12:15 unten",
+     "13:30 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.36,
+     "passguete": 4.8,
+     "im_kasten": 7.5,
+     "seitwaerts": 9.85,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.114,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "MSFT",
+    "tag": "2023-09-08",
+    "note": "C",
+    "punkte": 60.5,
+    "beruehrungen": [
+     "10:15 oben",
+     "11:00 unten",
+     "11:30 oben",
+     "12:45 unten",
+     "14:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.79,
+     "passguete": 7.37,
+     "im_kasten": 7.5,
+     "seitwaerts": 8.89,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0947,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "META",
+    "tag": "2023-03-17",
+    "note": "C",
+    "punkte": 68.6,
+    "beruehrungen": [
+     "10:45 unten",
+     "11:15 oben",
+     "11:30 unten",
+     "12:30 oben",
+     "12:45 unten",
+     "13:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 19.52,
+     "passguete": 9.03,
+     "im_kasten": 15.0,
+     "seitwaerts": 2.53,
+     "abprall": 12.5,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0823,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "META",
+    "tag": "2023-05-31",
+    "note": "C",
+    "punkte": 53.1,
+    "beruehrungen": [
+     "10:00 oben",
+     "10:15 unten",
+     "11:00 oben",
+     "12:45 unten",
+     "13:30 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.02,
+     "passguete": 4.75,
+     "im_kasten": 7.5,
+     "seitwaerts": 9.8,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1144,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "NFLX",
+    "tag": "2021-12-08",
+    "note": "B",
+    "punkte": 73.9,
+    "beruehrungen": [
+     "11:45 unten",
+     "12:45 oben",
+     "13:30 unten",
+     "13:45 oben",
+     "14:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.78,
+     "passguete": 12.55,
+     "im_kasten": 15.0,
+     "seitwaerts": 7.56,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0559,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "NFLX",
+    "tag": "2022-06-10",
+    "note": "B",
+    "punkte": 68.9,
+    "beruehrungen": [
+     "11:15 oben",
+     "11:45 unten",
+     "12:00 oben",
+     "14:30 unten",
+     "15:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 12.41,
+     "passguete": 14.17,
+     "im_kasten": 15.0,
+     "seitwaerts": 8.36,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0437,
+    "dochte": 0,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "NFLX",
+    "tag": "2023-05-02",
+    "note": "B",
+    "punkte": 68.5,
+    "beruehrungen": [
+     "11:30 oben",
+     "12:15 unten",
+     "13:45 oben",
+     "14:30 unten",
+     "15:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.96,
+     "passguete": 10.76,
+     "im_kasten": 15.0,
+     "seitwaerts": 6.75,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0693,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "BAC",
+    "tag": "2022-01-12",
+    "note": "C",
+    "punkte": 62.4,
+    "beruehrungen": [
+     "11:00 oben",
+     "11:15 unten",
+     "12:00 oben",
+     "14:00 unten",
+     "14:45 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 14.35,
+     "passguete": 10.18,
+     "im_kasten": 7.5,
+     "seitwaerts": 8.39,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0736,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "BAC",
+    "tag": "2022-05-19",
+    "note": "B",
+    "punkte": 76.0,
+    "beruehrungen": [
+     "10:15 oben",
+     "11:15 unten",
+     "11:30 oben",
+     "13:45 unten",
+     "15:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.23,
+     "passguete": 15.93,
+     "im_kasten": 15.0,
+     "seitwaerts": 7.87,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0306,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "BAC",
+    "tag": "2022-09-22",
+    "note": "B",
+    "punkte": 64.8,
+    "beruehrungen": [
+     "11:15 unten",
+     "11:30 oben",
+     "12:15 unten",
+     "13:30 oben",
+     "14:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.54,
+     "passguete": 10.45,
+     "im_kasten": 7.5,
+     "seitwaerts": 5.29,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0716,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "BAC",
+    "tag": "2022-12-20",
+    "note": "C",
+    "punkte": 57.1,
+    "beruehrungen": [
+     "10:30 oben",
+     "11:30 unten",
+     "12:00 oben",
+     "12:45 unten",
+     "13:45 oben",
+     "14:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 22.65,
+     "passguete": 3.87,
+     "im_kasten": 0.0,
+     "seitwaerts": 8.04,
+     "abprall": 12.5,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.121,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "JPM",
+    "tag": "2022-04-06",
+    "note": "B",
+    "punkte": 74.7,
+    "beruehrungen": [
+     "10:00 unten",
+     "10:30 oben",
+     "11:30 unten",
+     "14:00 oben",
+     "14:15 unten",
+     "15:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.09,
+     "passguete": 14.11,
+     "im_kasten": 15.0,
+     "seitwaerts": 10.96,
+     "abprall": 7.5,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0442,
+    "dochte": 0,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "JPM",
+    "tag": "2022-09-22",
+    "note": "B",
+    "punkte": 62.6,
+    "beruehrungen": [
+     "11:15 unten",
+     "11:30 oben",
+     "12:00 unten",
+     "13:45 oben",
+     "14:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 13.43,
+     "passguete": 15.26,
+     "im_kasten": 7.5,
+     "seitwaerts": 7.41,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0355,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "PYPL",
+    "tag": "2023-06-06",
+    "note": "C",
+    "punkte": 62.4,
+    "beruehrungen": [
+     "10:45 oben",
+     "11:30 unten",
+     "12:00 oben",
+     "12:30 unten",
+     "13:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 19.25,
+     "passguete": 8.62,
+     "im_kasten": 7.5,
+     "seitwaerts": 8.01,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0854,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "WFC",
+    "tag": "2021-10-27",
+    "note": "C",
+    "punkte": 56.0,
+    "beruehrungen": [
+     "10:45 unten",
+     "11:00 oben",
+     "11:30 unten",
+     "12:15 oben",
+     "13:30 unten",
+     "14:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 20.26,
+     "passguete": 12.44,
+     "im_kasten": 0.0,
+     "seitwaerts": 8.33,
+     "abprall": 5.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0567,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "WFC",
+    "tag": "2022-05-19",
+    "note": "B",
+    "punkte": 73.7,
+    "beruehrungen": [
+     "10:15 oben",
+     "11:15 unten",
+     "11:30 oben",
+     "13:45 unten",
+     "15:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.23,
+     "passguete": 15.69,
+     "im_kasten": 15.0,
+     "seitwaerts": 5.78,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0323,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "WFC",
+    "tag": "2022-06-29",
+    "note": "B",
+    "punkte": 76.8,
+    "beruehrungen": [
+     "12:30 unten",
+     "13:00 oben",
+     "13:15 unten",
+     "14:00 oben",
+     "14:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.56,
+     "passguete": 12.1,
+     "im_kasten": 15.0,
+     "seitwaerts": 7.12,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0592,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "WFC",
+    "tag": "2023-08-11",
+    "note": "C",
+    "punkte": 73.6,
+    "beruehrungen": [
+     "10:30 oben",
+     "11:15 unten",
+     "12:00 oben",
+     "13:45 unten",
+     "14:45 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.39,
+     "passguete": 13.79,
+     "im_kasten": 7.5,
+     "seitwaerts": 12.89,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0466,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "C",
+    "tag": "2022-04-06",
+    "note": "B",
+    "punkte": 62.3,
+    "beruehrungen": [
+     "10:00 unten",
+     "10:45 oben",
+     "11:30 unten",
+     "14:00 oben",
+     "14:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 13.21,
+     "passguete": 11.69,
+     "im_kasten": 15.0,
+     "seitwaerts": 6.44,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0623,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "C",
+    "tag": "2023-08-11",
+    "note": "C",
+    "punkte": 52.8,
+    "beruehrungen": [
+     "10:30 oben",
+     "11:00 unten",
+     "12:00 oben",
+     "13:00 unten",
+     "14:45 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.05,
+     "passguete": 11.48,
+     "im_kasten": 0.0,
+     "seitwaerts": 5.25,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0639,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "UBER",
+    "tag": "2023-05-24",
+    "note": "C",
+    "punkte": 49.6,
+    "beruehrungen": [
+     "11:00 unten",
+     "12:00 oben",
+     "12:30 unten",
+     "13:45 oben",
+     "15:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.77,
+     "passguete": 0.0,
+     "im_kasten": 0.0,
+     "seitwaerts": 9.85,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1771,
+    "dochte": 3,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "XOM",
+    "tag": "2021-11-18",
+    "note": "C",
+    "punkte": 53.7,
+    "beruehrungen": [
+     "11:45 unten",
+     "12:30 oben",
+     "12:45 unten",
+     "13:30 oben",
+     "14:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.79,
+     "passguete": 7.93,
+     "im_kasten": 0.0,
+     "seitwaerts": 11.99,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0905,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "XOM",
+    "tag": "2022-06-22",
+    "note": "C",
+    "punkte": 58.4,
+    "beruehrungen": [
+     "10:30 oben",
+     "11:15 unten",
+     "11:30 oben",
+     "13:00 unten",
+     "14:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.13,
+     "passguete": 0.0,
+     "im_kasten": 7.5,
+     "seitwaerts": 9.72,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1573,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "XOM",
+    "tag": "2022-08-08",
+    "note": "C",
+    "punkte": 69.5,
+    "beruehrungen": [
+     "11:45 unten",
+     "12:00 oben",
+     "12:30 unten",
+     "14:00 oben",
+     "14:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.01,
+     "passguete": 15.42,
+     "im_kasten": 7.5,
+     "seitwaerts": 9.61,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0343,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "XOM",
+    "tag": "2023-08-31",
+    "note": "B",
+    "punkte": 64.1,
+    "beruehrungen": [
+     "10:00 unten",
+     "10:30 oben",
+     "11:45 unten",
+     "12:15 oben",
+     "12:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.53,
+     "passguete": 8.95,
+     "im_kasten": 7.5,
+     "seitwaerts": 12.15,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0829,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "BRK-B",
+    "tag": "2023-04-17",
+    "note": "C",
+    "punkte": 48.8,
+    "beruehrungen": [
+     "11:00 unten",
+     "12:45 oben",
+     "13:00 unten",
+     "13:30 oben",
+     "14:00 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 13.43,
+     "passguete": 3.2,
+     "im_kasten": 0.0,
+     "seitwaerts": 10.21,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.126,
+    "dochte": 3,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "CVX",
+    "tag": "2021-11-04",
+    "note": "C",
+    "punkte": 70.7,
+    "beruehrungen": [
+     "10:15 unten",
+     "11:00 oben",
+     "11:45 unten",
+     "12:45 oben",
+     "13:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 19.82,
+     "passguete": 15.22,
+     "im_kasten": 7.5,
+     "seitwaerts": 12.17,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0359,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "CVX",
+    "tag": "2021-11-18",
+    "note": "C",
+    "punkte": 57.9,
+    "beruehrungen": [
+     "11:45 unten",
+     "12:30 oben",
+     "13:00 unten",
+     "13:30 oben",
+     "14:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 19.25,
+     "passguete": 4.08,
+     "im_kasten": 7.5,
+     "seitwaerts": 8.07,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1194,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "CVX",
+    "tag": "2022-12-13",
+    "note": "B",
+    "punkte": 66.6,
+    "beruehrungen": [
+     "10:45 unten",
+     "10:45 oben",
+     "11:30 oben",
+     "12:45 unten",
+     "14:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 14.95,
+     "passguete": 15.53,
+     "im_kasten": 15.0,
+     "seitwaerts": 5.09,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0335,
+    "dochte": 0,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "CVX",
+    "tag": "2023-07-28",
+    "note": "C",
+    "punkte": 48.3,
+    "beruehrungen": [
+     "11:30 oben",
+     "12:00 unten",
+     "12:30 oben",
+     "13:45 unten",
+     "15:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.96,
+     "passguete": 0.0,
+     "im_kasten": 0.0,
+     "seitwaerts": 12.37,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1512,
+    "dochte": 3,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "GE",
+    "tag": "2021-11-23",
+    "note": "B",
+    "punkte": 76.2,
+    "beruehrungen": [
+     "10:15 oben",
+     "11:00 unten",
+     "11:45 oben",
+     "13:15 unten",
+     "14:45 oben"
+    ],
+    "fehlt_fuer_a": [
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.92,
+     "passguete": 11.58,
+     "im_kasten": 15.0,
+     "seitwaerts": 12.73,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0631,
+    "dochte": 0,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "GE",
+    "tag": "2023-02-10",
+    "note": "C",
+    "punkte": 58.1,
+    "beruehrungen": [
+     "10:30 oben",
+     "10:45 unten",
+     "11:30 oben",
+     "12:00 unten",
+     "13:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.87,
+     "passguete": 6.64,
+     "im_kasten": 7.5,
+     "seitwaerts": 9.13,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1002,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "ABBV",
+    "tag": "2023-03-13",
+    "note": "C",
+    "punkte": 49.0,
+    "beruehrungen": [
+     "10:00 oben",
+     "11:30 unten",
+     "12:00 oben",
+     "12:45 unten",
+     "14:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.3,
+     "passguete": 0.0,
+     "im_kasten": 0.0,
+     "seitwaerts": 6.69,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1697,
+    "dochte": 4,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "AMAT",
+    "tag": "2022-08-04",
+    "note": "C",
+    "punkte": 52.0,
+    "beruehrungen": [
+     "10:45 oben",
+     "11:30 unten",
+     "12:00 oben",
+     "12:45 unten",
+     "13:30 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 19.68,
+     "passguete": 7.01,
+     "im_kasten": 0.0,
+     "seitwaerts": 12.28,
+     "abprall": 3.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0974,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "AMAT",
+    "tag": "2023-06-26",
+    "note": "C",
+    "punkte": 60.9,
+    "beruehrungen": [
+     "10:00 oben",
+     "10:30 unten",
+     "10:45 oben",
+     "12:30 unten",
+     "13:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 13.43,
+     "passguete": 15.69,
+     "im_kasten": 7.5,
+     "seitwaerts": 11.31,
+     "abprall": 3.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0323,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "CMCSA",
+    "tag": "2022-07-26",
+    "note": "C",
+    "punkte": 67.2,
+    "beruehrungen": [
+     "10:30 unten",
+     "10:45 oben",
+     "11:45 unten",
+     "12:30 oben",
+     "12:45 unten",
+     "13:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 19.7,
+     "passguete": 11.74,
+     "im_kasten": 7.5,
+     "seitwaerts": 10.76,
+     "abprall": 7.5,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.062,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "CMCSA",
+    "tag": "2022-09-22",
+    "note": "B",
+    "punkte": 70.6,
+    "beruehrungen": [
+     "11:15 unten",
+     "11:45 oben",
+     "12:15 unten",
+     "12:45 oben",
+     "14:30 unten"
+    ],
+    "fehlt_fuer_a": [
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 14.59,
+     "passguete": 11.8,
+     "im_kasten": 7.5,
+     "seitwaerts": 11.73,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0615,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "WMT",
+    "tag": "2022-03-14",
+    "note": "C",
+    "punkte": 47.1,
+    "beruehrungen": [
+     "11:00 oben",
+     "12:00 unten",
+     "12:30 oben",
+     "13:45 unten",
+     "15:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.77,
+     "passguete": 0.0,
+     "im_kasten": 7.5,
+     "seitwaerts": 5.84,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1507,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "WMT",
+    "tag": "2023-02-06",
+    "note": "B",
+    "punkte": 69.8,
+    "beruehrungen": [
+     "10:30 unten",
+     "11:15 oben",
+     "12:30 unten",
+     "14:15 oben",
+     "15:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "passguete",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 18.14,
+     "passguete": 7.78,
+     "im_kasten": 15.0,
+     "seitwaerts": 9.85,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0916,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "WMT",
+    "tag": "2023-04-03",
+    "note": "C",
+    "punkte": 47.1,
+    "beruehrungen": [
+     "10:15 oben",
+     "11:15 unten",
+     "11:30 oben",
+     "12:30 unten",
+     "14:30 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.4,
+     "passguete": 7.34,
+     "im_kasten": 0.0,
+     "seitwaerts": 11.39,
+     "abprall": 3.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.095,
+    "dochte": 2,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "GS",
+    "tag": "2022-08-04",
+    "note": "B",
+    "punkte": 64.2,
+    "beruehrungen": [
+     "11:15 oben",
+     "11:30 unten",
+     "12:15 oben",
+     "14:30 unten",
+     "15:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 13.75,
+     "passguete": 11.8,
+     "im_kasten": 15.0,
+     "seitwaerts": 7.68,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0615,
+    "dochte": 0,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "CSCO",
+    "tag": "2021-11-17",
+    "note": "C",
+    "punkte": 52.3,
+    "beruehrungen": [
+     "11:00 unten",
+     "11:30 oben",
+     "13:15 unten",
+     "13:45 oben",
+     "14:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.79,
+     "passguete": 0.94,
+     "im_kasten": 0.0,
+     "seitwaerts": 10.59,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.143,
+    "dochte": 3,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "CSCO",
+    "tag": "2022-01-14",
+    "note": "C",
+    "punkte": 54.0,
+    "beruehrungen": [
+     "11:00 oben",
+     "11:15 unten",
+     "11:45 oben",
+     "13:30 unten",
+     "14:30 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 14.7,
+     "passguete": 8.99,
+     "im_kasten": 0.0,
+     "seitwaerts": 11.34,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0826,
+    "dochte": 2,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "CSCO",
+    "tag": "2022-05-16",
+    "note": "B",
+    "punkte": 65.6,
+    "beruehrungen": [
+     "10:15 oben",
+     "11:00 unten",
+     "11:45 oben",
+     "12:45 unten",
+     "14:30 oben"
+    ],
+    "fehlt_fuer_a": [
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.39,
+     "passguete": 9.14,
+     "im_kasten": 7.5,
+     "seitwaerts": 12.56,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0815,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "CSCO",
+    "tag": "2023-01-05",
+    "note": "C",
+    "punkte": 60.8,
+    "beruehrungen": [
+     "10:15 unten",
+     "13:15 unten",
+     "13:15 oben",
+     "14:45 oben",
+     "15:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 12.08,
+     "passguete": 8.57,
+     "im_kasten": 7.5,
+     "seitwaerts": 10.65,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0857,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "CSCO",
+    "tag": "2023-05-26",
+    "note": "C",
+    "punkte": 59.8,
+    "beruehrungen": [
+     "10:45 oben",
+     "11:15 unten",
+     "12:15 oben",
+     "14:00 unten",
+     "15:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.24,
+     "passguete": 5.01,
+     "im_kasten": 7.5,
+     "seitwaerts": 11.1,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1124,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "FDX",
+    "tag": "2022-10-25",
+    "note": "B",
+    "punkte": 66.4,
+    "beruehrungen": [
+     "12:15 unten",
+     "12:45 oben",
+     "13:45 unten",
+     "14:00 oben",
+     "15:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.98,
+     "passguete": 11.75,
+     "im_kasten": 7.5,
+     "seitwaerts": 6.16,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0619,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "JNJ",
+    "tag": "2022-05-06",
+    "note": "B",
+    "punkte": 71.8,
+    "beruehrungen": [
+     "10:00 unten",
+     "11:15 oben",
+     "11:45 unten",
+     "13:00 oben",
+     "14:30 unten"
+    ],
+    "fehlt_fuer_a": [
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.92,
+     "passguete": 18.47,
+     "im_kasten": 15.0,
+     "seitwaerts": 7.44,
+     "abprall": 3.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0114,
+    "dochte": 0,
+    "unruhig": 1,
+    "locker": false
+   },
+   {
+    "symbol": "JNJ",
+    "tag": "2022-05-10",
+    "note": "C",
+    "punkte": 65.1,
+    "beruehrungen": [
+     "10:15 unten",
+     "11:00 oben",
+     "11:15 unten",
+     "13:00 oben",
+     "14:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.48,
+     "passguete": 8.89,
+     "im_kasten": 7.5,
+     "seitwaerts": 11.21,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0833,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "JNJ",
+    "tag": "2022-07-11",
+    "note": "C",
+    "punkte": 75.6,
+    "beruehrungen": [
+     "10:15 unten",
+     "11:30 oben",
+     "12:45 unten",
+     "13:45 oben",
+     "14:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 18.19,
+     "passguete": 9.92,
+     "im_kasten": 15.0,
+     "seitwaerts": 13.5,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0756,
+    "dochte": 0,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "JNJ",
+    "tag": "2023-06-27",
+    "note": "C",
+    "punkte": 62.1,
+    "beruehrungen": [
+     "11:30 oben",
+     "12:15 unten",
+     "13:00 oben",
+     "14:00 unten",
+     "14:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.29,
+     "passguete": 11.58,
+     "im_kasten": 0.0,
+     "seitwaerts": 11.19,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0632,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "MRK",
+    "tag": "2021-11-24",
+    "note": "C",
+    "punkte": 73.0,
+    "beruehrungen": [
+     "11:00 oben",
+     "12:00 unten",
+     "12:45 oben",
+     "14:15 unten",
+     "15:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 18.69,
+     "passguete": 14.24,
+     "im_kasten": 15.0,
+     "seitwaerts": 12.12,
+     "abprall": 3.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0432,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "PG",
+    "tag": "2022-04-29",
+    "note": "C",
+    "punkte": 72.4,
+    "beruehrungen": [
+     "11:00 unten",
+     "11:30 oben",
+     "12:45 unten",
+     "14:15 oben",
+     "15:00 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.3,
+     "passguete": 10.14,
+     "im_kasten": 15.0,
+     "seitwaerts": 10.99,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.074,
+    "dochte": 0,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "PG",
+    "tag": "2022-06-13",
+    "note": "C",
+    "punkte": 51.9,
+    "beruehrungen": [
+     "10:00 unten",
+     "10:30 oben",
+     "11:00 unten",
+     "12:15 oben",
+     "13:30 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.96,
+     "passguete": 8.85,
+     "im_kasten": 0.0,
+     "seitwaerts": 7.08,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0836,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "PG",
+    "tag": "2023-03-06",
+    "note": "B",
+    "punkte": 73.8,
+    "beruehrungen": [
+     "11:15 unten",
+     "12:15 oben",
+     "13:00 unten",
+     "13:45 oben",
+     "15:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 18.19,
+     "passguete": 11.69,
+     "im_kasten": 15.0,
+     "seitwaerts": 12.88,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0623,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "PG",
+    "tag": "2023-04-21",
+    "note": "C",
+    "punkte": 46.7,
+    "beruehrungen": [
+     "11:00 oben",
+     "11:30 unten",
+     "12:00 oben",
+     "13:30 unten",
+     "14:00 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.48,
+     "passguete": 6.48,
+     "im_kasten": 0.0,
+     "seitwaerts": 5.76,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1014,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "VZ",
+    "tag": "2023-08-04",
+    "note": "C",
+    "punkte": 46.8,
+    "beruehrungen": [
+     "10:45 oben",
+     "11:45 unten",
+     "12:30 oben",
+     "13:15 unten",
+     "13:45 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 18.89,
+     "passguete": 5.17,
+     "im_kasten": 0.0,
+     "seitwaerts": 6.7,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1112,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "MS",
+    "tag": "2023-02-10",
+    "note": "C",
+    "punkte": 64.0,
+    "beruehrungen": [
+     "10:45 unten",
+     "11:45 oben",
+     "12:15 unten",
+     "13:15 oben",
+     "14:30 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 18.34,
+     "passguete": 13.39,
+     "im_kasten": 7.5,
+     "seitwaerts": 11.74,
+     "abprall": 3.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0496,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "COST",
+    "tag": "2022-06-29",
+    "note": "B",
+    "punkte": 78.3,
+    "beruehrungen": [
+     "10:45 oben",
+     "11:15 unten",
+     "11:45 oben",
+     "13:00 unten",
+     "14:15 oben",
+     "15:00 unten"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 21.01,
+     "passguete": 11.5,
+     "im_kasten": 15.0,
+     "seitwaerts": 10.79,
+     "abprall": 10.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0637,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "COST",
+    "tag": "2022-12-22",
+    "note": "C",
+    "punkte": 47.4,
+    "beruehrungen": [
+     "11:00 unten",
+     "12:15 oben",
+     "13:00 unten",
+     "13:15 oben",
+     "13:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.87,
+     "passguete": 7.72,
+     "im_kasten": 0.0,
+     "seitwaerts": 7.78,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0921,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "TMO",
+    "tag": "2022-06-21",
+    "note": "C",
+    "punkte": 60.3,
+    "beruehrungen": [
+     "10:45 oben",
+     "11:45 unten",
+     "13:00 oben",
+     "14:00 unten",
+     "14:45 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 19.48,
+     "passguete": 14.78,
+     "im_kasten": 7.5,
+     "seitwaerts": 8.5,
+     "abprall": 0.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0392,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "TMO",
+    "tag": "2022-08-23",
+    "note": "C",
+    "punkte": 64.9,
+    "beruehrungen": [
+     "11:30 oben",
+     "13:15 unten",
+     "13:30 oben",
+     "14:00 unten",
+     "14:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 12.2,
+     "passguete": 12.97,
+     "im_kasten": 7.5,
+     "seitwaerts": 13.19,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0527,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "LRCX",
+    "tag": "2022-05-24",
+    "note": "C",
+    "punkte": 57.6,
+    "beruehrungen": [
+     "10:30 oben",
+     "11:00 unten",
+     "12:15 oben",
+     "13:00 unten",
+     "14:00 oben",
+     "14:45 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 22.0,
+     "passguete": 3.86,
+     "im_kasten": 0.0,
+     "seitwaerts": 11.76,
+     "abprall": 10.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.121,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "LRCX",
+    "tag": "2022-09-09",
+    "note": "C",
+    "punkte": 50.7,
+    "beruehrungen": [
+     "10:00 oben",
+     "11:00 unten",
+     "11:45 oben",
+     "12:15 unten",
+     "15:15 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 13.71,
+     "passguete": 4.7,
+     "im_kasten": 7.5,
+     "seitwaerts": 8.83,
+     "abprall": 6.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1148,
+    "dochte": 1,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "KO",
+    "tag": "2022-04-29",
+    "note": "C",
+    "punkte": 54.1,
+    "beruehrungen": [
+     "11:15 unten",
+     "11:30 oben",
+     "12:00 unten",
+     "13:15 oben",
+     "14:00 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.87,
+     "passguete": 5.53,
+     "im_kasten": 0.0,
+     "seitwaerts": 10.67,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1085,
+    "dochte": 3,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "UNP",
+    "tag": "2022-08-09",
+    "note": "C",
+    "punkte": 68.8,
+    "beruehrungen": [
+     "11:00 unten",
+     "11:30 oben",
+     "12:45 unten",
+     "13:15 oben",
+     "14:30 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.96,
+     "passguete": 6.48,
+     "im_kasten": 7.5,
+     "seitwaerts": 12.88,
+     "abprall": 15.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.1014,
+    "dochte": 1,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "UNP",
+    "tag": "2022-10-04",
+    "note": "C",
+    "punkte": 50.1,
+    "beruehrungen": [
+     "10:30 oben",
+     "10:45 unten",
+     "12:15 oben",
+     "13:15 unten",
+     "14:45 oben"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "kein_docht",
+     "ruhige_beine",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 16.44,
+     "passguete": 9.57,
+     "im_kasten": 0.0,
+     "seitwaerts": 5.07,
+     "abprall": 9.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0782,
+    "dochte": 3,
+    "unruhig": 1,
+    "locker": true
+   },
+   {
+    "symbol": "UNP",
+    "tag": "2023-03-07",
+    "note": "C",
+    "punkte": 48.0,
+    "beruehrungen": [
+     "10:45 unten",
+     "11:00 oben",
+     "11:30 unten",
+     "12:15 oben",
+     "13:00 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.56,
+     "passguete": 8.43,
+     "im_kasten": 0.0,
+     "seitwaerts": 8.98,
+     "abprall": 3.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0868,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   },
+   {
+    "symbol": "UNP",
+    "tag": "2023-03-17",
+    "note": "B",
+    "punkte": 66.7,
+    "beruehrungen": [
+     "10:45 unten",
+     "11:15 oben",
+     "12:15 unten",
+     "14:00 oben",
+     "14:30 unten"
+    ],
+    "fehlt_fuer_a": [
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 15.79,
+     "passguete": 9.63,
+     "im_kasten": 15.0,
+     "seitwaerts": 4.23,
+     "abprall": 12.0,
+     "proportion": 10.0
+    },
+    "abw_atr": 0.0777,
+    "dochte": 0,
+    "unruhig": 0,
+    "locker": false
+   },
+   {
+    "symbol": "UNP",
+    "tag": "2023-09-27",
+    "note": "C",
+    "punkte": 46.8,
+    "beruehrungen": [
+     "12:00 unten",
+     "12:45 oben",
+     "13:15 unten",
+     "14:00 oben",
+     "14:15 unten"
+    ],
+    "fehlt_fuer_a": [
+     "nur gelockert erkennbar (Note C)",
+     "passguete",
+     "kein_docht",
+     "punkte_80"
+    ],
+    "teile": {
+     "beruehrungen": 17.56,
+     "passguete": 1.56,
+     "im_kasten": 0.0,
+     "seitwaerts": 10.46,
+     "abprall": 9.0,
+     "proportion": 8.2
+    },
+    "abw_atr": 0.1383,
+    "dochte": 2,
+    "unruhig": 0,
+    "locker": true
+   }
+  ],
+  "grund_3_2": {
+   "punkte_80": 73,
+   "kein_docht": 52,
+   "passguete": 36,
+   "ruhige_beine": 27
+  }
+ },
+ "kuenstliche_lehrbuch_tage": [
+  {
+   "zeitebene": 15,
+   "beine_kerzen": 4,
+   "hoehe_atr": 3.0,
+   "beruehrungen": "3 + 2",
+   "erste": "10:15",
+   "letzte": "14:15",
+   "entscheidung": "14:45",
+   "note_dann": "A",
+   "note_A_irgendwann": true,
+   "punkte": 96.2,
+   "teile": {
+    "beruehrungen": 21.25,
+    "passguete": 20.0,
+    "im_kasten": 15.0,
+    "seitwaerts": 15.0,
+    "abprall": 15.0,
+    "proportion": 10.0
+   },
+   "grund_wenn_kein_kasten": null,
+   "fehlt_fuer_a": []
+  },
+  {
+   "zeitebene": 15,
+   "beine_kerzen": 3,
+   "hoehe_atr": 2.5,
+   "beruehrungen": "3 + 3",
+   "erste": "10:15",
+   "letzte": "14:00",
+   "entscheidung": "14:30",
+   "note_dann": "A",
+   "note_A_irgendwann": true,
+   "punkte": 100.0,
+   "teile": {
+    "beruehrungen": 25.0,
+    "passguete": 20.0,
+    "im_kasten": 15.0,
+    "seitwaerts": 15.0,
+    "abprall": 15.0,
+    "proportion": 10.0
+   },
+   "grund_wenn_kein_kasten": null,
+   "fehlt_fuer_a": []
+  },
+  {
+   "zeitebene": 15,
+   "beine_kerzen": 5,
+   "hoehe_atr": 4.0,
+   "beruehrungen": "3 + 2",
+   "erste": "10:15",
+   "letzte": "15:15",
+   "entscheidung": "15:45",
+   "note_dann": "A",
+   "note_A_irgendwann": true,
+   "punkte": 96.2,
+   "teile": {
+    "beruehrungen": 21.25,
+    "passguete": 20.0,
+    "im_kasten": 15.0,
+    "seitwaerts": 15.0,
+    "abprall": 15.0,
+    "proportion": 10.0
+   },
+   "grund_wenn_kein_kasten": null,
+   "fehlt_fuer_a": []
+  },
+  {
+   "zeitebene": 5,
+   "beine_kerzen": 8,
+   "hoehe_atr": 3.0,
+   "beruehrungen": "3 + 2",
+   "erste": "10:00",
+   "letzte": "12:40",
+   "entscheidung": "12:50",
+   "note_dann": "A",
+   "note_A_irgendwann": true,
+   "punkte": 96.2,
+   "teile": {
+    "beruehrungen": 21.25,
+    "passguete": 20.0,
+    "im_kasten": 15.0,
+    "seitwaerts": 15.0,
+    "abprall": 15.0,
+    "proportion": 10.0
+   },
+   "grund_wenn_kein_kasten": null,
+   "fehlt_fuer_a": []
+  },
+  {
+   "zeitebene": 5,
+   "beine_kerzen": 6,
+   "hoehe_atr": 2.5,
+   "beruehrungen": "3 + 3",
+   "erste": "10:00",
+   "letzte": "12:30",
+   "entscheidung": "12:40",
+   "note_dann": "A",
+   "note_A_irgendwann": true,
+   "punkte": 100.0,
+   "teile": {
+    "beruehrungen": 25.0,
+    "passguete": 20.0,
+    "im_kasten": 15.0,
+    "seitwaerts": 15.0,
+    "abprall": 15.0,
+    "proportion": 10.0
+   },
+   "grund_wenn_kein_kasten": null,
+   "fehlt_fuer_a": []
+  },
+  {
+   "zeitebene": 5,
+   "beine_kerzen": 10,
+   "hoehe_atr": 4.0,
+   "beruehrungen": "3 + 2",
+   "erste": "10:00",
+   "letzte": "13:20",
+   "entscheidung": "13:30",
+   "note_dann": "A",
+   "note_A_irgendwann": true,
+   "punkte": 96.2,
+   "teile": {
+    "beruehrungen": 21.25,
+    "passguete": 20.0,
+    "im_kasten": 15.0,
+    "seitwaerts": 15.0,
+    "abprall": 15.0,
+    "proportion": 10.0
+   },
+   "grund_wenn_kein_kasten": null,
+   "fehlt_fuer_a": []
+  }
+ ],
+ "fast_a_bilder": {
+  "regeln": {
+   "punkte_80": 101,
+   "ruhige_beine": 21,
+   "dritte_beruehrung": 19
+  },
+  "alle_regeln": {
+   "punkte_80": 101,
+   "ruhige_beine": 21,
+   "dritte_beruehrung": 19,
+   "hoehe": 17,
+   "wendepunkt": 14,
+   "breite": 1,
+   "uhrzeit": 1
+  },
+  "datei": "lernhub/werkbank/fast-a-bilder.json (nur lokal)"
+ },
+ "trefferquote_1": {
+  "bilder": 30,
+  "datei": "lernhub/werkbank/trefferquote-1.json (nur lokal)",
+  "bot_hat_kasten": 1,
+  "hinweis": "Zufällige Tage: auf 15 Min hat die Erkennung an etwa 1,4 % der Tage einen Kasten, auf 5 Min an 18,6 % (4.672 von 25.096 Aktie-Tagen); unter den 30 gezogenen Tagen hat sie nur an 1 Tag einen (erwartet etwa 3). Die Trefferquote misst also vor allem, wie viele deiner Ja-Tage sie verpasst."
+ },
+ "vorschlaege": [
+  "Nur Vorschläge, nichts umgesetzt; erst nach Sichtprüfung 2 entscheiden.",
+  "A ohne Punkteschwelle: A = harte Bedingungen (3 + 2, Passgüte ≤ 0,08 ATR, kein Docht außerhalb, kein unruhiges Bein); die Punktzahl nur zum Ordnen. Oder Schwelle 75 - aber erst, wenn die Sichtprüfung zeigt, dass die Punktzahl überhaupt trennt (Runde 1: ja 64, nein 66 im Mittel).",
+  "Abprall nicht nur an der Berührungskerze messen, sondern auch an der Kerze danach (der Wendepunkt ist oft selbst noch keine Umkehrkerze).",
+  "Steigung über die Linien prüfen (Berührungen oben und unten) statt über die Schlusskurse, oder die Grenze auf 0,05 ATR je Kerze; mit Bildern aus „nur Steigung“ prüfen.",
+  "15 Min: entweder 3 + 2 nicht verlangen (A dort auch mit 2 + 2 bei sehr guter Passgüte) oder 15 Min nur als C/B messen und 5 Min als Hauptzeitebene; das Kriterium „je Jahr mindestens 50 A-Trades“ ist mit den heutigen Regeln auf keiner Zeitebene erreichbar.",
+  "Fast-A-Bilder (30, je 10 für Punkte ≥ 80, ruhige Beine, 3. Berührung) und Trefferquote (30 Tagescharts) liegen bereit und kommen nach Runde 2 auf die Seite."
+ ]
+}

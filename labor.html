@@ -593,11 +593,13 @@ function drawTrade(host, T, mode, big) {
     const step = (() => { const raw = (hi - lo) / 5, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; })();
     for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), style: "stroke:var(--hair-soft);stroke-width:1" }, svg);
   }
-  const bx0 = X(T.box_von) - slot / 2, bx1 = X(T.box_bis) + slot / 2;
-  S("rect", { x: bx0, y: Y(T.oben), width: bx1 - bx0, height: Math.max(1, Y(T.unten) - Y(T.oben)), style: "fill:rgba(var(--accent-rgb),.08)" }, svg);
+  const hasBox = T.oben != null && T.unten != null && T.box_von != null;
+  const bx0 = hasBox ? X(T.box_von) - slot / 2 : 0, bx1 = hasBox ? X(T.box_bis) + slot / 2 : 0;
+  if (hasBox) S("rect", { x: bx0, y: Y(T.oben), width: bx1 - bx0, height: Math.max(1, Y(T.unten) - Y(T.oben)), style: "fill:rgba(var(--accent-rgb),.08)" }, svg);
   S("rect", { x: X(T.entscheidung) - slot * 0.6, y: m.t, width: slot * 1.2, height: PH, style: "fill:rgba(var(--accent-rgb),.10)" }, svg);
   const lineEnd = mode === "aus" ? X(T.kerzen.length - 1) : X(T.entscheidung);
-  for (const p of [T.oben, T.unten]) S("line", { x1: bx0, x2: lineEnd, y1: Y(p), y2: Y(p), style: `stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
+  if (hasBox && T.toleranz) for (const p of [T.oben, T.unten]) S("rect", { x: bx0, y: Y(p + T.toleranz), width: Math.max(1, lineEnd - bx0), height: Math.max(1, Y(p - T.toleranz) - Y(p + T.toleranz)), style: "fill:rgba(var(--accent-rgb),.16)" }, svg);
+  if (hasBox) for (const p of [T.oben, T.unten]) S("line", { x1: bx0, x2: lineEnd, y1: Y(p), y2: Y(p), style: `stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
   {
     const x0 = X(T.entscheidung), x1 = mode === "aus" ? X(T.kerzen.length - 1) : Math.min(W - m.r, X(T.entscheidung) + slot * 4);
     for (const [p, c] of [[T.ziel, "up"], [T.stop, "down"]]) if (p != null) S("line", { x1: x0, x2: x1, y1: Y(p), y2: Y(p), style: `stroke:var(--${c});stroke-width:${big ? 1.5 : 1.2};stroke-dasharray:5 4` }, svg);
@@ -727,8 +729,8 @@ function renderSicht() {
   }
   const i = B.indexOf(next);
   box.innerHTML = `<div class="sbar"><i style="width:${(sm.done / sm.total) * 100}%"></i></div>
-    <div class="q">Bild ${i + 1} von ${B.length}: Ist das ein sauberes Rechteck?</div>
-    <div class="dim">${esc(next.symbol)} · ${esc(dayDE(next.tag))} · ${next.zeitebene} Min · das Bild endet an der Signalkerze</div>
+    <div class="q">Bild ${i + 1} von ${B.length}: ${esc(SI.frage || "Ist das ein sauberes Rechteck?")}</div>
+    <div class="dim">${esc(next.symbol)} · ${esc(dayDE(next.tag))} · ${next.zeitebene} Min · ${SI.art === "trefferquote" ? "ohne die Linien des Bots" : "das Bild endet an der Signalkerze"}</div>
     <div class="chart" id="sChart"></div>
     <div class="btns"><button type="button" class="btn ok" data-a="ja">Ja, sauber</button><button type="button" class="btn no" data-a="nein">Nein</button><button type="button" class="btn mid" data-a="unsicher">Unsicher</button></div>`;
   drawTrade($("sChart"), next, "moment", true);

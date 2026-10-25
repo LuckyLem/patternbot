@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-25T16:19:39-04:00",
+ "stand": "2026-10-25T16:36:44-04:00",
  "phase": "Sichtprüfung 2 bestanden (83 %). Als Nächstes: Grenzfälle (Runde 3), dann Fassung 2.2",
  "laeuft": false,
  "plan": [
@@ -78,6 +78,10 @@
   {
    "zeit": "2026-10-25T16:19:39-04:00",
    "text": "Sichtprüfung 2: 25 von 30 ja (83 %), bestanden"
+  },
+  {
+   "zeit": "2026-10-25T16:36:44-04:00",
+   "text": "Sichtprüfung 3 (Grenzfälle) online: 50 Bilder. Entscheidungsregel steht vorher im Logbuch"
   }
  ]
 }

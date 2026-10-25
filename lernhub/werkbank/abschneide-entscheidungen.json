@@ -1,0 +1,19 @@
+{
+ "code": "fba7abcb039b",
+ "startwert": 20261025,
+ "aktien": [
+  "AMAT",
+  "AMD",
+  "CMCSA",
+  "DIS",
+  "GOOG",
+  "GOOGL"
+ ],
+ "schnitte": 7012,
+ "bestanden": 7012,
+ "je_zeitebene": {
+  "15m": 539,
+  "5m": 6473
+ },
+ "fehler": []
+}

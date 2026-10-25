@@ -1,6 +1,6 @@
 {
- "stand": "2026-10-23T06:54:33-04:00",
- "phase": "Vorbereitung · Werkbank Rechteck startet So 25.10. 14:00",
+ "stand": "2026-10-25T07:40:48-04:00",
+ "phase": "Sichtprüfung: 30 Bilder warten auf dich",
  "laeuft": false,
  "plan": [
   {
@@ -12,13 +12,13 @@
   {
    "titel": "Strenge Rechteck-Erkennung",
    "text": "Linien aus den Wendepunkten des Tages, echte Berührungen, Reifegrad 0–4, Note A/B/C. Jedes Bild wird im Moment der Entscheidung gespeichert.",
-   "status": "offen",
+   "status": "fertig",
    "datum": "So 25.10."
   },
   {
    "titel": "Sichtprüfung durch dich",
    "text": "30 zufällige Erkennungen ansehen. Weiter erst bei mindestens 80 % „ja“.",
-   "status": "offen",
+   "status": "laeuft",
    "datum": "So 25.10."
   },
   {
@@ -50,6 +50,18 @@
   {
    "zeit": "2026-10-23T06:54:33-04:00",
    "text": "Lernhub-Seite online, Werkbank Rechteck startet So 25.10. 14:00"
+  },
+  {
+   "zeit": "2026-10-25T07:40:48-04:00",
+   "text": "Aktienliste festgelegt: die 50 mit dem höchsten Dollar-Umsatz im September 2021"
+  },
+  {
+   "zeit": "2026-10-25T07:40:48-04:00",
+   "text": "Strenge Rechteck-Erkennung fertig (Code fba7abcb039b), alle Pflichttests grün. Gefunden Okt. 2021 – Sep. 2023: 968 Rechtecke auf 15 Min, 8.463 auf 5 Min"
+  },
+  {
+   "zeit": "2026-10-25T07:40:48-04:00",
+   "text": "Sichtprüfung bereit: 30 Bilder. Weiter erst nach deinem Ergebnis"
   }
  ]
 }

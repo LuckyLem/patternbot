@@ -1,0 +1,2410 @@
+{
+ "code": "fba7abcb039b",
+ "startwert": 20261025,
+ "proben": 300,
+ "bestanden": 300,
+ "mit_kasten": 9,
+ "fehler": [],
+ "liste": [
+  {
+   "symbol": "TSLA",
+   "tag": "2022-01-26",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "TSLA",
+   "tag": "2022-02-07",
+   "zeitebene": 15,
+   "kerze": 17,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TSLA",
+   "tag": "2023-01-06",
+   "zeitebene": 15,
+   "kerze": 8,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TSLA",
+   "tag": "2021-11-29",
+   "zeitebene": 5,
+   "kerze": 42,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "TSLA",
+   "tag": "2022-05-10",
+   "zeitebene": 5,
+   "kerze": 21,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TSLA",
+   "tag": "2023-08-16",
+   "zeitebene": 5,
+   "kerze": 25,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AAPL",
+   "tag": "2022-06-28",
+   "zeitebene": 15,
+   "kerze": 23,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AAPL",
+   "tag": "2022-12-13",
+   "zeitebene": 15,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AAPL",
+   "tag": "2023-04-27",
+   "zeitebene": 15,
+   "kerze": 12,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AAPL",
+   "tag": "2021-10-08",
+   "zeitebene": 5,
+   "kerze": 26,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AAPL",
+   "tag": "2021-10-14",
+   "zeitebene": 5,
+   "kerze": 75,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AAPL",
+   "tag": "2022-07-06",
+   "zeitebene": 5,
+   "kerze": 60,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AMZN",
+   "tag": "2022-03-09",
+   "zeitebene": 15,
+   "kerze": 11,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMZN",
+   "tag": "2023-03-15",
+   "zeitebene": 15,
+   "kerze": 0,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMZN",
+   "tag": "2023-09-20",
+   "zeitebene": 15,
+   "kerze": 0,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMZN",
+   "tag": "2022-07-08",
+   "zeitebene": 5,
+   "kerze": 57,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMZN",
+   "tag": "2022-08-03",
+   "zeitebene": 5,
+   "kerze": 17,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMZN",
+   "tag": "2023-08-03",
+   "zeitebene": 5,
+   "kerze": 27,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MSFT",
+   "tag": "2021-10-13",
+   "zeitebene": 15,
+   "kerze": 17,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MSFT",
+   "tag": "2022-01-28",
+   "zeitebene": 15,
+   "kerze": 0,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MSFT",
+   "tag": "2022-10-28",
+   "zeitebene": 15,
+   "kerze": 18,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MSFT",
+   "tag": "2021-11-16",
+   "zeitebene": 5,
+   "kerze": 49,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MSFT",
+   "tag": "2021-12-17",
+   "zeitebene": 5,
+   "kerze": 52,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MSFT",
+   "tag": "2022-11-10",
+   "zeitebene": 5,
+   "kerze": 6,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "META",
+   "tag": "2022-02-25",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "META",
+   "tag": "2022-08-08",
+   "zeitebene": 15,
+   "kerze": 6,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "META",
+   "tag": "2023-09-21",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "META",
+   "tag": "2022-02-23",
+   "zeitebene": 5,
+   "kerze": 30,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "META",
+   "tag": "2022-11-17",
+   "zeitebene": 5,
+   "kerze": 14,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "META",
+   "tag": "2023-05-09",
+   "zeitebene": 5,
+   "kerze": 60,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "NVDA",
+   "tag": "2021-11-10",
+   "zeitebene": 15,
+   "kerze": 5,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NVDA",
+   "tag": "2022-09-06",
+   "zeitebene": 15,
+   "kerze": 12,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NVDA",
+   "tag": "2023-04-10",
+   "zeitebene": 15,
+   "kerze": 6,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NVDA",
+   "tag": "2021-12-10",
+   "zeitebene": 5,
+   "kerze": 26,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NVDA",
+   "tag": "2023-01-13",
+   "zeitebene": 5,
+   "kerze": 51,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "NVDA",
+   "tag": "2023-09-14",
+   "zeitebene": 5,
+   "kerze": 70,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMD",
+   "tag": "2022-06-15",
+   "zeitebene": 15,
+   "kerze": 17,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AMD",
+   "tag": "2023-07-06",
+   "zeitebene": 15,
+   "kerze": 1,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMD",
+   "tag": "2023-08-28",
+   "zeitebene": 15,
+   "kerze": 3,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMD",
+   "tag": "2022-02-24",
+   "zeitebene": 5,
+   "kerze": 67,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AMD",
+   "tag": "2022-11-10",
+   "zeitebene": 5,
+   "kerze": 53,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMD",
+   "tag": "2023-07-10",
+   "zeitebene": 5,
+   "kerze": 34,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOGL",
+   "tag": "2021-11-17",
+   "zeitebene": 15,
+   "kerze": 4,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOGL",
+   "tag": "2023-07-20",
+   "zeitebene": 15,
+   "kerze": 11,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOGL",
+   "tag": "2023-09-26",
+   "zeitebene": 15,
+   "kerze": 23,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOGL",
+   "tag": "2022-03-07",
+   "zeitebene": 5,
+   "kerze": 27,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOGL",
+   "tag": "2022-09-12",
+   "zeitebene": 5,
+   "kerze": 40,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOGL",
+   "tag": "2022-12-14",
+   "zeitebene": 5,
+   "kerze": 59,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOG",
+   "tag": "2022-03-09",
+   "zeitebene": 15,
+   "kerze": 8,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOG",
+   "tag": "2023-04-20",
+   "zeitebene": 15,
+   "kerze": 23,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOG",
+   "tag": "2023-05-30",
+   "zeitebene": 15,
+   "kerze": 18,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOG",
+   "tag": "2021-11-02",
+   "zeitebene": 5,
+   "kerze": 69,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOG",
+   "tag": "2021-12-21",
+   "zeitebene": 5,
+   "kerze": 7,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GOOG",
+   "tag": "2023-01-17",
+   "zeitebene": 5,
+   "kerze": 23,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NFLX",
+   "tag": "2021-11-09",
+   "zeitebene": 15,
+   "kerze": 13,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NFLX",
+   "tag": "2021-12-23",
+   "zeitebene": 15,
+   "kerze": 5,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NFLX",
+   "tag": "2023-03-08",
+   "zeitebene": 15,
+   "kerze": 10,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NFLX",
+   "tag": "2022-01-13",
+   "zeitebene": 5,
+   "kerze": 23,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "NFLX",
+   "tag": "2022-12-02",
+   "zeitebene": 5,
+   "kerze": 28,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "NFLX",
+   "tag": "2023-03-31",
+   "zeitebene": 5,
+   "kerze": 45,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "BAC",
+   "tag": "2022-06-01",
+   "zeitebene": 15,
+   "kerze": 13,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "BAC",
+   "tag": "2023-06-14",
+   "zeitebene": 15,
+   "kerze": 10,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "BAC",
+   "tag": "2023-08-07",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "BAC",
+   "tag": "2022-04-18",
+   "zeitebene": 5,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "BAC",
+   "tag": "2023-02-15",
+   "zeitebene": 5,
+   "kerze": 23,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "BAC",
+   "tag": "2023-06-08",
+   "zeitebene": 5,
+   "kerze": 59,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "CRM",
+   "tag": "2022-07-05",
+   "zeitebene": 15,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CRM",
+   "tag": "2022-11-17",
+   "zeitebene": 15,
+   "kerze": 0,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CRM",
+   "tag": "2022-12-02",
+   "zeitebene": 15,
+   "kerze": 6,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CRM",
+   "tag": "2022-04-07",
+   "zeitebene": 5,
+   "kerze": 52,
+   "stufe_k": 2,
+   "fehler": []
+  },
+  {
+   "symbol": "CRM",
+   "tag": "2022-10-21",
+   "zeitebene": 5,
+   "kerze": 57,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CRM",
+   "tag": "2023-08-18",
+   "zeitebene": 5,
+   "kerze": 37,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JPM",
+   "tag": "2022-05-03",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "JPM",
+   "tag": "2023-03-29",
+   "zeitebene": 15,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JPM",
+   "tag": "2023-08-28",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "JPM",
+   "tag": "2022-06-22",
+   "zeitebene": 5,
+   "kerze": 13,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JPM",
+   "tag": "2022-08-18",
+   "zeitebene": 5,
+   "kerze": 13,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JPM",
+   "tag": "2022-10-27",
+   "zeitebene": 5,
+   "kerze": 67,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "PYPL",
+   "tag": "2022-02-02",
+   "zeitebene": 15,
+   "kerze": 21,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "PYPL",
+   "tag": "2023-07-28",
+   "zeitebene": 15,
+   "kerze": 17,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PYPL",
+   "tag": "2023-08-10",
+   "zeitebene": 15,
+   "kerze": 14,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PYPL",
+   "tag": "2021-11-22",
+   "zeitebene": 5,
+   "kerze": 23,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PYPL",
+   "tag": "2022-03-08",
+   "zeitebene": 5,
+   "kerze": 35,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PYPL",
+   "tag": "2022-06-01",
+   "zeitebene": 5,
+   "kerze": 17,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ADBE",
+   "tag": "2022-04-14",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "ADBE",
+   "tag": "2023-03-23",
+   "zeitebene": 15,
+   "kerze": 19,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "ADBE",
+   "tag": "2023-07-24",
+   "zeitebene": 15,
+   "kerze": 24,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "ADBE",
+   "tag": "2021-12-22",
+   "zeitebene": 5,
+   "kerze": 31,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "ADBE",
+   "tag": "2022-09-30",
+   "zeitebene": 5,
+   "kerze": 38,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ADBE",
+   "tag": "2023-06-09",
+   "zeitebene": 5,
+   "kerze": 11,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "DIS",
+   "tag": "2022-06-24",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "DIS",
+   "tag": "2022-07-08",
+   "zeitebene": 15,
+   "kerze": 7,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "DIS",
+   "tag": "2023-01-23",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "DIS",
+   "tag": "2021-12-29",
+   "zeitebene": 5,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "DIS",
+   "tag": "2023-08-09",
+   "zeitebene": 5,
+   "kerze": 44,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "DIS",
+   "tag": "2023-08-28",
+   "zeitebene": 5,
+   "kerze": 44,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "WFC",
+   "tag": "2021-11-18",
+   "zeitebene": 15,
+   "kerze": 7,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "WFC",
+   "tag": "2022-12-16",
+   "zeitebene": 15,
+   "kerze": 19,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "WFC",
+   "tag": "2023-04-03",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "WFC",
+   "tag": "2023-03-03",
+   "zeitebene": 5,
+   "kerze": 66,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "WFC",
+   "tag": "2023-08-02",
+   "zeitebene": 5,
+   "kerze": 16,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "WFC",
+   "tag": "2023-08-08",
+   "zeitebene": 5,
+   "kerze": 48,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MA",
+   "tag": "2021-12-06",
+   "zeitebene": 15,
+   "kerze": 8,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MA",
+   "tag": "2022-09-12",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MA",
+   "tag": "2022-09-14",
+   "zeitebene": 15,
+   "kerze": 8,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MA",
+   "tag": "2022-06-06",
+   "zeitebene": 5,
+   "kerze": 20,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MA",
+   "tag": "2022-12-16",
+   "zeitebene": 5,
+   "kerze": 37,
+   "stufe_k": 2,
+   "fehler": []
+  },
+  {
+   "symbol": "MA",
+   "tag": "2023-03-01",
+   "zeitebene": 5,
+   "kerze": 69,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "C",
+   "tag": "2021-10-07",
+   "zeitebene": 15,
+   "kerze": 7,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "C",
+   "tag": "2023-03-28",
+   "zeitebene": 15,
+   "kerze": 10,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "C",
+   "tag": "2023-03-30",
+   "zeitebene": 15,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "C",
+   "tag": "2021-11-01",
+   "zeitebene": 5,
+   "kerze": 46,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "C",
+   "tag": "2022-07-12",
+   "zeitebene": 5,
+   "kerze": 39,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "C",
+   "tag": "2023-07-27",
+   "zeitebene": 5,
+   "kerze": 63,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "UBER",
+   "tag": "2022-08-03",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UBER",
+   "tag": "2023-03-10",
+   "zeitebene": 15,
+   "kerze": 0,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UBER",
+   "tag": "2023-08-07",
+   "zeitebene": 15,
+   "kerze": 1,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UBER",
+   "tag": "2022-03-25",
+   "zeitebene": 5,
+   "kerze": 42,
+   "stufe_k": 2,
+   "fehler": []
+  },
+  {
+   "symbol": "UBER",
+   "tag": "2022-08-29",
+   "zeitebene": 5,
+   "kerze": 63,
+   "stufe_k": 2,
+   "fehler": []
+  },
+  {
+   "symbol": "UBER",
+   "tag": "2022-10-25",
+   "zeitebene": 5,
+   "kerze": 50,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MU",
+   "tag": "2021-11-19",
+   "zeitebene": 15,
+   "kerze": 1,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MU",
+   "tag": "2022-06-15",
+   "zeitebene": 15,
+   "kerze": 9,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MU",
+   "tag": "2023-07-13",
+   "zeitebene": 15,
+   "kerze": 20,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MU",
+   "tag": "2022-02-18",
+   "zeitebene": 5,
+   "kerze": 48,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MU",
+   "tag": "2022-06-14",
+   "zeitebene": 5,
+   "kerze": 43,
+   "stufe_k": 2,
+   "fehler": []
+  },
+  {
+   "symbol": "MU",
+   "tag": "2022-08-23",
+   "zeitebene": 5,
+   "kerze": 8,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "XOM",
+   "tag": "2022-01-03",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "XOM",
+   "tag": "2022-07-28",
+   "zeitebene": 15,
+   "kerze": 11,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "XOM",
+   "tag": "2023-04-27",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "XOM",
+   "tag": "2022-08-17",
+   "zeitebene": 5,
+   "kerze": 72,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "XOM",
+   "tag": "2023-06-01",
+   "zeitebene": 5,
+   "kerze": 50,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "XOM",
+   "tag": "2023-08-08",
+   "zeitebene": 5,
+   "kerze": 10,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "BRK-B",
+   "tag": "2022-07-26",
+   "zeitebene": 15,
+   "kerze": 3,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "BRK-B",
+   "tag": "2022-09-01",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "BRK-B",
+   "tag": "2023-07-06",
+   "zeitebene": 15,
+   "kerze": 4,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "BRK-B",
+   "tag": "2022-01-03",
+   "zeitebene": 5,
+   "kerze": 33,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "BRK-B",
+   "tag": "2022-10-07",
+   "zeitebene": 5,
+   "kerze": 48,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "BRK-B",
+   "tag": "2023-07-25",
+   "zeitebene": 5,
+   "kerze": 54,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CVX",
+   "tag": "2021-10-14",
+   "zeitebene": 15,
+   "kerze": 9,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CVX",
+   "tag": "2021-11-18",
+   "zeitebene": 15,
+   "kerze": 5,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CVX",
+   "tag": "2021-12-17",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "CVX",
+   "tag": "2021-12-29",
+   "zeitebene": 5,
+   "kerze": 15,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CVX",
+   "tag": "2022-06-16",
+   "zeitebene": 5,
+   "kerze": 42,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "CVX",
+   "tag": "2022-09-01",
+   "zeitebene": 5,
+   "kerze": 41,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "PFE",
+   "tag": "2021-11-10",
+   "zeitebene": 15,
+   "kerze": 19,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "PFE",
+   "tag": "2021-12-09",
+   "zeitebene": 15,
+   "kerze": 13,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "PFE",
+   "tag": "2022-09-20",
+   "zeitebene": 15,
+   "kerze": 13,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PFE",
+   "tag": "2022-01-11",
+   "zeitebene": 5,
+   "kerze": 24,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PFE",
+   "tag": "2022-03-30",
+   "zeitebene": 5,
+   "kerze": 24,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "PFE",
+   "tag": "2022-05-12",
+   "zeitebene": 5,
+   "kerze": 68,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "ORCL",
+   "tag": "2022-07-12",
+   "zeitebene": 15,
+   "kerze": 12,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ORCL",
+   "tag": "2023-04-17",
+   "zeitebene": 15,
+   "kerze": 14,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ORCL",
+   "tag": "2023-07-18",
+   "zeitebene": 15,
+   "kerze": 11,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ORCL",
+   "tag": "2022-03-03",
+   "zeitebene": 5,
+   "kerze": 36,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "ORCL",
+   "tag": "2023-06-07",
+   "zeitebene": 5,
+   "kerze": 33,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ORCL",
+   "tag": "2023-06-27",
+   "zeitebene": 5,
+   "kerze": 47,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "GE",
+   "tag": "2023-05-30",
+   "zeitebene": 15,
+   "kerze": 15,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GE",
+   "tag": "2023-08-10",
+   "zeitebene": 15,
+   "kerze": 4,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GE",
+   "tag": "2023-08-31",
+   "zeitebene": 15,
+   "kerze": 4,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GE",
+   "tag": "2021-10-27",
+   "zeitebene": 5,
+   "kerze": 65,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "GE",
+   "tag": "2021-11-30",
+   "zeitebene": 5,
+   "kerze": 21,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GE",
+   "tag": "2022-07-19",
+   "zeitebene": 5,
+   "kerze": 32,
+   "stufe_k": 2,
+   "fehler": []
+  },
+  {
+   "symbol": "ABBV",
+   "tag": "2022-01-20",
+   "zeitebene": 15,
+   "kerze": 20,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "ABBV",
+   "tag": "2022-11-30",
+   "zeitebene": 15,
+   "kerze": 9,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ABBV",
+   "tag": "2023-04-12",
+   "zeitebene": 15,
+   "kerze": 19,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ABBV",
+   "tag": "2023-04-25",
+   "zeitebene": 5,
+   "kerze": 23,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "ABBV",
+   "tag": "2023-06-02",
+   "zeitebene": 5,
+   "kerze": 28,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "ABBV",
+   "tag": "2023-06-30",
+   "zeitebene": 5,
+   "kerze": 24,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNH",
+   "tag": "2021-10-29",
+   "zeitebene": 15,
+   "kerze": 23,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNH",
+   "tag": "2022-12-07",
+   "zeitebene": 15,
+   "kerze": 17,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "UNH",
+   "tag": "2023-05-23",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNH",
+   "tag": "2022-06-03",
+   "zeitebene": 5,
+   "kerze": 22,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNH",
+   "tag": "2023-06-28",
+   "zeitebene": 5,
+   "kerze": 12,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNH",
+   "tag": "2023-09-08",
+   "zeitebene": 5,
+   "kerze": 23,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AMAT",
+   "tag": "2021-11-29",
+   "zeitebene": 15,
+   "kerze": 12,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMAT",
+   "tag": "2021-12-02",
+   "zeitebene": 15,
+   "kerze": 7,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMAT",
+   "tag": "2023-03-17",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMAT",
+   "tag": "2022-04-01",
+   "zeitebene": 5,
+   "kerze": 60,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AMAT",
+   "tag": "2022-08-09",
+   "zeitebene": 5,
+   "kerze": 14,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AMAT",
+   "tag": "2023-01-04",
+   "zeitebene": 5,
+   "kerze": 19,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "CMCSA",
+   "tag": "2022-05-18",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "CMCSA",
+   "tag": "2022-08-29",
+   "zeitebene": 15,
+   "kerze": 6,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CMCSA",
+   "tag": "2022-11-30",
+   "zeitebene": 15,
+   "kerze": 4,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CMCSA",
+   "tag": "2022-02-02",
+   "zeitebene": 5,
+   "kerze": 39,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "CMCSA",
+   "tag": "2022-08-04",
+   "zeitebene": 5,
+   "kerze": 67,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "CMCSA",
+   "tag": "2022-11-16",
+   "zeitebene": 5,
+   "kerze": 10,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "HD",
+   "tag": "2022-01-13",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "HD",
+   "tag": "2022-09-22",
+   "zeitebene": 15,
+   "kerze": 3,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "HD",
+   "tag": "2023-02-10",
+   "zeitebene": 15,
+   "kerze": 1,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "HD",
+   "tag": "2022-10-03",
+   "zeitebene": 5,
+   "kerze": 43,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "HD",
+   "tag": "2022-12-05",
+   "zeitebene": 5,
+   "kerze": 27,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "HD",
+   "tag": "2023-05-25",
+   "zeitebene": 5,
+   "kerze": 37,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "INTC",
+   "tag": "2022-07-19",
+   "zeitebene": 15,
+   "kerze": 3,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "INTC",
+   "tag": "2022-11-29",
+   "zeitebene": 15,
+   "kerze": 14,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "INTC",
+   "tag": "2023-07-20",
+   "zeitebene": 15,
+   "kerze": 14,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "INTC",
+   "tag": "2022-01-07",
+   "zeitebene": 5,
+   "kerze": 36,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "INTC",
+   "tag": "2022-12-19",
+   "zeitebene": 5,
+   "kerze": 31,
+   "stufe_k": 2,
+   "fehler": []
+  },
+  {
+   "symbol": "INTC",
+   "tag": "2023-04-20",
+   "zeitebene": 5,
+   "kerze": 32,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "WMT",
+   "tag": "2022-02-23",
+   "zeitebene": 15,
+   "kerze": 17,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "WMT",
+   "tag": "2022-03-30",
+   "zeitebene": 15,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "WMT",
+   "tag": "2023-09-05",
+   "zeitebene": 15,
+   "kerze": 11,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "WMT",
+   "tag": "2021-12-21",
+   "zeitebene": 5,
+   "kerze": 5,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "WMT",
+   "tag": "2022-08-16",
+   "zeitebene": 5,
+   "kerze": 30,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "WMT",
+   "tag": "2023-04-12",
+   "zeitebene": 5,
+   "kerze": 45,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "GS",
+   "tag": "2021-10-05",
+   "zeitebene": 15,
+   "kerze": 24,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GS",
+   "tag": "2021-12-13",
+   "zeitebene": 15,
+   "kerze": 0,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GS",
+   "tag": "2023-02-21",
+   "zeitebene": 15,
+   "kerze": 9,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GS",
+   "tag": "2022-12-30",
+   "zeitebene": 5,
+   "kerze": 59,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "GS",
+   "tag": "2023-05-23",
+   "zeitebene": 5,
+   "kerze": 50,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "GS",
+   "tag": "2023-07-05",
+   "zeitebene": 5,
+   "kerze": 52,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "T",
+   "tag": "2022-08-30",
+   "zeitebene": 15,
+   "kerze": 13,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "T",
+   "tag": "2023-02-09",
+   "zeitebene": 15,
+   "kerze": 18,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "T",
+   "tag": "2023-05-04",
+   "zeitebene": 15,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "T",
+   "tag": "2021-12-07",
+   "zeitebene": 5,
+   "kerze": 67,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "T",
+   "tag": "2021-12-23",
+   "zeitebene": 5,
+   "kerze": 15,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "T",
+   "tag": "2023-01-30",
+   "zeitebene": 5,
+   "kerze": 15,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CSCO",
+   "tag": "2021-10-01",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CSCO",
+   "tag": "2022-04-28",
+   "zeitebene": 15,
+   "kerze": 11,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CSCO",
+   "tag": "2023-07-05",
+   "zeitebene": 15,
+   "kerze": 3,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CSCO",
+   "tag": "2022-02-01",
+   "zeitebene": 5,
+   "kerze": 24,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "CSCO",
+   "tag": "2022-05-11",
+   "zeitebene": 5,
+   "kerze": 54,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "CSCO",
+   "tag": "2022-07-26",
+   "zeitebene": 5,
+   "kerze": 34,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "FDX",
+   "tag": "2021-11-09",
+   "zeitebene": 15,
+   "kerze": 3,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "FDX",
+   "tag": "2022-04-06",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "FDX",
+   "tag": "2022-11-22",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "FDX",
+   "tag": "2022-05-05",
+   "zeitebene": 5,
+   "kerze": 55,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "FDX",
+   "tag": "2022-11-01",
+   "zeitebene": 5,
+   "kerze": 45,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "FDX",
+   "tag": "2023-06-02",
+   "zeitebene": 5,
+   "kerze": 44,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "QCOM",
+   "tag": "2021-12-27",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "QCOM",
+   "tag": "2022-07-27",
+   "zeitebene": 15,
+   "kerze": 14,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "QCOM",
+   "tag": "2023-08-31",
+   "zeitebene": 15,
+   "kerze": 12,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "QCOM",
+   "tag": "2022-10-20",
+   "zeitebene": 5,
+   "kerze": 50,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "QCOM",
+   "tag": "2022-11-02",
+   "zeitebene": 5,
+   "kerze": 33,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "QCOM",
+   "tag": "2022-11-28",
+   "zeitebene": 5,
+   "kerze": 11,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JNJ",
+   "tag": "2021-11-29",
+   "zeitebene": 15,
+   "kerze": 1,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JNJ",
+   "tag": "2022-10-24",
+   "zeitebene": 15,
+   "kerze": 14,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JNJ",
+   "tag": "2022-12-29",
+   "zeitebene": 15,
+   "kerze": 23,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "JNJ",
+   "tag": "2022-07-25",
+   "zeitebene": 5,
+   "kerze": 17,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JNJ",
+   "tag": "2022-08-19",
+   "zeitebene": 5,
+   "kerze": 19,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "JNJ",
+   "tag": "2023-08-04",
+   "zeitebene": 5,
+   "kerze": 10,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MRK",
+   "tag": "2022-05-02",
+   "zeitebene": 15,
+   "kerze": 23,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MRK",
+   "tag": "2022-05-12",
+   "zeitebene": 15,
+   "kerze": 1,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MRK",
+   "tag": "2022-09-12",
+   "zeitebene": 15,
+   "kerze": 20,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MRK",
+   "tag": "2022-06-30",
+   "zeitebene": 5,
+   "kerze": 77,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MRK",
+   "tag": "2023-03-06",
+   "zeitebene": 5,
+   "kerze": 24,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MRK",
+   "tag": "2023-09-13",
+   "zeitebene": 5,
+   "kerze": 15,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PG",
+   "tag": "2022-02-14",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PG",
+   "tag": "2022-04-08",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "PG",
+   "tag": "2023-01-19",
+   "zeitebene": 15,
+   "kerze": 0,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PG",
+   "tag": "2022-02-04",
+   "zeitebene": 5,
+   "kerze": 63,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PG",
+   "tag": "2023-04-10",
+   "zeitebene": 5,
+   "kerze": 30,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "PG",
+   "tag": "2023-07-10",
+   "zeitebene": 5,
+   "kerze": 34,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "VZ",
+   "tag": "2022-11-17",
+   "zeitebene": 15,
+   "kerze": 20,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "VZ",
+   "tag": "2022-12-15",
+   "zeitebene": 15,
+   "kerze": 11,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "VZ",
+   "tag": "2023-03-15",
+   "zeitebene": 15,
+   "kerze": 21,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "VZ",
+   "tag": "2021-10-20",
+   "zeitebene": 5,
+   "kerze": 58,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "VZ",
+   "tag": "2022-01-06",
+   "zeitebene": 5,
+   "kerze": 50,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "VZ",
+   "tag": "2022-10-26",
+   "zeitebene": 5,
+   "kerze": 0,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MS",
+   "tag": "2023-01-23",
+   "zeitebene": 15,
+   "kerze": 4,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MS",
+   "tag": "2023-02-17",
+   "zeitebene": 15,
+   "kerze": 24,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MS",
+   "tag": "2023-06-20",
+   "zeitebene": 15,
+   "kerze": 2,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "MS",
+   "tag": "2022-03-16",
+   "zeitebene": 5,
+   "kerze": 68,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MS",
+   "tag": "2022-03-24",
+   "zeitebene": 5,
+   "kerze": 33,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "MS",
+   "tag": "2022-04-28",
+   "zeitebene": 5,
+   "kerze": 35,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "COST",
+   "tag": "2022-08-12",
+   "zeitebene": 15,
+   "kerze": 24,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "COST",
+   "tag": "2023-01-31",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "COST",
+   "tag": "2023-05-16",
+   "zeitebene": 15,
+   "kerze": 21,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "COST",
+   "tag": "2022-04-08",
+   "zeitebene": 5,
+   "kerze": 25,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "COST",
+   "tag": "2022-06-28",
+   "zeitebene": 5,
+   "kerze": 68,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "COST",
+   "tag": "2023-09-12",
+   "zeitebene": 5,
+   "kerze": 66,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AVGO",
+   "tag": "2022-07-06",
+   "zeitebene": 15,
+   "kerze": 16,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "AVGO",
+   "tag": "2022-08-08",
+   "zeitebene": 15,
+   "kerze": 7,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AVGO",
+   "tag": "2023-01-25",
+   "zeitebene": 15,
+   "kerze": 23,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AVGO",
+   "tag": "2021-11-24",
+   "zeitebene": 5,
+   "kerze": 71,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AVGO",
+   "tag": "2022-12-27",
+   "zeitebene": 5,
+   "kerze": 51,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "AVGO",
+   "tag": "2023-06-20",
+   "zeitebene": 5,
+   "kerze": 14,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TMO",
+   "tag": "2022-03-31",
+   "zeitebene": 15,
+   "kerze": 10,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TMO",
+   "tag": "2022-06-30",
+   "zeitebene": 15,
+   "kerze": 21,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TMO",
+   "tag": "2022-10-07",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TMO",
+   "tag": "2021-12-08",
+   "zeitebene": 5,
+   "kerze": 47,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TMO",
+   "tag": "2022-03-16",
+   "zeitebene": 5,
+   "kerze": 38,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "TMO",
+   "tag": "2022-06-21",
+   "zeitebene": 5,
+   "kerze": 67,
+   "stufe_k": 2,
+   "fehler": []
+  },
+  {
+   "symbol": "LRCX",
+   "tag": "2021-11-22",
+   "zeitebene": 15,
+   "kerze": 15,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "LRCX",
+   "tag": "2023-02-24",
+   "zeitebene": 15,
+   "kerze": 20,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "LRCX",
+   "tag": "2023-06-16",
+   "zeitebene": 15,
+   "kerze": 5,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "LRCX",
+   "tag": "2022-02-11",
+   "zeitebene": 5,
+   "kerze": 34,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "LRCX",
+   "tag": "2022-07-01",
+   "zeitebene": 5,
+   "kerze": 8,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "LRCX",
+   "tag": "2023-07-12",
+   "zeitebene": 5,
+   "kerze": 56,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "KO",
+   "tag": "2021-10-07",
+   "zeitebene": 15,
+   "kerze": 8,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "KO",
+   "tag": "2021-11-15",
+   "zeitebene": 15,
+   "kerze": 3,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "KO",
+   "tag": "2023-02-09",
+   "zeitebene": 15,
+   "kerze": 25,
+   "stufe_k": 3,
+   "fehler": []
+  },
+  {
+   "symbol": "KO",
+   "tag": "2021-10-07",
+   "zeitebene": 5,
+   "kerze": 7,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "KO",
+   "tag": "2021-11-08",
+   "zeitebene": 5,
+   "kerze": 51,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "KO",
+   "tag": "2022-03-24",
+   "zeitebene": 5,
+   "kerze": 41,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNP",
+   "tag": "2022-01-06",
+   "zeitebene": 15,
+   "kerze": 18,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNP",
+   "tag": "2022-07-13",
+   "zeitebene": 15,
+   "kerze": 22,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNP",
+   "tag": "2023-08-09",
+   "zeitebene": 15,
+   "kerze": 24,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNP",
+   "tag": "2022-01-19",
+   "zeitebene": 5,
+   "kerze": 56,
+   "stufe_k": 1,
+   "fehler": []
+  },
+  {
+   "symbol": "UNP",
+   "tag": "2023-05-19",
+   "zeitebene": 5,
+   "kerze": 48,
+   "stufe_k": 0,
+   "fehler": []
+  },
+  {
+   "symbol": "UNP",
+   "tag": "2023-07-13",
+   "zeitebene": 5,
+   "kerze": 77,
+   "stufe_k": 0,
+   "fehler": []
+  }
+ ]
+}

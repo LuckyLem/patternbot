@@ -1,0 +1,65 @@
+{
+ "code": "fba7abcb039b",
+ "fassung": "2.1",
+ "zeitraum": "2021-10-01 bis 2023-09-29",
+ "aktien": 50,
+ "erstellt": "2026-10-25T07:34:30-04:00",
+ "dauer_s": 662,
+ "zeitebenen": {
+  "15m": {
+   "tage": 25096,
+   "kaesten": 968,
+   "kaesten_noten": {
+    "A": 2,
+    "B": 189,
+    "C": 777
+   },
+   "entscheidungen": 691,
+   "entscheidungen_noten": {
+    "A": 4,
+    "B": 119,
+    "C": 568
+   },
+   "entscheidungen_art": {
+    "A": 415,
+    "C": 276
+   },
+   "kerzen_stufe": {
+    "0": 533039,
+    "1": 112373,
+    "2": 2594,
+    "3": 869
+   }
+  },
+  "5m": {
+   "tage": 25096,
+   "kaesten": 8463,
+   "kaesten_noten": {
+    "A": 37,
+    "B": 1718,
+    "C": 6708
+   },
+   "entscheidungen": 9174,
+   "entscheidungen_noten": {
+    "A": 56,
+    "B": 1969,
+    "C": 7149
+   },
+   "entscheidungen_art": {
+    "A": 5782,
+    "C": 3392
+   },
+   "kerzen_stufe": {
+    "0": 1131669,
+    "1": 751250,
+    "2": 50363,
+    "3": 13229
+   }
+  }
+ },
+ "abschneide": {
+  "proben": 300,
+  "bestanden": 300,
+  "mit_kasten": 9
+ }
+}

@@ -720,7 +720,8 @@ function renderSicht() {
   const next = B.find((b) => !A[b.id]);
   if (!next) {
     const neinIds = B.filter((b) => A[b.id] === "nein").map((b) => b.id);
-    const txt = `Sichtprüfung ${SI.muster || "Rechteck"} (${SI.id}): ${sm.total} Bilder, ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un} → ${Math.round((sm.ja / sm.total) * 100)} % ja.` + (neinIds.length ? `\nNein: ${neinIds.join(", ")}` : "");
+    const unsIds = B.filter((b) => A[b.id] === "unsicher").map((b) => b.id);
+    const txt = `Sichtprüfung ${SI.muster || "Rechteck"} (${SI.id}): ${sm.total} Bilder, ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un} → ${Math.round((sm.ja / sm.total) * 100)} % ja.` + (neinIds.length ? `\nNein: ${neinIds.join(", ")}` : "") + (unsIds.length ? `\nUnsicher: ${unsIds.join(", ")}` : "");
     box.innerHTML = `<div class="q">Fertig: ${Math.round((sm.ja / sm.total) * 100)} % „ja“</div><p class="dim">Kopiere das Ergebnis und schick es im Chat oder an VS Code. Es wird dort ins Logbuch übernommen.</p><pre class="out" id="sOut">${esc(txt)}</pre>
       <div class="btns"><button type="button" class="btn" id="sCopy">Ergebnis kopieren</button><button type="button" class="btn mid" id="sReset">Neu anfangen</button></div>`;
     $("sCopy").addEventListener("click", () => { const done = () => ($("sCopy").textContent = "Kopiert"); try { navigator.clipboard.writeText(txt).then(done, () => sel()); } catch (e) { sel(); } function sel() { const r = document.createRange(); r.selectNodeContents($("sOut")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } });

@@ -1,8 +1,8 @@
 {
  "version": 1,
- "updated": "2026-10-26T13:20:30+00:00",
- "heartbeat": "2026-10-26T13:20:30+00:00",
- "market_open": false,
+ "updated": "2026-10-26T13:31:24+00:00",
+ "heartbeat": "2026-10-26T13:31:24+00:00",
+ "market_open": true,
  "account": {
   "start": 10000.0,
   "equity": 9943.74,
@@ -1283,14 +1283,6 @@
   "avg_loss": -8.89
  },
  "equity_curve": [
-  {
-   "date": "2026-08-24",
-   "equity": 9960.6
-  },
-  {
-   "date": "2026-08-25",
-   "equity": 10000.74
-  },
   {
    "date": "2026-08-26",
    "equity": 10022.21

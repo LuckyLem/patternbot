@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-10-27T13:39:37+00:00",
- "heartbeat": "2026-10-27T13:39:37+00:00",
+ "updated": "2026-10-27T13:51:10+00:00",
+ "heartbeat": "2026-10-27T13:51:10+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9931.03,
+  "equity": 9930.4,
   "last_equity": 9931.03,
-  "day_change": 0.0,
-  "total_change": -68.97
+  "day_change": -0.63,
+  "total_change": -69.6
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "SO",
+   "side": "short",
+   "qty": 21,
+   "entry": 92.12,
+   "current": 92.15,
+   "pl": -0.63
+  }
+ ],
  "trades": [
+  {
+   "symbol": "SO",
+   "pattern": "HeadShouldersTop",
+   "side": "short",
+   "day": "2026-10-27",
+   "opened": "2026-10-27T13:50:23.361812+00:00",
+   "closed": null,
+   "entry": 92.12,
+   "stop": 92.87,
+   "target": 91.07,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "H&S neckline_break<92.23",
+   "max_r": null,
+   "key": "t130",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "PCAR",
    "pattern": "Rectangle",
@@ -1250,27 +1280,6 @@
    "key": "t71",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "AMD",
-   "pattern": "Rectangle",
-   "side": "long",
-   "day": "2026-10-06",
-   "opened": "2026-10-06T13:50:26.338936+00:00",
-   "closed": "2026-10-06T14:53:28.335300464+00:00",
-   "entry": 637.4,
-   "stop": 627.95,
-   "target": 651.67,
-   "exit": 651.68,
-   "pnl": 42.84,
-   "r": 1.512,
-   "status": "closed",
-   "exit_source": "tp",
-   "reason": "rectangle break>635.86",
-   "max_r": 1.49,
-   "key": "t70",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1453,42 +1462,21 @@
   }
  ],
  "funnel": {
-  "day": "2026-10-26",
-  "setups": 128,
-  "orders": 2,
-  "filled": 2,
+  "day": "2026-10-27",
+  "setups": 20,
+  "orders": 1,
+  "filled": 1,
   "unfilled": 0,
-  "traded": 2,
-  "coverage_from": "2026-10-26T13:50:44.702227+00:00",
+  "traded": 1,
+  "coverage_from": "2026-10-27T13:50:21.034181+00:00",
   "rejected": {
-   "skip-chase": 4,
+   "skip-chase": 5,
    "skip-dup": 1,
-   "skip-market": 2,
-   "skip-rr": 2,
-   "skip-rs": 1,
-   "skip-spread": 7,
-   "skip-stale": 3,
-   "skip-vol": 106
+   "skip-stale": 2,
+   "skip-vol": 11
   }
  },
  "funnel_days": [
-  {
-   "day": "2026-10-13",
-   "setups": 146,
-   "orders": 6,
-   "filled": 6,
-   "unfilled": 0,
-   "traded": 6,
-   "coverage_from": "2026-10-13T13:50:26.774692+00:00",
-   "rejected": {
-    "skip-chase": 10,
-    "skip-dup": 3,
-    "skip-rr": 2,
-    "skip-spread": 11,
-    "skip-stale": 4,
-    "skip-vol": 110
-   }
-  },
   {
    "day": "2026-10-14",
    "setups": 167,
@@ -1651,6 +1639,21 @@
     "skip-spread": 7,
     "skip-stale": 3,
     "skip-vol": 106
+   }
+  },
+  {
+   "day": "2026-10-27",
+   "setups": 20,
+   "orders": 1,
+   "filled": 1,
+   "unfilled": 0,
+   "traded": 1,
+   "coverage_from": "2026-10-27T13:50:21.034181+00:00",
+   "rejected": {
+    "skip-chase": 5,
+    "skip-dup": 1,
+    "skip-stale": 2,
+    "skip-vol": 11
    }
   }
  ],

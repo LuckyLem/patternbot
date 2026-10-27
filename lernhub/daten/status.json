@@ -1,6 +1,6 @@
 {
- "stand": "2026-10-25T18:21:00-04:00",
- "phase": "Sichtprüfung 3 ausgewertet (82 %). Als Nächstes: Fassung 2.2, wartet auf OK",
+ "stand": "2026-10-27T15:55:55-04:00",
+ "phase": "Fassung 2.2 als Kandidat. Sichtprüfung 4 (30 neue A-Kästen) wartet auf dich",
  "laeuft": false,
  "plan": [
   {
@@ -90,6 +90,14 @@
   {
    "zeit": "2026-10-25T18:21:00-04:00",
    "text": "Vorschlag Fassung 2.2 liegt vor, nichts umgesetzt"
+  },
+  {
+   "zeit": "2026-10-27T15:55:55-04:00",
+   "text": "Fassung 2.2 als Kandidat gebaut (Code 2489765016f5), alle Pflichttests grün"
+  },
+  {
+   "zeit": "2026-10-27T15:55:55-04:00",
+   "text": "Sichtprüfung 4 online: 30 neue A-Kästen, je 15 auf 5 und 15 Min. Entscheidungsregel steht vorher im Logbuch"
   }
  ]
 }

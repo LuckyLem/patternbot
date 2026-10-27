@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-27T19:46:24+00:00",
- "heartbeat": "2026-10-27T19:46:24+00:00",
+ "updated": "2026-10-27T19:56:30+00:00",
+ "heartbeat": "2026-10-27T19:56:30+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9936.37,
+  "equity": 9934.47,
   "last_equity": 9931.03,
-  "day_change": 5.34,
-  "total_change": -63.63
+  "day_change": 3.44,
+  "total_change": -65.53
  },
- "positions": [
-  {
-   "symbol": "BKNG",
-   "side": "short",
-   "qty": 13,
-   "entry": 150.28,
-   "current": 150.02,
-   "pl": 3.38
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "BKNG",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-10-27",
    "opened": "2026-10-27T18:45:38.739597+00:00",
-   "closed": null,
+   "closed": "2026-10-27T19:50:42.092095436+00:00",
    "entry": 150.28,
    "stop": 152.48,
    "target": 148.03,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 150.17,
+   "pnl": 1.48,
+   "r": 0.052,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "desc_triangle break<150.75",
    "max_r": 0.12,
    "key": "t132",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 129,
-  "pnl": -43.63,
-  "winrate": 0.473,
-  "expectancy": -0.021,
+  "n": 130,
+  "pnl": -42.15,
+  "winrate": 0.477,
+  "expectancy": -0.02,
   "pf": 0.93,
-  "avg_win": 9.11,
+  "avg_win": 8.99,
   "avg_loss": -8.82
  },
  "equity_curve": [

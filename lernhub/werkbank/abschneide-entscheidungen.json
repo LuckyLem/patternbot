@@ -1,5 +1,5 @@
 {
- "code": "8454cdc07786",
+ "code": "2489765016f5",
  "startwert": 20261025,
  "aktien": [
   "AMAT",
@@ -9,11 +9,11 @@
   "GOOG",
   "GOOGL"
  ],
- "schnitte": 3797,
- "bestanden": 3797,
+ "schnitte": 8477,
+ "bestanden": 8477,
  "je_zeitebene": {
-  "15m": 201,
-  "5m": 3596
+  "15m": 525,
+  "5m": 7952
  },
  "fehler": []
 }

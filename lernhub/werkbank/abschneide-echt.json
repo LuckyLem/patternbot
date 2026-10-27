@@ -1,9 +1,9 @@
 {
- "code": "8454cdc07786",
+ "code": "2489765016f5",
  "startwert": 20261025,
  "proben": 300,
  "bestanden": 300,
- "mit_kasten": 6,
+ "mit_kasten": 11,
  "fehler": [],
  "liste": [
   {
@@ -323,7 +323,7 @@
    "tag": "2022-02-24",
    "zeitebene": 5,
    "kerze": 67,
-   "stufe_k": 1,
+   "stufe_k": 0,
    "fehler": []
   },
   {
@@ -947,7 +947,7 @@
    "tag": "2022-03-25",
    "zeitebene": 5,
    "kerze": 42,
-   "stufe_k": 1,
+   "stufe_k": 2,
    "fehler": []
   },
   {
@@ -1091,7 +1091,7 @@
    "tag": "2022-01-03",
    "zeitebene": 5,
    "kerze": 33,
-   "stufe_k": 1,
+   "stufe_k": 2,
    "fehler": []
   },
   {
@@ -1483,7 +1483,7 @@
    "tag": "2022-08-04",
    "zeitebene": 5,
    "kerze": 67,
-   "stufe_k": 1,
+   "stufe_k": 2,
    "fehler": []
   },
   {
@@ -1675,7 +1675,7 @@
    "tag": "2023-05-23",
    "zeitebene": 5,
    "kerze": 50,
-   "stufe_k": 0,
+   "stufe_k": 1,
    "fehler": []
   },
   {
@@ -2051,7 +2051,7 @@
    "tag": "2021-10-20",
    "zeitebene": 5,
    "kerze": 58,
-   "stufe_k": 1,
+   "stufe_k": 0,
    "fehler": []
   },
   {
@@ -2083,7 +2083,7 @@
    "tag": "2023-02-17",
    "zeitebene": 15,
    "kerze": 24,
-   "stufe_k": 0,
+   "stufe_k": 1,
    "fehler": []
   },
   {
@@ -2307,7 +2307,7 @@
    "tag": "2023-07-12",
    "zeitebene": 5,
    "kerze": 56,
-   "stufe_k": 1,
+   "stufe_k": 2,
    "fehler": []
   },
   {
@@ -2355,7 +2355,7 @@
    "tag": "2022-03-24",
    "zeitebene": 5,
    "kerze": 41,
-   "stufe_k": 0,
+   "stufe_k": 2,
    "fehler": []
   },
   {

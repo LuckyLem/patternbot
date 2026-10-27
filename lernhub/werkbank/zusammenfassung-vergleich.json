@@ -1,0 +1,142 @@
+{
+ "zeitraum": "2021-10-01 bis 2023-09-29",
+ "jahre": 1.99,
+ "alt": {
+  "code": "8454cdc07786",
+  "fassung": "2.1"
+ },
+ "neu": {
+  "code": "2489765016f5",
+  "fassung": "2.2-kandidat"
+ },
+ "zeitebenen": {
+  "15m": {
+   "alt": {
+    "tage": 25096,
+    "kaesten": 356,
+    "kaesten_noten": {
+     "A": 0,
+     "B": 146,
+     "C": 210
+    },
+    "entscheidungen": 232,
+    "entscheidungen_noten": {
+     "A": 0,
+     "B": 85,
+     "C": 147
+    },
+    "entscheidungen_art": {
+     "A": 146,
+     "C": 86
+    },
+    "kerzen_stufe": {
+     "0": 533137,
+     "1": 114450,
+     "2": 1006,
+     "3": 282
+    },
+    "tage_mit_a": 0,
+    "tage_mit_a_handelbar": 0,
+    "a_tage_handelbar_je_jahr": 0.0
+   },
+   "neu": {
+    "tage": 25096,
+    "kaesten": 1036,
+    "kaesten_noten": {
+     "A": 301,
+     "B": 228,
+     "C": 507
+    },
+    "entscheidungen": 674,
+    "entscheidungen_noten": {
+     "A": 189,
+     "B": 172,
+     "C": 313
+    },
+    "entscheidungen_art": {
+     "A": 380,
+     "C": 294
+    },
+    "kerzen_stufe": {
+     "0": 533655,
+     "1": 111209,
+     "2": 3187,
+     "3": 824
+    },
+    "tage_mit_a": 319,
+    "tage_mit_a_handelbar": 217,
+    "a_tage_handelbar_je_jahr": 108.9
+   }
+  },
+  "5m": {
+   "alt": {
+    "tage": 25096,
+    "kaesten": 4798,
+    "kaesten_noten": {
+     "A": 16,
+     "B": 1534,
+     "C": 3248
+    },
+    "entscheidungen": 5001,
+    "entscheidungen_noten": {
+     "A": 17,
+     "B": 1581,
+     "C": 3403
+    },
+    "entscheidungen_art": {
+     "A": 3123,
+     "C": 1878
+    },
+    "kerzen_stufe": {
+     "0": 1108176,
+     "1": 801169,
+     "2": 30409,
+     "3": 6757
+    },
+    "tage_mit_a": 22,
+    "tage_mit_a_handelbar": 20,
+    "a_tage_handelbar_je_jahr": 10.0
+   },
+   "neu": {
+    "tage": 25096,
+    "kaesten": 10108,
+    "kaesten_noten": {
+     "A": 1964,
+     "B": 2000,
+     "C": 6144
+    },
+    "entscheidungen": 11087,
+    "entscheidungen_noten": {
+     "A": 1876,
+     "B": 2658,
+     "C": 6553
+    },
+    "entscheidungen_art": {
+     "A": 6991,
+     "C": 4096
+    },
+    "kerzen_stufe": {
+     "0": 1136082,
+     "1": 722195,
+     "2": 72919,
+     "3": 15315
+    },
+    "tage_mit_a": 2213,
+    "tage_mit_a_handelbar": 1962,
+    "a_tage_handelbar_je_jahr": 984.9
+   }
+  }
+ },
+ "abschneide": {
+  "alt": {
+   "proben": 300,
+   "bestanden": 300,
+   "mit_kasten": 6
+  },
+  "neu": {
+   "proben": 300,
+   "bestanden": 300,
+   "mit_kasten": 11
+  }
+ }
+}

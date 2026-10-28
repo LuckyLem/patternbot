@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-28T14:46:31+00:00",
- "heartbeat": "2026-10-28T14:46:31+00:00",
+ "updated": "2026-10-28T14:56:38+00:00",
+ "heartbeat": "2026-10-28T14:56:38+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9949.9,
+  "equity": 9959.73,
   "last_equity": 9934.34,
-  "day_change": 15.56,
-  "total_change": -50.1
+  "day_change": 25.39,
+  "total_change": -40.27
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 6,
    "entry": 287.85,
-   "current": 287.82,
-   "pl": -0.18
+   "current": 288.49,
+   "pl": 3.81
   },
   {
    "symbol": "BKNG",
    "side": "short",
    "qty": 13,
    "entry": 149.04,
-   "current": 147.82,
-   "pl": 15.86
+   "current": 147.38,
+   "pl": 21.58
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>287.31",
-   "max_r": null,
+   "max_r": 0.24,
    "key": "t134",
    "detail": false,
    "ai_verdict": null

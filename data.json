@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-28T15:49:35+00:00",
- "heartbeat": "2026-10-28T15:49:35+00:00",
+ "updated": "2026-10-28T15:59:43+00:00",
+ "heartbeat": "2026-10-28T15:59:43+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9942.29,
+  "equity": 9942.25,
   "last_equity": 9934.34,
-  "day_change": 7.95,
-  "total_change": -57.71
+  "day_change": 7.91,
+  "total_change": -57.75
  },
  "positions": [
   {
@@ -16,16 +16,8 @@
    "side": "long",
    "qty": 6,
    "entry": 287.85,
-   "current": 287.68,
-   "pl": -1.02
-  },
-  {
-   "symbol": "BKNG",
-   "side": "short",
-   "qty": 13,
-   "entry": 149.04,
-   "current": 148.35,
-   "pl": 8.97
+   "current": 287.63,
+   "pl": -1.32
   }
  ],
  "trades": [
@@ -56,19 +48,19 @@
    "side": "short",
    "day": "2026-10-28",
    "opened": "2026-10-28T13:50:25.222481+00:00",
-   "closed": null,
+   "closed": "2026-10-28T15:50:40.085549788+00:00",
    "entry": 149.04,
    "stop": 151.69,
    "target": 146.35,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 148.33,
+   "pnl": 9.23,
+   "r": 0.268,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<149.91",
    "max_r": 0.73,
    "key": "t133",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,11 +1283,11 @@
   }
  ],
  "stats": {
-  "n": 130,
-  "pnl": -42.15,
-  "winrate": 0.477,
-  "expectancy": -0.02,
-  "pf": 0.93,
+  "n": 131,
+  "pnl": -32.92,
+  "winrate": 0.481,
+  "expectancy": -0.018,
+  "pf": 0.95,
   "avg_win": 8.99,
   "avg_loss": -8.82
  },

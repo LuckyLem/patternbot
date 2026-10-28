@@ -1,33 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-28T19:48:28+00:00",
- "heartbeat": "2026-10-28T19:48:28+00:00",
+ "updated": "2026-10-28T19:58:41+00:00",
+ "heartbeat": "2026-10-28T19:58:41+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9944.32,
+  "equity": 9943.31,
   "last_equity": 9934.34,
-  "day_change": 9.98,
-  "total_change": -55.68
+  "day_change": 8.97,
+  "total_change": -56.69
  },
- "positions": [
-  {
-   "symbol": "HD",
-   "side": "short",
-   "qty": 6,
-   "entry": 316.82,
-   "current": 317.93,
-   "pl": -6.63
-  },
-  {
-   "symbol": "NVDA",
-   "side": "short",
-   "qty": 9,
-   "entry": 216.22,
-   "current": 214.84,
-   "pl": 12.45
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "HD",
@@ -35,19 +18,19 @@
    "side": "short",
    "day": "2026-10-28",
    "opened": "2026-10-28T19:00:38.044336+00:00",
-   "closed": null,
+   "closed": "2026-10-28T19:51:35.422454389+00:00",
    "entry": 316.82,
    "stop": 320.32,
    "target": 312.98,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 317.99,
+   "pnl": -7.01,
+   "r": -0.334,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "H&S neckline_break<317.23",
    "max_r": 0.09,
    "key": "t136",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -56,19 +39,19 @@
    "side": "short",
    "day": "2026-10-28",
    "opened": "2026-10-28T19:00:37.082271+00:00",
-   "closed": null,
+   "closed": "2026-10-28T19:50:48.254990112+00:00",
    "entry": 216.22,
    "stop": 217.96,
    "target": 213.42,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 214.92,
+   "pnl": 11.73,
+   "r": 0.751,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "H&S neckline_break<216.72",
    "max_r": 0.92,
    "key": "t135",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 132,
-  "pnl": -37.9,
-  "winrate": 0.477,
-  "expectancy": -0.02,
-  "pf": 0.94,
-  "avg_win": 8.99,
-  "avg_loss": -8.76
+  "n": 134,
+  "pnl": -33.18,
+  "winrate": 0.478,
+  "expectancy": -0.016,
+  "pf": 0.95,
+  "avg_win": 9.04,
+  "avg_loss": -8.74
  },
  "equity_curve": [
   {

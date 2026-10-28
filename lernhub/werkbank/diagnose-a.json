@@ -3192,5 +3192,114 @@
    }
   ]
  },
- "mindest_stop": "Eingeplant für die Einstiege (Fassung 2.2): Abstand Einstieg–Stop mindestens max(0,5 × Kasten-ATR; 0,15 % vom Einstiegskurs); Kasten-ATR = dasselbe ATR wie für Toleranz, Höhe und Passgüte (Mittel der ATR je Tageszeit über die Kasten-Kerzen bis zur Entscheidung). Ein engerer Stop wird aufgeweitet, das Ziel bleibt (Abschnitt 5). Mit Pflichttest; noch nicht im Code."
+ "mindest_stop": "Eingeplant für die Einstiege (Fassung 2.2): Abstand Einstieg–Stop mindestens max(0,5 × Kasten-ATR; 0,15 % vom Einstiegskurs); Kasten-ATR = dasselbe ATR wie für Toleranz, Höhe und Passgüte (Mittel der ATR je Tageszeit über die Kasten-Kerzen bis zur Entscheidung). Ein engerer Stop wird aufgeweitet, das Ziel bleibt (Abschnitt 5). Mit Pflichttest; noch nicht im Code.",
+ "sichtpruefung_4_nach_8454cdc07786": {
+  "hinweis": "Nur zur Information, ändert nichts. Derselbe Kasten im selben Moment nach den Regeln von 8454cdc07786 (Steigung der Schlusskurse, Pendel ohne Band, A erst ab 3 + 2 mit Punkte ≥ 80).",
+  "ohne ja (nein + unsicher)": {
+   "bilder": 6,
+   "heute": {
+    "heute B": 4,
+    "heute ungültig: Steigung der Schlusskurse": 2
+   },
+   "bei_heute_B_fehlt_fuer_A": {
+    "A: 3. Berührung": 4,
+    "A: Punkte": 4,
+    "A: unruhiges Bein ohne Band": 3
+   },
+   "punkte_2_2_mittel": 71.8
+  },
+  "ja": {
+   "bilder": 24,
+   "heute": {
+    "heute ungültig: Steigung der Schlusskurse": 18,
+    "heute B": 5,
+    "heute ungültig: Pendel ohne Band": 1
+   },
+   "bei_heute_B_fehlt_fuer_A": {
+    "A: Punkte": 5,
+    "A: 3. Berührung": 4,
+    "A: unruhiges Bein ohne Band": 1
+   },
+   "punkte_2_2_mittel": 70.3
+  },
+  "einzeln": [
+   {
+    "id": "b12",
+    "antwort": "unsicher",
+    "symbol": "PYPL",
+    "tag": "2023-04-26",
+    "zeitebene": 15,
+    "punkte_2_2": 65.7,
+    "heute": [
+     "heute Note B",
+     "A: 3. Berührung (2 + 2)",
+     "A: unruhiges Bein ohne Band (1)",
+     "A: Punkte 69.6"
+    ]
+   },
+   {
+    "id": "b13",
+    "antwort": "nein",
+    "symbol": "AMAT",
+    "tag": "2023-05-24",
+    "zeitebene": 5,
+    "punkte_2_2": 70.2,
+    "heute": [
+     "heute Note B",
+     "A: 3. Berührung (2 + 2)",
+     "A: unruhiges Bein ohne Band (1)",
+     "A: Punkte 72.2"
+    ]
+   },
+   {
+    "id": "b19",
+    "antwort": "unsicher",
+    "symbol": "FDX",
+    "tag": "2023-02-13",
+    "zeitebene": 5,
+    "punkte_2_2": 69.5,
+    "heute": [
+     "heute Note B",
+     "A: 3. Berührung (2 + 2)",
+     "A: unruhiges Bein ohne Band (1)",
+     "A: Punkte 63.8"
+    ]
+   },
+   {
+    "id": "b25",
+    "antwort": "unsicher",
+    "symbol": "CSCO",
+    "tag": "2023-09-21",
+    "zeitebene": 15,
+    "punkte_2_2": 72.4,
+    "heute": [
+     "ungültig: Steigung der Schlusskurse -0.264 ATR je Kerze"
+    ]
+   },
+   {
+    "id": "b26",
+    "antwort": "unsicher",
+    "symbol": "MSFT",
+    "tag": "2022-06-08",
+    "zeitebene": 5,
+    "punkte_2_2": 76.0,
+    "heute": [
+     "ungültig: Steigung der Schlusskurse +0.058 ATR je Kerze"
+    ]
+   },
+   {
+    "id": "b27",
+    "antwort": "nein",
+    "symbol": "CMCSA",
+    "tag": "2023-04-11",
+    "zeitebene": 5,
+    "punkte_2_2": 76.9,
+    "heute": [
+     "heute Note B",
+     "A: 3. Berührung (2 + 2)",
+     "A: Punkte 70.3"
+    ]
+   }
+  ]
+ }
 }

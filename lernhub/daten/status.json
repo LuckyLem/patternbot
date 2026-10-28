@@ -1,6 +1,6 @@
 {
- "stand": "2026-10-27T15:55:55-04:00",
- "phase": "Fassung 2.2 als Kandidat. Sichtprüfung 4 (30 neue A-Kästen) wartet auf dich",
+ "stand": "2026-10-28T11:11:27-04:00",
+ "phase": "Fassung 2.2 festgelegt. Als Nächstes: Vorab-Datei, dann erster Lauf",
  "laeuft": false,
  "plan": [
   {
@@ -24,7 +24,7 @@
   {
    "titel": "Regeln festlegen",
    "text": "Vorab-Datei mit Hash, bevor ein Ergebnis da ist.",
-   "status": "offen",
+   "status": "laeuft",
    "datum": "So 25.10."
   },
   {
@@ -98,6 +98,14 @@
   {
    "zeit": "2026-10-27T15:55:55-04:00",
    "text": "Sichtprüfung 4 online: 30 neue A-Kästen, je 15 auf 5 und 15 Min. Entscheidungsregel steht vorher im Logbuch"
+  },
+  {
+   "zeit": "2026-10-28T11:10:50-04:00",
+   "text": "Sichtprüfung 4: 24 von 30 ja (80 %), bestanden. Fassung 2.2 festgelegt (Code 2489765016f5)"
+  },
+  {
+   "zeit": "2026-10-28T11:11:27-04:00",
+   "text": "Trefferquote online: 30 Tagescharts ohne Linien (treffer-1)"
   }
  ]
 }

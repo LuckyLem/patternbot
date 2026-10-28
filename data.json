@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-28T15:38:44+00:00",
- "heartbeat": "2026-10-28T15:38:44+00:00",
+ "updated": "2026-10-28T15:49:35+00:00",
+ "heartbeat": "2026-10-28T15:49:35+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9953.01,
+  "equity": 9942.29,
   "last_equity": 9934.34,
-  "day_change": 18.67,
-  "total_change": -46.99
+  "day_change": 7.95,
+  "total_change": -57.71
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 6,
    "entry": 287.85,
-   "current": 288.34,
-   "pl": 2.94
+   "current": 287.68,
+   "pl": -1.02
   },
   {
    "symbol": "BKNG",
    "side": "short",
    "qty": 13,
    "entry": 149.04,
-   "current": 147.83,
-   "pl": 15.73
+   "current": 148.35,
+   "pl": 8.97
   }
  ],
  "trades": [
@@ -1471,7 +1471,7 @@
  ],
  "funnel": {
   "day": "2026-10-28",
-  "setups": 37,
+  "setups": 43,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
@@ -1479,10 +1479,10 @@
   "coverage_from": "2026-10-28T13:50:23.798314+00:00",
   "rejected": {
    "skip-chase": 4,
-   "skip-rr": 2,
+   "skip-rr": 3,
    "skip-spread": 1,
    "skip-stale": 3,
-   "skip-vol": 25
+   "skip-vol": 30
   }
  },
  "funnel_days": [
@@ -1651,7 +1651,7 @@
   },
   {
    "day": "2026-10-28",
-   "setups": 37,
+   "setups": 43,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
@@ -1659,10 +1659,10 @@
    "coverage_from": "2026-10-28T13:50:23.798314+00:00",
    "rejected": {
     "skip-chase": 4,
-    "skip-rr": 2,
+    "skip-rr": 3,
     "skip-spread": 1,
     "skip-stale": 3,
-    "skip-vol": 25
+    "skip-vol": 30
    }
   }
  ],

@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-28T16:41:40+00:00",
- "heartbeat": "2026-10-28T16:41:40+00:00",
+ "updated": "2026-10-28T16:51:45+00:00",
+ "heartbeat": "2026-10-28T16:51:45+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9938.23,
+  "equity": 9938.59,
   "last_equity": 9934.34,
-  "day_change": 3.89,
-  "total_change": -61.77
+  "day_change": 4.25,
+  "total_change": -61.41
  },
- "positions": [
-  {
-   "symbol": "ABBV",
-   "side": "long",
-   "qty": 6,
-   "entry": 287.85,
-   "current": 286.96,
-   "pl": -5.34
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "ABBV",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-10-28",
    "opened": "2026-10-28T14:45:32.528409+00:00",
-   "closed": null,
+   "closed": "2026-10-28T16:46:39.402142112+00:00",
    "entry": 287.85,
    "stop": 284.41,
    "target": 293.1,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 287.02,
+   "pnl": -4.98,
+   "r": -0.242,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>287.31",
    "max_r": 0.26,
    "key": "t134",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 131,
-  "pnl": -32.92,
-  "winrate": 0.481,
-  "expectancy": -0.018,
-  "pf": 0.95,
+  "n": 132,
+  "pnl": -37.9,
+  "winrate": 0.477,
+  "expectancy": -0.02,
+  "pf": 0.94,
   "avg_win": 8.99,
-  "avg_loss": -8.82
+  "avg_loss": -8.76
  },
  "equity_curve": [
   {

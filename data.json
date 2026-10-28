@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-28T19:17:12+00:00",
- "heartbeat": "2026-10-28T19:17:12+00:00",
+ "updated": "2026-10-28T19:27:19+00:00",
+ "heartbeat": "2026-10-28T19:27:19+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9949.2,
+  "equity": 9947.52,
   "last_equity": 9934.34,
-  "day_change": 14.86,
-  "total_change": -50.8
+  "day_change": 13.18,
+  "total_change": -52.48
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 6,
    "entry": 316.82,
-   "current": 316.6,
-   "pl": 1.35
+   "current": 317.45,
+   "pl": -3.75
   },
   {
    "symbol": "NVDA",
    "side": "short",
    "qty": 9,
    "entry": 216.22,
-   "current": 215.19,
-   "pl": 9.3
+   "current": 214.82,
+   "pl": 12.58
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<317.23",
-   "max_r": 0.07,
+   "max_r": 0.09,
    "key": "t136",
    "detail": false,
    "ai_verdict": null
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<216.72",
-   "max_r": 0.6,
+   "max_r": 0.92,
    "key": "t135",
    "detail": false,
    "ai_verdict": null

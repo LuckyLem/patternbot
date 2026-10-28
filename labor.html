@@ -30,6 +30,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
   --spring:cubic-bezier(.34,1.3,.64,1);
   --gut:clamp(20px,5vw,40px);
+  --tv-bg:#ffffff; --tv-line:#e0e3eb; --tv-text:#131722; --tv-text2:#6a6d78; --tv-hover:#f0f3fa; --tv-sel:#2962ff; --tv-sel-wash:rgba(41,98,255,.12);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
@@ -41,6 +42,7 @@
     --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --be:#ffb340; --be-wash:rgba(255,179,64,.14);
     --glow:.9;
     --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+  --tv-bg:#131722; --tv-line:#2a2e39; --tv-text:#d1d4dc; --tv-text2:#868993; --tv-hover:#2a2e39; --tv-sel:#5b8cff; --tv-sel-wash:rgba(91,140,255,.16);
   }
 }
 :root[data-theme="dark"]{
@@ -52,10 +54,12 @@
   --up-wash:rgba(50,215,75,.13); --down-wash:rgba(255,69,58,.12); --be:#ffb340; --be-wash:rgba(255,179,64,.14);
   --glow:.9;
   --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
+  --tv-bg:#131722; --tv-line:#2a2e39; --tv-text:#d1d4dc; --tv-text2:#868993; --tv-hover:#2a2e39; --tv-sel:#5b8cff; --tv-sel-wash:rgba(91,140,255,.16);
 }
 
 /* ================================================================ base */
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 *{scrollbar-width:thin;scrollbar-color:var(--hair) transparent}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -293,6 +297,107 @@ pre.out{background:var(--sunken);border-radius:12px;padding:12px 14px;font:400 1
 .row .txt{font-size:13.5px;color:var(--ink-2);line-height:1.5;min-width:0}
 .src{display:grid;gap:8px;font-size:13.5px;color:var(--ink-2);padding:18px 22px}
 footer a{color:var(--ink-3)}
+/* ================================================================ chart-fenster (TradingView Lightweight Charts) */
+html.tv-open{overflow:hidden}
+.btn:disabled{opacity:.4;cursor:default}
+.btn[aria-pressed="true"]{box-shadow:inset 0 0 0 2px currentColor}
+.linkbtn{appearance:none;border:0;background:none;padding:4px 0;font:500 13px var(--sans);color:var(--ink-3);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.linkbtn:hover{color:var(--ink-2)}
+.linkbtn.warn{color:var(--down)}
+.zoomwrap{position:relative;cursor:zoom-in;padding-top:40px}
+.zoombtn{position:absolute;top:0;right:0;z-index:2;display:inline-flex;align-items:center;gap:7px;appearance:none;border:0;cursor:pointer;
+  border-radius:999px;padding:7px 12px;font:600 12.5px/1 var(--sans);color:var(--accent);background:var(--raised);
+  box-shadow:0 0 0 1px rgba(var(--accent-rgb),.28),0 6px 16px -8px rgba(0,0,0,.35)}
+.zoombtn svg,.btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.btn{display:inline-flex;align-items:center;gap:7px}
+.sfoot{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;font-size:13px;color:var(--ink-3)}
+.mine{font-size:13px;color:var(--ink-2)}
+.mine b{font-weight:600;color:var(--tv-draw-ink,var(--ink))}
+
+.tv{position:fixed;inset:0;z-index:90;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--tv-bg);color:var(--tv-text);
+  padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);
+  font:400 13px/1.4 var(--sans);letter-spacing:-.005em;-webkit-user-select:none;user-select:none}
+.tv.is-light{--tv-bg:#ffffff;--tv-line:#e0e3eb;--tv-text:#131722;--tv-text2:#6a6d78;--tv-hover:#f0f3fa;--tv-sel:#2962ff;--tv-sel-wash:rgba(41,98,255,.12);color-scheme:light}
+.tv.is-dark{--tv-bg:#131722;--tv-line:#2a2e39;--tv-text:#d1d4dc;--tv-text2:#868993;--tv-hover:#2a2e39;--tv-sel:#5b8cff;--tv-sel-wash:rgba(91,140,255,.16);color-scheme:dark}
+.tv-top{display:flex;align-items:center;gap:10px;min-height:48px;padding:5px 6px 5px 12px;border-bottom:1px solid var(--tv-line);min-width:0}
+.tv-sym{display:flex;align-items:center;gap:6px 9px;min-width:0;flex-wrap:wrap}
+.tv-sym b{font:700 15.5px var(--sans);letter-spacing:-.015em}
+.tv-chip{font:600 11.5px var(--mono);padding:3px 7px;border-radius:5px;background:var(--tv-hover);color:var(--tv-text);white-space:nowrap}
+.tv-sub{font-size:12.5px;color:var(--tv-text2);min-width:0}
+.tv-acts{margin-left:auto;display:flex;gap:2px;flex:none}
+.tv-ib{appearance:none;width:38px;height:38px;border:0;border-radius:6px;background:transparent;color:var(--tv-text);display:grid;place-items:center;cursor:pointer;flex:none}
+.tv-ib:hover{background:var(--tv-hover)}
+.tv-ib[aria-pressed="true"]{color:var(--tv-sel);background:var(--tv-sel-wash)}
+.tv-ib:disabled{opacity:.35;cursor:default;background:transparent}
+.tv-ib svg{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.tv-main{display:grid;grid-template-columns:50px minmax(0,1fr);min-height:0;position:relative}
+.tv-tools{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-right:1px solid var(--tv-line);overflow:auto;scrollbar-width:none}
+.tv-sep{flex:none;width:28px;height:1px;background:var(--tv-line);margin:5px 0}
+.tv-chart{position:relative;min-width:0;min-height:0;overflow:hidden}
+.tv-chart.drawing{cursor:crosshair}
+.tv-draw{position:absolute;left:0;top:0;pointer-events:none;z-index:5;overflow:visible}
+.tv-draw .hit{fill:none;stroke:transparent;stroke-width:16;pointer-events:stroke;cursor:move;touch-action:none}
+.tv-draw .hitf{pointer-events:visiblePainted;cursor:move;touch-action:none}
+.tv-draw .hd{pointer-events:all;cursor:grab;touch-action:none}
+.tv-chart.drawing .tv-draw *{pointer-events:none!important}
+.tv-chart.erasing .tv-draw .hit,.tv-chart.erasing .tv-draw .hitf{cursor:pointer}
+.tv-axt{font:600 11px var(--sans)}
+.tv-info{font:500 11.5px var(--sans)}
+.tv-legend{position:absolute;left:10px;top:8px;z-index:6;pointer-events:none;display:grid;gap:4px;font:400 12px/1.35 var(--sans);color:var(--tv-text2);max-width:calc(100% - 96px)}
+.tv-legend .o{display:flex;flex-wrap:wrap;gap:2px 10px;font:400 11.5px var(--mono);font-variant-numeric:tabular-nums}
+.tv-legend .o b{color:var(--tv-text);font-weight:500}
+.tv-legend .k{display:flex;flex-wrap:wrap;gap:2px 12px}
+.tv-legend .k span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.tv-legend .k i{display:inline-block;width:14px;height:0;border-top:2px solid var(--c)}
+.tv-del{position:absolute;z-index:7;display:inline-flex;align-items:center;gap:6px;appearance:none;border:1px solid var(--tv-line);cursor:pointer;
+  border-radius:6px;padding:6px 10px;font:600 12px/1 var(--sans);color:var(--tv-text);background:var(--tv-bg);box-shadow:0 8px 20px -10px rgba(0,0,0,.4)}
+.tv-del svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tv-err{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;color:var(--tv-text2);font-size:14px;z-index:4}
+.tv-err b{display:block;color:var(--tv-text);margin-bottom:4px}
+.tv-bot{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding:10px 14px;border-top:1px solid var(--tv-line);min-width:0}
+.tv-q{display:grid;gap:1px;min-width:0}
+.tv-q b{font-size:14px;font-weight:600}
+.tv-q span{font-size:13px;color:var(--tv-text2)}
+.tv-ans{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.tv .btn.mid{color:var(--tv-text);background:var(--tv-hover);box-shadow:inset 0 0 0 1px var(--tv-line)}
+.tv .btn.mid[aria-pressed="true"]{box-shadow:inset 0 0 0 2px currentColor}
+.tv-prog{font:500 12px var(--mono);color:var(--tv-text2)}
+.tv kbd{font:600 10.5px var(--mono);padding:1px 5px;border-radius:4px;background:rgba(127,127,127,.2);color:inherit}
+@media (hover:none){.tv kbd{display:none}}
+.tv-set{position:absolute;top:8px;right:8px;z-index:8;width:min(340px,calc(100% - 16px));max-height:calc(100% - 16px);overflow:auto;padding:12px 16px 16px;
+  border-radius:10px;background:var(--tv-bg);border:1px solid var(--tv-line);box-shadow:0 18px 40px -16px rgba(0,0,0,.45);display:grid;gap:16px;align-content:start;align-self:start;bottom:auto;-webkit-user-select:auto;user-select:auto}
+.tv-sh{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tv-sh b{font-size:15px}
+.tv-set section{display:grid;gap:8px}
+.tv-set h4{font:600 11px var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--tv-text2)}
+.tv-row{display:grid;grid-template-columns:minmax(0,1fr) 44px 44px;align-items:center;gap:8px}
+.tv-row.head{font-size:11.5px;color:var(--tv-text2)}
+.tv-row.head span{text-align:center}
+.tv-set label{display:flex;align-items:center;gap:9px;cursor:pointer}
+.tv-set input[type=checkbox]{width:16px;height:16px;accent-color:var(--tv-sel);flex:none}
+.tv-set input[type=color]{width:44px;height:28px;border:1px solid var(--tv-line);border-radius:6px;padding:2px;background:var(--tv-bg);cursor:pointer}
+.tv-pre,.tv-seg{display:flex;flex-wrap:wrap;gap:6px}
+.tv-pre button,.tv-seg button{appearance:none;border:1px solid var(--tv-line);background:transparent;color:var(--tv-text);border-radius:6px;padding:7px 10px;font:500 12.5px/1 var(--sans);cursor:pointer}
+.tv-pre button[aria-pressed="true"],.tv-seg button[aria-pressed="true"]{border-color:var(--tv-sel);color:var(--tv-sel);background:var(--tv-sel-wash)}
+.tv-pre .sw{display:inline-block;width:8px;height:12px;border-radius:2px;margin-right:2px;vertical-align:-2px}
+@media (max-width:640px){
+  .tv-top{min-height:44px}
+  .tv-main{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
+  .tv-tools{flex-direction:row;padding:3px 6px;border-right:0;border-bottom:1px solid var(--tv-line);overflow-x:auto;overflow-y:hidden}
+  .tv-sep{width:1px;height:24px;margin:0 4px}
+  .tv-ib{width:34px;height:34px}
+  .tv-ib svg{width:20px;height:20px}
+  .tv-sub{flex:1 1 100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tv-bot{padding:8px 10px;gap:6px}
+  .tv-q{width:100%;display:flex;gap:8px;align-items:baseline;white-space:nowrap;overflow:hidden}
+  .tv-q span{overflow:hidden;text-overflow:ellipsis}
+  .tv-prog{display:none}
+  .tv-ans{width:100%;flex-wrap:nowrap;gap:6px}
+  .tv-ans .btn{flex:1 1 0;min-width:0;justify-content:center;padding:11px 6px;font-size:13px;white-space:nowrap}
+  .tv-ans .btn.nav{flex:0 0 40px}
+  .tv-ans .lg{display:none}
+  .tv-legend{max-width:calc(100% - 70px)}
+}
 </style>
 </head>
 <body>
@@ -373,7 +478,7 @@ footer a{color:var(--ink-3)}
         <div class="seg" role="group" aria-label="Bild" id="fView"><button type="button" data-v="moment" aria-pressed="true">Moment der Entscheidung</button><button type="button" data-v="aus" aria-pressed="false">mit Ausgang</button></div>
       </div>
       <div class="card detail" id="detail" hidden>
-        <div class="dhead"><h3 id="dTitle"></h3><span id="dChips"></span></div>
+        <div class="dhead"><h3 id="dTitle"></h3><span id="dChips"></span><button type="button" class="btn" id="dZoom"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>Groß öffnen</button></div>
         <div class="legend">
           <span><i class="k" style="--c:var(--accent)"></i>Linien des Bots</span>
           <span><i class="k ring" style="--c:var(--accent)"></i>Berührung</span>
@@ -390,7 +495,7 @@ footer a{color:var(--ink-3)}
 
     <section id="sicht">
       <div class="head"><div class="hleft"><h2>Sichtprüfung</h2><span class="aside" id="siNote"></span></div></div>
-      <p class="lead">Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen, das Bild endet an der Signalkerze, ohne Ausgang. Gerechnet wird erst, wenn mindestens 80 % „ja“ sind.</p>
+      <p class="lead" id="siLead">Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen, das Bild endet an der Signalkerze, ohne Ausgang. Gerechnet wird erst, wenn mindestens 80 % „ja“ sind.</p>
       <div class="card sicht" id="sichtBox"></div>
     </section>
 
@@ -417,8 +522,43 @@ footer a{color:var(--ink-3)}
     <footer>
       <span>Nur Paper · keine Live-Freigabe</span>
       <span>Daten vom Branch backtest · <a href="labor-archiv.html">Altes Lern-Labor (Lauf 1)</a></span>
+      <span>Chart-Fenster: <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView Lightweight Charts™</a> · © TradingView, Inc.</span>
     </footer>
   </div>
+</div>
+<div class="tv" id="tv" hidden role="dialog" aria-modal="true" aria-labelledby="tvTitle">
+  <div class="tv-top">
+    <div class="tv-sym"><b id="tvTitle">—</b><span class="tv-chip" id="tvTf">—</span><span class="tv-sub" id="tvSub"></span></div>
+    <div class="tv-acts">
+      <button type="button" class="tv-ib" id="tvGear" aria-label="Darstellung einstellen" aria-pressed="false" title="Darstellung: Kerzenfarben, Hintergrund, Volumen"><svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg></button>
+      <button type="button" class="tv-ib" id="tvClose" aria-label="Chart-Fenster schließen" title="Schließen (Esc)"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  <div class="tv-main">
+    <div class="tv-tools" role="toolbar" aria-label="Zeichenwerkzeuge">
+      <button type="button" class="tv-ib" data-tool="cursor" aria-pressed="true" aria-label="Fadenkreuz" title="Fadenkreuz: verschieben, zoomen, Zeichnung auswählen (V)"><svg viewBox="0 0 24 24"><path d="M12 3v7M12 14v7M3 12h7M14 12h7"/></svg></button>
+      <button type="button" class="tv-ib" data-tool="h" aria-pressed="false" aria-label="Horizontale Linie" title="Horizontale Linie (H)"><svg viewBox="0 0 24 24"><path d="M3 12h7M14 12h7"/><circle cx="12" cy="12" r="2"/></svg></button>
+      <button type="button" class="tv-ib" data-tool="rect" aria-pressed="false" aria-label="Rechteck" title="Rechteck: von Ecke zu Ecke ziehen (R)"><svg viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="10" rx="1"/><circle cx="5" cy="7" r="1.6"/><circle cx="19" cy="17" r="1.6"/></svg></button>
+      <button type="button" class="tv-ib" data-tool="trend" aria-pressed="false" aria-label="Trendlinie" title="Trendlinie (T)"><svg viewBox="0 0 24 24"><path d="M6.3 16.7L17.7 7.3"/><circle cx="5" cy="18" r="1.8"/><circle cx="19" cy="6" r="1.8"/></svg></button>
+      <span class="tv-sep" aria-hidden="true"></span>
+      <button type="button" class="tv-ib" id="tvMagnet" aria-pressed="true" aria-label="Magnet" title="Magnet: Punkte rasten an Hoch, Tief, Eröffnung und Schluss ein (M)"><svg viewBox="0 0 24 24"><path d="M6 4v8a6 6 0 0 0 12 0V4"/><path d="M6 8h4M14 8h4M10 4v8a2 2 0 0 0 4 0V4"/></svg></button>
+      <button type="button" class="tv-ib" data-tool="erase" aria-pressed="false" aria-label="Radierer" title="Radierer: Zeichnung antippen, um sie zu löschen"><svg viewBox="0 0 24 24"><path d="M14.5 4.5l5 5-8.5 8.5H7L4.5 15.5a1.5 1.5 0 0 1 0-2.1z"/><path d="M10 9l5 5M9 20h11"/></svg></button>
+      <button type="button" class="tv-ib" id="tvUndo" aria-label="Rückgängig" title="Rückgängig (Strg+Z)"><svg viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button>
+      <button type="button" class="tv-ib" id="tvClear" aria-label="Alle Zeichnungen löschen" title="Alle Zeichnungen auf diesem Bild löschen"><svg viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>
+      <span class="tv-sep" aria-hidden="true"></span>
+      <button type="button" class="tv-ib" id="tvBotBtn" aria-pressed="true" aria-label="Linien des Bots zeigen" title="Linien des Bots ein- und ausblenden"><svg viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></button>
+      <button type="button" class="tv-ib" id="tvVol" aria-pressed="true" aria-label="Volumen zeigen" title="Volumen ein- und ausblenden"><svg viewBox="0 0 24 24"><path d="M5 20v-5M10 20V9M15 20v-8M20 20V5"/></svg></button>
+      <button type="button" class="tv-ib" id="tvFit" aria-label="Ganzes Bild zeigen" title="Ganzes Bild zeigen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+    <div class="tv-chart" id="tvChart">
+      <div class="tv-legend" id="tvLeg" aria-live="off"></div>
+      <svg class="tv-draw" id="tvDraw" aria-hidden="true"></svg>
+      <button type="button" class="tv-del" id="tvDel" hidden><svg viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>Löschen</button>
+      <div class="tv-err" id="tvErr" hidden><div><b>Das Chart-Fenster konnte nicht laden.</b>Die Chart-Bibliothek kommt von cdn.jsdelivr.net. Prüfe die Verbindung und öffne das Bild noch einmal.</div></div>
+    </div>
+    <div class="tv-set" id="tvSet" hidden></div>
+  </div>
+  <div class="tv-bot" id="tvBar"></div>
 </div>
 
 <script>
@@ -464,7 +604,9 @@ function renderHead(st, idx, si) {
     ["Muster", "Rechteck", "ein Muster, perfekt gemacht"],
     ["Aktien", "50", "die mit dem meisten Handel"],
     ["Trades gefunden", n == null ? "—" : n.toLocaleString("de-DE"), n == null ? "kommt mit dem ersten Lauf" : "5 und 15 Min, alle Einstiege"],
-    ["Sichtprüfung", sv.done ? Math.round((sv.ja / sv.done) * 100) + " % ja" : "—", sv.total ? `${sv.done} von ${sv.total} angesehen` : "Bilder kommen mit dem Lauf"],
+    si && si.art === "trefferquote"
+      ? ["Tage mit Rechteck", sv.done ? String(sv.ja) : "—", sv.total ? `${sv.done} von ${sv.total} Tagen angesehen` : "Trefferquote"]
+      : ["Sichtprüfung", sv.done ? Math.round((sv.ja / sv.done) * 100) + " % ja" : "—", sv.total ? `${sv.done} von ${sv.total} angesehen` : "Bilder kommen mit dem Lauf"],
   ];
   $("strip").innerHTML = cells.map(([k, v, s]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v ${/^\d|—/.test(v) ? "num" : "txt"}">${esc(v)}</div><div class="n">${esc(s)}</div></div>`).join("");
   if (EX) $("exBanner").hidden = false;
@@ -579,9 +721,10 @@ function scales(T, cut, W, H, m) {
   const n = T.kerzen.length, slot = (W - m.l - m.r) / n;
   return { K, X: (i) => m.l + slot * (i + 0.5), Y: (v) => m.t + (1 - (v - lo) / (hi - lo)) * H, slot, lo, hi };
 }
-function drawTrade(host, T, mode, big) {
+function drawTrade(host, T, mode, big, mine) {
   host.textContent = "";
-  const cut = mode === "aus" ? T.kerzen.length - 1 : T.entscheidung;
+  const dayMode = mode === "tag";
+  const cut = mode === "aus" || dayMode ? T.kerzen.length - 1 : T.entscheidung;
   const W = big ? Math.max(320, Math.round(host.clientWidth || 640)) : 300;
   const small = big && W < 600;
   const m = big ? { l: 8, r: small ? 78 : 112, t: 18, b: 22 } : { l: 4, r: 4, t: 6, b: 6 };
@@ -596,17 +739,17 @@ function drawTrade(host, T, mode, big) {
   const hasBox = T.oben != null && T.unten != null && T.box_von != null;
   const bx0 = hasBox ? X(T.box_von) - slot / 2 : 0, bx1 = hasBox ? X(T.box_bis) + slot / 2 : 0;
   if (hasBox) S("rect", { x: bx0, y: Y(T.oben), width: bx1 - bx0, height: Math.max(1, Y(T.unten) - Y(T.oben)), style: "fill:rgba(var(--accent-rgb),.08)" }, svg);
-  S("rect", { x: X(T.entscheidung) - slot * 0.6, y: m.t, width: slot * 1.2, height: PH, style: "fill:rgba(var(--accent-rgb),.10)" }, svg);
+  if (!dayMode) S("rect", { x: X(T.entscheidung) - slot * 0.6, y: m.t, width: slot * 1.2, height: PH, style: "fill:rgba(var(--accent-rgb),.10)" }, svg);
   const lineEnd = mode === "aus" ? X(T.kerzen.length - 1) : X(T.entscheidung);
   if (hasBox && T.toleranz) for (const p of [T.oben, T.unten]) S("rect", { x: bx0, y: Y(p + T.toleranz), width: Math.max(1, lineEnd - bx0), height: Math.max(1, Y(p - T.toleranz) - Y(p + T.toleranz)), style: "fill:rgba(var(--accent-rgb),.16)" }, svg);
   if (hasBox) for (const p of [T.oben, T.unten]) S("line", { x1: bx0, x2: lineEnd, y1: Y(p), y2: Y(p), style: `stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
-  {
+  if (!dayMode) {
     const x0 = X(T.entscheidung), x1 = mode === "aus" ? X(T.kerzen.length - 1) : Math.min(W - m.r, X(T.entscheidung) + slot * 4);
     for (const [p, c] of [[T.ziel, "up"], [T.stop, "down"]]) if (p != null) S("line", { x1: x0, x2: x1, y1: Y(p), y2: Y(p), style: `stroke:var(--${c});stroke-width:${big ? 1.5 : 1.2};stroke-dasharray:5 4` }, svg);
   }
   const cw = Math.max(1, slot * 0.62);
   K.forEach((k, i) => {
-    const [, o, h, l, c] = k, up = c >= o, cc = up ? "var(--up)" : "var(--down)";
+    const [, o, h, l, c] = k, up = c >= o, cc = up ? "var(--cu,var(--up))" : "var(--cd,var(--down))";
     S("line", { x1: X(i), x2: X(i), y1: Y(h), y2: Y(l), style: `stroke:${cc};stroke-width:${big ? 1 : 0.8}` }, svg);
     const y0 = Y(Math.max(o, c)), y1 = Y(Math.min(o, c));
     S("rect", { x: X(i) - cw / 2, y: y0, width: cw, height: Math.max(big ? 1 : 0.8, y1 - y0), rx: big ? 1 : 0, style: `fill:${cc}` }, svg);
@@ -614,6 +757,12 @@ function drawTrade(host, T, mode, big) {
   for (const b of T.beruehrungen || []) if (b.i <= cut) S("circle", { cx: X(b.i), cy: Y(b.p), r: big ? 5 : 3, style: `fill:none;stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
   if (T.einstieg_i != null && T.einstieg_i <= cut + 1) S("circle", { cx: X(Math.min(T.einstieg_i, T.kerzen.length - 1)), cy: Y(T.einstieg_p), r: big ? 4.5 : 3, style: "fill:var(--ink);stroke:var(--raised);stroke-width:1.5" }, svg);
   if (mode === "aus" && T.ausstieg_i != null) S("circle", { cx: X(T.ausstieg_i), cy: Y(T.ausstieg_p), r: big ? 5 : 3.4, style: `fill:var(--${T.r > 0 ? "up" : "down"});stroke:var(--raised);stroke-width:1.5` }, svg);
+  for (const d of mine || []) {
+    const st = `stroke:var(--tv-draw-c,#ff9800);stroke-width:${big ? 1.7 : 1.2}`, inr = (p) => p >= lo && p <= hi;
+    if (d.t === "h") { if (inr(d.a.p)) S("line", { x1: m.l, x2: W - m.r, y1: Y(d.a.p), y2: Y(d.a.p), style: st }, svg); }
+    else if (d.t === "r") { const x0 = X(Math.min(d.a.i, d.b.i)), x1 = X(Math.max(d.a.i, d.b.i)), y0 = Y(Math.min(hi, Math.max(d.a.p, d.b.p))), y1 = Y(Math.max(lo, Math.min(d.a.p, d.b.p))); S("rect", { x: x0, y: y0, width: Math.max(1, x1 - x0), height: Math.max(1, y1 - y0), style: st + ";fill:var(--tv-draw-c,#ff9800);fill-opacity:.13" }, svg); }
+    else if (inr(d.a.p) && inr(d.b.p)) S("line", { x1: X(d.a.i), x2: X(d.b.i), y1: Y(d.a.p), y2: Y(d.b.p), style: st }, svg);
+  }
   if (!big) return;
   const labs = [[T.ziel, "Ziel", "up"], [T.oben, "Oben", "accent"], [T.unten, "Unten", "accent"], [T.stop, "Stop", "down"]].filter((x) => x[0] != null).map(([p, t, c]) => ({ p, t, c, y: Y(p) })).sort((a, b) => a.y - b.y);
   for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 26);
@@ -624,7 +773,7 @@ function drawTrade(host, T, mode, big) {
     const b = S("text", { x: lx + 13, y: l.y + 11, class: "val" }, svg); b.textContent = nf(l.p);
   }
   const vt = m.t + PH + GAP, vmax = Math.max(1, ...K.map((k) => k[5] || 0));
-  K.forEach((k, i) => { const h = ((k[5] || 0) / vmax) * VH; S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(0.5, h), style: `fill:${i === T.entscheidung ? "var(--accent)" : "var(--hair)"}` }, svg); });
+  K.forEach((k, i) => { const h = ((k[5] || 0) / vmax) * VH; S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(0.5, h), style: `fill:${i === T.entscheidung && !dayMode ? "var(--accent)" : "var(--hair)"}` }, svg); });
   for (const [i, t] of [[0, K[0][0]], [Math.floor(K.length / 2), K[Math.floor(K.length / 2)][0]], [K.length - 1, K[K.length - 1][0]]]) {
     const e = S("text", { x: X(i), y: H - 6, "text-anchor": i === 0 ? "start" : i === K.length - 1 ? "end" : "middle" }, svg); e.textContent = t;
   }
@@ -645,7 +794,7 @@ function drawTrade(host, T, mode, big) {
 
 /* ------------------------------------------------------------ Trades */
 const F = { tf: "15", en: "A", res: "alle", note: "alle", view: "moment" };
-let IDX = null, LOADED = {}, SHOWN = 60, CUR = null;
+let IDX = null, LOADED = {}, SHOWN = 60, CUR = null, GLIST = [];
 function seg(id, key, cb) {
   for (const b of $(id).querySelectorAll("button")) b.addEventListener("click", () => {
     for (const o of $(id).querySelectorAll("button")) o.setAttribute("aria-pressed", String(o === b));
@@ -664,6 +813,7 @@ async function renderGallery(reset) {
   if (reset) SHOWN = 60;
   const all = await groupTrades();
   const list = all.filter((t) => (F.res === "plus" ? t.r > 0 : F.res === "minus" ? t.r <= 0 : true) && (F.note === "alle" ? true : t.note === F.note));
+  GLIST = list;
   $("trNote").textContent = IDX ? `${list.length.toLocaleString("de-DE")} Trades in dieser Auswahl` : "";
   const gal = $("gallery"); gal.textContent = "";
   if (!list.length) {
@@ -684,7 +834,7 @@ async function renderGallery(reset) {
   $("moreBtn").hidden = list.length <= SHOWN;
 }
 const ausgang = (a) => ({ ziel: "Ziel", stop: "Stop", tagesende: "Tagesende" }[a] || a || "—");
-function openTrade(t) {
+function openTrade(t, quiet) {
   CUR = t; $("detail").hidden = false;
   $("dTitle").textContent = `${t.symbol} · Rechteck ${t.richtung} · ${dayDE(t.tag)}`;
   const chips = [`<span class="chip run">Einstieg ${esc(t.einstieg)} · ${esc(ENTRY[t.einstieg].t)}</span>`, `<span class="chip">${t.zeitebene} Min</span>`, `<span class="chip ${t.note === "A" ? "good" : t.note === "C" ? "bad" : "part"}">Note ${esc(t.note)}</span>`];
@@ -695,8 +845,11 @@ function openTrade(t) {
   if (F.view === "aus") facts.push(["Ergebnis", `${sg(t.r)} R nach Kosten (${sg(t.r_vor)} R vor Kosten)`]);
   $("dFacts").innerHTML = facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
   for (const b of document.querySelectorAll(".tile")) b.setAttribute("aria-pressed", String(b.dataset.id === t.id));
-  $("detail").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  if (!quiet) $("detail").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
 }
+function openTradeBig() { if (!CUR) return; const L = GLIST.length ? GLIST : [CUR]; tvOpen("trade", L, Math.max(0, L.findIndex((x) => x.id === CUR.id))); }
+$("dZoom").addEventListener("click", openTradeBig);
+$("dChart").addEventListener("click", openTradeBig);
 let rw = 0;
 new ResizeObserver(() => { const w = Math.round($("dChart").clientWidth); if (CUR && w > 0 && Math.abs(w - rw) > 2) { rw = w; drawTrade($("dChart"), CUR, F.view, true); } }).observe($("dChart"));
 
@@ -710,33 +863,535 @@ function sichtSummary(si) {
   let ja = 0, nein = 0, un = 0; for (const b of B) { const v = A[b.id]; if (v === "ja") ja++; else if (v === "nein") nein++; else if (v === "unsicher") un++; }
   return { total: B.length, ja, nein, un, done: ja + nein + un };
 }
-function renderSicht() {
-  const box = $("sichtBox");
-  const B = (SI && SI.bilder) || [];
-  if (!B.length) { box.innerHTML = `<div class="void"><b>Noch keine Bilder</b>Die Sichtprüfung startet mit der strengen Erkennung. Dann siehst du hier 30 zufällige Rechtecke.</div>`; $("siNote").textContent = ""; return; }
-  const A = SANS[SI.id] || (SANS[SI.id] = {});
-  const sm = sichtSummary(SI);
-  $("siNote").textContent = `${sm.done} von ${sm.total} · ${sm.done ? Math.round((sm.ja / sm.done) * 100) : 0} % ja`;
-  const next = B.find((b) => !A[b.id]);
-  if (!next) {
-    const neinIds = B.filter((b) => A[b.id] === "nein").map((b) => b.id);
-    const unsIds = B.filter((b) => A[b.id] === "unsicher").map((b) => b.id);
-    const txt = `Sichtprüfung ${SI.muster || "Rechteck"} (${SI.id}): ${sm.total} Bilder, ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un} → ${Math.round((sm.ja / sm.total) * 100)} % ja.` + (neinIds.length ? `\nNein: ${neinIds.join(", ")}` : "") + (unsIds.length ? `\nUnsicher: ${unsIds.join(", ")}` : "");
-    box.innerHTML = `<div class="q">Fertig: ${Math.round((sm.ja / sm.total) * 100)} % „ja“</div><p class="dim">Kopiere das Ergebnis und schick es im Chat oder an VS Code. Es wird dort ins Logbuch übernommen.</p><pre class="out" id="sOut">${esc(txt)}</pre>
-      <div class="btns"><button type="button" class="btn" id="sCopy">Ergebnis kopieren</button><button type="button" class="btn mid" id="sReset">Neu anfangen</button></div>`;
-    $("sCopy").addEventListener("click", () => { const done = () => ($("sCopy").textContent = "Kopiert"); try { navigator.clipboard.writeText(txt).then(done, () => sel()); } catch (e) { sel(); } function sel() { const r = document.createRange(); r.selectNodeContents($("sOut")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } });
-    $("sReset").addEventListener("click", () => { SANS[SI.id] = {}; ssave(SANS); renderSicht(); renderHeadAgain(); });
-    return;
+let SPOS = null, SRESET = false;
+const ICON_ZOOM = '<svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>';
+const SLEAD = {
+  praezision: "Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen, das Bild endet an der Signalkerze, ohne Ausgang. Gerechnet wird erst, wenn mindestens 80 % „ja“ sind. Groß geöffnet kannst du zoomen und selbst Linien einzeichnen.",
+  trefferquote: "Hier siehst du ganze Handelstage, ohne die Linien des Bots. Sag, ob du an diesem Tag ein sauberes Rechteck siehst. Öffne das Bild groß und zeichne das Rechteck ein, dann wissen wir genau, welches du meinst. „Nein“ ist hier eine normale Antwort, es gibt keine Grenze.",
+};
+function sichtText(B, A, sm, TQ) {
+  const ids = (v) => B.filter((b) => A[b.id] === v).map((b) => b.id);
+  if (!TQ) {
+    let t = `Sichtprüfung ${SI.muster || "Rechteck"} (${SI.id}): ${sm.total} Bilder, ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un} → ${Math.round((sm.ja / sm.total) * 100)} % ja.`;
+    if (ids("nein").length) t += `\nNein: ${ids("nein").join(", ")}`;
+    if (ids("unsicher").length) t += `\nUnsicher: ${ids("unsicher").join(", ")}`;
+    return t;
   }
-  const i = B.indexOf(next);
-  box.innerHTML = `<div class="sbar"><i style="width:${(sm.done / sm.total) * 100}%"></i></div>
-    <div class="q">Bild ${i + 1} von ${B.length}: ${esc(SI.frage || "Ist das ein sauberes Rechteck?")}</div>
-    <div class="dim">${esc(next.symbol)} · ${esc(dayDE(next.tag))} · ${next.zeitebene} Min · ${SI.art === "trefferquote" ? "ohne die Linien des Bots" : "das Bild endet an der Signalkerze"}</div>
-    <div class="chart" id="sChart"></div>
-    <div class="btns"><button type="button" class="btn ok" data-a="ja">Ja, sauber</button><button type="button" class="btn no" data-a="nein">Nein</button><button type="button" class="btn mid" data-a="unsicher">Unsicher</button></div>`;
-  drawTrade($("sChart"), next, "moment", true);
-  for (const b of box.querySelectorAll("[data-a]")) b.addEventListener("click", () => { A[next.id] = b.dataset.a; ssave(SANS); renderSicht(); renderHeadAgain(); });
+  let t = `Trefferquote ${SI.muster || "Rechteck"} (${SI.id}): ${sm.total} Tage, Rechteck ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un}.`;
+  if (ids("ja").length) t += `\nJa: ${ids("ja").join(", ")}`;
+  if (ids("unsicher").length) t += `\nUnsicher: ${ids("unsicher").join(", ")}`;
+  const L = [];
+  for (const b of B) { const D = DRAW[SI.id + "/" + b.id] || []; if (D.length && A[b.id] !== "nein") L.push(`${b.id}: ${D.map((d) => beschreibe(d, b)).join("; ")}`); }
+  if (L.length) t += `\nEingezeichnet:\n${L.join("\n")}`;
+  return t;
 }
+function renderSicht() {
+  const box = $("sichtBox"), B = (SI && SI.bilder) || [], TQ = !!(SI && SI.art === "trefferquote");
+  $("siLead").textContent = TQ ? SLEAD.trefferquote : SLEAD.praezision;
+  if (!B.length) { box.innerHTML = `<div class="void"><b>Noch keine Bilder</b>Die Sichtprüfung startet mit der strengen Erkennung. Dann siehst du hier 30 zufällige Rechtecke.</div>`; $("siNote").textContent = ""; return; }
+  const A = SANS[SI.id] || (SANS[SI.id] = {}), sm = sichtSummary(SI);
+  $("siNote").textContent = TQ ? `${sm.done} von ${sm.total} · ${sm.ja} mit Rechteck` : `${sm.done} von ${sm.total} · ${sm.done ? Math.round((sm.ja / sm.done) * 100) : 0} % ja`;
+  const nextAfter = (i) => { for (let k = 1; k <= B.length; k++) { const j = (i + k) % B.length; if (!A[B[j].id]) return j; } return -1; };
+  const i = SPOS != null && SPOS >= 0 && SPOS < B.length ? SPOS : B.findIndex((b) => !A[b.id]);
+  const foot = SRESET
+    ? `<div class="sfoot"><span>Alle Antworten und Zeichnungen dieser Runde löschen?</span><button type="button" class="linkbtn warn" id="sResetYes">Ja, alles löschen</button><button type="button" class="linkbtn" id="sResetNo">Abbrechen</button></div>`
+    : `<div class="sfoot"><button type="button" class="linkbtn" id="sReset">Runde neu beginnen</button></div>`;
+  if (i < 0) {
+    const txt = sichtText(B, A, sm, TQ);
+    const head = TQ ? `Fertig: An ${sm.ja} von ${sm.total} Tagen siehst du ein Rechteck` : `Fertig: ${Math.round((sm.ja / sm.total) * 100)} % „ja“`;
+    box.innerHTML = `<div class="q">${esc(head)}</div><p class="dim">Kopiere das Ergebnis und schick es im Chat oder an VS Code. Es wird dort ins Logbuch übernommen.</p><pre class="out" id="sOut">${esc(txt)}</pre>
+      <div class="btns"><button type="button" class="btn" id="sCopy">Ergebnis kopieren</button><button type="button" class="btn mid" id="sEdit">Antworten ansehen und ändern</button></div>${foot}`;
+    $("sCopy").addEventListener("click", () => { const done = () => ($("sCopy").textContent = "Kopiert"); try { navigator.clipboard.writeText(txt).then(done, () => sel()); } catch (e) { sel(); } function sel() { const r = document.createRange(); r.selectNodeContents($("sOut")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } });
+    $("sEdit").addEventListener("click", () => { SPOS = 0; renderSicht(); });
+  } else {
+    const b = B[i], cur = A[b.id], mine = DRAW[SI.id + "/" + b.id] || [];
+    const nav = (i > 0 ? `<button type="button" class="btn mid" id="sPrev">‹ Zurück</button>` : "") + (cur && i < B.length - 1 ? `<button type="button" class="btn mid" id="sNext">Weiter ›</button>` : "");
+    box.innerHTML = `<div class="sbar"><i style="width:${(sm.done / sm.total) * 100}%"></i></div>
+      <div class="q">Bild ${i + 1} von ${B.length}: ${esc(SI.frage || "Ist das ein sauberes Rechteck?")}</div>
+      <div class="dim">${esc(b.symbol)} · ${esc(dayDE(b.tag))} · ${b.zeitebene} Min · ${TQ ? "ganzer Tag, ohne die Linien des Bots" : "das Bild endet an der Signalkerze"}${cur ? ` · deine Antwort: ${esc(cur)}` : ""}</div>
+      ${mine.length ? `<div class="mine">Deine Zeichnung: <b>${esc(mine.map((d) => beschreibe(d, b)).join("; "))}</b></div>` : ""}
+      <div class="zoomwrap"><div class="chart" id="sChart"></div><button type="button" class="zoombtn" id="sZoom">${ICON_ZOOM}Groß öffnen und zeichnen</button></div>
+      <div class="btns">${nav}<button type="button" class="btn ok" data-a="ja" aria-pressed="${cur === "ja"}">${TQ ? "Ja, Rechteck" : "Ja, sauber"}</button><button type="button" class="btn no" data-a="nein" aria-pressed="${cur === "nein"}">Nein</button><button type="button" class="btn mid" data-a="unsicher" aria-pressed="${cur === "unsicher"}">Unsicher</button></div>${foot}`;
+    drawTrade($("sChart"), b, TQ ? "tag" : "moment", true, mine);
+    $("sChart").addEventListener("click", () => tvOpen("sicht", B, i));
+    $("sZoom").addEventListener("click", (e) => { e.stopPropagation(); tvOpen("sicht", B, i); });
+    if ($("sPrev")) $("sPrev").addEventListener("click", () => { SPOS = i - 1; renderSicht(); });
+    if ($("sNext")) $("sNext").addEventListener("click", () => { SPOS = i + 1; renderSicht(); });
+    for (const x of box.querySelectorAll("[data-a]")) x.addEventListener("click", () => {
+      A[b.id] = x.dataset.a; ssave(SANS);
+      const n = nextAfter(i); SPOS = n >= 0 ? null : i + 1 < B.length && SPOS != null ? i + 1 : null;
+      renderSicht(); renderHeadAgain();
+    });
+  }
+  if ($("sReset")) $("sReset").addEventListener("click", () => { SRESET = true; renderSicht(); });
+  if ($("sResetNo")) $("sResetNo").addEventListener("click", () => { SRESET = false; renderSicht(); });
+  if ($("sResetYes")) $("sResetYes").addEventListener("click", () => {
+    SANS[SI.id] = {}; ssave(SANS);
+    for (const k of Object.keys(DRAW)) if (k.startsWith(SI.id + "/")) delete DRAW[k];
+    dsave(); SPOS = null; SRESET = false; renderSicht(); renderHeadAgain();
+  });
+}
+/* ------------------------------------------------------------ Kerzenfarben (Chart-Fenster und kleine Bilder) */
+const CKEY = "lernhub-chart-v1";
+const CPRESET = {
+  tradingview: { n: "TradingView", up: "#089981", down: "#f23645" },
+  klassisch: { n: "Klassisch", up: "#26a69a", down: "#ef5350" },
+  seite: { n: "Wie die Seite", up: null, down: null },
+};
+const CDEF = {
+  preset: "tradingview", body: true, border: true, wick: true, hohl: false,
+  upBody: "#089981", downBody: "#f23645", upBorder: "#089981", downBorder: "#f23645", upWick: "#089981", downWick: "#f23645",
+  thema: "auto", raster: true, volumen: true, zeichnung: "#ff9800", magnet: true, klein: true,
+};
+let CS = (() => { try { return Object.assign({}, CDEF, JSON.parse(localStorage.getItem(CKEY) || "{}")); } catch (e) { return Object.assign({}, CDEF); } })();
+const csave = () => { try { localStorage.setItem(CKEY, JSON.stringify(CS)); } catch (e) { /* ohne Speicher geht es trotzdem */ } };
+const cssv = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const rgba = (hex, a) => { const m = /^#?([0-9a-f]{6})$/i.exec(String(hex || "").trim()); if (!m) return hex; const n = parseInt(m[1], 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; };
+const inkOn = (hex) => { const m = /^#?([0-9a-f]{6})$/i.exec(String(hex || "").trim()); if (!m) return "#ffffff"; const n = parseInt(m[1], 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255; return 0.299 * r + 0.587 * g + 0.114 * b > 150 ? "#131722" : "#ffffff"; };
+function kerzenFarben() {
+  if (CS.preset === "seite") { const u = cssv("--up") || "#08a742", d = cssv("--down") || "#e02f24"; return { upBody: u, downBody: d, upBorder: u, downBorder: d, upWick: u, downWick: d }; }
+  return { upBody: CS.upBody, downBody: CS.downBody, upBorder: CS.upBorder, downBorder: CS.downBorder, upWick: CS.upWick, downWick: CS.downWick };
+}
+function kleineFarben() {
+  const r = document.documentElement.style;
+  r.setProperty("--tv-draw-c", CS.zeichnung);
+  if (!CS.klein || CS.preset === "seite") { r.removeProperty("--cu"); r.removeProperty("--cd"); return; }
+  const f = kerzenFarben();
+  r.setProperty("--cu", CS.body && !CS.hohl ? f.upBody : f.upBorder);
+  r.setProperty("--cd", CS.body ? f.downBody : f.downBorder);
+}
+const seiteDunkel = () => { const t = document.documentElement.getAttribute("data-theme"); return t === "dark" || (t !== "light" && matchMedia("(prefers-color-scheme: dark)").matches); };
+const tvDunkel = () => CS.thema === "dunkel" || (CS.thema === "auto" && seiteDunkel());
+const TVT = {
+  hell: { bg: "#ffffff", grid: "#f0f3fa", text: "#131722", line: "#e0e3eb", cross: "#9598a1", label: "#131722" },
+  dunkel: { bg: "#131722", grid: "#1f2431", text: "#d1d4dc", line: "#2a2e39", cross: "#758696", label: "#363a45" },
+};
+
+/* ------------------------------------------------------------ Zeichnungen (je Bild, nur in diesem Browser) */
+const DKEY = "lernhub-zeichnung-v1";
+let DRAW = (() => { try { return JSON.parse(localStorage.getItem(DKEY) || "{}"); } catch (e) { return {}; } })();
+const dsave = () => { try { localStorage.setItem(DKEY, JSON.stringify(DRAW)); } catch (e) { /* ohne Speicher geht es trotzdem */ } };
+const uid = () => Math.random().toString(36).slice(2, 9);
+function beschreibe(d, b) {
+  const K = b.kerzen, ti = (i) => K[Math.max(0, Math.min(K.length - 1, Math.round(i)))][0];
+  if (d.t === "h") return `Linie ${nf(d.a.p)}`;
+  if (d.t === "r") { const i0 = Math.min(d.a.i, d.b.i), i1 = Math.max(d.a.i, d.b.i); return `Kasten ${ti(i0)}–${ti(i1)}, ${nf(Math.min(d.a.p, d.b.p))} bis ${nf(Math.max(d.a.p, d.b.p))}`; }
+  return `Trendlinie ${ti(d.a.i)} ${nf(d.a.p)} → ${ti(d.b.i)} ${nf(d.b.p)}`;
+}
+
+/* ------------------------------------------------------------ Chart-Fenster */
+const LWC_URL = "https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.3/dist/lightweight-charts.standalone.production.js";
+let lwcP = null;
+function lwc() {
+  if (window.LightweightCharts) return Promise.resolve(window.LightweightCharts);
+  if (!lwcP) lwcP = new Promise((res, rej) => {
+    const s = document.createElement("script"); s.src = LWC_URL; s.async = true; s.crossOrigin = "anonymous";
+    s.onload = () => (window.LightweightCharts ? res(window.LightweightCharts) : rej(new Error("leer")));
+    s.onerror = () => { lwcP = null; s.remove(); rej(new Error("laden")); };
+    document.head.appendChild(s);
+  });
+  return lwcP;
+}
+const ZT = (tag, hm) => { const [y, m, d] = String(tag || "2000-01-01").slice(0, 10).split("-").map(Number); const [h, mi] = String(hm).split(":").map(Number); return Date.UTC(y, (m || 1) - 1, d || 1, h || 0, mi || 0) / 1000; };
+const HM = (t) => new Date(Number(t) * 1000).toISOString().slice(11, 16);
+const vol = (v) => (v == null ? "—" : v >= 1e6 ? nf(v / 1e6, 2) + " Mio" : v >= 1e3 ? nf(v / 1e3, 1) + " Tsd" : String(v));
+const V = { open: false, LC: null, chart: null, cs: null, vs: null, kind: "", items: [], idx: 0, mode: "moment", tag: false, T: null, cut: 0, key: "",
+  tool: "cursor", sel: null, op: null, hist: [], bot: true, sig: "", raf: 0, dirty: true, opener: null, pushed: false, tIdx: new Map(), ref: [0, 1], set: false };
+
+function tvOpts() {
+  const LC = V.LC, th = tvDunkel() ? TVT.dunkel : TVT.hell;
+  return {
+    layout: { background: { type: "solid", color: th.bg }, textColor: th.text, fontSize: 12, fontFamily: "-apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif" },
+    grid: { vertLines: { color: th.grid, visible: CS.raster }, horzLines: { color: th.grid, visible: CS.raster } },
+    crosshair: { mode: LC.CrosshairMode.Normal, vertLine: { color: th.cross, labelBackgroundColor: th.label, width: 1, style: LC.LineStyle.Dashed }, horzLine: { color: th.cross, labelBackgroundColor: th.label, width: 1, style: LC.LineStyle.Dashed } },
+    rightPriceScale: { borderColor: th.line, scaleMargins: { top: 0.1, bottom: CS.volumen ? 0.22 : 0.08 } },
+    timeScale: { borderColor: th.line, timeVisible: true, secondsVisible: false, rightOffset: 4, tickMarkFormatter: (t) => HM(t) },
+    localization: { locale: "de-DE", priceFormatter: (p) => nf(p), timeFormatter: (t) => HM(t) },
+  };
+}
+function candleOpts() {
+  const f = kerzenFarben(), T0 = "rgba(0,0,0,0)";
+  return { upColor: CS.body && !CS.hohl ? f.upBody : T0, downColor: CS.body ? f.downBody : T0, borderVisible: CS.border || CS.hohl,
+    borderUpColor: f.upBorder, borderDownColor: f.downBorder, wickVisible: CS.wick, wickUpColor: f.upWick, wickDownColor: f.downWick, priceLineVisible: false, lastValueVisible: true };
+}
+function tvTheme() {
+  const dark = tvDunkel(), el = $("tv");
+  el.classList.toggle("is-dark", dark); el.classList.toggle("is-light", !dark);
+  if (V.chart) { V.chart.applyOptions(tvOpts()); V.cs.applyOptions(candleOpts()); }
+}
+async function tvBuild() {
+  if (V.chart) return true;
+  try { V.LC = await lwc(); } catch (e) { return false; }
+  const host = $("tvChart");
+  V.chart = V.LC.createChart(host, Object.assign({ autoSize: true }, tvOpts()));
+  V.cs = V.chart.addCandlestickSeries(candleOpts());
+  V.vs = V.chart.addHistogramSeries({ priceFormat: { type: "volume" }, priceScaleId: "vol", lastValueVisible: false, priceLineVisible: false });
+  V.chart.priceScale("vol").applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
+  V.chart.subscribeCrosshairMove(tvLegend);
+  for (const id of ["tvLeg", "tvDraw", "tvDel", "tvErr"]) host.appendChild($(id));
+  return true;
+}
+function tvSetData() {
+  const T = V.T, f = kerzenFarben(), K = T.kerzen.slice(0, V.cut + 1);
+  V.tIdx = new Map(); let lo = Infinity, hi = -Infinity;
+  const C = K.map((k, i) => { const t = ZT(T.tag, k[0]); V.tIdx.set(t, i); lo = Math.min(lo, k[3]); hi = Math.max(hi, k[2]); return { time: t, open: k[1], high: k[2], low: k[3], close: k[4] }; });
+  V.ref = [lo, hi];
+  V.cs.setData(C);
+  V.vs.setData(K.map((k, i) => ({ time: C[i].time, value: k[5] || 0, color: rgba(k[4] >= k[1] ? f.upBody : f.downBody, 0.4) })));
+  V.vs.applyOptions({ visible: CS.volumen });
+}
+function tvFit() { V.chart.timeScale().fitContent(); V.cs.priceScale().applyOptions({ autoScale: true }); V.dirty = true; }
+
+async function tvOpen(kind, items, idx) {
+  if (!items || !items.length) return;
+  V.opener = document.activeElement;
+  const el = $("tv"); el.hidden = false; document.documentElement.classList.add("tv-open"); V.open = true;
+  if (tipEl) tipEl.hidden = true;
+  V.kind = kind; V.items = items; V.tag = kind === "sicht" && !!SI && SI.art === "trefferquote"; V.bot = !V.tag;
+  tvTheme();
+  $("tvErr").hidden = true;
+  if (!(await tvBuild())) { $("tvErr").hidden = false; $("tvBar").textContent = ""; $("tvTitle").textContent = items[idx] ? items[idx].symbol : "—"; return; }
+  tvTheme(); tvTool("cursor"); tvShow(Math.max(0, Math.min(items.length - 1, idx)));
+  try { if (!V.pushed) { history.pushState({ tv: 1 }, ""); V.pushed = true; } } catch (e) { V.pushed = false; }
+  cancelAnimationFrame(V.raf); V.raf = requestAnimationFrame(tvLoop);
+  $("tvClose").focus({ preventScroll: true });
+}
+function tvClose(fromPop) {
+  if (!V.open) return;
+  V.open = false; V.op = null; cancelAnimationFrame(V.raf);
+  $("tv").hidden = true; $("tvSet").hidden = true; V.set = false; $("tvGear").setAttribute("aria-pressed", "false");
+  document.documentElement.classList.remove("tv-open");
+  if (!fromPop && V.pushed) { V.pushed = false; try { history.back(); } catch (e) { /* nichts */ } } else V.pushed = false;
+  if (V.kind === "sicht") renderSicht();
+  if (V.opener && V.opener.isConnected) V.opener.focus({ preventScroll: true });
+}
+addEventListener("popstate", () => { if (V.open) { V.pushed = false; tvClose(true); } });
+
+function tvShow(i) {
+  V.idx = i; V.T = V.items[i]; const T = V.T;
+  V.mode = V.kind === "sicht" ? (V.tag ? "tag" : "moment") : F.view;
+  V.cut = V.mode === "aus" || V.mode === "tag" ? T.kerzen.length - 1 : T.entscheidung;
+  V.key = (V.kind === "sicht" ? SI.id : "trade") + "/" + T.id;
+  V.sel = null; V.op = null; V.hist = [];
+  tvSetData(); tvFit(); tvHead(); tvBar(); tvLegend(null);
+}
+function tvHead() {
+  const T = V.T;
+  $("tvTitle").textContent = T.symbol;
+  $("tvTf").textContent = T.zeitebene + " Min";
+  const sub = [dayDE(T.tag)];
+  if (V.kind === "trade") sub.push(`Einstieg ${T.einstieg} · ${ENTRY[T.einstieg] ? ENTRY[T.einstieg].t : ""}`, `Note ${T.note}`, T.richtung === "long" ? "long" : "short");
+  else sub.push(V.tag ? "ganzer Tag, ohne die Linien des Bots" : "bis zur Signalkerze");
+  $("tvSub").textContent = sub.join(" · ");
+  const hasBox = T.oben != null && T.unten != null;
+  $("tvBotBtn").hidden = V.tag || !hasBox;
+  $("tvBotBtn").setAttribute("aria-pressed", String(V.bot));
+  $("tvVol").setAttribute("aria-pressed", String(CS.volumen));
+  $("tvMagnet").setAttribute("aria-pressed", String(CS.magnet));
+}
+function tvLegend(param) {
+  if (!V.T) return;
+  const d = param && param.seriesData ? param.seriesData.get(V.cs) : null;
+  let i = d ? V.tIdx.get(d.time) : V.cut; if (i == null) i = V.cut;
+  const k = V.T.kerzen[i], prev = i > 0 ? V.T.kerzen[i - 1][4] : k[1], ch = k[4] - prev, f = kerzenFarben();
+  const cc = k[4] >= k[1] ? f.upBody : f.downBody;
+  const o = `<div class="o"><span>${esc(k[0])}</span><span>E <b style="color:${cc}">${nf(k[1])}</b></span><span>H <b style="color:${cc}">${nf(k[2])}</b></span><span>T <b style="color:${cc}">${nf(k[3])}</b></span><span>S <b style="color:${cc}">${nf(k[4])}</b></span><span style="color:${ch >= 0 ? f.upBody : f.downBody}">${sg(ch)} (${sg(prev ? (ch / prev) * 100 : 0)} %)</span><span>Vol <b>${vol(k[5])}</b></span></div>`;
+  const keys = [];
+  if (V.bot && !V.tag && V.T.oben != null) keys.push(`<span><i style="--c:${cssv("--accent") || "#0a6bff"}"></i>Linien des Bots</span>`);
+  if ((DRAW[V.key] || []).length) keys.push(`<span><i style="--c:${CS.zeichnung}"></i>Deine Zeichnungen</span>`);
+  $("tvLeg").innerHTML = o + (keys.length ? `<div class="k">${keys.join("")}</div>` : "");
+}
+
+/* Antwort-Leiste unten */
+function tvBar() {
+  const bar = $("tvBar"), T = V.T;
+  if (V.kind === "sicht") {
+    const B = SI.bilder, A = SANS[SI.id] || (SANS[SI.id] = {}), cur = A[T.id], sm = sichtSummary(SI);
+    bar.innerHTML = `<div class="tv-q"><b>Bild ${V.idx + 1} von ${B.length}</b><span>${esc(SI.frage || "Ist das ein sauberes Rechteck?")}</span></div>
+      <div class="tv-ans">
+        <button type="button" class="btn mid nav" id="tvPrev" aria-label="Zurück"${V.idx === 0 ? " disabled" : ""}>‹<span class="lg">&nbsp;Zurück</span></button>
+        <button type="button" class="btn mid nav" id="tvNext" aria-label="Weiter"${V.idx >= B.length - 1 ? " disabled" : ""}><span class="lg">Weiter&nbsp;</span>›</button>
+        <button type="button" class="btn ok" data-a="ja" aria-pressed="${cur === "ja"}">${V.tag ? "Ja, Rechteck" : "Ja, sauber"} <kbd>J</kbd></button>
+        <button type="button" class="btn no" data-a="nein" aria-pressed="${cur === "nein"}">Nein <kbd>N</kbd></button>
+        <button type="button" class="btn mid" data-a="unsicher" aria-pressed="${cur === "unsicher"}">Unsicher <kbd>U</kbd></button>
+      </div>
+      <div class="tv-prog">${sm.done} von ${sm.total} beantwortet</div>`;
+    $("tvPrev").addEventListener("click", () => { if (V.idx > 0) tvShow(V.idx - 1); });
+    $("tvNext").addEventListener("click", () => { if (V.idx < B.length - 1) tvShow(V.idx + 1); });
+    for (const b of bar.querySelectorAll("[data-a]")) b.addEventListener("click", () => tvAnswer(b.dataset.a));
+  } else {
+    const n = V.items.length, aus = F.view === "aus";
+    bar.innerHTML = `<div class="tv-q"><b>Trade ${V.idx + 1} von ${n}</b><span>${aus ? `${sg(T.r)} R nach Kosten · ${esc(ausgang(T.ausgang))}` : "Moment der Entscheidung"}</span></div>
+      <div class="tv-ans">
+        <button type="button" class="btn mid nav" id="tvPrev" aria-label="Vorheriger Trade"${V.idx === 0 ? " disabled" : ""}>‹<span class="lg">&nbsp;Vorheriger</span></button>
+        <button type="button" class="btn mid nav" id="tvNext" aria-label="Nächster Trade"${V.idx >= n - 1 ? " disabled" : ""}><span class="lg">Nächster&nbsp;</span>›</button>
+        <button type="button" class="btn" id="tvView">${aus ? "Nur bis zur Entscheidung" : "Mit Ausgang zeigen"}</button>
+      </div>`;
+    $("tvPrev").addEventListener("click", () => tvStep(-1));
+    $("tvNext").addEventListener("click", () => tvStep(1));
+    $("tvView").addEventListener("click", () => {
+      F.view = F.view === "aus" ? "moment" : "aus";
+      for (const o of $("fView").querySelectorAll("button")) o.setAttribute("aria-pressed", String(o.dataset.v === F.view));
+      renderGallery(false); if (CUR) openTrade(CUR, true); tvShow(V.idx);
+    });
+  }
+}
+function tvStep(d) {
+  const j = V.idx + d; if (j < 0 || j >= V.items.length) return;
+  tvShow(j); if (V.kind === "trade") { CUR = V.T; openTrade(CUR, true); }
+}
+function tvAnswer(a) {
+  const A = SANS[SI.id] || (SANS[SI.id] = {}), was = A[V.T.id]; A[V.T.id] = a; ssave(SANS);
+  SPOS = null; renderHeadAgain();
+  const B = SI.bilder; let n = -1;
+  for (let k = 1; k <= B.length; k++) { const j = (V.idx + k) % B.length; if (!A[B[j].id]) { n = j; break; } }
+  if (n < 0 && was && V.idx < B.length - 1) { tvShow(V.idx + 1); return; }
+  if (n < 0) { tvClose(false); renderSicht(); $("sicht").scrollIntoView({ block: "start" }); return; }
+  tvShow(n);
+}
+
+/* Werkzeuge */
+function tvTool(t) {
+  V.tool = t; V.op = null;
+  for (const b of document.querySelectorAll(".tv-tools [data-tool]")) b.setAttribute("aria-pressed", String(b.dataset.tool === t));
+  const draw = t === "h" || t === "rect" || t === "trend";
+  $("tvChart").classList.toggle("drawing", draw); $("tvChart").classList.toggle("erasing", t === "erase");
+  $("tvChart").style.touchAction = draw ? "none" : "";
+  if (V.chart) V.chart.applyOptions({ handleScroll: !draw, handleScale: !draw });
+  if (draw || t === "erase") V.sel = null;
+  V.dirty = true;
+}
+function tvPush() { V.hist.push(JSON.stringify(DRAW[V.key] || [])); if (V.hist.length > 60) V.hist.shift(); }
+function tvList() { return DRAW[V.key] || (DRAW[V.key] = []); }
+function tvStore() { if (!(DRAW[V.key] || []).length) delete DRAW[V.key]; dsave(); V.dirty = true; tvLegend(null); }
+function tvUndo() { if (!V.hist.length) return; DRAW[V.key] = JSON.parse(V.hist.pop()); V.sel = null; V.op = null; tvStore(); }
+function tvDelete(id) { tvPush(); DRAW[V.key] = tvList().filter((d) => d.id !== id); if (V.sel === id) V.sel = null; tvStore(); }
+function tvPane() { const host = $("tvChart"); return { W: host.clientWidth, H: host.clientHeight, pw: Math.max(0, host.clientWidth - V.chart.priceScale("right").width()), ph: Math.max(0, host.clientHeight - V.chart.timeScale().height()) }; }
+function tvAt(e, snap) {
+  const r = $("tvChart").getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  let i = V.chart.timeScale().coordinateToLogical(x), p = V.cs.coordinateToPrice(y);
+  if (i == null || p == null) return null;
+  i = Number(i);
+  if (snap && CS.magnet) {
+    const k = Math.max(0, Math.min(V.cut, Math.round(i))), K = V.T.kerzen[k];
+    let best = null, bd = Infinity;
+    for (const v of [K[1], K[2], K[3], K[4]]) { const c = V.cs.priceToCoordinate(v); if (c == null) continue; const dd = Math.abs(c - y); if (dd < bd) { bd = dd; best = v; } }
+    if (best != null && bd < 28) { p = best; i = k; }
+  }
+  return { i, p };
+}
+function tvMove(e) {
+  const op = V.op; if (!op) return;
+  const d = tvList().find((x) => x.id === op.id); if (!d) { V.op = null; return; }
+  if (op.kind === "create") { const pt = tvAt(e, true); if (pt) d.b = pt; if (Math.hypot(e.clientX - op.x0, e.clientY - op.y0) > 6) op.moved = true; }
+  else if (op.kind === "move") {
+    const pt = tvAt(e, false); if (!pt) return;
+    const di = pt.i - op.start.i, dp = pt.p - op.start.p;
+    d.a = { i: op.orig.a.i + di, p: op.orig.a.p + dp };
+    if (op.orig.b) d.b = { i: op.orig.b.i + di, p: op.orig.b.p + dp };
+  } else if (op.kind === "handle") {
+    const pt = tvAt(e, true); if (!pt) return;
+    if (op.h === "a") d.a = pt; else if (op.h === "b") d.b = pt;
+    else if (op.h === "ab") { d.a = { i: pt.i, p: d.a.p }; d.b = { i: d.b.i, p: pt.p }; }
+    else if (op.h === "ba") { d.b = { i: pt.i, p: d.b.p }; d.a = { i: d.a.i, p: pt.p }; }
+  }
+  V.dirty = true;
+}
+function tvEnd() {
+  const op = V.op; if (!op) return;
+  removeEventListener("pointermove", tvMove); removeEventListener("pointerup", tvUp); removeEventListener("pointercancel", tvUp);
+  if (op.kind === "create" && !op.moved && !op.pending) { op.pending = true; addEventListener("pointermove", tvMove); return; }
+  const d = tvList().find((x) => x.id === op.id);
+  if (op.kind === "create" && d) {
+    const { pw } = tvPane(), ts = V.chart.timeScale();
+    const dx = Math.abs((ts.logicalToCoordinate(d.a.i) || 0) - (ts.logicalToCoordinate(d.b.i) || 0)), dy = Math.abs((V.cs.priceToCoordinate(d.a.p) || 0) - (V.cs.priceToCoordinate(d.b.p) || 0));
+    if ((d.t === "r" && (dx < 3 || dy < 3)) || (d.t === "l" && Math.hypot(dx, dy) < 4) || !pw) { DRAW[V.key] = tvList().filter((x) => x.id !== d.id); V.sel = null; }
+    tvTool("cursor");
+  }
+  V.op = null; tvStore();
+}
+function tvUp(e) { if (V.op && V.op.kind === "create" && !V.op.moved && !V.op.pending) { tvEnd(); return; } tvMove(e); tvEnd(); }
+function tvDown(e) {
+  if (!V.T || !V.chart || (e.button != null && e.button > 0)) return;
+  const r = $("tvChart").getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top, { pw, ph } = tvPane();
+  if (e.target.closest && e.target.closest(".tv-del,.tv-legend")) return;
+  if (x > pw || y > ph) return;
+  const hd = e.target.closest ? e.target.closest(".hd") : null, dg = e.target.closest ? e.target.closest("[data-id]") : null;
+  if (V.op && V.op.pending) { e.preventDefault(); const pt = tvAt(e, true); const d = tvList().find((q) => q.id === V.op.id); if (d && pt) d.b = pt; removeEventListener("pointermove", tvMove); V.op.pending = false; V.op.moved = true; tvEnd(); return; }
+  if (V.tool === "erase") { if (dg) { e.preventDefault(); tvDelete(dg.dataset.id); } return; }
+  if (V.tool === "cursor") {
+    if (!dg) { if (V.sel) { V.sel = null; V.dirty = true; } return; }
+    e.preventDefault(); e.stopPropagation();
+    const d = tvList().find((q) => q.id === dg.dataset.id); if (!d) return;
+    tvPush(); V.sel = d.id;
+    V.op = hd ? { kind: "handle", id: d.id, h: hd.dataset.h } : { kind: "move", id: d.id, start: tvAt(e, false) || { i: 0, p: 0 }, orig: JSON.parse(JSON.stringify(d)) };
+    addEventListener("pointermove", tvMove); addEventListener("pointerup", tvUp); addEventListener("pointercancel", tvUp);
+    V.dirty = true; return;
+  }
+  e.preventDefault();
+  const pt = tvAt(e, true); if (!pt) return;
+  tvPush();
+  if (V.tool === "h") { const d = { id: uid(), t: "h", a: pt }; tvList().push(d); V.sel = d.id; tvTool("cursor"); tvStore(); return; }
+  const d = { id: uid(), t: V.tool === "rect" ? "r" : "l", a: pt, b: { i: pt.i, p: pt.p } };
+  tvList().push(d); V.sel = d.id;
+  V.op = { kind: "create", id: d.id, x0: e.clientX, y0: e.clientY, moved: false, pending: false };
+  addEventListener("pointermove", tvMove); addEventListener("pointerup", tvUp); addEventListener("pointercancel", tvUp);
+  V.dirty = true;
+}
+
+/* Zeichnen der Ebene über dem Chart */
+function tvSig() { const ts = V.chart.timeScale(), host = $("tvChart"); return [host.clientWidth, host.clientHeight, ts.logicalToCoordinate(0), ts.logicalToCoordinate(10), V.cs.priceToCoordinate(V.ref[0]), V.cs.priceToCoordinate(V.ref[1]), V.chart.priceScale("right").width(), ts.height()].join(","); }
+function tvLoop() {
+  if (!V.open) return;
+  if (V.chart && V.T) { const s = tvSig(); if (s !== V.sig || V.dirty) { V.sig = s; V.dirty = false; tvRender(); } }
+  V.raf = requestAnimationFrame(tvLoop);
+}
+function tvRender() {
+  const svg = $("tvDraw"), { W, H, pw, ph } = tvPane();
+  svg.setAttribute("width", W); svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.textContent = "";
+  const ts = V.chart.timeScale(), X = (i) => ts.logicalToCoordinate(i), Y = (p) => V.cs.priceToCoordinate(p);
+  const defs = S("defs", {}, svg), cp = S("clipPath", { id: "tvClip" }, defs); S("rect", { x: 0, y: 0, width: pw, height: ph }, cp);
+  const g = S("g", { "clip-path": "url(#tvClip)" }, svg), ax = S("g", {}, svg);
+  const th = tvDunkel() ? TVT.dunkel : TVT.hell;
+  const lab = (y, text, bg) => { if (y == null || y < -12 || y > ph + 12) return; S("rect", { x: pw + 1, y: y - 10, width: Math.max(10, W - pw - 2), height: 20, rx: 3, fill: bg }, ax); const t = S("text", { x: pw + 6, y: y + 4, fill: inkOn(bg), class: "tv-axt" }, ax); t.textContent = text; };
+  if (V.bot && !V.tag) tvBotLayer(g, lab, X, Y, ph);
+  const col = CS.zeichnung;
+  let selBox = null;
+  for (const d of DRAW[V.key] || []) {
+    const sel = V.sel === d.id && V.tool === "cursor", gg = S("g", { "data-id": d.id }, g);
+    const handle = (x, y, h) => { if (x == null || y == null) return; S("circle", { cx: x, cy: y, r: 6, fill: th.bg, stroke: col, "stroke-width": 1.8, class: "hd", "data-h": h }, gg); };
+    if (d.t === "h") {
+      const y = Y(d.a.p); if (y == null) continue;
+      S("line", { x1: 0, x2: pw, y1: y, y2: y, stroke: col, "stroke-width": sel ? 2 : 1.5 }, gg);
+      S("line", { x1: 0, x2: pw, y1: y, y2: y, class: "hit" }, gg);
+      if (sel) { handle(pw / 2, y, "a"); selBox = { x: pw / 2, y }; }
+      lab(y, nf(d.a.p), col);
+    } else if (d.t === "r") {
+      const x0 = X(d.a.i), x1 = X(d.b.i), y0 = Y(d.a.p), y1 = Y(d.b.p); if ([x0, x1, y0, y1].some((v) => v == null)) continue;
+      const x = Math.min(x0, x1), y = Math.min(y0, y1), w = Math.abs(x1 - x0), h = Math.abs(y1 - y0);
+      S("rect", { x, y, width: Math.max(1, w), height: Math.max(1, h), fill: rgba(col, 0.14), stroke: col, "stroke-width": sel ? 2 : 1.5, class: "hitf" }, gg);
+      if (sel || (V.op && V.op.id === d.id)) {
+        const hi = Math.max(d.a.p, d.b.p), lo = Math.min(d.a.p, d.b.p), bars = Math.abs(Math.round(d.b.i) - Math.round(d.a.i)) + 1;
+        const txt = `Höhe ${nf(hi - lo)} · ${nf(((hi - lo) / ((hi + lo) / 2)) * 100)} % · ${bars} Kerzen`;
+        const ty = y > 26 ? y - 8 : y + h + 18, tw = txt.length * 6.6 + 12;
+        S("rect", { x: x, y: ty - 14, width: tw, height: 20, rx: 4, fill: th.bg, stroke: col, "stroke-width": 1 }, gg);
+        const t = S("text", { x: x + 6, y: ty, fill: th.text, class: "tv-info" }, gg); t.textContent = txt;
+        lab(Y(hi), nf(hi), col); lab(Y(lo), nf(lo), col);
+      }
+      if (sel) { handle(x0, y0, "a"); handle(x1, y1, "b"); handle(x0, y1, "ab"); handle(x1, y0, "ba"); selBox = { x: x + w, y }; }
+    } else {
+      const x0 = X(d.a.i), x1 = X(d.b.i), y0 = Y(d.a.p), y1 = Y(d.b.p); if ([x0, x1, y0, y1].some((v) => v == null)) continue;
+      S("line", { x1: x0, x2: x1, y1: y0, y2: y1, stroke: col, "stroke-width": sel ? 2 : 1.6, "stroke-linecap": "round" }, gg);
+      S("line", { x1: x0, x2: x1, y1: y0, y2: y1, class: "hit" }, gg);
+      if (sel) { handle(x0, y0, "a"); handle(x1, y1, "b"); selBox = { x: Math.max(x0, x1), y: Math.min(y0, y1) }; }
+    }
+  }
+  const del = $("tvDel");
+  if (selBox && !V.op) { del.hidden = false; const bw = del.offsetWidth || 90; del.style.left = Math.max(6, Math.min(pw - bw - 6, selBox.x - bw / 2)) + "px"; del.style.top = Math.max(6, Math.min(ph - 40, selBox.y - 46)) + "px"; }
+  else del.hidden = true;
+}
+function tvBotLayer(g, lab, X, Y, ph) {
+  const T = V.T, n = T.kerzen.length, acc = cssv("--accent") || "#0a6bff", up = cssv("--up") || "#08a742", dn = cssv("--down") || "#e02f24";
+  const slot = Math.abs((X(1) || 0) - (X(0) || 0)) || 6;
+  const xe = X(T.entscheidung);
+  if (V.mode !== "tag" && xe != null) S("rect", { x: xe - slot / 2, y: 0, width: slot, height: ph, fill: rgba(acc, 0.1) }, g);
+  if (T.oben != null && T.unten != null && T.box_von != null) {
+    const x0 = X(T.box_von - 0.5), x1 = X((T.box_bis != null ? T.box_bis : T.entscheidung) + 0.5), xl = X(V.mode === "aus" ? n - 1 : T.entscheidung);
+    if ([x0, x1, xl].every((v) => v != null)) {
+      S("rect", { x: x0, y: Y(T.oben), width: Math.max(1, x1 - x0), height: Math.max(1, Y(T.unten) - Y(T.oben)), fill: rgba(acc, 0.07) }, g);
+      if (T.toleranz) for (const p of [T.oben, T.unten]) S("rect", { x: x0, y: Y(p + T.toleranz), width: Math.max(1, xl - x0), height: Math.max(1, Y(p - T.toleranz) - Y(p + T.toleranz)), fill: rgba(acc, 0.16) }, g);
+      for (const p of [T.oben, T.unten]) S("line", { x1: x0, x2: xl, y1: Y(p), y2: Y(p), stroke: acc, "stroke-width": 1.6 }, g);
+    }
+    for (const b of T.beruehrungen || []) if (b.i <= V.cut) { const cx = X(b.i), cy = Y(b.p); if (cx != null && cy != null) S("circle", { cx, cy, r: 5.5, fill: "none", stroke: acc, "stroke-width": 1.8 }, g); }
+    lab(Y(T.oben), nf(T.oben), acc); lab(Y(T.unten), nf(T.unten), acc);
+  }
+  const xs = X(T.entscheidung), xz = V.mode === "aus" ? X(n - 1) : X(T.entscheidung + 6);
+  for (const [p, c] of [[T.ziel, up], [T.stop, dn]]) if (p != null && xs != null && xz != null) { S("line", { x1: xs, x2: xz, y1: Y(p), y2: Y(p), stroke: c, "stroke-width": 1.5, "stroke-dasharray": "6 4" }, g); lab(Y(p), nf(p), c); }
+  if (T.einstieg_i != null && T.einstieg_p != null && T.einstieg_i <= V.cut + 1) { const cx = X(Math.min(T.einstieg_i, n - 1)), cy = Y(T.einstieg_p); if (cx != null && cy != null) S("circle", { cx, cy, r: 5, fill: tvDunkel() ? "#d1d4dc" : "#131722", stroke: tvDunkel() ? "#131722" : "#ffffff", "stroke-width": 1.5 }, g); }
+  if (V.mode === "aus" && T.ausstieg_i != null && T.ausstieg_p != null) { const cx = X(T.ausstieg_i), cy = Y(T.ausstieg_p); if (cx != null && cy != null) S("circle", { cx, cy, r: 5.5, fill: T.r > 0 ? up : dn, stroke: tvDunkel() ? "#131722" : "#ffffff", "stroke-width": 1.5 }, g); }
+}
+
+/* Einstellungen */
+function tvApply(rebuild) {
+  csave(); kleineFarben(); tvTheme();
+  if (V.chart && V.T) { V.chart.applyOptions(tvOpts()); V.cs.applyOptions(candleOpts()); tvSetData(); tvHead(); tvLegend(null); }
+  V.dirty = true;
+  if (rebuild) tvSettings();
+}
+function tvSettings() {
+  const p = $("tvSet"), f = kerzenFarben();
+  const row = (k, label) => { const K = k[0].toUpperCase() + k.slice(1); return `<div class="tv-row"><label><input type="checkbox" id="cs-${k}"${CS[k] ? " checked" : ""}>${label}</label><input type="color" id="cs-up${K}" value="${f["up" + K]}" aria-label="${label} steigend"><input type="color" id="cs-down${K}" value="${f["down" + K]}" aria-label="${label} fallend"></div>`; };
+  p.innerHTML = `<div class="tv-sh"><b>Darstellung</b><button type="button" class="tv-ib" id="tvSetX" aria-label="Einstellungen schließen"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <section><h4>Vorlage</h4><div class="tv-pre">${Object.entries(CPRESET).map(([k, v]) => `<button type="button" data-pre="${k}" aria-pressed="${CS.preset === k}">${v.up ? `<i class="sw" style="background:${v.up}"></i><i class="sw" style="background:${v.down}"></i> ` : ""}${esc(v.n)}</button>`).join("")}</div></section>
+    <section><h4>Kerzen</h4><div class="tv-row head"><span></span><span>steigend</span><span>fallend</span></div>${row("body", "Körper")}${row("border", "Rahmen")}${row("wick", "Docht")}
+      <label><input type="checkbox" id="cs-hohl"${CS.hohl ? " checked" : ""}>Steigende Kerzen hohl</label></section>
+    <section><h4>Hintergrund</h4><div class="tv-seg" role="group" aria-label="Hintergrund">${[["auto", "Wie die Seite"], ["hell", "Hell"], ["dunkel", "Dunkel"]].map(([k, n]) => `<button type="button" data-th="${k}" aria-pressed="${CS.thema === k}">${n}</button>`).join("")}</div>
+      <label><input type="checkbox" id="cs-raster"${CS.raster ? " checked" : ""}>Raster</label>
+      <label><input type="checkbox" id="cs-volumen"${CS.volumen ? " checked" : ""}>Volumen</label></section>
+    <section><h4>Zeichnungen</h4><div class="tv-row"><span>Farbe deiner Linien</span><span></span><input type="color" id="cs-zeichnung" value="${CS.zeichnung}" aria-label="Farbe deiner Linien"></div></section>
+    <label><input type="checkbox" id="cs-klein"${CS.klein ? " checked" : ""}>Kerzenfarben auch für die kleinen Bilder auf der Seite</label>
+    <button type="button" class="btn mid" id="csReset">Alles auf TradingView zurücksetzen</button>`;
+  $("tvSetX").addEventListener("click", () => tvSetToggle(false));
+  for (const b of p.querySelectorAll("[data-pre]")) b.addEventListener("click", () => {
+    const pr = CPRESET[b.dataset.pre]; CS.preset = b.dataset.pre;
+    if (pr.up) for (const k of ["Body", "Border", "Wick"]) { CS["up" + k] = pr.up; CS["down" + k] = pr.down; }
+    tvApply(true);
+  });
+  for (const k of ["body", "border", "wick", "hohl", "raster", "volumen", "klein"]) $("cs-" + k).addEventListener("change", (e) => { CS[k] = e.target.checked; tvApply(false); });
+  for (const k of ["Body", "Border", "Wick"]) for (const s of ["up", "down"]) $("cs-" + s + k).addEventListener("input", (e) => {
+    if (CS.preset === "seite") { const f2 = kerzenFarben(); for (const q of ["upBody", "downBody", "upBorder", "downBorder", "upWick", "downWick"]) CS[q] = f2[q]; }
+    CS[s + k] = e.target.value; CS.preset = "eigene";
+    for (const b of p.querySelectorAll("[data-pre]")) b.setAttribute("aria-pressed", "false");
+    tvApply(false);
+  });
+  $("cs-zeichnung").addEventListener("input", (e) => { CS.zeichnung = e.target.value; tvApply(false); });
+  for (const b of p.querySelectorAll("[data-th]")) b.addEventListener("click", () => { CS.thema = b.dataset.th; tvApply(true); });
+  $("csReset").addEventListener("click", () => { CS = Object.assign({}, CDEF); tvApply(true); });
+}
+function tvSetToggle(on) {
+  V.set = on == null ? !V.set : on;
+  $("tvSet").hidden = !V.set; $("tvGear").setAttribute("aria-pressed", String(V.set));
+  if (V.set) { tvSettings(); $("tvSetX").focus({ preventScroll: true }); }
+}
+
+/* Bedienung */
+$("tvClose").addEventListener("click", () => tvClose(false));
+$("tvGear").addEventListener("click", () => tvSetToggle());
+for (const b of document.querySelectorAll(".tv-tools [data-tool]")) b.addEventListener("click", () => tvTool(V.tool === b.dataset.tool && b.dataset.tool !== "cursor" ? "cursor" : b.dataset.tool));
+$("tvMagnet").addEventListener("click", () => { CS.magnet = !CS.magnet; csave(); $("tvMagnet").setAttribute("aria-pressed", String(CS.magnet)); });
+$("tvUndo").addEventListener("click", tvUndo);
+$("tvClear").addEventListener("click", () => { if (!(DRAW[V.key] || []).length) return; tvPush(); DRAW[V.key] = []; V.sel = null; tvStore(); });
+$("tvBotBtn").addEventListener("click", () => { V.bot = !V.bot; $("tvBotBtn").setAttribute("aria-pressed", String(V.bot)); tvLegend(null); V.dirty = true; });
+$("tvVol").addEventListener("click", () => { CS.volumen = !CS.volumen; tvApply(false); });
+$("tvFit").addEventListener("click", () => { if (V.chart) tvFit(); });
+$("tvDel").addEventListener("click", () => { if (V.sel) tvDelete(V.sel); });
+$("tvChart").addEventListener("pointerdown", tvDown);
+document.addEventListener("keydown", (e) => {
+  if (!V.open) return;
+  const tg = (e.target && e.target.tagName ? e.target.tagName : "").toLowerCase();
+  if (tg === "input" || tg === "select" || tg === "textarea") return;
+  const k = (e.key || "").toLowerCase();
+  if (k === "escape") {
+    e.preventDefault();
+    if (V.op) { const op = V.op; tvEnd(); if (op.kind === "create") { tvUndo(); tvTool("cursor"); } return; }
+    if (V.set) return tvSetToggle(false);
+    if (V.tool !== "cursor") return tvTool("cursor");
+    if (V.sel) { V.sel = null; V.dirty = true; return; }
+    return tvClose(false);
+  }
+  if ((e.ctrlKey || e.metaKey) && k === "z") { e.preventDefault(); tvUndo(); return; }
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  if (k === "delete" || k === "backspace") { if (V.sel) { e.preventDefault(); tvDelete(V.sel); } return; }
+  if (!V.chart || !V.T) return;
+  if (k === "h") tvTool("h"); else if (k === "r") tvTool("rect"); else if (k === "t") tvTool("trend"); else if (k === "v") tvTool("cursor");
+  else if (k === "m") $("tvMagnet").click();
+  else if (V.kind === "sicht" && (k === "j" || k === "n" || k === "u")) tvAnswer({ j: "ja", n: "nein", u: "unsicher" }[k]);
+  else if (k === "arrowleft") { if (V.kind === "trade") tvStep(-1); else if (V.idx > 0) tvShow(V.idx - 1); }
+  else if (k === "arrowright") { if (V.kind === "trade") tvStep(1); else if (V.idx < V.items.length - 1) tvShow(V.idx + 1); }
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { kleineFarben(); if (V.open) tvApply(false); });
+kleineFarben();
 
 /* ------------------------------------------------------------ Scanner */
 function renderScanner(sc) {

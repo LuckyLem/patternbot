@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-29T16:59:37+00:00",
- "heartbeat": "2026-10-29T16:59:37+00:00",
+ "updated": "2026-10-29T17:09:41+00:00",
+ "heartbeat": "2026-10-29T17:09:41+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9929.96,
+  "equity": 9928.51,
   "last_equity": 9943.14,
-  "day_change": -13.18,
-  "total_change": -70.04
+  "day_change": -14.63,
+  "total_change": -71.49
  },
  "positions": [
   {
@@ -16,8 +16,8 @@
    "side": "long",
    "qty": 5,
    "entry": 344.9,
-   "current": 344.28,
-   "pl": -3.1
+   "current": 343.99,
+   "pl": -4.55
   }
  ],
  "trades": [
@@ -1463,7 +1463,7 @@
  ],
  "funnel": {
   "day": "2026-10-29",
-  "setups": 51,
+  "setups": 56,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
@@ -1471,9 +1471,10 @@
   "coverage_from": "2026-10-29T13:50:40.311063+00:00",
   "rejected": {
    "skip-chase": 5,
+   "skip-dup": 1,
    "skip-spread": 3,
    "skip-stale": 1,
-   "skip-vol": 40
+   "skip-vol": 44
   }
  },
  "funnel_days": [
@@ -1641,7 +1642,7 @@
   },
   {
    "day": "2026-10-29",
-   "setups": 51,
+   "setups": 56,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
@@ -1649,9 +1650,10 @@
    "coverage_from": "2026-10-29T13:50:40.311063+00:00",
    "rejected": {
     "skip-chase": 5,
+    "skip-dup": 1,
     "skip-spread": 3,
     "skip-stale": 1,
-    "skip-vol": 40
+    "skip-vol": 44
    }
   }
  ],

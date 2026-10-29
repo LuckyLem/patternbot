@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-29T19:24:45+00:00",
- "heartbeat": "2026-10-29T19:24:45+00:00",
+ "updated": "2026-10-29T19:35:30+00:00",
+ "heartbeat": "2026-10-29T19:35:30+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9912.53,
+  "equity": 9921.04,
   "last_equity": 9943.14,
-  "day_change": -30.61,
-  "total_change": -87.47
+  "day_change": -22.1,
+  "total_change": -78.96
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 21,
    "entry": 92.96,
-   "current": 92.96,
-   "pl": 0.0
+   "current": 93.13,
+   "pl": 3.57
   },
   {
    "symbol": "GWW",
    "side": "long",
    "qty": 1,
    "entry": 1372.91,
-   "current": 1368.76,
-   "pl": -4.15
+   "current": 1369.08,
+   "pl": -3.83
   },
   {
    "symbol": "KO",
    "side": "long",
    "qty": 21,
    "entry": 92.79,
-   "current": 92.81,
-   "pl": 0.32
+   "current": 93.03,
+   "pl": 4.93
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "asc_triangle break>92.81",
-   "max_r": 0.03,
+   "max_r": 0.13,
    "key": "t141",
    "detail": false,
    "ai_verdict": null
@@ -74,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "asc_triangle break>92.75",
-   "max_r": 0.09,
+   "max_r": 0.42,
    "key": "t140",
    "detail": false,
    "ai_verdict": null

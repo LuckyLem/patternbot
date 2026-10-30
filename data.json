@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-30T18:18:42+00:00",
- "heartbeat": "2026-10-30T18:18:42+00:00",
+ "updated": "2026-10-30T18:28:50+00:00",
+ "heartbeat": "2026-10-30T18:28:50+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9926.96,
+  "equity": 9922.36,
   "last_equity": 9920.45,
-  "day_change": 6.51,
-  "total_change": -73.04
+  "day_change": 1.91,
+  "total_change": -77.64
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 13,
    "entry": 148.14,
-   "current": 148.17,
-   "pl": -0.39
+   "current": 148.48,
+   "pl": -4.42
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 64,
    "entry": 30.58,
-   "current": 30.55,
-   "pl": -2.24
+   "current": 30.54,
+   "pl": -2.81
   }
  ],
  "trades": [

@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-10-30T18:50:44+00:00",
- "heartbeat": "2026-10-30T18:50:44+00:00",
+ "updated": "2026-10-30T19:01:50+00:00",
+ "heartbeat": "2026-10-30T19:01:50+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9926.12,
+  "equity": 9925.9,
   "last_equity": 9920.45,
-  "day_change": 5.67,
-  "total_change": -73.88
+  "day_change": 5.45,
+  "total_change": -74.1
  },
- "positions": [
-  {
-   "symbol": "BKNG",
-   "side": "short",
-   "qty": 13,
-   "entry": 148.14,
-   "current": 148.21,
-   "pl": -0.91
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "BKNG",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-10-30",
    "opened": "2026-10-30T17:00:42.166417+00:00",
-   "closed": null,
+   "closed": "2026-10-30T19:01:47.357066480+00:00",
    "entry": 148.14,
    "stop": 150.35,
    "target": 144.58,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 148.23,
+   "pnl": -1.13,
+   "r": -0.039,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "H&S neckline_break<148.64",
    "max_r": 0.26,
    "key": "t145",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 142,
-  "pnl": -49.09,
-  "winrate": 0.472,
+  "n": 143,
+  "pnl": -50.22,
+  "winrate": 0.469,
   "expectancy": -0.021,
   "pf": 0.92,
   "avg_win": 8.9,
-  "avg_loss": -8.61
+  "avg_loss": -8.51
  },
  "equity_curve": [
   {
@@ -1467,7 +1458,7 @@
  ],
  "funnel": {
   "day": "2026-10-30",
-  "setups": 97,
+  "setups": 101,
   "orders": 4,
   "filled": 4,
   "unfilled": 0,
@@ -1476,12 +1467,12 @@
   "rejected": {
    "skip-chase": 2,
    "skip-dup": 7,
-   "skip-market": 1,
-   "skip-rr": 4,
+   "skip-market": 3,
+   "skip-rr": 5,
    "skip-rs": 1,
    "skip-spread": 2,
    "skip-stale": 4,
-   "skip-vol": 72
+   "skip-vol": 73
   }
  },
  "funnel_days": [
@@ -1648,7 +1639,7 @@
   },
   {
    "day": "2026-10-30",
-   "setups": 97,
+   "setups": 101,
    "orders": 4,
    "filled": 4,
    "unfilled": 0,
@@ -1657,12 +1648,12 @@
    "rejected": {
     "skip-chase": 2,
     "skip-dup": 7,
-    "skip-market": 1,
-    "skip-rr": 4,
+    "skip-market": 3,
+    "skip-rr": 5,
     "skip-rs": 1,
     "skip-spread": 2,
     "skip-stale": 4,
-    "skip-vol": 72
+    "skip-vol": 73
    }
   }
  ],

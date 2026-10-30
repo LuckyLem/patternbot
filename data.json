@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-30T17:17:37+00:00",
- "heartbeat": "2026-10-30T17:17:37+00:00",
+ "updated": "2026-10-30T17:27:46+00:00",
+ "heartbeat": "2026-10-30T17:27:46+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9930.77,
+  "equity": 9928.15,
   "last_equity": 9920.45,
-  "day_change": 10.32,
-  "total_change": -69.23
+  "day_change": 7.7,
+  "total_change": -71.85
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 13,
    "entry": 148.14,
-   "current": 147.66,
-   "pl": 6.24
+   "current": 147.98,
+   "pl": 2.08
   },
   {
    "symbol": "PFE",
    "side": "long",
    "qty": 64,
    "entry": 30.58,
-   "current": 30.5,
-   "pl": -5.06
+   "current": 30.52,
+   "pl": -3.52
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "H&S neckline_break<148.64",
-   "max_r": 0.22,
+   "max_r": 0.26,
    "key": "t145",
    "detail": false,
    "ai_verdict": null

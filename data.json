@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-10-30T14:30:08+00:00",
- "heartbeat": "2026-10-30T14:30:08+00:00",
+ "updated": "2026-10-30T14:40:16+00:00",
+ "heartbeat": "2026-10-30T14:40:16+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9917.52,
+  "equity": 9904.73,
   "last_equity": 9920.45,
-  "day_change": -2.93,
-  "total_change": -82.48
+  "day_change": -15.72,
+  "total_change": -95.27
  },
  "positions": [
   {
@@ -16,11 +16,40 @@
    "side": "short",
    "qty": 117,
    "entry": 12.33,
-   "current": 12.36,
-   "pl": -2.93
+   "current": 12.39,
+   "pl": -7.04
+  },
+  {
+   "symbol": "NVDA",
+   "side": "short",
+   "qty": 9,
+   "entry": 206.16,
+   "current": 207.12,
+   "pl": -8.61
   }
  ],
  "trades": [
+  {
+   "symbol": "NVDA",
+   "pattern": "DescendingTriangle",
+   "side": "short",
+   "day": "2026-10-30",
+   "opened": "2026-10-30T14:30:39.944501+00:00",
+   "closed": null,
+   "entry": 206.16,
+   "stop": 209.27,
+   "target": 198.85,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "desc_triangle break<206.28",
+   "max_r": 0.09,
+   "key": "t143",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "AAL",
    "pattern": "Rectangle",
@@ -1259,27 +1288,6 @@
    "key": "t84",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "MET",
-   "pattern": "Rectangle",
-   "side": "long",
-   "day": "2026-10-12",
-   "opened": "2026-10-12T18:00:33.122999+00:00",
-   "closed": "2026-10-12T19:50:31.707357174+00:00",
-   "entry": 100.04,
-   "stop": 98.3,
-   "target": 102.9,
-   "exit": 100.09,
-   "pnl": 0.9,
-   "r": 0.027,
-   "status": "closed",
-   "exit_source": "eod",
-   "reason": "rectangle break>99.83",
-   "max_r": 0.03,
-   "key": "t83",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1467,11 +1475,11 @@
  ],
  "funnel": {
   "day": "2026-10-30",
-  "setups": 16,
-  "orders": 1,
-  "filled": 1,
+  "setups": 17,
+  "orders": 2,
+  "filled": 2,
   "unfilled": 0,
-  "traded": 1,
+  "traded": 2,
   "coverage_from": "2026-10-30T13:50:34.765601+00:00",
   "rejected": {
    "skip-chase": 2,
@@ -1646,11 +1654,11 @@
   },
   {
    "day": "2026-10-30",
-   "setups": 16,
-   "orders": 1,
-   "filled": 1,
+   "setups": 17,
+   "orders": 2,
+   "filled": 2,
    "unfilled": 0,
-   "traded": 1,
+   "traded": 2,
    "coverage_from": "2026-10-30T13:50:34.765601+00:00",
    "rejected": {
     "skip-chase": 2,

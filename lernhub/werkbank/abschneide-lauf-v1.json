@@ -1,0 +1,19 @@
+{
+ "code_lauf": "e0fe5e0efe43",
+ "startwert": 20261028,
+ "aktien": [
+  "AAPL",
+  "AVGO",
+  "GOOGL",
+  "HD",
+  "NVDA",
+  "PFE",
+  "T",
+  "TSLA"
+ ],
+ "entscheidungen_gesamt": 400,
+ "proben": 300,
+ "bestanden": 300,
+ "tage_abgleich_ungleich": 0,
+ "fehler": []
+}

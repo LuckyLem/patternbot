@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-02T17:02:34+00:00",
- "heartbeat": "2026-11-02T17:02:34+00:00",
+ "updated": "2026-11-02T17:12:43+00:00",
+ "heartbeat": "2026-11-02T17:12:43+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9922.33,
+  "equity": 9922.19,
   "last_equity": 9925.74,
-  "day_change": -3.41,
-  "total_change": -77.67
+  "day_change": -3.55,
+  "total_change": -77.81
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 18,
    "entry": 62.94,
-   "current": 62.97,
-   "pl": -0.54
+   "current": 62.87,
+   "pl": 1.35
   },
   {
    "symbol": "NSC",
    "side": "long",
    "qty": 5,
    "entry": 346.67,
-   "current": 346.1,
-   "pl": -2.88
+   "current": 345.69,
+   "pl": -4.9
   }
  ],
  "trades": [

@@ -1,7 +1,7 @@
 {
- "stand": "2026-10-28T11:11:27-04:00",
- "phase": "Fassung 2.2 festgelegt. Als Nächstes: Vorab-Datei, dann erster Lauf",
- "laeuft": false,
+ "stand": "2026-11-02T15:06:19-05:00",
+ "phase": "Lauf Entwicklung: 15 Min fertig, 5 Min läuft",
+ "laeuft": true,
  "plan": [
   {
    "titel": "Lernhub-Seite neu",
@@ -24,13 +24,13 @@
   {
    "titel": "Regeln festlegen",
    "text": "Vorab-Datei mit Hash, bevor ein Ergebnis da ist.",
-   "status": "laeuft",
+   "status": "fertig",
    "datum": "So 25.10."
   },
   {
    "titel": "Entwicklung Okt. 2021 – Sep. 2023",
    "text": "5 und 15 Min, Einstiege A–D, nach Kosten, gegen den Zufall. Nachricht per Telegram, wenn fertig.",
-   "status": "offen",
+   "status": "laeuft",
    "datum": "So 25.10."
   },
   {
@@ -106,6 +106,14 @@
   {
    "zeit": "2026-10-28T11:11:27-04:00",
    "text": "Trefferquote online: 30 Tagescharts ohne Linien (treffer-1)"
+  },
+  {
+   "zeit": "2026-11-02T15:04:15-05:00",
+   "text": "Vorab-Datei Fassung 2 festgelegt, Lauf-Code e0fe5e0efe43 geprüft, Lauf 15 Min gestartet"
+  },
+  {
+   "zeit": "2026-11-02T15:06:19-05:00",
+   "text": "Lauf 15 Min fertig: alle vier Varianten mit zu wenig Daten (unter 50 A-Trades je Jahr)"
   }
  ]
 }

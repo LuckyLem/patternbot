@@ -1,0 +1,49 @@
+{
+ "stand": "2026-11-02T15:05:18-05:00",
+ "gruppen": [
+  {
+   "id": "15m-A",
+   "zeitebene": 15,
+   "einstieg": "A",
+   "zeitraum": "entw",
+   "anzahl": 162,
+   "anzahl_a": 45,
+   "teile": [
+    "trades/15m-A/000.json"
+   ]
+  },
+  {
+   "id": "15m-B",
+   "zeitebene": 15,
+   "einstieg": "B",
+   "zeitraum": "entw",
+   "anzahl": 11,
+   "anzahl_a": 3,
+   "teile": [
+    "trades/15m-B/000.json"
+   ]
+  },
+  {
+   "id": "15m-C",
+   "zeitebene": 15,
+   "einstieg": "C",
+   "zeitraum": "entw",
+   "anzahl": 128,
+   "anzahl_a": 41,
+   "teile": [
+    "trades/15m-C/000.json"
+   ]
+  },
+  {
+   "id": "15m-D",
+   "zeitebene": 15,
+   "einstieg": "D",
+   "zeitraum": "entw",
+   "anzahl": 37,
+   "anzahl_a": 12,
+   "teile": [
+    "trades/15m-D/000.json"
+   ]
+  }
+ ]
+}

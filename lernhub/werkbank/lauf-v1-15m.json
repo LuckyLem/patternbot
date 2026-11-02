@@ -1,0 +1,212 @@
+{
+ "code_erkennung": "2489765016f5",
+ "code_lauf": "e0fe5e0efe43",
+ "zeitebene": 15,
+ "dauer_s": 50,
+ "auslöser": 964,
+ "trades": 338,
+ "varianten": [
+  {
+   "zeitebene": 15,
+   "einstieg": "A",
+   "werte": {
+    "entw": {
+     "trades": 45,
+     "ev_vor": -0.1137,
+     "ev": -0.2034,
+     "pf": 0.574,
+     "jahre": [
+      {
+       "trades": 24,
+       "ev": -0.1617
+      },
+      {
+       "trades": 21,
+       "ev": -0.251
+      }
+     ],
+     "noten": {
+      "A": {
+       "trades": 45,
+       "ev": -0.2034
+      },
+      "B": {
+       "trades": 34,
+       "ev": 0.1256
+      },
+      "C": {
+       "trades": 83,
+       "ev": 0.0102
+      }
+     },
+     "zufall": 22,
+     "ev_stress": -0.2334,
+     "zufall_ausfall": 0,
+     "verworfen_a": {
+      "keine Einstiegsminute im Fenster": 53,
+      "Ziel schon erreicht oder nicht in Richtung": 1,
+      "weiterer Auslöser am Tag (nur der erste)": 1
+     },
+     "verworfen_alle": {
+      "keine Einstiegsminute im Fenster": 238,
+      "weiterer Auslöser am Tag (nur der erste)": 10,
+      "Ziel schon erreicht oder nicht in Richtung": 2
+     }
+    },
+    "pruef": null
+   },
+   "urteil": "zu wenig Daten (unter 50 Trades in einem Jahr)",
+   "urteil_art": "part"
+  },
+  {
+   "zeitebene": 15,
+   "einstieg": "B",
+   "werte": {
+    "entw": {
+     "trades": 3,
+     "ev_vor": 0.7097,
+     "ev": 0.567,
+     "pf": null,
+     "jahre": [
+      {
+       "trades": 3,
+       "ev": 0.567
+      },
+      {
+       "trades": 0,
+       "ev": null
+      }
+     ],
+     "noten": {
+      "A": {
+       "trades": 3,
+       "ev": 0.567
+      },
+      "B": {
+       "trades": 0,
+       "ev": null
+      },
+      "C": {
+       "trades": 8,
+       "ev": 0.1348
+      }
+     },
+     "zufall": 88,
+     "ev_stress": 0.537,
+     "zufall_ausfall": 0,
+     "verworfen_a": {
+      "keine Einstiegsminute im Fenster": 6
+     },
+     "verworfen_alle": {
+      "keine Einstiegsminute im Fenster": 20
+     }
+    },
+    "pruef": null
+   },
+   "urteil": "zu wenig Daten (unter 50 Trades in einem Jahr)",
+   "urteil_art": "part"
+  },
+  {
+   "zeitebene": 15,
+   "einstieg": "C",
+   "werte": {
+    "entw": {
+     "trades": 41,
+     "ev_vor": 0.1471,
+     "ev": -0.0226,
+     "pf": 0.957,
+     "jahre": [
+      {
+       "trades": 20,
+       "ev": -0.0176
+      },
+      {
+       "trades": 21,
+       "ev": -0.0273
+      }
+     ],
+     "noten": {
+      "A": {
+       "trades": 41,
+       "ev": -0.0226
+      },
+      "B": {
+       "trades": 30,
+       "ev": -0.0302
+      },
+      "C": {
+       "trades": 57,
+       "ev": -0.0286
+      }
+     },
+     "zufall": 73,
+     "ev_stress": -0.0526,
+     "zufall_ausfall": 0,
+     "verworfen_a": {
+      "keine Einstiegsminute im Fenster": 54,
+      "weiterer Auslöser am Tag (nur der erste)": 24,
+      "Ziel unter 1 R": 9
+     },
+     "verworfen_alle": {
+      "keine Einstiegsminute im Fenster": 180,
+      "weiterer Auslöser am Tag (nur der erste)": 79,
+      "Ziel unter 1 R": 24,
+      "beide Linien in einer Kerze": 3
+     }
+    },
+    "pruef": null
+   },
+   "urteil": "zu wenig Daten (unter 50 Trades in einem Jahr)",
+   "urteil_art": "part"
+  },
+  {
+   "zeitebene": 15,
+   "einstieg": "D",
+   "werte": {
+    "entw": {
+     "trades": 12,
+     "ev_vor": -0.0524,
+     "ev": -0.1758,
+     "pf": 0.635,
+     "jahre": [
+      {
+       "trades": 6,
+       "ev": -0.0105
+      },
+      {
+       "trades": 6,
+       "ev": -0.3411
+      }
+     ],
+     "noten": {
+      "A": {
+       "trades": 12,
+       "ev": -0.1758
+      },
+      "B": {
+       "trades": 9,
+       "ev": -0.2978
+      },
+      "C": {
+       "trades": 16,
+       "ev": 0.0188
+      }
+     },
+     "zufall": 35,
+     "ev_stress": -0.2058,
+     "zufall_ausfall": 0,
+     "verworfen_a": {
+      "keine Einstiegsminute im Fenster": 16
+     },
+     "verworfen_alle": {
+      "keine Einstiegsminute im Fenster": 72,
+      "Ziel schon erreicht oder nicht in Richtung": 1
+     }
+    },
+    "pruef": null
+   },
+   "urteil": "zu wenig Daten (unter 50 Trades in einem Jahr)",
+   "urteil_art": "part"
+  }
+ ]
+}

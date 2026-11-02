@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-02T18:27:35+00:00",
- "heartbeat": "2026-11-02T18:27:35+00:00",
+ "updated": "2026-11-02T18:37:42+00:00",
+ "heartbeat": "2026-11-02T18:37:42+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9942.98,
+  "equity": 9941.53,
   "last_equity": 9925.74,
-  "day_change": 17.24,
-  "total_change": -57.02
+  "day_change": 15.79,
+  "total_change": -58.47
  },
- "positions": [
-  {
-   "symbol": "NSC",
-   "side": "long",
-   "qty": 5,
-   "entry": 346.67,
-   "current": 347.02,
-   "pl": 1.75
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "NSC",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-11-02",
    "opened": "2026-11-02T16:30:35.484108+00:00",
-   "closed": null,
+   "closed": "2026-11-02T18:31:33.416059972+00:00",
    "entry": 346.67,
    "stop": 342.8,
    "target": 352.85,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 346.73,
+   "pnl": 0.3,
+   "r": 0.016,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>346.15",
    "max_r": 0.14,
    "key": "t147",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 144,
-  "pnl": -34.73,
-  "winrate": 0.472,
-  "expectancy": -0.019,
+  "n": 145,
+  "pnl": -34.43,
+  "winrate": 0.476,
+  "expectancy": -0.018,
   "pf": 0.95,
-  "avg_win": 9.0,
+  "avg_win": 8.87,
   "avg_loss": -8.51
  },
  "equity_curve": [
@@ -1447,7 +1438,7 @@
  ],
  "funnel": {
   "day": "2026-11-02",
-  "setups": 89,
+  "setups": 98,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
@@ -1457,7 +1448,7 @@
    "skip-chase": 8,
    "skip-rs": 9,
    "skip-spread": 1,
-   "skip-vol": 69
+   "skip-vol": 78
   }
  },
  "funnel_days": [
@@ -1626,7 +1617,7 @@
   },
   {
    "day": "2026-11-02",
-   "setups": 89,
+   "setups": 98,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
@@ -1636,7 +1627,7 @@
     "skip-chase": 8,
     "skip-rs": 9,
     "skip-spread": 1,
-    "skip-vol": 69
+    "skip-vol": 78
    }
   }
  ],

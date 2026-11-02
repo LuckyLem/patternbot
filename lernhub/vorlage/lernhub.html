@@ -905,7 +905,7 @@ function renderSicht() {
     $("sEdit").addEventListener("click", () => { SPOS = 0; renderSicht(); });
   } else {
     const b = B[i], cur = A[b.id], mine = DRAW[SI.id + "/" + b.id] || [];
-    const nav = (i > 0 ? `<button type="button" class="btn mid" id="sPrev">‹ Zurück</button>` : "") + (cur && i < B.length - 1 ? `<button type="button" class="btn mid" id="sNext">Weiter ›</button>` : "");
+    const nav = (i > 0 ? `<button type="button" class="btn mid" id="sPrev">‹ Zurück</button>` : "") + (cur && i < B.length - 1 ? `<button type="button" class="btn mid" id="sNext">Weiter ›</button>` : "") + (sm.done === sm.total ? `<button type="button" class="btn" id="sDone">Zum Ergebnis</button>` : "");
     box.innerHTML = `<div class="sbar"><i style="width:${(sm.done / sm.total) * 100}%"></i></div>
       <div class="q">Bild ${i + 1} von ${B.length}: ${esc(SI.frage || "Ist das ein sauberes Rechteck?")}</div>
       <div class="dim">${esc(b.symbol)} · ${esc(dayDE(b.tag))} · ${b.zeitebene} Min · ${TQ ? "ganzer Tag, ohne die Linien des Bots" : "das Bild endet an der Signalkerze"}${cur ? ` · deine Antwort: ${esc(cur)}` : ""}</div>
@@ -917,6 +917,7 @@ function renderSicht() {
     $("sZoom").addEventListener("click", (e) => { e.stopPropagation(); tvOpen("sicht", B, i); });
     if ($("sPrev")) $("sPrev").addEventListener("click", () => { SPOS = i - 1; renderSicht(); });
     if ($("sNext")) $("sNext").addEventListener("click", () => { SPOS = i + 1; renderSicht(); });
+    if ($("sDone")) $("sDone").addEventListener("click", () => { SPOS = null; renderSicht(); });
     for (const x of box.querySelectorAll("[data-a]")) x.addEventListener("click", () => {
       A[b.id] = x.dataset.a; ssave(SANS);
       const n = nextAfter(i); SPOS = n >= 0 ? null : i + 1 < B.length && SPOS != null ? i + 1 : null;

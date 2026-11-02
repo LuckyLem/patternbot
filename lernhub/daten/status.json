@@ -1,7 +1,7 @@
 {
- "stand": "2026-11-02T15:06:19-05:00",
- "phase": "Lauf Entwicklung: 15 Min fertig, 5 Min läuft",
- "laeuft": true,
+ "stand": "2026-11-02T15:09:51-05:00",
+ "phase": "Lauf Entwicklung fertig: keine der 8 Varianten überzeugt",
+ "laeuft": false,
  "plan": [
   {
    "titel": "Lernhub-Seite neu",
@@ -30,7 +30,7 @@
   {
    "titel": "Entwicklung Okt. 2021 – Sep. 2023",
    "text": "5 und 15 Min, Einstiege A–D, nach Kosten, gegen den Zufall. Nachricht per Telegram, wenn fertig.",
-   "status": "laeuft",
+   "status": "fertig",
    "datum": "So 25.10."
   },
   {
@@ -114,6 +114,10 @@
   {
    "zeit": "2026-11-02T15:06:19-05:00",
    "text": "Lauf 15 Min fertig: alle vier Varianten mit zu wenig Daten (unter 50 A-Trades je Jahr)"
+  },
+  {
+   "zeit": "2026-11-02T15:09:51-05:00",
+   "text": "Lauf 5 Min fertig: keine Variante überzeugt. Kurzbericht folgt"
   }
  ]
 }

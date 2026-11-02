@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-02T15:05:18-05:00",
+ "stand": "2026-11-02T15:09:31-05:00",
  "gruppen": [
   {
    "id": "15m-A",
@@ -43,6 +43,69 @@
    "anzahl_a": 12,
    "teile": [
     "trades/15m-D/000.json"
+   ]
+  },
+  {
+   "id": "5m-A",
+   "zeitebene": 5,
+   "einstieg": "A",
+   "zeitraum": "entw",
+   "anzahl": 1541,
+   "anzahl_a": 941,
+   "teile": [
+    "trades/5m-A/000.json",
+    "trades/5m-A/001.json",
+    "trades/5m-A/002.json",
+    "trades/5m-A/003.json",
+    "trades/5m-A/004.json",
+    "trades/5m-A/005.json",
+    "trades/5m-A/006.json",
+    "trades/5m-A/007.json"
+   ]
+  },
+  {
+   "id": "5m-B",
+   "zeitebene": 5,
+   "einstieg": "B",
+   "zeitraum": "entw",
+   "anzahl": 788,
+   "anzahl_a": 188,
+   "teile": [
+    "trades/5m-B/000.json",
+    "trades/5m-B/001.json",
+    "trades/5m-B/002.json",
+    "trades/5m-B/003.json"
+   ]
+  },
+  {
+   "id": "5m-C",
+   "zeitebene": 5,
+   "einstieg": "C",
+   "zeitraum": "entw",
+   "anzahl": 1199,
+   "anzahl_a": 599,
+   "teile": [
+    "trades/5m-C/000.json",
+    "trades/5m-C/001.json",
+    "trades/5m-C/002.json",
+    "trades/5m-C/003.json",
+    "trades/5m-C/004.json",
+    "trades/5m-C/005.json"
+   ]
+  },
+  {
+   "id": "5m-D",
+   "zeitebene": 5,
+   "einstieg": "D",
+   "zeitraum": "entw",
+   "anzahl": 954,
+   "anzahl_a": 354,
+   "teile": [
+    "trades/5m-D/000.json",
+    "trades/5m-D/001.json",
+    "trades/5m-D/002.json",
+    "trades/5m-D/003.json",
+    "trades/5m-D/004.json"
    ]
   }
  ]

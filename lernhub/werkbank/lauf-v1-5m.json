@@ -1,0 +1,230 @@
+{
+ "code_erkennung": "2489765016f5",
+ "code_lauf": "e0fe5e0efe43",
+ "zeitebene": 5,
+ "dauer_s": 149,
+ "auslöser": 19820,
+ "trades": 12955,
+ "varianten": [
+  {
+   "zeitebene": 5,
+   "einstieg": "A",
+   "werte": {
+    "entw": {
+     "trades": 941,
+     "ev_vor": 0.0299,
+     "ev": -0.1109,
+     "pf": 0.797,
+     "jahre": [
+      {
+       "trades": 471,
+       "ev": -0.0416
+      },
+      {
+       "trades": 470,
+       "ev": -0.1804
+      }
+     ],
+     "noten": {
+      "A": {
+       "trades": 941,
+       "ev": -0.1109
+      },
+      "B": {
+       "trades": 1402,
+       "ev": -0.1141
+      },
+      "C": {
+       "trades": 3712,
+       "ev": -0.09
+      }
+     },
+     "zufall": 83,
+     "ev_stress": -0.1409,
+     "zufall_ausfall": 0,
+     "verworfen_a": {
+      "keine Einstiegsminute im Fenster": 177,
+      "weiterer Auslöser am Tag (nur der erste)": 34,
+      "Ziel schon erreicht oder nicht in Richtung": 3,
+      "Einstieg auf oder jenseits des Stops": 1
+     },
+     "verworfen_alle": {
+      "keine Einstiegsminute im Fenster": 1355,
+      "weiterer Auslöser am Tag (nur der erste)": 958,
+      "Ziel schon erreicht oder nicht in Richtung": 29,
+      "Einstieg auf oder jenseits des Stops": 2
+     }
+    },
+    "pruef": null
+   },
+   "urteil": "überzeugt nicht: nicht beide Jahre positiv; mit Kostenstress nicht positiv; Zufall nur 83 von 100; Note A nicht besser als Note C",
+   "urteil_art": "bad"
+  },
+  {
+   "zeitebene": 5,
+   "einstieg": "B",
+   "werte": {
+    "entw": {
+     "trades": 188,
+     "ev_vor": -0.1178,
+     "ev": -0.3138,
+     "pf": 0.555,
+     "jahre": [
+      {
+       "trades": 88,
+       "ev": -0.2249
+      },
+      {
+       "trades": 100,
+       "ev": -0.3919
+      }
+     ],
+     "noten": {
+      "A": {
+       "trades": 188,
+       "ev": -0.3138
+      },
+      "B": {
+       "trades": 310,
+       "ev": -0.194
+      },
+      "C": {
+       "trades": 808,
+       "ev": -0.1804
+      }
+     },
+     "zufall": 9,
+     "ev_stress": -0.3438,
+     "zufall_ausfall": 0,
+     "verworfen_a": {
+      "keine Einstiegsminute im Fenster": 43,
+      "Ziel schon erreicht oder nicht in Richtung": 11,
+      "Einstieg auf oder jenseits des Stops": 1,
+      "weiterer Auslöser am Tag (nur der erste)": 1
+     },
+     "verworfen_alle": {
+      "keine Einstiegsminute im Fenster": 275,
+      "weiterer Auslöser am Tag (nur der erste)": 48,
+      "Ziel schon erreicht oder nicht in Richtung": 38,
+      "Einstieg auf oder jenseits des Stops": 3
+     }
+    },
+    "pruef": null
+   },
+   "urteil": "überzeugt nicht: nicht beide Jahre positiv; mit Kostenstress nicht positiv; Zufall nur 9 von 100; Note A nicht besser als Note C",
+   "urteil_art": "bad"
+  },
+  {
+   "zeitebene": 5,
+   "einstieg": "C",
+   "werte": {
+    "entw": {
+     "trades": 599,
+     "ev_vor": -0.0272,
+     "ev": -0.2724,
+     "pf": 0.665,
+     "jahre": [
+      {
+       "trades": 276,
+       "ev": -0.1852
+      },
+      {
+       "trades": 323,
+       "ev": -0.3469
+      }
+     ],
+     "noten": {
+      "A": {
+       "trades": 599,
+       "ev": -0.2724
+      },
+      "B": {
+       "trades": 845,
+       "ev": -0.2079
+      },
+      "C": {
+       "trades": 1947,
+       "ev": -0.2103
+      }
+     },
+     "zufall": 24,
+     "ev_stress": -0.3024,
+     "zufall_ausfall": 0,
+     "verworfen_a": {
+      "weiterer Auslöser am Tag (nur der erste)": 362,
+      "keine Einstiegsminute im Fenster": 165,
+      "Ziel unter 1 R": 113,
+      "Ziel schon erreicht oder nicht in Richtung": 4,
+      "Einstieg auf oder jenseits des Stops": 1,
+      "beide Linien in einer Kerze": 1
+     },
+     "verworfen_alle": {
+      "weiterer Auslöser am Tag (nur der erste)": 2090,
+      "keine Einstiegsminute im Fenster": 884,
+      "Ziel unter 1 R": 516,
+      "Einstieg auf oder jenseits des Stops": 22,
+      "Ziel schon erreicht oder nicht in Richtung": 17,
+      "beide Linien in einer Kerze": 7
+     }
+    },
+    "pruef": null
+   },
+   "urteil": "überzeugt nicht: nicht beide Jahre positiv; mit Kostenstress nicht positiv; Zufall nur 24 von 100; Note A nicht besser als Note C",
+   "urteil_art": "bad"
+  },
+  {
+   "zeitebene": 5,
+   "einstieg": "D",
+   "werte": {
+    "entw": {
+     "trades": 354,
+     "ev_vor": -0.0255,
+     "ev": -0.2251,
+     "pf": 0.694,
+     "jahre": [
+      {
+       "trades": 168,
+       "ev": -0.2083
+      },
+      {
+       "trades": 186,
+       "ev": -0.2402
+      }
+     ],
+     "noten": {
+      "A": {
+       "trades": 354,
+       "ev": -0.2251
+      },
+      "B": {
+       "trades": 519,
+       "ev": -0.1862
+      },
+      "C": {
+       "trades": 1330,
+       "ev": -0.1848
+      }
+     },
+     "zufall": 32,
+     "ev_stress": -0.2551,
+     "zufall_ausfall": 0,
+     "verworfen_a": {
+      "keine Einstiegsminute im Fenster": 78,
+      "weiterer Auslöser am Tag (nur der erste)": 4,
+      "Ziel schon erreicht oder nicht in Richtung": 2,
+      "Einstieg auf oder jenseits des Stops": 1
+     },
+     "verworfen_alle": {
+      "keine Einstiegsminute im Fenster": 535,
+      "weiterer Auslöser am Tag (nur der erste)": 77,
+      "Ziel schon erreicht oder nicht in Richtung": 10,
+      "Einstieg auf oder jenseits des Stops": 6
+     }
+    },
+    "pruef": null
+   },
+   "urteil": "überzeugt nicht: nicht beide Jahre positiv; mit Kostenstress nicht positiv; Zufall nur 32 von 100; Note A nicht besser als Note C",
+   "urteil_art": "bad"
+  }
+ ]
+}

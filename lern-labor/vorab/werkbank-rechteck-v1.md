@@ -1,7 +1,18 @@
-# Vorab-Datei · Werkbank Rechteck v1 · Fassung 1
+# Vorab-Datei · Werkbank Rechteck v1 · Fassung 2
 
-**Stand 28.10.2026.** Grundlage: Auftrag „Große Umstellung v2“ (Fassung 2.1), Abschnitte 5 bis 9, mit der
-Erkennung Fassung 2.2. SHA-256 und Commit dieser Datei stehen im Logbuch. **Kein Lauf vor dem OK des Inhabers.**
+**Stand 02.11.2026.** Grundlage: Auftrag „Große Umstellung v2“ (Fassung 2.1), Abschnitte 5 bis 9, mit der
+Erkennung Fassung 2.2. SHA-256 und Commit dieser Datei stehen im Logbuch. **OK des Inhabers am 02.11.2026.**
+
+**Fassung 1** (SHA-256 `14bf7a66a4b8675e1575be0765932bea8dacfe6cc369ef11c342d1fb59de5d4f`, Commit 45928446) liegt
+unverändert als `werkbank-rechteck-v1-fassung-1.md` daneben.
+
+**Drei Änderungen** des Inhabers, vor jedem Ergebnis:
+1. In Abschnitt 6 ist der Satz zur Präzision genauer gefasst.
+2. In Abschnitt 5 und 6 kommen je Variante die verworfenen Trades mit Grund und die Trades hinzu, die aus dem
+   Zufallstest fallen. Das ist nur Information, ohne Wirkung auf „überzeugt“.
+3. In Abschnitt 7 ist die Größe der Seiten-Daten vom Inhaber bestätigt.
+
+Sonst ist alles unverändert.
 
 Vor dieser Datei wurde kein Ergebnis gelesen. Auf echten Daten liefen bis jetzt nur:
 - die Erkennung (nur Geometrie);
@@ -156,6 +167,9 @@ Für alle vier gilt:
   - Ø R mit Kostenstress;
   - Zufall 0 – 100.
 - **Je Note:** Trades und Ø R nach Kosten.
+- **Nur Information** (Fassung 2), ohne Wirkung auf „überzeugt“:
+  - die Zahl der verworfenen Trades mit Grund;
+  - die Zahl der Trades, die aus dem Zufallstest fallen.
 
 **„Überzeugt“** (Abschnitt 6, Punkte 1 – 4 unverändert, alles nach Kosten, nur Note A):
 1. Beide Jahre positiv, je mindestens 50 Trades; darunter heißt es „zu wenig Daten“.
@@ -171,12 +185,13 @@ keine C-Trades, ist Punkt 4 „nicht bewertbar“, und die Variante überzeugt n
 - **Zuerst die Vorbehalte:**
   - **Überlebensverzerrung:** Die 150 sind die Liste von heute, die 50 daraus nach dem Umsatz im September 2021.
     Firmen, die es heute nicht mehr gibt, fehlen.
-  - **Präzision der Erkennung:** In Sichtprüfung 4 waren 80 % der A-Kästen für das Auge sauber, auf 5 Min nur 73 %
-    (11 von 15). Etwa jeder vierte A-Kasten auf 5 Min ist also kein sauberes Rechteck.
+  - **Präzision der Erkennung:** In Sichtprüfung 4 waren 24 von 30 A-Kästen für das Auge sauber (80 %), auf
+    5 Min 11 von 15 (dort 2 nein, 2 unsicher). Mit so wenigen Bildern ist das nur eine grobe Schätzung.
   - **Form am selben Zeitraum geeicht:** Die Regeln der Form wurden an Bildern aus demselben Zeitraum geeicht (nur
     Sichtprüfung, nie Ergebnisse).
   - **Einzelne Trades:** ohne Kapital und ohne Positionsgrenze.
-- **Dann die 8 Varianten** mit Note A, B und C.
+- **Dann die 8 Varianten** mit Note A, B und C. Je Variante dazu, nur als Information: die verworfenen Trades mit
+  Grund und die Trades, die aus dem Zufallstest fallen.
 - **Dann, welche überzeugt.**
 - Für 2024 – 2025 wird nichts geöffnet; die Vorab-Datei der Prüfung kommt nur als Entwurf, erst nach OK.
 
@@ -203,7 +218,7 @@ keine C-Trades, ist Punkt 4 „nicht bewertbar“, und die Variante überzeugt n
   - Einstieg, Stop, Ziel, Ausstieg;
   - Fakten (Höhe, Breite, Stop · Ziel).
 
-**Abweichung zur Größe (bitte bestätigen):**
+**Größe (vom Inhaber bestätigt):**
 - Alle Trades aller Noten mit ganzem Handelstag wären auf 5 Min geschätzt rund 80 MB; die Seite lädt eine Gruppe
   komplett.
 - Darum kommt **Note A vollständig** auf die Seite. Von **B und C** kommt je Variante eine feste Zufallsauswahl von

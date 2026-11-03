@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-03T08:13:28-05:00",
+ "stand": "2026-11-03T10:31:10-05:00",
  "auftrag": "Gemeinsame Werkbank v3, Fassung 1 (Commit 2434c11), Abschnitt 1",
  "regel": "Jede Idee wird eingetragen, bevor sie gerechnet wird. Eine Änderung nach einem Ergebnis ist eine neue Idee mit neuem Eintrag.",
  "stati": [
@@ -135,12 +135,12 @@
     "Fehlschlag"
    ],
    "zusammenhang": "je Zeitebene zwei vorab festgelegte Varianten, beide gezählt: ohne Zusammenhang und mit Zusammenhang (Tag: Schluss über der 50- und 200-Tage-Linie und 50 über 200, short spiegelbildlich; intraday: über dem VWAP und SPY steigend seit 09:30, short spiegelbildlich)",
-   "regeln_hash": null,
+   "regeln_hash": "Erkennung Doppelboden 9d6347afba55 (gemeinsam 7c92a9b18dfe), noch ohne Einstiege",
    "daten": "Suche (Abschnitt 2), Bestätigung erst nach bestandener Hürde",
-   "status": "geplant",
+   "status": "läuft",
    "ergebnis": null,
    "versuche": null,
-   "bemerkung": "zuerst (Phase 3 und 4); Varianten, Regeln und Hash kommen mit der Vorab-Datei, bevor gerechnet wird."
+   "bemerkung": "zuerst (Phase 3 und 4); Schritt 1 seit 03.11.2026: nur Erkennung Doppelboden (Tag, 5 und 15 Min), Trichter, Zählungen auf den Suchdaten, Sichtprüfung doppelboden-1 vorbereitet; keine Trades, kein R. Varianten, Einstiege und Zählung der Versuche erst mit der Vorab-Datei."
   },
   {
    "nr": 7,

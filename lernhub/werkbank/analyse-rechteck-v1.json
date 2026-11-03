@@ -1,0 +1,2118 @@
+{
+ "trades": 13293,
+ "arten_namen": {
+  "fehlausbruch": "Fehlausbruch",
+  "stop_zu_eng": "Stop zu eng",
+  "ziel_zu_weit": "Ziel zu weit",
+  "zeit": "Zeit",
+  "kosten": "Kosten",
+  "gegen_markt": "Gegen den Markt",
+  "sauber": "sauber gewonnen",
+  "sonst": "sonst"
+ },
+ "arten_regeln": {
+  "fehlausbruch": "Stop innerhalb von 3 Kerzen nach dem Einstieg, MFE unter 0,3 R",
+  "stop_zu_eng": "gestoppt, danach Ziel noch erreicht, Stop-Abstand unter 1 ATR",
+  "ziel_zu_weit": "MFE mindestens 0,8 des Ziels, danach Stop oder Zeitlimit",
+  "zeit": "Ausstieg zum Tagesende oder Zeitlimit mit MFE über 0,5 R",
+  "kosten": "r_vor über 0, aber r unter 0",
+  "gegen_markt": "SPY bewegt sich im Trade um mehr als 0,5 ATR (in SPY) gegen die Richtung",
+  "sauber": "Ziel erreicht",
+  "sonst": "alles andere"
+ },
+ "grenzen": {
+  "fehlausbruch_kerzen": 3,
+  "fehlausbruch_mfe": 0.3,
+  "stop_eng_atr": 1.0,
+  "ziel_anteil": 0.8,
+  "zeit_mfe": 0.5,
+  "markt_atr": 0.5
+ },
+ "varianten_namen": {
+  "15m-C": "15 Min · früher Einstieg",
+  "15m-A": "15 Min · Ausbruch",
+  "15m-B": "15 Min · Retest",
+  "15m-D": "15 Min · Fehlschlag",
+  "5m-C": "5 Min · früher Einstieg",
+  "5m-A": "5 Min · Ausbruch",
+  "5m-D": "5 Min · Fehlschlag",
+  "5m-B": "5 Min · Retest"
+ },
+ "anteile": {
+  "gesamt": {
+   "trades": 13293,
+   "r": -0.1537,
+   "r_vor": 0.0233,
+   "arten": {
+    "fehlausbruch": {
+     "anzahl": 1600,
+     "anteil": 0.1204,
+     "r": -1.2195
+    },
+    "stop_zu_eng": {
+     "anzahl": 328,
+     "anteil": 0.0247,
+     "r": -1.247
+    },
+    "ziel_zu_weit": {
+     "anzahl": 896,
+     "anteil": 0.0674,
+     "r": 0.0679
+    },
+    "zeit": {
+     "anzahl": 1357,
+     "anteil": 0.1021,
+     "r": 0.2766
+    },
+    "kosten": {
+     "anzahl": 84,
+     "anteil": 0.0063,
+     "r": -0.0585
+    },
+    "gegen_markt": {
+     "anzahl": 3546,
+     "anteil": 0.2668,
+     "r": -0.9405
+    },
+    "sauber": {
+     "anzahl": 3764,
+     "anteil": 0.2832,
+     "r": 1.3176
+    },
+    "sonst": {
+     "anzahl": 1718,
+     "anteil": 0.1292,
+     "r": -1.0118
+    }
+   },
+   "mfe_r": 0.9539,
+   "mae_r": -0.7779,
+   "ziel_danach_anteil": 0.118,
+   "ausgaenge": {
+    "ziel": 4084,
+    "stop": 6593,
+    "tagesende": 2616
+   },
+   "abstand_kante_atr": 0.5232,
+   "bis_einstieg": 37.675
+  },
+  "variante": {
+   "15m-A": {
+    "trades": 162,
+    "r": -0.0249,
+    "r_vor": 0.066,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 18,
+      "anteil": 0.1111,
+      "r": -1.0905
+     },
+     "stop_zu_eng": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "ziel_zu_weit": {
+      "anzahl": 15,
+      "anteil": 0.0926,
+      "r": 0.5343
+     },
+     "zeit": {
+      "anzahl": 34,
+      "anteil": 0.2099,
+      "r": 0.2575
+     },
+     "kosten": {
+      "anzahl": 1,
+      "anteil": 0.0062,
+      "r": -0.0593
+     },
+     "gegen_markt": {
+      "anzahl": 28,
+      "anteil": 0.1728,
+      "r": -0.8145
+     },
+     "sauber": {
+      "anzahl": 30,
+      "anteil": 0.1852,
+      "r": 0.9765
+     },
+     "sonst": {
+      "anzahl": 36,
+      "anteil": 0.2222,
+      "r": -0.2113
+     }
+    },
+    "mfe_r": 0.5997,
+    "mae_r": -0.5441,
+    "ziel_danach_anteil": 0.037,
+    "ausgaenge": {
+     "ziel": 30,
+     "stop": 36,
+     "tagesende": 96
+    },
+    "abstand_kante_atr": 0.4644,
+    "bis_einstieg": 37.7654
+   },
+   "15m-B": {
+    "trades": 11,
+    "r": 0.2527,
+    "r_vor": 0.4202,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 1,
+      "anteil": 0.0909,
+      "r": -1.1776
+     },
+     "stop_zu_eng": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "ziel_zu_weit": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "zeit": {
+      "anzahl": 4,
+      "anteil": 0.3636,
+      "r": 0.3631
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 1,
+      "anteil": 0.0909,
+      "r": -1.2494
+     },
+     "sauber": {
+      "anzahl": 4,
+      "anteil": 0.3636,
+      "r": 1.0219
+     },
+     "sonst": {
+      "anzahl": 1,
+      "anteil": 0.0909,
+      "r": -0.3335
+     }
+    },
+    "mfe_r": 0.9895,
+    "mae_r": -0.5037,
+    "ziel_danach_anteil": 0.0,
+    "ausgaenge": {
+     "ziel": 4,
+     "stop": 2,
+     "tagesende": 5
+    },
+    "abstand_kante_atr": 0.8602,
+    "bis_einstieg": 69.1818
+   },
+   "15m-C": {
+    "trades": 128,
+    "r": -0.0271,
+    "r_vor": 0.1473,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 28,
+      "anteil": 0.2188,
+      "r": -1.2019
+     },
+     "stop_zu_eng": {
+      "anzahl": 2,
+      "anteil": 0.0156,
+      "r": -1.127
+     },
+     "ziel_zu_weit": {
+      "anzahl": 16,
+      "anteil": 0.125,
+      "r": 1.1135
+     },
+     "zeit": {
+      "anzahl": 38,
+      "anteil": 0.2969,
+      "r": 0.442
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 12,
+      "anteil": 0.0938,
+      "r": -0.9617
+     },
+     "sauber": {
+      "anzahl": 15,
+      "anteil": 0.1172,
+      "r": 1.7459
+     },
+     "sonst": {
+      "anzahl": 17,
+      "anteil": 0.1328,
+      "r": -0.9892
+     }
+    },
+    "mfe_r": 1.0774,
+    "mae_r": -0.7392,
+    "ziel_danach_anteil": 0.0781,
+    "ausgaenge": {
+     "ziel": 16,
+     "stop": 54,
+     "tagesende": 58
+    },
+    "abstand_kante_atr": 0.4628,
+    "bis_einstieg": 38.2656
+   },
+   "15m-D": {
+    "trades": 37,
+    "r": -0.1213,
+    "r_vor": -0.016,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 6,
+      "anteil": 0.1622,
+      "r": -1.1447
+     },
+     "stop_zu_eng": {
+      "anzahl": 1,
+      "anteil": 0.027,
+      "r": -1.2667
+     },
+     "ziel_zu_weit": {
+      "anzahl": 3,
+      "anteil": 0.0811,
+      "r": 0.7947
+     },
+     "zeit": {
+      "anzahl": 8,
+      "anteil": 0.2162,
+      "r": 0.3661
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 7,
+      "anteil": 0.1892,
+      "r": -0.8109
+     },
+     "sauber": {
+      "anzahl": 8,
+      "anteil": 0.2162,
+      "r": 0.6038
+     },
+     "sonst": {
+      "anzahl": 4,
+      "anteil": 0.1081,
+      "r": -0.2049
+     }
+    },
+    "mfe_r": 0.5909,
+    "mae_r": -0.5615,
+    "ziel_danach_anteil": 0.027,
+    "ausgaenge": {
+     "ziel": 8,
+     "stop": 11,
+     "tagesende": 18
+    },
+    "abstand_kante_atr": 0.5337,
+    "bis_einstieg": 60.5946
+   },
+   "5m-A": {
+    "trades": 6055,
+    "r": -0.0988,
+    "r_vor": 0.0341,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 375,
+      "anteil": 0.0619,
+      "r": -1.1687
+     },
+     "stop_zu_eng": {
+      "anzahl": 18,
+      "anteil": 0.003,
+      "r": -1.2157
+     },
+     "ziel_zu_weit": {
+      "anzahl": 440,
+      "anteil": 0.0727,
+      "r": 0.0011
+     },
+     "zeit": {
+      "anzahl": 728,
+      "anteil": 0.1202,
+      "r": 0.1687
+     },
+     "kosten": {
+      "anzahl": 55,
+      "anteil": 0.0091,
+      "r": -0.0558
+     },
+     "gegen_markt": {
+      "anzahl": 1795,
+      "anteil": 0.2964,
+      "r": -0.8874
+     },
+     "sauber": {
+      "anzahl": 1890,
+      "anteil": 0.3121,
+      "r": 1.0449
+     },
+     "sonst": {
+      "anzahl": 754,
+      "anteil": 0.1245,
+      "r": -0.8493
+     }
+    },
+    "mfe_r": 0.7929,
+    "mae_r": -0.6909,
+    "ziel_danach_anteil": 0.0915,
+    "ausgaenge": {
+     "ziel": 2054,
+     "stop": 2462,
+     "tagesende": 1539
+    },
+    "abstand_kante_atr": 0.4652,
+    "bis_einstieg": 35.8801
+   },
+   "5m-B": {
+    "trades": 1306,
+    "r": -0.2029,
+    "r_vor": -0.0071,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 206,
+      "anteil": 0.1577,
+      "r": -1.2229
+     },
+     "stop_zu_eng": {
+      "anzahl": 39,
+      "anteil": 0.0299,
+      "r": -1.25
+     },
+     "ziel_zu_weit": {
+      "anzahl": 79,
+      "anteil": 0.0605,
+      "r": -0.3762
+     },
+     "zeit": {
+      "anzahl": 75,
+      "anteil": 0.0574,
+      "r": 0.447
+     },
+     "kosten": {
+      "anzahl": 17,
+      "anteil": 0.013,
+      "r": -0.0628
+     },
+     "gegen_markt": {
+      "anzahl": 292,
+      "anteil": 0.2236,
+      "r": -0.9106
+     },
+     "sauber": {
+      "anzahl": 430,
+      "anteil": 0.3292,
+      "r": 1.1457
+     },
+     "sonst": {
+      "anzahl": 168,
+      "anteil": 0.1286,
+      "r": -1.1532
+     }
+    },
+    "mfe_r": 0.9319,
+    "mae_r": -0.7851,
+    "ziel_danach_anteil": 0.1371,
+    "ausgaenge": {
+     "ziel": 480,
+     "stop": 691,
+     "tagesende": 135
+    },
+    "abstand_kante_atr": 1.0239,
+    "bis_einstieg": 55.4686
+   },
+   "5m-C": {
+    "trades": 3391,
+    "r": -0.2207,
+    "r_vor": 0.0207,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 635,
+      "anteil": 0.1873,
+      "r": -1.2543
+     },
+     "stop_zu_eng": {
+      "anzahl": 219,
+      "anteil": 0.0646,
+      "r": -1.2514
+     },
+     "ziel_zu_weit": {
+      "anzahl": 197,
+      "anteil": 0.0581,
+      "r": 0.0762
+     },
+     "zeit": {
+      "anzahl": 257,
+      "anteil": 0.0758,
+      "r": 0.4572
+     },
+     "kosten": {
+      "anzahl": 1,
+      "anteil": 0.0003,
+      "r": -0.0393
+     },
+     "gegen_markt": {
+      "anzahl": 802,
+      "anteil": 0.2365,
+      "r": -0.9982
+     },
+     "sauber": {
+      "anzahl": 825,
+      "anteil": 0.2433,
+      "r": 1.8812
+     },
+     "sonst": {
+      "anzahl": 455,
+      "anteil": 0.1342,
+      "r": -1.2345
+     }
+    },
+    "mfe_r": 1.2022,
+    "mae_r": -0.9096,
+    "ziel_danach_anteil": 0.1575,
+    "ausgaenge": {
+     "ziel": 894,
+     "stop": 2114,
+     "tagesende": 383
+    },
+    "abstand_kante_atr": 0.4928,
+    "bis_einstieg": 29.9561
+   },
+   "5m-D": {
+    "trades": 2203,
+    "r": -0.1916,
+    "r_vor": 0.0044,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 331,
+      "anteil": 0.1502,
+      "r": -1.2182
+     },
+     "stop_zu_eng": {
+      "anzahl": 49,
+      "anteil": 0.0222,
+      "r": -1.2408
+     },
+     "ziel_zu_weit": {
+      "anzahl": 146,
+      "anteil": 0.0663,
+      "r": 0.3205
+     },
+     "zeit": {
+      "anzahl": 213,
+      "anteil": 0.0967,
+      "r": 0.3362
+     },
+     "kosten": {
+      "anzahl": 10,
+      "anteil": 0.0045,
+      "r": -0.0679
+     },
+     "gegen_markt": {
+      "anzahl": 609,
+      "anteil": 0.2764,
+      "r": -1.0419
+     },
+     "sauber": {
+      "anzahl": 562,
+      "anteil": 0.2551,
+      "r": 1.5578
+     },
+     "sonst": {
+      "anzahl": 283,
+      "anteil": 0.1285,
+      "r": -1.1195
+     }
+    },
+    "mfe_r": 1.052,
+    "mae_r": -0.8346,
+    "ziel_danach_anteil": 0.1289,
+    "ausgaenge": {
+     "ziel": 598,
+     "stop": 1223,
+     "tagesende": 382
+    },
+    "abstand_kante_atr": 0.4387,
+    "bis_einstieg": 43.3581
+   }
+  },
+  "variante_a": {
+   "15m-A": {
+    "trades": 45,
+    "r": -0.2034,
+    "r_vor": -0.1137,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 3,
+      "anteil": 0.0667,
+      "r": -1.072
+     },
+     "stop_zu_eng": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "ziel_zu_weit": {
+      "anzahl": 4,
+      "anteil": 0.0889,
+      "r": 0.164
+     },
+     "zeit": {
+      "anzahl": 7,
+      "anteil": 0.1556,
+      "r": 0.4469
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 14,
+      "anteil": 0.3111,
+      "r": -0.9009
+     },
+     "sauber": {
+      "anzahl": 6,
+      "anteil": 0.1333,
+      "r": 1.0466
+     },
+     "sonst": {
+      "anzahl": 11,
+      "anteil": 0.2444,
+      "r": -0.3079
+     }
+    },
+    "mfe_r": 0.5318,
+    "mae_r": -0.605,
+    "ziel_danach_anteil": 0.0667,
+    "ausgaenge": {
+     "ziel": 6,
+     "stop": 14,
+     "tagesende": 25
+    },
+    "abstand_kante_atr": 0.4358,
+    "bis_einstieg": 34.3556
+   },
+   "15m-B": {
+    "trades": 3,
+    "r": 0.567,
+    "r_vor": 0.7097,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "stop_zu_eng": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "ziel_zu_weit": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "zeit": {
+      "anzahl": 1,
+      "anteil": 0.3333,
+      "r": 0.4574
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "sauber": {
+      "anzahl": 2,
+      "anteil": 0.6667,
+      "r": 0.6219
+     },
+     "sonst": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     }
+    },
+    "mfe_r": 0.8387,
+    "mae_r": -0.1178,
+    "ziel_danach_anteil": 0.0,
+    "ausgaenge": {
+     "ziel": 2,
+     "stop": 0,
+     "tagesende": 1
+    },
+    "abstand_kante_atr": 1.0424,
+    "bis_einstieg": 51
+   },
+   "15m-C": {
+    "trades": 41,
+    "r": -0.0226,
+    "r_vor": 0.1471,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 10,
+      "anteil": 0.2439,
+      "r": -1.2015
+     },
+     "stop_zu_eng": {
+      "anzahl": 1,
+      "anteil": 0.0244,
+      "r": -1.1629
+     },
+     "ziel_zu_weit": {
+      "anzahl": 5,
+      "anteil": 0.122,
+      "r": 0.8138
+     },
+     "zeit": {
+      "anzahl": 12,
+      "anteil": 0.2927,
+      "r": 0.4426
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 3,
+      "anteil": 0.0732,
+      "r": -0.3401
+     },
+     "sauber": {
+      "anzahl": 5,
+      "anteil": 0.122,
+      "r": 1.6898
+     },
+     "sonst": {
+      "anzahl": 5,
+      "anteil": 0.122,
+      "r": -0.9111
+     }
+    },
+    "mfe_r": 0.9774,
+    "mae_r": -0.7159,
+    "ziel_danach_anteil": 0.0732,
+    "ausgaenge": {
+     "ziel": 6,
+     "stop": 17,
+     "tagesende": 18
+    },
+    "abstand_kante_atr": 0.4419,
+    "bis_einstieg": 34.6585
+   },
+   "15m-D": {
+    "trades": 12,
+    "r": -0.1758,
+    "r_vor": -0.0524,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 1,
+      "anteil": 0.0833,
+      "r": -1.2118
+     },
+     "stop_zu_eng": {
+      "anzahl": 1,
+      "anteil": 0.0833,
+      "r": -1.2667
+     },
+     "ziel_zu_weit": {
+      "anzahl": 2,
+      "anteil": 0.1667,
+      "r": 0.7258
+     },
+     "zeit": {
+      "anzahl": 1,
+      "anteil": 0.0833,
+      "r": 0.6824
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 4,
+      "anteil": 0.3333,
+      "r": -0.7266
+     },
+     "sauber": {
+      "anzahl": 1,
+      "anteil": 0.0833,
+      "r": 1.3607
+     },
+     "sonst": {
+      "anzahl": 2,
+      "anteil": 0.1667,
+      "r": -0.1095
+     }
+    },
+    "mfe_r": 0.6521,
+    "mae_r": -0.6933,
+    "ziel_danach_anteil": 0.0833,
+    "ausgaenge": {
+     "ziel": 1,
+     "stop": 4,
+     "tagesende": 7
+    },
+    "abstand_kante_atr": 0.3535,
+    "bis_einstieg": 57.25
+   },
+   "5m-A": {
+    "trades": 941,
+    "r": -0.1109,
+    "r_vor": 0.0299,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 68,
+      "anteil": 0.0723,
+      "r": -1.1761
+     },
+     "stop_zu_eng": {
+      "anzahl": 6,
+      "anteil": 0.0064,
+      "r": -1.1805
+     },
+     "ziel_zu_weit": {
+      "anzahl": 69,
+      "anteil": 0.0733,
+      "r": -0.2096
+     },
+     "zeit": {
+      "anzahl": 83,
+      "anteil": 0.0882,
+      "r": 0.1284
+     },
+     "kosten": {
+      "anzahl": 6,
+      "anteil": 0.0064,
+      "r": -0.0558
+     },
+     "gegen_markt": {
+      "anzahl": 284,
+      "anteil": 0.3018,
+      "r": -0.9027
+     },
+     "sauber": {
+      "anzahl": 319,
+      "anteil": 0.339,
+      "r": 1.0651
+     },
+     "sonst": {
+      "anzahl": 106,
+      "anteil": 0.1126,
+      "r": -0.911
+     }
+    },
+    "mfe_r": 0.8167,
+    "mae_r": -0.7169,
+    "ziel_danach_anteil": 0.1095,
+    "ausgaenge": {
+     "ziel": 348,
+     "stop": 414,
+     "tagesende": 179
+    },
+    "abstand_kante_atr": 0.4309,
+    "bis_einstieg": 32.6769
+   },
+   "5m-B": {
+    "trades": 188,
+    "r": -0.3138,
+    "r_vor": -0.1178,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 31,
+      "anteil": 0.1649,
+      "r": -1.2283
+     },
+     "stop_zu_eng": {
+      "anzahl": 7,
+      "anteil": 0.0372,
+      "r": -1.2267
+     },
+     "ziel_zu_weit": {
+      "anzahl": 9,
+      "anteil": 0.0479,
+      "r": -0.5978
+     },
+     "zeit": {
+      "anzahl": 5,
+      "anteil": 0.0266,
+      "r": 0.7658
+     },
+     "kosten": {
+      "anzahl": 3,
+      "anteil": 0.016,
+      "r": -0.1052
+     },
+     "gegen_markt": {
+      "anzahl": 43,
+      "anteil": 0.2287,
+      "r": -0.9854
+     },
+     "sauber": {
+      "anzahl": 64,
+      "anteil": 0.3404,
+      "r": 0.9939
+     },
+     "sonst": {
+      "anzahl": 26,
+      "anteil": 0.1383,
+      "r": -1.219
+     }
+    },
+    "mfe_r": 0.8376,
+    "mae_r": -0.8083,
+    "ziel_danach_anteil": 0.1649,
+    "ausgaenge": {
+     "ziel": 70,
+     "stop": 108,
+     "tagesende": 10
+    },
+    "abstand_kante_atr": 1.0164,
+    "bis_einstieg": 51.0319
+   },
+   "5m-C": {
+    "trades": 599,
+    "r": -0.2724,
+    "r_vor": -0.0272,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 114,
+      "anteil": 0.1903,
+      "r": -1.2675
+     },
+     "stop_zu_eng": {
+      "anzahl": 43,
+      "anteil": 0.0718,
+      "r": -1.2275
+     },
+     "ziel_zu_weit": {
+      "anzahl": 41,
+      "anteil": 0.0684,
+      "r": 0.3113
+     },
+     "zeit": {
+      "anzahl": 31,
+      "anteil": 0.0518,
+      "r": 0.4813
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 137,
+      "anteil": 0.2287,
+      "r": -1.0346
+     },
+     "sauber": {
+      "anzahl": 147,
+      "anteil": 0.2454,
+      "r": 1.733
+     },
+     "sonst": {
+      "anzahl": 86,
+      "anteil": 0.1436,
+      "r": -1.2392
+     }
+    },
+    "mfe_r": 1.1578,
+    "mae_r": -0.8949,
+    "ziel_danach_anteil": 0.182,
+    "ausgaenge": {
+     "ziel": 157,
+     "stop": 383,
+     "tagesende": 59
+    },
+    "abstand_kante_atr": 0.4686,
+    "bis_einstieg": 28.1786
+   },
+   "5m-D": {
+    "trades": 354,
+    "r": -0.2251,
+    "r_vor": -0.0255,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 51,
+      "anteil": 0.1441,
+      "r": -1.2153
+     },
+     "stop_zu_eng": {
+      "anzahl": 7,
+      "anteil": 0.0198,
+      "r": -1.2246
+     },
+     "ziel_zu_weit": {
+      "anzahl": 29,
+      "anteil": 0.0819,
+      "r": 0.2353
+     },
+     "zeit": {
+      "anzahl": 21,
+      "anteil": 0.0593,
+      "r": 0.1037
+     },
+     "kosten": {
+      "anzahl": 0,
+      "anteil": 0.0,
+      "r": null
+     },
+     "gegen_markt": {
+      "anzahl": 109,
+      "anteil": 0.3079,
+      "r": -1.1016
+     },
+     "sauber": {
+      "anzahl": 97,
+      "anteil": 0.274,
+      "r": 1.5366
+     },
+     "sonst": {
+      "anzahl": 40,
+      "anteil": 0.113,
+      "r": -1.1775
+     }
+    },
+    "mfe_r": 1.063,
+    "mae_r": -0.8461,
+    "ziel_danach_anteil": 0.1328,
+    "ausgaenge": {
+     "ziel": 100,
+     "stop": 207,
+     "tagesende": 47
+    },
+    "abstand_kante_atr": 0.4276,
+    "bis_einstieg": 39.5226
+   }
+  },
+  "note": {
+   "A": {
+    "trades": 2183,
+    "r": -0.1909,
+    "r_vor": -0.0078,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 278,
+      "anteil": 0.1273,
+      "r": -1.2265
+     },
+     "stop_zu_eng": {
+      "anzahl": 65,
+      "anteil": 0.0298,
+      "r": -1.2224
+     },
+     "ziel_zu_weit": {
+      "anzahl": 159,
+      "anteil": 0.0728,
+      "r": 0.0372
+     },
+     "zeit": {
+      "anzahl": 161,
+      "anteil": 0.0738,
+      "r": 0.2557
+     },
+     "kosten": {
+      "anzahl": 9,
+      "anteil": 0.0041,
+      "r": -0.0723
+     },
+     "gegen_markt": {
+      "anzahl": 594,
+      "anteil": 0.2721,
+      "r": -0.9715
+     },
+     "sauber": {
+      "anzahl": 641,
+      "anteil": 0.2936,
+      "r": 1.2863
+     },
+     "sonst": {
+      "anzahl": 276,
+      "anteil": 0.1264,
+      "r": -1.0511
+     }
+    },
+    "mfe_r": 0.9483,
+    "mae_r": -0.7913,
+    "ziel_danach_anteil": 0.1361,
+    "ausgaenge": {
+     "ziel": 690,
+     "stop": 1147,
+     "tagesende": 346
+    },
+    "abstand_kante_atr": 0.4919,
+    "bis_einstieg": 34.3656
+   },
+   "B": {
+    "trades": 3149,
+    "r": -0.1562,
+    "r_vor": 0.0273,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 392,
+      "anteil": 0.1245,
+      "r": -1.2262
+     },
+     "stop_zu_eng": {
+      "anzahl": 85,
+      "anteil": 0.027,
+      "r": -1.2512
+     },
+     "ziel_zu_weit": {
+      "anzahl": 199,
+      "anteil": 0.0632,
+      "r": 0.0549
+     },
+     "zeit": {
+      "anzahl": 304,
+      "anteil": 0.0965,
+      "r": 0.2136
+     },
+     "kosten": {
+      "anzahl": 20,
+      "anteil": 0.0064,
+      "r": -0.0674
+     },
+     "gegen_markt": {
+      "anzahl": 816,
+      "anteil": 0.2591,
+      "r": -0.9448
+     },
+     "sauber": {
+      "anzahl": 935,
+      "anteil": 0.2969,
+      "r": 1.292
+     },
+     "sonst": {
+      "anzahl": 398,
+      "anteil": 0.1264,
+      "r": -1.046
+     }
+    },
+    "mfe_r": 0.9486,
+    "mae_r": -0.7805,
+    "ziel_danach_anteil": 0.1204,
+    "ausgaenge": {
+     "ziel": 1016,
+     "stop": 1566,
+     "tagesende": 567
+    },
+    "abstand_kante_atr": 0.5048,
+    "bis_einstieg": 37.7882
+   },
+   "C": {
+    "trades": 7961,
+    "r": -0.1425,
+    "r_vor": 0.0303,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 930,
+      "anteil": 0.1168,
+      "r": -1.2146
+     },
+     "stop_zu_eng": {
+      "anzahl": 178,
+      "anteil": 0.0224,
+      "r": -1.2539
+     },
+     "ziel_zu_weit": {
+      "anzahl": 538,
+      "anteil": 0.0676,
+      "r": 0.0817
+     },
+     "zeit": {
+      "anzahl": 892,
+      "anteil": 0.112,
+      "r": 0.3019
+     },
+     "kosten": {
+      "anzahl": 55,
+      "anteil": 0.0069,
+      "r": -0.053
+     },
+     "gegen_markt": {
+      "anzahl": 2136,
+      "anteil": 0.2683,
+      "r": -0.9303
+     },
+     "sauber": {
+      "anzahl": 2188,
+      "anteil": 0.2748,
+      "r": 1.3376
+     },
+     "sonst": {
+      "anzahl": 1044,
+      "anteil": 0.1311,
+      "r": -0.9884
+     }
+    },
+    "mfe_r": 0.9576,
+    "mae_r": -0.7732,
+    "ziel_danach_anteil": 0.112,
+    "ausgaenge": {
+     "ziel": 2378,
+     "stop": 3880,
+     "tagesende": 1703
+    },
+    "abstand_kante_atr": 0.5391,
+    "bis_einstieg": 38.5377
+   }
+  },
+  "einstieg": {
+   "Ausbruch": {
+    "trades": 6217,
+    "r": -0.0969,
+    "r_vor": 0.0349,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 393,
+      "anteil": 0.0632,
+      "r": -1.1652
+     },
+     "stop_zu_eng": {
+      "anzahl": 18,
+      "anteil": 0.0029,
+      "r": -1.2157
+     },
+     "ziel_zu_weit": {
+      "anzahl": 455,
+      "anteil": 0.0732,
+      "r": 0.0187
+     },
+     "zeit": {
+      "anzahl": 762,
+      "anteil": 0.1226,
+      "r": 0.1726
+     },
+     "kosten": {
+      "anzahl": 56,
+      "anteil": 0.009,
+      "r": -0.0558
+     },
+     "gegen_markt": {
+      "anzahl": 1823,
+      "anteil": 0.2932,
+      "r": -0.8863
+     },
+     "sauber": {
+      "anzahl": 1920,
+      "anteil": 0.3088,
+      "r": 1.0438
+     },
+     "sonst": {
+      "anzahl": 790,
+      "anteil": 0.1271,
+      "r": -0.8203
+     }
+    },
+    "mfe_r": 0.7879,
+    "mae_r": -0.687,
+    "ziel_danach_anteil": 0.0901,
+    "ausgaenge": {
+     "ziel": 2084,
+     "stop": 2498,
+     "tagesende": 1635
+    },
+    "abstand_kante_atr": 0.4652,
+    "bis_einstieg": 35.9292
+   },
+   "Fehlschlag": {
+    "trades": 2240,
+    "r": -0.1905,
+    "r_vor": 0.004,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 337,
+      "anteil": 0.1504,
+      "r": -1.2168
+     },
+     "stop_zu_eng": {
+      "anzahl": 50,
+      "anteil": 0.0223,
+      "r": -1.2413
+     },
+     "ziel_zu_weit": {
+      "anzahl": 149,
+      "anteil": 0.0665,
+      "r": 0.33
+     },
+     "zeit": {
+      "anzahl": 221,
+      "anteil": 0.0987,
+      "r": 0.3373
+     },
+     "kosten": {
+      "anzahl": 10,
+      "anteil": 0.0045,
+      "r": -0.0679
+     },
+     "gegen_markt": {
+      "anzahl": 616,
+      "anteil": 0.275,
+      "r": -1.0392
+     },
+     "sauber": {
+      "anzahl": 570,
+      "anteil": 0.2545,
+      "r": 1.5444
+     },
+     "sonst": {
+      "anzahl": 287,
+      "anteil": 0.1281,
+      "r": -1.1068
+     }
+    },
+    "mfe_r": 1.0444,
+    "mae_r": -0.8301,
+    "ziel_danach_anteil": 0.1272,
+    "ausgaenge": {
+     "ziel": 606,
+     "stop": 1234,
+     "tagesende": 400
+    },
+    "abstand_kante_atr": 0.4402,
+    "bis_einstieg": 43.6429
+   },
+   "Retest": {
+    "trades": 1317,
+    "r": -0.1991,
+    "r_vor": -0.0036,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 207,
+      "anteil": 0.1572,
+      "r": -1.2227
+     },
+     "stop_zu_eng": {
+      "anzahl": 39,
+      "anteil": 0.0296,
+      "r": -1.25
+     },
+     "ziel_zu_weit": {
+      "anzahl": 79,
+      "anteil": 0.06,
+      "r": -0.3762
+     },
+     "zeit": {
+      "anzahl": 79,
+      "anteil": 0.06,
+      "r": 0.4428
+     },
+     "kosten": {
+      "anzahl": 17,
+      "anteil": 0.0129,
+      "r": -0.0628
+     },
+     "gegen_markt": {
+      "anzahl": 293,
+      "anteil": 0.2225,
+      "r": -0.9118
+     },
+     "sauber": {
+      "anzahl": 434,
+      "anteil": 0.3295,
+      "r": 1.1445
+     },
+     "sonst": {
+      "anzahl": 169,
+      "anteil": 0.1283,
+      "r": -1.1483
+     }
+    },
+    "mfe_r": 0.9324,
+    "mae_r": -0.7828,
+    "ziel_danach_anteil": 0.1359,
+    "ausgaenge": {
+     "ziel": 484,
+     "stop": 693,
+     "tagesende": 140
+    },
+    "abstand_kante_atr": 1.0225,
+    "bis_einstieg": 55.5831
+   },
+   "früher Einstieg": {
+    "trades": 3519,
+    "r": -0.2136,
+    "r_vor": 0.0253,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 663,
+      "anteil": 0.1884,
+      "r": -1.2521
+     },
+     "stop_zu_eng": {
+      "anzahl": 221,
+      "anteil": 0.0628,
+      "r": -1.2502
+     },
+     "ziel_zu_weit": {
+      "anzahl": 213,
+      "anteil": 0.0605,
+      "r": 0.1541
+     },
+     "zeit": {
+      "anzahl": 295,
+      "anteil": 0.0838,
+      "r": 0.4552
+     },
+     "kosten": {
+      "anzahl": 1,
+      "anteil": 0.0003,
+      "r": -0.0393
+     },
+     "gegen_markt": {
+      "anzahl": 814,
+      "anteil": 0.2313,
+      "r": -0.9977
+     },
+     "sauber": {
+      "anzahl": 840,
+      "anteil": 0.2387,
+      "r": 1.8788
+     },
+     "sonst": {
+      "anzahl": 472,
+      "anteil": 0.1341,
+      "r": -1.2257
+     }
+    },
+    "mfe_r": 1.1977,
+    "mae_r": -0.9034,
+    "ziel_danach_anteil": 0.1546,
+    "ausgaenge": {
+     "ziel": 910,
+     "stop": 2168,
+     "tagesende": 441
+    },
+    "abstand_kante_atr": 0.4917,
+    "bis_einstieg": 30.2583
+   }
+  },
+  "zeitebene": {
+   "15": {
+    "trades": 338,
+    "r": -0.0272,
+    "r_vor": 0.0993,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 53,
+      "anteil": 0.1568,
+      "r": -1.1571
+     },
+     "stop_zu_eng": {
+      "anzahl": 3,
+      "anteil": 0.0089,
+      "r": -1.1736
+     },
+     "ziel_zu_weit": {
+      "anzahl": 34,
+      "anteil": 0.1006,
+      "r": 0.8298
+     },
+     "zeit": {
+      "anzahl": 84,
+      "anteil": 0.2485,
+      "r": 0.3563
+     },
+     "kosten": {
+      "anzahl": 1,
+      "anteil": 0.003,
+      "r": -0.0593
+     },
+     "gegen_markt": {
+      "anzahl": 48,
+      "anteil": 0.142,
+      "r": -0.8598
+     },
+     "sauber": {
+      "anzahl": 57,
+      "anteil": 0.1686,
+      "r": 1.1299
+     },
+     "sonst": {
+      "anzahl": 58,
+      "anteil": 0.1716,
+      "r": -0.441
+     }
+    },
+    "mfe_r": 0.7923,
+    "mae_r": -0.6186,
+    "ziel_danach_anteil": 0.0503,
+    "ausgaenge": {
+     "ziel": 58,
+     "stop": 103,
+     "tagesende": 177
+    },
+    "abstand_kante_atr": 0.4843,
+    "bis_einstieg": 41.4763
+   },
+   "5": {
+    "trades": 12955,
+    "r": -0.157,
+    "r_vor": 0.0214,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 1547,
+      "anteil": 0.1194,
+      "r": -1.2216
+     },
+     "stop_zu_eng": {
+      "anzahl": 325,
+      "anteil": 0.0251,
+      "r": -1.2476
+     },
+     "ziel_zu_weit": {
+      "anzahl": 862,
+      "anteil": 0.0665,
+      "r": 0.0378
+     },
+     "zeit": {
+      "anzahl": 1273,
+      "anteil": 0.0983,
+      "r": 0.2714
+     },
+     "kosten": {
+      "anzahl": 83,
+      "anteil": 0.0064,
+      "r": -0.0585
+     },
+     "gegen_markt": {
+      "anzahl": 3498,
+      "anteil": 0.27,
+      "r": -0.9416
+     },
+     "sauber": {
+      "anzahl": 3707,
+      "anteil": 0.2861,
+      "r": 1.3204
+     },
+     "sonst": {
+      "anzahl": 1660,
+      "anteil": 0.1281,
+      "r": -1.0317
+     }
+    },
+    "mfe_r": 0.9581,
+    "mae_r": -0.7821,
+    "ziel_danach_anteil": 0.1197,
+    "ausgaenge": {
+     "ziel": 4026,
+     "stop": 6490,
+     "tagesende": 2439
+    },
+    "abstand_kante_atr": 0.5242,
+    "bis_einstieg": 37.5758
+   }
+  },
+  "muster": {
+   "Rechteck": {
+    "trades": 13293,
+    "r": -0.1537,
+    "r_vor": 0.0233,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 1600,
+      "anteil": 0.1204,
+      "r": -1.2195
+     },
+     "stop_zu_eng": {
+      "anzahl": 328,
+      "anteil": 0.0247,
+      "r": -1.247
+     },
+     "ziel_zu_weit": {
+      "anzahl": 896,
+      "anteil": 0.0674,
+      "r": 0.0679
+     },
+     "zeit": {
+      "anzahl": 1357,
+      "anteil": 0.1021,
+      "r": 0.2766
+     },
+     "kosten": {
+      "anzahl": 84,
+      "anteil": 0.0063,
+      "r": -0.0585
+     },
+     "gegen_markt": {
+      "anzahl": 3546,
+      "anteil": 0.2668,
+      "r": -0.9405
+     },
+     "sauber": {
+      "anzahl": 3764,
+      "anteil": 0.2832,
+      "r": 1.3176
+     },
+     "sonst": {
+      "anzahl": 1718,
+      "anteil": 0.1292,
+      "r": -1.0118
+     }
+    },
+    "mfe_r": 0.9539,
+    "mae_r": -0.7779,
+    "ziel_danach_anteil": 0.118,
+    "ausgaenge": {
+     "ziel": 4084,
+     "stop": 6593,
+     "tagesende": 2616
+    },
+    "abstand_kante_atr": 0.5232,
+    "bis_einstieg": 37.675
+   }
+  }
+ },
+ "erkennung": {
+  "noten": {
+   "A": {
+    "trades": 2183,
+    "r": -0.1909,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 278,
+      "anteil": 0.1273,
+      "r": -1.2265
+     },
+     "stop_zu_eng": {
+      "anzahl": 65,
+      "anteil": 0.0298,
+      "r": -1.2224
+     },
+     "ziel_zu_weit": {
+      "anzahl": 159,
+      "anteil": 0.0728,
+      "r": 0.0372
+     },
+     "zeit": {
+      "anzahl": 161,
+      "anteil": 0.0738,
+      "r": 0.2557
+     },
+     "kosten": {
+      "anzahl": 9,
+      "anteil": 0.0041,
+      "r": -0.0723
+     },
+     "gegen_markt": {
+      "anzahl": 594,
+      "anteil": 0.2721,
+      "r": -0.9715
+     },
+     "sauber": {
+      "anzahl": 641,
+      "anteil": 0.2936,
+      "r": 1.2863
+     },
+     "sonst": {
+      "anzahl": 276,
+      "anteil": 0.1264,
+      "r": -1.0511
+     }
+    }
+   },
+   "B": {
+    "trades": 3149,
+    "r": -0.1562,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 392,
+      "anteil": 0.1245,
+      "r": -1.2262
+     },
+     "stop_zu_eng": {
+      "anzahl": 85,
+      "anteil": 0.027,
+      "r": -1.2512
+     },
+     "ziel_zu_weit": {
+      "anzahl": 199,
+      "anteil": 0.0632,
+      "r": 0.0549
+     },
+     "zeit": {
+      "anzahl": 304,
+      "anteil": 0.0965,
+      "r": 0.2136
+     },
+     "kosten": {
+      "anzahl": 20,
+      "anteil": 0.0064,
+      "r": -0.0674
+     },
+     "gegen_markt": {
+      "anzahl": 816,
+      "anteil": 0.2591,
+      "r": -0.9448
+     },
+     "sauber": {
+      "anzahl": 935,
+      "anteil": 0.2969,
+      "r": 1.292
+     },
+     "sonst": {
+      "anzahl": 398,
+      "anteil": 0.1264,
+      "r": -1.046
+     }
+    }
+   },
+   "C": {
+    "trades": 7961,
+    "r": -0.1425,
+    "arten": {
+     "fehlausbruch": {
+      "anzahl": 930,
+      "anteil": 0.1168,
+      "r": -1.2146
+     },
+     "stop_zu_eng": {
+      "anzahl": 178,
+      "anteil": 0.0224,
+      "r": -1.2539
+     },
+     "ziel_zu_weit": {
+      "anzahl": 538,
+      "anteil": 0.0676,
+      "r": 0.0817
+     },
+     "zeit": {
+      "anzahl": 892,
+      "anteil": 0.112,
+      "r": 0.3019
+     },
+     "kosten": {
+      "anzahl": 55,
+      "anteil": 0.0069,
+      "r": -0.053
+     },
+     "gegen_markt": {
+      "anzahl": 2136,
+      "anteil": 0.2683,
+      "r": -0.9303
+     },
+     "sauber": {
+      "anzahl": 2188,
+      "anteil": 0.2748,
+      "r": 1.3376
+     },
+     "sonst": {
+      "anzahl": 1044,
+      "anteil": 0.1311,
+      "r": -0.9884
+     }
+    }
+   }
+  },
+  "noten_je_variante": {
+   "15m-A": {
+    "A": {
+     "trades": 45,
+     "r": -0.2034
+    },
+    "B": {
+     "trades": 34,
+     "r": 0.1256
+    },
+    "C": {
+     "trades": 83,
+     "r": 0.0102
+    }
+   },
+   "15m-B": {
+    "A": {
+     "trades": 3,
+     "r": 0.567
+    },
+    "C": {
+     "trades": 8,
+     "r": 0.1348
+    }
+   },
+   "15m-C": {
+    "A": {
+     "trades": 41,
+     "r": -0.0226
+    },
+    "B": {
+     "trades": 30,
+     "r": -0.0302
+    },
+    "C": {
+     "trades": 57,
+     "r": -0.0286
+    }
+   },
+   "15m-D": {
+    "A": {
+     "trades": 12,
+     "r": -0.1758
+    },
+    "B": {
+     "trades": 9,
+     "r": -0.2978
+    },
+    "C": {
+     "trades": 16,
+     "r": 0.0188
+    }
+   },
+   "5m-A": {
+    "A": {
+     "trades": 941,
+     "r": -0.1109
+    },
+    "B": {
+     "trades": 1402,
+     "r": -0.1141
+    },
+    "C": {
+     "trades": 3712,
+     "r": -0.09
+    }
+   },
+   "5m-B": {
+    "A": {
+     "trades": 188,
+     "r": -0.3138
+    },
+    "B": {
+     "trades": 310,
+     "r": -0.194
+    },
+    "C": {
+     "trades": 808,
+     "r": -0.1804
+    }
+   },
+   "5m-C": {
+    "A": {
+     "trades": 599,
+     "r": -0.2724
+    },
+    "B": {
+     "trades": 845,
+     "r": -0.2079
+    },
+    "C": {
+     "trades": 1947,
+     "r": -0.2103
+    }
+   },
+   "5m-D": {
+    "A": {
+     "trades": 354,
+     "r": -0.2251
+    },
+    "B": {
+     "trades": 519,
+     "r": -0.1862
+    },
+    "C": {
+     "trades": 1330,
+     "r": -0.1848
+    }
+   }
+  },
+  "alter_stand": {
+   "Note A": {
+    "trades": 19,
+    "r": -0.1088,
+    "noten_heute": {
+     "A": 19
+    }
+   },
+   "Note B": {
+    "trades": 1349,
+    "r": -0.1598,
+    "noten_heute": {
+     "A": 682,
+     "B": 667
+    }
+   },
+   "Note C": {
+    "trades": 291,
+    "r": -0.1811,
+    "noten_heute": {
+     "B": 280,
+     "A": 11
+    }
+   },
+   "Note C (gelockert)": {
+    "trades": 2391,
+    "r": -0.1837,
+    "noten_heute": {
+     "C": 2391
+    }
+   },
+   "ungültig: Pendel ohne Band": {
+    "trades": 880,
+    "r": -0.0614,
+    "noten_heute": {
+     "C": 534,
+     "A": 107,
+     "B": 239
+    }
+   },
+   "ungültig: Steigung der Schlusskurse": {
+    "trades": 8363,
+    "r": -0.153,
+    "noten_heute": {
+     "C": 5036,
+     "B": 1963,
+     "A": 1364
+    }
+   }
+  },
+  "sichtpruefung": {
+   "bilder": 140,
+   "trades_zugeordnet": 201,
+   "kaesten_zugeordnet": 98,
+   "je_antwort": {
+    "ja": {
+     "trades": 160,
+     "r": -0.1821,
+     "kaesten": 78
+    },
+    "nein": {
+     "trades": 23,
+     "r": -0.2868,
+     "kaesten": 12
+    },
+    "unsicher": {
+     "trades": 18,
+     "r": -0.0882,
+     "kaesten": 8
+    }
+   },
+   "zuordnung": "gleiche Aktie, gleicher Tag, gleiche Zeitebene, gleicher Kastenbeginn"
+  }
+ },
+ "einstiege_gleiche_kaesten": {
+  "kaesten": 4166,
+  "je_einstieg": {
+   "Ausbruch": {
+    "trades": 4508,
+    "r": -0.1686,
+    "arten": {
+     "ziel_zu_weit": 314,
+     "zeit": 558,
+     "fehlausbruch": 372,
+     "gegen_markt": 1426,
+     "sonst": 592,
+     "sauber": 1200,
+     "stop_zu_eng": 17,
+     "kosten": 29
+    }
+   },
+   "Fehlschlag": {
+    "trades": 2223,
+    "r": -0.1958,
+    "arten": {
+     "sonst": 287,
+     "gegen_markt": 613,
+     "sauber": 562,
+     "zeit": 219,
+     "stop_zu_eng": 50,
+     "ziel_zu_weit": 147,
+     "fehlausbruch": 335,
+     "kosten": 10
+    }
+   },
+   "Retest": {
+    "trades": 1310,
+    "r": -0.1976,
+    "arten": {
+     "ziel_zu_weit": 77,
+     "zeit": 79,
+     "gegen_markt": 293,
+     "sonst": 169,
+     "sauber": 431,
+     "fehlausbruch": 205,
+     "stop_zu_eng": 39,
+     "kosten": 17
+    }
+   },
+   "früher Einstieg": {
+    "trades": 2183,
+    "r": -0.5305,
+    "arten": {
+     "sauber": 455,
+     "gegen_markt": 563,
+     "stop_zu_eng": 166,
+     "zeit": 38,
+     "fehlausbruch": 553,
+     "sonst": 339,
+     "ziel_zu_weit": 69
+    }
+   }
+  }
+ },
+ "was_waere_wenn": {
+  "gesamt": {
+   "wie_gerechnet": {
+    "trades": 13293,
+    "r": -0.1537
+   },
+   "stop_1_5atr": -0.1326,
+   "stop_1atr": -0.199,
+   "ziel_1r": -0.1636,
+   "ziel_2r": -0.1462,
+   "ohne_einstieg_nach_1430": {
+    "trades": 8966,
+    "r": -0.1557
+   }
+  },
+  "variante_a": {
+   "15m-A": {
+    "wie_gerechnet": {
+     "trades": 45,
+     "r": -0.2034
+    },
+    "stop_1_5atr": -0.2457,
+    "stop_1atr": -0.2377,
+    "ziel_1r": -0.2325,
+    "ziel_2r": -0.1867,
+    "ohne_einstieg_nach_1430": {
+     "trades": 10,
+     "r": -0.4462
+    }
+   },
+   "15m-B": {
+    "wie_gerechnet": {
+     "trades": 3,
+     "r": 0.567
+    },
+    "stop_1_5atr": 0.4347,
+    "stop_1atr": 0.652,
+    "ziel_1r": 0.6003,
+    "ziel_2r": 0.3401,
+    "ohne_einstieg_nach_1430": {
+     "trades": 0,
+     "r": null
+    }
+   },
+   "15m-C": {
+    "wie_gerechnet": {
+     "trades": 41,
+     "r": -0.0226
+    },
+    "stop_1_5atr": 0.097,
+    "stop_1atr": 0.0722,
+    "ziel_1r": -0.0316,
+    "ziel_2r": -0.0056,
+    "ohne_einstieg_nach_1430": {
+     "trades": 10,
+     "r": -0.2436
+    }
+   },
+   "15m-D": {
+    "wie_gerechnet": {
+     "trades": 12,
+     "r": -0.1758
+    },
+    "stop_1_5atr": -0.008,
+    "stop_1atr": -0.0377,
+    "ziel_1r": -0.0486,
+    "ziel_2r": -0.1313,
+    "ohne_einstieg_nach_1430": {
+     "trades": 1,
+     "r": 1.3607
+    }
+   },
+   "5m-A": {
+    "wie_gerechnet": {
+     "trades": 941,
+     "r": -0.1109
+    },
+    "stop_1_5atr": -0.1125,
+    "stop_1atr": -0.1767,
+    "ziel_1r": -0.1063,
+    "ziel_2r": -0.1002,
+    "ohne_einstieg_nach_1430": {
+     "trades": 674,
+     "r": -0.1036
+    }
+   },
+   "5m-B": {
+    "wie_gerechnet": {
+     "trades": 188,
+     "r": -0.3138
+    },
+    "stop_1_5atr": -0.2224,
+    "stop_1atr": -0.2924,
+    "ziel_1r": -0.2528,
+    "ziel_2r": -0.3227,
+    "ohne_einstieg_nach_1430": {
+     "trades": 123,
+     "r": -0.2364
+    }
+   },
+   "5m-C": {
+    "wie_gerechnet": {
+     "trades": 599,
+     "r": -0.2724
+    },
+    "stop_1_5atr": -0.1704,
+    "stop_1atr": -0.2093,
+    "ziel_1r": -0.2919,
+    "ziel_2r": -0.2435,
+    "ohne_einstieg_nach_1430": {
+     "trades": 441,
+     "r": -0.3067
+    }
+   },
+   "5m-D": {
+    "wie_gerechnet": {
+     "trades": 354,
+     "r": -0.2251
+    },
+    "stop_1_5atr": -0.2316,
+    "stop_1atr": -0.2976,
+    "ziel_1r": -0.2393,
+    "ziel_2r": -0.2407,
+    "ohne_einstieg_nach_1430": {
+     "trades": 250,
+     "r": -0.1925
+    }
+   }
+  },
+  "hinweis": "Nur Suchdaten, nur Information, keine Regel. Was auffällt, wird eine neue Idee im Register und muss auf den Bestätigungsdaten bestehen."
+ },
+ "lauf": "rechteck-v1",
+ "code": {
+  "gemeinsam": "7c92a9b18dfe",
+  "rechteck": "28313543ce98",
+  "doppelboden": "17b1ca0c778e",
+  "analyse": "4e8c9fb71a68",
+  "rechteck_alt_8454cdc07786": "8454cdc07786"
+ }
+}

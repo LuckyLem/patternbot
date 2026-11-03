@@ -1,8 +1,9 @@
 {
  "code_v3": {
-  "gemeinsam": "a4211707b14e",
+  "gemeinsam": "7c92a9b18dfe",
   "rechteck": "28313543ce98",
-  "analyse": "50bfb138ceca",
+  "doppelboden": "4eb4c97ec6e7",
+  "analyse": "4e8c9fb71a68",
   "rechteck_alt_8454cdc07786": "8454cdc07786"
  },
  "code_v1": {
@@ -35,7 +36,7 @@
     }
    },
    "erkennung_je_kerze_gleich": true,
-   "sekunden": 30
+   "sekunden": 24
   },
   {
    "zeitebene": 5,
@@ -60,11 +61,11 @@
     }
    },
    "erkennung_je_kerze_gleich": true,
-   "sekunden": 161
+   "sekunden": 140
   }
  ],
  "trades_v1": 13293,
  "trades_gleich": 13293,
  "bestanden": true,
- "dauer_s": 192
+ "dauer_s": 165
 }

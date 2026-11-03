@@ -1,6 +1,6 @@
 {
- "stand": "2026-11-03T08:23:00-05:00",
- "phase": "Phase 1 fertig: gemeinsame Werkbank, Gleichheitstest bestanden. Wartet auf dein OK für Phase 2",
+ "stand": "2026-11-03T10:33:57-05:00",
+ "phase": "Phase 2 und 3 fertig: Analyse Rechteck v1, Doppelboden-Erkennung. Wartet auf dein OK (neue Seite, dann Sichtprüfungen)",
  "laeuft": false,
  "plan": [
   {
@@ -41,15 +41,15 @@
   },
   {
    "titel": "Analyse Rechteck v1 (Phase 2)",
-   "text": "Warum Gewinn, warum Verlust; Einstiegs- und Verlust-Prüfung vorbereiten.",
-   "status": "offen",
-   "datum": "nach deinem OK"
+   "text": "Warum Gewinn, warum Verlust: saubere Erkennung bringt nichts, häufigste Verlust-Art „gegen den Markt“, kein „Was wäre wenn“ wird positiv. Einstiegs- und Verlust-Prüfung vorbereitet.",
+   "status": "fertig",
+   "datum": "Di 03.11."
   },
   {
    "titel": "Doppelboden (Phase 3 und 4)",
-   "text": "Erkennung Tag, 5 und 15 Min, Sichtprüfung, dann Vorab-Datei und Lauf auf den Suchdaten.",
-   "status": "offen",
-   "datum": "danach"
+   "text": "Schritt 1 fertig: Erkennung Tag, 5 und 15 Min, Pflichttests, Trichter, Zählungen, Sichtprüfung doppelboden-1 vorbereitet. Danach Vorab-Datei und Lauf auf den Suchdaten.",
+   "status": "laeuft",
+   "datum": "Di 03.11."
   },
   {
    "titel": "Rechteck Fassung 3 (Phase 5)",
@@ -160,6 +160,14 @@
   {
    "zeit": "2026-11-03T08:23:00-05:00",
    "text": "Ideen-Register angelegt: 12 Einträge, bisher 132 Versuche. Tageskerzen geladen: 1.104 von 1.522 Werten vollständig seit 2016, alle 22 Länder-ETFs"
+  },
+  {
+   "zeit": "2026-11-03T10:33:57-05:00",
+   "text": "Analyse Werkbank Rechteck v1 fertig: saubere Erkennung bringt nichts, häufigste Verlust-Art „gegen den Markt“"
+  },
+  {
+   "zeit": "2026-11-03T10:33:57-05:00",
+   "text": "Doppelboden Schritt 1 fertig: Erkennung Tag, 5 und 15 Min, Abschneide-Test 300 von 300; Sichtprüfung doppelboden-1 vorbereitet"
   }
  ]
 }

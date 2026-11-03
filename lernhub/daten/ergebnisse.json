@@ -55,7 +55,12 @@
     "pruef": null
    },
    "urteil": "zu wenig Daten (unter 50 Trades in einem Jahr)",
-   "urteil_art": "part"
+   "urteil_art": "part",
+   "ausgaenge": {
+    "ziel": 6,
+    "stop": 14,
+    "tagesende": 25
+   }
   },
   {
    "zeitebene": 15,
@@ -103,7 +108,12 @@
     "pruef": null
    },
    "urteil": "zu wenig Daten (unter 50 Trades in einem Jahr)",
-   "urteil_art": "part"
+   "urteil_art": "part",
+   "ausgaenge": {
+    "ziel": 2,
+    "stop": 0,
+    "tagesende": 1
+   }
   },
   {
    "zeitebene": 15,
@@ -156,7 +166,12 @@
     "pruef": null
    },
    "urteil": "zu wenig Daten (unter 50 Trades in einem Jahr)",
-   "urteil_art": "part"
+   "urteil_art": "part",
+   "ausgaenge": {
+    "ziel": 6,
+    "stop": 17,
+    "tagesende": 18
+   }
   },
   {
    "zeitebene": 15,
@@ -205,7 +220,12 @@
     "pruef": null
    },
    "urteil": "zu wenig Daten (unter 50 Trades in einem Jahr)",
-   "urteil_art": "part"
+   "urteil_art": "part",
+   "ausgaenge": {
+    "ziel": 1,
+    "stop": 4,
+    "tagesende": 7
+   }
   },
   {
    "zeitebene": 5,
@@ -259,7 +279,12 @@
     "pruef": null
    },
    "urteil": "überzeugt nicht: nicht beide Jahre positiv; mit Kostenstress nicht positiv; Zufall nur 83 von 100; Note A nicht besser als Note C",
-   "urteil_art": "bad"
+   "urteil_art": "bad",
+   "ausgaenge": {
+    "ziel": 348,
+    "stop": 414,
+    "tagesende": 179
+   }
   },
   {
    "zeitebene": 5,
@@ -313,7 +338,12 @@
     "pruef": null
    },
    "urteil": "überzeugt nicht: nicht beide Jahre positiv; mit Kostenstress nicht positiv; Zufall nur 9 von 100; Note A nicht besser als Note C",
-   "urteil_art": "bad"
+   "urteil_art": "bad",
+   "ausgaenge": {
+    "ziel": 70,
+    "stop": 108,
+    "tagesende": 10
+   }
   },
   {
    "zeitebene": 5,
@@ -371,7 +401,12 @@
     "pruef": null
    },
    "urteil": "überzeugt nicht: nicht beide Jahre positiv; mit Kostenstress nicht positiv; Zufall nur 24 von 100; Note A nicht besser als Note C",
-   "urteil_art": "bad"
+   "urteil_art": "bad",
+   "ausgaenge": {
+    "ziel": 157,
+    "stop": 383,
+    "tagesende": 59
+   }
   },
   {
    "zeitebene": 5,
@@ -425,7 +460,12 @@
     "pruef": null
    },
    "urteil": "überzeugt nicht: nicht beide Jahre positiv; mit Kostenstress nicht positiv; Zufall nur 32 von 100; Note A nicht besser als Note C",
-   "urteil_art": "bad"
+   "urteil_art": "bad",
+   "ausgaenge": {
+    "ziel": 100,
+    "stop": 207,
+    "tagesende": 47
+   }
   }
  ]
 }

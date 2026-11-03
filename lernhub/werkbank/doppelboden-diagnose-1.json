@@ -1,0 +1,451 @@
+{
+ "stand": "2026-11-03T10:30:25-05:00",
+ "code": {
+  "gemeinsam": "7c92a9b18dfe",
+  "rechteck": "28313543ce98",
+  "doppelboden": "9d6347afba55",
+  "analyse": "4e8c9fb71a68",
+  "rechteck_alt_8454cdc07786": "8454cdc07786"
+ },
+ "suchdaten": {
+  "tag": "2016-10-01 bis 2020-09-30, alle Werte mit Daten, Filter je Tag",
+  "intraday": "2021-10-01 bis 2023-09-29, die 50 der Werkbank"
+ },
+ "zeitebenen": {
+  "tag": {
+   "werte": 1333,
+   "ohne_daten": 189,
+   "trichter": [
+    {
+     "regel": "Kandidaten (Paare B1/B2 bekannter Wendepunkte)",
+     "key": "",
+     "uebrig": 1617172,
+     "nur_diese": null,
+     "insgesamt": null
+    },
+    {
+     "regel": "Filter je Tag (Kurs, Umsatz) und Vorlaufzeit",
+     "key": "filter",
+     "uebrig": 1274865,
+     "nur_diese": 7261,
+     "insgesamt": 342307
+    },
+    {
+     "regel": "Abstand B1 -> B2 im erlaubten Bereich",
+     "key": "abstand",
+     "uebrig": 580109,
+     "nur_diese": 8604,
+     "insgesamt": 879708
+    },
+    {
+     "regel": "Zwischenhoch P hoch genug über dem tieferen Boden",
+     "key": "zwischenhoch",
+     "uebrig": 576623,
+     "nur_diese": 671,
+     "insgesamt": 19919
+    },
+    {
+     "regel": "Böden etwa auf gleicher Höhe",
+     "key": "gleiche_hoehe",
+     "uebrig": 53199,
+     "nur_diese": 224246,
+     "insgesamt": 1477261
+    },
+    {
+     "regel": "Rückgang vor B1 (Vortrend)",
+     "key": "vortrend",
+     "uebrig": 34224,
+     "nur_diese": 10709,
+     "insgesamt": 627547
+    },
+    {
+     "regel": "dazwischen kein Schluss unter dem Boden oder über P",
+     "key": "dazwischen",
+     "uebrig": 23006,
+     "nur_diese": 10110,
+     "insgesamt": 596600
+    },
+    {
+     "regel": "echte Umkehr an B1",
+     "key": "umkehr_b1",
+     "uebrig": 22475,
+     "nur_diese": 482,
+     "insgesamt": 45601
+    },
+    {
+     "regel": "echte Umkehr an B2",
+     "key": "umkehr_b2",
+     "uebrig": 21922,
+     "nur_diese": 540,
+     "insgesamt": 44402
+    },
+    {
+     "regel": "nicht schon vor der Reife bestätigt oder gescheitert",
+     "key": "nicht_vor_reife",
+     "uebrig": 20671,
+     "nur_diese": 1251,
+     "insgesamt": 118339
+    }
+   ],
+   "muster": {
+    "je_jahr_note": {
+     "1": {
+      "A": 175,
+      "B": 1730,
+      "C": 1820
+     },
+     "2": {
+      "A": 176,
+      "B": 1817,
+      "C": 1911
+     },
+     "3": {
+      "A": 196,
+      "B": 1957,
+      "C": 2116
+     },
+     "4": {
+      "A": 183,
+      "B": 2062,
+      "C": 2227
+     }
+    },
+    "je_note": {
+     "A": 730,
+     "B": 7566,
+     "C": 8074
+    },
+    "gesamt": 16370,
+    "ausgang_je_note": {
+     "A": {
+      "bestätigt": 330,
+      "gescheitert": 307,
+      "abgelaufen": 81,
+      "offen": 12
+     },
+     "B": {
+      "gescheitert": 3034,
+      "bestätigt": 2881,
+      "abgelaufen": 1418,
+      "offen": 233
+     },
+     "C": {
+      "bestätigt": 3575,
+      "gescheitert": 2725,
+      "abgelaufen": 1574,
+      "offen": 200
+     }
+    },
+    "ausgang": {
+     "bestätigt": 6786,
+     "gescheitert": 6066,
+     "abgelaufen": 3073,
+     "offen": 445
+    }
+   },
+   "vor_reife": {
+    "bestätigt": 1619
+   },
+   "werte_mit_muster": 1180,
+   "entscheidungen": {
+    "A long": 6772,
+    "C long": 5380,
+    "D short": 6597
+   }
+  },
+  "15m": {
+   "werte": 50,
+   "trichter": [
+    {
+     "regel": "Kandidaten (Paare B1/B2 bekannter Wendepunkte)",
+     "key": "",
+     "uebrig": 70527,
+     "nur_diese": null,
+     "insgesamt": null
+    },
+    {
+     "regel": "Abstand B1 -> B2 im erlaubten Bereich",
+     "key": "abstand",
+     "uebrig": 51442,
+     "nur_diese": 2013,
+     "insgesamt": 19085
+    },
+    {
+     "regel": "Zwischenhoch P hoch genug über dem tieferen Boden",
+     "key": "zwischenhoch",
+     "uebrig": 49028,
+     "nur_diese": 633,
+     "insgesamt": 8090
+    },
+    {
+     "regel": "Böden etwa auf gleicher Höhe",
+     "key": "gleiche_hoehe",
+     "uebrig": 6052,
+     "nur_diese": 28970,
+     "insgesamt": 55738
+    },
+    {
+     "regel": "Rückgang vor B1 (Vortrend)",
+     "key": "vortrend",
+     "uebrig": 4874,
+     "nur_diese": 983,
+     "insgesamt": 14141
+    },
+    {
+     "regel": "dazwischen kein Schluss unter dem Boden oder über P",
+     "key": "dazwischen",
+     "uebrig": 4603,
+     "nur_diese": 224,
+     "insgesamt": 1498
+    },
+    {
+     "regel": "echte Umkehr an B1",
+     "key": "umkehr_b1",
+     "uebrig": 4493,
+     "nur_diese": 100,
+     "insgesamt": 2023
+    },
+    {
+     "regel": "echte Umkehr an B2",
+     "key": "umkehr_b2",
+     "uebrig": 4373,
+     "nur_diese": 120,
+     "insgesamt": 1684
+    },
+    {
+     "regel": "nicht schon vor der Reife bestätigt oder gescheitert",
+     "key": "nicht_vor_reife",
+     "uebrig": 4021,
+     "nur_diese": 352,
+     "insgesamt": 10441
+    }
+   ],
+   "muster": {
+    "je_jahr_note": {
+     "1": {
+      "A": 362,
+      "B": 1313,
+      "C": 1752
+     },
+     "2": {
+      "A": 375,
+      "B": 1447,
+      "C": 1764
+     }
+    },
+    "je_note": {
+     "A": 737,
+     "B": 2760,
+     "C": 3516
+    },
+    "gesamt": 7013,
+    "ausgang_je_note": {
+     "A": {
+      "bestätigt": 128,
+      "offen": 204,
+      "abgelaufen": 282,
+      "gescheitert": 123
+     },
+     "B": {
+      "abgelaufen": 1090,
+      "offen": 820,
+      "bestätigt": 416,
+      "gescheitert": 434
+     },
+     "C": {
+      "abgelaufen": 1554,
+      "offen": 989,
+      "gescheitert": 385,
+      "bestätigt": 588
+     }
+    },
+    "ausgang": {
+     "bestätigt": 1132,
+     "abgelaufen": 2926,
+     "offen": 2013,
+     "gescheitert": 942
+    }
+   },
+   "vor_reife": {
+    "bestätigt": 682
+   },
+   "zeitbudget": {
+    "bestaetigungen": 1132,
+    "zu_spaet": 421,
+    "anteil_zu_spaet": 0.3719,
+    "handeln": true,
+    "regel": "mehr als die Hälfte nach der letzten Einstiegszeit -> nur messen, nicht handeln"
+   },
+   "entscheidungen": {
+    "A long": 1132,
+    "C long": 4122,
+    "D short": 1248
+   }
+  },
+  "5m": {
+   "werte": 50,
+   "trichter": [
+    {
+     "regel": "Kandidaten (Paare B1/B2 bekannter Wendepunkte)",
+     "key": "",
+     "uebrig": 998944,
+     "nur_diese": null,
+     "insgesamt": null
+    },
+    {
+     "regel": "Abstand B1 -> B2 im erlaubten Bereich",
+     "key": "abstand",
+     "uebrig": 815436,
+     "nur_diese": 18978,
+     "insgesamt": 183508
+    },
+    {
+     "regel": "Zwischenhoch P hoch genug über dem tieferen Boden",
+     "key": "zwischenhoch",
+     "uebrig": 807781,
+     "nur_diese": 1434,
+     "insgesamt": 36856
+    },
+    {
+     "regel": "Böden etwa auf gleicher Höhe",
+     "key": "gleiche_hoehe",
+     "uebrig": 62188,
+     "nur_diese": 454797,
+     "insgesamt": 883747
+    },
+    {
+     "regel": "Rückgang vor B1 (Vortrend)",
+     "key": "vortrend",
+     "uebrig": 52648,
+     "nur_diese": 5900,
+     "insgesamt": 144106
+    },
+    {
+     "regel": "dazwischen kein Schluss unter dem Boden oder über P",
+     "key": "dazwischen",
+     "uebrig": 34498,
+     "nur_diese": 16166,
+     "insgesamt": 171127
+    },
+    {
+     "regel": "echte Umkehr an B1",
+     "key": "umkehr_b1",
+     "uebrig": 33517,
+     "nur_diese": 905,
+     "insgesamt": 31221
+    },
+    {
+     "regel": "echte Umkehr an B2",
+     "key": "umkehr_b2",
+     "uebrig": 32495,
+     "nur_diese": 1022,
+     "insgesamt": 30479
+    },
+    {
+     "regel": "nicht schon vor der Reife bestätigt oder gescheitert",
+     "key": "nicht_vor_reife",
+     "uebrig": 31503,
+     "nur_diese": 992,
+     "insgesamt": 83882
+    }
+   ],
+   "muster": {
+    "je_jahr_note": {
+     "1": {
+      "A": 800,
+      "B": 7796,
+      "C": 8336
+     },
+     "2": {
+      "A": 796,
+      "B": 7966,
+      "C": 8312
+     }
+    },
+    "je_note": {
+     "A": 1596,
+     "B": 15762,
+     "C": 16648
+    },
+    "gesamt": 34006,
+    "ausgang_je_note": {
+     "A": {
+      "gescheitert": 517,
+      "abgelaufen": 552,
+      "bestätigt": 352,
+      "offen": 175
+     },
+     "B": {
+      "gescheitert": 4951,
+      "abgelaufen": 5755,
+      "offen": 1973,
+      "bestätigt": 3083
+     },
+     "C": {
+      "bestätigt": 3617,
+      "gescheitert": 4705,
+      "offen": 1906,
+      "abgelaufen": 6420
+     }
+    },
+    "ausgang": {
+     "bestätigt": 7052,
+     "gescheitert": 10173,
+     "offen": 4054,
+     "abgelaufen": 12727
+    }
+   },
+   "vor_reife": {
+    "bestätigt": 1726
+   },
+   "zeitbudget": {
+    "bestaetigungen": 7052,
+    "zu_spaet": 1327,
+    "anteil_zu_spaet": 0.1882,
+    "handeln": true,
+    "regel": "mehr als die Hälfte nach der letzten Einstiegszeit -> nur messen, nicht handeln"
+   },
+   "entscheidungen": {
+    "C long": 16245,
+    "A long": 7052,
+    "D short": 11823
+   }
+  }
+ },
+ "abschneide": {
+  "startwert": 20261105,
+  "proben": 300,
+  "gleich": 300,
+  "je_zeitebene": {
+   "1440": {
+    "proben": 100,
+    "gleich": 100
+   },
+   "15": {
+    "proben": 100,
+    "gleich": 100
+   },
+   "5": {
+    "proben": 100,
+    "gleich": 100
+   }
+  },
+  "fehler": []
+ },
+ "sichtpruefung": {
+  "id": "doppelboden-1",
+  "bilder": 30,
+  "startwert": 20261106,
+  "noten": {
+   "C": 13,
+   "B": 15,
+   "A": 2
+  },
+  "je_zeitebene": {
+   "15": 10,
+   "1440": 10,
+   "5": 10
+  }
+ },
+ "dauer_s": 65
+}

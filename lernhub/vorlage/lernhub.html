@@ -445,6 +445,88 @@ html.tv-open{overflow:hidden}
   .tv-legend .o{font-size:10.5px;gap:1px 8px}
   .tv-legend .o .v{display:none}
 }
+
+/* Muster-Mappen */
+.mappe{margin-bottom:14px}
+.mappe>summary{list-style:none;cursor:pointer;position:relative;display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;padding:18px 56px 18px 22px;border-radius:20px;background:var(--raised);box-shadow:var(--lift)}
+.mappe>summary::-webkit-details-marker,.teil>summary::-webkit-details-marker{display:none}
+.mappe>summary::after,.teil>summary::after{content:"";position:absolute;right:24px;top:50%;width:8px;height:8px;border-right:2px solid var(--ink-3);border-bottom:2px solid var(--ink-3);transform:translateY(-75%) rotate(45deg);transition:transform .15s}
+.mappe[open]>summary::after,.teil[open]>summary::after{transform:translateY(-25%) rotate(225deg)}
+.mappe>summary:hover,.teil>summary:hover{color:var(--ink)}
+.mappe>summary:focus-visible,.teil>summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.mappe .mt{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-right:4px}
+.mappe .mt b{font-size:19px;font-weight:650;letter-spacing:-.02em;color:var(--ink)}
+.mappe .mt .dim{font-size:13px;color:var(--ink-3)}
+.mappe .ms{flex:1 1 100%;font-size:13.5px;color:var(--ink-2);line-height:1.45}
+.mbody{padding:4px 6px 18px}
+.teil{border-bottom:1px solid var(--hair-soft)}
+.teil>summary{list-style:none;cursor:pointer;position:relative;padding:16px 44px 16px 2px;font-size:15px;font-weight:600;color:var(--ink)}
+.teil>summary::after{right:12px}
+.teil .cnt{font:500 12.5px var(--mono);color:var(--ink-3);margin-left:10px}
+.tbody{padding:2px 0 24px;display:grid;gap:16px;min-width:0}
+.tbody>.lead{margin:0}
+.prose p{font-size:14px;line-height:1.55;color:var(--ink-2)}
+.prose p+p{margin-top:10px}
+.prose b{color:var(--ink);font-weight:600}
+.ls{display:grid;gap:8px;margin:14px 0 12px}
+.ls>div{display:flex;gap:10px;align-items:baseline;font-size:13.5px;line-height:1.4;color:var(--ink-2)}
+.ls .chip{min-width:82px;text-align:center}
+.note{font-size:13.5px;line-height:1.5;color:var(--ink-2);max-width:80ch}
+.note b{color:var(--ink);font-weight:600}
+.en dl.sz{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-size:13px;line-height:1.4}
+.en dl.sz dt{color:var(--ink-3)}
+.en dl.sz dd{color:var(--ink-2);min-width:0}
+.en .top .chip{margin-left:auto}
+.next{margin-top:20px;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+.next b{color:var(--ink);font-weight:600}
+/* Liste der Läufe und Prüfungen */
+.ltab{display:grid;border-radius:16px;background:var(--raised);box-shadow:var(--lift);overflow:hidden}
+.ltab .lh,.ltab .lr{display:grid;grid-template-columns:minmax(0,2.1fr) 96px 92px minmax(0,3fr) 112px;gap:8px 16px;align-items:center;padding:12px 16px}
+.ltab.pr .lh,.ltab.pr .lr{grid-template-columns:minmax(0,1.9fr) 96px minmax(0,2.4fr) 120px}
+.ltab .lh{font:600 10.5px var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);padding-top:10px;padding-bottom:8px}
+.ltab .lr{border-top:1px solid var(--hair-soft);font-size:13.5px;color:var(--ink-2)}
+.ltab .lr.sel{background:rgba(var(--accent-rgb),.07);box-shadow:inset 3px 0 0 var(--accent)}
+.ltab .lr b{color:var(--ink);font-weight:600}
+.ltab .lr small{display:block;font-size:12px;color:var(--ink-3);line-height:1.4;margin-top:2px}
+.ltab .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.ltab .erg{line-height:1.45}
+.ltab .erg .chip{margin-right:6px}
+.ltab .act{justify-self:end}
+.ltab .void{padding:18px 16px;text-align:left}
+.qline{display:grid;gap:5px}
+.qbar{position:relative;display:flex;gap:2px;height:8px;max-width:220px}
+.qbar i{display:block;height:100%;min-width:2px}
+.qbar i:first-child{border-radius:4px 0 0 4px}
+.qbar i:last-child{border-radius:0 4px 4px 0}
+.qbar i:only-child{border-radius:4px}
+.qbar .ja{background:var(--up)} .qbar .ne{background:var(--down)} .qbar .un{background:var(--hair)} .qbar .an{background:var(--down);opacity:.55}
+.qbar .th{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);border-radius:1px}
+@media(max-width:700px){
+  .ltab .lh{display:none}
+  .ltab .lr,.ltab.pr .lr{grid-template-columns:minmax(0,1fr) auto;gap:6px 12px}
+  .ltab .lr>.c1{grid-column:1/-1}
+  .ltab .lr>.erg{grid-column:1/-1}
+  .ltab .lr>.c2::before{content:attr(data-l) " ";color:var(--ink-3);font-family:var(--sans)}
+  .ltab .lr>.c3::before{content:attr(data-l) " ";color:var(--ink-3);font-family:var(--sans)}
+  .ltab .act{grid-column:1/-1;justify-self:stretch}
+  .ltab .act .btn{width:100%;justify-content:center}
+  .mappe>summary{padding:16px 48px 16px 16px}
+  .mbody{padding:2px 0 14px}
+}
+/* Ansicht eines Laufs */
+.lauf{margin-top:6px;padding-top:18px;border-top:2px solid var(--accent);display:grid;gap:14px;min-width:0}
+.lauf>[data-pane]{display:grid;gap:14px;min-width:0}
+.lauf>[data-pane][hidden]{display:none}
+.lauf .lead{margin:0}
+.lhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.lhead h3{font-size:17px}
+.lsub{font-size:13px;color:var(--ink-3);margin-top:3px;line-height:1.45}
+.lauf .tabs{margin-bottom:0}
+.lauf .tabs .st{display:none}
+.lhead .linkbtn{white-space:nowrap;flex:none}
+@media(max-width:700px){.lauf .tabs{display:flex;flex-wrap:nowrap}.lauf .tabs button{flex:1 1 auto}.lauf .tabs .lt{display:none}.lauf .tabs .st{display:inline}}
+.lauf .ctrl{margin-bottom:0}
+.lauf .detail{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -484,99 +566,154 @@ html.tv-open{overflow:hidden}
 
 
     <section class="enter s5" id="muster">
-      <div class="head"><div class="hleft"><h2>So liest der Bot die Muster</h2></div></div>
-      <div class="tabs" role="tablist" aria-label="Muster">
-        <button type="button" role="tab" id="tabDb" aria-selected="true" aria-controls="pDb">Doppelboden · in Arbeit</button>
-        <button type="button" role="tab" id="tabRect" aria-selected="false" aria-controls="pRect">Rechteck · v1 abgeschlossen</button>
-      </div>
-      <div id="pDb" role="tabpanel" aria-labelledby="tabDb">
-        <p class="lead">Zwei Tiefs etwa auf gleicher Höhe nach einem Rückgang, dazwischen ein Zwischenhoch: die Nackenlinie. Bestätigt ist der
-          Doppelboden erst, wenn der Kurs über der Nackenlinie schließt. Der Bot sucht ihn auf Tageskerzen (Halten bis 20 Tage) und auf 5 und
-          15 Minuten (alles an einem Tag).</p>
-        <div class="two">
-          <div class="card pad"><svg class="schema" id="schemaDb" viewBox="0 0 520 280" role="img" aria-label="Schema eines Doppelbodens: Rückgang, erster Boden, Zwischenhoch mit Nackenlinie, zweiter Boden auf gleicher Höhe, Ausbruch über die Nackenlinie"></svg></div>
-          <div class="card pad">
-            <dl class="rules">
+      <div class="head"><div class="hleft"><h2>Muster</h2><span class="aside" id="musterNote"></span></div></div>
+      <p class="lead">Jedes Muster hat eine eigene Mappe: alle Läufe mit ihren Trades, alle Prüfungen deines Auges, was das Muster ist,
+        wie der Bot es liest und wo er long oder short einsteigt. Ein Klick auf eine Überschrift klappt sie auf oder zu.</p>
+
+      <details class="mappe" id="m-doppelboden" data-muster="Doppelboden" open>
+        <summary><span class="mt"><b>Doppelboden</b><span class="dim">gespiegelt: Doppeltop</span></span><span class="chip run">in Arbeit</span><span class="ms" id="ms-doppelboden"></span></summary>
+        <div class="mbody">
+          <details class="teil" data-t="laeufe" open><summary>Läufe<span class="cnt" data-cnt="laeufe"></span></summary><div class="tbody" data-slot="laeufe"></div></details>
+          <details class="teil" data-t="pruef" open><summary>Prüfungen deines Auges<span class="cnt" data-cnt="pruef"></span></summary><div class="tbody" data-slot="pruef"></div></details>
+          <details class="teil" data-t="was" open><summary>Was ist ein Doppelboden?</summary><div class="tbody">
+            <div class="two">
+              <div class="card pad prose">
+                <p>Nach einem Rückgang fällt der Kurs zweimal auf etwa dieselbe Höhe und prallt beide Male ab. Dazwischen steigt er auf ein
+                  Zwischenhoch: Dort liegt die <b>Nackenlinie</b>. Zusammen sieht das aus wie ein <b>W</b>.</p>
+                <p>Die Idee: Die Verkäufer schaffen es zweimal nicht, den Kurs tiefer zu drücken. Bestätigt ist das Muster erst, wenn der Kurs
+                  <b>über der Nackenlinie schließt</b>. Vorher ist es nur ein Kandidat.</p>
+                <p>Der <b>Doppeltop</b> ist das Spiegelbild: ein M nach einem Anstieg, zwei Hochs, dazwischen ein Zwischentief. Der Bot liest
+                  ihn mit denselben Regeln, nur auf den Kopf gestellt.</p>
+                <div class="ls">
+                  <div><span class="chip good">long</span><span>Doppelboden: Ausbruch, Retest, früher Einstieg</span></div>
+                  <div><span class="chip bad">short</span><span>Doppelboden: Fehlschlag, wenn die Böden brechen</span></div>
+                  <div><span class="chip">gespiegelt</span><span>Doppeltop: dieselben Einstiege, long und short vertauscht</span></div>
+                </div>
+                <p class="dim">Zeitebenen: Tageskerzen (halten bis 20 Handelstage, auch über Nacht) sowie 15 und 5 Minuten (alles an einem
+                  Tag, raus spätestens 15:50).</p>
+              </div>
+              <div class="card pad"><svg class="schema" id="schemaDb" viewBox="0 0 520 280" role="img" aria-label="Schema eines Doppelbodens: Rückgang, erster Boden, Zwischenhoch mit Nackenlinie, zweiter Boden auf gleicher Höhe, Ausbruch über die Nackenlinie"></svg></div>
+            </div>
+          </div></details>
+          <details class="teil" data-t="lesen" open><summary>So liest der Bot ihn</summary><div class="tbody">
+            <div class="card pad"><dl class="rules">
               <dt>Vortrend</dt><dd>Vor dem ersten Boden fällt der Kurs deutlich: mindestens 3 ATR auf Tageskerzen, 2 ATR intraday.</dd>
               <dt>Zwei Böden</dt><dd>Beide Tiefs sind echte Umkehrpunkte und liegen fast gleich tief: höchstens <b>0,5 ATR</b> auseinander (Tag), 0,3 ATR (intraday).</dd>
               <dt>Nackenlinie</dt><dd>Das Zwischenhoch liegt mindestens 2 ATR (Tag) bzw. 1,5 ATR (intraday) über dem tieferen Boden.</dd>
               <dt>Abstand</dt><dd>10 bis 80 Tage zwischen den Böden. Intraday mindestens 10 Kerzen (5 Min) bzw. 6 Kerzen (15 Min), alles am selben Tag.</dd>
               <dt>Bestätigung</dt><dd>Schluss mindestens 0,1 ATR <b>über der Nackenlinie</b>, rechtzeitig nach dem zweiten Boden. Fällt der Kurs vorher klar unter die Böden, ist es ein Fehlschlag.</dd>
               <dt>Note</dt><dd><b>A</b> Böden fast gleich tief, klarer Vortrend, kein Zickzack dazwischen. <b>B</b> gültig. <b>C</b> nur mit lockerer Toleranz.</dd>
-            </dl>
-          </div>
-        </div>
-        <div class="stages" aria-label="Reifegrad des Doppelbodens">
+            </dl></div>
+            <div class="stages" aria-label="Reifegrad des Doppelbodens">
           <div class="stg"><b>Stufe 0</b><strong>nichts</strong>Kein Rückgang mit Boden.</div>
           <div class="stg"><b>Stufe 1</b><strong>erster Boden</strong>Boden nach einem Rückgang, das Zwischenhoch steht.</div>
           <div class="stg"><b>Stufe 2</b><strong>W sichtbar</strong>Zweiter Boden bestätigt, die Nackenlinie steht fest.</div>
           <div class="stg s3"><b>Stufe 3</b><strong>Auslöser</strong>Die Regel eines Einstiegs ist erfüllt.</div>
           <div class="stg s4"><b>Stufe 4</b><strong>im Trade</strong>Stop und Ziel kommen aus dem W.</div>
+            </div>
+          </div></details>
+          <details class="teil" data-t="einstiege" open><summary>Wo steigt der Bot ein? Long und Short</summary><div class="tbody">
+            <p class="lead">Vier Einstiege auf denselben Mustern, wie vier Trader vor demselben Bild. Für alle gilt: Das Muster ist an der Kerze
+              vor dem Auslöser eingefroren. <b>Tageskerzen:</b> Entscheidung am Schluss, Einstieg zur Eröffnung des nächsten Handelstags,
+              raus bei Ziel, Stop oder nach 20 Handelstagen; öffnet ein Tag jenseits des Stops, gilt der Eröffnungskurs. <b>5 und 15 Minuten:</b>
+              Einstieg zur nächsten Minute, nicht in den ersten 20 und den letzten 30 Minuten, raus spätestens 15:50.
+              Mindest-Stop: 0,5 ATR, auf dem Tag mindestens 0,5 %, intraday mindestens 0,15 %.</p>
+            <div class="legend">
+              <span><i class="k dot" style="--c:var(--ink)"></i>Einstieg</span>
+              <span><i class="k dash" style="--c:var(--up)"></i>Ziel</span>
+              <span><i class="k dash" style="--c:var(--down)"></i>Stop</span>
+              <span><i class="k" style="--c:var(--accent)"></i>Linien des Musters</span>
+            </div>
+            <div class="entries" id="entriesDb"></div>
+            <p class="note"><b>Doppeltop:</b> alles gespiegelt. Ausbruch, Retest und früher Einstieg sind short, mit dem Ziel unter der
+              Nackenlinie. Der Fehlschlag ist long, wenn der Kurs über die beiden Hochs steigt.</p>
+          </div></details>
         </div>
-      </div>
-      <div id="pRect" role="tabpanel" aria-labelledby="tabRect" hidden>
-      <p class="lead">Zwei waagerechte Linien, an denen der Kurs mehrmals abprallt. Der Bot zeichnet sie selbst aus den Wendepunkten des Tages.
-        Kein Spielraum von Prozenten: Eine Berührung zählt nur, wenn der Docht die Linie wirklich erreicht.</p>
-      <div class="two">
-        <div class="card pad"><svg class="schema" id="schemaRect" viewBox="0 0 520 280" role="img" aria-label="Schema eines Rechtecks mit zwei Linien, je drei Berührungen, schmalem Berührungsband und Ausbruch nach oben"></svg></div>
-        <div class="card pad">
-          <dl class="rules">
+      </details>
+
+      <details class="mappe" id="m-rechteck" data-muster="Rechteck">
+        <summary><span class="mt"><b>Rechteck</b><span class="dim">Seitwärts-Kasten an einem Tag</span></span><span class="chip">v1 abgeschlossen</span><span class="chip">Fassung 3 geplant</span><span class="ms" id="ms-rechteck"></span></summary>
+        <div class="mbody">
+          <details class="teil" data-t="laeufe" open><summary>Läufe<span class="cnt" data-cnt="laeufe"></span></summary><div class="tbody" data-slot="laeufe"></div></details>
+          <details class="teil" data-t="pruef" open><summary>Prüfungen deines Auges<span class="cnt" data-cnt="pruef"></span></summary><div class="tbody" data-slot="pruef"></div></details>
+          <details class="teil" data-t="was"><summary>Was ist ein Rechteck?</summary><div class="tbody">
+            <div class="two">
+              <div class="card pad prose">
+                <p>Der Kurs pendelt eine Weile zwischen zwei <b>waagerechten Linien</b>: oben prallt er mehrmals ab, unten auch. Käufer und
+                  Verkäufer halten sich die Waage.</p>
+                <p>Irgendwann bricht der Kurs aus dem Kasten aus. Die Idee: Nach dem Ausbruch läuft er etwa so weit, wie der Kasten hoch ist.
+                  Der Bot zeichnet die Linien selbst aus den Wendepunkten des Tages.</p>
+                <div class="ls">
+                  <div><span class="chip good">long</span><span>Ausbruch oder Retest nach oben, Abpraller an der unteren Linie, gescheiterter Ausbruch nach unten</span></div>
+                  <div><span class="chip bad">short</span><span>Ausbruch oder Retest nach unten, Abpraller an der oberen Linie, gescheiterter Ausbruch nach oben</span></div>
+                </div>
+                <p class="dim">Zeitebenen in v1: 15 und 5 Minuten, alles an einem Tag. Fassung 3 rechnet zusätzlich auf Tageskerzen.</p>
+              </div>
+              <div class="card pad"><svg class="schema" id="schemaRect" viewBox="0 0 520 280" role="img" aria-label="Schema eines Rechtecks mit zwei Linien, je drei Berührungen, schmalem Berührungsband und Ausbruch nach oben"></svg></div>
+            </div>
+          </div></details>
+          <details class="teil" data-t="lesen"><summary>So liest der Bot es</summary><div class="tbody">
+            <p class="lead">Kein Spielraum von Prozenten: Eine Berührung zählt nur, wenn der Docht die Linie wirklich erreicht.</p>
+            <div class="card pad"><dl class="rules">
             <dt>Kerzen</dt><dd>5 und 15 Minuten, nur reguläre Handelszeit (09:30–16:00 New York), aus den vollständigen Kursen aller Börsen (SIP).</dd>
             <dt>Ein Tag</dt><dd><b>Das Muster entsteht und wird gehandelt am selben Tag.</b> Keine Linie über Nacht, kein Trade über Nacht.</dd>
             <dt>Berührung</dt><dd>Docht innerhalb von <b>0,15 Kerzenspannen (ATR)</b> an der Linie. Zwischen zwei Berührungen derselben Linie läuft der Kurs mindestens 40 % der Kastenhöhe weg und kommt zurück.</dd>
             <dt>Mindestens</dt><dd>2 Berührungen oben <b>und</b> 2 unten, abwechselnd. Kein Schluss außerhalb des Kastens, höchstens ein Docht ragt bis 0,3 ATR hinaus.</dd>
             <dt>Größe</dt><dd>Höhe 1,5 bis 6 ATR. Breite mindestens 10 Kerzen (15 Min) bzw. 12 Kerzen (5 Min).</dd>
             <dt>Note</dt><dd><b>A</b> lehrbuchreif (3+ Berührungen an einer Linie, alle eng an der Linie, kein Docht außerhalb), <b>B</b> brauchbar, <b>C</b> ungefähr. Gehandelt wird nur A.</dd>
-          </dl>
-        </div>
-      </div>
-      <div class="stages" aria-label="Reifegrad des Musters, die Anzeige des Bots">
+          </dl></div>
+            <div class="stages" aria-label="Reifegrad des Musters, die Anzeige des Bots">
         <div class="stg"><b>Stufe 0</b><strong>nichts</strong>Keine zwei Hochs oder Tiefs auf gleicher Höhe.</div>
         <div class="stg"><b>Stufe 1</b><strong>entsteht</strong>Zwei Berührungen an einer Linie. Der Bot beobachtet.</div>
         <div class="stg"><b>Stufe 2</b><strong>reif</strong>2 + 2 Berührungen, Kurs bleibt im Kasten. Auf die Prioritätsliste.</div>
         <div class="stg s3"><b>Stufe 3</b><strong>Auslöser</strong>Die Regel des Einstiegs ist erfüllt. Nur Note A wird gehandelt.</div>
         <div class="stg s4"><b>Stufe 4</b><strong>im Trade</strong>Stop und Ziel kommen aus den eigenen Linien.</div>
-      </div>
-      </div>
-    </section>
+            </div>
+          </div></details>
+          <details class="teil" data-t="einstiege"><summary>Wo steigt der Bot ein? Long und Short</summary><div class="tbody">
+            <p class="lead">Vier Einstiege auf denselben Kästen. Für alle gilt: Entscheidung am Kerzenschluss, Einstieg zur nächsten Minute,
+              nicht in den ersten 20 und den letzten 30 Minuten, raus bei Ziel, Stop oder spätestens 15:50. Mindest-Stop 0,5 ATR, mindestens
+              0,15 %. Gehandelt wird nur Note A. Die Skizzen zeigen je einen Fall, der andere ist gespiegelt.</p>
+            <div class="legend">
+              <span><i class="k dot" style="--c:var(--ink)"></i>Einstieg</span>
+              <span><i class="k dash" style="--c:var(--up)"></i>Ziel</span>
+              <span><i class="k dash" style="--c:var(--down)"></i>Stop</span>
+              <span><i class="k" style="--c:var(--accent)"></i>Linien des Musters</span>
+            </div>
+            <div class="entries" id="entriesRect"></div>
+          </div></details>
+        </div>
+      </details>
 
-    <section class="enter s5" id="einstiege">
-      <div class="head"><div class="hleft"><h2>Vier Einstiege, für jedes Muster gleich</h2></div></div>
-      <p class="lead">Dasselbe Muster, vier Arten zu handeln. Alle vier laufen gleichzeitig auf denselben Mustern, wie vier Trader vor demselben Bild.
-        Die Skizzen zeigen es am Rechteck; beim Doppelboden ist die Kante die Nackenlinie.</p>
-      <div class="entries" id="entries"></div>
-    </section>
+      <div class="next" id="mNext"></div>
 
-    <section id="ergebnisse">
-      <div class="head"><div class="hleft"><h2>Ergebnisse</h2><span class="aside" id="resNote"></span></div></div>
-      <p class="lead">Nach Kosten, je Einstieg und Zeitebene. Entwickelt wird auf Okt. 2021 bis Sep. 2023. Die Jahre 2024 und 2025 werden genau einmal geprüft, wenn eine Variante überzeugt.</p>
-      <div class="card"><div class="tablewrap" id="results"></div></div>
-    </section>
-
-    <section id="analyse">
-      <div class="head"><div class="hleft"><h2>Warum Gewinn, warum Verlust</h2><span class="aside" id="anNote"></span></div></div>
-      <p class="lead">Nach jedem Lauf ordnet der Bot jeden Trade einer Ursache zu. Das ist nur Information: Nichts davon filtert oder ändert eine Regel.</p>
-      <div id="anBox"><div class="card void"><b>Noch keine Analyse</b>Sie erscheint nach dem ersten Lauf.</div></div>
-    </section>
-
-    <section id="register">
-      <div class="head"><div class="hleft"><h2>Ideen-Register</h2><span class="aside" id="regNote"></span></div></div>
-      <p class="lead">Jede Idee wird eingetragen, bevor sie gerechnet wird. So wissen wir, wie oft wir es versucht haben, und können den Zufall am Ende richtig herausrechnen.</p>
-      <div class="card"><div class="tablewrap" id="regBox"></div></div>
-    </section>
-
-    <section id="trades">
-      <div class="head"><div class="hleft"><h2>Alle Trades</h2><span class="aside" id="trNote"></span></div></div>
-      <p class="lead">Rechteck v1: jeder gefundene Trade mit den Linien, die der Bot selbst gezogen hat. Das Bild endet zuerst im Moment der Entscheidung, so wie der Bot es gesehen hat. Mit „mit Ausgang“ siehst du, was danach passiert ist.</p>
-      <div class="ctrl">
-        <div class="seg" role="group" aria-label="Zeitebene" id="fTf"><button type="button" data-v="15" aria-pressed="true">15 Min</button><button type="button" data-v="5" aria-pressed="false">5 Min</button></div>
-        <div class="seg" role="group" aria-label="Einstieg" id="fEn"><button type="button" data-v="A" aria-pressed="true">Ausbruch</button><button type="button" data-v="B" aria-pressed="false">Retest</button><button type="button" data-v="C" aria-pressed="false">Früher Einstieg</button><button type="button" data-v="D" aria-pressed="false">Fehlschlag</button></div>
+      <div class="lauf" id="laufPanel" hidden>
+        <div class="lhead"><div><h3 id="lpName"></h3><div class="lsub" id="lpSub"></div></div><button type="button" class="linkbtn" id="lpClose">Lauf schließen</button></div>
+        <div class="tabs" role="tablist" aria-label="Ansicht des Laufs" id="lpTabs">
+          <button type="button" role="tab" aria-selected="true" data-p="erg"><span class="lt">Ergebnis je Variante</span><span class="st">Ergebnis</span></button>
+          <button type="button" role="tab" aria-selected="false" data-p="an"><span class="lt">Warum Gewinn, warum Verlust</span><span class="st">Warum?</span></button>
+          <button type="button" role="tab" aria-selected="false" data-p="tr"><span class="lt">Trades ansehen</span><span class="st">Trades</span></button>
+        </div>
+        <div data-pane="erg">
+          <p class="lead">Nach Kosten, je Einstieg und Zeitebene. <span class="aside" id="resNote"></span></p>
+          <div class="card"><div class="tablewrap" id="results"></div></div>
+        </div>
+        <div data-pane="an" hidden>
+          <p class="lead">Der Bot ordnet jeden Trade einer Ursache zu. Das ist nur Information: Nichts davon filtert oder ändert eine Regel. <span class="aside" id="anNote"></span></p>
+          <div id="anBox"></div>
+        </div>
+        <div data-pane="tr" hidden>
+          <p class="lead">Jeder Trade mit den Linien, die der Bot selbst gezogen hat. Das Bild endet zuerst im Moment der Entscheidung, so wie
+            der Bot es gesehen hat. Mit „mit Ausgang“ siehst du, was danach passiert ist. <span class="aside" id="trNote"></span></p>
+          <div class="ctrl">
+        <div class="seg" role="group" aria-label="Zeitebene" id="fTf"></div>
+        <div class="seg" role="group" aria-label="Einstieg" id="fEn"></div>
         <div class="seg" role="group" aria-label="Ergebnis" id="fRes"><button type="button" data-v="alle" aria-pressed="true">alle</button><button type="button" data-v="plus" aria-pressed="false">Gewinner</button><button type="button" data-v="minus" aria-pressed="false">Verlierer</button></div>
         <div class="seg" role="group" aria-label="Ausgang" id="fAus"><button type="button" data-v="alle" aria-pressed="true">jeder Ausgang</button><button type="button" data-v="ziel" aria-pressed="false">Ziel</button><button type="button" data-v="stop" aria-pressed="false">Stop</button><button type="button" data-v="tagesende" aria-pressed="false">Tagesende</button></div>
         <div class="seg" role="group" aria-label="Note" id="fNote"><button type="button" data-v="alle" aria-pressed="true">alle Noten</button><button type="button" data-v="A" aria-pressed="false">A</button><button type="button" data-v="B" aria-pressed="false">B</button><button type="button" data-v="C" aria-pressed="false">C</button></div>
         <div class="seg" role="group" aria-label="Bild" id="fView"><button type="button" data-v="moment" aria-pressed="true">Moment der Entscheidung</button><button type="button" data-v="aus" aria-pressed="false">mit Ausgang</button></div>
       </div>
-      <div class="card detail" id="detail" hidden>
+          <div class="card detail" id="detail" hidden>
         <div class="dhead"><h3 id="dTitle"></h3><span id="dChips"></span><button type="button" class="btn" id="dZoom"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>Groß öffnen</button></div>
         <div class="legend">
           <span><i class="k" style="--c:var(--accent)"></i>Linien des Bots</span>
@@ -588,8 +725,16 @@ html.tv-open{overflow:hidden}
         <div class="chart" id="dChart" tabindex="0" aria-label="Großes Bild des Trades"></div>
         <dl class="facts" id="dFacts"></dl>
       </div>
-      <div class="gallery" id="gallery"></div>
+          <div class="gallery" id="gallery"></div>
       <div class="more"><button type="button" class="btn" id="moreBtn" hidden>Mehr laden</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="register">
+      <div class="head"><div class="hleft"><h2>Ideen-Register</h2><span class="aside" id="regNote"></span></div></div>
+      <p class="lead">Jede Idee wird eingetragen, bevor sie gerechnet wird. So wissen wir, wie oft wir es versucht haben, und können den Zufall am Ende richtig herausrechnen.</p>
+      <div class="card"><div class="tablewrap" id="regBox"></div></div>
     </section>
 
     <section id="scanner">
@@ -702,7 +847,6 @@ function renderHead(st, idx, si) {
   const phase = (st && st.phase) || "Vorbereitung";
   bead.className = "bead " + (st && st.laeuft ? "on" : "idle");
   lt.textContent = (st && st.laeuft ? "läuft: " : "") + phase;
-  const n = idx && idx.gruppen ? idx.gruppen.reduce((a, g) => a + (g.anzahl || 0), 0) : null;
   const sv = sichtSummary(si);
   const art = (si && si.art) || "praezision", mu = (si && si.muster) || "Rechteck";
   const sichtCell = !sv.total ? ["Sichtprüfung", "—", "Bilder kommen mit dem Lauf"]
@@ -713,7 +857,7 @@ function renderHead(st, idx, si) {
   const cells = [
     ["Versuche im Register", REG && REG.n_versuche != null ? String(REG.n_versuche) : "—", REG ? "alle gezählt, gegen den Zufall" : "Register folgt"],
     ["In Arbeit", lauf.length ? lauf.join(", ") : "—", "laut Ideen-Register"],
-    ["Trades gerechnet", n == null ? "—" : n.toLocaleString("de-DE"), n == null ? "kommt mit dem ersten Lauf" : "Rechteck v1, alle Einstiege"],
+    (() => { const R = LAEUFE.filter((l) => l.dateien), l = R[0]; return ["Läufe mit Trades", R.length ? String(R.length) : "—", l ? `zuletzt ${l.name}${l.trades != null ? ", " + Number(l.trades).toLocaleString("de-DE") + " Trades" : ""}` : "kommt mit dem ersten Lauf"]; })(),
     sichtCell,
   ];
   $("strip").innerHTML = cells.map(([k, v, s]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v ${/^\d|—/.test(v) ? "num" : "txt"}">${esc(v)}</div><div class="n">${esc(s)}</div></div>`).join("");
@@ -760,42 +904,87 @@ function schemaRect() {
   tx(494, (top + bot) / 2 + 4, "Höhe", "");
   tx(44, 262, "Alles an einem Handelstag · nur 09:30–16:00 New York", "");
 }
+const ENTRY_RECT = {
+  A: { dir: "long · short", s: "Rein, wenn eine Kerze mindestens 0,1 ATR jenseits einer Linie schließt. Nach oben long, nach unten short.", stop: "Mitte des Kastens", ziel: "gebrochene Linie plus Kastenhöhe" },
+  B: { dir: "long · short", s: "Erst ein Ausbruch ohne Einstieg. Kommt der Kurs an die gebrochene Linie zurück, ohne in den Kasten zu schließen, geht der Bot rein, sobald die nächste Kerze in Ausbruchsrichtung schließt.", stop: "0,1 ATR hinter der Retest-Kerze", ziel: "gebrochene Linie plus Kastenhöhe" },
+  C: { dir: "long · short", s: "Der Kasten ist reif. Neue Berührung einer Linie, Schluss mindestens 0,25 ATR zurück im Kasten. An der unteren Linie long, an der oberen short. Nur wenn das Ziel mindestens 1 R entfernt ist.", stop: "0,3 ATR hinter der Linie", ziel: "kurz vor der anderen Linie" },
+  D: { dir: "long · short", s: "Erst ein Ausbruch. Schließt innerhalb von 3 Kerzen eine Kerze wieder 0,1 ATR im Kasten, geht der Bot gegen den Ausbruch: oben gescheitert heißt short, unten gescheitert heißt long.", stop: "0,1 ATR hinter dem Extrem des Ausbruchs", ziel: "die andere Linie" },
+};
+const ENTRY_DB = {
+  A: { dir: "long", s: "Rein, wenn eine Kerze mindestens 0,1 ATR über der Nackenlinie schließt.", stop: "Nackenlinie minus halbe Höhe", ziel: "Nackenlinie plus Höhe" },
+  B: { dir: "long", s: "Erst ein Ausbruch ohne Einstieg. Kommt der Kurs kurz danach an die Nackenlinie zurück und schließt nicht darunter, geht der Bot rein, sobald die nächste Kerze über dem Hoch der Retest-Kerze schließt.", stop: "0,1 ATR unter dem Tief der Retest-Kerze", ziel: "Nackenlinie plus Höhe" },
+  C: { dir: "long", s: "Noch vor der Bestätigung: Eine Kerze erreicht den zweiten Boden und schließt mindestens 0,25 ATR darüber. Nur wenn das Ziel mindestens 1 R entfernt ist.", stop: "0,3 ATR unter dem tieferen Boden", ziel: "knapp unter der Nackenlinie" },
+  D: { dir: "short", s: "Das W ist sichtbar, doch statt über die Nackenlinie fällt der Kurs: Schluss mindestens 0,1 ATR unter dem tieferen Boden. Dann short.", stop: "0,1 ATR über dem höchsten Hoch seit dem zweiten Boden", ziel: "tieferer Boden minus Höhe" },
+};
+function sketchLines(svg, E, stop, ziel, x2) {
+  for (const [y, c] of [[ziel, "up"], [stop, "down"]]) S("line", { x1: E[0], x2, y1: y, y2: y, style: `stroke:var(--${c});stroke-width:1.5;stroke-dasharray:5 4` }, svg);
+}
+function sketchEnd(svg, P, E, lab, ly, anchor) {
+  S("polyline", { points: P.map((p) => p.join(",")).join(" "), style: "fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round" }, svg);
+  S("circle", { cx: E[0], cy: E[1], r: 4.5, style: "fill:var(--ink);stroke:var(--raised);stroke-width:1.5" }, svg);
+  const t = S("text", { x: E[0] + (anchor === "start" ? 8 : -8), y: ly, "text-anchor": anchor || "end", style: "font:500 11px var(--sans);fill:var(--ink-2)" }, svg); t.textContent = lab;
+}
 function entrySchema(k) {
-  const svg = S("svg", { viewBox: "0 0 300 120", role: "img", "aria-label": "Schema Einstieg " + k });
+  const svg = S("svg", { viewBox: "0 -14 300 134", role: "img", "aria-label": "Skizze Rechteck, Einstieg " + eName(k) });
   const top = 40, bot = 82;
   S("rect", { x: 16, y: top, width: 150, height: bot - top, style: "fill:rgba(var(--accent-rgb),.08)" }, svg);
-  S("line", { x1: 16, x2: 284, y1: top, y2: top, style: "stroke:var(--accent);stroke-width:1.6" }, svg);
-  S("line", { x1: 16, x2: 284, y1: bot, y2: bot, style: "stroke:var(--accent);stroke-width:1.6" }, svg);
+  S("line", { x1: 16, x2: 292, y1: top, y2: top, style: "stroke:var(--accent);stroke-width:1.6" }, svg);
+  S("line", { x1: 16, x2: 292, y1: bot, y2: bot, style: "stroke:var(--accent);stroke-width:1.6" }, svg);
   const P = {
     A: [[16, 70], [40, 42], [64, 80], [90, 42], [116, 80], [140, 44], [166, 60], [180, 30], [208, 24], [240, 14], [280, 8]],
     B: [[16, 70], [40, 42], [64, 80], [90, 42], [116, 80], [140, 44], [166, 60], [182, 26], [204, 38], [216, 41], [236, 24], [280, 8]],
     C: [[16, 60], [40, 42], [64, 80], [90, 42], [116, 80], [140, 44], [166, 81], [196, 62], [226, 44], [250, 52], [280, 62]],
     D: [[16, 70], [40, 42], [64, 80], [90, 42], [116, 80], [140, 44], [160, 50], [176, 30], [192, 46], [222, 62], [250, 80], [280, 84]],
   }[k];
-  S("polyline", { points: P.map((p) => p.join(",")).join(" "), style: "fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round" }, svg);
   const E = { A: [180, 30], B: [216, 41], C: [166, 81], D: [192, 46] }[k];
-  S("circle", { cx: E[0], cy: E[1], r: 4.5, style: "fill:var(--ink);stroke:var(--raised);stroke-width:1.5" }, svg);
-  const lab = { A: "rein beim Schluss außerhalb", B: "rein am Retest der Kante", C: "rein am Abpraller unten", D: "rein, wenn der Ausbruch scheitert" }[k];
-  const t = S("text", { x: E[0] - 8, y: E[1] + (k === "C" ? 24 : -12), "text-anchor": "end", style: "font:500 11px var(--sans);fill:var(--ink-2)" }, svg); t.textContent = lab;
+  const L = { A: [61, -2], B: [46, -2], C: [90, 44], D: [26, 82] }[k];
+  sketchLines(svg, E, L[0], L[1], 292);
+  const lab = { A: "Schluss außerhalb, long", B: "Retest hält, long", C: "Abpraller unten, long", D: "Ausbruch scheitert, short" }[k];
+  sketchEnd(svg, P, E, lab, { A: E[1] - 12, B: 12, C: E[1] + 24, D: 104 }[k], k === "C" ? "start" : "end");
+  return svg;
+}
+function dbEntrySchema(k) {
+  const svg = S("svg", { viewBox: "0 0 300 150", role: "img", "aria-label": "Skizze Doppelboden, Einstieg " + eName(k) });
+  const neck = 58, bot = 100;
+  S("rect", { x: 56, y: bot - 5, width: 124, height: 10, style: "fill:rgba(var(--accent-rgb),.14)" }, svg);
+  S("line", { x1: 56, x2: 180, y1: bot, y2: bot, style: "stroke:var(--accent);stroke-width:1.6" }, svg);
+  S("line", { x1: 118, x2: 292, y1: neck, y2: neck, style: "stroke:var(--accent);stroke-width:1.6" }, svg);
+  const W = [[12, 22], [40, 58], [66, 100], [96, 72], [118, 58], [142, 78], [168, 100]];
+  const tail = {
+    A: [[190, 78], [208, 62], [222, 48], [240, 36], [262, 24], [290, 12]],
+    B: [[192, 76], [210, 50], [226, 56], [240, 46], [262, 30], [290, 14]],
+    C: [[182, 90], [200, 74], [220, 64], [240, 60], [262, 62]],
+    D: [[186, 84], [204, 96], [220, 108], [240, 118], [262, 128], [290, 138]],
+  }[k];
+  const E = { A: [222, 48], B: [240, 46], C: [182, 90], D: [220, 108] }[k];
+  const L = { A: [79, 16], B: [63, 16], C: [110, 62], D: [80, 142] }[k];
+  sketchLines(svg, E, L[0], L[1], 292);
+  const lab = { A: "Schluss über der Nackenlinie", B: "Retest hält, nächste Kerze höher", C: "zweiter Boden hält", D: "Schluss unter den Böden" }[k];
+  const ly = { A: 40, B: 36, C: 128, D: 130 }[k];
+  sketchEnd(svg, W.concat(tail), E, lab, ly, k === "C" ? "start" : "end");
   return svg;
 }
 function renderEntries() {
-  const box = $("entries");
-  for (const k of ["A", "B", "C", "D"]) {
-    const c = document.createElement("div"); c.className = "card en";
-    c.innerHTML = `<div class="top"><h3>${ENTRY[k].t}</h3></div><p>${esc(ENTRY[k].s)}</p><p class="pro">${esc(ENTRY[k].p)}</p>`;
-    c.appendChild(entrySchema(k));
-    box.appendChild(c);
+  for (const [boxId, TXT, sk, tn] of [["entriesDb", ENTRY_DB, dbEntrySchema, { C: "Früher Einstieg am zweiten Boden" }], ["entriesRect", ENTRY_RECT, entrySchema, { C: "Früher Einstieg: Abpraller" }]]) {
+    const box = $(boxId); if (!box) continue;
+    for (const k of ["A", "B", "C", "D"]) {
+      const x = TXT[k], c = document.createElement("div"); c.className = "card en";
+      const chip = x.dir === "long" ? "good" : x.dir === "short" ? "bad" : "";
+      c.innerHTML = `<div class="top"><h3>${esc(tn[k] || ENTRY[k].t)}</h3><span class="chip ${chip}">${esc(x.dir)}</span></div><p>${esc(x.s)}</p>
+        <dl class="sz"><dt>Stop</dt><dd>${esc(x.stop)}</dd><dt>Ziel</dt><dd>${esc(x.ziel)}</dd></dl>`;
+      c.appendChild(sk(k));
+      box.appendChild(c);
+    }
   }
 }
 
 /* ------------------------------------------------------------ Ergebnisse */
-function renderResults(er) {
+function renderResults(er, L) {
   const box = $("results");
   const V = er && er.varianten ? er.varianten : [];
   $("resNote").textContent = er && er.stand ? "Stand " + tsDE(er.stand) : "";
-  const mName = (v) => v.muster || "Rechteck v1";
-  const muster = [...new Set(V.map(mName))]; if (!muster.length) muster.push("Rechteck v1");
+  const mName = (v) => v.muster || (L && L.name) || "Lauf";
+  const muster = [...new Set(V.map(mName))]; if (!muster.length) muster.push((L && L.name) || "Lauf");
   const cell = (x, d = 3, cls = "") => `<td class="num ${cls}">${x == null ? "—" : sg(x, d)}</td>`;
   const tone = (x) => (x == null ? "" : x > 0 ? "up" : "down");
   box.innerHTML = muster.map((m) => {
@@ -818,7 +1007,7 @@ function renderResults(er) {
         ${cell(p && p.ev, 3, tone(p && p.ev))}<td>${urteil}</td></tr>`);
     }
     return `<table><thead>
-      <tr class="grp"><th colspan="2">${esc(m)}</th><th colspan="10">Entwicklung (Note A, nach Kosten)</th><th>Prüfung</th><th></th></tr>
+      <tr class="grp"><th colspan="2">${esc(m)}</th><th colspan="10">Suchdaten (Note A, nach Kosten)</th><th>Prüfung</th><th></th></tr>
       <tr><th>Zeitebene</th><th>Einstieg</th><th>Trades</th><th>Ø R vor Kosten</th><th>Ø R nach Kosten</th><th>Jahr 1</th><th>Jahr 2</th><th>PF</th><th>Note A</th><th>Note C</th><th>Zufall</th><th>Ziel · Stop · Tagesende</th><th>Prüftopf</th><th>Urteil</th></tr>
       </thead><tbody>${rows.join("")}</tbody></table>`;
   }).join("");
@@ -930,15 +1119,21 @@ function drawTrade(host, T, mode, big, mine) {
 const F = { tf: "15", en: "A", res: "alle", aus: "alle", note: "alle", view: "moment" };
 let IDX = null, LOADED = {}, SHOWN = 60, CUR = null, GLIST = [];
 function seg(id, key, cb) {
-  for (const b of $(id).querySelectorAll("button")) b.addEventListener("click", () => {
+  $(id).addEventListener("click", (e) => {
+    const b = e.target.closest && e.target.closest("button"); if (!b || !$(id).contains(b)) return;
     for (const o of $(id).querySelectorAll("button")) o.setAttribute("aria-pressed", String(o === b));
     F[key] = b.dataset.v; cb();
   });
 }
+function segFill(id, key, vals, label) {
+  if (!vals.includes(F[key])) F[key] = vals[0];
+  $(id).innerHTML = vals.map((v) => `<button type="button" data-v="${esc(v)}" aria-pressed="${v === F[key]}">${esc(label(v))}</button>`).join("");
+}
 async function groupTrades() {
-  const id = `${F.tf}m-${F.en}`;
+  const id = `${F.tf}-${F.en}`;
   if (LOADED[id]) return LOADED[id];
-  const g = IDX && IDX.gruppen ? IDX.gruppen.find((x) => x.id === id) : null;
+  const G = (IDX && IDX.gruppen) || [];
+  const g = G.find((x) => String(x.zeitebene) === F.tf && x.einstieg === F.en) || G.find((x) => x.id === `${F.tf}m-${F.en}`) || null;
   if (!g) return (LOADED[id] = []);
   const parts = await Promise.all((g.teile || []).map((p) => get(p)));
   return (LOADED[id] = parts.flatMap((p) => (p && p.trades) || []));
@@ -970,12 +1165,12 @@ async function renderGallery(reset) {
 const ausgang = (a) => ({ ziel: "Ziel", stop: "Stop", tagesende: "Tagesende" }[a] || a || "—");
 function openTrade(t, quiet) {
   CUR = t; $("detail").hidden = false;
-  $("dTitle").textContent = `${t.symbol} · Rechteck ${t.richtung} · ${dayDE(t.tag)}`;
+  $("dTitle").textContent = `${t.symbol} · ${t.muster || (RUN && RUN.muster) || "Muster"} ${t.richtung} · ${dayDE(t.tag)}`;
   const chips = [`<span class="chip run">${esc(eName(t.einstieg))}</span>`, `<span class="chip">${tfName(t.zeitebene)}</span>`, `<span class="chip ${t.note === "A" ? "good" : t.note === "C" ? "bad" : "part"}">Note ${esc(t.note)}</span>`];
   if (F.view === "aus") chips.push(`<span class="chip ${t.r > 0 ? "good" : "bad"}">${sg(t.r)} R · ${esc(ausgang(t.ausgang))}</span>`);
   $("dChips").innerHTML = chips.join(" ");
   drawTrade($("dChart"), t, F.view, true);
-  const facts = [["Bild", F.view === "aus" ? "mit Ausgang" : "Moment der Entscheidung"], ["Entscheidung", t.kerzen[t.entscheidung][0] + " New York"], ["Oben · Unten", nf(t.oben) + " · " + nf(t.unten)], ["Berührungen", (t.beruehrungen || []).filter((b) => b.seite === "oben").length + " oben · " + (t.beruehrungen || []).filter((b) => b.seite === "unten").length + " unten"]].concat(t.fakten || []);
+  const facts = [["Bild", F.view === "aus" ? "mit Ausgang" : "Moment der Entscheidung"], ["Entscheidung", t.kerzen[t.entscheidung][0] + " New York"], [Array.isArray(t.linien) && t.linien.length ? "Nacken · Boden" : "Oben · Unten", nf(t.oben) + " · " + nf(t.unten)], ["Berührungen", (t.beruehrungen || []).filter((b) => b.seite === "oben").length + " oben · " + (t.beruehrungen || []).filter((b) => b.seite === "unten").length + " unten"]].concat(t.fakten || []);
   if (F.view === "aus") facts.push(["Ergebnis", `${sg(t.r)} R nach Kosten (${sg(t.r_vor)} R vor Kosten)`]);
   $("dFacts").innerHTML = facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
   for (const b of document.querySelectorAll(".tile")) b.setAttribute("aria-pressed", String(b.dataset.id === t.id));
@@ -1629,9 +1824,10 @@ function hbars(items) {
     return `<div class="hb">${lab}<div class="bar" role="img" aria-label="${esc(x.lab)}: ${sg(x.r, 2)} R"><span class="z" style="left:${z}%"></span><i style="left:${Math.min(z, p)}%;width:${Math.max(0.8, Math.abs(p - z))}%;background:var(--${x.r < 0 ? "down" : "up"})"></i></div><div class="val ${x.r < 0 ? "down" : "up"}">${sg(x.r, 2)} R</div></div>`;
   }).join("");
 }
+let AN_BOUND = false;
 function renderAnalyse(list) {
   const box = $("anBox");
-  if (!list || !list.length) return;
+  if (!list || !list.length) { $("anNote").textContent = ""; box.innerHTML = `<div class="card void"><b>Für diesen Lauf gibt es keine Analyse</b>Sie kommt mit dem nächsten Lauf.</div>`; return; }
   $("anNote").textContent = list.map((a) => `${anName(a.lauf)} · ${Number(a.trades || 0).toLocaleString("de-DE")} Trades`).join(" · ");
   box.innerHTML = list.map((an) => {
     const regel = Object.fromEntries((an.arten || []).map((x) => [x.key, x.regel]));
@@ -1663,6 +1859,7 @@ function renderAnalyse(list) {
     t.hidden = false; const w = t.offsetWidth, r = i.getBoundingClientRect();
     t.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, e.clientX)) + "px"; t.style.top = Math.max(t.offsetHeight + 16, r.top) + "px";
   };
+  if (AN_BOUND) return; AN_BOUND = true;
   box.addEventListener("pointermove", showTip); box.addEventListener("pointerdown", showTip);
   box.addEventListener("pointerleave", () => { tip().hidden = true; });
 }
@@ -1676,10 +1873,145 @@ function renderRegister(reg) {
   box.innerHTML = `<table class="reg"><thead><tr><th>Nr.</th><th>Idee</th><th>Zeitebenen</th><th>Daten</th><th>Status</th><th>Versuche</th><th>Ergebnis</th></tr></thead><tbody>${I.map((e) => `<tr><td class="num">${esc(e.kennung || e.nr)}</td><td><b>${esc(e.kurzname || "")}</b></td><td>${esc((e.zeitebenen || []).join(", ") || "—")}</td><td>${esc(e.daten || "—")}</td><td>${chip(e.status || "geplant")}</td><td class="num">${e.versuche != null ? e.versuche : "—"}</td><td class="erg">${esc(e.ergebnis || "")}</td></tr>`).join("")}</tbody></table>`;
 }
 
-/* ------------------------------------------------------------ Muster-Reiter und Schema Doppelboden */
-function musterTabs() {
-  const T = [["tabDb", "pDb"], ["tabRect", "pRect"]];
-  for (const [t, p] of T) $(t).addEventListener("click", () => { for (const [t2, p2] of T) { $(t2).setAttribute("aria-selected", String(t2 === t)); $(p2).hidden = t2 !== t; } });
+/* ------------------------------------------------------------ Muster-Mappen: Läufe, Prüfungen, Ansicht eines Laufs */
+let LAEUFE = [], PRUEF = null, RUN = null, RUN_TR = false;
+const PANEL = document.getElementById("laufPanel");
+const MKEY = "lernhub-mappen-v1";
+const mload = () => { try { return JSON.parse(localStorage.getItem(MKEY) || "{}"); } catch (e) { return {}; } };
+function mappenMerken() {
+  const M = mload();
+  for (const d of document.querySelectorAll("details.mappe, details.teil")) {
+    const key = d.classList.contains("mappe") ? d.id : d.closest(".mappe").id + "/" + d.dataset.t;
+    if (Object.prototype.hasOwnProperty.call(M, key)) d.open = !!M[key];
+    d.addEventListener("toggle", () => { const X = mload(); X[key] = d.open; try { localStorage.setItem(MKEY, JSON.stringify(X)); } catch (e) { /* geht auch ohne */ } });
+  }
+}
+const mappe = (mu) => document.querySelector(`.mappe[data-muster="${mu}"]`);
+const slot = (mu, k) => { const m = mappe(mu); return m ? m.querySelector(`[data-slot="${k}"]`) : null; };
+const stChip = (st) => { const t = String(st || "").toLowerCase(); return `<span class="chip ${/verworfen|nicht bestanden/.test(t) ? "bad" : /bestätigt|bestanden|prüftopf/.test(t) ? "good" : /läuft|in arbeit/.test(t) ? "run" : ""}">${esc(st || "offen")}</span>`; };
+function laeufeAusRegister(reg) {
+  // Ohne laeufe.json: Werkbank Rechteck v1 aus dem Register, mit den Dateien von damals
+  const v5 = reg && reg.ideen ? reg.ideen.find((e) => e.kennung === "V5") : null;
+  return [{ id: "rechteck-v1", muster: "Rechteck", name: (v5 && v5.kurzname) || "Werkbank Rechteck v1", register: "V5", datum: (v5 && v5.datum) || "2026-11-02", daten: (v5 && v5.daten) || "", zeitebenen: (v5 && v5.zeitebenen) || ["15 Min", "5 Min"], trades: 13293, status: (v5 && v5.status) || "verworfen", ergebnis: (v5 && v5.ergebnis) || "", dateien: { ergebnisse: "ergebnisse.json", trades: "trades/index.json", analyse: "analyse-rechteck-v1.json" } }];
+}
+function renderLaeufe() {
+  for (const m of document.querySelectorAll(".mappe")) {
+    const mu = m.dataset.muster, box = slot(mu, "laeufe"); if (!box) continue;
+    if (box.contains(PANEL)) $("muster").appendChild(PANEL);
+    const L = LAEUFE.filter((l) => l.muster === mu);
+    const offen = (REG && REG.ideen ? REG.ideen : []).filter((e) => !L.some((l) => l.register === e.kennung) && String(e.kurzname || "").startsWith(mu) && e.status !== "verworfen");
+    const rows = L.map((l) => {
+      const sel = RUN && RUN.id === l.id;
+      return `<div class="lr${sel ? " sel" : ""}" data-run="${esc(l.id)}">
+        <div class="c1"><b>${esc(l.name)}</b><small>${esc([l.register, (l.zeitebenen || []).join(", "), l.daten].filter(Boolean).join(" · "))}</small></div>
+        <div class="c2 num" data-l="gerechnet">${esc(dayDE(l.datum))}</div>
+        <div class="c3 num" data-l="Trades">${l.trades != null ? Number(l.trades).toLocaleString("de-DE") : "—"}</div>
+        <div class="erg">${stChip(l.status)}${esc(l.ergebnis || "")}</div>
+        <div class="act">${l.dateien ? `<button type="button" class="btn${sel ? "" : " mid"}" data-open="${esc(l.id)}" aria-expanded="${sel}">${sel ? "Schließen" : "Ansehen"}</button>` : ""}</div></div>`;
+    }).concat(offen.map((e) => `<div class="lr"><div class="c1"><b>${esc(e.kurzname)}</b><small>${esc([e.kennung, (e.zeitebenen || []).join(", ")].filter(Boolean).join(" · "))}</small></div>
+        <div class="c2 num" data-l="eingetragen">${esc(dayDE(e.datum))}</div><div class="c3 num" data-l="Trades">—</div>
+        <div class="erg">${stChip(e.status === "läuft" ? "in Arbeit" : e.status)}${e.status === "läuft" ? "Noch keine Trades. Zuerst die Sichtprüfung, dann die Vorab-Datei, dann der Lauf auf den Suchdaten." : "Noch nicht gerechnet. Regeln und Varianten kommen mit der Vorab-Datei."}</div><div class="act"></div></div>`));
+    box.innerHTML = `<div class="ltab"><div class="lh"><span>Lauf</span><span>Datum</span><span>Trades</span><span>Ergebnis</span><span></span></div>${rows.join("") || `<div class="void">Noch kein Lauf.</div>`}</div>`;
+    const c = m.querySelector('[data-cnt="laeufe"]'); if (c) c.textContent = L.length ? `${L.length} gerechnet` : "noch keiner";
+    if (RUN && RUN.muster === mu) box.appendChild(PANEL);
+  }
+}
+const ARTNAME = { praezision: "Linien richtig?", trefferquote: "Muster am Tag?", einstieg: "Einstieg richtig?", verlust: "Warum Verlust?" };
+function pruefListe() {
+  const P = (PRUEF && PRUEF.pruefungen ? PRUEF.pruefungen.slice() : []).map((x) => Object.assign({}, x));
+  if (SI && SI.id) {
+    const sv = sichtSummary(SI);
+    let cur = P.find((x) => x.id === SI.id);
+    if (!cur) { cur = { id: SI.id, muster: SI.muster || "Rechteck", art: SI.art || "praezision", datum: String(SI.stand || "").slice(0, 10), bilder: sv.total }; P.push(cur); }
+    cur.live = true; cur.status = sv.done >= sv.total && sv.total ? "fertig, Ergebnis schicken" : "läuft";
+    cur.ja = sv.ja; cur.nein = sv.nein; cur.unsicher = sv.un; cur.done = sv.done; cur.bilder = sv.total; cur.cnt = sv.cnt;
+  }
+  return P;
+}
+function qbar(x) {
+  const ja = x.ja || 0, ne = x.nein || 0, un = x.unsicher || 0, an = x.andere || 0, n = ja + ne + un + an;
+  if (!n) return "";
+  const th = x.schwelle != null ? x.schwelle : x.art === "praezision" ? 80 : x.art === "einstieg" ? 90 : null;
+  const seg = [["ja", ja], ["un", un], ["an", an], ["ne", ne]].filter((y) => y[1] > 0).map(([c, v]) => `<i class="${c}" style="flex:${v} 1 0"></i>`).join("");
+  return `<span class="qbar" role="img" aria-label="${ja} ja, ${an ? an + " nicht ja" : `${ne} nein, ${un} unsicher`}">${seg}${th != null && x.art !== "trefferquote" ? `<b class="th" style="left:${th}%" title="Hürde ${th} %"></b>` : ""}</span>`;
+}
+function pruefText(x) {
+  const ja = x.ja || 0, ne = x.nein || 0, un = x.unsicher || 0, n = ja + ne + un + (x.andere || 0);
+  if (x.live && x.art === "verlust") return `${x.done || 0} von ${x.bilder} eingeordnet`;
+  if (x.live && !x.done) return `${x.bilder} Bilder warten auf dich`;
+  if (x.art === "trefferquote" && n) return `ja ${ja} · nein ${ne}${un ? " · unsicher " + un : ""}`;
+  if (n) return `${ja} von ${x.live ? x.done : n} ja · ${Math.round((ja / (x.live ? x.done : n)) * 100)} %${un ? ` · unsicher ${un}` : ""}${x.live && x.done < x.bilder ? ` · ${x.done} von ${x.bilder} angesehen` : ""}`;
+  return x.bilder ? `${x.bilder} Bilder` : "";
+}
+function renderPruef() {
+  const P = pruefListe();
+  for (const m of document.querySelectorAll(".mappe")) {
+    const mu = m.dataset.muster, box = slot(mu, "pruef"); if (!box) continue;
+    const Q = P.map((x, i) => Object.assign(x, { _i: i })).filter((x) => x.muster === mu).sort((a, b) => String(b.datum || "").localeCompare(String(a.datum || "")) || (b.live ? 1 : 0) - (a.live ? 1 : 0) || b._i - a._i);
+    const rows = Q.map((x) => `<div class="lr${x.live ? " sel" : ""}">
+        <div class="c1"><b>${esc(x.name || x.id)}</b><small>${esc(ARTNAME[x.art] || x.art || "")}${x.bilder ? ` · ${x.bilder} Bilder` : ""}</small></div>
+        <div class="c2 num" data-l="Datum">${esc(dayDE(x.datum))}</div>
+        <div class="erg"><div class="qline">${qbar(x)}<span>${esc(pruefText(x))}</span>${x.ergebnis ? `<small>${esc(x.ergebnis)}</small>` : ""}</div></div>
+        <div class="act">${x.live ? `<button type="button" class="btn" data-sicht="1">${x.done ? "Weitermachen" : "Starten"}</button>` : stChip(x.status)}</div></div>`);
+    box.innerHTML = `<div class="ltab pr"><div class="lh"><span>Runde</span><span>Datum</span><span>Ergebnis</span><span></span></div>${rows.join("") || `<div class="void">${PRUEF ? "Noch keine Prüfung für dieses Muster." : "Die Liste der Prüfungen fehlt noch (pruefungen.json)."}</div>`}</div>`;
+    const c = m.querySelector('[data-cnt="pruef"]'); if (c) c.textContent = Q.length ? `${Q.filter((x) => !x.live && !/bereit/.test(x.status || "")).length} fertig${Q.some((x) => x.live) ? " · 1 läuft" : ""}` : "";
+  }
+  renderMappenKopf(P);
+}
+function renderMappenKopf(P) {
+  for (const m of document.querySelectorAll(".mappe")) {
+    const mu = m.dataset.muster, L = LAEUFE.filter((l) => l.muster === mu), Q = (P || []).filter((x) => x.muster === mu);
+    const live = Q.find((x) => x.live), fertig = Q.filter((x) => !x.live && !/bereit/.test(x.status || "")).length, bereit = Q.filter((x) => /bereit/.test(x.status || "")).length;
+    const t = [L.length ? `${L.length} ${L.length === 1 ? "Lauf" : "Läufe"}` : "noch kein Lauf", `${fertig} ${fertig === 1 ? "Prüfung" : "Prüfungen"} fertig${bereit ? `, ${bereit} bereit` : ""}`];
+    if (live) t.push(`Sichtprüfung ${live.name || live.id} läuft`);
+    if (L[0] && L[0].ergebnis) t.push(`zuletzt: ${L[0].ergebnis.split(":")[0]}`);
+    const el = m.querySelector(".ms"); if (el) el.textContent = t.join(" · ");
+  }
+  const geplant = (REG && REG.ideen ? REG.ideen : []).filter((e) => e.status === "geplant" && /^H/.test(e.kennung || "") && ![...document.querySelectorAll(".mappe")].some((m) => String(e.kurzname || "").startsWith(m.dataset.muster)));
+  $("mNext").innerHTML = geplant.length ? `<b>Als Nächstes im Register:</b> ${geplant.map((e) => esc(e.kurzname)).join(" · ")}. Jedes Muster bekommt hier seine eigene Mappe, sobald die Arbeit daran beginnt.` : "";
+  $("musterNote").textContent = `${document.querySelectorAll(".mappe").length} Mappen`;
+}
+function lpTab(p) {
+  for (const b of $("lpTabs").querySelectorAll("button")) b.setAttribute("aria-selected", String(b.dataset.p === p));
+  for (const d of PANEL.querySelectorAll("[data-pane]")) d.hidden = d.dataset.pane !== p;
+  if (p === "tr" && !RUN_TR) { RUN_TR = true; renderGallery(true); }
+}
+function closeRun() {
+  RUN = null; PANEL.hidden = true; tipHide();
+  $("muster").appendChild(PANEL); renderLaeufe();
+}
+const tipHide = () => { if (tipEl) tipEl.hidden = true; };
+async function selectRun(id) {
+  const L = LAEUFE.find((x) => x.id === id); if (!L || !L.dateien) return;
+  if (RUN && RUN.id === id) { closeRun(); return; }
+  RUN = L; RUN_TR = false; CUR = null; IDX = null; LOADED = {}; $("detail").hidden = true;
+  const m = mappe(L.muster); if (m) m.open = true;
+  renderLaeufe();
+  const pnl = PANEL; pnl.hidden = false;
+  $("lpName").textContent = L.name;
+  $("lpSub").textContent = [L.register ? "Register " + L.register : "", L.daten, L.datum ? "gerechnet " + dayDE(L.datum) : ""].filter(Boolean).join(" · ");
+  $("results").innerHTML = `<div class="void">lade …</div>`; $("anBox").innerHTML = ""; $("gallery").textContent = ""; $("trNote").textContent = "";
+  lpTab("erg");
+  const D = L.dateien;
+  const [er, idx, an] = await Promise.all([D.ergebnisse ? get(D.ergebnisse) : null, D.trades ? get(D.trades) : null, D.analyse ? get(D.analyse) : null]);
+  if (!RUN || RUN.id !== id) return;
+  IDX = idx;
+  renderResults(er, L); renderAnalyse(an ? [an] : []);
+  const G = (idx && idx.gruppen) || [];
+  const tfs = [...new Set(G.map((g) => String(g.zeitebene)))].sort((a, b) => Number(b) - Number(a));
+  const ens = [...new Set(G.map((g) => g.einstieg))].sort();
+  segFill("fTf", "tf", tfs.length ? tfs : ["15"], (v) => tfName(Number(v)));
+  segFill("fEn", "en", ens.length ? ens : ["A"], (v) => eName(v));
+  $("lpTabs").querySelector('[data-p="tr"]').disabled = !G.length;
+  pnl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
+function mappenEvents() {
+  $("muster").addEventListener("click", (e) => {
+    const o = e.target.closest && e.target.closest("[data-open]"); if (o) { selectRun(o.dataset.open); return; }
+    const s = e.target.closest && e.target.closest("[data-sicht]"); if (s) { $("sicht").scrollIntoView({ behavior: "smooth", block: "start" }); }
+  });
+  $("lpClose").addEventListener("click", closeRun);
+  $("lpTabs").addEventListener("click", (e) => { const b = e.target.closest("button[data-p]"); if (b && !b.disabled) lpTab(b.dataset.p); });
 }
 function schemaDb() {
   const svg = $("schemaDb"), neck = 118, bot = 204;
@@ -1703,16 +2035,16 @@ function schemaDb() {
 
 /* ------------------------------------------------------------ Start */
 let ST = null, REG = null;
-function renderHeadAgain() { renderHead(ST, IDX, SI); }
+function renderHeadAgain() { renderHead(ST, IDX, SI); renderPruef(); }
 async function load() {
-  const [st, er, idx, si, sc, reg, anIdx] = await Promise.all([get("status.json"), get("ergebnisse.json"), get("trades/index.json"), get("sichtpruefung.json"), get("scanner.json"), get("ideen-register.json"), get("analysen.json")]);
-  const anFiles = anIdx && Array.isArray(anIdx.dateien) ? anIdx.dateien : ["analyse-rechteck-v1.json"];
-  const AN = (await Promise.all(anFiles.map((f) => get(f)))).filter(Boolean);
-  ST = st; IDX = idx; SI = si; REG = reg; LOADED = {};
-  renderHead(st, idx, si); renderPlan(st); renderResults(er); renderAnalyse(AN); renderRegister(reg); renderSicht(); renderScanner(sc); renderLog(st);
-  await renderGallery(true);
+  const [st, si, sc, reg, lf, pr] = await Promise.all([get("status.json"), get("sichtpruefung.json"), get("scanner.json"), get("ideen-register.json"), get("laeufe.json"), get("pruefungen.json")]);
+  ST = st; SI = si; REG = reg; PRUEF = pr;
+  LAEUFE = lf && Array.isArray(lf.laeufe) ? lf.laeufe : laeufeAusRegister(reg);
+  LAEUFE.sort((a, b) => String(b.datum || "").localeCompare(String(a.datum || "")));
+  renderHead(st, null, si); renderPlan(st); renderRegister(reg); renderSicht(); renderScanner(sc); renderLog(st);
+  renderLaeufe(); renderPruef();
 }
-schemaRect(); schemaDb(); musterTabs(); renderEntries();
+schemaRect(); schemaDb(); renderEntries(); mappenMerken(); mappenEvents();
 seg("fTf", "tf", () => renderGallery(true)); seg("fEn", "en", () => renderGallery(true)); seg("fRes", "res", () => renderGallery(true)); seg("fNote", "note", () => renderGallery(true)); seg("fAus", "aus", () => renderGallery(true));
 seg("fView", "view", () => { renderGallery(false); if (CUR) openTrade(CUR); });
 $("moreBtn").addEventListener("click", () => { SHOWN += 60; renderGallery(false); });

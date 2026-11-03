@@ -1,0 +1,14 @@
+{
+  "stand": "2026-11-03",
+  "hinweis": "Jede Sichtprüfung als eigener Eintrag, auch die laufende und die bereitliegenden. andere = nicht ja, wenn die Aufteilung in nein und unsicher nicht mehr bekannt ist. Nach jeder Runde trägt VS Code das Ergebnis hier ein. Die laufende Runde zählt die Seite selbst aus den Antworten im Browser.",
+  "pruefungen": [
+    { "id": "rechteck-1", "name": "Rechteck Runde 1", "muster": "Rechteck", "art": "praezision", "datum": "2026-10-25", "bilder": 30, "ja": 20, "andere": 10, "status": "nicht bestanden", "ergebnis": "Unter der Hürde von 80 %. Erkennung an der Form nachgebessert." },
+    { "id": "rechteck-2", "name": "Rechteck Runde 2", "muster": "Rechteck", "art": "praezision", "datum": "2026-10-25", "bilder": 30, "ja": 25, "nein": 5, "unsicher": 0, "status": "bestanden", "ergebnis": "Nein: b05, b07, b08, b09, b11." },
+    { "id": "rechteck-3", "name": "Rechteck Runde 3 (Grenzfälle)", "muster": "Rechteck", "art": "praezision", "datum": "2026-10-25", "bilder": 50, "ja": 41, "nein": 4, "unsicher": 5, "status": "bestanden", "ergebnis": "Alle vier Grenzfall-Gruppen mindestens 7 von 10 ja. Nein: b14, b16, b39, b43. Daraus Fassung 2.2." },
+    { "id": "rechteck-4", "name": "Rechteck Runde 4 (Fassung 2.2)", "muster": "Rechteck", "art": "praezision", "datum": "2026-10-28", "bilder": 30, "ja": 24, "andere": 6, "status": "bestanden", "ergebnis": "Fassung 2.2 festgelegt." },
+    { "id": "treffer-1", "name": "Trefferquote Rechteck", "muster": "Rechteck", "art": "trefferquote", "datum": "2026-10-28", "bilder": 30, "ja": 8, "nein": 20, "unsicher": 2, "status": "ausgewertet", "ergebnis": "30 Tagescharts ohne Linien: An 8 Tagen hast du ein Rechteck gesehen." },
+    { "id": "einstieg-1", "name": "Einstieg prüfen", "muster": "Rechteck", "art": "einstieg", "datum": "2026-11-03", "bilder": 30, "status": "bereit", "ergebnis": "30 Trades mit Note A aus Werkbank Rechteck v1. Kommt nach doppelboden-1." },
+    { "id": "verlust-1", "name": "Verlust einordnen", "muster": "Rechteck", "art": "verlust", "datum": "2026-11-03", "bilder": 30, "status": "bereit", "ergebnis": "30 Verlust-Trades mit Note A. Danach Vergleich mit der automatischen Zuordnung." },
+    { "id": "doppelboden-1", "name": "Doppelboden Runde 1", "muster": "Doppelboden", "art": "praezision", "datum": "2026-11-03", "bilder": 30, "status": "läuft", "ergebnis": "Je 10 Bilder Tag, 15 Min und 5 Min." }
+  ]
+}

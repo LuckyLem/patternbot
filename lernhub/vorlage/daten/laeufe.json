@@ -1,0 +1,23 @@
+{
+  "stand": "2026-11-03",
+  "hinweis": "Ein Eintrag je gerechnetem Lauf. Die Seite zeigt jeden Lauf in der Mappe seines Musters. dateien zeigt auf Dateien in lernhub/daten. Ein neuer Lauf bekommt eigene Dateien, die alten bleiben unverändert stehen.",
+  "laeufe": [
+    {
+      "id": "rechteck-v1",
+      "muster": "Rechteck",
+      "name": "Werkbank Rechteck v1",
+      "register": "V5",
+      "datum": "2026-11-02",
+      "daten": "Suche: Okt. 2021 – Sep. 2023, die 50 der Werkbank",
+      "zeitebenen": ["15 Min", "5 Min"],
+      "trades": 13293,
+      "status": "verworfen",
+      "ergebnis": "Keine der 8 Varianten überzeugt: 15 Min zu wenig Daten, 5 Min alle nach Kosten negativ (−0,11 bis −0,31 R), Zufall höchstens 83, Note A nirgends besser als Note C.",
+      "dateien": {
+        "ergebnisse": "ergebnisse.json",
+        "trades": "trades/index.json",
+        "analyse": "analyse-rechteck-v1.json"
+      }
+    }
+  ]
+}

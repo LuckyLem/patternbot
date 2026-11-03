@@ -1,0 +1,70 @@
+{
+ "code_v3": {
+  "gemeinsam": "a4211707b14e",
+  "rechteck": "28313543ce98",
+  "analyse": "50bfb138ceca",
+  "rechteck_alt_8454cdc07786": "8454cdc07786"
+ },
+ "code_v1": {
+  "erkennung": "2489765016f5",
+  "referenz": "8454cdc07786",
+  "lauf": "e0fe5e0efe43"
+ },
+ "zeitraum": "2021-10-01 bis 2023-09-29",
+ "zeitebenen": [
+  {
+   "zeitebene": 15,
+   "v1_trades": 338,
+   "neu_trades": 338,
+   "fehlen": 0,
+   "dazu": 0,
+   "ungleich_hash": 0,
+   "ungleich_r_vor": 0,
+   "ungleich_r": 0,
+   "andere_felder_ungleich": {},
+   "beispiele": [],
+   "gleich": true,
+   "auswertung": {
+    "varianten_gleich": true,
+    "ungleich": [],
+    "zufall": {
+     "A": 22,
+     "B": 88,
+     "C": 73,
+     "D": 35
+    }
+   },
+   "erkennung_je_kerze_gleich": true,
+   "sekunden": 30
+  },
+  {
+   "zeitebene": 5,
+   "v1_trades": 12955,
+   "neu_trades": 12955,
+   "fehlen": 0,
+   "dazu": 0,
+   "ungleich_hash": 0,
+   "ungleich_r_vor": 0,
+   "ungleich_r": 0,
+   "andere_felder_ungleich": {},
+   "beispiele": [],
+   "gleich": true,
+   "auswertung": {
+    "varianten_gleich": true,
+    "ungleich": [],
+    "zufall": {
+     "A": 83,
+     "B": 9,
+     "C": 24,
+     "D": 32
+    }
+   },
+   "erkennung_je_kerze_gleich": true,
+   "sekunden": 161
+  }
+ ],
+ "trades_v1": 13293,
+ "trades_gleich": 13293,
+ "bestanden": true,
+ "dauer_s": 192
+}

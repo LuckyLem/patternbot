@@ -1,0 +1,285 @@
+{
+ "stand": "2026-11-03T08:13:28-05:00",
+ "auftrag": "Gemeinsame Werkbank v3, Fassung 1 (Commit 2434c11), Abschnitt 1",
+ "regel": "Jede Idee wird eingetragen, bevor sie gerechnet wird. Eine Änderung nach einem Ergebnis ist eine neue Idee mit neuem Eintrag.",
+ "stati": [
+  "geplant",
+  "läuft",
+  "verworfen",
+  "bestätigt",
+  "Prüftopf"
+ ],
+ "n_versuche": 132,
+ "n_erklaerung": "Summe der gezählten Varianten aller gerechneten Ideen (für „Bester von N“ im Prüftopf).",
+ "ideen": [
+  {
+   "nr": 1,
+   "kennung": "V1",
+   "datum": "2026-10-06",
+   "kurzname": "Runde 1",
+   "muster": "die 7 Muster des Bots (Aufsteigendes und Absteigendes Dreieck, Rechteck, Doppeltop, Doppelboden, Schulter-Kopf-Schulter, Inverse Schulter-Kopf-Schulter), Erkennung wie live",
+   "zeitebenen": [
+    "15 Min"
+   ],
+   "einstiege": [
+    "Ausbruch wie live (Order bei Kerzenschluss, Limit an der Kante)"
+   ],
+   "zusammenhang": "wie live (Tagestrend, SPY, relative Stärke, Volumen)",
+   "regeln_hash": "Bot-Code cbfe06cff, Simulator bt/ 61750fbbc22e (kalibriert)",
+   "daten": "Okt. 2025 – Sep. 2026, 147 Werte (heute im Prüftopf-Zeitraum)",
+   "status": "verworfen",
+   "ergebnis": "1.009 Trades, −0,056 R je Trade nach Kosten, PF 0,76, Zufall 25 von 100: Ziel verfehlt.",
+   "versuche": 1,
+   "bemerkung": "Neuberechnung nach Simulatorfehler (Regeln unverändert); der Vergleichslauf V1 aus war Information."
+  },
+  {
+   "nr": 2,
+   "kennung": "V2",
+   "datum": "2026-10-17",
+   "kurzname": "Runde 2",
+   "muster": "wie Runde 1, ohne Rechteck",
+   "zeitebenen": [
+    "15 Min"
+   ],
+   "einstiege": [
+    "Ausbruch wie live"
+   ],
+   "zusammenhang": "wie live",
+   "regeln_hash": "Bot-Code cbfe06cff, Simulator bt/ 61750fbbc22e, Vorab-Festlegung im Protokoll 15.10.2026",
+   "daten": "Okt. 2024 – Sep. 2025, 147 Werte (heute im Prüftopf-Zeitraum)",
+   "status": "verworfen",
+   "ergebnis": "511 Trades, −0,083 R je Trade nach Kosten, PF 0,66, Zufall 27 von 100: Ziel verfehlt.",
+   "versuche": 1,
+   "bemerkung": "Die Nebenrechnung wie live mit allen Mustern (−0,070 R) zählte vorab festgelegt nicht."
+  },
+  {
+   "nr": 3,
+   "kennung": "V3",
+   "datum": "2026-10-08",
+   "kurzname": "ORB Jahr 1",
+   "muster": "Eröffnungsspanne (Opening Range Breakout) auf Aktien im Spiel, nach Zarattini/Barbon/Aziz 2024",
+   "zeitebenen": [
+    "5 Min (Eröffnungsspanne), Ausstieg 15:50"
+   ],
+   "einstiege": [
+    "Ausbruch per Stop-Order an der Spanne"
+   ],
+   "zusammenhang": "Auswahl relatives Volumen der ersten 5 Min, Top 5",
+   "regeln_hash": "Vorab-Regeln Commit d48250c2; orb/ 59213253980c, mit Ticks 54e2b77872ef",
+   "daten": "Okt. 2025 – Sep. 2026, Liste der 1.500 (heute im Prüftopf-Zeitraum)",
+   "status": "verworfen",
+   "ergebnis": "973 Trades, −0,465 R je Trade nach Kosten (mit Ticks in der Einstiegsminute −0,404 R), Zufall 0 von 100: Ziel verfehlt.",
+   "versuche": 7,
+   "bemerkung": "Gezählt: Hauptvariante und die 6 angesehenen Nachbarwerte (Spanne 15/30, Stop 5/20 %, Top 10/20)."
+  },
+  {
+   "nr": 4,
+   "kennung": "V4",
+   "datum": "2026-10-21",
+   "kurzname": "Lerntopf-Lauf 1",
+   "muster": "23 Muster M001–M023 (alte, lockere Erkennung) mit 5 Zusammenhängen H0–H4",
+   "zeitebenen": [
+    "15 Min",
+    "5 Min"
+   ],
+   "einstiege": [
+    "Ausbruch des jeweiligen Musters"
+   ],
+   "zusammenhang": "H0–H4 (je Kandidat ein Zusammenhang)",
+   "regeln_hash": "Vorab-Datei Fassung 3 SHA-256 96e06e84…5934, Labor-Code 435020e128b3",
+   "daten": "Okt. 2020 – Sep. 2023, 150 Werte (Vorlauf ab 01.09.2020)",
+   "status": "verworfen",
+   "ergebnis": "15 Min: 115 Kandidaten, keiner erreicht Stufe 1; 5 Min wurde nicht ausgewertet (Lauf angehalten und archiviert).",
+   "versuche": 115,
+   "bemerkung": "Gezählt sind die 115 ausgewerteten Kandidaten auf 15 Min. Dieser Lauf hat Okt. 2020 – Sep. 2023 auf den 150 schon benutzt, also auch die heutigen Bestätigungsdaten intraday (mit anderer Erkennung)."
+  },
+  {
+   "nr": 5,
+   "kennung": "V5",
+   "datum": "2026-11-02",
+   "kurzname": "Werkbank Rechteck v1",
+   "muster": "Rechteck, strenge Erkennung Fassung 2.2",
+   "zeitebenen": [
+    "15 Min",
+    "5 Min"
+   ],
+   "einstiege": [
+    "Ausbruch",
+    "Retest",
+    "früher Einstieg",
+    "Fehlschlag"
+   ],
+   "zusammenhang": "ohne",
+   "regeln_hash": "Vorab-Datei Fassung 2 SHA-256 f3181c8d…3be4, Erkennung 2489765016f5, Lauf-Code e0fe5e0efe43",
+   "daten": "Suche: Okt. 2021 – Sep. 2023, die 50 der Werkbank",
+   "status": "verworfen",
+   "ergebnis": "Keine der 8 Varianten überzeugt: 15 Min zu wenig Daten, 5 Min alle nach Kosten negativ (−0,11 bis −0,31 R), Zufall höchstens 83, Note A nirgends besser als Note C.",
+   "versuche": 8,
+   "bemerkung": "Bleibt unverändert als Vergleich stehen; die gemeinsame Werkbank rechnet alle 13.293 Trades gleich nach (Gleichheitstest 03.11.2026)."
+  },
+  {
+   "nr": 6,
+   "kennung": "H1",
+   "datum": "2026-11-03",
+   "kurzname": "Doppelboden und Doppeltop",
+   "muster": "Doppelboden, dazu gespiegelt der Doppeltop",
+   "zeitebenen": [
+    "Tag",
+    "5 Min",
+    "15 Min"
+   ],
+   "einstiege": [
+    "Ausbruch",
+    "Retest",
+    "früher Einstieg",
+    "Fehlschlag"
+   ],
+   "zusammenhang": "je Zeitebene zwei vorab festgelegte Varianten, beide gezählt: ohne Zusammenhang und mit Zusammenhang (Tag: Schluss über der 50- und 200-Tage-Linie und 50 über 200, short spiegelbildlich; intraday: über dem VWAP und SPY steigend seit 09:30, short spiegelbildlich)",
+   "regeln_hash": null,
+   "daten": "Suche (Abschnitt 2), Bestätigung erst nach bestandener Hürde",
+   "status": "geplant",
+   "ergebnis": null,
+   "versuche": null,
+   "bemerkung": "zuerst (Phase 3 und 4); Varianten, Regeln und Hash kommen mit der Vorab-Datei, bevor gerechnet wird."
+  },
+  {
+   "nr": 7,
+   "kennung": "H2",
+   "datum": "2026-11-03",
+   "kurzname": "Rechteck Fassung 3",
+   "muster": "Rechteck, verbessert nach der Analyse (Abschnitt 6)",
+   "zeitebenen": [
+    "Tag",
+    "5 Min"
+   ],
+   "einstiege": [
+    "Ausbruch",
+    "Retest",
+    "früher Einstieg",
+    "Fehlschlag"
+   ],
+   "zusammenhang": "je Zeitebene zwei vorab festgelegte Varianten, beide gezählt: ohne Zusammenhang und mit Zusammenhang (Tag: Schluss über der 50- und 200-Tage-Linie und 50 über 200, short spiegelbildlich; intraday: über dem VWAP und SPY steigend seit 09:30, short spiegelbildlich)",
+   "regeln_hash": null,
+   "daten": "Suche (Abschnitt 2), Bestätigung erst nach bestandener Hürde",
+   "status": "geplant",
+   "ergebnis": null,
+   "versuche": null,
+   "bemerkung": "bleibt zum Analysieren drin (Phase 5); Varianten, Regeln und Hash kommen mit der Vorab-Datei, bevor gerechnet wird."
+  },
+  {
+   "nr": 8,
+   "kennung": "H3",
+   "datum": "2026-11-03",
+   "kurzname": "Kopf-Schulter",
+   "muster": "Kopf-Schulter und umgekehrte Kopf-Schulter",
+   "zeitebenen": [
+    "Tag",
+    "5 Min"
+   ],
+   "einstiege": [
+    "Ausbruch",
+    "Retest",
+    "früher Einstieg",
+    "Fehlschlag"
+   ],
+   "zusammenhang": "je Zeitebene zwei vorab festgelegte Varianten, beide gezählt: ohne Zusammenhang und mit Zusammenhang (Tag: Schluss über der 50- und 200-Tage-Linie und 50 über 200, short spiegelbildlich; intraday: über dem VWAP und SPY steigend seit 09:30, short spiegelbildlich)",
+   "regeln_hash": null,
+   "daten": "Suche (Abschnitt 2), Bestätigung erst nach bestandener Hürde",
+   "status": "geplant",
+   "ergebnis": null,
+   "versuche": null,
+   "bemerkung": "Varianten, Regeln und Hash kommen mit der Vorab-Datei, bevor gerechnet wird."
+  },
+  {
+   "nr": 9,
+   "kennung": "H4",
+   "datum": "2026-11-03",
+   "kurzname": "Flagge und Wimpel",
+   "muster": "Bullenflagge und Wimpel, dazu gespiegelt",
+   "zeitebenen": [
+    "Tag",
+    "5 Min"
+   ],
+   "einstiege": [
+    "Ausbruch",
+    "Retest",
+    "früher Einstieg",
+    "Fehlschlag"
+   ],
+   "zusammenhang": "je Zeitebene zwei vorab festgelegte Varianten, beide gezählt: ohne Zusammenhang und mit Zusammenhang (Tag: Schluss über der 50- und 200-Tage-Linie und 50 über 200, short spiegelbildlich; intraday: über dem VWAP und SPY steigend seit 09:30, short spiegelbildlich)",
+   "regeln_hash": null,
+   "daten": "Suche (Abschnitt 2), Bestätigung erst nach bestandener Hürde",
+   "status": "geplant",
+   "ergebnis": null,
+   "versuche": null,
+   "bemerkung": "Varianten, Regeln und Hash kommen mit der Vorab-Datei, bevor gerechnet wird."
+  },
+  {
+   "nr": 10,
+   "kennung": "H5",
+   "datum": "2026-11-03",
+   "kurzname": "Dreiecke",
+   "muster": "Aufsteigendes und absteigendes Dreieck",
+   "zeitebenen": [
+    "Tag",
+    "5 Min"
+   ],
+   "einstiege": [
+    "Ausbruch",
+    "Retest",
+    "früher Einstieg",
+    "Fehlschlag"
+   ],
+   "zusammenhang": "je Zeitebene zwei vorab festgelegte Varianten, beide gezählt: ohne Zusammenhang und mit Zusammenhang (Tag: Schluss über der 50- und 200-Tage-Linie und 50 über 200, short spiegelbildlich; intraday: über dem VWAP und SPY steigend seit 09:30, short spiegelbildlich)",
+   "regeln_hash": null,
+   "daten": "Suche (Abschnitt 2), Bestätigung erst nach bestandener Hürde",
+   "status": "geplant",
+   "ergebnis": null,
+   "versuche": null,
+   "bemerkung": "Varianten, Regeln und Hash kommen mit der Vorab-Datei, bevor gerechnet wird."
+  },
+  {
+   "nr": 11,
+   "kennung": "H6",
+   "datum": "2026-11-03",
+   "kurzname": "Tasse mit Henkel",
+   "muster": "Tasse mit Henkel",
+   "zeitebenen": [
+    "Tag"
+   ],
+   "einstiege": [
+    "Ausbruch",
+    "Retest",
+    "früher Einstieg",
+    "Fehlschlag"
+   ],
+   "zusammenhang": "je Zeitebene zwei vorab festgelegte Varianten, beide gezählt: ohne Zusammenhang und mit Zusammenhang (Tag: Schluss über der 50- und 200-Tage-Linie und 50 über 200, short spiegelbildlich; intraday: über dem VWAP und SPY steigend seit 09:30, short spiegelbildlich)",
+   "regeln_hash": null,
+   "daten": "Suche (Abschnitt 2), Bestätigung erst nach bestandener Hürde",
+   "status": "geplant",
+   "ergebnis": null,
+   "versuche": null,
+   "bemerkung": "Varianten, Regeln und Hash kommen mit der Vorab-Datei, bevor gerechnet wird."
+  },
+  {
+   "nr": 12,
+   "kennung": "H7+",
+   "datum": "2026-11-03",
+   "kurzname": "Ideen des Inhabers und Preis-Setups",
+   "muster": "Ideen des Inhabers, Preis-Setups (52-Wochen-Hoch, Innenstab, Kurslücken)",
+   "zeitebenen": [
+    "offen"
+   ],
+   "einstiege": [
+    "offen"
+   ],
+   "zusammenhang": "offen",
+   "regeln_hash": null,
+   "daten": "Suche (Abschnitt 2), Bestätigung erst nach bestandener Hürde",
+   "status": "geplant",
+   "ergebnis": null,
+   "versuche": null,
+   "bemerkung": "später; Varianten, Regeln und Hash kommen mit der Vorab-Datei, bevor gerechnet wird."
+  }
+ ]
+}

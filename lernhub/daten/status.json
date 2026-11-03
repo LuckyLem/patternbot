@@ -1,6 +1,6 @@
 {
- "stand": "2026-11-02T15:09:51-05:00",
- "phase": "Lauf Entwicklung fertig: keine der 8 Varianten überzeugt",
+ "stand": "2026-11-03T08:23:00-05:00",
+ "phase": "Phase 1 fertig: gemeinsame Werkbank, Gleichheitstest bestanden. Wartet auf dein OK für Phase 2",
  "laeuft": false,
  "plan": [
   {
@@ -28,16 +28,46 @@
    "datum": "So 25.10."
   },
   {
-   "titel": "Entwicklung Okt. 2021 – Sep. 2023",
-   "text": "5 und 15 Min, Einstiege A–D, nach Kosten, gegen den Zufall. Nachricht per Telegram, wenn fertig.",
+   "titel": "Werkbank Rechteck v1: Entwicklung Okt. 2021 – Sep. 2023",
+   "text": "5 und 15 Min, vier Einstiege, nach Kosten, gegen den Zufall. Ergebnis: keine der 8 Varianten überzeugt. Bleibt unverändert als Vergleich stehen.",
    "status": "fertig",
-   "datum": "So 25.10."
+   "datum": "Mo 02.11."
   },
   {
-   "titel": "Prüfung 2024 und 2025",
-   "text": "Einmal, nur für die Variante, die überzeugt.",
+   "titel": "Gemeinsame Werkbank (Phase 1)",
+   "text": "Ein Code für alle Muster, Rechteck als erstes Modul; Gleichheitstest gegen Rechteck v1 (13.293 von 13.293 Trades gleich); Ideen-Register; Analyse-Modul; Tageskerzen der 1.500 und der Länder-ETFs.",
+   "status": "fertig",
+   "datum": "Di 03.11."
+  },
+  {
+   "titel": "Analyse Rechteck v1 (Phase 2)",
+   "text": "Warum Gewinn, warum Verlust; Einstiegs- und Verlust-Prüfung vorbereiten.",
+   "status": "offen",
+   "datum": "nach deinem OK"
+  },
+  {
+   "titel": "Doppelboden (Phase 3 und 4)",
+   "text": "Erkennung Tag, 5 und 15 Min, Sichtprüfung, dann Vorab-Datei und Lauf auf den Suchdaten.",
    "status": "offen",
    "datum": "danach"
+  },
+  {
+   "titel": "Rechteck Fassung 3 (Phase 5)",
+   "text": "Verbessert aus der Analyse, Urteil auf den Bestätigungsdaten.",
+   "status": "offen",
+   "datum": "danach"
+  },
+  {
+   "titel": "Weitere Muster aus dem Register",
+   "text": "Kopf-Schulter, Flagge, Dreiecke, Tasse mit Henkel, jeweils wie der Doppelboden.",
+   "status": "offen",
+   "datum": "später"
+  },
+  {
+   "titel": "Prüftopf ab Okt. 2023",
+   "text": "Ganz am Ende, höchstens dreimal, nur für bestätigte Ideen, mit Zufallshürde „Bester von N“.",
+   "status": "offen",
+   "datum": "am Ende"
   },
   {
    "titel": "Paper auf Konto 2 mit Scanner",
@@ -118,6 +148,18 @@
   {
    "zeit": "2026-11-02T15:09:51-05:00",
    "text": "Lauf 5 Min fertig: keine Variante überzeugt. Kurzbericht folgt"
+  },
+  {
+   "zeit": "2026-11-03T08:23:00-05:00",
+   "text": "Werkbank Rechteck v1 abgeschlossen: keine Variante überzeugt, bleibt als Vergleich stehen"
+  },
+  {
+   "zeit": "2026-11-03T08:23:00-05:00",
+   "text": "Gemeinsame Werkbank fertig (Code a4211707b14e, Rechteck 28313543ce98, Analyse 50bfb138ceca). Gleichheitstest: 13.293 von 13.293 Trades gleich"
+  },
+  {
+   "zeit": "2026-11-03T08:23:00-05:00",
+   "text": "Ideen-Register angelegt: 12 Einträge, bisher 132 Versuche. Tageskerzen geladen: 1.104 von 1.522 Werten vollständig seit 2016, alle 22 Länder-ETFs"
   }
  ]
 }

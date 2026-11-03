@@ -446,6 +446,12 @@ html.tv-open{overflow:hidden}
   .tv-legend .o .v{display:none}
 }
 
+/* Speicherstand der Sichtprüfung */
+.sync{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-3)}
+.sync::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--hair);flex:none}
+.sync[data-s="online"]::before{background:var(--up)}
+.sync[data-s="speichert"]::before,.sync[data-s="verbindet"]::before{background:var(--accent)}
+.sync[data-s="fehler"]::before{background:var(--down)}
 /* Muster-Mappen */
 .mappe{margin-bottom:14px}
 .mappe>summary{list-style:none;cursor:pointer;position:relative;display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;padding:18px 56px 18px 22px;border-radius:20px;background:var(--raised);box-shadow:var(--lift)}
@@ -559,7 +565,7 @@ html.tv-open{overflow:hidden}
     </section>
 
     <section class="enter s4" id="sicht">
-      <div class="head"><div class="hleft"><h2>Sichtprüfung</h2><span class="aside" id="siNote"></span></div></div>
+      <div class="head"><div class="hleft"><h2>Sichtprüfung</h2><span class="aside" id="siNote"></span></div><span class="sync" id="syncNote" data-s="lokal" aria-live="polite"></span></div>
       <p class="lead" id="siLead">Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen, das Bild endet an der Signalkerze, ohne Ausgang. Gerechnet wird erst, wenn mindestens 80 % „ja“ sind.</p>
       <div class="card sicht" id="sichtBox"></div>
     </section>
@@ -861,7 +867,7 @@ function renderHead(st, idx, si) {
     sichtCell,
   ];
   $("strip").innerHTML = cells.map(([k, v, s]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v ${/^\d|—/.test(v) ? "num" : "txt"}">${esc(v)}</div><div class="n">${esc(s)}</div></div>`).join("");
-  if (EX) $("exBanner").hidden = false;
+  if (EX && !window.LERNHUB_ECHT) $("exBanner").hidden = false;
 }
 
 /* ------------------------------------------------------------ Plan */
@@ -1185,7 +1191,8 @@ new ResizeObserver(() => { const w = Math.round($("dChart").clientWidth); if (CU
 /* ------------------------------------------------------------ Sichtprüfung */
 const SKEY = "lernhub-sicht-v1";
 const sload = () => { try { return JSON.parse(localStorage.getItem(SKEY) || "{}"); } catch (e) { return {}; } };
-const ssave = (o) => { try { localStorage.setItem(SKEY, JSON.stringify(o)); } catch (e) { /* ohne Speicher geht es trotzdem */ } };
+const ssaveLokal = (o) => { try { localStorage.setItem(SKEY, JSON.stringify(o)); } catch (e) { /* ohne Speicher geht es trotzdem */ } };
+const ssave = (o) => { ssaveLokal(o); syncSoon(); };
 let SI = null, SANS = sload();
 function sichtSummary(si) {
   const B = (si && si.bilder) || [], A = (si && si.id && SANS[si.id]) || {};
@@ -1335,7 +1342,8 @@ const TVT = {
 /* ------------------------------------------------------------ Zeichnungen (je Bild, nur in diesem Browser) */
 const DKEY = "lernhub-zeichnung-v1";
 let DRAW = (() => { try { return JSON.parse(localStorage.getItem(DKEY) || "{}"); } catch (e) { return {}; } })();
-const dsave = () => { try { localStorage.setItem(DKEY, JSON.stringify(DRAW)); } catch (e) { /* ohne Speicher geht es trotzdem */ } };
+const dsaveLokal = () => { try { localStorage.setItem(DKEY, JSON.stringify(DRAW)); } catch (e) { /* ohne Speicher geht es trotzdem */ } };
+const dsave = () => { dsaveLokal(); syncSoon(); };
 const uid = () => Math.random().toString(36).slice(2, 9);
 function beschreibe(d, b) {
   const K = b.kerzen, ti = (i) => K[Math.max(0, Math.min(K.length - 1, Math.round(i)))][0];
@@ -2033,6 +2041,84 @@ function schemaDb() {
   tx(24, 266, "Ziel nach dem Ausbruch: Nackenlinie plus Höhe", "");
 }
 
+/* ------------------------------------------------------------ Online speichern
+   In der Claude-Version liegt der Stand jeder Runde in der Datenbank der Seite (sicht/<Runde>), lesbar und schreibbar nur
+   für den Inhaber. So geht es auf jedem Gerät weiter. Ohne Datenbank (GitHub Pages) bleibt alles im Browser. */
+let ODB = null, OREF = null, OSTAT = "lokal", OBUSY = false, ODIRTY = false, OTIMER = null, OWAIT = null, OFIRST = true, OLAST = "";
+const OTEXT = {
+  lokal: "Nur auf diesem Gerät gespeichert",
+  verbindet: "Verbinde mit dem Online-Speicher …",
+  online: "Online gespeichert, auf allen Geräten",
+  speichert: "Speichert online …",
+  wartet: "Online-Speicher antwortet noch nicht. Deine Antworten liegen solange auf diesem Gerät.",
+  fehler: "Online-Speichern ging nicht. Deine Antworten liegen auf diesem Gerät.",
+};
+function syncNote(s) { if (s) OSTAT = s; const el = $("syncNote"); if (!el) return; el.dataset.s = OSTAT; el.textContent = OTEXT[OSTAT] || ""; }
+function rundeStand() {
+  const pre = SI.id + "/", z = {};
+  for (const k of Object.keys(DRAW)) if (k.startsWith(pre) && (DRAW[k] || []).length) z[k.slice(pre.length)] = DRAW[k];
+  return { antworten: Object.assign({}, SANS[SI.id] || {}), zeichnungen: z };
+}
+const standJson = (st) => JSON.stringify({ a: Object.keys(st.antworten).sort().map((k) => [k, st.antworten[k]]), z: Object.keys(st.zeichnungen).sort().map((k) => [k, st.zeichnungen[k]]) });
+function syncSoon() { if (!OREF || OFIRST) return; clearTimeout(OTIMER); OTIMER = setTimeout(syncNow, 600); }
+async function syncNow() {
+  clearTimeout(OTIMER); OTIMER = null;
+  if (!OREF || OFIRST) return;
+  if (OBUSY) { ODIRTY = true; return; }
+  const st = rundeStand(), js = standJson(st);
+  if (js === OLAST) { if (OSTAT === "speichert") syncNote("online"); return; }
+  OBUSY = true; syncNote("speichert");
+  const body = { runde: SI.id, antworten: st.antworten, zeichnungen: st.zeichnungen, geaendert: new Date().toISOString() };
+  let ok = false;
+  for (let i = 0; i < 2 && !ok; i++) {
+    try { await OREF.set(body); ok = true; }
+    catch (e) { if (i === 0 && e && e.code === "unavailable") await new Promise((r) => setTimeout(r, 800 + Math.random() * 800)); else break; }
+  }
+  if (ok) OLAST = js;
+  syncNote(ok ? "online" : "fehler");
+  OBUSY = false;
+  if (ODIRTY) { ODIRTY = false; syncNow(); }
+}
+function standUebernehmen(st) {
+  SANS[SI.id] = Object.assign({}, st.antworten || {});
+  const pre = SI.id + "/";
+  for (const k of Object.keys(DRAW)) if (k.startsWith(pre)) delete DRAW[k];
+  for (const [b, L] of Object.entries(st.zeichnungen || {})) if (Array.isArray(L) && L.length) DRAW[pre + b] = JSON.parse(JSON.stringify(L));
+  ssaveLokal(SANS); dsaveLokal();
+  renderSicht(); renderHead(ST, IDX, SI); renderPruef();
+  if (V.kind === "sicht" && !$("tv").hidden) { try { tvBar(); tvLegend(null); V.dirty = true; } catch (e) { /* Fenster zeichnet beim nächsten Bild neu */ } }
+}
+async function onlineStart() {
+  if (!SI || !SI.id || !window.claude || typeof window.claude.use !== "function") { syncNote("lokal"); return; }
+  syncNote("verbindet");
+  let db = null;
+  try { db = await window.claude.use("db"); } catch (e) { db = null; }
+  if (!db) { syncNote("lokal"); return; }
+  try { OREF = db.doc("sicht/" + SI.id); } catch (e) { syncNote("lokal"); return; }
+  ODB = db;
+  OWAIT = setTimeout(() => { if (OFIRST || OSTAT === "verbindet") syncNote("wartet"); }, 10000);
+  OREF.onSnapshot((snap) => {
+    if (snap.metadata && snap.metadata.hasPendingWrites) return;
+    if (snap.metadata && !snap.metadata.fromCache) { clearTimeout(OWAIT); if (OSTAT === "verbindet" || OSTAT === "wartet") syncNote("online"); }
+    const d = snap.exists ? snap.data() || {} : null;
+    const remote = d ? { antworten: Object.assign({}, d.antworten || {}), zeichnungen: Object.assign({}, d.zeichnungen || {}) } : { antworten: {}, zeichnungen: {} };
+    if (OFIRST) {
+      // Beim ersten Kontakt: was nur auf diesem Gerät liegt, kommt dazu. Online gewinnt bei gleichen Bildern.
+      OFIRST = false;
+      const lokal = rundeStand(), merged = { antworten: Object.assign({}, lokal.antworten, remote.antworten), zeichnungen: Object.assign({}, lokal.zeichnungen, remote.zeichnungen) };
+      OLAST = standJson(remote);
+      if (standJson(merged) !== standJson(lokal)) standUebernehmen(merged);
+      if (standJson(merged) !== OLAST) syncNow();
+      return;
+    }
+    const js = standJson(remote);
+    if (js === OLAST) return;
+    OLAST = js;
+    if (js !== standJson(rundeStand())) standUebernehmen(remote);
+  }, () => { clearTimeout(OWAIT); OREF = null; OFIRST = true; syncNote("fehler"); });
+}
+addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && OTIMER) syncNow(); });
+
 /* ------------------------------------------------------------ Start */
 let ST = null, REG = null;
 function renderHeadAgain() { renderHead(ST, IDX, SI); renderPruef(); }
@@ -2043,6 +2129,7 @@ async function load() {
   LAEUFE.sort((a, b) => String(b.datum || "").localeCompare(String(a.datum || "")));
   renderHead(st, null, si); renderPlan(st); renderRegister(reg); renderSicht(); renderScanner(sc); renderLog(st);
   renderLaeufe(); renderPruef();
+  onlineStart();
 }
 schemaRect(); schemaDb(); renderEntries(); mappenMerken(); mappenEvents();
 seg("fTf", "tf", () => renderGallery(true)); seg("fEn", "en", () => renderGallery(true)); seg("fRes", "res", () => renderGallery(true)); seg("fNote", "note", () => renderGallery(true)); seg("fAus", "aus", () => renderGallery(true));

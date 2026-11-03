@@ -30,6 +30,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
   --spring:cubic-bezier(.34,1.3,.64,1);
   --gut:clamp(20px,5vw,40px);
+  --k1:#2a78d6; --k2:#eb6834; --k3:#1baf7a; --k4:#eda100; --k5:#e87ba4; --k6:#008300; --k7:#6250d6; --k8:#a3a3ab;
   --tv-bg:#ffffff; --tv-line:#e0e3eb; --tv-text:#131722; --tv-text2:#6a6d78; --tv-hover:#f0f3fa; --tv-sel:#2962ff; --tv-sel-wash:rgba(41,98,255,.12);
 }
 @media (prefers-color-scheme:dark){
@@ -43,6 +44,7 @@
     --glow:.9;
     --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
   --tv-bg:#131722; --tv-line:#2a2e39; --tv-text:#d1d4dc; --tv-text2:#868993; --tv-hover:#2a2e39; --tv-sel:#5b8cff; --tv-sel-wash:rgba(91,140,255,.16);
+  --k1:#3987e5; --k2:#d95926; --k3:#199e70; --k4:#c98500; --k5:#d55181; --k6:#008300; --k7:#9085e9; --k8:#5f5f68;
   }
 }
 :root[data-theme="dark"]{
@@ -55,6 +57,7 @@
   --glow:.9;
   --lift:0 0 0 1px var(--hair-soft), 0 22px 50px -22px rgba(0,0,0,.75);
   --tv-bg:#131722; --tv-line:#2a2e39; --tv-text:#d1d4dc; --tv-text2:#868993; --tv-hover:#2a2e39; --tv-sel:#5b8cff; --tv-sel-wash:rgba(91,140,255,.16);
+  --k1:#3987e5; --k2:#d95926; --k3:#199e70; --k4:#c98500; --k5:#d55181; --k6:#008300; --k7:#9085e9; --k8:#5f5f68;
 }
 
 /* ================================================================ base */
@@ -259,7 +262,7 @@ tbody tr:last-child td{border-bottom:none}
 .dhead h3{font-size:18px}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2)}
 .legend span{display:inline-flex;align-items:center;gap:7px}
-.k{display:inline-block;width:16px;height:0;border-top:2px solid var(--c)}
+i.k{display:inline-block;width:16px;height:0;border-top:2px solid var(--c)}
 .k.dash{border-top-style:dashed}
 .k.dot{width:9px;height:9px;border:0;border-radius:50%;background:var(--c)}
 .k.ring{width:10px;height:10px;border:1.8px solid var(--c);border-radius:50%}
@@ -297,6 +300,47 @@ pre.out{background:var(--sunken);border-radius:12px;padding:12px 14px;font:400 1
 .row .txt{font-size:13.5px;color:var(--ink-2);line-height:1.5;min-width:0}
 .src{display:grid;gap:8px;font-size:13.5px;color:var(--ink-2);padding:18px 22px}
 footer a{color:var(--ink-3)}
+/* ================================================================ v3: muster, analyse, register */
+.tabs{display:inline-flex;flex-wrap:wrap;gap:3px;padding:3px;border-radius:18px;background:var(--sunken);margin-bottom:16px;max-width:100%}
+.tabs button{appearance:none;border:0;background:transparent;color:var(--ink-2);font:600 13px/1.2 var(--sans);padding:9px 14px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--raised);color:var(--ink);box-shadow:0 0 0 1px var(--hair)}
+.regel{font-size:13px;line-height:1.5;color:var(--ink-2);background:var(--sunken);border-radius:12px;padding:10px 12px}
+.regel b{color:var(--ink);font-weight:600}
+.facts1{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.facts1 b{color:var(--ink);font-weight:600}
+.an-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin-top:14px}
+.an-card{padding:18px 18px 16px;display:grid;gap:10px;align-content:start;min-width:0}
+.an-card h3{font-size:15px}
+.an-card .sub{font-size:12.5px;color:var(--ink-3);line-height:1.45}
+.hb{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) 64px;align-items:center;gap:8px 10px;font-size:13px}
+.hb .lab{color:var(--ink-2);min-width:0}
+.hb .val{font:500 12.5px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.hb .bar{position:relative;height:14px}
+.hb .bar .z{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--ink-3)}
+.hb .bar i{position:absolute;top:0;bottom:0;border-radius:4px}
+.stack{padding:18px 18px 14px;display:grid;gap:12px;min-width:0}
+.legend2{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--ink-2)}
+.legend2 span{display:inline-flex;align-items:center;gap:6px}
+.legend2 i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.srow{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr) 64px;align-items:center;gap:10px;font-size:13px}
+.srow .lab{color:var(--ink-3);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.srow .lab b{color:var(--ink);font-weight:600}
+.srow .val{font:500 12.5px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.srow.tot{border-top:1px solid var(--hair-soft);padding-top:10px}
+.sbar2{display:flex;height:18px;gap:2px;min-width:0;cursor:default}
+.sbar2 i{display:block;height:100%;min-width:2px}
+.sbar2 i:first-child{border-radius:4px 0 0 4px}.sbar2 i:last-child{border-radius:0 4px 4px 0}
+details.tbl{font-size:13px}
+details.tbl summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:13px}
+details.tbl .tablewrap{margin-top:10px}
+.reg td{white-space:normal;vertical-align:top}
+.reg td.num{white-space:nowrap}
+.reg .erg{color:var(--ink-2);font-size:13px;min-width:280px}
+@media(max-width:640px){.tv-ans.opts{flex-wrap:wrap}.tv-ans.opts .btn{flex:1 1 40%}.tv-ans.opts .btn.nav{flex:0 0 40px}}
+.tip .txt{display:block;max-width:260px;white-space:normal;margin-top:4px;color:var(--ink-3)}
+.tv-regel{font-size:12px;color:var(--tv-text2);max-width:70ch;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:640px){.tv-regel{display:none}}
+@media(max-width:600px){.srow{grid-template-columns:minmax(0,1fr) 60px}.srow .sbar2{grid-column:1/-1;grid-row:2}}
 /* ================================================================ chart-fenster (TradingView Lightweight Charts) */
 html.tv-open{overflow:hidden}
 .btn:disabled{opacity:.4;cursor:default}
@@ -346,9 +390,9 @@ html.tv-open{overflow:hidden}
 .tv-legend{position:absolute;left:10px;top:8px;z-index:6;pointer-events:none;display:grid;gap:4px;font:400 12px/1.35 var(--sans);color:var(--tv-text2);max-width:calc(100% - 96px)}
 .tv-legend .o{display:flex;flex-wrap:wrap;gap:2px 10px;font:400 11.5px var(--mono);font-variant-numeric:tabular-nums}
 .tv-legend .o b{color:var(--tv-text);font-weight:500}
-.tv-legend .k{display:flex;flex-wrap:wrap;gap:2px 12px}
-.tv-legend .k span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
-.tv-legend .k i{display:inline-block;width:14px;height:0;border-top:2px solid var(--c)}
+.tv-legend .lk{display:flex;flex-wrap:wrap;gap:2px 12px}
+.tv-legend .lk span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.tv-legend .lk i{display:inline-block;width:14px;height:0;border-top:2px solid var(--c)}
 .tv-del{position:absolute;z-index:7;display:inline-flex;align-items:center;gap:6px;appearance:none;border:1px solid var(--tv-line);cursor:pointer;
   border-radius:6px;padding:6px 10px;font:600 12px/1 var(--sans);color:var(--tv-text);background:var(--tv-bg);box-shadow:0 8px 20px -10px rgba(0,0,0,.4)}
 .tv-del svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
@@ -396,7 +440,10 @@ html.tv-open{overflow:hidden}
   .tv-ans .btn{flex:1 1 0;min-width:0;justify-content:center;padding:11px 6px;font-size:13px;white-space:nowrap}
   .tv-ans .btn.nav{flex:0 0 40px}
   .tv-ans .lg{display:none}
-  .tv-legend{max-width:calc(100% - 70px)}
+  .tv-legend{max-width:calc(100% - 70px);left:6px;top:6px;padding:3px 6px;border-radius:6px;gap:2px;font-size:11px;
+    background:color-mix(in srgb,var(--tv-bg) 80%,transparent)}
+  .tv-legend .o{font-size:10.5px;gap:1px 8px}
+  .tv-legend .o .v{display:none}
 }
 </style>
 </head>
@@ -416,9 +463,9 @@ html.tv-open{overflow:hidden}
     <div class="hero enter s1">
       <div class="live"><span class="bead" id="bead"></span><span id="liveText">lade …</span></div>
       <h1 class="ltitle" id="hubTitle">Lernhub</h1>
-      <p class="context">Die Werkbank für <b>ein Muster: das Rechteck</b>. Der Bot zieht seine Linien selbst, sie müssen wirklich berühren,
-        und jedes Bild zeigt genau das, was der Bot im Moment der Entscheidung gesehen hat. Gehandelt wird nur das saubere
-        Lehrbuch-Rechteck. Getestet auf 5- und 15-Minuten-Kerzen, 50 Aktien mit dem meisten Handel.</p>
+      <p class="context">Die <b>gemeinsame Werkbank</b>: ein Muster nach dem anderen, streng erkannt, mit deinem Auge geprüft und
+        gegen den Zufall getestet. Jedes Bild zeigt genau das, was der Bot im Moment der Entscheidung gesehen hat. Was wirklich
+        trägt, muss auf neuen Daten bestehen, bevor es zählt.</p>
       <div class="banner" id="exBanner" hidden><b>Beispielbilder.</b> Diese Vorschau zeigt künstliche Kurse, damit man das Format sieht. Echte Trades erscheinen hier, sobald der erste Lauf fertig ist.</div>
     </div>
 
@@ -429,8 +476,45 @@ html.tv-open{overflow:hidden}
       <div class="card plan" id="plan"></div>
     </section>
 
-    <section class="enter s4" id="rechteck">
-      <div class="head"><div class="hleft"><h2>So liest der Bot ein Rechteck</h2></div></div>
+    <section class="enter s4" id="sicht">
+      <div class="head"><div class="hleft"><h2>Sichtprüfung</h2><span class="aside" id="siNote"></span></div></div>
+      <p class="lead" id="siLead">Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen, das Bild endet an der Signalkerze, ohne Ausgang. Gerechnet wird erst, wenn mindestens 80 % „ja“ sind.</p>
+      <div class="card sicht" id="sichtBox"></div>
+    </section>
+
+
+    <section class="enter s5" id="muster">
+      <div class="head"><div class="hleft"><h2>So liest der Bot die Muster</h2></div></div>
+      <div class="tabs" role="tablist" aria-label="Muster">
+        <button type="button" role="tab" id="tabDb" aria-selected="true" aria-controls="pDb">Doppelboden · in Arbeit</button>
+        <button type="button" role="tab" id="tabRect" aria-selected="false" aria-controls="pRect">Rechteck · v1 abgeschlossen</button>
+      </div>
+      <div id="pDb" role="tabpanel" aria-labelledby="tabDb">
+        <p class="lead">Zwei Tiefs etwa auf gleicher Höhe nach einem Rückgang, dazwischen ein Zwischenhoch: die Nackenlinie. Bestätigt ist der
+          Doppelboden erst, wenn der Kurs über der Nackenlinie schließt. Der Bot sucht ihn auf Tageskerzen (Halten bis 20 Tage) und auf 5 und
+          15 Minuten (alles an einem Tag).</p>
+        <div class="two">
+          <div class="card pad"><svg class="schema" id="schemaDb" viewBox="0 0 520 280" role="img" aria-label="Schema eines Doppelbodens: Rückgang, erster Boden, Zwischenhoch mit Nackenlinie, zweiter Boden auf gleicher Höhe, Ausbruch über die Nackenlinie"></svg></div>
+          <div class="card pad">
+            <dl class="rules">
+              <dt>Vortrend</dt><dd>Vor dem ersten Boden fällt der Kurs deutlich: mindestens 3 ATR auf Tageskerzen, 2 ATR intraday.</dd>
+              <dt>Zwei Böden</dt><dd>Beide Tiefs sind echte Umkehrpunkte und liegen fast gleich tief: höchstens <b>0,5 ATR</b> auseinander (Tag), 0,3 ATR (intraday).</dd>
+              <dt>Nackenlinie</dt><dd>Das Zwischenhoch liegt mindestens 2 ATR (Tag) bzw. 1,5 ATR (intraday) über dem tieferen Boden.</dd>
+              <dt>Abstand</dt><dd>10 bis 80 Tage zwischen den Böden. Intraday mindestens 10 Kerzen (5 Min) bzw. 6 Kerzen (15 Min), alles am selben Tag.</dd>
+              <dt>Bestätigung</dt><dd>Schluss mindestens 0,1 ATR <b>über der Nackenlinie</b>, rechtzeitig nach dem zweiten Boden. Fällt der Kurs vorher klar unter die Böden, ist es ein Fehlschlag.</dd>
+              <dt>Note</dt><dd><b>A</b> Böden fast gleich tief, klarer Vortrend, kein Zickzack dazwischen. <b>B</b> gültig. <b>C</b> nur mit lockerer Toleranz.</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="stages" aria-label="Reifegrad des Doppelbodens">
+          <div class="stg"><b>Stufe 0</b><strong>nichts</strong>Kein Rückgang mit Boden.</div>
+          <div class="stg"><b>Stufe 1</b><strong>erster Boden</strong>Boden nach einem Rückgang, das Zwischenhoch steht.</div>
+          <div class="stg"><b>Stufe 2</b><strong>W sichtbar</strong>Zweiter Boden bestätigt, die Nackenlinie steht fest.</div>
+          <div class="stg s3"><b>Stufe 3</b><strong>Auslöser</strong>Die Regel eines Einstiegs ist erfüllt.</div>
+          <div class="stg s4"><b>Stufe 4</b><strong>im Trade</strong>Stop und Ziel kommen aus dem W.</div>
+        </div>
+      </div>
+      <div id="pRect" role="tabpanel" aria-labelledby="tabRect" hidden>
       <p class="lead">Zwei waagerechte Linien, an denen der Kurs mehrmals abprallt. Der Bot zeichnet sie selbst aus den Wendepunkten des Tages.
         Kein Spielraum von Prozenten: Eine Berührung zählt nur, wenn der Docht die Linie wirklich erreicht.</p>
       <div class="two">
@@ -453,11 +537,13 @@ html.tv-open{overflow:hidden}
         <div class="stg s3"><b>Stufe 3</b><strong>Auslöser</strong>Die Regel des Einstiegs ist erfüllt. Nur Note A wird gehandelt.</div>
         <div class="stg s4"><b>Stufe 4</b><strong>im Trade</strong>Stop und Ziel kommen aus den eigenen Linien.</div>
       </div>
+      </div>
     </section>
 
     <section class="enter s5" id="einstiege">
-      <div class="head"><div class="hleft"><h2>Vier Einstiege im Vergleich</h2></div></div>
-      <p class="lead">Dasselbe Rechteck, vier Arten zu handeln. Alle vier werden auf denselben Kästen getestet. So zeigt sich, welcher Einstieg auf 5 und 15 Minuten wirklich trägt.</p>
+      <div class="head"><div class="hleft"><h2>Vier Einstiege, für jedes Muster gleich</h2></div></div>
+      <p class="lead">Dasselbe Muster, vier Arten zu handeln. Alle vier laufen gleichzeitig auf denselben Mustern, wie vier Trader vor demselben Bild.
+        Die Skizzen zeigen es am Rechteck; beim Doppelboden ist die Kante die Nackenlinie.</p>
       <div class="entries" id="entries"></div>
     </section>
 
@@ -467,13 +553,26 @@ html.tv-open{overflow:hidden}
       <div class="card"><div class="tablewrap" id="results"></div></div>
     </section>
 
+    <section id="analyse">
+      <div class="head"><div class="hleft"><h2>Warum Gewinn, warum Verlust</h2><span class="aside" id="anNote"></span></div></div>
+      <p class="lead">Nach jedem Lauf ordnet der Bot jeden Trade einer Ursache zu. Das ist nur Information: Nichts davon filtert oder ändert eine Regel.</p>
+      <div id="anBox"><div class="card void"><b>Noch keine Analyse</b>Sie erscheint nach dem ersten Lauf.</div></div>
+    </section>
+
+    <section id="register">
+      <div class="head"><div class="hleft"><h2>Ideen-Register</h2><span class="aside" id="regNote"></span></div></div>
+      <p class="lead">Jede Idee wird eingetragen, bevor sie gerechnet wird. So wissen wir, wie oft wir es versucht haben, und können den Zufall am Ende richtig herausrechnen.</p>
+      <div class="card"><div class="tablewrap" id="regBox"></div></div>
+    </section>
+
     <section id="trades">
       <div class="head"><div class="hleft"><h2>Alle Trades</h2><span class="aside" id="trNote"></span></div></div>
-      <p class="lead">Jeder gefundene Trade mit den Linien, die der Bot selbst gezogen hat. Das Bild endet zuerst im Moment der Entscheidung, so wie der Bot es gesehen hat. Mit „mit Ausgang“ siehst du, was danach passiert ist.</p>
+      <p class="lead">Rechteck v1: jeder gefundene Trade mit den Linien, die der Bot selbst gezogen hat. Das Bild endet zuerst im Moment der Entscheidung, so wie der Bot es gesehen hat. Mit „mit Ausgang“ siehst du, was danach passiert ist.</p>
       <div class="ctrl">
         <div class="seg" role="group" aria-label="Zeitebene" id="fTf"><button type="button" data-v="15" aria-pressed="true">15 Min</button><button type="button" data-v="5" aria-pressed="false">5 Min</button></div>
-        <div class="seg" role="group" aria-label="Einstieg" id="fEn"><button type="button" data-v="A" aria-pressed="true">A</button><button type="button" data-v="B" aria-pressed="false">B</button><button type="button" data-v="C" aria-pressed="false">C</button><button type="button" data-v="D" aria-pressed="false">D</button></div>
+        <div class="seg" role="group" aria-label="Einstieg" id="fEn"><button type="button" data-v="A" aria-pressed="true">Ausbruch</button><button type="button" data-v="B" aria-pressed="false">Retest</button><button type="button" data-v="C" aria-pressed="false">Früher Einstieg</button><button type="button" data-v="D" aria-pressed="false">Fehlschlag</button></div>
         <div class="seg" role="group" aria-label="Ergebnis" id="fRes"><button type="button" data-v="alle" aria-pressed="true">alle</button><button type="button" data-v="plus" aria-pressed="false">Gewinner</button><button type="button" data-v="minus" aria-pressed="false">Verlierer</button></div>
+        <div class="seg" role="group" aria-label="Ausgang" id="fAus"><button type="button" data-v="alle" aria-pressed="true">jeder Ausgang</button><button type="button" data-v="ziel" aria-pressed="false">Ziel</button><button type="button" data-v="stop" aria-pressed="false">Stop</button><button type="button" data-v="tagesende" aria-pressed="false">Tagesende</button></div>
         <div class="seg" role="group" aria-label="Note" id="fNote"><button type="button" data-v="alle" aria-pressed="true">alle Noten</button><button type="button" data-v="A" aria-pressed="false">A</button><button type="button" data-v="B" aria-pressed="false">B</button><button type="button" data-v="C" aria-pressed="false">C</button></div>
         <div class="seg" role="group" aria-label="Bild" id="fView"><button type="button" data-v="moment" aria-pressed="true">Moment der Entscheidung</button><button type="button" data-v="aus" aria-pressed="false">mit Ausgang</button></div>
       </div>
@@ -491,12 +590,6 @@ html.tv-open{overflow:hidden}
       </div>
       <div class="gallery" id="gallery"></div>
       <div class="more"><button type="button" class="btn" id="moreBtn" hidden>Mehr laden</button></div>
-    </section>
-
-    <section id="sicht">
-      <div class="head"><div class="hleft"><h2>Sichtprüfung</h2><span class="aside" id="siNote"></span></div></div>
-      <p class="lead" id="siLead">Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen, das Bild endet an der Signalkerze, ohne Ausgang. Gerechnet wird erst, wenn mindestens 80 % „ja“ sind.</p>
-      <div class="card sicht" id="sichtBox"></div>
     </section>
 
     <section id="scanner">
@@ -583,11 +676,22 @@ async function get(name) {
   try { const r = await fetch(BASE + name + "?t=" + Date.now(), { cache: "no-store" }); if (!r.ok) return null; return await r.json(); } catch (e) { return null; }
 }
 const ENTRY = {
-  A: { t: "Ausbruch", s: "Schluss außerhalb des Kastens, sofort rein. So handelt der Bot heute.", p: "Schnell dabei, aber voll im Risiko eines Fehlausbruchs." },
-  B: { t: "Retest", s: "Nach dem Ausbruch warten, bis der Kurs zur alten Kante zurückkommt und dort hält. Erst dann rein.", p: "Besserer Preis, engerer Stop. Kommt nur bei etwa der Hälfte der Ausbrüche." },
-  C: { t: "Abpraller", s: "Im Kasten handeln: an der unteren Linie kaufen, an der oberen verkaufen, sobald die Kerze dort abprallt.", p: "Intraday halten Kästen oft länger als gedacht. Ziel ist die andere Seite des Kastens." },
-  D: { t: "Fehlausbruch", s: "Der Kurs bricht aus und schließt innerhalb von 1–3 Kerzen wieder im Kasten. Dann in die Gegenrichtung zur anderen Seite.", p: "Profis sagen: Die meisten Ausbrüche aus Seitwärtsphasen scheitern. Genau die nutzt D." },
+  A: { t: "Ausbruch", s: "Schluss jenseits der Kante, sofort rein.", p: "Schnell dabei, aber voll im Risiko eines Fehlausbruchs." },
+  B: { t: "Retest", s: "Nach dem Ausbruch warten, bis der Kurs zur Kante zurückkommt und dort hält. Erst dann rein.", p: "Besserer Preis, engerer Stop. Kommt nur bei einem Teil der Ausbrüche." },
+  C: { t: "Früher Einstieg", s: "Noch im Muster handeln: beim Rechteck der Abpraller an einer Linie, beim Doppelboden der zweite Boden.", p: "Bester Preis, aber das Muster ist noch nicht bestätigt." },
+  D: { t: "Fehlschlag", s: "Das Muster scheitert: Der Ausbruch kehrt um oder der Boden bricht. Dann in die Gegenrichtung.", p: "Viele Ausbrüche scheitern. Genau die nutzt dieser Einstieg." },
 };
+const ENAME = { Ausbruch: "A", Retest: "B", "früher Einstieg": "C", "Früher Einstieg": "C", Fehlschlag: "D" };
+const eName = (k) => (ENTRY[k] ? ENTRY[k].t : k || "—");
+const tfName = (tf) => (tf >= 1440 ? "Tag" : tf + " Min");
+const isoShort = (s) => { const [y, m, d] = String(s).slice(0, 10).split("-"); return `${d}.${m}.${String(y).slice(2)}`; };
+/* Bilder der Sichtprüfung beschreiben Einstieg und Ausstieg als Objekt; die Seite rechnet intern mit flachen Feldern. */
+function normT(T) {
+  if (!T || T._n) return T;
+  if (T.einstieg && typeof T.einstieg === "object") { const e = T.einstieg; T.einstieg_i = e.i; T.einstieg_p = e.p; T.einstieg_minute = e.minute; T.einstieg = ENAME[T.einstieg_name] || T.einstieg_name || ""; }
+  if (T.ausstieg && typeof T.ausstieg === "object") { const e = T.ausstieg; T.ausstieg_i = e.i; T.ausstieg_p = e.p; T.ausstieg_minute = e.minute; T.ausgang = T.ausgang || e.grund; }
+  T._n = true; return T;
+}
 
 /* ------------------------------------------------------------ Kopf und Kennzahlen */
 function renderHead(st, idx, si) {
@@ -600,13 +704,17 @@ function renderHead(st, idx, si) {
   lt.textContent = (st && st.laeuft ? "läuft: " : "") + phase;
   const n = idx && idx.gruppen ? idx.gruppen.reduce((a, g) => a + (g.anzahl || 0), 0) : null;
   const sv = sichtSummary(si);
+  const art = (si && si.art) || "praezision", mu = (si && si.muster) || "Rechteck";
+  const sichtCell = !sv.total ? ["Sichtprüfung", "—", "Bilder kommen mit dem Lauf"]
+    : art === "trefferquote" ? [`Tage mit ${mu}`, sv.done ? String(sv.ja) : "—", `${sv.done} von ${sv.total} Tagen angesehen`]
+    : art === "verlust" ? ["Verlust-Prüfung", `${sv.done}/${sv.total}`, "Verlust-Trades eingeordnet"]
+    : [art === "einstieg" ? "Einstieg prüfen" : `Sichtprüfung ${mu}`, sv.done ? Math.round((sv.ja / sv.done) * 100) + " % ja" : "—", `${sv.done} von ${sv.total} angesehen`];
+  const lauf = REG && REG.ideen ? REG.ideen.filter((x) => x.status === "läuft").map((x) => x.kurzname) : [];
   const cells = [
-    ["Muster", "Rechteck", "ein Muster, perfekt gemacht"],
-    ["Aktien", "50", "die mit dem meisten Handel"],
-    ["Trades gefunden", n == null ? "—" : n.toLocaleString("de-DE"), n == null ? "kommt mit dem ersten Lauf" : "5 und 15 Min, alle Einstiege"],
-    si && si.art === "trefferquote"
-      ? ["Tage mit Rechteck", sv.done ? String(sv.ja) : "—", sv.total ? `${sv.done} von ${sv.total} Tagen angesehen` : "Trefferquote"]
-      : ["Sichtprüfung", sv.done ? Math.round((sv.ja / sv.done) * 100) + " % ja" : "—", sv.total ? `${sv.done} von ${sv.total} angesehen` : "Bilder kommen mit dem Lauf"],
+    ["Versuche im Register", REG && REG.n_versuche != null ? String(REG.n_versuche) : "—", REG ? "alle gezählt, gegen den Zufall" : "Register folgt"],
+    ["In Arbeit", lauf.length ? lauf.join(", ") : "—", "laut Ideen-Register"],
+    ["Trades gerechnet", n == null ? "—" : n.toLocaleString("de-DE"), n == null ? "kommt mit dem ersten Lauf" : "Rechteck v1, alle Einstiege"],
+    sichtCell,
   ];
   $("strip").innerHTML = cells.map(([k, v, s]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v ${/^\d|—/.test(v) ? "num" : "txt"}">${esc(v)}</div><div class="n">${esc(s)}</div></div>`).join("");
   if (EX) $("exBanner").hidden = false;
@@ -675,7 +783,7 @@ function renderEntries() {
   const box = $("entries");
   for (const k of ["A", "B", "C", "D"]) {
     const c = document.createElement("div"); c.className = "card en";
-    c.innerHTML = `<div class="top"><span class="ltr">${k}</span><h3>${ENTRY[k].t}</h3></div><p>${esc(ENTRY[k].s)}</p><p class="pro">${esc(ENTRY[k].p)}</p>`;
+    c.innerHTML = `<div class="top"><h3>${ENTRY[k].t}</h3></div><p>${esc(ENTRY[k].s)}</p><p class="pro">${esc(ENTRY[k].p)}</p>`;
     c.appendChild(entrySchema(k));
     box.appendChild(c);
   }
@@ -686,26 +794,34 @@ function renderResults(er) {
   const box = $("results");
   const V = er && er.varianten ? er.varianten : [];
   $("resNote").textContent = er && er.stand ? "Stand " + tsDE(er.stand) : "";
-  const rows = [];
-  for (const tf of [15, 5]) for (const k of ["A", "B", "C", "D"]) {
-    const v = V.find((x) => x.zeitebene === tf && x.einstieg === k) || null;
-    const e = v && v.werte && v.werte.entw, p = v && v.werte && v.werte.pruef;
-    const cell = (x, d = 3, cls = "") => `<td class="num ${cls}">${x == null ? "—" : sg(x, d)}</td>`;
-    const tone = (x) => (x == null ? "" : x > 0 ? "up" : "down");
-    const jahr = (j) => (e && e.jahre && e.jahre[j] ? e.jahre[j].ev : null);
-    const urteil = v && v.urteil ? `<span class="chip ${v.urteil_art || ""}">${esc(v.urteil)}</span>` : `<span class="chip">${e ? "offen" : "noch nicht gerechnet"}</span>`;
-    rows.push(`<tr><td>${tf} Min</td><td><b>${k}</b> · ${ENTRY[k].t}</td>
-      <td class="num">${e && e.trades != null ? e.trades.toLocaleString("de-DE") : "—"}</td>
-      ${cell(e && e.ev_vor, 3, tone(e && e.ev_vor))}${cell(e && e.ev, 3, tone(e && e.ev))}${cell(jahr(0), 3, tone(jahr(0)))}${cell(jahr(1), 3, tone(jahr(1)))}
-      <td class="num">${e && e.pf != null ? nf(e.pf, 2) : "—"}</td>
-      ${cell(e && e.noten && e.noten.A && e.noten.A.ev, 3, tone(e && e.noten && e.noten.A && e.noten.A.ev))}${cell(e && e.noten && e.noten.C && e.noten.C.ev, 3)}
-      <td class="num">${e && e.zufall != null ? e.zufall + "/100" : "—"}</td>
-      ${cell(p && p.ev, 3, tone(p && p.ev))}<td>${urteil}</td></tr>`);
-  }
-  box.innerHTML = `<table><thead>
-    <tr class="grp"><th></th><th></th><th colspan="9">Entwicklung Okt. 2021 – Sep. 2023</th><th>Prüfung</th><th></th></tr>
-    <tr><th>Zeitebene</th><th>Einstieg</th><th>Trades</th><th>Ø R vor Kosten</th><th>Ø R nach Kosten</th><th>Jahr 1</th><th>Jahr 2</th><th>PF</th><th>Note A</th><th>Note C</th><th>Zufall</th><th>2024–25</th><th>Urteil</th></tr>
-    </thead><tbody>${rows.join("")}</tbody></table>`;
+  const mName = (v) => v.muster || "Rechteck v1";
+  const muster = [...new Set(V.map(mName))]; if (!muster.length) muster.push("Rechteck v1");
+  const cell = (x, d = 3, cls = "") => `<td class="num ${cls}">${x == null ? "—" : sg(x, d)}</td>`;
+  const tone = (x) => (x == null ? "" : x > 0 ? "up" : "down");
+  box.innerHTML = muster.map((m) => {
+    const VV = V.filter((v) => mName(v) === m);
+    const tfs = VV.length ? [...new Set(VV.map((v) => v.zeitebene))].sort((x, y) => y - x) : [15, 5];
+    const rows = [];
+    for (const tf of tfs) for (const k of ["A", "B", "C", "D"]) {
+      const v = VV.find((x) => x.zeitebene === tf && x.einstieg === k) || null;
+      const e = v && v.werte && v.werte.entw, p = v && v.werte && v.werte.pruef;
+      const jahr = (j) => (e && e.jahre && e.jahre[j] ? e.jahre[j].ev : null);
+      const au = v && (v.ausgaenge || (e && e.ausgaenge));
+      const urteil = v && v.urteil ? `<span class="chip ${v.urteil_art || ""}">${esc(v.urteil)}</span>` : `<span class="chip">${e ? "offen" : "noch nicht gerechnet"}</span>`;
+      rows.push(`<tr><td>${tfName(tf)}</td><td><b>${eName(k)}</b></td>
+        <td class="num">${e && e.trades != null ? e.trades.toLocaleString("de-DE") : "—"}</td>
+        ${cell(e && e.ev_vor, 3, tone(e && e.ev_vor))}${cell(e && e.ev, 3, tone(e && e.ev))}${cell(jahr(0), 3, tone(jahr(0)))}${cell(jahr(1), 3, tone(jahr(1)))}
+        <td class="num">${e && e.pf != null ? nf(e.pf, 2) : "—"}</td>
+        ${cell(e && e.noten && e.noten.A && e.noten.A.ev, 3, tone(e && e.noten && e.noten.A && e.noten.A.ev))}${cell(e && e.noten && e.noten.C && e.noten.C.ev, 3)}
+        <td class="num">${e && e.zufall != null ? e.zufall + "/100" : "—"}</td>
+        <td class="num">${au ? `${au.ziel} · ${au.stop} · ${au.tagesende}` : "—"}</td>
+        ${cell(p && p.ev, 3, tone(p && p.ev))}<td>${urteil}</td></tr>`);
+    }
+    return `<table><thead>
+      <tr class="grp"><th colspan="2">${esc(m)}</th><th colspan="10">Entwicklung (Note A, nach Kosten)</th><th>Prüfung</th><th></th></tr>
+      <tr><th>Zeitebene</th><th>Einstieg</th><th>Trades</th><th>Ø R vor Kosten</th><th>Ø R nach Kosten</th><th>Jahr 1</th><th>Jahr 2</th><th>PF</th><th>Note A</th><th>Note C</th><th>Zufall</th><th>Ziel · Stop · Tagesende</th><th>Prüftopf</th><th>Urteil</th></tr>
+      </thead><tbody>${rows.join("")}</tbody></table>`;
+  }).join("");
 }
 
 /* ------------------------------------------------------------ Diagramm */
@@ -723,7 +839,9 @@ function scales(T, cut, W, H, m) {
 }
 function drawTrade(host, T, mode, big, mine) {
   host.textContent = "";
-  const dayMode = mode === "tag";
+  T = normT(T);
+  const dayMode = mode === "tag", isDay = T.zeitebene >= 1440, kLab = (s) => (isDay ? isoShort(s) : s);
+  const hasLin = Array.isArray(T.linien) && T.linien.length > 0;
   const cut = mode === "aus" || dayMode ? T.kerzen.length - 1 : T.entscheidung;
   const W = big ? Math.max(320, Math.round(host.clientWidth || 640)) : 300;
   const small = big && W < 600;
@@ -736,13 +854,24 @@ function drawTrade(host, T, mode, big, mine) {
     const step = (() => { const raw = (hi - lo) / 5, p = 10 ** Math.floor(Math.log10(raw)); for (const k of [1, 2, 2.5, 5, 10]) if (k * p >= raw) return k * p; return 10 * p; })();
     for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) S("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), style: "stroke:var(--hair-soft);stroke-width:1" }, svg);
   }
-  const hasBox = T.oben != null && T.unten != null && T.box_von != null;
+  const hasBox = !hasLin && T.oben != null && T.unten != null && T.box_von != null;
   const bx0 = hasBox ? X(T.box_von) - slot / 2 : 0, bx1 = hasBox ? X(T.box_bis) + slot / 2 : 0;
   if (hasBox) S("rect", { x: bx0, y: Y(T.oben), width: bx1 - bx0, height: Math.max(1, Y(T.unten) - Y(T.oben)), style: "fill:rgba(var(--accent-rgb),.08)" }, svg);
   if (!dayMode) S("rect", { x: X(T.entscheidung) - slot * 0.6, y: m.t, width: slot * 1.2, height: PH, style: "fill:rgba(var(--accent-rgb),.10)" }, svg);
   const lineEnd = mode === "aus" ? X(T.kerzen.length - 1) : X(T.entscheidung);
   if (hasBox && T.toleranz) for (const p of [T.oben, T.unten]) S("rect", { x: bx0, y: Y(p + T.toleranz), width: Math.max(1, lineEnd - bx0), height: Math.max(1, Y(p - T.toleranz) - Y(p + T.toleranz)), style: "fill:rgba(var(--accent-rgb),.16)" }, svg);
   if (hasBox) for (const p of [T.oben, T.unten]) S("line", { x1: bx0, x2: lineEnd, y1: Y(p), y2: Y(p), style: `stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
+  if (hasLin) for (const L of T.linien) {
+    if (!L || !L.von || !L.bis) continue;
+    const i1 = Math.min(L.bis.i, cut);
+    if (L.art === "form") S("line", { x1: X(L.von.i), x2: X(i1), y1: Y(L.von.p), y2: Y(L.bis.p), style: `stroke:var(--accent);stroke-width:${big ? 1.3 : 1};stroke-dasharray:4 4;opacity:.7` }, svg);
+    else if (L.art === "nacken") S("line", { x1: X(L.von.i), x2: lineEnd, y1: Y(L.von.p), y2: Y(L.von.p), style: `stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
+    else if (L.art === "boden") {
+      const pb = T.unten != null ? T.unten : (L.von.p + L.bis.p) / 2, xa = X(L.von.i) - slot / 2, xb = X(i1) + slot / 2;
+      if (T.toleranz) S("rect", { x: xa, y: Y(pb + T.toleranz), width: Math.max(1, xb - xa), height: Math.max(1, Y(pb - T.toleranz) - Y(pb + T.toleranz)), style: "fill:rgba(var(--accent-rgb),.16)" }, svg);
+      S("line", { x1: xa, x2: xb, y1: Y(pb), y2: Y(pb), style: `stroke:var(--accent);stroke-width:${big ? 1.8 : 1.3}` }, svg);
+    }
+  }
   if (!dayMode) {
     const x0 = X(T.entscheidung), x1 = mode === "aus" ? X(T.kerzen.length - 1) : Math.min(W - m.r, X(T.entscheidung) + slot * 4);
     for (const [p, c] of [[T.ziel, "up"], [T.stop, "down"]]) if (p != null) S("line", { x1: x0, x2: x1, y1: Y(p), y2: Y(p), style: `stroke:var(--${c});stroke-width:${big ? 1.5 : 1.2};stroke-dasharray:5 4` }, svg);
@@ -763,8 +892,13 @@ function drawTrade(host, T, mode, big, mine) {
     else if (d.t === "r") { const x0 = X(Math.min(d.a.i, d.b.i)), x1 = X(Math.max(d.a.i, d.b.i)), y0 = Y(Math.min(hi, Math.max(d.a.p, d.b.p))), y1 = Y(Math.max(lo, Math.min(d.a.p, d.b.p))); S("rect", { x: x0, y: y0, width: Math.max(1, x1 - x0), height: Math.max(1, y1 - y0), style: st + ";fill:var(--tv-draw-c,#ff9800);fill-opacity:.13" }, svg); }
     else if (inr(d.a.p) && inr(d.b.p)) S("line", { x1: X(d.a.i), x2: X(d.b.i), y1: Y(d.a.p), y2: Y(d.b.p), style: st }, svg);
   }
+  if (big) for (const [ii, txt] of [[T.ausbruch_i, "Ausbruch"], [T.retest_i, "Retest"]]) if (ii != null && ii <= cut) {
+    const y = Y(T.kerzen[ii][2]) - 6;
+    S("line", { x1: X(ii), x2: X(ii), y1: y, y2: y - 8, style: "stroke:var(--ink-3);stroke-width:1" }, svg);
+    const e = S("text", { x: X(ii), y: y - 12, "text-anchor": "middle", class: "lab" }, svg); e.textContent = txt;
+  }
   if (!big) return;
-  const labs = [[T.ziel, "Ziel", "up"], [T.oben, "Oben", "accent"], [T.unten, "Unten", "accent"], [T.stop, "Stop", "down"]].filter((x) => x[0] != null).map(([p, t, c]) => ({ p, t, c, y: Y(p) })).sort((a, b) => a.y - b.y);
+  const labs = [[T.ziel, "Ziel", "up"], [T.oben, hasLin ? "Nacken" : "Oben", "accent"], [T.unten, hasLin ? "Boden" : "Unten", "accent"], [T.stop, "Stop", "down"]].filter((x) => x[0] != null).map(([p, t, c]) => ({ p, t, c, y: Y(p) })).sort((a, b) => a.y - b.y);
   for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + 26);
   const lx = W - m.r + 8;
   for (const l of labs) {
@@ -774,7 +908,7 @@ function drawTrade(host, T, mode, big, mine) {
   }
   const vt = m.t + PH + GAP, vmax = Math.max(1, ...K.map((k) => k[5] || 0));
   K.forEach((k, i) => { const h = ((k[5] || 0) / vmax) * VH; S("rect", { x: X(i) - cw / 2, y: vt + VH - h, width: cw, height: Math.max(0.5, h), style: `fill:${i === T.entscheidung && !dayMode ? "var(--accent)" : "var(--hair)"}` }, svg); });
-  for (const [i, t] of [[0, K[0][0]], [Math.floor(K.length / 2), K[Math.floor(K.length / 2)][0]], [K.length - 1, K[K.length - 1][0]]]) {
+  for (const [i, t] of [[0, kLab(K[0][0])], [Math.floor(K.length / 2), kLab(K[Math.floor(K.length / 2)][0])], [K.length - 1, kLab(K[K.length - 1][0])]]) {
     const e = S("text", { x: X(i), y: H - 6, "text-anchor": i === 0 ? "start" : i === K.length - 1 ? "end" : "middle" }, svg); e.textContent = t;
   }
   const xh = S("line", { y1: m.t, y2: vt + VH, style: "stroke:var(--ink-3);stroke-width:1", visibility: "hidden" }, svg);
@@ -784,7 +918,7 @@ function drawTrade(host, T, mode, big, mine) {
     let i = Math.round((cx - m.l) / slot - 0.5); i = Math.max(0, Math.min(K.length - 1, i));
     const k = K[i]; xh.setAttribute("x1", X(i)); xh.setAttribute("x2", X(i)); xh.setAttribute("visibility", "visible");
     const t = tip();
-    t.innerHTML = `<h4>${esc(dayDE(T.tag))} ${esc(k[0])} New York</h4>` + [["Eröffnung", k[1]], ["Hoch", k[2]], ["Tief", k[3]], ["Schluss", k[4]]].map(([a, v]) => `<div>${a}<b>${nf(v)}</b></div>`).join("") + `<div>Volumen<b>${(k[5] || 0).toLocaleString("de-DE")}</b></div>`;
+    t.innerHTML = `<h4>${isDay ? esc(dayDE(k[0])) : `${esc(dayDE(T.tag))} ${esc(k[0])} New York`}</h4>` + [["Eröffnung", k[1]], ["Hoch", k[2]], ["Tief", k[3]], ["Schluss", k[4]]].map(([a, v]) => `<div>${a}<b>${nf(v)}</b></div>`).join("") + `<div>Volumen<b>${(k[5] || 0).toLocaleString("de-DE")}</b></div>`;
     t.hidden = false; const w = t.offsetWidth;
     t.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, e.clientX)) + "px"; t.style.top = Math.max(t.offsetHeight + 16, r.top + Y(k[2]) * (r.width / W)) + "px";
   };
@@ -793,7 +927,7 @@ function drawTrade(host, T, mode, big, mine) {
 }
 
 /* ------------------------------------------------------------ Trades */
-const F = { tf: "15", en: "A", res: "alle", note: "alle", view: "moment" };
+const F = { tf: "15", en: "A", res: "alle", aus: "alle", note: "alle", view: "moment" };
 let IDX = null, LOADED = {}, SHOWN = 60, CUR = null, GLIST = [];
 function seg(id, key, cb) {
   for (const b of $(id).querySelectorAll("button")) b.addEventListener("click", () => {
@@ -812,7 +946,7 @@ async function groupTrades() {
 async function renderGallery(reset) {
   if (reset) SHOWN = 60;
   const all = await groupTrades();
-  const list = all.filter((t) => (F.res === "plus" ? t.r > 0 : F.res === "minus" ? t.r <= 0 : true) && (F.note === "alle" ? true : t.note === F.note));
+  const list = all.filter((t) => (F.res === "plus" ? t.r > 0 : F.res === "minus" ? t.r <= 0 : true) && (F.note === "alle" ? true : t.note === F.note) && (F.aus === "alle" ? true : t.ausgang === F.aus));
   GLIST = list;
   $("trNote").textContent = IDX ? `${list.length.toLocaleString("de-DE")} Trades in dieser Auswahl` : "";
   const gal = $("gallery"); gal.textContent = "";
@@ -823,11 +957,11 @@ async function renderGallery(reset) {
   for (const t of list.slice(0, SHOWN)) {
     const b = document.createElement("button"); b.type = "button"; b.className = "tile"; b.dataset.id = t.id;
     b.setAttribute("aria-pressed", String(CUR && CUR.id === t.id));
-    b.setAttribute("aria-label", `${t.symbol} ${t.richtung}, ${dayDE(t.tag)}, Note ${t.note}, ${sg(t.r)} R. Groß öffnen`);
+    b.setAttribute("aria-label", `${t.symbol} ${t.richtung}, ${dayDE(t.tag)}, ${eName(t.einstieg)}, Note ${t.note}, ${sg(t.r)} R, Ausgang ${ausgang(t.ausgang)}. Groß öffnen`);
     const holder = document.createElement("div"); drawTrade(holder, t, F.view, false);
     b.appendChild(holder.firstChild);
     b.insertAdjacentHTML("beforeend", `<div class="r1"><span>${esc(t.symbol)} · ${t.richtung === "long" ? "long" : "short"}</span><span class="mono ${t.r > 0 ? "up" : "down"}">${F.view === "aus" ? sg(t.r) + " R" : "Note " + esc(t.note)}</span></div>
-      <div class="r2"><span>${esc(dayDE(t.tag))} · ${esc(t.kerzen[t.entscheidung][0])}</span><span>${F.view === "aus" ? esc(ausgang(t.ausgang)) : "Stufe 3"}</span></div>`);
+      <div class="r2"><span>${esc(dayDE(t.tag))} · ${esc(t.kerzen[t.entscheidung][0])}</span><span>${esc(ausgang(t.ausgang))}</span></div>`);
     b.addEventListener("click", () => openTrade(t));
     gal.appendChild(b);
   }
@@ -837,7 +971,7 @@ const ausgang = (a) => ({ ziel: "Ziel", stop: "Stop", tagesende: "Tagesende" }[a
 function openTrade(t, quiet) {
   CUR = t; $("detail").hidden = false;
   $("dTitle").textContent = `${t.symbol} · Rechteck ${t.richtung} · ${dayDE(t.tag)}`;
-  const chips = [`<span class="chip run">Einstieg ${esc(t.einstieg)} · ${esc(ENTRY[t.einstieg].t)}</span>`, `<span class="chip">${t.zeitebene} Min</span>`, `<span class="chip ${t.note === "A" ? "good" : t.note === "C" ? "bad" : "part"}">Note ${esc(t.note)}</span>`];
+  const chips = [`<span class="chip run">${esc(eName(t.einstieg))}</span>`, `<span class="chip">${tfName(t.zeitebene)}</span>`, `<span class="chip ${t.note === "A" ? "good" : t.note === "C" ? "bad" : "part"}">Note ${esc(t.note)}</span>`];
   if (F.view === "aus") chips.push(`<span class="chip ${t.r > 0 ? "good" : "bad"}">${sg(t.r)} R · ${esc(ausgang(t.ausgang))}</span>`);
   $("dChips").innerHTML = chips.join(" ");
   drawTrade($("dChart"), t, F.view, true);
@@ -860,63 +994,98 @@ const ssave = (o) => { try { localStorage.setItem(SKEY, JSON.stringify(o)); } ca
 let SI = null, SANS = sload();
 function sichtSummary(si) {
   const B = (si && si.bilder) || [], A = (si && si.id && SANS[si.id]) || {};
-  let ja = 0, nein = 0, un = 0; for (const b of B) { const v = A[b.id]; if (v === "ja") ja++; else if (v === "nein") nein++; else if (v === "unsicher") un++; }
-  return { total: B.length, ja, nein, un, done: ja + nein + un };
+  let ja = 0, nein = 0, un = 0, done = 0; const cnt = {};
+  for (const b of B) { const v = A[b.id]; if (!v) continue; done++; cnt[v] = (cnt[v] || 0) + 1; if (v === "ja") ja++; else if (v === "nein") nein++; else if (v === "unsicher") un++; }
+  return { total: B.length, ja, nein, un, done, cnt };
 }
 let SPOS = null, SRESET = false;
 const ICON_ZOOM = '<svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>';
-const SLEAD = {
-  praezision: "Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen, das Bild endet an der Signalkerze, ohne Ausgang. Gerechnet wird erst, wenn mindestens 80 % „ja“ sind. Groß geöffnet kannst du zoomen und selbst Linien einzeichnen.",
-  trefferquote: "Hier siehst du ganze Handelstage, ohne die Linien des Bots. Sag, ob du an diesem Tag ein sauberes Rechteck siehst. Öffne das Bild groß und zeichne das Rechteck ein, dann wissen wir genau, welches du meinst. „Nein“ ist hier eine normale Antwort, es gibt keine Grenze.",
-};
-function sichtText(B, A, sm, TQ) {
-  const ids = (v) => B.filter((b) => A[b.id] === v).map((b) => b.id);
-  if (!TQ) {
-    let t = `Sichtprüfung ${SI.muster || "Rechteck"} (${SI.id}): ${sm.total} Bilder, ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un} → ${Math.round((sm.ja / sm.total) * 100)} % ja.`;
-    if (ids("nein").length) t += `\nNein: ${ids("nein").join(", ")}`;
-    if (ids("unsicher").length) t += `\nUnsicher: ${ids("unsicher").join(", ")}`;
+const sichtArt = () => (SI && SI.art) || "praezision";
+const sichtMode = (art) => (art === "trefferquote" ? "tag" : art === "verlust" ? "aus" : "moment");
+const antwortText = (v) => { const o = ((SI && SI.optionen) || []).find((x) => x.key === v); return o ? o.text : v; };
+function slead(art, m) {
+  if (art === "trefferquote") return `Hier siehst du ganze Handelstage, ohne die Linien des Bots. Sag, ob du an diesem Tag ein sauberes ${m} siehst. Öffne das Bild groß und zeichne es ein, dann wissen wir genau, welches du meinst. „Nein“ ist hier eine normale Antwort, es gibt keine Grenze.`;
+  if (art === "einstieg") return "Hier prüfst du die Einstiege selbst. Du siehst den Trade im Moment des Einstiegs mit Einstieg, Stop und Ziel, darunter die Regel. Sag, ob der Einstieg nach dieser Regel richtig gesetzt ist. Ob der Trade gewonnen hat, spielt hier keine Rolle.";
+  if (art === "verlust") return "Hier siehst du Trades, die verloren haben, mit ihrem Ausgang. Tippe an, warum es schiefging. Danach vergleichen wir dein Auge mit der Zuordnung des Bots.";
+  return `Dein Auge ist der Maßstab. Du siehst zufällige Erkennungen des Bots, das Bild endet an der Signalkerze, ohne Ausgang. Weiter geht es erst, wenn mindestens 80 % „ja“ sind. Groß geöffnet kannst du zoomen und selbst Linien einzeichnen.`;
+}
+const spyMove = (b) => { const Q = b.spy_schluss; if (!Q || b.einstieg_i == null || b.ausstieg_i == null) return null; const a = Q[Math.min(b.einstieg_i, Q.length - 1)], z = Q[Math.min(b.ausstieg_i, Q.length - 1)]; return a && z ? ((z - a) / a) * 100 : null; };
+function sichtInfo(b, art) {
+  const tf = tfName(b.zeitebene), datum = esc(dayDE(b.tag)), wer = `${esc(b.einstieg_name || eName(b.einstieg))} ${b.richtung === "short" ? "short" : "long"}`;
+  if (art === "einstieg") {
+    const sr = b.stop_regel != null && Math.abs(b.stop_regel - b.stop) > 1e-9 ? ` (nach Regel ${nf(b.stop_regel)}, auf den Mindest-Stop aufgeweitet)` : "";
+    return `<div class="dim">${esc(b.symbol)} · ${datum} · ${tf} · ${wer}</div>
+      <div class="facts1">Einstieg <b>${nf(b.einstieg_p)}</b>${b.einstieg_minute ? ` um ${esc(b.einstieg_minute)}` : ""} · Stop <b>${nf(b.stop)}</b>${sr} · Ziel <b>${nf(b.ziel)}</b></div>
+      ${b.regel ? `<div class="regel"><b>Regel:</b> ${esc(b.regel)}</div>` : ""}`;
+  }
+  if (art === "verlust") {
+    const spy = spyMove(b);
+    return `<div class="dim">${esc(b.symbol)} · ${datum} · ${tf} · ${wer}</div>
+      <div class="facts1">Ergebnis <b class="${b.r > 0 ? "up" : "down"}">${sg(b.r)} R</b> · Ausgang <b>${esc(ausgang(b.ausgang))}</b>${b.ausstieg_minute ? ` um ${esc(b.ausstieg_minute)}` : ""}${spy != null ? ` · SPY vom Einstieg bis zum Ausstieg <b>${sg(spy, 2)} %</b>` : ""}</div>`;
+  }
+  return `<div class="dim">${esc(b.symbol)} · ${datum} · ${tf} · ${art === "trefferquote" ? "ohne die Linien des Bots" : "das Bild endet an der Signalkerze"}</div>`;
+}
+function sichtButtons(art, cur, keys) {
+  if (SI && SI.optionen && SI.optionen.length) return SI.optionen.map((o, j) => `<button type="button" class="btn mid" data-a="${esc(o.key)}" aria-pressed="${cur === o.key}">${esc(o.text)}${keys && j < 9 ? ` <kbd>${j + 1}</kbd>` : ""}</button>`).join("");
+  const k = (x) => (keys ? ` <kbd>${x}</kbd>` : "");
+  const ja = art === "einstieg" ? "Ja, richtig" : art === "trefferquote" ? `Ja, ${(SI && SI.muster) || "Rechteck"}` : "Ja, sauber";
+  return `<button type="button" class="btn ok" data-a="ja" aria-pressed="${cur === "ja"}">${esc(ja)}${k("J")}</button><button type="button" class="btn no" data-a="nein" aria-pressed="${cur === "nein"}">Nein${k("N")}</button><button type="button" class="btn mid" data-a="unsicher" aria-pressed="${cur === "unsicher"}">Unsicher${k("U")}</button>`;
+}
+function sichtText(B, A, sm, art) {
+  const ids = (v) => B.filter((b) => A[b.id] === v).map((b) => b.id), m = SI.muster || "Rechteck";
+  if (art === "verlust") {
+    let t = `Verlust-Prüfung ${m} (${SI.id}): ${sm.total} Trades.`;
+    for (const o of SI.optionen || []) { const L = ids(o.key); if (L.length) t += `\n${o.text}: ${L.length} (${L.join(", ")})`; }
     return t;
   }
-  let t = `Trefferquote ${SI.muster || "Rechteck"} (${SI.id}): ${sm.total} Tage, Rechteck ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un}.`;
-  if (ids("ja").length) t += `\nJa: ${ids("ja").join(", ")}`;
+  if (art === "trefferquote") {
+    let t = `Trefferquote ${m} (${SI.id}): ${sm.total} Tage, ${m} ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un}.`;
+    if (ids("ja").length) t += `\nJa: ${ids("ja").join(", ")}`;
+    if (ids("unsicher").length) t += `\nUnsicher: ${ids("unsicher").join(", ")}`;
+    const L = [];
+    for (const b of B) { const D = DRAW[SI.id + "/" + b.id] || []; if (D.length && A[b.id] !== "nein") L.push(`${b.id}: ${D.map((d) => beschreibe(d, b)).join("; ")}`); }
+    if (L.length) t += `\nEingezeichnet:\n${L.join("\n")}`;
+    return t;
+  }
+  let t = `${art === "einstieg" ? "Einstieg prüfen" : "Sichtprüfung"} ${m} (${SI.id}): ${sm.total} Bilder, ja ${sm.ja}, nein ${sm.nein}, unsicher ${sm.un} → ${Math.round((sm.ja / sm.total) * 100)} % ja.`;
+  if (ids("nein").length) t += `\nNein: ${ids("nein").join(", ")}`;
   if (ids("unsicher").length) t += `\nUnsicher: ${ids("unsicher").join(", ")}`;
-  const L = [];
-  for (const b of B) { const D = DRAW[SI.id + "/" + b.id] || []; if (D.length && A[b.id] !== "nein") L.push(`${b.id}: ${D.map((d) => beschreibe(d, b)).join("; ")}`); }
-  if (L.length) t += `\nEingezeichnet:\n${L.join("\n")}`;
   return t;
 }
 function renderSicht() {
-  const box = $("sichtBox"), B = (SI && SI.bilder) || [], TQ = !!(SI && SI.art === "trefferquote");
-  $("siLead").textContent = TQ ? SLEAD.trefferquote : SLEAD.praezision;
-  if (!B.length) { box.innerHTML = `<div class="void"><b>Noch keine Bilder</b>Die Sichtprüfung startet mit der strengen Erkennung. Dann siehst du hier 30 zufällige Rechtecke.</div>`; $("siNote").textContent = ""; return; }
+  const box = $("sichtBox"), B = (SI && SI.bilder) || [], art = sichtArt(), m = (SI && SI.muster) || "Rechteck";
+  $("siLead").textContent = slead(art, m);
+  if (!B.length) { box.innerHTML = `<div class="void"><b>Noch keine Bilder</b>Die nächste Sichtprüfung erscheint hier, sobald sie vorbereitet ist.</div>`; $("siNote").textContent = ""; return; }
   const A = SANS[SI.id] || (SANS[SI.id] = {}), sm = sichtSummary(SI);
-  $("siNote").textContent = TQ ? `${sm.done} von ${sm.total} · ${sm.ja} mit Rechteck` : `${sm.done} von ${sm.total} · ${sm.done ? Math.round((sm.ja / sm.done) * 100) : 0} % ja`;
+  $("siNote").textContent = art === "trefferquote" ? `${sm.done} von ${sm.total} · ${sm.ja} mit ${m}` : art === "verlust" ? `${sm.done} von ${sm.total} eingeordnet` : `${sm.done} von ${sm.total} · ${sm.done ? Math.round((sm.ja / sm.done) * 100) : 0} % ja`;
   const nextAfter = (i) => { for (let k = 1; k <= B.length; k++) { const j = (i + k) % B.length; if (!A[B[j].id]) return j; } return -1; };
   const i = SPOS != null && SPOS >= 0 && SPOS < B.length ? SPOS : B.findIndex((b) => !A[b.id]);
   const foot = SRESET
     ? `<div class="sfoot"><span>Alle Antworten und Zeichnungen dieser Runde löschen?</span><button type="button" class="linkbtn warn" id="sResetYes">Ja, alles löschen</button><button type="button" class="linkbtn" id="sResetNo">Abbrechen</button></div>`
     : `<div class="sfoot"><button type="button" class="linkbtn" id="sReset">Runde neu beginnen</button></div>`;
   if (i < 0) {
-    const txt = sichtText(B, A, sm, TQ);
-    const head = TQ ? `Fertig: An ${sm.ja} von ${sm.total} Tagen siehst du ein Rechteck` : `Fertig: ${Math.round((sm.ja / sm.total) * 100)} % „ja“`;
+    const txt = sichtText(B, A, sm, art);
+    const head = art === "trefferquote" ? `Fertig: An ${sm.ja} von ${sm.total} Tagen siehst du ein ${m}` : art === "verlust" ? `Fertig: alle ${sm.total} Verlust-Trades eingeordnet` : `Fertig: ${Math.round((sm.ja / sm.total) * 100)} % „ja“`;
     box.innerHTML = `<div class="q">${esc(head)}</div><p class="dim">Kopiere das Ergebnis und schick es im Chat oder an VS Code. Es wird dort ins Logbuch übernommen.</p><pre class="out" id="sOut">${esc(txt)}</pre>
       <div class="btns"><button type="button" class="btn" id="sCopy">Ergebnis kopieren</button><button type="button" class="btn mid" id="sEdit">Antworten ansehen und ändern</button></div>${foot}`;
     $("sCopy").addEventListener("click", () => { const done = () => ($("sCopy").textContent = "Kopiert"); try { navigator.clipboard.writeText(txt).then(done, () => sel()); } catch (e) { sel(); } function sel() { const r = document.createRange(); r.selectNodeContents($("sOut")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } });
     $("sEdit").addEventListener("click", () => { SPOS = 0; renderSicht(); });
   } else {
-    const b = B[i], cur = A[b.id], mine = DRAW[SI.id + "/" + b.id] || [];
-    const nav = (i > 0 ? `<button type="button" class="btn mid" id="sPrev">‹ Zurück</button>` : "") + (cur && i < B.length - 1 ? `<button type="button" class="btn mid" id="sNext">Weiter ›</button>` : "");
+    const b = normT(B[i]), cur = A[b.id], mine = DRAW[SI.id + "/" + b.id] || [];
+    const nav = (i > 0 ? `<button type="button" class="btn mid" id="sPrev">‹ Zurück</button>` : "") + (cur && i < B.length - 1 ? `<button type="button" class="btn mid" id="sNext">Weiter ›</button>` : "") + (sm.done === sm.total ? `<button type="button" class="btn" id="sDone">Zum Ergebnis</button>` : "");
     box.innerHTML = `<div class="sbar"><i style="width:${(sm.done / sm.total) * 100}%"></i></div>
       <div class="q">Bild ${i + 1} von ${B.length}: ${esc(SI.frage || "Ist das ein sauberes Rechteck?")}</div>
-      <div class="dim">${esc(b.symbol)} · ${esc(dayDE(b.tag))} · ${b.zeitebene} Min · ${TQ ? "ganzer Tag, ohne die Linien des Bots" : "das Bild endet an der Signalkerze"}${cur ? ` · deine Antwort: ${esc(cur)}` : ""}</div>
+      ${sichtInfo(b, art)}
+      ${cur ? `<div class="dim">Deine Antwort: ${esc(antwortText(cur))}</div>` : ""}
       ${mine.length ? `<div class="mine">Deine Zeichnung: <b>${esc(mine.map((d) => beschreibe(d, b)).join("; "))}</b></div>` : ""}
       <div class="zoomwrap"><div class="chart" id="sChart"></div><button type="button" class="zoombtn" id="sZoom">${ICON_ZOOM}Groß öffnen und zeichnen</button></div>
-      <div class="btns">${nav}<button type="button" class="btn ok" data-a="ja" aria-pressed="${cur === "ja"}">${TQ ? "Ja, Rechteck" : "Ja, sauber"}</button><button type="button" class="btn no" data-a="nein" aria-pressed="${cur === "nein"}">Nein</button><button type="button" class="btn mid" data-a="unsicher" aria-pressed="${cur === "unsicher"}">Unsicher</button></div>${foot}`;
-    drawTrade($("sChart"), b, TQ ? "tag" : "moment", true, mine);
+      <div class="btns">${nav}${sichtButtons(art, cur, false)}</div>${foot}`;
+    drawTrade($("sChart"), b, sichtMode(art), true, mine);
     $("sChart").addEventListener("click", () => tvOpen("sicht", B, i));
     $("sZoom").addEventListener("click", (e) => { e.stopPropagation(); tvOpen("sicht", B, i); });
     if ($("sPrev")) $("sPrev").addEventListener("click", () => { SPOS = i - 1; renderSicht(); });
     if ($("sNext")) $("sNext").addEventListener("click", () => { SPOS = i + 1; renderSicht(); });
+    if ($("sDone")) $("sDone").addEventListener("click", () => { SPOS = null; renderSicht(); });
     for (const x of box.querySelectorAll("[data-a]")) x.addEventListener("click", () => {
       A[b.id] = x.dataset.a; ssave(SANS);
       const n = nextAfter(i); SPOS = n >= 0 ? null : i + 1 < B.length && SPOS != null ? i + 1 : null;
@@ -931,6 +1100,7 @@ function renderSicht() {
     dsave(); SPOS = null; SRESET = false; renderSicht(); renderHeadAgain();
   });
 }
+
 /* ------------------------------------------------------------ Kerzenfarben (Chart-Fenster und kleine Bilder) */
 const CKEY = "lernhub-chart-v1";
 const CPRESET = {
@@ -992,8 +1162,9 @@ function lwc() {
   });
   return lwcP;
 }
-const ZT = (tag, hm) => { const [y, m, d] = String(tag || "2000-01-01").slice(0, 10).split("-").map(Number); const [h, mi] = String(hm).split(":").map(Number); return Date.UTC(y, (m || 1) - 1, d || 1, h || 0, mi || 0) / 1000; };
+const ZT = (tag, hm) => { if (/^\d{4}-\d{2}-\d{2}/.test(String(hm))) { const [y2, m2, d2] = String(hm).slice(0, 10).split("-").map(Number); return Date.UTC(y2, m2 - 1, d2) / 1000; } const [y, m, d] = String(tag || "2000-01-01").slice(0, 10).split("-").map(Number); const [h, mi] = String(hm).split(":").map(Number); return Date.UTC(y, (m || 1) - 1, d || 1, h || 0, mi || 0) / 1000; };
 const HM = (t) => new Date(Number(t) * 1000).toISOString().slice(11, 16);
+const TF = (t) => (V.T && V.T.zeitebene >= 1440 ? isoShort(new Date(Number(t) * 1000).toISOString()) : HM(t));
 const vol = (v) => (v == null ? "—" : v >= 1e6 ? nf(v / 1e6, 2) + " Mio" : v >= 1e3 ? nf(v / 1e3, 1) + " Tsd" : String(v));
 const V = { open: false, LC: null, chart: null, cs: null, vs: null, kind: "", items: [], idx: 0, mode: "moment", tag: false, T: null, cut: 0, key: "",
   tool: "cursor", sel: null, op: null, hist: [], bot: true, sig: "", raf: 0, dirty: true, opener: null, pushed: false, tIdx: new Map(), ref: [0, 1], set: false };
@@ -1005,8 +1176,8 @@ function tvOpts() {
     grid: { vertLines: { color: th.grid, visible: CS.raster }, horzLines: { color: th.grid, visible: CS.raster } },
     crosshair: { mode: LC.CrosshairMode.Normal, vertLine: { color: th.cross, labelBackgroundColor: th.label, width: 1, style: LC.LineStyle.Dashed }, horzLine: { color: th.cross, labelBackgroundColor: th.label, width: 1, style: LC.LineStyle.Dashed } },
     rightPriceScale: { borderColor: th.line, scaleMargins: { top: 0.1, bottom: CS.volumen ? 0.22 : 0.08 } },
-    timeScale: { borderColor: th.line, timeVisible: true, secondsVisible: false, rightOffset: 4, tickMarkFormatter: (t) => HM(t) },
-    localization: { locale: "de-DE", priceFormatter: (p) => nf(p), timeFormatter: (t) => HM(t) },
+    timeScale: { borderColor: th.line, timeVisible: true, secondsVisible: false, rightOffset: 4, tickMarkFormatter: (t) => TF(t) },
+    localization: { locale: "de-DE", priceFormatter: (p) => nf(p), timeFormatter: (t) => TF(t) },
   };
 }
 function candleOpts() {
@@ -1068,8 +1239,8 @@ function tvClose(fromPop) {
 addEventListener("popstate", () => { if (V.open) { V.pushed = false; tvClose(true); } });
 
 function tvShow(i) {
-  V.idx = i; V.T = V.items[i]; const T = V.T;
-  V.mode = V.kind === "sicht" ? (V.tag ? "tag" : "moment") : F.view;
+  V.idx = i; V.T = normT(V.items[i]); const T = V.T;
+  V.mode = V.kind === "sicht" ? sichtMode(sichtArt()) : F.view;
   V.cut = V.mode === "aus" || V.mode === "tag" ? T.kerzen.length - 1 : T.entscheidung;
   V.key = (V.kind === "sicht" ? SI.id : "trade") + "/" + T.id;
   V.sel = null; V.op = null; V.hist = [];
@@ -1078,12 +1249,14 @@ function tvShow(i) {
 function tvHead() {
   const T = V.T;
   $("tvTitle").textContent = T.symbol;
-  $("tvTf").textContent = T.zeitebene + " Min";
-  const sub = [dayDE(T.tag)];
-  if (V.kind === "trade") sub.push(`Einstieg ${T.einstieg} · ${ENTRY[T.einstieg] ? ENTRY[T.einstieg].t : ""}`, `Note ${T.note}`, T.richtung === "long" ? "long" : "short");
-  else sub.push(V.tag ? "ganzer Tag, ohne die Linien des Bots" : "bis zur Signalkerze");
+  $("tvTf").textContent = tfName(T.zeitebene);
+  const sub = [dayDE(T.tag)], art = sichtArt(), wer = `${T.einstieg_name || eName(T.einstieg)} ${T.richtung === "short" ? "short" : "long"}`;
+  if (V.kind === "trade") sub.push(eName(T.einstieg), `Note ${T.note}`, T.richtung === "long" ? "long" : "short");
+  else if (art === "einstieg") sub.push(wer, "Bild im Moment des Einstiegs");
+  else if (art === "verlust") sub.push(wer, `${sg(T.r)} R`, `Ausgang ${ausgang(T.ausgang)}`);
+  else sub.push(V.tag ? "ohne die Linien des Bots" : "bis zur Signalkerze");
   $("tvSub").textContent = sub.join(" · ");
-  const hasBox = T.oben != null && T.unten != null;
+  const hasBox = (T.oben != null && T.unten != null) || Array.isArray(T.linien);
   $("tvBotBtn").hidden = V.tag || !hasBox;
   $("tvBotBtn").setAttribute("aria-pressed", String(V.bot));
   $("tvVol").setAttribute("aria-pressed", String(CS.volumen));
@@ -1095,11 +1268,13 @@ function tvLegend(param) {
   let i = d ? V.tIdx.get(d.time) : V.cut; if (i == null) i = V.cut;
   const k = V.T.kerzen[i], prev = i > 0 ? V.T.kerzen[i - 1][4] : k[1], ch = k[4] - prev, f = kerzenFarben();
   const cc = k[4] >= k[1] ? f.upBody : f.downBody;
-  const o = `<div class="o"><span>${esc(k[0])}</span><span>E <b style="color:${cc}">${nf(k[1])}</b></span><span>H <b style="color:${cc}">${nf(k[2])}</b></span><span>T <b style="color:${cc}">${nf(k[3])}</b></span><span>S <b style="color:${cc}">${nf(k[4])}</b></span><span style="color:${ch >= 0 ? f.upBody : f.downBody}">${sg(ch)} (${sg(prev ? (ch / prev) * 100 : 0)} %)</span><span>Vol <b>${vol(k[5])}</b></span></div>`;
+  const o = `<div class="o"><span>${esc(V.T.zeitebene >= 1440 ? dayDE(k[0]) : k[0])}</span><span>E <b style="color:${cc}">${nf(k[1])}</b></span><span>H <b style="color:${cc}">${nf(k[2])}</b></span><span>T <b style="color:${cc}">${nf(k[3])}</b></span><span>S <b style="color:${cc}">${nf(k[4])}</b></span><span style="color:${ch >= 0 ? f.upBody : f.downBody}">${sg(ch)} (${sg(prev ? (ch / prev) * 100 : 0)} %)</span><span class="v">Vol <b>${vol(k[5])}</b></span></div>`;
   const keys = [];
   if (V.bot && !V.tag && V.T.oben != null) keys.push(`<span><i style="--c:${cssv("--accent") || "#0a6bff"}"></i>Linien des Bots</span>`);
   if ((DRAW[V.key] || []).length) keys.push(`<span><i style="--c:${CS.zeichnung}"></i>Deine Zeichnungen</span>`);
-  $("tvLeg").innerHTML = o + (keys.length ? `<div class="k">${keys.join("")}</div>` : "");
+  const spy = V.kind === "sicht" && sichtArt() === "verlust" ? spyMove(V.T) : null;
+  if (spy != null) keys.push(`<span>SPY im Trade ${sg(spy, 2)} %</span>`);
+  $("tvLeg").innerHTML = o + (keys.length ? `<div class="lk">${keys.join("")}</div>` : "");
 }
 
 /* Antwort-Leiste unten */
@@ -1107,13 +1282,12 @@ function tvBar() {
   const bar = $("tvBar"), T = V.T;
   if (V.kind === "sicht") {
     const B = SI.bilder, A = SANS[SI.id] || (SANS[SI.id] = {}), cur = A[T.id], sm = sichtSummary(SI);
-    bar.innerHTML = `<div class="tv-q"><b>Bild ${V.idx + 1} von ${B.length}</b><span>${esc(SI.frage || "Ist das ein sauberes Rechteck?")}</span></div>
-      <div class="tv-ans">
+    const art = sichtArt(), opts = !!(SI.optionen && SI.optionen.length);
+    bar.innerHTML = `<div class="tv-q"><b>Bild ${V.idx + 1} von ${B.length}</b><span>${esc(SI.frage || "Ist das ein sauberes Rechteck?")}</span>${art === "einstieg" && T.regel ? `<div class="tv-regel" title="${esc(T.regel)}">Regel: ${esc(T.regel)}</div>` : ""}</div>
+      <div class="tv-ans${opts ? " opts" : ""}">
         <button type="button" class="btn mid nav" id="tvPrev" aria-label="Zurück"${V.idx === 0 ? " disabled" : ""}>‹<span class="lg">&nbsp;Zurück</span></button>
         <button type="button" class="btn mid nav" id="tvNext" aria-label="Weiter"${V.idx >= B.length - 1 ? " disabled" : ""}><span class="lg">Weiter&nbsp;</span>›</button>
-        <button type="button" class="btn ok" data-a="ja" aria-pressed="${cur === "ja"}">${V.tag ? "Ja, Rechteck" : "Ja, sauber"} <kbd>J</kbd></button>
-        <button type="button" class="btn no" data-a="nein" aria-pressed="${cur === "nein"}">Nein <kbd>N</kbd></button>
-        <button type="button" class="btn mid" data-a="unsicher" aria-pressed="${cur === "unsicher"}">Unsicher <kbd>U</kbd></button>
+        ${sichtButtons(art, cur, true)}
       </div>
       <div class="tv-prog">${sm.done} von ${sm.total} beantwortet</div>`;
     $("tvPrev").addEventListener("click", () => { if (V.idx > 0) tvShow(V.idx - 1); });
@@ -1296,7 +1470,29 @@ function tvBotLayer(g, lab, X, Y, ph) {
   const slot = Math.abs((X(1) || 0) - (X(0) || 0)) || 6;
   const xe = X(T.entscheidung);
   if (V.mode !== "tag" && xe != null) S("rect", { x: xe - slot / 2, y: 0, width: slot, height: ph, fill: rgba(acc, 0.1) }, g);
-  if (T.oben != null && T.unten != null && T.box_von != null) {
+  const tx = tvDunkel() ? "#d1d4dc" : "#131722";
+  for (const [ii, txt] of [[T.ausbruch_i, "Ausbruch"], [T.retest_i, "Retest"]]) if (ii != null && ii <= V.cut) {
+    const cx = X(ii), cy = Y(T.kerzen[ii][2]); if (cx == null || cy == null) continue;
+    S("line", { x1: cx, x2: cx, y1: cy - 6, y2: cy - 16, stroke: tx, "stroke-width": 1 }, g);
+    const t = S("text", { x: cx, y: cy - 20, fill: tx, "text-anchor": "middle", class: "tv-info" }, g); t.textContent = txt;
+  }
+  if (Array.isArray(T.linien) && T.linien.length) {
+    const xl = X(V.mode === "aus" ? n - 1 : T.entscheidung);
+    for (const L of T.linien) {
+      if (!L || !L.von || !L.bis) continue;
+      const x1 = X(L.von.i), x2 = X(Math.min(L.bis.i, V.cut)); if (x1 == null || x2 == null) continue;
+      if (L.art === "form") S("line", { x1, x2, y1: Y(L.von.p), y2: Y(L.bis.p), stroke: acc, "stroke-width": 1.4, "stroke-dasharray": "5 5", opacity: 0.7 }, g);
+      else if (L.art === "nacken" && xl != null) S("line", { x1, x2: xl, y1: Y(L.von.p), y2: Y(L.von.p), stroke: acc, "stroke-width": 1.8 }, g);
+      else if (L.art === "boden") {
+        const pb = T.unten != null ? T.unten : (L.von.p + L.bis.p) / 2, xa = x1 - slot / 2, xb = x2 + slot / 2;
+        if (T.toleranz) S("rect", { x: xa, y: Y(pb + T.toleranz), width: Math.max(1, xb - xa), height: Math.max(1, Y(pb - T.toleranz) - Y(pb + T.toleranz)), fill: rgba(acc, 0.16) }, g);
+        S("line", { x1: xa, x2: xb, y1: Y(pb), y2: Y(pb), stroke: acc, "stroke-width": 1.8 }, g);
+      }
+    }
+    for (const b of T.beruehrungen || []) if (b.i <= V.cut) { const cx = X(b.i), cy = Y(b.p); if (cx != null && cy != null) S("circle", { cx, cy, r: 5.5, fill: "none", stroke: acc, "stroke-width": 1.8 }, g); }
+    if (T.oben != null) lab(Y(T.oben), nf(T.oben), acc);
+    if (T.unten != null) lab(Y(T.unten), nf(T.unten), acc);
+  } else if (T.oben != null && T.unten != null && T.box_von != null) {
     const x0 = X(T.box_von - 0.5), x1 = X((T.box_bis != null ? T.box_bis : T.entscheidung) + 0.5), xl = X(V.mode === "aus" ? n - 1 : T.entscheidung);
     if ([x0, x1, xl].every((v) => v != null)) {
       S("rect", { x: x0, y: Y(T.oben), width: Math.max(1, x1 - x0), height: Math.max(1, Y(T.unten) - Y(T.oben)), fill: rgba(acc, 0.07) }, g);
@@ -1386,7 +1582,8 @@ document.addEventListener("keydown", (e) => {
   if (!V.chart || !V.T) return;
   if (k === "h") tvTool("h"); else if (k === "r") tvTool("rect"); else if (k === "t") tvTool("trend"); else if (k === "v") tvTool("cursor");
   else if (k === "m") $("tvMagnet").click();
-  else if (V.kind === "sicht" && (k === "j" || k === "n" || k === "u")) tvAnswer({ j: "ja", n: "nein", u: "unsicher" }[k]);
+  else if (V.kind === "sicht" && SI.optionen && /^[1-9]$/.test(k) && SI.optionen[+k - 1]) tvAnswer(SI.optionen[+k - 1].key);
+  else if (V.kind === "sicht" && !SI.optionen && (k === "j" || k === "n" || k === "u")) tvAnswer({ j: "ja", n: "nein", u: "unsicher" }[k]);
   else if (k === "arrowleft") { if (V.kind === "trade") tvStep(-1); else if (V.idx > 0) tvShow(V.idx - 1); }
   else if (k === "arrowright") { if (V.kind === "trade") tvStep(1); else if (V.idx < V.items.length - 1) tvShow(V.idx + 1); }
 });
@@ -1418,17 +1615,105 @@ function renderLog(st) {
     : `<div class="void"><b>Noch keine Einträge</b>Jeder Schritt landet hier: Regeln mit Hash, Läufe, Meldungen.</div>`;
 }
 
+/* ------------------------------------------------------------ Analyse: warum Gewinn, warum Verlust */
+const ARTEN = [["sauber", "Ziel erreicht", "--k1"], ["gegen_markt", "Gegen den Markt", "--k2"], ["fehlausbruch", "Fehlausbruch", "--k3"], ["zeit", "Zu wenig Zeit", "--k4"], ["ziel_zu_weit", "Ziel zu weit", "--k5"], ["stop_zu_eng", "Stop zu eng", "--k6"], ["kosten", "Kosten", "--k7"], ["sonst", "Sonstiges", "--k8"]];
+const anName = (l) => ({ "rechteck-v1": "Rechteck v1" }[l] || l || "Lauf");
+function hbars(items) {
+  const vals = items.map((x) => x.r).filter((x) => x != null);
+  let lo = Math.min(0, ...vals), hi = Math.max(0, ...vals); if (hi - lo < 0.05) hi = lo + 0.05;
+  const pos = (v) => ((v - lo) / (hi - lo)) * 100, z = pos(0);
+  return items.map((x) => {
+    const lab = `<div class="lab">${esc(x.lab)}${x.n != null ? `<span class="dim"> · ${Number(x.n).toLocaleString("de-DE")}</span>` : ""}</div>`;
+    if (x.r == null) return `<div class="hb">${lab}<div class="bar"></div><div class="val">—</div></div>`;
+    const p = pos(x.r);
+    return `<div class="hb">${lab}<div class="bar" role="img" aria-label="${esc(x.lab)}: ${sg(x.r, 2)} R"><span class="z" style="left:${z}%"></span><i style="left:${Math.min(z, p)}%;width:${Math.max(0.8, Math.abs(p - z))}%;background:var(--${x.r < 0 ? "down" : "up"})"></i></div><div class="val ${x.r < 0 ? "down" : "up"}">${sg(x.r, 2)} R</div></div>`;
+  }).join("");
+}
+function renderAnalyse(list) {
+  const box = $("anBox");
+  if (!list || !list.length) return;
+  $("anNote").textContent = list.map((a) => `${anName(a.lauf)} · ${Number(a.trades || 0).toLocaleString("de-DE")} Trades`).join(" · ");
+  box.innerHTML = list.map((an) => {
+    const regel = Object.fromEntries((an.arten || []).map((x) => [x.key, x.regel]));
+    const rows = (an.varianten_a || []).map((v) => ({ lab: v.name, n: v.trades, r: v.r, an: v.anteile || {}, v }));
+    const tot = an.gesamt ? { lab: "Alle Trades, alle Noten", n: an.gesamt.trades, r: an.gesamt.r, an: an.gesamt.anteile || {}, v: an.gesamt } : null;
+    const srow = (o, cls) => {
+      const top = ARTEN.map(([k, n]) => [n, (o.an[k] || 0) * 100]).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([n, p]) => `${n} ${nf(p, 0)} %`).join(", ");
+      return `<div class="srow ${cls || ""}"><div class="lab"><b>${esc(o.lab)}</b> · ${Number(o.n).toLocaleString("de-DE")}</div><div class="sbar2" role="img" aria-label="${esc(o.lab)}: ${esc(top)}">${ARTEN.map(([k, n, c]) => { const p = (o.an[k] || 0) * 100; return p > 0 ? `<i style="flex:${p.toFixed(2)} 1 0;background:var(${c})" data-t="${esc(n)}" data-p="${nf(p, 0)}" data-r="${esc(regel[k] || "")}" data-v="${esc(o.lab)}"></i>` : ""; }).join("")}</div><div class="val ${o.r > 0 ? "up" : "down"}">${sg(o.r, 2)} R</div></div>`;
+    };
+    const legend = `<div class="legend2">${ARTEN.map(([, n, c]) => `<span><i style="background:var(${c})"></i>${esc(n)}</span>`).join("")}</div>`;
+    const pc = (x) => `<td class="num">${nf((x || 0) * 100, 0)} %</td>`;
+    const trow = (o) => `<tr><td>${esc(o.lab)}</td><td class="num">${Number(o.n).toLocaleString("de-DE")}</td><td class="num ${o.r > 0 ? "up" : "down"}">${sg(o.r, 2)}</td>${ARTEN.map(([k]) => pc(o.an[k])).join("")}<td class="num">${o.v && o.v.mfe_r != null ? sg(o.v.mfe_r, 2) : "—"}</td><td class="num">${o.v && o.v.mae_r != null ? sg(o.v.mae_r, 2) : "—"}</td><td class="num">${o.v && o.v.ziel_danach != null ? nf(o.v.ziel_danach * 100, 0) + " %" : "—"}</td></tr>`;
+    const table = `<details class="tbl"><summary>Als Tabelle</summary><div class="tablewrap"><table><thead><tr><th>Variante</th><th>Trades</th><th>Ø R</th>${ARTEN.map(([, n]) => `<th>${esc(n)}</th>`).join("")}<th>MFE</th><th>MAE</th><th>Ziel danach</th></tr></thead><tbody>${[...rows, ...(tot ? [tot] : [])].map(trow).join("")}</tbody></table></div></details>`;
+    const no = (an.noten || []).map((x) => ({ lab: `Note ${x.id}`, n: x.trades, r: x.r }));
+    const au = (an.sichtpruefung || []).map((x) => ({ lab: `Dein Auge: ${x.antwort}`, n: x.trades, r: x.r }));
+    const gk = an.gleiche_kaesten || {}, ge = (gk.einstiege || []).map((x) => ({ lab: x.einstieg, n: x.trades, r: x.r }));
+    const ww = (an.was_waere_wenn && an.was_waere_wenn.gesamt) || null, wn = an.was_waere_wenn_namen || {};
+    const wl = ww ? [{ lab: "so wie gerechnet", n: ww.wie_gerechnet && ww.wie_gerechnet.trades, r: ww.wie_gerechnet && ww.wie_gerechnet.r }].concat(Object.keys(wn).filter((k) => ww[k] != null).map((k) => (typeof ww[k] === "object" ? { lab: wn[k], n: ww[k].trades, r: ww[k].r } : { lab: wn[k], r: ww[k] }))) : [];
+    return `<div class="card stack"><h3>${esc(anName(an.lauf))}: woran die Trades geendet haben</h3><p class="sub dim" style="font-size:12.5px">Note A je Variante, darunter alle Trades. Fahre über einen Abschnitt, um die Regel zu sehen.</p>${legend}${rows.map((o) => srow(o)).join("")}${tot ? srow(tot, "tot") : ""}${table}</div>
+      <div class="an-grid">
+        <div class="card an-card"><h3>Bringt die saubere Erkennung etwas?</h3><p class="sub">Ø R nach Kosten. Wäre die Form entscheidend, lägen Note A und dein „ja“ klar vorn.</p>${hbars(no.concat(au))}</div>
+        <div class="card an-card"><h3>Vier Einstiege auf denselben Kästen</h3><p class="sub">Ø R nach Kosten auf denselben ${Number(gk.kaesten || 0).toLocaleString("de-DE")} Kästen.</p>${hbars(ge)}</div>
+        <div class="card an-card"><h3>Was wäre wenn</h3><p class="sub">Alle Trades, nur zur Information. Keine dieser Änderungen ist eine Regel; was auffällt, wird eine neue Idee im Register.</p>${hbars(wl)}</div>
+      </div>${an.hinweis ? `<p class="dim" style="font-size:12.5px;margin-top:10px">${esc(an.hinweis)}</p>` : ""}`;
+  }).join("");
+  const showTip = (e) => {
+    const i = e.target.closest && e.target.closest(".sbar2 i[data-t]"); if (!i) { tip().hidden = true; return; }
+    const t = tip(); t.innerHTML = `<h4>${esc(i.dataset.v)}</h4><div>${esc(i.dataset.t)}<b>${esc(i.dataset.p)} %</b></div>${i.dataset.r ? `<span class="txt">${esc(i.dataset.r)}</span>` : ""}`;
+    t.hidden = false; const w = t.offsetWidth, r = i.getBoundingClientRect();
+    t.style.left = Math.min(innerWidth - 8 - w / 2, Math.max(8 + w / 2, e.clientX)) + "px"; t.style.top = Math.max(t.offsetHeight + 16, r.top) + "px";
+  };
+  box.addEventListener("pointermove", showTip); box.addEventListener("pointerdown", showTip);
+  box.addEventListener("pointerleave", () => { tip().hidden = true; });
+}
+
+/* ------------------------------------------------------------ Ideen-Register */
+function renderRegister(reg) {
+  const box = $("regBox"), I = (reg && reg.ideen) || [];
+  $("regNote").textContent = reg && reg.n_versuche != null ? `N = ${reg.n_versuche} Versuche bisher` : "";
+  if (!I.length) { box.innerHTML = `<div class="void"><b>Noch kein Register</b>Es erscheint mit dem nächsten Lauf.</div>`; return; }
+  const chip = (st) => `<span class="chip ${st === "verworfen" ? "bad" : st === "bestätigt" || st === "Prüftopf" ? "good" : st === "läuft" ? "run" : ""}">${esc(st)}</span>`;
+  box.innerHTML = `<table class="reg"><thead><tr><th>Nr.</th><th>Idee</th><th>Zeitebenen</th><th>Daten</th><th>Status</th><th>Versuche</th><th>Ergebnis</th></tr></thead><tbody>${I.map((e) => `<tr><td class="num">${esc(e.kennung || e.nr)}</td><td><b>${esc(e.kurzname || "")}</b></td><td>${esc((e.zeitebenen || []).join(", ") || "—")}</td><td>${esc(e.daten || "—")}</td><td>${chip(e.status || "geplant")}</td><td class="num">${e.versuche != null ? e.versuche : "—"}</td><td class="erg">${esc(e.ergebnis || "")}</td></tr>`).join("")}</tbody></table>`;
+}
+
+/* ------------------------------------------------------------ Muster-Reiter und Schema Doppelboden */
+function musterTabs() {
+  const T = [["tabDb", "pDb"], ["tabRect", "pRect"]];
+  for (const [t, p] of T) $(t).addEventListener("click", () => { for (const [t2, p2] of T) { $(t2).setAttribute("aria-selected", String(t2 === t)); $(p2).hidden = t2 !== t; } });
+}
+function schemaDb() {
+  const svg = $("schemaDb"), neck = 118, bot = 204;
+  S("rect", { x: 104, y: bot - 7, width: 222, height: 14, style: "fill:rgba(var(--accent-rgb),.12)" }, svg);
+  S("line", { x1: 104, x2: 326, y1: bot, y2: bot, style: "stroke:var(--accent);stroke-width:2" }, svg);
+  S("line", { x1: 215, x2: 480, y1: neck, y2: neck, style: "stroke:var(--accent);stroke-width:2" }, svg);
+  const pts = [[24, 34], [60, 92], [96, 160], [130, bot + 1], [168, 158], [215, neck], [256, 160], [298, bot - 1], [334, 158], [362, neck - 4], [396, 90], [432, 64], [468, 46]];
+  S("polyline", { points: pts.map((p) => p.join(",")).join(" "), style: "fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round" }, svg);
+  for (const [x, y] of [[130, bot + 1], [298, bot - 1], [215, neck]]) S("circle", { cx: x, cy: y, r: 6, style: "fill:none;stroke:var(--accent);stroke-width:1.8" }, svg);
+  const tx = (x, y, t, cls, anchor) => { const e = S("text", { x, y, class: cls || "", "text-anchor": anchor || "start" }, svg); e.textContent = t; return e; };
+  tx(64, 56, "Vortrend", "h");
+  tx(130, bot + 30, "1. Boden", "h", "middle");
+  tx(298, bot + 30, "2. Boden", "h", "middle");
+  tx(332, bot + 4, "Bodenzone", "");
+  tx(392, neck + 20, "Nackenlinie", "h");
+  tx(366, 40, "Ausbruch", "h");
+  S("path", { d: `M494 ${neck}V${bot}M490 ${neck + 4}L494 ${neck}L498 ${neck + 4}M490 ${bot - 4}L494 ${bot}L498 ${bot - 4}`, style: "fill:none;stroke:var(--ink-3);stroke-width:1.2" }, svg);
+  tx(486, (neck + bot) / 2 + 4, "Höhe", "", "end");
+  tx(24, 266, "Ziel nach dem Ausbruch: Nackenlinie plus Höhe", "");
+}
+
 /* ------------------------------------------------------------ Start */
-let ST = null;
+let ST = null, REG = null;
 function renderHeadAgain() { renderHead(ST, IDX, SI); }
 async function load() {
-  const [st, er, idx, si, sc] = await Promise.all([get("status.json"), get("ergebnisse.json"), get("trades/index.json"), get("sichtpruefung.json"), get("scanner.json")]);
-  ST = st; IDX = idx; SI = si; LOADED = {};
-  renderHead(st, idx, si); renderPlan(st); renderResults(er); renderSicht(); renderScanner(sc); renderLog(st);
+  const [st, er, idx, si, sc, reg, anIdx] = await Promise.all([get("status.json"), get("ergebnisse.json"), get("trades/index.json"), get("sichtpruefung.json"), get("scanner.json"), get("ideen-register.json"), get("analysen.json")]);
+  const anFiles = anIdx && Array.isArray(anIdx.dateien) ? anIdx.dateien : ["analyse-rechteck-v1.json"];
+  const AN = (await Promise.all(anFiles.map((f) => get(f)))).filter(Boolean);
+  ST = st; IDX = idx; SI = si; REG = reg; LOADED = {};
+  renderHead(st, idx, si); renderPlan(st); renderResults(er); renderAnalyse(AN); renderRegister(reg); renderSicht(); renderScanner(sc); renderLog(st);
   await renderGallery(true);
 }
-schemaRect(); renderEntries();
-seg("fTf", "tf", () => renderGallery(true)); seg("fEn", "en", () => renderGallery(true)); seg("fRes", "res", () => renderGallery(true)); seg("fNote", "note", () => renderGallery(true));
+schemaRect(); schemaDb(); musterTabs(); renderEntries();
+seg("fTf", "tf", () => renderGallery(true)); seg("fEn", "en", () => renderGallery(true)); seg("fRes", "res", () => renderGallery(true)); seg("fNote", "note", () => renderGallery(true)); seg("fAus", "aus", () => renderGallery(true));
 seg("fView", "view", () => { renderGallery(false); if (CUR) openTrade(CUR); });
 $("moreBtn").addEventListener("click", () => { SHOWN += 60; renderGallery(false); });
 load();

@@ -1,33 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-03T20:46:25+00:00",
- "heartbeat": "2026-11-03T20:46:25+00:00",
+ "updated": "2026-11-03T20:56:35+00:00",
+ "heartbeat": "2026-11-03T20:56:35+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9933.04,
+  "equity": 9937.04,
   "last_equity": 9941.46,
-  "day_change": -8.42,
-  "total_change": -66.96
+  "day_change": -4.42,
+  "total_change": -62.96
  },
- "positions": [
-  {
-   "symbol": "BSX",
-   "side": "short",
-   "qty": 45,
-   "entry": 43.58,
-   "current": 43.58,
-   "pl": 0.23
-  },
-  {
-   "symbol": "PCAR",
-   "side": "short",
-   "qty": 19,
-   "entry": 101.44,
-   "current": 101.89,
-   "pl": -8.64
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "BSX",
@@ -35,19 +18,19 @@
    "side": "short",
    "day": "2026-11-03",
    "opened": "2026-11-03T20:00:40.579961+00:00",
-   "closed": null,
+   "closed": "2026-11-03T20:50:58.881292+00:00",
    "entry": 43.58,
    "stop": 44.04,
    "target": 42.75,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 43.56,
+   "pnl": 0.9,
+   "r": 0.043,
+   "status": "closed",
+   "exit_source": "fill",
    "reason": "desc_triangle break<43.68",
    "max_r": 0.47,
    "key": "t149",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -56,19 +39,19 @@
    "side": "short",
    "day": "2026-11-03",
    "opened": "2026-11-03T19:45:39.637604+00:00",
-   "closed": null,
+   "closed": "2026-11-03T20:50:55.430033787+00:00",
    "entry": 101.44,
    "stop": 103.06,
    "target": 99.33,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 101.72,
+   "pnl": -5.32,
+   "r": -0.173,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "rectangle break<101.81",
    "max_r": null,
    "key": "t148",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 145,
-  "pnl": -34.43,
+  "n": 147,
+  "pnl": -38.85,
   "winrate": 0.476,
-  "expectancy": -0.018,
-  "pf": 0.95,
-  "avg_win": 8.87,
-  "avg_loss": -8.51
+  "expectancy": -0.019,
+  "pf": 0.94,
+  "avg_win": 8.76,
+  "avg_loss": -8.47
  },
  "equity_curve": [
   {

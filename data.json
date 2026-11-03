@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-03T20:24:40+00:00",
- "heartbeat": "2026-11-03T20:24:40+00:00",
+ "updated": "2026-11-03T20:35:29+00:00",
+ "heartbeat": "2026-11-03T20:35:29+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9929.24,
+  "equity": 9943.6,
   "last_equity": 9941.46,
-  "day_change": -12.22,
-  "total_change": -70.76
+  "day_change": 2.14,
+  "total_change": -56.4
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 45,
    "entry": 43.58,
-   "current": 43.67,
-   "pl": -4.05
+   "current": 43.41,
+   "pl": 7.65
   },
   {
    "symbol": "PCAR",
    "side": "short",
    "qty": 19,
    "entry": 101.44,
-   "current": 101.87,
-   "pl": -8.17
+   "current": 101.73,
+   "pl": -5.51
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<43.68",
-   "max_r": null,
+   "max_r": 0.37,
    "key": "t149",
    "detail": false,
    "ai_verdict": null

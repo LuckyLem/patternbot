@@ -1,33 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-04T20:41:12+00:00",
- "heartbeat": "2026-11-04T20:41:12+00:00",
+ "updated": "2026-11-04T20:51:40+00:00",
+ "heartbeat": "2026-11-04T20:51:40+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10036.6,
+  "equity": 10034.06,
   "last_equity": 9936.94,
-  "day_change": 99.66,
-  "total_change": 36.6
+  "day_change": 97.12,
+  "total_change": 34.06
  },
- "positions": [
-  {
-   "symbol": "FDX",
-   "side": "long",
-   "qty": 6,
-   "entry": 325.91,
-   "current": 328.6,
-   "pl": 16.11
-  },
-  {
-   "symbol": "MCK",
-   "side": "long",
-   "qty": 1,
-   "entry": 1048.22,
-   "current": 1069.08,
-   "pl": 20.86
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "MCK",
@@ -35,19 +18,19 @@
    "side": "long",
    "day": "2026-11-04",
    "opened": "2026-11-04T19:45:39.144814+00:00",
-   "closed": null,
+   "closed": "2026-11-04T20:51:34.870146631+00:00",
    "entry": 1048.22,
    "stop": 1012.99,
    "target": 1088.7,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 1062.92,
+   "pnl": 14.7,
+   "r": 0.417,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "rectangle break>1038.22",
-   "max_r": 0.61,
+   "max_r": 0.71,
    "key": "t157",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -56,19 +39,19 @@
    "side": "long",
    "day": "2026-11-04",
    "opened": "2026-11-04T19:15:38.649419+00:00",
-   "closed": null,
+   "closed": "2026-11-04T20:51:30.993043151+00:00",
    "entry": 325.91,
    "stop": 322.19,
    "target": 333.58,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 329.2,
+   "pnl": 19.73,
+   "r": 0.883,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "inverse_H&S neckline_break>325.70",
-   "max_r": 0.78,
+   "max_r": 0.93,
    "key": "t156",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 153,
-  "pnl": 23.84,
-  "winrate": 0.497,
-  "expectancy": -0.002,
-  "pf": 1.04,
-  "avg_win": 8.89,
+  "n": 155,
+  "pnl": 58.27,
+  "winrate": 0.503,
+  "expectancy": 0.006,
+  "pf": 1.09,
+  "avg_win": 9.11,
   "avg_loss": -8.47
  },
  "equity_curve": [

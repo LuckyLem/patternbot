@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-04T20:20:59+00:00",
- "heartbeat": "2026-11-04T20:20:59+00:00",
+ "updated": "2026-11-04T20:31:04+00:00",
+ "heartbeat": "2026-11-04T20:31:04+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10016.7,
+  "equity": 10033.54,
   "last_equity": 9936.94,
-  "day_change": 79.76,
-  "total_change": 16.7
+  "day_change": 96.6,
+  "total_change": 33.54
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 6,
    "entry": 325.91,
-   "current": 327.36,
-   "pl": 8.7
+   "current": 328.38,
+   "pl": 14.82
   },
   {
    "symbol": "MCK",
    "side": "long",
    "qty": 1,
    "entry": 1048.22,
-   "current": 1056.59,
-   "pl": 8.37
+   "current": 1067.31,
+   "pl": 19.09
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>1038.22",
-   "max_r": 0.39,
+   "max_r": 0.6,
    "key": "t157",
    "detail": false,
    "ai_verdict": null
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "inverse_H&S neckline_break>325.70",
-   "max_r": 0.56,
+   "max_r": 0.71,
    "key": "t156",
    "detail": false,
    "ai_verdict": null

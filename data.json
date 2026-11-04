@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-04T16:10:11+00:00",
- "heartbeat": "2026-11-04T16:10:11+00:00",
+ "updated": "2026-11-04T16:20:21+00:00",
+ "heartbeat": "2026-11-04T16:20:21+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9983.2,
+  "equity": 9973.55,
   "last_equity": 9936.94,
-  "day_change": 46.26,
-  "total_change": -16.8
+  "day_change": 36.61,
+  "total_change": -26.45
  },
  "positions": [
   {
@@ -16,35 +16,64 @@
    "side": "long",
    "qty": 1,
    "entry": 1045.22,
-   "current": 1050.15,
-   "pl": 4.93
+   "current": 1049.51,
+   "pl": 4.29
+  },
+  {
+   "symbol": "GILD",
+   "side": "long",
+   "qty": 11,
+   "entry": 172.72,
+   "current": 172.88,
+   "pl": 1.71
   },
   {
    "symbol": "MU",
    "side": "short",
    "qty": 1,
    "entry": 812.63,
-   "current": 799.17,
-   "pl": 13.46
+   "current": 806.85,
+   "pl": 5.78
   },
   {
    "symbol": "VZ",
    "side": "long",
    "qty": 42,
    "entry": 46.27,
-   "current": 46.5,
-   "pl": 9.66
+   "current": 46.41,
+   "pl": 6.09
   },
   {
    "symbol": "WMT",
    "side": "long",
    "qty": 15,
    "entry": 128.7,
-   "current": 129.9,
-   "pl": 18.0
+   "current": 129.95,
+   "pl": 18.75
   }
  ],
  "trades": [
+  {
+   "symbol": "GILD",
+   "pattern": "Rectangle",
+   "side": "long",
+   "day": "2026-11-04",
+   "opened": "2026-11-04T16:15:37.279629+00:00",
+   "closed": null,
+   "entry": 172.72,
+   "stop": 170.01,
+   "target": 177.69,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break>172.57",
+   "max_r": 0.08,
+   "key": "t154",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "VZ",
    "pattern": "InverseHeadShoulders",
@@ -1283,27 +1312,6 @@
    "key": "t95",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "MS",
-   "pattern": "DescendingTriangle",
-   "side": "short",
-   "day": "2026-10-15",
-   "opened": "2026-10-15T13:50:31.275946+00:00",
-   "closed": "2026-10-15T15:51:06.503931891+00:00",
-   "entry": 178.39,
-   "stop": 181.59,
-   "target": 170.97,
-   "exit": 179.95,
-   "pnl": -17.16,
-   "r": -0.487,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "desc_triangle break<179.38",
-   "max_r": 0.37,
-   "key": "t94",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1479,15 +1487,16 @@
  ],
  "funnel": {
   "day": "2026-11-04",
-  "setups": 43,
-  "orders": 4,
-  "filled": 4,
+  "setups": 45,
+  "orders": 5,
+  "filled": 5,
   "unfilled": 0,
-  "traded": 4,
+  "traded": 5,
   "coverage_from": "2026-11-04T14:50:41.565855+00:00",
   "rejected": {
    "skip-dup": 1,
    "skip-market": 3,
+   "skip-maxopen": 1,
    "skip-rs": 9,
    "skip-spread": 4,
    "skip-stale": 2,
@@ -1659,15 +1668,16 @@
   },
   {
    "day": "2026-11-04",
-   "setups": 43,
-   "orders": 4,
-   "filled": 4,
+   "setups": 45,
+   "orders": 5,
+   "filled": 5,
    "unfilled": 0,
-   "traded": 4,
+   "traded": 5,
    "coverage_from": "2026-11-04T14:50:41.565855+00:00",
    "rejected": {
     "skip-dup": 1,
     "skip-market": 3,
+    "skip-maxopen": 1,
     "skip-rs": 9,
     "skip-spread": 4,
     "skip-stale": 2,

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-04T17:33:22+00:00",
- "heartbeat": "2026-11-04T17:33:22+00:00",
+ "updated": "2026-11-04T17:43:32+00:00",
+ "heartbeat": "2026-11-04T17:43:32+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9992.14,
+  "equity": 9996.81,
   "last_equity": 9936.94,
-  "day_change": 55.2,
-  "total_change": -7.86
+  "day_change": 59.87,
+  "total_change": -3.19
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 1,
    "entry": 1045.22,
-   "current": 1049.6,
-   "pl": 4.38
+   "current": 1050.74,
+   "pl": 5.52
   },
   {
    "symbol": "GILD",
    "side": "long",
    "qty": 11,
    "entry": 172.72,
-   "current": 174.42,
-   "pl": 18.7
+   "current": 174.66,
+   "pl": 21.39
   },
   {
    "symbol": "MU",
    "side": "short",
    "qty": 1,
    "entry": 812.63,
-   "current": 809.39,
-   "pl": 3.24
+   "current": 809.07,
+   "pl": 3.56
   },
   {
    "symbol": "VZ",
@@ -41,7 +41,7 @@
    "qty": 42,
    "entry": 46.27,
    "current": 46.37,
-   "pl": 3.99
+   "pl": 4.2
   }
  ],
  "trades": [
@@ -61,7 +61,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>172.57",
-   "max_r": 0.65,
+   "max_r": 0.77,
    "key": "t154",
    "detail": false,
    "ai_verdict": null

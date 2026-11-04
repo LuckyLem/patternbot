@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-04T16:52:42+00:00",
- "heartbeat": "2026-11-04T16:52:42+00:00",
+ "updated": "2026-11-04T17:02:47+00:00",
+ "heartbeat": "2026-11-04T17:02:47+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 9994.69,
+  "equity": 9985.76,
   "last_equity": 9936.94,
-  "day_change": 57.75,
-  "total_change": -5.31
+  "day_change": 48.82,
+  "total_change": -14.24
  },
  "positions": [
   {
@@ -16,40 +16,32 @@
    "side": "long",
    "qty": 1,
    "entry": 1045.22,
-   "current": 1052.0,
-   "pl": 6.78
+   "current": 1050.4,
+   "pl": 5.18
   },
   {
    "symbol": "GILD",
    "side": "long",
    "qty": 11,
    "entry": 172.72,
-   "current": 173.35,
-   "pl": 6.93
+   "current": 173.28,
+   "pl": 6.21
   },
   {
    "symbol": "MU",
    "side": "short",
    "qty": 1,
    "entry": 812.63,
-   "current": 808.16,
-   "pl": 4.47
+   "current": 807.97,
+   "pl": 4.66
   },
   {
    "symbol": "VZ",
    "side": "long",
    "qty": 42,
    "entry": 46.27,
-   "current": 46.48,
-   "pl": 9.03
-  },
-  {
-   "symbol": "WMT",
-   "side": "long",
-   "qty": 15,
-   "entry": 128.7,
-   "current": 130.75,
-   "pl": 30.68
+   "current": 46.45,
+   "pl": 7.56
   }
  ],
  "trades": [
@@ -143,19 +135,19 @@
    "side": "long",
    "day": "2026-11-04",
    "opened": "2026-11-04T15:00:41.444028+00:00",
-   "closed": null,
+   "closed": "2026-11-04T17:01:45.490095530+00:00",
    "entry": 128.7,
    "stop": 126.23,
    "target": 131.26,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 130.38,
+   "pnl": 25.2,
+   "r": 0.682,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>127.91",
    "max_r": 0.88,
    "key": "t150",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1315,12 +1307,12 @@
   }
  ],
  "stats": {
-  "n": 147,
-  "pnl": -38.85,
-  "winrate": 0.476,
-  "expectancy": -0.019,
-  "pf": 0.94,
-  "avg_win": 8.76,
+  "n": 148,
+  "pnl": -13.65,
+  "winrate": 0.48,
+  "expectancy": -0.014,
+  "pf": 0.98,
+  "avg_win": 8.99,
   "avg_loss": -8.47
  },
  "equity_curve": [
@@ -1487,7 +1479,7 @@
  ],
  "funnel": {
   "day": "2026-11-04",
-  "setups": 57,
+  "setups": 61,
   "orders": 5,
   "filled": 5,
   "unfilled": 0,
@@ -1496,7 +1488,7 @@
   "rejected": {
    "skip-dup": 1,
    "skip-market": 3,
-   "skip-maxopen": 13,
+   "skip-maxopen": 17,
    "skip-rs": 9,
    "skip-spread": 4,
    "skip-stale": 2,
@@ -1668,7 +1660,7 @@
   },
   {
    "day": "2026-11-04",
-   "setups": 57,
+   "setups": 61,
    "orders": 5,
    "filled": 5,
    "unfilled": 0,
@@ -1677,7 +1669,7 @@
    "rejected": {
     "skip-dup": 1,
     "skip-market": 3,
-    "skip-maxopen": 13,
+    "skip-maxopen": 17,
     "skip-rs": 9,
     "skip-spread": 4,
     "skip-stale": 2,

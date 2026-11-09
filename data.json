@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-11-09T15:07:45+00:00",
- "heartbeat": "2026-11-09T15:07:45+00:00",
+ "updated": "2026-11-09T15:17:59+00:00",
+ "heartbeat": "2026-11-09T15:17:59+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10026.5,
+  "equity": 10028.81,
   "last_equity": 10026.5,
-  "day_change": 0.0,
-  "total_change": 26.5
+  "day_change": 2.31,
+  "total_change": 28.81
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "SCHW",
+   "side": "long",
+   "qty": 21,
+   "entry": 93.17,
+   "current": 93.28,
+   "pl": 2.31
+  }
+ ],
  "trades": [
+  {
+   "symbol": "SCHW",
+   "pattern": "InverseHeadShoulders",
+   "side": "long",
+   "day": "2026-11-09",
+   "opened": "2026-11-09T15:15:33.649147+00:00",
+   "closed": null,
+   "entry": 93.17,
+   "stop": 91.3,
+   "target": 94.67,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "inverse_H&S neckline_break>92.94",
+   "max_r": 0.07,
+   "key": "t159",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "FAST",
    "pattern": "HeadShouldersTop",
@@ -1250,27 +1280,6 @@
    "key": "t100",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "PGR",
-   "pattern": "InverseHeadShoulders",
-   "side": "long",
-   "day": "2026-10-19",
-   "opened": "2026-10-19T14:00:37.574404+00:00",
-   "closed": "2026-10-19T16:01:35.977237124+00:00",
-   "entry": 218.81,
-   "stop": 214.78,
-   "target": 223.36,
-   "exit": 217.63,
-   "pnl": -10.62,
-   "r": -0.293,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "inverse_H&S neckline_break>218.03",
-   "max_r": 0.04,
-   "key": "t99",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1458,11 +1467,11 @@
  ],
  "funnel": {
   "day": "2026-11-09",
-  "setups": 29,
-  "orders": 0,
-  "filled": 0,
+  "setups": 30,
+  "orders": 1,
+  "filled": 1,
   "unfilled": 0,
-  "traded": 0,
+  "traded": 1,
   "coverage_from": "2026-11-09T14:51:02.608767+00:00",
   "rejected": {
    "skip-market": 2,
@@ -1633,11 +1642,11 @@
   },
   {
    "day": "2026-11-09",
-   "setups": 29,
-   "orders": 0,
-   "filled": 0,
+   "setups": 30,
+   "orders": 1,
+   "filled": 1,
    "unfilled": 0,
-   "traded": 0,
+   "traded": 1,
    "coverage_from": "2026-11-09T14:51:02.608767+00:00",
    "rejected": {
     "skip-market": 2,

@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-11-09T21:01:27+00:00",
- "heartbeat": "2026-11-09T21:01:27+00:00",
+ "updated": "2026-11-09T21:05:36+00:00",
+ "heartbeat": "2026-11-09T21:05:36+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1660,6 +1660,14 @@
   "universe": 150
  },
  "review": {
+  "title": "Tagesreview 2026-11-09",
+  "kind": "daily",
+  "day": "2026-11-09",
+  "markdown": "# Tagesreview 2026-11-09\n\n_Erstellt 2026-11-09 21:05 UTC | Datenbasis: Handelstag 2026-11-09 | 3 Trade(s) erfasst_\n\n## 1. Zahlen\n\n| Kennzahl | Wert | Gesund? |\n|---|---|---|\n| Abgeschlossene Trades | 3 | zu wenig fuer ein Urteil |\n| Trefferquote | 0% | - |\n| Ergebnis | -13.14 $ | NEGATIV |\n| Durchschn. Gewinn / Verlust | +0.00 / -4.38 $ | PROBLEM Verlierer groesser |\n| Profitfaktor | 0.00 | NEGATIV <1,0 |\n| **Erwartungswert je Trade** | **-0.12R** | NEGATIV |\n| Ergebnis nach Kosten (0,03R Long / 0,05R Short) | -16.50 $ (-0.45R, Kosten 3.36 $) | NEGATIV |\n| **Erwartungswert nach Kosten** | **-0.15R** | NEGATIV |\n\n> **3 Trades sind statistisch noch kein Urteil.** Aussagekraeftig wird es ab ca. 60. Alles hier ist Beobachtung, noch kein Beweis.\n\n## 2. Aufschluesselung\n\n**Nach Pattern**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Rectangle | 2 | 0 | -10.62 $ | -0.15 |\n| InverseHeadShoulders | 1 | 0 | -2.52 $ | -0.06 |\n\n**Nach Ausstiegsgrund**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Tagesende-Glattstellung | 2 | 0 | -10.62 $ | -0.15 |\n| Zeit-Stop (Pattern-Zeitfenster abgelaufen) | 1 | 0 | -2.52 $ | -0.06 |\n\n**Nach Richtung**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Long | 3 | 0 | -13.14 $ | -0.12 |\n\n## 3. Jeder einzelne Trade\n\n#### SCHW - InverseHeadShoulders (LONG)\n\n- **Warum eingestiegen:** inverse_H&S neckline_break>92.94\n- **Plan:** Einstieg 93.17 | Stop 91.30 | Ziel 94.67 | 21 Stueck\n- **Warum ausgestiegen:** Zeit-Stop (Pattern-Zeitfenster abgelaufen)\n- **Ergebnis:** Ausstieg 93.05 | **-2.52 $** | -0.06R\n- **Haltedauer:** 121 Minuten\n- Hoechststand im Trade: +0.17R\n\n#### DAL - Rectangle (LONG)\n\n- **Warum eingestiegen:** rectangle break>91.64\n- **Plan:** Einstieg 92.01 | Stop 88.28 | Ziel 98.35 | 12 Stueck\n- **Warum ausgestiegen:** Tagesende-Glattstellung\n- **Ergebnis:** Ausstieg 91.46 | **-6.60 $** | -0.15R\n- **Haltedauer:** 66 Minuten\n- Hoechststand im Trade: +0.13R\n\n#### MSFT - Rectangle (LONG)\n\n- **Warum eingestiegen:** rectangle break>547.39\n- **Plan:** Einstieg 548.23 | Stop 538.95 | Ziel 564.27 | 3 Stueck\n- **Warum ausgestiegen:** Tagesende-Glattstellung\n- **Ergebnis:** Ausstieg 546.89 | **-4.02 $** | -0.14R\n- **Haltedauer:** 36 Minuten\n\n## 4. Filter\n\n**Was der Bot bewusst NICHT gehandelt hat** (die Filter sind die halbe Strategie)\n\n| Filter | Abgelehnt | Warum |\n|---|---|---|\n| `skip-vol` | 104 | zu wenig Volumen beim Ausbruch (Ausbrueche ohne Volumen scheitern meist) |\n| `skip-rs` | 13 | relative Staerke/Schwaeche passte nicht zum Markt |\n| `skip-spread` | 5 | - |\n| `skip-market` | 3 | - |\n| `skip-chase` | 2 | Preis war schon aus der Einstiegszone gelaufen (kein Hinterherjagen) |\n| `skip-rr` | 1 | - |\n| `skip-stale` | 1 | Signal war zu alt (Pattern nicht mehr gueltig) |\n\n## 5. Bewertung\n\n### Was funktioniert hat\n\n- _Nichts mit genug Datenpunkten (mind. 3 Trades) war klar positiv._\n\n### Was nicht funktioniert hat\n\n- _Keine wiederkehrenden Probleme erkennbar._\n",
+  "headline": "3 Trade(s), -13.14 $. Statistisch noch kein Urteil - aussagekraeftig ab ca. 60.",
+  "ai": false
+ },
+ "review_week": {
   "title": "Wochenreview 2026-11-06",
   "kind": "weekly",
   "day": "2026-11-06",

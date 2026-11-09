@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-09T20:19:34+00:00",
- "heartbeat": "2026-11-09T20:19:34+00:00",
+ "updated": "2026-11-09T20:29:40+00:00",
+ "heartbeat": "2026-11-09T20:29:40+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10025.45,
+  "equity": 10022.42,
   "last_equity": 10026.5,
-  "day_change": -1.05,
-  "total_change": 25.45
+  "day_change": -4.08,
+  "total_change": 22.42
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 12,
    "entry": 92.01,
-   "current": 92.26,
-   "pl": 3.0
+   "current": 92.08,
+   "pl": 0.9
   },
   {
    "symbol": "MSFT",
    "side": "long",
    "qty": 3,
    "entry": 548.23,
-   "current": 547.72,
-   "pl": -1.53
+   "current": 547.41,
+   "pl": -2.46
   }
  ],
  "trades": [

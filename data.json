@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-10T16:36:39+00:00",
- "heartbeat": "2026-11-10T16:36:39+00:00",
+ "updated": "2026-11-10T16:47:38+00:00",
+ "heartbeat": "2026-11-10T16:47:38+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10037.0,
+  "equity": 10046.31,
   "last_equity": 10013.25,
-  "day_change": 23.75,
-  "total_change": 37.0
+  "day_change": 33.06,
+  "total_change": 46.31
  },
  "positions": [
   {
@@ -16,11 +16,40 @@
    "side": "short",
    "qty": 19,
    "entry": 101.2,
-   "current": 99.95,
-   "pl": 23.75
+   "current": 99.62,
+   "pl": 30.02
+  },
+  {
+   "symbol": "UAL",
+   "side": "short",
+   "qty": 16,
+   "entry": 118.79,
+   "current": 118.6,
+   "pl": 3.04
   }
  ],
  "trades": [
+  {
+   "symbol": "UAL",
+   "pattern": "HeadShouldersTop",
+   "side": "short",
+   "day": "2026-11-10",
+   "opened": "2026-11-10T16:45:44.005583+00:00",
+   "closed": null,
+   "entry": 118.79,
+   "stop": 120.77,
+   "target": 116.07,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "H&S neckline_break<119.04",
+   "max_r": 0.1,
+   "key": "t163",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "NOW",
    "pattern": "Rectangle",
@@ -37,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<101.52",
-   "max_r": 0.69,
+   "max_r": 0.87,
    "key": "t162",
    "detail": false,
    "ai_verdict": null
@@ -1259,27 +1288,6 @@
    "key": "t104",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "LRCX",
-   "pattern": "Rectangle",
-   "side": "short",
-   "day": "2026-10-20",
-   "opened": "2026-10-20T13:50:28.363421+00:00",
-   "closed": "2026-10-20T15:50:40.256156657+00:00",
-   "entry": 262.75,
-   "stop": 271.62,
-   "target": 246.74,
-   "exit": 264.21,
-   "pnl": -5.84,
-   "r": -0.165,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "rectangle break<263.33",
-   "max_r": 0.0,
-   "key": "t103",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1467,18 +1475,18 @@
  ],
  "funnel": {
   "day": "2026-11-10",
-  "setups": 51,
-  "orders": 1,
-  "filled": 1,
+  "setups": 61,
+  "orders": 2,
+  "filled": 2,
   "unfilled": 0,
-  "traded": 1,
+  "traded": 2,
   "coverage_from": "2026-11-10T14:50:33.757165+00:00",
   "rejected": {
    "skip-chase": 3,
-   "skip-dup": 1,
+   "skip-dup": 2,
    "skip-rr": 3,
-   "skip-spread": 2,
-   "skip-vol": 41
+   "skip-spread": 3,
+   "skip-vol": 48
   }
  },
  "funnel_days": [
@@ -1644,18 +1652,18 @@
   },
   {
    "day": "2026-11-10",
-   "setups": 51,
-   "orders": 1,
-   "filled": 1,
+   "setups": 61,
+   "orders": 2,
+   "filled": 2,
    "unfilled": 0,
-   "traded": 1,
+   "traded": 2,
    "coverage_from": "2026-11-10T14:50:33.757165+00:00",
    "rejected": {
     "skip-chase": 3,
-    "skip-dup": 1,
+    "skip-dup": 2,
     "skip-rr": 3,
-    "skip-spread": 2,
-    "skip-vol": 41
+    "skip-spread": 3,
+    "skip-vol": 48
    }
   }
  ],

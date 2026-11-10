@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-10T18:41:38+00:00",
- "heartbeat": "2026-11-10T18:41:38+00:00",
+ "updated": "2026-11-10T18:51:45+00:00",
+ "heartbeat": "2026-11-10T18:51:45+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10057.07,
+  "equity": 10058.43,
   "last_equity": 10013.25,
-  "day_change": 43.82,
-  "total_change": 57.07
+  "day_change": 45.18,
+  "total_change": 58.43
  },
- "positions": [
-  {
-   "symbol": "UAL",
-   "side": "short",
-   "qty": 16,
-   "entry": 118.79,
-   "current": 119.28,
-   "pl": -7.76
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "UAL",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-11-10",
    "opened": "2026-11-10T16:45:44.005583+00:00",
-   "closed": null,
+   "closed": "2026-11-10T18:46:39.539053124+00:00",
    "entry": 118.79,
    "stop": 120.77,
    "target": 116.07,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 119.19,
+   "pnl": -6.4,
+   "r": -0.202,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "H&S neckline_break<119.04",
    "max_r": 0.25,
    "key": "t163",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 160,
-  "pnl": 89.49,
-  "winrate": 0.494,
-  "expectancy": 0.012,
-  "pf": 1.13,
+  "n": 161,
+  "pnl": 83.09,
+  "winrate": 0.491,
+  "expectancy": 0.01,
+  "pf": 1.12,
   "avg_win": 9.64,
-  "avg_loss": -8.3
+  "avg_loss": -8.28
  },
  "equity_curve": [
   {
@@ -1467,7 +1458,7 @@
  ],
  "funnel": {
   "day": "2026-11-10",
-  "setups": 122,
+  "setups": 127,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
@@ -1479,7 +1470,7 @@
    "skip-rr": 3,
    "skip-spread": 4,
    "skip-stale": 5,
-   "skip-vol": 100
+   "skip-vol": 105
   }
  },
  "funnel_days": [
@@ -1645,7 +1636,7 @@
   },
   {
    "day": "2026-11-10",
-   "setups": 122,
+   "setups": 127,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
@@ -1657,7 +1648,7 @@
     "skip-rr": 3,
     "skip-spread": 4,
     "skip-stale": 5,
-    "skip-vol": 100
+    "skip-vol": 105
    }
   }
  ],

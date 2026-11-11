@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-11-11T16:00:14+00:00",
- "heartbeat": "2026-11-11T16:00:14+00:00",
+ "updated": "2026-11-11T16:10:19+00:00",
+ "heartbeat": "2026-11-11T16:10:19+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10058.34,
+  "equity": 10052.08,
   "last_equity": 10058.34,
-  "day_change": 0.0,
-  "total_change": 58.34
+  "day_change": -6.26,
+  "total_change": 52.08
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "NVDA",
+   "side": "long",
+   "qty": 8,
+   "entry": 175.94,
+   "current": 175.16,
+   "pl": -6.26
+  }
+ ],
  "trades": [
+  {
+   "symbol": "NVDA",
+   "pattern": "InverseHeadShoulders",
+   "side": "long",
+   "day": "2026-11-11",
+   "opened": "2026-11-11T16:00:40.675874+00:00",
+   "closed": null,
+   "entry": 175.94,
+   "stop": 170.64,
+   "target": 185.07,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "inverse_H&S neckline_break>175.48",
+   "max_r": 0.03,
+   "key": "t164",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "UAL",
    "pattern": "HeadShouldersTop",
@@ -1250,27 +1280,6 @@
    "key": "t105",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "CB",
-   "pattern": "Rectangle",
-   "side": "long",
-   "day": "2026-10-20",
-   "opened": "2026-10-20T13:50:28.861768+00:00",
-   "closed": "2026-10-20T14:28:45.394956527+00:00",
-   "entry": 361.21,
-   "stop": 356.65,
-   "target": 366.0,
-   "exit": 356.5,
-   "pnl": -23.55,
-   "r": -1.034,
-   "status": "closed",
-   "exit_source": "sl",
-   "reason": "rectangle break>359.77",
-   "max_r": null,
-   "key": "t104",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1438,17 +1447,17 @@
  ],
  "funnel": {
   "day": "2026-11-11",
-  "setups": 24,
-  "orders": 0,
-  "filled": 0,
+  "setups": 31,
+  "orders": 1,
+  "filled": 1,
   "unfilled": 0,
-  "traded": 0,
+  "traded": 1,
   "coverage_from": "2026-11-11T14:50:40.563236+00:00",
   "rejected": {
    "skip-chase": 2,
    "skip-rs": 3,
    "skip-stale": 1,
-   "skip-vol": 18
+   "skip-vol": 24
   }
  },
  "funnel_days": [
@@ -1613,17 +1622,17 @@
   },
   {
    "day": "2026-11-11",
-   "setups": 24,
-   "orders": 0,
-   "filled": 0,
+   "setups": 31,
+   "orders": 1,
+   "filled": 1,
    "unfilled": 0,
-   "traded": 0,
+   "traded": 1,
    "coverage_from": "2026-11-11T14:50:40.563236+00:00",
    "rejected": {
     "skip-chase": 2,
     "skip-rs": 3,
     "skip-stale": 1,
-    "skip-vol": 18
+    "skip-vol": 24
    }
   }
  ],

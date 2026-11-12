@@ -1,26 +1,55 @@
 {
  "version": 1,
- "updated": "2026-11-12T15:12:17+00:00",
- "heartbeat": "2026-11-12T15:12:17+00:00",
+ "updated": "2026-11-12T15:22:41+00:00",
+ "heartbeat": "2026-11-12T15:22:41+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10066.61,
+  "equity": 10060.96,
   "last_equity": 10062.68,
-  "day_change": 3.93,
-  "total_change": 66.61
+  "day_change": -1.72,
+  "total_change": 60.96
  },
  "positions": [
+  {
+   "symbol": "CMCSA",
+   "side": "long",
+   "qty": 80,
+   "entry": 25.1,
+   "current": 25.05,
+   "pl": -3.73
+  },
   {
    "symbol": "PANW",
    "side": "short",
    "qty": 2,
    "entry": 319.58,
-   "current": 317.71,
-   "pl": 3.74
+   "current": 318.57,
+   "pl": 2.01
   }
  ],
  "trades": [
+  {
+   "symbol": "CMCSA",
+   "pattern": "Rectangle",
+   "side": "long",
+   "day": "2026-11-12",
+   "opened": "2026-11-12T15:15:34.890474+00:00",
+   "closed": null,
+   "entry": 25.1,
+   "stop": 24.73,
+   "target": 25.7,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break>25.05",
+   "max_r": 0.01,
+   "key": "t166",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "PANW",
    "pattern": "DescendingTriangle",
@@ -37,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<321.56",
-   "max_r": 0.14,
+   "max_r": 0.18,
    "key": "t165",
    "detail": false,
    "ai_verdict": null
@@ -1259,27 +1288,6 @@
    "key": "t107",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "TMO",
-   "pattern": "AscendingTriangle",
-   "side": "long",
-   "day": "2026-10-20",
-   "opened": "2026-10-20T16:15:31.632928+00:00",
-   "closed": "2026-10-20T18:16:35.762162717+00:00",
-   "entry": 688.35,
-   "stop": 677.42,
-   "target": 700.84,
-   "exit": 689.58,
-   "pnl": 2.46,
-   "r": 0.113,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "asc_triangle break>687.23",
-   "max_r": 0.22,
-   "key": "t106",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1451,16 +1459,17 @@
  ],
  "funnel": {
   "day": "2026-11-12",
-  "setups": 13,
-  "orders": 1,
-  "filled": 1,
+  "setups": 27,
+  "orders": 2,
+  "filled": 2,
   "unfilled": 0,
-  "traded": 1,
+  "traded": 2,
   "coverage_from": "2026-11-12T14:50:38.746925+00:00",
   "rejected": {
-   "skip-chase": 2,
-   "skip-stale": 2,
-   "skip-vol": 8
+   "skip-chase": 6,
+   "skip-spread": 2,
+   "skip-stale": 3,
+   "skip-vol": 14
   }
  },
  "funnel_days": [
@@ -1626,16 +1635,17 @@
   },
   {
    "day": "2026-11-12",
-   "setups": 13,
-   "orders": 1,
-   "filled": 1,
+   "setups": 27,
+   "orders": 2,
+   "filled": 2,
    "unfilled": 0,
-   "traded": 1,
+   "traded": 2,
    "coverage_from": "2026-11-12T14:50:38.746925+00:00",
    "rejected": {
-    "skip-chase": 2,
-    "skip-stale": 2,
-    "skip-vol": 8
+    "skip-chase": 6,
+    "skip-spread": 2,
+    "skip-stale": 3,
+    "skip-vol": 14
    }
   }
  ],

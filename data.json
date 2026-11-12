@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-12T16:04:42+00:00",
- "heartbeat": "2026-11-12T16:04:42+00:00",
+ "updated": "2026-11-12T16:14:50+00:00",
+ "heartbeat": "2026-11-12T16:14:50+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10070.33,
+  "equity": 10063.03,
   "last_equity": 10062.68,
-  "day_change": 7.65,
-  "total_change": 70.33
+  "day_change": 0.35,
+  "total_change": 63.03
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 80,
    "entry": 25.1,
-   "current": 25.18,
-   "pl": 7.07
+   "current": 25.16,
+   "pl": 4.67
   },
   {
    "symbol": "PANW",
    "side": "short",
    "qty": 2,
    "entry": 319.58,
-   "current": 319.29,
-   "pl": 0.58
+   "current": 321.74,
+   "pl": -4.32
   }
  ],
  "trades": [

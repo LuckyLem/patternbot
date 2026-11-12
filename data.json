@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-12T15:33:37+00:00",
- "heartbeat": "2026-11-12T15:33:37+00:00",
+ "updated": "2026-11-12T15:43:45+00:00",
+ "heartbeat": "2026-11-12T15:43:45+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10078.19,
+  "equity": 10074.41,
   "last_equity": 10062.68,
-  "day_change": 15.51,
-  "total_change": 78.19
+  "day_change": 11.73,
+  "total_change": 74.41
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 80,
    "entry": 25.1,
-   "current": 25.2,
-   "pl": 8.27
+   "current": 25.18,
+   "pl": 7.07
   },
   {
    "symbol": "PANW",
    "side": "short",
    "qty": 2,
    "entry": 319.58,
-   "current": 315.96,
-   "pl": 7.24
+   "current": 317.25,
+   "pl": 4.66
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>25.05",
-   "max_r": 0.28,
+   "max_r": 0.4,
    "key": "t166",
    "detail": false,
    "ai_verdict": null
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<321.56",
-   "max_r": 0.2,
+   "max_r": 0.25,
    "key": "t165",
    "detail": false,
    "ai_verdict": null

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-12T16:25:46+00:00",
- "heartbeat": "2026-11-12T16:25:46+00:00",
+ "updated": "2026-11-12T16:36:44+00:00",
+ "heartbeat": "2026-11-12T16:36:44+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10069.9,
+  "equity": 10062.15,
   "last_equity": 10062.68,
-  "day_change": 7.22,
-  "total_change": 69.9
+  "day_change": -0.53,
+  "total_change": 62.15
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 80,
    "entry": 25.1,
-   "current": 25.22,
-   "pl": 9.88
+   "current": 25.18,
+   "pl": 6.27
   },
   {
    "symbol": "PANW",
    "side": "short",
    "qty": 2,
    "entry": 319.58,
-   "current": 320.91,
-   "pl": -2.66
+   "current": 322.98,
+   "pl": -6.8
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>25.05",
-   "max_r": 0.4,
+   "max_r": 0.43,
    "key": "t166",
    "detail": false,
    "ai_verdict": null
@@ -1459,7 +1459,7 @@
  ],
  "funnel": {
   "day": "2026-11-12",
-  "setups": 48,
+  "setups": 54,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
@@ -1472,7 +1472,7 @@
    "skip-rs": 1,
    "skip-spread": 3,
    "skip-stale": 4,
-   "skip-vol": 30
+   "skip-vol": 36
   }
  },
  "funnel_days": [
@@ -1638,7 +1638,7 @@
   },
   {
    "day": "2026-11-12",
-   "setups": 48,
+   "setups": 54,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
@@ -1651,7 +1651,7 @@
     "skip-rs": 1,
     "skip-spread": 3,
     "skip-stale": 4,
-    "skip-vol": 30
+    "skip-vol": 36
    }
   }
  ],

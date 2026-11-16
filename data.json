@@ -1,17 +1,76 @@
 {
  "version": 1,
- "updated": "2026-11-16T14:42:39+00:00",
- "heartbeat": "2026-11-16T14:42:39+00:00",
+ "updated": "2026-11-16T14:53:11+00:00",
+ "heartbeat": "2026-11-16T14:53:11+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10059.17,
+  "equity": 10058.17,
   "last_equity": 10059.17,
-  "day_change": 0.0,
-  "total_change": 59.17
+  "day_change": -1.0,
+  "total_change": 58.17
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "GOOGL",
+   "side": "short",
+   "qty": 6,
+   "entry": 289.16,
+   "current": 288.77,
+   "pl": 2.32
+  },
+  {
+   "symbol": "MDT",
+   "side": "long",
+   "qty": 19,
+   "entry": 103.61,
+   "current": 103.44,
+   "pl": -3.33
+  }
+ ],
  "trades": [
+  {
+   "symbol": "MDT",
+   "pattern": "Rectangle",
+   "side": "long",
+   "day": "2026-11-16",
+   "opened": "2026-11-16T14:50:27.929202+00:00",
+   "closed": null,
+   "entry": 103.61,
+   "stop": 102.12,
+   "target": 105.72,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break>103.32",
+   "max_r": null,
+   "key": "t168",
+   "detail": false,
+   "ai_verdict": null
+  },
+  {
+   "symbol": "GOOGL",
+   "pattern": "HeadShouldersTop",
+   "side": "short",
+   "day": "2026-11-16",
+   "opened": "2026-11-16T14:50:25.782124+00:00",
+   "closed": null,
+   "entry": 289.16,
+   "stop": 296.35,
+   "target": 281.96,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "H&S neckline_break<293.45",
+   "max_r": 0.06,
+   "key": "t167",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "CMCSA",
    "pattern": "Rectangle",
@@ -1229,48 +1288,6 @@
    "key": "t109",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "TT",
-   "pattern": "Rectangle",
-   "side": "long",
-   "day": "2026-10-21",
-   "opened": "2026-10-21T13:50:31.446434+00:00",
-   "closed": "2026-10-21T15:50:39.735143618+00:00",
-   "entry": 467.5,
-   "stop": 459.54,
-   "target": 481.19,
-   "exit": 467.41,
-   "pnl": -0.36,
-   "r": -0.011,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "rectangle break>466.76",
-   "max_r": 0.09,
-   "key": "t108",
-   "detail": true,
-   "ai_verdict": null
-  },
-  {
-   "symbol": "VZ",
-   "pattern": "Rectangle",
-   "side": "short",
-   "day": "2026-10-21",
-   "opened": "2026-10-21T13:50:29.929990+00:00",
-   "closed": "2026-10-21T16:09:44.327064629+00:00",
-   "entry": 43.84,
-   "stop": 44.55,
-   "target": 42.94,
-   "exit": 43.23,
-   "pnl": 27.32,
-   "r": 0.849,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "rectangle break<44.02",
-   "max_r": 1.09,
-   "key": "t107",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1449,40 +1466,22 @@
   }
  ],
  "funnel": {
-  "day": "2026-11-13",
-  "setups": 133,
-  "orders": 0,
-  "filled": 0,
+  "day": "2026-11-16",
+  "setups": 26,
+  "orders": 2,
+  "filled": 2,
   "unfilled": 0,
-  "traded": 0,
-  "coverage_from": "2026-11-13T14:50:18.612620+00:00",
+  "traded": 2,
+  "coverage_from": "2026-11-16T14:50:25.935996+00:00",
   "rejected": {
-   "skip-chase": 3,
-   "skip-market": 8,
-   "skip-rr": 1,
-   "skip-rs": 7,
-   "skip-stale": 1,
-   "skip-vol": 113
+   "skip-chase": 2,
+   "skip-rs": 4,
+   "skip-spread": 3,
+   "skip-stale": 2,
+   "skip-vol": 13
   }
  },
  "funnel_days": [
-  {
-   "day": "2026-11-02",
-   "setups": 146,
-   "orders": 2,
-   "filled": 2,
-   "unfilled": 0,
-   "traded": 2,
-   "coverage_from": "2026-11-02T14:50:50.600085+00:00",
-   "rejected": {
-    "skip-chase": 8,
-    "skip-market": 1,
-    "skip-rs": 10,
-    "skip-spread": 1,
-    "skip-stale": 1,
-    "skip-vol": 123
-   }
-  },
   {
    "day": "2026-11-03",
    "setups": 107,
@@ -1641,6 +1640,22 @@
     "skip-rs": 7,
     "skip-stale": 1,
     "skip-vol": 113
+   }
+  },
+  {
+   "day": "2026-11-16",
+   "setups": 26,
+   "orders": 2,
+   "filled": 2,
+   "unfilled": 0,
+   "traded": 2,
+   "coverage_from": "2026-11-16T14:50:25.935996+00:00",
+   "rejected": {
+    "skip-chase": 2,
+    "skip-rs": 4,
+    "skip-spread": 3,
+    "skip-stale": 2,
+    "skip-vol": 13
    }
   }
  ],

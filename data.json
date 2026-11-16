@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-16T19:26:35+00:00",
- "heartbeat": "2026-11-16T19:26:35+00:00",
+ "updated": "2026-11-16T19:37:37+00:00",
+ "heartbeat": "2026-11-16T19:37:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10077.21,
+  "equity": 10075.56,
   "last_equity": 10059.17,
-  "day_change": 18.04,
-  "total_change": 77.21
+  "day_change": 16.39,
+  "total_change": 75.56
  },
- "positions": [
-  {
-   "symbol": "TJX",
-   "side": "short",
-   "qty": 15,
-   "entry": 131.94,
-   "current": 131.33,
-   "pl": 9.15
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "TJX",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-11-16",
    "opened": "2026-11-16T17:30:28.035906+00:00",
-   "closed": null,
+   "closed": "2026-11-16T19:31:27.912304371+00:00",
    "entry": 131.94,
    "stop": 132.8,
    "target": 128.54,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 131.44,
+   "pnl": 7.5,
+   "r": 0.58,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "H&S neckline_break<132.03",
    "max_r": 1.05,
    "key": "t170",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 167,
-  "pnl": 92.92,
-  "winrate": 0.497,
-  "expectancy": 0.011,
-  "pf": 1.13,
-  "avg_win": 9.49,
+  "n": 168,
+  "pnl": 100.42,
+  "winrate": 0.5,
+  "expectancy": 0.014,
+  "pf": 1.14,
+  "avg_win": 9.46,
   "avg_loss": -8.27
  },
  "equity_curve": [
@@ -1459,7 +1450,7 @@
  ],
  "funnel": {
   "day": "2026-11-16",
-  "setups": 146,
+  "setups": 158,
   "orders": 4,
   "filled": 4,
   "unfilled": 0,
@@ -1469,10 +1460,10 @@
    "skip-chase": 5,
    "skip-dup": 1,
    "skip-market": 1,
-   "skip-rs": 12,
+   "skip-rs": 14,
    "skip-spread": 5,
    "skip-stale": 2,
-   "skip-vol": 116
+   "skip-vol": 126
   }
  },
  "funnel_days": [
@@ -1638,7 +1629,7 @@
   },
   {
    "day": "2026-11-16",
-   "setups": 146,
+   "setups": 158,
    "orders": 4,
    "filled": 4,
    "unfilled": 0,
@@ -1648,10 +1639,10 @@
     "skip-chase": 5,
     "skip-dup": 1,
     "skip-market": 1,
-    "skip-rs": 12,
+    "skip-rs": 14,
     "skip-spread": 5,
     "skip-stale": 2,
-    "skip-vol": 116
+    "skip-vol": 126
    }
   }
  ],

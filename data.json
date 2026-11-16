@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-16T20:41:31+00:00",
- "heartbeat": "2026-11-16T20:41:31+00:00",
+ "updated": "2026-11-16T20:51:37+00:00",
+ "heartbeat": "2026-11-16T20:51:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10071.12,
+  "equity": 10065.44,
   "last_equity": 10059.17,
-  "day_change": 11.95,
-  "total_change": 71.12
+  "day_change": 6.27,
+  "total_change": 65.44
  },
- "positions": [
-  {
-   "symbol": "TSLA",
-   "side": "short",
-   "qty": 3,
-   "entry": 375.66,
-   "current": 377.14,
-   "pl": -4.44
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "TSLA",
@@ -27,19 +18,19 @@
    "side": "short",
    "day": "2026-11-16",
    "opened": "2026-11-16T19:45:26.661944+00:00",
-   "closed": null,
+   "closed": "2026-11-16T20:51:34.027827257+00:00",
    "entry": 375.66,
    "stop": 390.05,
    "target": 362.78,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 379.03,
+   "pnl": -10.12,
+   "r": -0.234,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "double_top neckline_break<376.22",
    "max_r": null,
    "key": "t171",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 168,
-  "pnl": 100.42,
-  "winrate": 0.5,
-  "expectancy": 0.014,
-  "pf": 1.14,
+  "n": 169,
+  "pnl": 90.3,
+  "winrate": 0.497,
+  "expectancy": 0.013,
+  "pf": 1.13,
   "avg_win": 9.46,
-  "avg_loss": -8.27
+  "avg_loss": -8.29
  },
  "equity_curve": [
   {

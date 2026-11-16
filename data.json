@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-16T16:49:31+00:00",
- "heartbeat": "2026-11-16T16:49:31+00:00",
+ "updated": "2026-11-16T16:59:39+00:00",
+ "heartbeat": "2026-11-16T16:59:39+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10072.81,
+  "equity": 10070.01,
   "last_equity": 10059.17,
-  "day_change": 13.64,
-  "total_change": 72.81
+  "day_change": 10.84,
+  "total_change": 70.01
  },
  "positions": [
   {
@@ -16,24 +16,8 @@
    "side": "long",
    "qty": 78,
    "entry": 25.55,
-   "current": 25.75,
-   "pl": 15.37
-  },
-  {
-   "symbol": "GOOGL",
-   "side": "short",
-   "qty": 6,
-   "entry": 289.16,
-   "current": 288.12,
-   "pl": 6.25
-  },
-  {
-   "symbol": "MDT",
-   "side": "long",
-   "qty": 19,
-   "entry": 103.61,
-   "current": 103.19,
-   "pl": -7.98
+   "current": 25.73,
+   "pl": 13.81
   }
  ],
  "trades": [
@@ -64,19 +48,19 @@
    "side": "long",
    "day": "2026-11-16",
    "opened": "2026-11-16T14:50:27.929202+00:00",
-   "closed": null,
+   "closed": "2026-11-16T16:50:39.515629971+00:00",
    "entry": 103.61,
    "stop": 102.12,
    "target": 105.72,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 103.18,
+   "pnl": -8.17,
+   "r": -0.289,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>103.32",
    "max_r": 0.27,
    "key": "t168",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -85,19 +69,19 @@
    "side": "short",
    "day": "2026-11-16",
    "opened": "2026-11-16T14:50:25.782124+00:00",
-   "closed": null,
+   "closed": "2026-11-16T16:50:35.119472434+00:00",
    "entry": 289.16,
    "stop": 296.35,
    "target": 281.96,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 288.29,
+   "pnl": 5.2,
+   "r": 0.121,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "H&S neckline_break<293.45",
    "max_r": 0.5,
    "key": "t167",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1299,12 +1283,12 @@
   }
  ],
  "stats": {
-  "n": 164,
-  "pnl": 84.03,
+  "n": 166,
+  "pnl": 81.06,
   "winrate": 0.494,
-  "expectancy": 0.01,
+  "expectancy": 0.009,
   "pf": 1.12,
-  "avg_win": 9.51,
+  "avg_win": 9.46,
   "avg_loss": -8.27
  },
  "equity_curve": [

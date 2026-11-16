@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-16T16:17:29+00:00",
- "heartbeat": "2026-11-16T16:17:29+00:00",
+ "updated": "2026-11-16T16:27:40+00:00",
+ "heartbeat": "2026-11-16T16:27:40+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10067.74,
+  "equity": 10065.37,
   "last_equity": 10059.17,
-  "day_change": 8.57,
-  "total_change": 67.74
+  "day_change": 6.2,
+  "total_change": 65.37
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "long",
    "qty": 78,
    "entry": 25.55,
-   "current": 25.64,
-   "pl": 7.57
+   "current": 25.68,
+   "pl": 9.91
   },
   {
    "symbol": "GOOGL",
    "side": "short",
    "qty": 6,
    "entry": 289.16,
-   "current": 288.23,
-   "pl": 5.56
+   "current": 288.73,
+   "pl": 2.56
   },
   {
    "symbol": "MDT",
    "side": "long",
    "qty": 19,
    "entry": 103.61,
-   "current": 103.37,
-   "pl": -4.56
+   "current": 103.28,
+   "pl": -6.27
   }
  ],
  "trades": [

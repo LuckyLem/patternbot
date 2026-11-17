@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-17T15:46:28+00:00",
- "heartbeat": "2026-11-17T15:46:28+00:00",
+ "updated": "2026-11-17T15:56:39+00:00",
+ "heartbeat": "2026-11-17T15:56:39+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10091.77,
+  "equity": 10077.57,
   "last_equity": 10065.24,
-  "day_change": 26.53,
-  "total_change": 91.77
+  "day_change": 12.33,
+  "total_change": 77.57
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "short",
    "qty": 40,
    "entry": 49.34,
-   "current": 49.27,
-   "pl": 2.56
+   "current": 49.31,
+   "pl": 1.16
   },
   {
    "symbol": "MCD",
    "side": "long",
    "qty": 7,
    "entry": 278.05,
-   "current": 277.0,
-   "pl": -7.35
+   "current": 276.5,
+   "pl": -10.88
   },
   {
    "symbol": "NVDA",
    "side": "short",
    "qty": 9,
    "entry": 154.35,
-   "current": 150.87,
-   "pl": 31.32
+   "current": 151.9,
+   "pl": 22.05
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<49.70",
-   "max_r": 0.07,
+   "max_r": 0.2,
    "key": "t174",
    "detail": false,
    "ai_verdict": null
@@ -95,7 +95,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<155.02",
-   "max_r": 0.72,
+   "max_r": 0.8,
    "key": "t172",
    "detail": false,
    "ai_verdict": null

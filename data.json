@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-17T16:39:34+00:00",
- "heartbeat": "2026-11-17T16:39:34+00:00",
+ "updated": "2026-11-17T16:50:31+00:00",
+ "heartbeat": "2026-11-17T16:50:31+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10074.05,
+  "equity": 10070.87,
   "last_equity": 10065.24,
-  "day_change": 8.81,
-  "total_change": 74.05
+  "day_change": 5.63,
+  "total_change": 70.87
  },
  "positions": [
   {
@@ -17,23 +17,23 @@
    "qty": 40,
    "entry": 49.34,
    "current": 49.13,
-   "pl": 8.16
+   "pl": 8.36
   },
   {
    "symbol": "MCD",
    "side": "long",
    "qty": 7,
    "entry": 278.05,
-   "current": 276.95,
-   "pl": -7.7
+   "current": 276.29,
+   "pl": -12.36
   },
   {
    "symbol": "NVDA",
    "side": "short",
    "qty": 10,
    "entry": 154.59,
-   "current": 153.83,
-   "pl": 7.65
+   "current": 153.65,
+   "pl": 9.44
   }
  ],
  "trades": [
@@ -53,7 +53,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<155.02",
-   "max_r": 0.28,
+   "max_r": 0.32,
    "key": "t175",
    "detail": false,
    "ai_verdict": null
@@ -74,7 +74,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "desc_triangle break<49.70",
-   "max_r": 0.24,
+   "max_r": 0.28,
    "key": "t174",
    "detail": false,
    "ai_verdict": null
@@ -1479,7 +1479,7 @@
  ],
  "funnel": {
   "day": "2026-11-17",
-  "setups": 72,
+  "setups": 80,
   "orders": 4,
   "filled": 4,
   "unfilled": 0,
@@ -1492,7 +1492,7 @@
    "skip-rs": 9,
    "skip-spread": 7,
    "skip-stale": 1,
-   "skip-vol": 42
+   "skip-vol": 50
   }
  },
  "funnel_days": [
@@ -1659,7 +1659,7 @@
   },
   {
    "day": "2026-11-17",
-   "setups": 72,
+   "setups": 80,
    "orders": 4,
    "filled": 4,
    "unfilled": 0,
@@ -1672,7 +1672,7 @@
     "skip-rs": 9,
     "skip-spread": 7,
     "skip-stale": 1,
-    "skip-vol": 42
+    "skip-vol": 50
    }
   }
  ],

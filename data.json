@@ -1,31 +1,23 @@
 {
  "version": 1,
- "updated": "2026-11-17T17:43:35+00:00",
- "heartbeat": "2026-11-17T17:43:35+00:00",
+ "updated": "2026-11-17T17:54:35+00:00",
+ "heartbeat": "2026-11-17T17:54:35+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10068.84,
+  "equity": 10072.23,
   "last_equity": 10065.24,
-  "day_change": 3.6,
-  "total_change": 68.84
+  "day_change": 6.99,
+  "total_change": 72.23
  },
  "positions": [
-  {
-   "symbol": "BAC",
-   "side": "short",
-   "qty": 40,
-   "entry": 49.34,
-   "current": 49.26,
-   "pl": 3.36
-  },
   {
    "symbol": "NVDA",
    "side": "short",
    "qty": 10,
    "entry": 154.59,
-   "current": 153.93,
-   "pl": 6.64
+   "current": 153.57,
+   "pl": 10.24
   }
  ],
  "trades": [
@@ -56,19 +48,19 @@
    "side": "short",
    "day": "2026-11-17",
    "opened": "2026-11-17T15:45:27.217146+00:00",
-   "closed": null,
+   "closed": "2026-11-17T17:46:33.445551437+00:00",
    "entry": 49.34,
    "stop": 50.2,
    "target": 48.37,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 49.26,
+   "pnl": 3.16,
+   "r": 0.092,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "desc_triangle break<49.70",
    "max_r": 0.28,
    "key": "t174",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,12 +1283,12 @@
   }
  ],
  "stats": {
-  "n": 171,
-  "pnl": 83.9,
-  "winrate": 0.497,
-  "expectancy": 0.011,
+  "n": 172,
+  "pnl": 87.06,
+  "winrate": 0.5,
+  "expectancy": 0.012,
   "pf": 1.12,
-  "avg_win": 9.36,
+  "avg_win": 9.28,
   "avg_loss": -8.27
  },
  "equity_curve": [
@@ -1471,7 +1463,7 @@
  ],
  "funnel": {
   "day": "2026-11-17",
-  "setups": 86,
+  "setups": 90,
   "orders": 4,
   "filled": 4,
   "unfilled": 0,
@@ -1484,7 +1476,7 @@
    "skip-rs": 9,
    "skip-spread": 7,
    "skip-stale": 1,
-   "skip-vol": 56
+   "skip-vol": 60
   }
  },
  "funnel_days": [
@@ -1651,7 +1643,7 @@
   },
   {
    "day": "2026-11-17",
-   "setups": 86,
+   "setups": 90,
    "orders": 4,
    "filled": 4,
    "unfilled": 0,
@@ -1664,7 +1656,7 @@
     "skip-rs": 9,
     "skip-spread": 7,
     "skip-stale": 1,
-    "skip-vol": 56
+    "skip-vol": 60
    }
   }
  ],

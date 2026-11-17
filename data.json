@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-17T15:56:39+00:00",
- "heartbeat": "2026-11-17T15:56:39+00:00",
+ "updated": "2026-11-17T16:07:37+00:00",
+ "heartbeat": "2026-11-17T16:07:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10077.57,
+  "equity": 10049.2,
   "last_equity": 10065.24,
-  "day_change": 12.33,
-  "total_change": 77.57
+  "day_change": -16.04,
+  "total_change": 49.2
  },
  "positions": [
   {
@@ -16,24 +16,16 @@
    "side": "short",
    "qty": 40,
    "entry": 49.34,
-   "current": 49.31,
-   "pl": 1.16
+   "current": 49.45,
+   "pl": -4.64
   },
   {
    "symbol": "MCD",
    "side": "long",
    "qty": 7,
    "entry": 278.05,
-   "current": 276.5,
-   "pl": -10.88
-  },
-  {
-   "symbol": "NVDA",
-   "side": "short",
-   "qty": 9,
-   "entry": 154.35,
-   "current": 151.9,
-   "pl": 22.05
+   "current": 276.39,
+   "pl": -11.59
   }
  ],
  "trades": [
@@ -85,19 +77,19 @@
    "side": "short",
    "day": "2026-11-17",
    "opened": "2026-11-17T15:15:26.125703+00:00",
-   "closed": null,
+   "closed": "2026-11-17T16:01:35.664709768+00:00",
    "entry": 154.35,
    "stop": 159.13,
    "target": 146.8,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 154.33,
+   "pnl": 0.18,
+   "r": 0.004,
+   "status": "closed",
+   "exit_source": "sl",
    "reason": "rectangle break<155.02",
    "max_r": 0.8,
    "key": "t172",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1299,12 +1291,12 @@
   }
  ],
  "stats": {
-  "n": 169,
-  "pnl": 90.3,
-  "winrate": 0.497,
+  "n": 170,
+  "pnl": 90.48,
+  "winrate": 0.5,
   "expectancy": 0.013,
   "pf": 1.13,
-  "avg_win": 9.46,
+  "avg_win": 9.36,
   "avg_loss": -8.29
  },
  "equity_curve": [
@@ -1479,7 +1471,7 @@
  ],
  "funnel": {
   "day": "2026-11-17",
-  "setups": 55,
+  "setups": 64,
   "orders": 3,
   "filled": 3,
   "unfilled": 0,
@@ -1489,10 +1481,10 @@
    "skip-chase": 6,
    "skip-dup": 1,
    "skip-rr": 2,
-   "skip-rs": 5,
+   "skip-rs": 8,
    "skip-spread": 7,
    "skip-stale": 1,
-   "skip-vol": 30
+   "skip-vol": 36
   }
  },
  "funnel_days": [
@@ -1659,7 +1651,7 @@
   },
   {
    "day": "2026-11-17",
-   "setups": 55,
+   "setups": 64,
    "orders": 3,
    "filled": 3,
    "unfilled": 0,
@@ -1669,10 +1661,10 @@
     "skip-chase": 6,
     "skip-dup": 1,
     "skip-rr": 2,
-    "skip-rs": 5,
+    "skip-rs": 8,
     "skip-spread": 7,
     "skip-stale": 1,
-    "skip-vol": 30
+    "skip-vol": 36
    }
   }
  ],

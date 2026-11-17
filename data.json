@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-17T15:24:33+00:00",
- "heartbeat": "2026-11-17T15:24:33+00:00",
+ "updated": "2026-11-17T15:35:28+00:00",
+ "heartbeat": "2026-11-17T15:35:28+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10063.74,
+  "equity": 10086.86,
   "last_equity": 10065.24,
-  "day_change": -1.5,
-  "total_change": 63.74
+  "day_change": 21.62,
+  "total_change": 86.86
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "long",
    "qty": 7,
    "entry": 278.05,
-   "current": 277.81,
-   "pl": -1.68
+   "current": 278.92,
+   "pl": 6.09
   },
   {
    "symbol": "NVDA",
    "side": "short",
    "qty": 9,
    "entry": 154.35,
-   "current": 154.32,
-   "pl": 0.27
+   "current": 152.66,
+   "pl": 15.21
   }
  ],
  "trades": [
@@ -45,7 +45,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break>277.86",
-   "max_r": 0.08,
+   "max_r": 0.28,
    "key": "t173",
    "detail": false,
    "ai_verdict": null
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<155.02",
-   "max_r": 0.18,
+   "max_r": 0.41,
    "key": "t172",
    "detail": false,
    "ai_verdict": null
@@ -1471,18 +1471,19 @@
  ],
  "funnel": {
   "day": "2026-11-17",
-  "setups": 39,
+  "setups": 42,
   "orders": 2,
   "filled": 2,
   "unfilled": 0,
   "traded": 2,
   "coverage_from": "2026-11-17T14:50:15.949136+00:00",
   "rejected": {
-   "skip-chase": 5,
+   "skip-chase": 6,
    "skip-rr": 2,
    "skip-rs": 5,
    "skip-spread": 5,
-   "skip-vol": 20
+   "skip-stale": 1,
+   "skip-vol": 21
   }
  },
  "funnel_days": [
@@ -1649,18 +1650,19 @@
   },
   {
    "day": "2026-11-17",
-   "setups": 39,
+   "setups": 42,
    "orders": 2,
    "filled": 2,
    "unfilled": 0,
    "traded": 2,
    "coverage_from": "2026-11-17T14:50:15.949136+00:00",
    "rejected": {
-    "skip-chase": 5,
+    "skip-chase": 6,
     "skip-rr": 2,
     "skip-rs": 5,
     "skip-spread": 5,
-    "skip-vol": 20
+    "skip-stale": 1,
+    "skip-vol": 21
    }
   }
  ],

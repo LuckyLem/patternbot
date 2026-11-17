@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-17T17:33:27+00:00",
- "heartbeat": "2026-11-17T17:33:27+00:00",
+ "updated": "2026-11-17T17:43:35+00:00",
+ "heartbeat": "2026-11-17T17:43:35+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10062.94,
+  "equity": 10068.84,
   "last_equity": 10065.24,
-  "day_change": -2.3,
-  "total_change": 62.94
+  "day_change": 3.6,
+  "total_change": 68.84
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 40,
    "entry": 49.34,
-   "current": 49.25,
-   "pl": 3.56
+   "current": 49.26,
+   "pl": 3.36
   },
   {
    "symbol": "NVDA",
    "side": "short",
    "qty": 10,
    "entry": 154.59,
-   "current": 154.55,
-   "pl": 0.47
+   "current": 153.93,
+   "pl": 6.64
   }
  ],
  "trades": [

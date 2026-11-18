@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-18T20:41:26+00:00",
- "heartbeat": "2026-11-18T20:41:26+00:00",
+ "updated": "2026-11-18T20:51:33+00:00",
+ "heartbeat": "2026-11-18T20:51:33+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10079.26,
+  "equity": 10067.3,
   "last_equity": 10068.68,
-  "day_change": 10.58,
-  "total_change": 79.26
+  "day_change": -1.38,
+  "total_change": 67.3
  },
- "positions": [
-  {
-   "symbol": "ZTS",
-   "side": "long",
-   "qty": 23,
-   "entry": 85.7,
-   "current": 86.16,
-   "pl": 10.58
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "ZTS",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-11-18",
    "opened": "2026-11-18T19:45:27.609754+00:00",
-   "closed": null,
+   "closed": "2026-11-18T20:51:29.899525136+00:00",
    "entry": 85.7,
    "stop": 83.9,
    "target": 88.78,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 85.64,
+   "pnl": -1.38,
+   "r": -0.033,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "rectangle break>85.53",
    "max_r": 0.46,
    "key": "t176",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 173,
-  "pnl": 93.9,
-  "winrate": 0.503,
+  "n": 174,
+  "pnl": 92.52,
+  "winrate": 0.5,
   "expectancy": 0.012,
   "pf": 1.13,
   "avg_win": 9.26,
-  "avg_loss": -8.27
+  "avg_loss": -8.19
  },
  "equity_curve": [
   {

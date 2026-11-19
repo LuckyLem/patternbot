@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-19T17:02:28+00:00",
- "heartbeat": "2026-11-19T17:02:28+00:00",
+ "updated": "2026-11-19T17:12:37+00:00",
+ "heartbeat": "2026-11-19T17:12:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10104.41,
+  "equity": 10138.31,
   "last_equity": 10067.24,
-  "day_change": 37.17,
-  "total_change": 104.41
+  "day_change": 71.07,
+  "total_change": 138.31
  },
  "positions": [
   {
@@ -16,32 +16,32 @@
    "side": "short",
    "qty": 6,
    "entry": 311.81,
-   "current": 311.54,
-   "pl": 1.63
+   "current": 309.75,
+   "pl": 12.37
   },
   {
    "symbol": "BAC",
    "side": "short",
    "qty": 41,
    "entry": 48.7,
-   "current": 48.38,
-   "pl": 13.32
+   "current": 48.16,
+   "pl": 22.34
   },
   {
    "symbol": "JPM",
    "side": "short",
    "qty": 6,
    "entry": 322.92,
-   "current": 318.97,
-   "pl": 23.7
+   "current": 318.18,
+   "pl": 28.47
   },
   {
    "symbol": "NFLX",
    "side": "short",
    "qty": 33,
    "entry": 59.27,
-   "current": 59.31,
-   "pl": -1.49
+   "current": 59.03,
+   "pl": 7.83
   }
  ],
  "trades": [
@@ -61,7 +61,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<312.20",
-   "max_r": 0.09,
+   "max_r": 0.78,
    "key": "t180",
    "detail": false,
    "ai_verdict": null
@@ -82,7 +82,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<48.74",
-   "max_r": 0.69,
+   "max_r": 1.26,
    "key": "t179",
    "detail": false,
    "ai_verdict": null
@@ -103,7 +103,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<59.41",
-   "max_r": 0.05,
+   "max_r": 0.34,
    "key": "t178",
    "detail": false,
    "ai_verdict": null
@@ -124,7 +124,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<323.72",
-   "max_r": 0.8,
+   "max_r": 1.09,
    "key": "t177",
    "detail": false,
    "ai_verdict": null

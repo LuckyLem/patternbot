@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-19T15:47:27+00:00",
- "heartbeat": "2026-11-19T15:47:27+00:00",
+ "updated": "2026-11-19T15:57:36+00:00",
+ "heartbeat": "2026-11-19T15:57:36+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10065.08,
+  "equity": 10066.76,
   "last_equity": 10067.24,
-  "day_change": -2.16,
-  "total_change": 65.08
+  "day_change": -0.48,
+  "total_change": 66.76
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 6,
    "entry": 322.92,
-   "current": 322.29,
-   "pl": 3.78
+   "current": 321.89,
+   "pl": 6.18
   },
   {
    "symbol": "NFLX",
    "side": "short",
    "qty": 33,
    "entry": 59.27,
-   "current": 59.45,
-   "pl": -5.94
+   "current": 59.49,
+   "pl": -7.26
   }
  ],
  "trades": [
@@ -66,7 +66,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<323.72",
-   "max_r": 0.24,
+   "max_r": 0.32,
    "key": "t177",
    "detail": false,
    "ai_verdict": null

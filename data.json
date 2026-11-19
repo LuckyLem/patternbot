@@ -1,69 +1,90 @@
 {
  "version": 1,
- "updated": "2026-11-19T17:12:37+00:00",
- "heartbeat": "2026-11-19T17:12:37+00:00",
+ "updated": "2026-11-19T17:23:37+00:00",
+ "heartbeat": "2026-11-19T17:23:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10138.31,
+  "equity": 10089.17,
   "last_equity": 10067.24,
-  "day_change": 71.07,
-  "total_change": 138.31
+  "day_change": 21.93,
+  "total_change": 89.17
  },
  "positions": [
-  {
-   "symbol": "AXP",
-   "side": "short",
-   "qty": 6,
-   "entry": 311.81,
-   "current": 309.75,
-   "pl": 12.37
-  },
   {
    "symbol": "BAC",
    "side": "short",
    "qty": 41,
    "entry": 48.7,
-   "current": 48.16,
-   "pl": 22.34
+   "current": 48.44,
+   "pl": 10.66
   },
   {
    "symbol": "JPM",
    "side": "short",
    "qty": 6,
    "entry": 322.92,
-   "current": 318.18,
-   "pl": 28.47
+   "current": 319.45,
+   "pl": 20.82
   },
   {
    "symbol": "NFLX",
    "side": "short",
    "qty": 33,
    "entry": 59.27,
-   "current": 59.03,
-   "pl": 7.83
+   "current": 59.34,
+   "pl": -2.31
+  },
+  {
+   "symbol": "NVDA",
+   "side": "short",
+   "qty": 7,
+   "entry": 148.58,
+   "current": 149.58,
+   "pl": -7.01
   }
  ],
  "trades": [
+  {
+   "symbol": "NVDA",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-11-19",
+   "opened": "2026-11-19T17:15:26.668415+00:00",
+   "closed": null,
+   "entry": 148.58,
+   "stop": 155.24,
+   "target": 139.83,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<150.10",
+   "max_r": 0.05,
+   "key": "t181",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "AXP",
    "pattern": "Rectangle",
    "side": "short",
    "day": "2026-11-19",
    "opened": "2026-11-19T17:00:29.503838+00:00",
-   "closed": null,
+   "closed": "2026-11-19T17:22:41.762197809+00:00",
    "entry": 311.81,
    "stop": 314.81,
    "target": 306.99,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 311.85,
+   "pnl": -0.23,
+   "r": -0.013,
+   "status": "closed",
+   "exit_source": "sl",
    "reason": "rectangle break<312.20",
    "max_r": 0.78,
    "key": "t180",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -103,7 +124,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<59.41",
-   "max_r": 0.34,
+   "max_r": 0.38,
    "key": "t178",
    "detail": false,
    "ai_verdict": null
@@ -1283,37 +1304,16 @@
    "key": "t122",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "INTC",
-   "pattern": "Rectangle",
-   "side": "short",
-   "day": "2026-10-22",
-   "opened": "2026-10-22T17:00:39.778178+00:00",
-   "closed": "2026-10-22T19:12:55.231639856+00:00",
-   "entry": 86.17,
-   "stop": 90.42,
-   "target": 78.69,
-   "exit": 85.71,
-   "pnl": 5.05,
-   "r": 0.108,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "rectangle break<86.51",
-   "max_r": 0.16,
-   "key": "t121",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
-  "n": 174,
-  "pnl": 92.52,
-  "winrate": 0.5,
+  "n": 175,
+  "pnl": 92.29,
+  "winrate": 0.497,
   "expectancy": 0.012,
   "pf": 1.13,
   "avg_win": 9.26,
-  "avg_loss": -8.19
+  "avg_loss": -8.1
  },
  "equity_curve": [
   {
@@ -1491,15 +1491,16 @@
  ],
  "funnel": {
   "day": "2026-11-19",
-  "setups": 49,
-  "orders": 4,
-  "filled": 4,
+  "setups": 56,
+  "orders": 5,
+  "filled": 5,
   "unfilled": 0,
-  "traded": 4,
+  "traded": 5,
   "coverage_from": "2026-11-19T14:50:13.764903+00:00",
   "rejected": {
    "skip-dup": 1,
    "skip-market": 1,
+   "skip-maxopen": 6,
    "skip-rr": 1,
    "skip-spread": 4,
    "skip-stale": 1,
@@ -1669,15 +1670,16 @@
   },
   {
    "day": "2026-11-19",
-   "setups": 49,
-   "orders": 4,
-   "filled": 4,
+   "setups": 56,
+   "orders": 5,
+   "filled": 5,
    "unfilled": 0,
-   "traded": 4,
+   "traded": 5,
    "coverage_from": "2026-11-19T14:50:13.764903+00:00",
    "rejected": {
     "skip-dup": 1,
     "skip-market": 1,
+    "skip-maxopen": 6,
     "skip-rr": 1,
     "skip-spread": 4,
     "skip-stale": 1,

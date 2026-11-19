@@ -1,42 +1,71 @@
 {
  "version": 1,
- "updated": "2026-11-19T16:51:33+00:00",
- "heartbeat": "2026-11-19T16:51:33+00:00",
+ "updated": "2026-11-19T17:02:28+00:00",
+ "heartbeat": "2026-11-19T17:02:28+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10061.33,
+  "equity": 10104.41,
   "last_equity": 10067.24,
-  "day_change": -5.91,
-  "total_change": 61.33
+  "day_change": 37.17,
+  "total_change": 104.41
  },
  "positions": [
+  {
+   "symbol": "AXP",
+   "side": "short",
+   "qty": 6,
+   "entry": 311.81,
+   "current": 311.54,
+   "pl": 1.63
+  },
   {
    "symbol": "BAC",
    "side": "short",
    "qty": 41,
    "entry": 48.7,
-   "current": 48.74,
-   "pl": -1.84
+   "current": 48.38,
+   "pl": 13.32
   },
   {
    "symbol": "JPM",
    "side": "short",
    "qty": 6,
    "entry": 322.92,
-   "current": 321.39,
-   "pl": 9.15
+   "current": 318.97,
+   "pl": 23.7
   },
   {
    "symbol": "NFLX",
    "side": "short",
    "qty": 33,
    "entry": 59.27,
-   "current": 59.66,
-   "pl": -13.04
+   "current": 59.31,
+   "pl": -1.49
   }
  ],
  "trades": [
+  {
+   "symbol": "AXP",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-11-19",
+   "opened": "2026-11-19T17:00:29.503838+00:00",
+   "closed": null,
+   "entry": 311.81,
+   "stop": 314.81,
+   "target": 306.99,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<312.20",
+   "max_r": 0.09,
+   "key": "t180",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "BAC",
    "pattern": "Rectangle",
@@ -53,7 +82,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<48.74",
-   "max_r": 0.21,
+   "max_r": 0.69,
    "key": "t179",
    "detail": false,
    "ai_verdict": null
@@ -95,7 +124,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<323.72",
-   "max_r": 0.48,
+   "max_r": 0.8,
    "key": "t177",
    "detail": false,
    "ai_verdict": null
@@ -1275,27 +1304,6 @@
    "key": "t121",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "MA",
-   "pattern": "Rectangle",
-   "side": "long",
-   "day": "2026-10-22",
-   "opened": "2026-10-22T15:15:35.250140+00:00",
-   "closed": "2026-10-22T17:16:35.477363785+00:00",
-   "entry": 628.08,
-   "stop": 622.69,
-   "target": 638.65,
-   "exit": 630.52,
-   "pnl": 7.33,
-   "r": 0.453,
-   "status": "closed",
-   "exit_source": "time_stop",
-   "reason": "rectangle break>628.01",
-   "max_r": 0.94,
-   "key": "t120",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1483,18 +1491,19 @@
  ],
  "funnel": {
   "day": "2026-11-19",
-  "setups": 40,
-  "orders": 3,
-  "filled": 3,
+  "setups": 49,
+  "orders": 4,
+  "filled": 4,
   "unfilled": 0,
-  "traded": 3,
+  "traded": 4,
   "coverage_from": "2026-11-19T14:50:13.764903+00:00",
   "rejected": {
+   "skip-dup": 1,
    "skip-market": 1,
    "skip-rr": 1,
-   "skip-spread": 3,
+   "skip-spread": 4,
    "skip-stale": 1,
-   "skip-vol": 31
+   "skip-vol": 37
   }
  },
  "funnel_days": [
@@ -1660,18 +1669,19 @@
   },
   {
    "day": "2026-11-19",
-   "setups": 40,
-   "orders": 3,
-   "filled": 3,
+   "setups": 49,
+   "orders": 4,
+   "filled": 4,
    "unfilled": 0,
-   "traded": 3,
+   "traded": 4,
    "coverage_from": "2026-11-19T14:50:13.764903+00:00",
    "rejected": {
+    "skip-dup": 1,
     "skip-market": 1,
     "skip-rr": 1,
-    "skip-spread": 3,
+    "skip-spread": 4,
     "skip-stale": 1,
-    "skip-vol": 31
+    "skip-vol": 37
    }
   }
  ],

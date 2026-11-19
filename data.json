@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-19T16:19:32+00:00",
- "heartbeat": "2026-11-19T16:19:32+00:00",
+ "updated": "2026-11-19T16:29:45+00:00",
+ "heartbeat": "2026-11-19T16:29:45+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10065.86,
+  "equity": 10073.21,
   "last_equity": 10067.24,
-  "day_change": -1.38,
-  "total_change": 65.86
+  "day_change": 5.97,
+  "total_change": 73.21
  },
  "positions": [
   {
@@ -16,24 +16,24 @@
    "side": "short",
    "qty": 41,
    "entry": 48.7,
-   "current": 48.71,
-   "pl": -0.41
+   "current": 48.7,
+   "pl": 0.2
   },
   {
    "symbol": "JPM",
    "side": "short",
    "qty": 6,
    "entry": 322.92,
-   "current": 321.79,
-   "pl": 6.78
+   "current": 320.81,
+   "pl": 12.69
   },
   {
    "symbol": "NFLX",
    "side": "short",
    "qty": 33,
    "entry": 59.27,
-   "current": 59.51,
-   "pl": -7.75
+   "current": 59.48,
+   "pl": -6.93
   }
  ],
  "trades": [
@@ -95,7 +95,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<323.72",
-   "max_r": 0.39,
+   "max_r": 0.48,
    "key": "t177",
    "detail": false,
    "ai_verdict": null

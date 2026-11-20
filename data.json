@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-20T08:42:37+00:00",
- "heartbeat": "2026-11-20T08:42:37+00:00",
+ "updated": "2026-11-20T08:53:33+00:00",
+ "heartbeat": "2026-11-20T08:53:33+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
-  "equity": 10086.32,
-  "last_equity": 10067.24,
-  "day_change": 19.08,
-  "total_change": 86.32
+  "equity": 10086.07,
+  "last_equity": 10086.07,
+  "day_change": 0.0,
+  "total_change": 86.07
  },
  "positions": [],
  "trades": [
@@ -1454,6 +1454,10 @@
   {
    "date": "2026-11-18",
    "equity": 10067.24
+  },
+  {
+   "date": "2026-11-19",
+   "equity": 10086.07
   }
  ],
  "funnel": {

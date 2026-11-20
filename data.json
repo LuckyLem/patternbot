@@ -1,17 +1,47 @@
 {
  "version": 1,
- "updated": "2026-11-20T15:08:36+00:00",
- "heartbeat": "2026-11-20T15:08:36+00:00",
+ "updated": "2026-11-20T15:19:26+00:00",
+ "heartbeat": "2026-11-20T15:19:26+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10086.07,
+  "equity": 10090.51,
   "last_equity": 10086.07,
-  "day_change": 0.0,
-  "total_change": 86.07
+  "day_change": 4.44,
+  "total_change": 90.51
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "CAT",
+   "side": "short",
+   "qty": 2,
+   "entry": 531.2,
+   "current": 528.98,
+   "pl": 4.44
+  }
+ ],
  "trades": [
+  {
+   "symbol": "CAT",
+   "pattern": "Rectangle",
+   "side": "short",
+   "day": "2026-11-20",
+   "opened": "2026-11-20T15:15:26.458963+00:00",
+   "closed": null,
+   "entry": 531.2,
+   "stop": 551.88,
+   "target": 504.82,
+   "exit": null,
+   "pnl": null,
+   "r": null,
+   "status": "open",
+   "exit_source": null,
+   "reason": "rectangle break<536.19",
+   "max_r": 0.12,
+   "key": "t184",
+   "detail": false,
+   "ai_verdict": null
+  },
   {
    "symbol": "LRCX",
    "pattern": "DescendingTriangle",
@@ -1250,27 +1280,6 @@
    "key": "t125",
    "detail": true,
    "ai_verdict": null
-  },
-  {
-   "symbol": "INTC",
-   "pattern": "DescendingTriangle",
-   "side": "short",
-   "day": "2026-10-22",
-   "opened": "2026-10-22T19:15:33.534481+00:00",
-   "closed": "2026-10-22T19:50:54.851617774+00:00",
-   "entry": 85.62,
-   "stop": 86.8,
-   "target": 83.67,
-   "exit": 85.13,
-   "pnl": 11.27,
-   "r": 0.416,
-   "status": "closed",
-   "exit_source": "eod",
-   "reason": "desc_triangle break<85.77",
-   "max_r": 0.77,
-   "key": "t124",
-   "detail": true,
-   "ai_verdict": null
   }
  ],
  "stats": {
@@ -1462,18 +1471,19 @@
  ],
  "funnel": {
   "day": "2026-11-20",
-  "setups": 19,
-  "orders": 0,
-  "filled": 0,
+  "setups": 29,
+  "orders": 1,
+  "filled": 1,
   "unfilled": 0,
-  "traded": 0,
+  "traded": 1,
   "coverage_from": "2026-11-20T14:50:15.657442+00:00",
   "rejected": {
-   "skip-chase": 8,
-   "skip-rr": 1,
-   "skip-spread": 2,
+   "skip-chase": 9,
+   "skip-rr": 2,
+   "skip-rs": 1,
+   "skip-spread": 3,
    "skip-stale": 1,
-   "skip-vol": 7
+   "skip-vol": 12
   }
  },
  "funnel_days": [
@@ -1643,18 +1653,19 @@
   },
   {
    "day": "2026-11-20",
-   "setups": 19,
-   "orders": 0,
-   "filled": 0,
+   "setups": 29,
+   "orders": 1,
+   "filled": 1,
    "unfilled": 0,
-   "traded": 0,
+   "traded": 1,
    "coverage_from": "2026-11-20T14:50:15.657442+00:00",
    "rejected": {
-    "skip-chase": 8,
-    "skip-rr": 1,
-    "skip-spread": 2,
+    "skip-chase": 9,
+    "skip-rr": 2,
+    "skip-rs": 1,
+    "skip-spread": 3,
     "skip-stale": 1,
-    "skip-vol": 7
+    "skip-vol": 12
    }
   }
  ],

@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-20T17:37:33+00:00",
- "heartbeat": "2026-11-20T17:37:33+00:00",
+ "updated": "2026-11-20T17:48:29+00:00",
+ "heartbeat": "2026-11-20T17:48:29+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10106.98,
+  "equity": 10113.38,
   "last_equity": 10086.07,
-  "day_change": 20.91,
-  "total_change": 106.98
+  "day_change": 27.31,
+  "total_change": 113.38
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 2,
    "entry": 531.2,
-   "current": 516.1,
-   "pl": 30.2
+   "current": 513.71,
+   "pl": 34.98
   },
   {
    "symbol": "INTU",
    "side": "short",
    "qty": 2,
    "entry": 279.87,
-   "current": 283.81,
-   "pl": -7.88
+   "current": 283.0,
+   "pl": -6.26
   }
  ],
  "trades": [
@@ -87,7 +87,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<536.19",
-   "max_r": 0.81,
+   "max_r": 0.85,
    "key": "t184",
    "detail": false,
    "ai_verdict": null
@@ -1479,7 +1479,7 @@
  ],
  "funnel": {
   "day": "2026-11-20",
-  "setups": 68,
+  "setups": 70,
   "orders": 3,
   "filled": 3,
   "unfilled": 0,
@@ -1491,7 +1491,7 @@
    "skip-rs": 1,
    "skip-spread": 6,
    "skip-stale": 1,
-   "skip-vol": 46
+   "skip-vol": 48
   }
  },
  "funnel_days": [
@@ -1661,7 +1661,7 @@
   },
   {
    "day": "2026-11-20",
-   "setups": 68,
+   "setups": 70,
    "orders": 3,
    "filled": 3,
    "unfilled": 0,
@@ -1673,7 +1673,7 @@
     "skip-rs": 1,
     "skip-spread": 6,
     "skip-stale": 1,
-    "skip-vol": 46
+    "skip-vol": 48
    }
   }
  ],

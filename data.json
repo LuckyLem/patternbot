@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-20T18:31:25+00:00",
- "heartbeat": "2026-11-20T18:31:25+00:00",
+ "updated": "2026-11-20T18:41:36+00:00",
+ "heartbeat": "2026-11-20T18:41:36+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10116.3,
+  "equity": 10110.26,
   "last_equity": 10086.07,
-  "day_change": 30.23,
-  "total_change": 116.3
+  "day_change": 24.19,
+  "total_change": 110.26
  },
- "positions": [
-  {
-   "symbol": "CAT",
-   "side": "short",
-   "qty": 2,
-   "entry": 531.2,
-   "current": 514.7,
-   "pl": 33.0
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "INTU",
@@ -69,19 +60,19 @@
    "side": "short",
    "day": "2026-11-20",
    "opened": "2026-11-20T15:15:26.458963+00:00",
-   "closed": null,
+   "closed": "2026-11-20T18:35:27.612936573+00:00",
    "entry": 531.2,
    "stop": 551.88,
    "target": 504.82,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 517.72,
+   "pnl": 26.96,
+   "r": 0.652,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break<536.19",
    "max_r": 0.9,
    "key": "t184",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 183,
-  "pnl": 108.83,
-  "winrate": 0.497,
-  "expectancy": 0.014,
-  "pf": 1.15,
-  "avg_win": 9.12,
+  "n": 184,
+  "pnl": 135.79,
+  "winrate": 0.5,
+  "expectancy": 0.017,
+  "pf": 1.19,
+  "avg_win": 9.32,
   "avg_loss": -7.84
  },
  "equity_curve": [

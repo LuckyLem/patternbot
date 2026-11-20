@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-20T18:09:34+00:00",
- "heartbeat": "2026-11-20T18:09:34+00:00",
+ "updated": "2026-11-20T18:20:32+00:00",
+ "heartbeat": "2026-11-20T18:20:32+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10115.3,
+  "equity": 10113.52,
   "last_equity": 10086.07,
-  "day_change": 29.23,
-  "total_change": 115.3
+  "day_change": 27.45,
+  "total_change": 113.52
  },
  "positions": [
   {
@@ -16,16 +16,8 @@
    "side": "short",
    "qty": 2,
    "entry": 531.2,
-   "current": 514.68,
-   "pl": 33.04
-  },
-  {
-   "symbol": "INTU",
-   "side": "short",
-   "qty": 2,
-   "entry": 279.87,
-   "current": 281.07,
-   "pl": -2.4
+   "current": 516.09,
+   "pl": 30.22
   }
  ],
  "trades": [
@@ -35,19 +27,19 @@
    "side": "short",
    "day": "2026-11-20",
    "opened": "2026-11-20T16:15:27.380311+00:00",
-   "closed": null,
+   "closed": "2026-11-20T18:16:28.257092394+00:00",
    "entry": 279.87,
    "stop": 301.08,
    "target": 251.98,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 280.55,
+   "pnl": -1.36,
+   "r": -0.032,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "H&S neckline_break<281.27",
    "max_r": 0.12,
    "key": "t186",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1291,13 +1283,13 @@
   }
  ],
  "stats": {
-  "n": 182,
-  "pnl": 110.19,
-  "winrate": 0.5,
+  "n": 183,
+  "pnl": 108.83,
+  "winrate": 0.497,
   "expectancy": 0.014,
   "pf": 1.15,
   "avg_win": 9.12,
-  "avg_loss": -7.91
+  "avg_loss": -7.84
  },
  "equity_curve": [
   {
@@ -1479,7 +1471,7 @@
  ],
  "funnel": {
   "day": "2026-11-20",
-  "setups": 72,
+  "setups": 77,
   "orders": 3,
   "filled": 3,
   "unfilled": 0,
@@ -1491,7 +1483,7 @@
    "skip-rs": 1,
    "skip-spread": 6,
    "skip-stale": 1,
-   "skip-vol": 50
+   "skip-vol": 55
   }
  },
  "funnel_days": [
@@ -1661,7 +1653,7 @@
   },
   {
    "day": "2026-11-20",
-   "setups": 72,
+   "setups": 77,
    "orders": 3,
    "filled": 3,
    "unfilled": 0,
@@ -1673,7 +1665,7 @@
     "skip-rs": 1,
     "skip-spread": 6,
     "skip-stale": 1,
-    "skip-vol": 50
+    "skip-vol": 55
    }
   }
  ],

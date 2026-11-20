@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-11-20T20:07:32+00:00",
- "heartbeat": "2026-11-20T20:07:32+00:00",
+ "updated": "2026-11-20T20:18:25+00:00",
+ "heartbeat": "2026-11-20T20:18:25+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
@@ -1462,7 +1462,7 @@
  ],
  "funnel": {
   "day": "2026-11-20",
-  "setups": 123,
+  "setups": 131,
   "orders": 3,
   "filled": 3,
   "unfilled": 0,
@@ -1471,10 +1471,10 @@
   "rejected": {
    "skip-chase": 9,
    "skip-rr": 3,
-   "skip-rs": 4,
+   "skip-rs": 6,
    "skip-spread": 7,
    "skip-stale": 1,
-   "skip-vol": 96
+   "skip-vol": 102
   }
  },
  "funnel_days": [
@@ -1644,7 +1644,7 @@
   },
   {
    "day": "2026-11-20",
-   "setups": 123,
+   "setups": 131,
    "orders": 3,
    "filled": 3,
    "unfilled": 0,
@@ -1653,10 +1653,10 @@
    "rejected": {
     "skip-chase": 9,
     "skip-rr": 3,
-    "skip-rs": 4,
+    "skip-rs": 6,
     "skip-spread": 7,
     "skip-stale": 1,
-    "skip-vol": 96
+    "skip-vol": 102
    }
   }
  ],

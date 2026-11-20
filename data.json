@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-20T17:48:29+00:00",
- "heartbeat": "2026-11-20T17:48:29+00:00",
+ "updated": "2026-11-20T17:58:37+00:00",
+ "heartbeat": "2026-11-20T17:58:37+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10113.38,
+  "equity": 10114.91,
   "last_equity": 10086.07,
-  "day_change": 27.31,
-  "total_change": 113.38
+  "day_change": 28.84,
+  "total_change": 114.91
  },
  "positions": [
   {
@@ -16,16 +16,16 @@
    "side": "short",
    "qty": 2,
    "entry": 531.2,
-   "current": 513.71,
-   "pl": 34.98
+   "current": 513.51,
+   "pl": 35.38
   },
   {
    "symbol": "INTU",
    "side": "short",
    "qty": 2,
    "entry": 279.87,
-   "current": 283.0,
-   "pl": -6.26
+   "current": 282.44,
+   "pl": -5.13
   }
  ],
  "trades": [
@@ -87,7 +87,7 @@
    "status": "open",
    "exit_source": null,
    "reason": "rectangle break<536.19",
-   "max_r": 0.85,
+   "max_r": 0.9,
    "key": "t184",
    "detail": false,
    "ai_verdict": null

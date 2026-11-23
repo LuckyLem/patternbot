@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-11-23T21:05:29+00:00",
- "heartbeat": "2026-11-23T21:05:29+00:00",
+ "updated": "2026-11-23T21:05:36+00:00",
+ "heartbeat": "2026-11-23T21:05:36+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1661,6 +1661,14 @@
   "universe": 150
  },
  "review": {
+  "title": "Tagesreview 2026-11-23",
+  "kind": "daily",
+  "day": "2026-11-23",
+  "markdown": "# Tagesreview 2026-11-23\n\n_Erstellt 2026-11-23 21:05 UTC | Datenbasis: Handelstag 2026-11-23 | 1 Trade(s) erfasst_\n\n## 1. Zahlen\n\n| Kennzahl | Wert | Gesund? |\n|---|---|---|\n| Abgeschlossene Trades | 1 | zu wenig fuer ein Urteil |\n| Trefferquote | 0% | - |\n| Ergebnis | -2.43 $ | NEGATIV |\n| Durchschn. Gewinn / Verlust | +0.00 / -2.43 $ | PROBLEM Verlierer groesser |\n| Profitfaktor | 0.00 | NEGATIV <1,0 |\n| **Erwartungswert je Trade** | **-0.09R** | NEGATIV |\n| Ergebnis nach Kosten (0,03R Long / 0,05R Short) | -3.23 $ (-0.12R, Kosten 0.80 $) | NEGATIV |\n| **Erwartungswert nach Kosten** | **-0.12R** | NEGATIV |\n\n> **1 Trades sind statistisch noch kein Urteil.** Aussagekraeftig wird es ab ca. 60. Alles hier ist Beobachtung, noch kein Beweis.\n\n## 2. Aufschluesselung\n\n**Nach Pattern**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| AscendingTriangle | 1 | 0 | -2.43 $ | -0.09 |\n\n**Nach Ausstiegsgrund**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Tagesende-Glattstellung | 1 | 0 | -2.43 $ | -0.09 |\n\n**Nach Richtung**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Long | 1 | 0 | -2.43 $ | -0.09 |\n\n## 3. Jeder einzelne Trade\n\n#### CMCSA - AscendingTriangle (LONG)\n\n- **Warum eingestiegen:** asc_triangle break>24.74\n- **Plan:** Einstieg 24.79 | Stop 24.46 | Ziel 25.20 | 81 Stueck\n- **Warum ausgestiegen:** Tagesende-Glattstellung\n- **Ergebnis:** Ausstieg 24.76 | **-2.43 $** | -0.09R\n- **Haltedauer:** 51 Minuten\n- Hoechststand im Trade: +0.12R\n\n## 4. Filter\n\n**Was der Bot bewusst NICHT gehandelt hat** (die Filter sind die halbe Strategie)\n\n| Filter | Abgelehnt | Warum |\n|---|---|---|\n| `skip-vol` | 86 | zu wenig Volumen beim Ausbruch (Ausbrueche ohne Volumen scheitern meist) |\n| `skip-chase` | 6 | Preis war schon aus der Einstiegszone gelaufen (kein Hinterherjagen) |\n| `skip-rr` | 2 | - |\n| `skip-spread` | 1 | - |\n| `skip-stale` | 1 | Signal war zu alt (Pattern nicht mehr gueltig) |\n\n## 5. Bewertung\n\n### Was funktioniert hat\n\n- _Nichts mit genug Datenpunkten (mind. 3 Trades) war klar positiv._\n\n### Was nicht funktioniert hat\n\n- _Keine wiederkehrenden Probleme erkennbar._\n",
+  "headline": "1 Trade(s), -2.43 $. Statistisch noch kein Urteil - aussagekraeftig ab ca. 60.",
+  "ai": false
+ },
+ "review_week": {
   "title": "Wochenreview 2026-11-20",
   "kind": "weekly",
   "day": "2026-11-20",

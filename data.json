@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-23T20:44:29+00:00",
- "heartbeat": "2026-11-23T20:44:29+00:00",
+ "updated": "2026-11-23T20:55:30+00:00",
+ "heartbeat": "2026-11-23T20:55:30+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10112.22,
+  "equity": 10107.76,
   "last_equity": 10110.19,
-  "day_change": 2.03,
-  "total_change": 112.22
+  "day_change": -2.43,
+  "total_change": 107.76
  },
- "positions": [
-  {
-   "symbol": "CMCSA",
-   "side": "long",
-   "qty": 81,
-   "entry": 24.79,
-   "current": 24.82,
-   "pl": 2.02
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "CMCSA",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-11-23",
    "opened": "2026-11-23T20:00:29.253511+00:00",
-   "closed": null,
+   "closed": "2026-11-23T20:51:39.703362463+00:00",
    "entry": 24.79,
    "stop": 24.46,
    "target": 25.2,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 24.76,
+   "pnl": -2.43,
+   "r": -0.091,
+   "status": "closed",
+   "exit_source": "eod",
    "reason": "asc_triangle break>24.74",
    "max_r": 0.12,
    "key": "t187",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 184,
-  "pnl": 135.79,
-  "winrate": 0.5,
+  "n": 185,
+  "pnl": 133.36,
+  "winrate": 0.497,
   "expectancy": 0.017,
-  "pf": 1.19,
+  "pf": 1.18,
   "avg_win": 9.32,
-  "avg_loss": -7.84
+  "avg_loss": -7.78
  },
  "equity_curve": [
   {

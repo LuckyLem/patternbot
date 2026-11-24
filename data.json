@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-24T16:43:28+00:00",
- "heartbeat": "2026-11-24T16:43:28+00:00",
+ "updated": "2026-11-24T16:53:34+00:00",
+ "heartbeat": "2026-11-24T16:53:34+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10084.66,
+  "equity": 10085.86,
   "last_equity": 10107.7,
-  "day_change": -23.04,
-  "total_change": 84.66
+  "day_change": -21.84,
+  "total_change": 85.86
  },
- "positions": [
-  {
-   "symbol": "TMO",
-   "side": "long",
-   "qty": 2,
-   "entry": 701.37,
-   "current": 689.85,
-   "pl": -23.04
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "TMO",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-11-24",
    "opened": "2026-11-24T14:50:15.098462+00:00",
-   "closed": null,
+   "closed": "2026-11-24T16:50:30.958499262+00:00",
    "entry": 701.37,
    "stop": 684.59,
    "target": 721.41,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 690.45,
+   "pnl": -21.84,
+   "r": -0.651,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "inverse_H&S neckline_break>694.69",
    "max_r": null,
    "key": "t188",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,13 +1274,13 @@
   }
  ],
  "stats": {
-  "n": 185,
-  "pnl": 133.36,
-  "winrate": 0.497,
-  "expectancy": 0.017,
-  "pf": 1.18,
+  "n": 186,
+  "pnl": 111.52,
+  "winrate": 0.495,
+  "expectancy": 0.013,
+  "pf": 1.15,
   "avg_win": 9.32,
-  "avg_loss": -7.78
+  "avg_loss": -7.93
  },
  "equity_curve": [
   {

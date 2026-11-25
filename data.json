@@ -1,25 +1,16 @@
 {
  "version": 1,
- "updated": "2026-11-25T19:26:28+00:00",
- "heartbeat": "2026-11-25T19:26:28+00:00",
+ "updated": "2026-11-25T19:36:35+00:00",
+ "heartbeat": "2026-11-25T19:36:35+00:00",
  "market_open": true,
  "account": {
   "start": 10000.0,
-  "equity": 10091.85,
+  "equity": 10094.05,
   "last_equity": 10086.46,
-  "day_change": 5.39,
-  "total_change": 91.85
+  "day_change": 7.59,
+  "total_change": 94.05
  },
- "positions": [
-  {
-   "symbol": "ICE",
-   "side": "long",
-   "qty": 11,
-   "entry": 176.43,
-   "current": 176.92,
-   "pl": 5.39
-  }
- ],
+ "positions": [],
  "trades": [
   {
    "symbol": "ICE",
@@ -27,19 +18,19 @@
    "side": "long",
    "day": "2026-11-25",
    "opened": "2026-11-25T17:30:29.114049+00:00",
-   "closed": null,
+   "closed": "2026-11-25T19:31:27.931199594+00:00",
    "entry": 176.43,
    "stop": 174.03,
    "target": 180.29,
-   "exit": null,
-   "pnl": null,
-   "r": null,
-   "status": "open",
-   "exit_source": null,
+   "exit": 177.12,
+   "pnl": 7.59,
+   "r": 0.287,
+   "status": "closed",
+   "exit_source": "time_stop",
    "reason": "rectangle break>176.12",
    "max_r": 0.48,
    "key": "t190",
-   "detail": false,
+   "detail": true,
    "ai_verdict": null
   },
   {
@@ -1283,12 +1274,12 @@
   }
  ],
  "stats": {
-  "n": 187,
-  "pnl": 112.2,
-  "winrate": 0.497,
-  "expectancy": 0.013,
-  "pf": 1.15,
-  "avg_win": 9.22,
+  "n": 188,
+  "pnl": 119.79,
+  "winrate": 0.5,
+  "expectancy": 0.015,
+  "pf": 1.16,
+  "avg_win": 9.2,
   "avg_loss": -7.93
  },
  "equity_curve": [

@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-11-26T20:56:38+00:00",
- "heartbeat": "2026-11-26T20:56:38+00:00",
+ "updated": "2026-11-26T21:05:29+00:00",
+ "heartbeat": "2026-11-26T21:05:29+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1667,11 +1667,11 @@
   "universe": 150
  },
  "review": {
-  "title": "Tagesreview 2026-11-25",
+  "title": "Tagesreview 2026-11-26",
   "kind": "daily",
-  "day": "2026-11-25",
-  "markdown": "# Tagesreview 2026-11-25\n\n_Erstellt 2026-11-25 21:05 UTC | Datenbasis: Handelstag 2026-11-25 | 1 Trade(s) erfasst_\n\n## 1. Zahlen\n\n| Kennzahl | Wert | Gesund? |\n|---|---|---|\n| Abgeschlossene Trades | 1 | zu wenig fuer ein Urteil |\n| Trefferquote | 100% | - |\n| Ergebnis | +7.59 $ | OK |\n| Durchschn. Gewinn / Verlust | +7.59 / -0.00 $ | OK Gewinner groesser |\n| **Erwartungswert je Trade** | **+0.29R** | OK positiv |\n| Ergebnis nach Kosten (0,03R Long / 0,05R Short) | +6.80 $ (+0.26R, Kosten 0.79 $) | OK |\n| **Erwartungswert nach Kosten** | **+0.26R** | OK >= +0,10R |\n\n> **1 Trades sind statistisch noch kein Urteil.** Aussagekraeftig wird es ab ca. 60. Alles hier ist Beobachtung, noch kein Beweis.\n\n## 2. Aufschluesselung\n\n**Nach Pattern**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Rectangle | 1 | 1 | +7.59 $ | +0.29 |\n\n**Nach Ausstiegsgrund**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Zeit-Stop (Pattern-Zeitfenster abgelaufen) | 1 | 1 | +7.59 $ | +0.29 |\n\n**Nach Richtung**\n\n| | Trades | Gewinner | Ergebnis | Durchschn. R |\n|---|---|---|---|---|\n| Long | 1 | 1 | +7.59 $ | +0.29 |\n\n## 3. Jeder einzelne Trade\n\n#### ICE - Rectangle (LONG)\n\n- **Warum eingestiegen:** rectangle break>176.12\n- **Plan:** Einstieg 176.43 | Stop 174.03 | Ziel 180.29 | 11 Stueck\n- **Warum ausgestiegen:** Zeit-Stop (Pattern-Zeitfenster abgelaufen)\n- **Ergebnis:** Ausstieg 177.12 | **+7.59 $** | +0.29R\n- **Haltedauer:** 121 Minuten\n- Hoechststand im Trade: +0.48R\n\n## 4. Filter\n\n**Was der Bot bewusst NICHT gehandelt hat** (die Filter sind die halbe Strategie)\n\n| Filter | Abgelehnt | Warum |\n|---|---|---|\n| `skip-vol` | 279 | zu wenig Volumen beim Ausbruch (Ausbrueche ohne Volumen scheitern meist) |\n| `skip-chase` | 14 | Preis war schon aus der Einstiegszone gelaufen (kein Hinterherjagen) |\n| `skip-spread` | 11 | - |\n| `skip-rr` | 10 | - |\n| `skip-market` | 5 | - |\n| `skip-rs` | 5 | relative Staerke/Schwaeche passte nicht zum Markt |\n| `skip-stale` | 4 | Signal war zu alt (Pattern nicht mehr gueltig) |\n| `skip-dup` | 3 | - |\n\n## 5. Bewertung\n\n### Was funktioniert hat\n\n- _Nichts mit genug Datenpunkten (mind. 3 Trades) war klar positiv._\n\n### Was nicht funktioniert hat\n\n- _Keine wiederkehrenden Probleme erkennbar._\n",
-  "headline": "1 Trade(s), +7.59 $. Statistisch noch kein Urteil - aussagekraeftig ab ca. 60.",
+  "day": "2026-11-26",
+  "markdown": "# Tagesreview 2026-11-26\n\n_Erstellt 2026-11-26 21:05 UTC | Datenbasis: Handelstag 2026-11-26 | 0 Trade(s) erfasst_\n\n## 1. Zahlen\n\n_Keine abgeschlossenen Trades in diesem Zeitraum._\n\n## 2. Aufschluesselung\n\n_Keine Daten._\n\n## 3. Jeder einzelne Trade\n\n_Keine Trades in diesem Zeitraum._\n\n## 4. Filter\n\n**Was der Bot bewusst NICHT gehandelt hat** (die Filter sind die halbe Strategie)\n\n| Filter | Abgelehnt | Warum |\n|---|---|---|\n| `skip-vol` | 193 | zu wenig Volumen beim Ausbruch (Ausbrueche ohne Volumen scheitern meist) |\n| `skip-spread` | 10 | - |\n| `skip-chase` | 8 | Preis war schon aus der Einstiegszone gelaufen (kein Hinterherjagen) |\n| `skip-rr` | 8 | - |\n| `skip-market` | 5 | - |\n| `skip-rs` | 5 | relative Staerke/Schwaeche passte nicht zum Markt |\n| `skip-dup` | 3 | - |\n| `skip-stale` | 3 | Signal war zu alt (Pattern nicht mehr gueltig) |\n\n## 5. Bewertung\n\n_Zu wenig Daten._\n",
+  "headline": "Keine abgeschlossenen Trades in diesem Zeitraum.",
   "ai": false
  },
  "review_week": {

@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated": "2026-11-27T21:03:26+00:00",
- "heartbeat": "2026-11-27T21:03:26+00:00",
+ "updated": "2026-11-27T21:05:30+00:00",
+ "heartbeat": "2026-11-27T21:05:30+00:00",
  "market_open": false,
  "account": {
   "start": 10000.0,
@@ -1654,10 +1654,10 @@
   "universe": 150
  },
  "review": {
-  "title": "Tagesreview 2026-11-26",
+  "title": "Tagesreview 2026-11-27",
   "kind": "daily",
-  "day": "2026-11-26",
-  "markdown": "# Tagesreview 2026-11-26\n\n_Erstellt 2026-11-26 21:05 UTC | Datenbasis: Handelstag 2026-11-26 | 0 Trade(s) erfasst_\n\n## 1. Zahlen\n\n_Keine abgeschlossenen Trades in diesem Zeitraum._\n\n## 2. Aufschluesselung\n\n_Keine Daten._\n\n## 3. Jeder einzelne Trade\n\n_Keine Trades in diesem Zeitraum._\n\n## 4. Filter\n\n**Was der Bot bewusst NICHT gehandelt hat** (die Filter sind die halbe Strategie)\n\n| Filter | Abgelehnt | Warum |\n|---|---|---|\n| `skip-vol` | 193 | zu wenig Volumen beim Ausbruch (Ausbrueche ohne Volumen scheitern meist) |\n| `skip-spread` | 10 | - |\n| `skip-chase` | 8 | Preis war schon aus der Einstiegszone gelaufen (kein Hinterherjagen) |\n| `skip-rr` | 8 | - |\n| `skip-market` | 5 | - |\n| `skip-rs` | 5 | relative Staerke/Schwaeche passte nicht zum Markt |\n| `skip-dup` | 3 | - |\n| `skip-stale` | 3 | Signal war zu alt (Pattern nicht mehr gueltig) |\n\n## 5. Bewertung\n\n_Zu wenig Daten._\n",
+  "day": "2026-11-27",
+  "markdown": "# Tagesreview 2026-11-27\n\n_Erstellt 2026-11-27 21:05 UTC | Datenbasis: Handelstag 2026-11-27 | 0 Trade(s) erfasst_\n\n## 1. Zahlen\n\n_Keine abgeschlossenen Trades in diesem Zeitraum._\n\n## 2. Aufschluesselung\n\n_Keine Daten._\n\n## 3. Jeder einzelne Trade\n\n_Keine Trades in diesem Zeitraum._\n\n## 4. Filter\n\n**Was der Bot bewusst NICHT gehandelt hat** (die Filter sind die halbe Strategie)\n\n| Filter | Abgelehnt | Warum |\n|---|---|---|\n| `skip-vol` | 173 | zu wenig Volumen beim Ausbruch (Ausbrueche ohne Volumen scheitern meist) |\n| `skip-market` | 12 | - |\n| `skip-spread` | 7 | - |\n| `skip-rs` | 6 | relative Staerke/Schwaeche passte nicht zum Markt |\n| `skip-rr` | 5 | - |\n| `skip-chase` | 3 | Preis war schon aus der Einstiegszone gelaufen (kein Hinterherjagen) |\n| `skip-stale` | 2 | Signal war zu alt (Pattern nicht mehr gueltig) |\n\n## 5. Bewertung\n\n_Zu wenig Daten._\n",
   "headline": "Keine abgeschlossenen Trades in diesem Zeitraum.",
   "ai": false
  },
